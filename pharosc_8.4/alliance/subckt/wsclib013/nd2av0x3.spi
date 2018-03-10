@@ -1,0 +1,20 @@
+* Spice description of nd2av0x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:17:30
+* wsclib 0.13um values
+.subckt nd2av0x3 a b vdd vss z
+M01 an    a     vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M02 an    a     vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M03 vdd   b     z     vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M04 z     b     vdd   vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M05 z     b     sig3  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M06 10    b     z     vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M07 z     an    vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M08 vdd   an    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M09 sig3  an    vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M10 vss   an    10    vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+C7  a     vss   0.320f
+C4  an    vss   0.763f
+C5  b     vss   0.504f
+C2  z     vss   1.185f
+.ends

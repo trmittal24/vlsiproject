@@ -1,0 +1,28 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo '# Script which copies all the cells in ../vgalib013 across,'
+  echo '# adding the value in argument 1 to their input pin capacitances.'
+  exit 1
+fi
+
+source_dir=../vgalib013
+catal_name=VGALIB013
+inccap=$1
+
+allcells=$(cat $source_dir/$catal_name | cut -f1 -d' ')
+
+rm -f *.vbe
+for cell in $allcells
+do
+  ./makecell $cell $inccap
+done
+
+cp $source_dir/$catal_name .
+
+cp -p ../vgalib013_6_macros/an2v0x2.vbe .
+cp -p ../vgalib013_6_macros/an3v0x2.vbe .
+cp -p ../vgalib013_6_macros/bf1v0x2.vbe .
+cp -p ../vgalib013_6_macros/or2v0x2.vbe .
+cp -p ../vgalib013_6_macros/or3v0x2.vbe .

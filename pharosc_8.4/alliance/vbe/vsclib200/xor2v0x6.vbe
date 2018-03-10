@@ -1,0 +1,36 @@
+ENTITY xor2v0x6 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 17280;  
+  CONSTANT cin_b         : NATURAL := 60;     
+  CONSTANT cin_a         : NATURAL := 56;     
+  CONSTANT rdown_b_z     : NATURAL := 840;    
+  CONSTANT rdown_a_z     : NATURAL := 840;    
+  CONSTANT rup_b_z       : NATURAL := 790;    
+  CONSTANT rup_a_z       : NATURAL := 790;    
+  CONSTANT tplh_a_z	 : NATURAL := 261;
+  CONSTANT tphl_b_z	 : NATURAL := 292;
+  CONSTANT tplh_b_z	 : NATURAL := 293;
+  CONSTANT tphh_b_z	 : NATURAL := 366;
+  CONSTANT tphl_a_z	 : NATURAL := 377;
+  CONSTANT tpll_a_z	 : NATURAL := 388;
+  CONSTANT tpll_b_z	 : NATURAL := 389;
+  CONSTANT tphh_a_z	 : NATURAL := 405;
+  CONSTANT transistors   : NATURAL := 39      
+);
+PORT (
+  b	 : in  BIT;
+  a	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END xor2v0x6;
+
+ARCHITECTURE behaviour_data_flow OF xor2v0x6 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on xor2v0x6"
+  SEVERITY WARNING;
+  z <= (b xor a) after 1000 ps;
+END;

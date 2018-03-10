@@ -1,0 +1,259 @@
+#!/bin/bash
+#  With no supplied argument, the entire library characterisation is run
+#  With an argument, the LIB, VBE and HTML files are regenerated from
+#  existing timing files
+olddir=$PWD
+rm -f */*.error
+cd iv1
+./alliv1 $1
+cd $olddir
+cd an2
+./allan2 $1
+cd $olddir
+cd an3
+./allan3 $1
+cd $olddir
+cd an4
+./allan4 $1
+cd $olddir
+cd aoi112
+./allaoi112 $1
+cd $olddir
+cd aoi21
+./allaoi21 $1
+cd $olddir
+cd aoi21a2
+./allaoi21a2 $1
+cd $olddir
+cd aoi21a2b
+./allaoi21a2b $1
+cd $olddir
+cd aoi21b
+./allaoi21b $1
+cd $olddir
+cd aoi211
+./allaoi211 $1
+cd $olddir
+cd aoi22
+./allaoi22 $1
+cd $olddir
+cd aoi31
+./allaoi31 $1
+cd $olddir
+cd aon21
+./allaon21 $1
+cd $olddir
+cd aon21b
+./allaon21b $1
+cd $olddir
+cd bf1
+./allbf1 $1
+cd $olddir
+cd bsi2
+./allbsi2 $1
+cd $olddir
+cd cgi2
+./allcgi2 $1
+cd $olddir
+cd cgi2ab
+./allcgi2ab $1
+cd $olddir
+cd cgi2b
+./allcgi2b $1
+cd $olddir
+cd cgi2c
+./allcgi2c $1
+cd $olddir
+cd dfnt1
+./alldfnt1 $1
+cd $olddir
+cd dly1
+./alldly1 $1
+cd $olddir
+cd dly2
+./alldly2 $1
+cd $olddir
+cd ha2
+./allha2 $1
+cd $olddir
+cd lant1
+./alllant1 $1
+cd $olddir
+cd mxi2
+./allmxi2 $1
+cd $olddir
+cd mxn2
+./allmxn2 $1
+cd $olddir
+cd nd2
+./allnd2 $1
+cd $olddir
+cd nd2ab
+./allnd2ab $1
+cd $olddir
+cd nd2a
+./allnd2a $1
+cd $olddir
+cd nd3
+./allnd3 $1
+cd $olddir
+cd nd3a
+./allnd3a $1
+cd $olddir
+cd nd3ab
+./allnd3ab $1
+cd $olddir
+cd nd4
+./allnd4 $1
+cd $olddir
+cd nr2
+./allnr2 $1
+cd $olddir
+cd nr2a
+./allnr2a $1
+cd $olddir
+cd nr3
+./allnr3 $1
+cd $olddir
+cd nr3a
+./allnr3a $1
+cd $olddir
+cd nr3ab
+./allnr3ab $1
+cd $olddir
+cd nr4
+./allnr4 $1
+cd $olddir
+cd oai21
+./alloai21 $1
+cd $olddir
+cd oai21a2
+./alloai21a2 $1
+cd $olddir
+cd oai21a2b
+./alloai21a2b $1
+cd $olddir
+cd oai21b
+./alloai21b $1
+cd $olddir
+cd oai211
+./alloai211 $1
+cd $olddir
+cd oai22
+./alloai22 $1
+cd $olddir
+cd oai23a
+./alloai23a $1
+cd $olddir
+cd oai31
+./alloai31 $1
+cd $olddir
+cd oan21
+./alloan21 $1
+cd $olddir
+cd oan21b
+./alloan21b $1
+cd $olddir
+cd or2
+./allor2 $1
+cd $olddir
+cd or3
+./allor3 $1
+cd $olddir
+cd or4
+./allor4 $1
+cd $olddir
+cd xaoi21
+./allxaoi21 $1
+cd $olddir
+cd xaon21
+./allxaon21 $1
+cd $olddir
+cd xnai21
+./allxnai21 $1
+cd $olddir
+cd xnr2
+./allxnr2 $1
+cd $olddir
+cd xnr3
+./allxnr3 $1
+cd $olddir
+cd xooi21
+./allxooi21 $1
+cd $olddir
+cd xoon21
+./allxoon21 $1
+cd $olddir
+cd xor2
+./allxor2 $1
+cd $olddir
+cd xor3
+./allxor3 $1
+cd $olddir
+cat vsclib013_header.lib >  vsclib013.lib
+./makelut                >> vsclib013.lib
+cat an2/an2.lib          >> vsclib013.lib
+cat an3/an3.lib          >> vsclib013.lib
+cat an4/an4.lib          >> vsclib013.lib
+cat aoi112/aoi112.lib    >> vsclib013.lib
+cat aoi21/aoi21.lib      >> vsclib013.lib
+cat aoi21a2/aoi21a2.lib  >> vsclib013.lib
+cat aoi21a2b/aoi21a2b.lib >> vsclib013.lib
+cat aoi21b/aoi21b.lib    >> vsclib013.lib
+cat aoi211/aoi211.lib    >> vsclib013.lib
+cat aoi22/aoi22.lib      >> vsclib013.lib
+cat aoi31/aoi31.lib      >> vsclib013.lib
+cat aon21/aon21.lib      >> vsclib013.lib
+cat aon21b/aon21b.lib    >> vsclib013.lib
+cat bf1/bf1.lib          >> vsclib013.lib
+cat bsi2/bsi2.lib        >> vsclib013.lib
+cat cgi2/cgi2.lib        >> vsclib013.lib
+cat cgi2ab/cgi2ab.lib    >> vsclib013.lib
+cat cgi2b/cgi2b.lib      >> vsclib013.lib
+cat cgi2c/cgi2c.lib      >> vsclib013.lib
+cat dfnt1/dfnt1.lib      >> vsclib013.lib
+cat dly1/dly1.lib        >> vsclib013.lib
+cat dly2/dly2.lib        >> vsclib013.lib
+cat ha2/ha2.lib          >> vsclib013.lib
+cat iv1/iv1.lib          >> vsclib013.lib
+cat lant1/lant1.lib      >> vsclib013.lib
+cat mxi2/mxi2.lib        >> vsclib013.lib
+cat mxn2/mxn2.lib        >> vsclib013.lib
+cat nd2/nd2.lib          >> vsclib013.lib
+cat nd2a/nd2a.lib        >> vsclib013.lib
+cat nd2ab/nd2ab.lib      >> vsclib013.lib
+cat nd3/nd3.lib          >> vsclib013.lib
+cat nd3a/nd3a.lib        >> vsclib013.lib
+cat nd3ab/nd3ab.lib      >> vsclib013.lib
+cat nd4/nd4.lib          >> vsclib013.lib
+cat nr2/nr2.lib          >> vsclib013.lib
+cat nr2a/nr2a.lib        >> vsclib013.lib
+cat nr3/nr3.lib          >> vsclib013.lib
+cat nr3a/nr3a.lib        >> vsclib013.lib
+cat nr3ab/nr3ab.lib      >> vsclib013.lib
+cat nr4/nr4.lib          >> vsclib013.lib
+cat oai21/oai21.lib      >> vsclib013.lib
+cat oai21a2/oai21a2.lib  >> vsclib013.lib
+cat oai21a2b/oai21a2b.lib >> vsclib013.lib
+cat oai21b/oai21b.lib    >> vsclib013.lib
+cat oai211/oai211.lib    >> vsclib013.lib
+cat oai22/oai22.lib      >> vsclib013.lib
+cat oai23a/oai23a.lib    >> vsclib013.lib
+cat oai31/oai31.lib      >> vsclib013.lib
+cat oan21/oan21.lib      >> vsclib013.lib
+cat oan21b/oan21b.lib    >> vsclib013.lib
+cat or2/or2.lib          >> vsclib013.lib
+cat or3/or3.lib          >> vsclib013.lib
+cat or4/or4.lib          >> vsclib013.lib
+cat xaoi21/xaoi21.lib    >> vsclib013.lib
+cat xaon21/xaon21.lib    >> vsclib013.lib
+cat xnai21/xnai21.lib    >> vsclib013.lib
+cat xnr2/xnr2.lib        >> vsclib013.lib
+cat xnr3/xnr3.lib        >> vsclib013.lib
+cat xooi21/xooi21.lib    >> vsclib013.lib
+cat xoon21/xoon21.lib    >> vsclib013.lib
+cat xor2/xor2.lib        >> vsclib013.lib
+cat xor3/xor3.lib        >> vsclib013.lib
+cat vsclib013_footer.lib >> vsclib013.lib
+echo "# Listing error files"
+ls -l */*.error

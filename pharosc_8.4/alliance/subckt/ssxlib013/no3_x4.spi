@@ -1,0 +1,24 @@
+* Spice description of no3_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:38:38
+* ssxlib 0.13um values
+.subckt no3_x4 i0 i1 i2 nq vdd vss
+Mtr_00001 sig2  i2    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00002 sig2  i0    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00003 vss   i1    sig2  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00004 sig6  sig2  vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00005 vss   sig6  nq    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00006 nq    sig6  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00007 vdd   i0    sig8  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00008 sig8  i1    sig9  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00009 sig9  i2    sig2  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00010 nq    sig6  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00011 vdd   sig6  nq    vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00012 vdd   sig2  sig6  vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C7  i0    vss   0.646f
+C4  i1    vss   0.646f
+C3  i2    vss   0.624f
+C5  nq    vss   0.678f
+C2  sig2  vss   1.311f
+C6  sig6  vss   0.756f
+.ends

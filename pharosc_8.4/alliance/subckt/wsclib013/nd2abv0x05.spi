@@ -1,0 +1,19 @@
+* Spice description of nd2abv0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:16:11
+* wsclib 0.13um values
+.subckt nd2abv0x05 a b vdd vss z
+M01 sig5  a     vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M02 sig5  a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 vdd   b     bn    vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M04 vss   b     bn    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 vdd   sig5  z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M06 vss   sig5  08    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M07 z     bn    vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 08    bn    z     vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+C7  a     vss   0.381f
+C4  b     vss   0.505f
+C3  bn    vss   0.615f
+C5  sig5  vss   0.589f
+C2  z     vss   0.610f
+.ends

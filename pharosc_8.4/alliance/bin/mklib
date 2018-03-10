@@ -1,0 +1,5 @@
+#!/bin/bash
+
+makespi $1 > $1.spi
+makeal $1
+s2r -s -v $1

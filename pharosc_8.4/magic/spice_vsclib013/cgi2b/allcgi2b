@@ -1,0 +1,11 @@
+#!/bin/bash
+# allcgi2b 2007-08-29:12h10 graham
+
+./allcgi2b_delay $1
+./allcgi2b_vbe
+./allcgi2b_lib
+./allcgi2b_html
+if test -x allcgi2b_xtra
+then
+  ./allcgi2b_xtra
+fi

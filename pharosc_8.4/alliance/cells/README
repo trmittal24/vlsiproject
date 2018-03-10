@@ -1,0 +1,31 @@
+List of libraries, their principle characteristics
+and the place and route programs which should be used.
+
+Library Lambda  ALU2   height pitch x-orig y-orig   OCP    NERO
+----------------------------------------------------------------------------------------
+rgalib    2    metal-2   88     8      0      4   rga_ocp  rga_valu3_nero
+
+sxlib     1    metal-2   50     5      0      0   sx_ocp   sx_valu3_nero,sx_halu3_nero
+ssxlib    2    metal-2  100    10      0      0   stx_ocp  ssx_valu3_nero,ssx_halu3_nero
+stxlib    2    metal-1  100    10      0      0   stx_ocp  ssx_halu3_nero,ssx_valu3_nero
+
+vgalib    2    metal-2   88     8      0      0   vga_ocp  rga_valu3_nero
+
+vsclib    2    metal-2   72     8      4      0   vtc_ocp  vsc_halu3_nero,vsc_valu3_nero
+vtclib    2    metal-1   72     8      4      0   vtc_ocp  vtc_valu3_nero,vtc_halu3_nero
+
+vxlib     1    metal-2   50     5      0      0   vx_ocp   sx_valu3_nero,sx_halu3_nero
+vsxlib    2    metal-2  100    10      0      0   vtx_ocp  ssx_valu3_nero,ssx_halu3_nero
+vtxlib    2    metal-1  100    10      0      0   vtx_ocp  ssx_halu3_nero,ssx_valu3_nero
+
+wsclib    2    metal-2   80     8      4      4   wtc_ocp  wsc_halu3_nero,wsc_valu3_nero
+wtclib    2    metal-1   80     8      4      4   wtc_ocp  wtc_valu3_nero,wtc_halu3_nero
+
+Graal RDS files for viewing and editing
+
+RDS file                Library
+----------------------------------------------------------------------
+vsc200.rds, vsc013.rds  rgalib, ssxlib, vgalib, vsclib, vsxlib, wsclib
+vtc200.rds, vtc013.rds  stxlib, vtclib, vtxlib, wtclib
+sx100.rds, sx013.rds    sxlib
+vx100.rds, vx013.rds    vxlib

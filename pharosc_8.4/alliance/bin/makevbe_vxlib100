@@ -1,0 +1,7 @@
+#!/bin/bash
+# usage: makevbe_vxlib100 xor2_x1 | tee > xor2_x1.vbe
+# takes data from directory makevbe/vxlib100
+# GP  7-SEP-03 Initial version
+# GP 14-SEP-03 Changed from vxlib035 to vxlib100
+
+bash ../../makevbe/vxlib100/$1.bash

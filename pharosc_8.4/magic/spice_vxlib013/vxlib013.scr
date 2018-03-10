@@ -1,0 +1,26 @@
+Non Monotonic Delay Arcs
+vxlib013.lib: vxlib013 (96 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                                                Input Slope
+1    32017      xaon21_x1  b -> z, combinational, rise_transition             20        
+WARNING: Found 1 Non Monotonic Arcs
+
+
+Bad Design Rules
+vxlib013.lib: vxlib013 (96 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                            Load Range          Min Cap   
+
+
+Bad Design Rules
+vxlib013.lib: vxlib013 (96 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                            Load Range           Max Cap  
+
+
+Bad Design Rules
+vxlib013.lib: vxlib013 (96 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                             Slope Range          Max Trans
+
+

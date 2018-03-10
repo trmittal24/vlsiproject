@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# makes new characterisation files for all the cell directories,
+# then read cell_list.txt and reports how many cells are in the library.
+
+ls -1 -F | grep '/' | sed 's/\/$//g' | sed s'/^.*$/\.\/makefunction\ &/g' | bash
+
+cell_values=$(grep '^' cell_list.txt | sed 's/^[^ ][^ ]*\ //g' |
+while read cell_list
+do
+  echo -e $cell_list" \c"
+done )
+num_cells=0
+for cells in $cell_values
+do
+  let num_cells=$num_cells+1
+done
+echo "#"
+echo "# There are "$num_cells" cells in cell_list.txt."
+echo "#"

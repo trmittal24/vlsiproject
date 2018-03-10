@@ -1,0 +1,14 @@
+* Spice description of nr2_x1
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt nr2_x1 a b vdd vss z 
+M2  vdd   a     n1    vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M1  n1    b     z     vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M4  z     a     vss   vss n  L=0.13U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U  
+M3  vss   b     z     vss n  L=0.13U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U  
+C6  a     vss   0.961f
+C5  b     vss   0.960f
+C4  vdd   vss   1.022f
+C2  z     vss   2.129f
+.ends

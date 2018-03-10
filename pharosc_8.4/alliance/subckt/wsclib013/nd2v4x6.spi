@@ -1,0 +1,21 @@
+* Spice description of nd2v4x6
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:20:25
+* wsclib 0.13um values
+.subckt nd2v4x6 a b vdd vss z
+M01 z     a     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M02 vdd   a     z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M03 z     a     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M04 vdd   a     z     vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M05 sig3  a     vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M06 vss   a     12    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M07 vdd   b     z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M08 z     b     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M09 vdd   b     z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M10 z     b     vdd   vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M11 z     b     sig3  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M12 12    b     z     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+C4  a     vss   1.321f
+C5  b     vss   0.994f
+C2  z     vss   1.665f
+.ends

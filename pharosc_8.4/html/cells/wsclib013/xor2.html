@@ -1,0 +1,1463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>xor2 wsclib013 standard cell family</TITLE>
+<LINK REL=HOME HREF="../../../index.html">
+<LINK REL=PREVIOUS HREF="xoon21.html">
+<LINK REL=NEXT HREF="xor3.html">
+<LINK REL=UP HREF="lib_gif_index.html">
+<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+<META NAME="DESCRIPTION" CONTENT="standard cell library web page">
+<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+<META NAME="CREATED" CONTENT="20040523;07300000">
+<META NAME="CHANGED" CONTENT="20070705;23470000">
+<STYLE TYPE="text/css">
+<!--
+body{
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: red;
+	text-align: left;
+	margin: .2em .8em .5em .8em;
+	padding: 0;
+}
+h3{
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 1.5em;
+	font-weight: bold;
+	color:blue;
+	margin-top: 0.5em;
+}
+p{
+	margin-top: 0;
+	margin-bottom: .4em;
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: #3F3F3F;
+}
+.mathsvar{font-style:italic; font-family:serif;}
+.bold{font-weight:bold;}
+.boldred{color:red;font-weight:bold;}
+.small{font-size:0.8em;}
+.smallcaps{font-variant: small-caps;}
+.large{font-size:1em;}
+.mono{font-family:monospace;}
+STRONG{color:white;}
+.boxed{border: .1em solid #000000;}
+.vcentre{vertical-align: middle;}
+.charrowleft{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	font-family:monospace;
+}
+.charrow{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+	background: #FFE7E7;
+}
+.charrow2{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	font-size:0.8em;
+	background: #FFE7E7;
+}
+.attrrowleft{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #000000;
+}
+.attrrow{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+	background: #FFE7E7;
+}
+.graphicsbox{
+	padding: 0;
+}
+.cellrowleft{
+	border-right: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #FFE7E7;
+}
+.cellrow{
+	border-right: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.footer{
+	border-top: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #FFE7E7;
+}
+table.boxed{
+	border-collapse: collapse;
+	border: .2em solid #000000;
+	width: 100%;
+}
+th, td{
+	margin: 0;
+	padding: 0 .5em 0 .5em;
+	color: black;
+}
+.navholder{border: .1em solid #000000;}
+.navbox{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 1em;
+}
+table.nav{
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.graphicsleft{
+	padding-top: .4em;
+	padding-bottom .4em;
+	border-right: .1em solid #000000;
+}
+.graphics{padding-top: .4em; padding-bottom .4em}
+ul.dir{
+	float: right;
+	margin: .4em 0 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	list-style-type: none;
+	background: white;
+	font-size: 1em;
+}
+ul.dir li{display: inline;}
+ul.dir a{
+	display: block;
+	text-decoration: none;
+	background: black;
+	float: right;
+	width: 3.5em;
+	margin: 0;
+	border-left: .1em solid white;
+	padding: .2em .4em .2em .4em;
+	text-align: center;
+	color: white;
+}
+ul.dir a:hover{background: rgb(0,0,128);color: rgb(255,128,0);}
+table.graphics{
+	border-collapse: collapse;
+	border-top: .1em solid #000000;
+	width: 100%;
+}
+table.eff{
+	border-collapse: collapse;
+	border: 1px solid #000000;
+	background-color: #E7FFE7;
+}
+.efftdu{
+	border-left: 1px solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.efftduleft{vertical-align: middle; text-align: left;}
+.efftduright{vertical-align: middle; text-align: center;}
+.efftdb{
+	padding-bottom: 2px;
+	border-left: 1px solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.efftdbright{
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+.effcellname{padding-bottom: 0.8em;}
+.effth{
+	font-weight: normal;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+.effthleft{
+	font-weight: normal;
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+.efftr{border-top: 1px solid #CCCCCC;}
+-->
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE CLASS="boxed">
+<THEAD>
+<TR CLASS="vcentre">
+	<TD COLSPAN=5 CLASS="boxed">
+		<H3>xor2 standard cell family</H3></TD>
+	<TD COLSPAN=4 CLASS="boxed">
+		<SPAN CLASS="large"><B>2-I/P exclusive OR gate</B></SPAN></TD>
+	<TD COLSPAN=2 CLASS="navholder">
+		<TABLE CLASS="nav"><TR><TD CLASS="navbox">
+		<UL CLASS="dir">
+		<LI><A HREF="lib_gif_index.html">UP</A></LI>
+		<LI><A HREF="xoon21.html">PREV</A></LI>
+		<LI><A HREF="xor3.html">NEXT</A></LI>
+		</UL></TD></TR></TABLE></TD>
+</TR>
+</THEAD>
+<TBODY>
+<TR CLASS="vcentre">
+	<TD COLSPAN=2 CLASS="boxed">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2.gif" NAME="xor2" BORDER=0 ALT="xor2 symbol" TITLE="xor2 symbol">
+		<BR CLEAR=LEFT>
+	</TD>
+	<TD COLSPAN=9 CLASS="boxed">
+<TABLE ALIGN=RIGHT>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD>&nbsp;&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">a</SPAN>&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">b</SPAN>&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">a</SPAN>&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">b</SPAN></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD>&nbsp;&nbsp;</TD>
+<TD COLSPAN=2 ALIGN=CENTER>inverting</TD>
+<TD COLSPAN=2 ALIGN=CENTER>non-inverting&nbsp;</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v0x1&nbsp;</TT></TD>
+<TD><TT>&nbsp;84</TT></TD>
+<TD><TT>&nbsp;78</TT></TD>
+<TD><TT>&nbsp;97</TT></TD>
+<TD><TT>102</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v1x1</TT></TD>
+<TD><TT>&nbsp;88</TT></TD>
+<TD><TT>&nbsp;71</TT></TD>
+<TD><TT>106</TT></TD>
+<TD><TT>&nbsp;87</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v2x1</TT></TD>
+<TD><TT>&nbsp;78</TT></TD>
+<TD><TT>&nbsp;70</TT></TD>
+<TD><TT>107</TT></TD>
+<TD><TT>100</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v3x1</TT></TD>
+<TD><TT>&nbsp;86</TT></TD>
+<TD><TT>&nbsp;84</TT></TD>
+<TD><TT>126</TT></TD>
+<TD><TT>122</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v4x1</TT></TD>
+<TD><TT>&nbsp;79</TT></TD>
+<TD><TT>&nbsp;71</TT></TD>
+<TD><TT>152</TT></TD>
+<TD><TT>121</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v5x1</TT></TD>
+<TD><TT>&nbsp;81</TT></TD>
+<TD><TT>&nbsp;78</TT></TD>
+<TD><TT>126</TT></TD>
+<TD><TT>123</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v6x1</TT></TD>
+<TD><TT>&nbsp;92</TT></TD>
+<TD><TT>&nbsp;81</TT></TD>
+<TD><TT>120</TT></TD>
+<TD><TT>126</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v7x1</TT></TD>
+<TD><TT>166</TT></TD>
+<TD><TT>171</TT></TD>
+<TD><TT>124</TT></TD>
+<TD><TT>111</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v8x1</TT></TD>
+<TD><TT>155</TT></TD>
+<TD><TT>122</TT></TD>
+<TD><TT>127</TT></TD>
+<TD><TT>102</TT></TD></TR>
+</TABLE>
+<P>There are a number of ways to implement an XOR gate,
+and 9 of them are shown here.<BR>
+- <B>xor2v0</B> has the smallest number of transistors.<BR>
+- <B>xor2v1</B> is the classic two inverters with transfer gate onto the
+output node.<BR>
+- <B>xor2v2</B> is an alternative inverter plus transfer gate configuration.<BR>
+- <B>xor2v3</B> is an <B>aoi22</B> with input inverters.<BR>
+- <B>xor2v4</B> is an <B>oai22</B> with input inverters.<BR>
+- <B>xor2v5</B> is the <B>aoi22</B> or <B>oai22</B> with the connexion
+for the parallel P&nbsp;or N&nbsp; transistors removed.<BR>
+- <B>xor2v6</B> is like the <B>xor2v5</B> but with a connexion
+for both the parallel P&nbsp;or N&nbsp; transistors.<BR>
+- <B>xor2v7</B> is a 2-NAND and OR-NAND combination with output buffering
+inverter. The schematic came from a public web site; the layout uses
+wsclib rules.<BR>
+- <B>xor2v8</B> is a <B>xnr2v1</B> with an inverter output.
+This is a common style in commercial standard cell libraries.<BR>
+XOR2 gates are one of the most common gate types: in most designs they
+are amongst the top-10 used cells. Their speed has a direct impact on
+overall circuit performance, as they are widely used in arithmetic
+functions. The 9 variants here have been characterised in the generic
+0.13um technology, and a summary of their performance is shown in
+the table below.
+The fastest inverting gate is the <B>xor2v2</B> on pin <SPAN CLASS="boldred">b</SPAN>.
+The fastest non-inverting gate is the <B>xor2v1</B> on pin <SPAN CLASS="boldred">b</SPAN>,
+but this is slow for  pin <SPAN CLASS="boldred">a</SPAN>.
+The <B>xor2v0</B> is slower but smaller.<BR>
+The <B>xor2v3</B>/<B>v4</B>/<B>v5</B>/<B>v6</B> gates have very similar
+performances. The ones with larger diffusion parasitic capacitances
+have simpler layouts and lower metal parasitics. All these gates aren't
+really needed but are included to show their performance.
+The <B>xor2v3x1</B> is similar to the sxlib <B>xr2_x1</B>.<BR>
+The <B>xor2v7</B> is fairly nasty. It's big and slow, and the transistors
+are wrongly sized. The non-inverting path is quicker because the
+inverting path uses 3 stage delays, rather than the single stage delay
+of the other gates.
+The <B>xor2v8</B> is also a 2/3 stage delay gate which is slower than the others.<BR>
+The average delay of each <B>x1</B> gate and pin when driving just itself in
+a ring oscillator, inverting and non-inverting modes,
+is shown on the right.
+	</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR CLASS="vcentre">
+	<TD ROWSPAN=2 CLASS="charrowleft">
+		z:(a^b)</TD>
+	<TD COLSPAN=3 ROWSPAN=2 CLASS="charrow">
+		cell width</TD>
+	<TD COLSPAN=2 CLASS="charrow">
+		power</TD>
+	<TD COLSPAN=5 CLASS="charrow">
+		Generic 0.13um typical timing (ps & ps/fF),
+		pin&nbsp;<SPAN CLASS="boldred">b</SPAN>.</TD>
+</TR>
+<TR CLASS="vcentre">
+	<TD CLASS="charrow">
+		leakage</TD>
+	<TD CLASS="charrow">
+		dynamic</TD>
+	<TD COLSPAN=5 CLASS="charrow2">
+		tR=PropR+RampR&times;Load(fF), tF=PropF+RampF&times;Load(fF)</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD CLASS="attrrowleft">
+  		<STRONG>wsclib013</STRONG></TD>
+	<TD CLASS="attrrow">
+		gates</TD>
+	<TD CLASS="attrrow">
+		lambda</TD>
+	<TD CLASS="attrrow">
+		0.13um</TD>
+	<TD CLASS="attrrow">
+		nW</TD>
+	<TD CLASS="attrrow">
+		<SPAN CLASS="small">nW/MHz</SPAN></TD>
+	<TD CLASS="attrrow">
+		PinCap</TD>
+	<TD CLASS="attrrow">
+		PropR</TD>
+	<TD CLASS="attrrow">
+		RampR</TD>
+	<TD CLASS="attrrow">
+		PropF</TD>
+	<TD CLASS="attrrow">
+		RampF</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v0x05</B></TD>
+	<TD CLASS="cellrow">2.7</TD>
+	<TD CLASS="cellrow">&nbsp;64</TD>
+	<TD CLASS="cellrow">3.52</TD>
+	<TD CLASS="cellrow">&nbsp;0.66</TD>
+	<TD CLASS="cellrow">&nbsp;16.4</TD>
+	<TD CLASS="cellrow">&nbsp;4.2f</TD>
+	<TD CLASS="cellrow">&nbsp;76</TD>
+	<TD CLASS="cellrow">&nbsp;5.49</TD>
+	<TD CLASS="cellrow">&nbsp;60</TD>
+	<TD CLASS="cellrow">&nbsp;3.88</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v1x05</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">&nbsp;0.62</TD>
+	<TD CLASS="cellrow">&nbsp;10.8</TD>
+	<TD CLASS="cellrow">&nbsp;4.4f</TD>
+	<TD CLASS="cellrow">&nbsp;55</TD>
+	<TD CLASS="cellrow">&nbsp;6.23</TD>
+	<TD CLASS="cellrow">&nbsp;54</TD>
+	<TD CLASS="cellrow">&nbsp;4.75</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v2x05</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">&nbsp;0.64</TD>
+	<TD CLASS="cellrow">&nbsp;16.8</TD>
+	<TD CLASS="cellrow">&nbsp;3.6f</TD>
+	<TD CLASS="cellrow">&nbsp;76</TD>
+	<TD CLASS="cellrow">&nbsp;4.68</TD>
+	<TD CLASS="cellrow">&nbsp;67</TD>
+	<TD CLASS="cellrow">&nbsp;2.98</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v8x05</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">&nbsp;0.83</TD>
+	<TD CLASS="cellrow">&nbsp;21.2</TD>
+	<TD CLASS="cellrow">&nbsp;4.5f</TD>
+	<TD CLASS="cellrow">101</TD>
+	<TD CLASS="cellrow">&nbsp;5.00</TD>
+	<TD CLASS="cellrow">110</TD>
+	<TD CLASS="cellrow">&nbsp;4.05</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v0x1</B></TD>
+	<TD CLASS="cellrow">2.7</TD>
+	<TD CLASS="cellrow">&nbsp;64</TD>
+	<TD CLASS="cellrow">3.52</TD>
+	<TD CLASS="cellrow">&nbsp;0.87</TD>
+	<TD CLASS="cellrow">&nbsp;21.0</TD>
+	<TD CLASS="cellrow">&nbsp;5.3f</TD>
+	<TD CLASS="cellrow">&nbsp;75</TD>
+	<TD CLASS="cellrow">&nbsp;4.16</TD>
+	<TD CLASS="cellrow">&nbsp;59</TD>
+	<TD CLASS="cellrow">&nbsp;2.96</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v1x1</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">1.14</TD>
+	<TD CLASS="cellrow">&nbsp;17.5</TD>
+	<TD CLASS="cellrow">&nbsp;7.3f</TD>
+	<TD CLASS="cellrow">&nbsp;51</TD>
+	<TD CLASS="cellrow">&nbsp;3.41</TD>
+	<TD CLASS="cellrow">&nbsp;50</TD>
+	<TD CLASS="cellrow">&nbsp;2.60</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v2x1</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">1.03</TD>
+	<TD CLASS="cellrow">&nbsp;26.6</TD>
+	<TD CLASS="cellrow">&nbsp;5.5f</TD>
+	<TD CLASS="cellrow">&nbsp;76</TD>
+	<TD CLASS="cellrow">&nbsp;2.63</TD>
+	<TD CLASS="cellrow">&nbsp;65</TD>
+	<TD CLASS="cellrow">&nbsp;1.94</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v3x1</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">1.29</TD>
+	<TD CLASS="cellrow">&nbsp;20.4</TD>
+	<TD CLASS="cellrow">&nbsp;6.2f</TD>
+	<TD CLASS="cellrow">&nbsp;79</TD>
+	<TD CLASS="cellrow">&nbsp;4.30</TD>
+	<TD CLASS="cellrow">&nbsp;77</TD>
+	<TD CLASS="cellrow">&nbsp;3.11</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v4x1</B></TD>
+	<TD CLASS="cellrow">3.3</TD>
+	<TD CLASS="cellrow">&nbsp;80</TD>
+	<TD CLASS="cellrow">4.40</TD>
+	<TD CLASS="cellrow">1.29</TD>
+	<TD CLASS="cellrow">&nbsp;19.1</TD>
+	<TD CLASS="cellrow">&nbsp;5.8f</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">&nbsp;4.29</TD>
+	<TD CLASS="cellrow">&nbsp;77</TD>
+	<TD CLASS="cellrow">&nbsp;3.06</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v5x1</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">1.29</TD>
+	<TD CLASS="cellrow">&nbsp;19.6</TD>
+	<TD CLASS="cellrow">&nbsp;6.1f</TD>
+	<TD CLASS="cellrow">&nbsp;76</TD>
+	<TD CLASS="cellrow">&nbsp;4.30</TD>
+	<TD CLASS="cellrow">&nbsp;77</TD>
+	<TD CLASS="cellrow">&nbsp;3.12</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v6x1</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">1.29</TD>
+	<TD CLASS="cellrow">&nbsp;21.4</TD>
+	<TD CLASS="cellrow">&nbsp;5.9f</TD>
+	<TD CLASS="cellrow">&nbsp;83</TD>
+	<TD CLASS="cellrow">&nbsp;4.31</TD>
+	<TD CLASS="cellrow">&nbsp;78</TD>
+	<TD CLASS="cellrow">&nbsp;3.10</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v7x1</B></TD>
+	<TD CLASS="cellrow">3.3</TD>
+	<TD CLASS="cellrow">&nbsp;80</TD>
+	<TD CLASS="cellrow">4.40</TD>
+	<TD CLASS="cellrow">1.18</TD>
+	<TD CLASS="cellrow">&nbsp;28.4</TD>
+	<TD CLASS="cellrow">&nbsp;6.1f</TD>
+	<TD CLASS="cellrow">118</TD>
+	<TD CLASS="cellrow">&nbsp;5.42</TD>
+	<TD CLASS="cellrow">115</TD>
+	<TD CLASS="cellrow">&nbsp;3.87</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v8x1</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">&nbsp;0.94</TD>
+	<TD CLASS="cellrow">&nbsp;24.0</TD>
+	<TD CLASS="cellrow">&nbsp;4.5f</TD>
+	<TD CLASS="cellrow">107</TD>
+	<TD CLASS="cellrow">&nbsp;3.34</TD>
+	<TD CLASS="cellrow">119</TD>
+	<TD CLASS="cellrow">&nbsp;2.71</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v0x2</B></TD>
+	<TD CLASS="cellrow">4.7</TD>
+	<TD CLASS="cellrow">112</TD>
+	<TD CLASS="cellrow">6.16</TD>
+	<TD CLASS="cellrow">1.82</TD>
+	<TD CLASS="cellrow">&nbsp;42.3</TD>
+	<TD CLASS="cellrow">10.5f</TD>
+	<TD CLASS="cellrow">&nbsp;74</TD>
+	<TD CLASS="cellrow">&nbsp;1.94</TD>
+	<TD CLASS="cellrow">&nbsp;60</TD>
+	<TD CLASS="cellrow">&nbsp;1.47</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v2x2</B></TD>
+	<TD CLASS="cellrow">4.3</TD>
+	<TD CLASS="cellrow">104</TD>
+	<TD CLASS="cellrow">5.72</TD>
+	<TD CLASS="cellrow">1.46</TD>
+	<TD CLASS="cellrow">&nbsp;37.8</TD>
+	<TD CLASS="cellrow">&nbsp;7.6f</TD>
+	<TD CLASS="cellrow">&nbsp;75</TD>
+	<TD CLASS="cellrow">&nbsp;1.85</TD>
+	<TD CLASS="cellrow">&nbsp;66</TD>
+	<TD CLASS="cellrow">&nbsp;1.38</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v8x2</B></TD>
+	<TD CLASS="cellrow">3.0</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">3.96</TD>
+	<TD CLASS="cellrow">1.11</TD>
+	<TD CLASS="cellrow">&nbsp;28.6</TD>
+	<TD CLASS="cellrow">&nbsp;4.5f</TD>
+	<TD CLASS="cellrow">117</TD>
+	<TD CLASS="cellrow">&nbsp;2.17</TD>
+	<TD CLASS="cellrow">129</TD>
+	<TD CLASS="cellrow">&nbsp;1.82</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v0x3</B></TD>
+	<TD CLASS="cellrow">5.7</TD>
+	<TD CLASS="cellrow">136</TD>
+	<TD CLASS="cellrow">7.48</TD>
+	<TD CLASS="cellrow">2.70</TD>
+	<TD CLASS="cellrow">&nbsp;59.9</TD>
+	<TD CLASS="cellrow">15.2f</TD>
+	<TD CLASS="cellrow">&nbsp;72</TD>
+	<TD CLASS="cellrow">&nbsp;1.34</TD>
+	<TD CLASS="cellrow">&nbsp;56</TD>
+	<TD CLASS="cellrow">&nbsp;0.94</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v0x4</B></TD>
+	<TD CLASS="cellrow">6.7</TD>
+	<TD CLASS="cellrow">160</TD>
+	<TD CLASS="cellrow">8.80</TD>
+	<TD CLASS="cellrow">3.59</TD>
+	<TD CLASS="cellrow">&nbsp;78.3</TD>
+	<TD CLASS="cellrow">20.4f</TD>
+	<TD CLASS="cellrow">&nbsp;70</TD>
+	<TD CLASS="cellrow">&nbsp;1.00</TD>
+	<TD CLASS="cellrow">&nbsp;56</TD>
+	<TD CLASS="cellrow">&nbsp;0.72</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>xor2v0x6</B></TD>
+	<TD CLASS="cellrow">10.0</TD>
+	<TD CLASS="cellrow">240</TD>
+	<TD CLASS="cellrow">13.20</TD>
+	<TD CLASS="cellrow">5.20</TD>
+	<TD CLASS="cellrow">113.3</TD>
+	<TD CLASS="cellrow">29.1f</TD>
+	<TD CLASS="cellrow">&nbsp;70</TD>
+	<TD CLASS="cellrow">&nbsp;0.70</TD>
+	<TD CLASS="cellrow">&nbsp;56</TD>
+	<TD CLASS="cellrow">&nbsp;0.49</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR><TD COLSPAN=11 CLASS="graphicsbox">
+<TABLE CLASS="graphics">
+<TR>
+<TD CLASS="effcellname"><B>xor2v0x05</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.71</TD>
+<TD CLASS="efftduright"> 1.48</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.07</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.98</TD>
+<TD CLASS="efftduright"> 2.30</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.18</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v0x05.gif" NAME="xor2v0x05" ALIGN=LEFT BORDER=0
+              ALT="xor2v0x05 schematic" TITLE="xor2v0x05 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v0x05.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v0x05.gif" NAME="xor2v0x05" ALIGN=LEFT HEIGHT=250 WIDTH=225
+              BORDER=0 ALT="xor2v0x05 standard cell layout" TITLE="xor2v0x05 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v1x05</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.86</TD>
+<TD CLASS="efftduright"> 1.54</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.33</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.23</TD>
+<TD CLASS="efftduright"> 3.19</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.10</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v1x05.gif" NAME="xor2v1x05" ALIGN=LEFT BORDER=0
+              ALT="xor2v1x05 schematic" TITLE="xor2v1x05 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v1x05.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v1x05.gif" NAME="xor2v1x05" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v1x05 standard cell layout" TITLE="xor2v1x05 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v2x05</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.69</TD>
+<TD CLASS="efftduright"> 1.52</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.03</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.62</TD>
+<TD CLASS="efftduright"> 1.59</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.99</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v2x05.gif" NAME="xor2v2x05" ALIGN=LEFT BORDER=0
+              ALT="xor2v2x05 schematic" TITLE="xor2v2x05 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v2x05.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v2x05.gif" NAME="xor2v2x05" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v2x05 standard cell layout" TITLE="xor2v2x05 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v8x05</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.92</TD>
+<TD CLASS="efftduright"> 1.27</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.52</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.68</TD>
+<TD CLASS="efftduright"> 2.06</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.66</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v8x05.gif" NAME="xor2v8x05" ALIGN=LEFT BORDER=0
+              ALT="xor2v8x05 schematic" TITLE="xor2v8x05 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v8x05.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v8x05.gif" NAME="xor2v8x05" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v8x05 standard cell layout" TITLE="xor2v8x05 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v0x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.68</TD>
+<TD CLASS="efftduright"> 1.44</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.06</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.94</TD>
+<TD CLASS="efftduright"> 2.25</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.12</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v0x1.gif" NAME="xor2v0x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v0x1 schematic" TITLE="xor2v0x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v0x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v0x1.gif" NAME="xor2v0x1" ALIGN=LEFT HEIGHT=250 WIDTH=225
+              BORDER=0 ALT="xor2v0x1 standard cell layout" TITLE="xor2v0x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v1x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.71</TD>
+<TD CLASS="efftduright"> 1.41</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.11</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.04</TD>
+<TD CLASS="efftduright"> 2.91</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.92</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v1x1.gif" NAME="xor2v1x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v1x1 schematic" TITLE="xor2v1x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v1x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v1x1.gif" NAME="xor2v1x1" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v1x1 standard cell layout" TITLE="xor2v1x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v2x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.68</TD>
+<TD CLASS="efftduright"> 1.54</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.93</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.59</TD>
+<TD CLASS="efftduright"> 1.54</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.86</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v2x1.gif" NAME="xor2v2x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v2x1 schematic" TITLE="xor2v2x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v2x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v2x1.gif" NAME="xor2v2x1" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v2x1 standard cell layout" TITLE="xor2v2x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v3x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.22</TD>
+<TD CLASS="efftduright"> 2.78</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.75</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.21</TD>
+<TD CLASS="efftduright"> 2.85</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.63</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v3x1.gif" NAME="xor2v3x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v3x1 schematic" TITLE="xor2v3x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v3x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v3x1.gif" NAME="xor2v3x1" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v3x1 standard cell layout" TITLE="xor2v3x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v4x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.15</TD>
+<TD CLASS="efftduright"> 2.82</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 3.01</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.06</TD>
+<TD CLASS="efftduright"> 2.75</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.51</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v4x1.gif" NAME="xor2v4x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v4x1 schematic" TITLE="xor2v4x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v4x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v4x1.gif" NAME="xor2v4x1" ALIGN=LEFT HEIGHT=250 WIDTH=275
+              BORDER=0 ALT="xor2v4x1 standard cell layout" TITLE="xor2v4x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v5x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.16</TD>
+<TD CLASS="efftduright"> 2.80</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.74</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.15</TD>
+<TD CLASS="efftduright"> 2.85</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.64</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v5x1.gif" NAME="xor2v5x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v5x1 schematic" TITLE="xor2v5x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v5x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v5x1.gif" NAME="xor2v5x1" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v5x1 standard cell layout" TITLE="xor2v5x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v6x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.33</TD>
+<TD CLASS="efftduright"> 2.90</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.71</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.14</TD>
+<TD CLASS="efftduright"> 2.73</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.65</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v6x1.gif" NAME="xor2v6x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v6x1 schematic" TITLE="xor2v6x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v6x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v6x1.gif" NAME="xor2v6x1" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v6x1 standard cell layout" TITLE="xor2v6x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v7x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 3.68</TD>
+<TD CLASS="efftduright"> 3.40</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 3.06</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 3.51</TD>
+<TD CLASS="efftduright"> 2.86</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 3.07</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v7x1.gif" NAME="xor2v7x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v7x1 schematic" TITLE="xor2v7x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v7x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v7x1.gif" NAME="xor2v7x1" ALIGN=LEFT HEIGHT=250 WIDTH=275
+              BORDER=0 ALT="xor2v7x1 standard cell layout" TITLE="xor2v7x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v8x1</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.81</TD>
+<TD CLASS="efftduright"> 0.84</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.42</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.44</TD>
+<TD CLASS="efftduright"> 1.38</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.33</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v8x1.gif" NAME="xor2v8x1" ALIGN=LEFT BORDER=0
+              ALT="xor2v8x1 schematic" TITLE="xor2v8x1 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v8x1.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v8x1.gif" NAME="xor2v8x1" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v8x1 standard cell layout" TITLE="xor2v8x1 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v0x2</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.62</TD>
+<TD CLASS="efftduright"> 1.36</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.00</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.90</TD>
+<TD CLASS="efftduright"> 2.17</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.07</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v0x2.gif" NAME="xor2v0x2" ALIGN=LEFT BORDER=0
+              ALT="xor2v0x2 schematic" TITLE="xor2v0x2 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v0x2.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v0x2.gif" NAME="xor2v0x2" ALIGN=LEFT HEIGHT=250 WIDTH=375
+              BORDER=0 ALT="xor2v0x2 standard cell layout" TITLE="xor2v0x2 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v2x2</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.67</TD>
+<TD CLASS="efftduright"> 1.55</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.93</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.57</TD>
+<TD CLASS="efftduright"> 1.50</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.85</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v2x2.gif" NAME="xor2v2x2" ALIGN=LEFT BORDER=0
+              ALT="xor2v2x2 schematic" TITLE="xor2v2x2 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v2x2.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v2x2.gif" NAME="xor2v2x2" ALIGN=LEFT HEIGHT=250 WIDTH=350
+              BORDER=0 ALT="xor2v2x2 standard cell layout" TITLE="xor2v2x2 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v8x2</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.82</TD>
+<TD CLASS="efftduright"> 0.56</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.42</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 2.34</TD>
+<TD CLASS="efftduright"> 0.92</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.19</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v8x2.gif" NAME="xor2v8x2" ALIGN=LEFT BORDER=0
+              ALT="xor2v8x2 schematic" TITLE="xor2v8x2 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v8x2.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v8x2.gif" NAME="xor2v8x2" ALIGN=LEFT HEIGHT=250 WIDTH=250
+              BORDER=0 ALT="xor2v8x2 standard cell layout" TITLE="xor2v8x2 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v0x3</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.57</TD>
+<TD CLASS="efftduright"> 1.31</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.92</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.83</TD>
+<TD CLASS="efftduright"> 2.10</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.99</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v0x3.gif" NAME="xor2v0x3" ALIGN=LEFT BORDER=0
+              ALT="xor2v0x3 schematic" TITLE="xor2v0x3 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v0x3.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v0x3.gif" NAME="xor2v0x3" ALIGN=LEFT HEIGHT=250 WIDTH=450
+              BORDER=0 ALT="xor2v0x3 standard cell layout" TITLE="xor2v0x3 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v0x4</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.51</TD>
+<TD CLASS="efftduright"> 1.25</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.89</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.81</TD>
+<TD CLASS="efftduright"> 2.08</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.99</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v0x4.gif" NAME="xor2v0x4" ALIGN=LEFT BORDER=0
+              ALT="xor2v0x4 schematic" TITLE="xor2v0x4 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v0x4.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v0x4.gif" NAME="xor2v0x4" ALIGN=LEFT HEIGHT=250 WIDTH=525
+              BORDER=0 ALT="xor2v0x4 standard cell layout" TITLE="xor2v0x4 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>xor2v0x6</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">a</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.53</TD>
+<TD CLASS="efftduright"> 1.24</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.89</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">b</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"> 1.80</TD>
+<TD CLASS="efftduright"> 2.07</TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.97</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/wsclib/xor2v0x6.gif" NAME="xor2v0x6" ALIGN=LEFT BORDER=0
+              ALT="xor2v0x6 schematic" TITLE="xor2v0x6 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/wsclib013/xor2v0x6.gif">
+		<IMG SRC="../../../alliance/gif/wsclib013/xor2v0x6.gif" NAME="xor2v0x6" ALIGN=LEFT HEIGHT=250 WIDTH=775
+              BORDER=0 ALT="xor2v0x6 standard cell layout" TITLE="xor2v0x6 standard cell layout">
+		</A></TD>
+</TR>
+</TABLE></TD></TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD COLSPAN=11 CLASS="footer">
+<SMALL>Web data book for the wsclib. V<SPAN CLASS="smallcaps">dd</SPAN>=1.2V, T=27&deg;C,
+nominal process, generic 0.13um technology.
+&nbsp;&nbsp;Copyright &copy; 2005-2007 Graham Petley.&nbsp;&nbsp;05 JUL 2007</SMALL></TD>
+</TR>
+</TBODY>
+</TABLE>
+</BODY>
+</HTML>

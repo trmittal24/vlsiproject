@@ -1,0 +1,39 @@
+* Spice description of halfadder_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:32
+* ssxlib 0.13um values
+.subckt halfadder_x4 a b cout sout vdd vss
+Mtr_00001 sig8  b     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00002 vss   a     sig11 vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00003 sig7  sig11 sig9  vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+Mtr_00004 sig9  sig8  sig10 vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+Mtr_00005 sig10 a     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00006 vss   b     sig7  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00007 sig3  b     sig4  vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+Mtr_00008 sig4  a     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00009 vss   sig9  sout  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00010 sout  sig9  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00011 vss   sig3  cout  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00012 vss   sig3  cout  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00013 vdd   b     sig8  vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+Mtr_00014 sig11 a     vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00015 sig14 b     vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00016 vdd   sig11 sig14 vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00017 sig14 sig8  sig9  vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00018 sig9  a     sig14 vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00019 sig3  b     vdd   vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00020 vdd   a     sig3  vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00021 sout  sig9  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00022 vdd   sig9  sout  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00023 cout  sig3  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00024 cout  sig3  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C5  a     vss   2.246f
+C6  b     vss   1.455f
+C2  cout  vss   0.900f
+C11 sig11 vss   0.744f
+C14 sig14 vss   0.296f
+C3  sig3  vss   0.852f
+C8  sig8  vss   0.577f
+C9  sig9  vss   1.200f
+C12 sout  vss   0.900f
+.ends

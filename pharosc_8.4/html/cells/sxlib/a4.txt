@@ -1,0 +1,1 @@
+4 I/P AND gate designed with a stage effort of about 2.4 for the a4_x2 and about 4.8 for the a4_x4.

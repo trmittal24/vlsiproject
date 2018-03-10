@@ -1,0 +1,12 @@
+inputpin_list a3 b1 b2
+outputpin_list z
+a3 z negative_unate when 11
+b1 z negative_unate when 00 10
+b1 z positive_unate when 01
+b2 z negative_unate when 00 10
+b2 z positive_unate when 01
+b1 z non_unate when 01
+b2 z non_unate when 01
+b1 z pin_power when 11
+b2 z pin_power when 11
+z logic_function ((b1'*b2')+(a3'*b1*b2))

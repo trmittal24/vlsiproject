@@ -1,0 +1,38 @@
+ENTITY cgi2_x1 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 1750;   
+  CONSTANT cin_a         : NATURAL := 27;     
+  CONSTANT cin_b         : NATURAL := 27;     
+  CONSTANT cin_c         : NATURAL := 14;     
+  CONSTANT rdown_a_z     : NATURAL := 3170;   
+  CONSTANT rdown_b_z     : NATURAL := 3170;   
+  CONSTANT rdown_c_z     : NATURAL := 3170;   
+  CONSTANT rup_a_z       : NATURAL := 3290;   
+  CONSTANT rup_b_z       : NATURAL := 3290;   
+  CONSTANT rup_c_z       : NATURAL := 3290;   
+  CONSTANT tphl_c_z	 : NATURAL := 165;
+  CONSTANT tphl_b_z	 : NATURAL := 218;
+  CONSTANT tplh_a_z	 : NATURAL := 226;
+  CONSTANT tplh_c_z	 : NATURAL := 238;
+  CONSTANT tplh_b_z	 : NATURAL := 287;
+  CONSTANT tphl_a_z	 : NATURAL := 294;
+  CONSTANT transistors   : NATURAL := 10      
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  c	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END cgi2_x1;
+
+ARCHITECTURE behaviour_data_flow OF cgi2_x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on cgi2_x1"
+  SEVERITY WARNING;
+  z <= not((b or (a and c)) and (a or c)) after 1100 ps;
+END;

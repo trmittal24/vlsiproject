@@ -1,0 +1,28 @@
+* Spice description of nd4_x2
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt nd4_x2 a b c d vdd vss z 
+M01 z     a     vdd   vdd p  L=0.13U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U  
+M02 vdd   b     z     vdd p  L=0.13U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U  
+M03 z     c     vdd   vdd p  L=0.13U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U  
+M04 vdd   d     z     vdd p  L=0.13U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U  
+M05 z     d     vdd   vdd p  L=0.13U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U  
+M06 vdd   c     z     vdd p  L=0.13U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U  
+M07 z     b     vdd   vdd p  L=0.13U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U  
+M08 vdd   a     z     vdd p  L=0.13U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U  
+M09 vss   a     sig2  vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M10 sig2  b     sig5  vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M11 sig5  c     sig4  vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M16 16    a     vss   vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M15 sig11 b     16    vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M14 sig10 c     sig11 vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M13 z     d     sig10 vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+M12 sig4  d     z     vss n  L=0.13U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U  
+C13 vdd   vss   2.543f
+C9  c     vss   1.590f
+C8  d     vss   1.072f
+C7  a     vss   3.449f
+C6  b     vss   3.100f
+C3  z     vss   5.928f
+.ends

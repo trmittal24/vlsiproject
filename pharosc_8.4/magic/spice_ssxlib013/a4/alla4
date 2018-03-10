@@ -1,0 +1,11 @@
+#!/bin/bash
+# alla4 2007-07-06:07h31 graham
+
+./alla4_delay $1
+./alla4_vbe
+./alla4_lib
+./alla4_html
+if test -x alla4_xtra
+then
+  ./alla4_xtra
+fi

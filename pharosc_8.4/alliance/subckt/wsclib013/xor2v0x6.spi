@@ -1,0 +1,49 @@
+* Spice description of xor2v0x6
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:41:12
+* wsclib 0.13um values
+.subckt xor2v0x6 a b vdd vss z
+M01 vdd   a     an    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M02 an    a     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M03 vdd   a     an    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M04 an    a     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M05 an    a     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M06 an    a     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M07 vss   a     an    vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M08 vdd   b     sig2  vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M09 sig2  b     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M10 vdd   b     sig2  vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M11 sig2  b     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M12 vdd   b     sig2  vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M13 sig2  b     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M14 sig2  b     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M15 sig2  b     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M16 vss   b     sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M17 z     b     an    vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M18 z     b     an    vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M19 an    b     z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M20 sig2  an    z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M21 z     an    sig2  vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M22 sig2  an    z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M23 z     an    sig2  vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M24 sig2  an    z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M25 z     an    sig2  vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M26 35    an    z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M27 n1d   an    z     vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M28 37    an    z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M29 z     an    29    vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M30 an    sig2  z     vdd p  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M31 an    sig2  z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M32 z     sig2  an    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M33 an    sig2  z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M34 z     sig2  an    vdd p  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M35 vss   sig2  35    vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M36 vss   sig2  n1d   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M37 vss   sig2  37    vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M38 29    sig2  vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C10 a     vss   0.621f
+C4  an    vss   2.768f
+C3  b     vss   0.875f
+C2  sig2  vss   2.606f
+C5  z     vss   2.669f
+.ends

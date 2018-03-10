@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Comment 4A abutment box line
+# Make sure the 4N labels are on even co-ordinates
+# Change 4N labels on CM1 to 94 ... CM1
+# Change 4N labels on CPG to 94 ... CPG
+# Change 4N labels on REF to 94 ... REF
+# Convert 4X connectors from Alliance to Magic 94 syntax
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: make_magic_cif cell" 1>&2
+  echo "#" 1>&2
+  echo "#   No file given. Please check." 1>&2
+  exit 1
+fi
+
+if test -f $1.cif
+then
+  cell=$1
+else
+  echo "# Usage: make_magic_cif cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".cif does not exist. Please check." 1>&2
+  exit 1
+fi
+
+
+sed 's/^\(4A  *\)\(.*\); *$/(\1\2);/' $cell.cif | \
+awk '$1 ~ /^4N/ {printf "%1s %1s %1s %1s;\n", $1, $2, int($3/2)*2, int($4/2)*2}
+$1 !~ /^4N/ {print}' | \
+sed '/^L  *CM1/,/^L [^C][^M][^1]/ s/^\(4N\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\); *$/94 \2 \3 \4 CM1;/' | \
+sed '/^L  *CPG/,/^L [^C][^P][^G]/ s/^\(4N\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\); *$/94 \2 \3 \4 CPG;/' | \
+sed '/^L  *REF/,$ s/^\(4N\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\); *$/94 \2 \3 \4 REF;/' | \
+sed '/^L  *CM1/,/^L [A-Z][A-Z][^1]/ s/^\(4X\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\) *$/94 \2 \4 \5 CM1;/' | \
+sed '/^L  *CM2/,/^L [A-Z][A-Z][^2]/ s/^\(4X\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  *\([^ ][^ ]*\) *$/94 \2 \4 \5 CM2;/' > $$temp
+
+mv -f $$temp $cell.cif

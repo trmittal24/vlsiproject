@@ -1,0 +1,21 @@
+* Spice description of aoi22_x1
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:09
+*
+.subckt aoi22_x1 a1 a2 b1 b2 vdd vss z 
+M1  sig6  b1    z     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M3  z     b2    sig6  vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M4  sig6  a2    vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M2  vdd   a1    sig6  vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M7  z     b2    n2    vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+M8  sig3  a2    z     vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+M6  vss   a1    sig3  vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+M5  n2    b1    vss   vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+C10 a2    vss   1.548f
+C9  a1    vss   1.542f
+C8  b1    vss   1.315f
+C7  b2    vss   1.301f
+C6  sig6  vss   0.904f
+C5  vdd   vss   1.179f
+C4  z     vss   2.505f
+.ends

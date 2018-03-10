@@ -1,0 +1,19 @@
+* Spice description of nr2v0x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:25:47
+* vsclib 0.13um values
+.subckt nr2v0x3 a b vdd vss z
+M01 vdd   a     06    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M02 02    a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M03 vdd   a     08    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M04 vss   a     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M05 vss   a     z     vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M06 06    b     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M07 z     b     02    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M08 08    b     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M09 z     b     vss   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M10 z     b     vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+C4  a     vss   0.731f
+C3  b     vss   0.642f
+C1  z     vss   1.147f
+.ends

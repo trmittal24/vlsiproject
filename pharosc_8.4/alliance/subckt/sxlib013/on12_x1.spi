@@ -1,0 +1,16 @@
+* Spice description of on12_x1
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:32:17
+* sxlib 0.13um values
+.subckt on12_x1 i0 i1 q vdd vss
+Mtr_00001 sig4  i1    vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00002 sig3  i0    q     vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00003 vss   sig4  sig3  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00004 vdd   i0    q     vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00005 q     sig4  vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00006 vdd   i1    sig4  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C6  i0    vss   0.837f
+C5  i1    vss   0.981f
+C1  q     vss   0.911f
+C4  sig4  vss   0.623f
+.ends

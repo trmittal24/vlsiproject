@@ -1,0 +1,23 @@
+* Spice description of aon22_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:32:52
+* vxlib 0.13um values
+.subckt aon22_x1 a1 a2 b1 b2 vdd vss z
+M1  sig7  b1    zn    vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M1z vdd   zn    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2  vdd   a1    sig7  vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M2z vss   zn    z     vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M3  zn    b2    sig7  vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M4  sig7  a2    vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M5  n2    b1    vss   vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M6  vss   a1    sig4  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M7  zn    b2    n2    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M8  sig4  a2    zn    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+C11 a1    vss   0.661f
+C8  a2    vss   0.678f
+C10 b1    vss   0.667f
+C9  b2    vss   0.693f
+C7  sig7  vss   0.446f
+C3  z     vss   0.719f
+C1  zn    vss   0.816f
+.ends

@@ -1,0 +1,11 @@
+#!/bin/bash
+# allor2 2007-07-06:08h00 graham
+
+./allor2_delay $1
+./allor2_vbe
+./allor2_lib
+./allor2_html
+if test -x allor2_xtra
+then
+  ./allor2_xtra
+fi

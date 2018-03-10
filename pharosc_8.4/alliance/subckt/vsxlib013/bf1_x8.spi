@@ -1,0 +1,21 @@
+* Spice description of bf1_x8
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:57:48
+* vsxlib 0.13um values
+.subckt bf1_x8 a vdd vss z
+M1a vdd   a     6     vdd p  L=0.12U  W=1.98U  AS=0.5247P   AD=0.5247P   PS=4.49U   PD=4.49U
+M1  z     6     vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M2a 6     a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M2  vdd   6     z     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M3a 6     a     vss   vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M3  z     6     vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M4a vss   a     6     vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M4  vdd   6     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M5  vss   6     z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M6  z     6     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M7  vss   6     z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M8  z     6     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+C3  6     vss   1.371f
+C4  a     vss   0.741f
+C2  z     vss   1.534f
+.ends

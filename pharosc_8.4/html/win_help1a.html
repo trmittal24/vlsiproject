@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Linux Live CD's</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="win_help1.html">
+	<LINK REL=PREV HREF="win_help1.html">
+	<LINK REL=NEXT HREF="win_help2.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070919;11200000">
+	<META NAME="CHANGED" CONTENT="20070919;11200000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Windows help/Windows and Live CD</A>
+<A HREF="win_help1a.html">/Live CD's</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="win_help1.html">UP</A></LI>
+<LI><A HREF="win_help1.html">PREV</A></LI>
+<LI><A HREF="win_help2.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Linux Live CD options</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+The Live CD's below have all been tried but failed to perform
+either at all or as well as Ubuntu.
+<OL>
+
+<LI CLASS="first">Simply Mepis 6.5 from the July 2007 edition of the magazine
+<A HREF="www.linuxformat.co.uk"><I>Linux Format</I></A> which
+is based on Ubuntu.
+<UL>
+<LI>The Synaptic Package Manager was unusable, giving the error
+message <TT>Unable to write to /var/cache/apt/</TT>. I think this
+is because the directory is linked to <TT>/linux/var/cache/apt</TT>
+which is on the CDROM. This meant that no packages were available for checking or loading.
+<LI>Simply Mepis failed to recognise my graphics resolution of
+1400&times;1050 and used 1024&times;768 instead.
+</UL>
+
+<LI CLASS="first">OpenSuse 10.2 from the April 2007 edition of the magazine
+<A HREF="www.linuxformat.co.uk"><I>Linux Format</I></A>.
+<UL>
+<LI>No support for my screen resolution; 800&times;600 was used instead.
+<LI>Software is installed by a Suse program called Yast.
+This isn't a nice piece of software. I was unable to get it to use
+the CDROM as a source of further software updates. Since openmotif
+is not installed by default, it has to be installed from the CDROM
+if possible.
+<LI><TT>gawk</TT> is used for <TT>awk</TT> which is the right choice!
+</UL>
+
+<LI CLASS="first">Mandriva Linux 2007.0 from the April 2007 edition of the magazine
+<A HREF="www.linuxformat.co.uk"><I>Linux Format</I></A>.
+<UL>
+<LI>This is a release which uses <TT>rpm</TT> files
+instead of <TT>deb</TT> files for software updates. Mandriva has its own
+software updater, the portentously named Mandriva Linux Control Center.
+I could not work out how to add the CDROM to the search path and so
+was unable to check or update the default software configuration.
+<LI>This distribution has some fancy graphics interface which didn't
+work well on my PC. The correct graphics resolution was found,
+but moving windows was slow with unattractive graphics artifacts
+(like the panel moving out to touch a window which was moved close
+to it). I also found an overhead of 20% of the CPU always running, probably to
+maintain all this graphics overhead.
+</UL>
+
+<LI CLASS="first">gNewSense from the April 2007 edition of the magazine
+<A HREF="www.linuxformat.co.uk"><I>Linux Format</I></A>.
+<UL>
+<LI>This distribution looks like Ubuntu with different colours.
+Unfortunately this CDROM has no extra software which could be
+installed (like <TT>gawk</TT>) so it isn't much use here.
+</UL>
+
+<LI CLASS="first">PCLinuxOS from the July 2006 edition of the magazine
+<A HREF="www.linuxformat.co.uk"><I>Linux Format</I></A>.
+<UL>
+<LI>This release has no extra software beyond what what is installed.
+<LI>When you turn off the computer, the CDROM remains trapped inside
+the drive. At the next power up, the boot is from the CDROM with no
+option to boot from the hard disk! The only way out of this is to hack
+the ROM BIOS to boot from the hard disk first, and afterwards hack it
+back again.
+</UL>
+</OL>
+</DIV>
+
+<DIV CLASS="col_3">
+<P>
+The Ubuntu Live CD's 6.10 aka Edgy Erg and 7.04 aka Feisty Fred
+have been used to test the concept and have worked well.
+My versions came from the magazine
+<A HREF="www.linux-magazine.com"><I>Linux Magazine</I></A>;
+6.10 from January 2007 and 7.04 from July 2007.
+<P>
+You want certain features from a Live CD.
+<UL>
+<LI>Recognise your graphics resolution.
+<LI>Not be overloaded with software duplicates.
+<LI>Have more software on the CDROM which the user can install.
+<LI>Have the software search path set up to look first at the CDROM.
+<LI>Crisp graphics.
+<LI>Not look too much like Windows.
+<LI>Before powering off the computer, open the CDROM drive.
+</UL>
+<P>
+No distribution meets all these objectives, but Ubuntu does best.
+</DIV>
+
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>
+

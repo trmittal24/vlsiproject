@@ -1,0 +1,20 @@
+* Spice description of xor2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:40:24
+* vsclib 0.13um values
+.subckt xor2v0x05 a b vdd vss z
+M01 04    a     vdd   vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M02 04    a     vss   vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M03 vdd   b     bn    vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M04 z     b     04    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M05 vss   b     bn    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M06 bn    04    z     vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M07 vss   04    n1    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M08 z     bn    04    vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M09 n1    bn    z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C7  04    vss   0.515f
+C4  a     vss   0.365f
+C3  b     vss   0.696f
+C1  bn    vss   0.864f
+C6  z     vss   0.608f
+.ends

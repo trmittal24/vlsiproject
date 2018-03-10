@@ -1,0 +1,9 @@
+* Sun Apr  2 21:56:02 CEST 2006
+.subckt nd2v3x2 a b vdd vss z 
+*SPICE circuit <nd2v3x2> from XCircuit v3.20
+
+m1 n1 a vss vss n w=40u l=2.3636u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m2 z a vdd vdd p w=24u l=2.3636u ad='24u*5u+12p' as='24u*5u+12p' pd='24u*2+14u' ps='24u*2+14u'
+m3 z b n1 vss n w=40u l=2.3636u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m4 z b vdd vdd p w=24u l=2.3636u ad='24u*5u+12p' as='24u*5u+12p' pd='24u*2+14u' ps='24u*2+14u'
+.ends

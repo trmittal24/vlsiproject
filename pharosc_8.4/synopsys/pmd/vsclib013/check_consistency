@@ -1,0 +1,138 @@
+#!/bin/bash
+
+# Script which checks that cells of the same type share the same
+# output thresholds
+
+technology_pmd=../../../magic/spice_vsclib013/technology.pmd
+threshold_type_list='lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct'
+
+if test $# -eq 0
+then
+  function_list=$(ls -1 *.pmd | \
+    grep '^.*v[0-9][0-9]*x[0-9][0-9]*\.pmd' | \
+    sed 's/^\(.*\)\(v[0-9][0-9]*\)\(x[0-9][0-9]*\.pmd\)/\1/' | \
+    uniq)
+else
+  function_list=$1
+fi
+
+echo '              --LH--  --HL--  --HH--  --LL--'
+
+for function in $function_list
+#for function in an2 bf1 iv1 nd2 nd2a nd2ab nd3 nr2 nr2a nr3 or2 xnr2 xor2
+#for function in xor2
+do
+  cell_type_list=$(ls -1 ${function}v*.pmd | \
+    grep '^.*v[0-9][0-9]*x[0-9][0-9]*\.pmd' | \
+    sed 's/^\(.*\)\(v[0-9][0-9]*\)\(x[0-9][0-9]*\.pmd\)/\1\2/' | \
+    uniq)
+  input_pin_list=$(grep '^ *inputpin_list ' ${function}.pmd | \
+    sed 's/inputpin_list//' | \
+    tr -s ' ')
+  for input_pin in $input_pin_list
+  do
+    for cell_type in $cell_type_list
+#    for cell_type in xor2v0
+    do
+      inconsistent=0; wrong_cell=
+      cell_list=$(ls -1 ${cell_type}*.pmd | \
+        sed 's/\.pmd//')
+      i=0
+      for cell in $cell_list
+      do
+#
+#       Get first threshold from technology.pmd
+#
+        threshold_pct[0]=$(grep '^lower_lh_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[1]=$(grep '^upper_lh_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[2]=$(grep '^lower_hl_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[3]=$(grep '^upper_hl_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[4]=$(grep '^lower_hh_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[5]=$(grep '^upper_hh_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[6]=$(grep '^lower_ll_pct' $technology_pmd | awk '{print $2 }')
+        threshold_pct[7]=$(grep '^upper_ll_pct' $technology_pmd | awk '{print $2 }')
+        j=0
+        for threshold_type in $threshold_type_list
+        do
+#
+#         Get second threshold from function.pmd
+#
+          temp=$(grep "^ *$threshold_type " ${function}.pmd | awk '{print $2 }')
+          if [ "$temp" != "" ]
+          then
+            threshold_pct[$j]=$temp
+          fi
+          let j=$j+1
+        done #for threshold_type in
+
+        j=0
+        for threshold_type in $threshold_type_list
+        do
+#
+#         Get third threshold defined for all pins in cell.pmd
+#
+          temp=$(grep "^ *$threshold_type " ${cell}.pmd | \
+            awk '{print $2 }')
+          if [ "$temp" != "" ]
+          then
+            threshold_pct[$j]=$temp
+          fi
+#
+#         Get fourth threshold defined for individual pin in cell.pmd
+#
+          temp=$(grep "^ *$input_pin " ${cell}.pmd | \
+            grep " $threshold_type " | \
+            awk '{print $3 }')
+          if [ "$temp" != "" ]
+          then
+            threshold_pct[$j]=$temp
+          fi
+          let j=$j+1
+        done #for threshold_type in
+
+        if [ "$i" -gt 0 ]
+        then
+          j=0
+          for threshold_type in $threshold_type_list
+          do
+#
+#           Check that threshold value matches the good one
+#
+            if [ "${threshold_pct[$j]}" -ne "${old_threshold_pct[$j]}" ]
+            then
+              inconsistent=1
+              wrong_cell=$(echo $wrong_cell" "$cell)
+              break
+#              echo $cell" is not consistent for transition "$threshold_type" on pin "$input_pin
+            fi
+            let j=$j+1
+          done
+        else
+          j=0
+          for threshold_type in $threshold_type_list
+          do
+#
+#           Take thresholds from first cell as the good ones
+#
+            old_threshold_pct[$j]=${threshold_pct[$j]}
+            let j=$j+1
+          done
+        fi
+        let i=$i+1
+      done #for cell in $cell_list
+      if [ "$inconsistent" -eq 1 ]
+      then
+        echo $cell_type $input_pin ${old_threshold_pct[0]} ${old_threshold_pct[1]} \
+          ${old_threshold_pct[2]} ${old_threshold_pct[3]} ${old_threshold_pct[4]} \
+          ${old_threshold_pct[5]} ${old_threshold_pct[6]} ${old_threshold_pct[7]} | \
+          awk '{printf "%-8s%4s%4d%4d%4d%4d%4d%4d%4d%4d",$1,$2,$3,$4,$5,$6,$7,$8,$9,$10}'
+        echo " is inconsistent for "$wrong_cell
+      else
+        echo $cell_type $input_pin ${old_threshold_pct[0]} ${old_threshold_pct[1]} \
+          ${old_threshold_pct[2]} ${old_threshold_pct[3]} ${old_threshold_pct[4]} \
+          ${old_threshold_pct[5]} ${old_threshold_pct[6]} ${old_threshold_pct[7]} | \
+          awk '{printf "%-8s%4s%4d%4d%4d%4d%4d%4d%4d%4d\n",$1,$2,$3,$4,$5,$6,$7,$8,$9,$10}'
+      fi
+    done #for cell_type in $cell_type_list
+  done #for input_pin in $input_pin_list
+done #for function in $function_list

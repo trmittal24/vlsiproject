@@ -1,0 +1,27 @@
+* Spice description of or4v0x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:34:53
+* vsclib 0.13um values
+.subckt or4v0x3 a b c d vdd vss z
+M01 01    a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M02 vdd   a     05    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M03 15    a     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M04 n2    b     01    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M05 05    b     n5    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M06 vss   b     15    vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M07 07    c     n2    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M08 n5    c     11    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M09 15    c     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M10 15    d     07    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M11 11    d     15    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M12 vss   d     15    vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M13 vdd   15    z     vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M14 z     15    vdd   vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M15 vss   15    z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C3  15    vss   0.878f
+C6  a     vss   1.236f
+C4  b     vss   0.908f
+C5  c     vss   0.589f
+C7  d     vss   0.284f
+C2  z     vss   0.669f
+.ends

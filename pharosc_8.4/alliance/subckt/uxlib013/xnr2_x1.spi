@@ -1,0 +1,21 @@
+* Spice description of xnr2_x1
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:11
+*
+.subckt xnr2_x1 a b vdd vss z 
+M5  vdd   a     6     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M4  bn    b     vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M1  vdd   bn    n1    vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M2  n1    6     z     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M3  z     b     6     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M7  bn    6     z     vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+M6  z     bn    6     vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+M9  6     a     vss   vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+M8  vss   b     bn    vss n  L=0.13U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U   
+C8  a     vss   1.312f
+C7  b     vss   1.115f
+C6  vdd   vss   1.975f
+C3  6     vss   2.841f
+C2  z     vss   2.612f
+C1  bn    vss   1.655f
+.ends

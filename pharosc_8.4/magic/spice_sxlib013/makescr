@@ -1,0 +1,6 @@
+#!/bin/bash
+
+libscr -check_mono -lib sxlib013.lib > sxlib013.scr
+libscr -check_minc -lib sxlib013.lib >> sxlib013.scr
+libscr -check_maxc -lib sxlib013.lib >> sxlib013.scr
+libscr -check_maxt -lib sxlib013.lib >> sxlib013.scr

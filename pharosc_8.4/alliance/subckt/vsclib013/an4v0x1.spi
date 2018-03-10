@@ -1,0 +1,22 @@
+* Spice description of an4v0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  8:58:48
+* vsclib 0.13um values
+.subckt an4v0x1 a b c d vdd vss z
+M01 10    a     vdd   vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M02 n1    a     vss   vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M03 vdd   b     10    vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M04 sig7  b     n1    vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M05 10    c     vdd   vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M06 n3    c     sig7  vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M07 vdd   d     10    vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M08 10    d     n3    vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M09 vdd   10    z     vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M10 vss   10    z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C4  10    vss   0.927f
+C5  a     vss   0.489f
+C9  b     vss   0.363f
+C10 c     vss   0.398f
+C8  d     vss   0.567f
+C3  z     vss   0.846f
+.ends

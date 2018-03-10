@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Script which converts a wsclib cell to a wtclib cell.
+
+#    layer transformation
+#       wsc      wtc
+#       ALU1     ALU2
+#       CALU1    CALU2
+#       NDIF     same
+#       NTIE     same
+#       NTRANS   same
+#       NWELL    same
+#       PDIF     same
+#       POLY     same
+#       POLY2    ALU1
+#       PTIE     same
+#       PTRANS   same
+#       PWELL    same
+#       TALU1    TALU2
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+
+if test -f ../vsclib/$1.ap
+then
+  cell=$1
+else
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+date1=$(date '+%s')
+
+sed 's/ALU1/ALU2/g' ../wsclib/$cell.ap | \
+  sed 's/POLY2/ALU1/g' > $$temp
+
+eastab=$(grep '^A ' $$temp | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\3/')
+northab=$(grep '^A ' $$temp | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+awk -v "FS=," '/^S 0,6000,'$eastab',6000,12000,.*,CALU2 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3,$4,$5,$6,$7,$8 RS \
+$1,$2,$3,$4,$5,$6,$7,"CALU1" }
+!/^S 0,6000,'$eastab',6000,12000,.*,CALU2/ {print}' $$temp | \
+awk -v "FS=," '/^S 0,74000,'$eastab',74000,12000,.*,CALU2 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3,$4,$5,$6,$7,$8 RS \
+$1,$2,$3,$4,$5,$6,$7,"CALU1" }
+!/^S 0,74000,'$eastab',74000,12000,.*,CALU2 *$/ {print}' > $1.ap
+
+rm $$temp

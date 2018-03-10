@@ -1,0 +1,1 @@
+The P/N ratio is set to 2.5, which is close to the P/N ratio of 2.6 which gives the fastest speed, as well as balanced rise and fall drive strengths.

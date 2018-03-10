@@ -1,0 +1,30 @@
+| units: 100 tech: scmos format: MIT
+p b bn vdd 2 27 17 39
+p a vdd an 2 18 33 39
+p bn an z 2 18 43 39
+p an z bn 2 27 53 39
+n b bn vss 2 9 9 17
+n a vss an 2 9 25 12
+n b an z 2 9 35 12
+n bn z a_47_9# 2 12 45 9
+n an a_47_9# vss 2 12 52 9
+C bn z 2.9
+C vdd an 5.2
+C vss an 9.3
+C vdd a 5.6
+C vss a 10.4
+C bn an 2.1
+C vdd b 14.4
+C vdd z 3.3
+C vss b 17.1
+C vdd bn 16.1
+C vss z 4.9
+C vss bn 7.3
+R a_47_9# 64
+R z 310
+R a 664
+R an 909
+R bn 1529
+R b 1649
+R vss 305
+R vdd 4260

@@ -1,0 +1,19 @@
+* Spice description of or3_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 11:00:04
+* vsxlib 0.13um values
+.subckt or3_x1 a b c vdd vss z
+M1a 1b    a     vdd   vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M1b n2    b     1b    vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M1c sig1  c     n2    vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M1z vdd   sig1  z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2a vss   a     sig1  vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M2b sig1  b     vss   vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M2c vss   c     sig1  vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M2z z     sig1  vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+C4  a     vss   0.680f
+C5  b     vss   0.648f
+C6  c     vss   0.660f
+C1  sig1  vss   1.188f
+C3  z     vss   0.769f
+.ends

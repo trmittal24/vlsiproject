@@ -1,0 +1,126 @@
+#!/bin/bash
+
+# This script outputs timing and power LUTs using values for unitcap listed in the first
+# for loop, and reading the input_net_transition and total_output_net_capacitance values
+# from the technology.pmd file.
+# A LUT is written for each drive strength listed in the second for loop.
+
+# list here the unitcap values used in the technology.pmd and any individual pmd files
+for unitcap in 1.8 2.0 2.6
+do
+  refcap=$(echo $unitcap | awk '{print $1*100}')
+# list all the used drive strengths here
+  for drive in 05 1 2 3 4 5 6 7 8 9 10 11 12
+  do
+#   scale drive strength by factor of 10 to allow for rounding to 1 decimal place
+    if [ "${drive:0:1}" -eq 0 ]
+    then
+      let drive_strength=${drive:1:1}
+    else
+      let drive_strength=$drive*10
+    fi
+    input_net_transition=$(grep '^input_net_transition' technology.pmd | sed 's/^input_net_transition[ *]//g')
+    output_cap=$(grep '^total_output_net_capacitance' technology.pmd |  sed 's/^total_output_net_capacitance[ *]//g')
+    i=0
+    for index_2 in $output_cap
+    do
+      let i=$i+1
+      maxcap=$(echo $index_2 | awk '{print $1*10}')
+    done
+    maxcap=$(echo $[ $drive_strength*$refcap*$maxcap ] | awk '{print $1/10000}')
+
+    echo "lu_table_template(x${drive}_${maxcap}_6x10) {"
+    echo "variable_1 : input_net_transition ;"
+    echo "variable_2 : total_output_net_capacitance ;"
+
+#   first index of timing LUT
+    echo -n "index_1( \""
+    j=0
+    for index_1 in $input_net_transition
+    do
+      let j=$j+1
+      if [ "$j" -ne 1 ]
+      then
+        echo -n ", "
+      fi
+      tran=$(echo $index_1 | sed 's/p$//g' | awk '{print $1*10}' | awk '{printf"%6.1f\n", $1/10}')
+      echo -n "$tran"
+    done
+    echo "\" ) ;"
+
+#   second index of timing LUT
+    echo -n "index_2( \""
+    j=0
+    for index_2 in $output_cap
+    do
+      let j=$j+1
+      if [ "$j" -ne 1 ]
+      then
+        echo -n ", "
+      fi
+      tran=$[ $(echo $index_2 | awk '{print $1*10}')*$refcap*drive_strength ]
+      tran=$(echo $tran | awk '{printf"%6.1f\n", $1/10000}')
+        echo -n "$tran"
+    done
+    echo "\" ) ; }"
+    echo
+
+    echo "power_lut_template(pwr_x${drive}_${maxcap}_5x10) {"
+    echo "variable_1 : input_transition_time ;"
+    echo "variable_2 : total_output_net_capacitance ;"
+
+#   first index of power LUT
+    echo -n "index_1( \""
+    j=0
+    for index_1 in $input_net_transition
+    do
+      let j=$j+1
+      if [ "$j" -ne 1 ]
+      then
+        echo -n ", "
+      fi
+      tran=$(echo $index_1 | sed 's/p$//g' | awk '{print $1*10}' | awk '{printf"%6.1f\n", $1/10}')
+      echo -n "$tran"
+    done
+    echo "\" ) ;"
+
+#   second index of power LUT
+    echo -n "index_2( \""
+    j=0
+    for index_2 in $output_cap
+    do
+      let j=$j+1
+      if [ "$j" -ne "$i" ]
+      then
+#     don't output cap value for last cap in list
+        if [ "$j" -ne 1 ]
+        then
+          echo -n ", "
+        fi
+        tran=$[ $(echo $index_2 | awk '{print $1*10}')*$refcap*drive_strength ]
+        tran=$(echo $tran | awk '{printf"%6.1f\n", $1/10000}')
+        echo -n "$tran"
+      fi
+    done
+    echo "\" ) ; }"
+    echo
+  done
+done
+
+# write out the single index power LUT for the input pins
+echo "power_lut_template(pwr_intran_x10) {"
+echo "variable_1 : input_transition_time ;"
+echo -n "index_1( \""
+j=0
+for index_1 in $input_net_transition
+do
+  let j=$j+1
+  if [ "$j" -ne 1 ]
+  then
+    echo -n ", "
+  fi
+  tran=$(echo $index_1 | sed 's/p$//g' | awk '{print $1*10}' | awk '{printf"%6.1f\n", $1/10}')
+  echo -n "$tran"
+done
+echo "\" ) ; }"
+

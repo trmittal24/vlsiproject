@@ -1,0 +1,8 @@
+inputpin_list cmd i0 i1
+outputpin_list nq
+i0 nq negative_unate when 00 01
+i1 nq negative_unate when 10 11
+cmd nq negative_unate when 01
+cmd nq positive_unate when 10
+cmd nq pin_power when 00 11
+nq logic_function ((i0*cmd')+(i1*cmd))'

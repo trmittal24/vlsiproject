@@ -1,0 +1,13 @@
+* Tue Aug 10 11:21:07 CEST 2004
+.subckt aon21_x2 a1 a2 b vdd vss z 
+*SPICE circuit <aon21_x2> from XCircuit v3.10
+
+m1 z zn vss vss n w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m2 zn a2 n2 vss n w=17u l=2u ad='17u*5u+12p' as='17u*5u+12p' pd='17u*2+14u' ps='17u*2+14u'
+m3 z zn vdd vdd p w=38u l=2u ad='38u*5u+12p' as='38u*5u+12p' pd='38u*2+14u' ps='38u*2+14u'
+m4 zn a2 n1 vdd p w=38u l=2u ad='38u*5u+12p' as='38u*5u+12p' pd='38u*2+14u' ps='38u*2+14u'
+m5 n1 b vdd vdd p w=38u l=2u ad='38u*5u+12p' as='38u*5u+12p' pd='38u*2+14u' ps='38u*2+14u'
+m6 n2 a1 vss vss n w=17u l=2u ad='17u*5u+12p' as='17u*5u+12p' pd='17u*2+14u' ps='17u*2+14u'
+m7 zn b vss vss n w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m8 zn a1 n1 vdd p w=38u l=2u ad='38u*5u+12p' as='38u*5u+12p' pd='38u*2+14u' ps='38u*2+14u'
+.ends

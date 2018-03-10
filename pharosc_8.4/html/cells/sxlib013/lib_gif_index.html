@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+"http://www.w3.org/TR/REC-html40/strict.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>sxlib standard cell on-line data book</TITLE>
+	<LINK REL=HOME HREF="../../../index.html">
+	<LINK REL=UP HREF="../../../index.html">
+	<LINK REL=PREV HREF="../rgalib013/lib_gif_index.html">
+	<LINK REL=NEXT HREF="../ssxlib013/lib_gif_index.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME="DESCRIPTION" CONTENT="on-line databook of the sxlib standard cell library
+	with full layout and transistor schematics.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="CREATED" CONTENT="20040817;1420000">
+	<META NAME="CHANGED" CONTENT="20070527;1250000">
+	<LINK REL="icon" HREF="../../logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="../../moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../../../index.html">vlsitechnology.org</A>
+<A HREF="lib_gif_index.html">/sxlib</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../../../index.html">UP</A></LI>
+<LI><A HREF="../rgalib013/lib_gif_index.html">PREV</A></LI>
+<LI><A HREF="../ssxlib013/lib_gif_index.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">sxlib standard cell library</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>Web data books
+<UL CLASS="links">
+<LI><A HREF="../sxlib013/lib_gif_index.html" CLASS="current">sxlib</A></LI>
+<LI><A HREF="../ssxlib013/lib_gif_index.html">ssxlib</A></LI>
+<LI><A HREF="../vxlib013/lib_gif_index.html">vxlib</A></LI>
+<LI><A HREF="../vsclib013/lib_gif_index.html">vsclib</A></LI>
+<LI><A HREF="../wsclib013/lib_gif_index.html">wsclib</A></LI>
+<LI><A HREF="../vgalib013/lib_gif_index.html">vgalib</A></LI>
+<LI><A HREF="../rgalib013/lib_gif_index.html">rgalib</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+Viewable <B>GIF</B> files for the
+<A HREF="http://www-asim.lip6.fr/recherche/alliance">Alliance</A>
+<B>sxlib</B>. This release contains the cells that can be
+characterised by the scripts in the library: <B>61</B> cells in all,
+combinatorial functions with 1-4 inputs.
+Each cell has a typical timing arc and input pin capacitance
+in 0.13&micro;m generic technology,
+along with its leakage and dynamic power, size,
+layout, and the transistor schematic.
+Transistor sizes are given in lambda, where for this 0.13&micro;m
+technology, lambda=0.055&micro;m.
+The cell height is 100&nbsp;lambda (5.5&micro;m) with power
+supply rails 12&nbsp;lambda (0.66&micro;m) wide.
+The maximum P&nbsp;and N&nbsp;transistor widths are 40&lambda; and 34&lambda;
+respectively.
+<P>
+Note that this lambda value is half the value used in the
+<A HREF="http://www-asim.lip6.fr/recherche/alliance">Alliance</A>
+<B>sxlib</B> layout.
+This means that the transistor widths in the cells' schematics
+are twice the value
+that will be measured in Graal &hellip; e.g. a 40&lambda;
+transistor will be 20&lambda
+wide in
+<A HREF="http://eda.ee.nctu.edu.tw/~cywang/info/eda/alliance/www-asim.lip6.fr/alliance/doc/man/graal.1.html">Graal</A>.
+Both are 2.2&micro;m wide after conversion to <B>CIF</B>.
+</DIV>
+
+<DIV CLASS="col_3">
+<P>
+The <B>sxlib</B> has been drawn with its own layout rules which
+means that the 0.13&micro;m layout has plenty of DRC errors. The
+<A HREF="../ssxlib013/lib_gif_index.html"><B>ssxlib</B></A>
+has been derived from the <B>sxlib</B> and has DRC clean layout.
+</DIV>
+
+<DIV CLASS="col_1a2">
+<P>
+<A HREF="../../sx_description.html">sxlib standard cell physical layout description</A><BR>
+<A HREF="../../char_sxlib013.html">description of the vxlib characterisation methodology</A> (used for the sxlib)</P>
+
+<P>
+<A HREF="a2.html">a2 standard cell family, sxlib</A>
+	<A HREF="a2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-AND gates</A><BR>
+<A HREF="a3.html">a3 standard cell family, sxlib</A>
+	<A HREF="a3.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 3-AND gates</A><BR>
+<A HREF="a4.html">a4 standard cell family, sxlib</A>
+	<A HREF="a4.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 4-AND gates</A><BR>
+<A HREF="an12.html">an12 standard cell family, sxlib</A>
+	<A HREF="an12.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-NOR gates with inverted input</A><BR>
+<A HREF="ao22.html">ao22 standard cell family, sxlib</A>
+	<A HREF="ao22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/1 OR-AND gates</A><BR>
+<A HREF="ao2o22.html">ao2o22 standard cell family, sxlib</A>
+	<A HREF="ao2o22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/2 OR-AND gates</A><BR>
+<A HREF="buf.html">buf standard cell family, sxlib</A>
+	<A HREF="buf.html" CLASS="nohighlight"> &nbsp;&nbsp;3&times; non-inverting buffers</A><BR>
+<A HREF="halfadder.html">halfadder standard cell family, sxlib</A>
+	<A HREF="halfadder.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-bit half adder gates</A><BR>
+<A HREF="inv.html">inv standard cell family, sxlib</A>
+	<A HREF="inv.html" CLASS="nohighlight"> &nbsp;&nbsp;4&times; inverters</A><BR>
+<A HREF="mx2.html">mx2 standard cell family, sxlib</A>
+	<A HREF="mx2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; non-inverting 2-way muxes</A><BR>
+<A HREF="na2.html">na2 standard cell family, sxlib</A>
+	<A HREF="na2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-NAND gates</A><BR>
+<A HREF="na3.html">na3 standard cell family, sxlib</A>
+	<A HREF="na3.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 3-NAND gates</A><BR>
+<A HREF="na4.html">na4 standard cell family, sxlib</A>
+	<A HREF="na4.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 4-NAND gates</A><BR>
+<A HREF="nao22.html">nao22 standard cell family, sxlib</A>
+	<A HREF="nao22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/1 OR-NAND gates</A><BR>
+<A HREF="nao2o22.html">nao2o22 standard cell family, sxlib</A>
+	<A HREF="nao2o22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/2 OR-NAND gates</A><BR>
+<A HREF="nmx2.html">nmx2 standard cell family, sxlib</A>
+	<A HREF="nmx2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; inverting 2-way muxes</A><BR>
+<A HREF="no2.html">no2 standard cell family, sxlib</A>
+	<A HREF="no2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-NOR gates</A><BR>
+<A HREF="no3.html">no3 standard cell family, sxlib</A>
+	<A HREF="no3.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 3-NOR gates</A><BR>
+<A HREF="no4.html">no4 standard cell family, sxlib</A>
+	<A HREF="no4.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 4-NOR gates</A><BR>
+<A HREF="noa22.html">noa22 standard cell family, sxlib</A>
+	<A HREF="noa22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/1 AND-NOR gates</A><BR>
+<A HREF="noa2a22.html">noa2a22 standard cell family, sxlib</A>
+	<A HREF="noa2a22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/2 AND-NOR gates</A><BR>
+<A HREF="nxr2.html">nxr2 standard cell family, sxlib</A>
+	<A HREF="nxr2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2 input exclusive NOR gates</A><BR>
+<A HREF="o2.html">o2 standard cell family, sxlib</a>
+	<A HREF="o2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-OR gates</A><BR>
+<A HREF="o3.html">o3 standard cell family, sxlib</a>
+	<A HREF="o3.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 3-OR gates</A><BR>
+<A HREF="o4.html">o4 standard cell family, sxlib</a>
+	<A HREF="o4.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 4-OR gates</A><BR>
+<A HREF="oa22.html">oa22 standard cell family, sxlib</a>
+	<A HREF="oa22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/1 AND-OR gates</A><BR>
+<A HREF="oa2a22.html">oa2a22 standard cell family, sxlib</a>
+	<A HREF="oa2a22.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2/2 AND-OR gates</A><BR>
+<A HREF="on12.html">on12 standard cell family, sxlib</a>
+	<A HREF="on12.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2-NAND gates with inverted input</A><BR>
+<A HREF="xr2.html">xr2 standard cell family, sxlib</a>
+	<A HREF="xr2.html" CLASS="nohighlight"> &nbsp;&nbsp;2&times; 2 input exclusive OR gates</A><BR>
+<P></P>
+<P></P>
+<P><BR>
+</DIV></DIV>
+</BODY>
+</HTML>

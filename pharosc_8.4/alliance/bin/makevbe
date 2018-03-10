@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# First version from makelib             GP 7-SEP-03
+
+# usage: makevbe vxlib100 to make vbe files from data in makevbe/vxlib100
+
+#ls -1 *.ap | sed s/\.ap// | grep -v all_inst | sed 's/^.*$/makevbe_'$1'\ &\ |\ tee\ >\ &\.vbe/' > makevbelib
+ls -1 *.ap | sed s/\.ap// | grep -v all_inst | sed 's/^.*$/makevbe_'$1'\ &\ >\ \$\$\.temp;\ cat\ \$\$.temp\ >\ &\.vbe;\ rm\ \-f\ \$\$\.temp/' > makevbelib
+
+chmod 755 makevbelib

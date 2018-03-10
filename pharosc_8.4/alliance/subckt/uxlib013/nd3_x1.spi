@@ -1,0 +1,17 @@
+* Spice description of nd3_x1
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt nd3_x1 a b c vdd vss z 
+M1  z     c     vdd   vdd p  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+M2  vdd   b     z     vdd p  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+M3  z     a     vdd   vdd p  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+M4  sig2  c     z     vss n  L=0.13U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U  
+M6  vss   a     n1    vss n  L=0.13U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U  
+M5  n1    b     sig2  vss n  L=0.13U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U  
+C8  vdd   vss   1.448f
+C7  a     vss   0.759f
+C6  b     vss   0.751f
+C5  c     vss   1.097f
+C3  z     vss   2.338f
+.ends

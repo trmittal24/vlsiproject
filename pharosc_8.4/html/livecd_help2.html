@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>system config</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="win_help1.html">
+	<LINK REL=PREV HREF="win_help1.html">
+	<LINK REL=NEXT HREF="livecd_help3.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070827;10000000">
+	<META NAME="CHANGED" CONTENT="20070916;12400000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Live CD help</A>
+<A HREF="livecd_help2.html">/system config</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="win_help1.html">UP</A></LI>
+<LI><A HREF="win_help1.html">PREV</A></LI>
+<LI><A HREF="livecd_help3.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Linux Live CD system configuration</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html" CLASS="current">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+The look of the operating system can be improved by configuring
+some of its aspects. This is recommended for any extended use
+of the Live CD. The only configurations though which are necessary for
+correct running of the examples are the check on <TT>gawk</TT> and
+installing <TT>openmotif</TT>.
+<P>
+There are two popular graphic user interfaces for Lunux operating
+systems &hellip; Gnome and KDE. This is different from Windows which
+only has the Micro<SMALL>$</SMALL>oft supplied GUI. The Ubuntu Live CD uses Gnome.
+<P>
+The six configuration changes applied are
+<OL>
+<LI>Check whether <TT>gawk</TT> is used for <TT>awk</TT>.
+<LI>Install <TT>openmotif</TT>.
+<LI>Put a system monitor on the panel.
+<LI>Change the terminal font.
+<LI>Set focus follows mouse.
+<LI>Change the <TT>gedit</TT> defaults.
+</OL>
+
+<H3 CLASS="content"><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></H3>
+<P>
+<TT>awk</TT> is a Linux program which is good for manipulating the
+data in files. It is widely used in library scripts (sequences of
+instructions to the computer put into a single file). Actually there
+are different variants of <TT>awk</TT>, and the scripts need <TT>gawk</TT>.
+The Ubuntu Live CD instead uses by default <TT>mawk</TT>,
+an 11 year old <TT>awk</TT> variant which doesn't run the scripts correctly.
+The help pages show how to check what variant you have and to install
+
+<H3 CLASS="content"><A HREF="livecd_help3a.html">Install <TT>openmotif</TT></A></H3>
+<P>
+<TT>Openmotif</TT> is needed to use the Alliance graphical programs
+like Graal and Dreal.
+
+<H3 CLASS="content"><A HREF="livecd_help4.html">Put a system monitor on the panel</A></H3>
+<P>
+The system monitor shows CPU activity graphically. It is useful
+to know that the examples are actually doing something.
+
+<H3 CLASS="content"><A HREF="livecd_help5.html">Change the terminal font</A></H3>
+<P>
+The terminal font size can be reduced so that more information can
+be viewed.
+
+<H3 CLASS="content"><A HREF="livecd_help6.html">Set focus follows mouse</A></H3>
+<P>
+Focus follows mouse means that the window under the mouse becomes
+active without having to click on it. Something similar can be done 
+in Windows by installing a Power Toy, but the possibility has been
+designed out of the MAC OS. Using focus follows mouse gives a more
+efficient user experience, but is not installed as a default,
+probably in an attempt to copy default Windows and MAC behaviour.
+
+<H3 CLASS="content"><A HREF="livecd_help7.html">Change the <TT>gedit</TT> defaults</A></H3>
+<P>
+<TT>gedit</TT> is the default text editor for Gnome and has its
+font set unattractively large in the default Ubuntu configuration.
+Making it smaller makes it easier to read large text files.
+</DIV>
+
+<DIV CLASS="col_3">
+<P>
+A Linux Live CD has a copy of a Linux operating system on a CDROM
+which is loaded into a computer's RAM when it is booted. It makes no
+use of the computer's hard disk, and creates all the files it needs
+in RAM. Installing software also means loading it into RAM.
+<P>
+Any user files will also be created in RAM and will be lost when the
+computer is powered down. A solution to this is to plug in a USB stick
+containing user data and store work here. These sticks are normally
+formatted as Micro<SMALL>$</SMALL>oft FAT disks, which means they cannot support
+the full range of permissions on files to which Linux users are
+accustomed. But Windows users aren't used to this so this limitation
+won't matter so much to them.
+<P>
+The USB stick can be formatted with a Linux disk format such as Ext2,
+but then it cannot be read by a Windows or even a MAC computer.
+Only FAT enjoys full interoperability between operating systems.
+<P>
+I recommend unpacking the archive to the Live CD home directory so that
+all the user data is in RAM. At the end of the session, save any work back
+to the USB stick
+</DIV>
+
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>

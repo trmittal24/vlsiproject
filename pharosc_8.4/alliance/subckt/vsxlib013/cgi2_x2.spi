@@ -1,0 +1,30 @@
+* Spice description of cgi2_x2
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:58:09
+* vsxlib 0.13um values
+.subckt cgi2_x2 a b c vdd vss z
+M1a vdd   a     1c    vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M1b 1c    b     vdd   vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M1c 1c    c     z     vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M2a 1c    a     vdd   vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M2b vdd   b     1c    vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M2c z     c     1c    vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M3a vdd   a     n1b   vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M3b n1b   b     z     vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M3c z     c     sig1  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M4a 4b    a     vdd   vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M4b z     b     4b    vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M4c sig1  c     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M5a sig1  a     vss   vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M5b vss   b     sig1  vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M7a 7b    a     vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M7b z     b     7b    vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M8a vss   a     8a    vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M8b 8a    b     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C9  1c    vss   0.653f
+C5  a     vss   2.073f
+C6  b     vss   1.425f
+C4  c     vss   0.852f
+C1  sig1  vss   0.198f
+C2  z     vss   1.294f
+.ends

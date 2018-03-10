@@ -1,0 +1,17 @@
+For a library like vsclib, the different directories are:
+
+vsclib013           All vbe files in 0.13um techno.
+vsclib013_0         Link to above directory.
+vsclib013_6         Above VBE files with 6fF add to every input pin as
+                    estimated wireload value.
+vsclib013_6_min     As above but only the minimum drive strength cells.
+                    Used for initial BOOG synthesis.
+vsclib_netlist      Netlists for larger drive strength cells.
+vsclib013_6_macros  Timing with 6fF wireload for macros whose netlist
+                    is in vsclib_netlist. These are copied into
+                    vsclib013_6 but not included in the CATAL file.
+vsclib013_macros    Timing with 0fF wireload for macros whose netlist
+                    is in vsclib_netlist. These have not been copied
+                    into vsclib013. This must be done by the user, as
+                    in the examples/cells directory.
+vsclib200           0.35um timing, dummy numbers except for sxlib100.

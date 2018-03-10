@@ -1,0 +1,7 @@
+The output is the inverted carry of inputs
+<SPAN CLASS="boldred">a</SPAN> and <SPAN CLASS="boldred">b</SPAN>
+and carry input <SPAN CLASS="boldred">c</SPAN>,
+with the delay from pin <SPAN CLASS="boldred">c</SPAN> being favoured.
+The cells here use a P/N ratio of about 2.<BR>
+These cells provide a carry propagation with low logical effort for pin
+<SPAN CLASS="boldred">c</SPAN>.

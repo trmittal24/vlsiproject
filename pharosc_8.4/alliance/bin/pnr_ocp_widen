@@ -1,0 +1,102 @@
+#!/bin/bash
+
+# Widens the input file by the value in tracks of arg_2
+# or by 2 tracks left and right if arg_2 is missing, and
+# removes any connectors.
+# Use ocp afterwards with -partial and -ioc options to
+# fill gap with filler cells and replace connectors.
+
+if ! test -d $MBK_TARGET_LIB
+then
+  echo "#?! No MBK_TARGET_LIB found. Please check." 1>&2
+  exit 1
+else
+  library=$(basename $MBK_TARGET_LIB)
+  case $library in
+  rgalib013)
+    metal_pitch=8; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  ssxlib013)
+    metal_pitch=10; feedth1=rowend_x0; feedth2=tie_x0
+    ;;
+  stxlib013)
+    metal_pitch=10; feedth1=rowend_x0; feedth2=tie_x0
+    ;;
+  sxlib013)
+    metal_pitch=5; feedth1=rowend_x0; feedth2=tie_x0
+    ;;
+  sxlib100)
+    metal_pitch=5; feedth1=rowend_x0; feedth2=tie_x0
+    ;;
+  vgalib013)
+    metal_pitch=8; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  vsclib013)
+    metal_pitch=8; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  vtclib013)
+    metal_pitch=8; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  vsxlib013)
+    metal_pitch=10; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  vtxlib013)
+    metal_pitch=10; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  vxlib013)
+    metal_pitch=5; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  wsclib013)
+    metal_pitch=8; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  wtclib013)
+    metal_pitch=8; feedth1=vfeed1; feedth2=vfeed2
+    ;;
+  *)
+    echo "#?! Library "$library" not supported yet. Please check." 1>&2
+    exit 1
+    ;;
+  esac
+fi
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: pnr_ocp_widen cell [bloat]" 1>&2
+  echo "#" 1>&2
+  echo "#   will move the left and right edges of the Abutment box the" 1>&2
+  echo "#   by bloat tracks (or 2 tracks if not given) left and right" 1>&2
+  echo "#   eg  pnr_ocp_widen fred  will widen the AB by 4 tracks," 1>&2
+  echo "#   2 on the left and 2 on the right." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: pnr_ocp_widen cell [amount_in_tracks]" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  bloat=2
+else
+  bloat=$2
+fi
+echo "# Widening cell "$cell" by "$bloat" tracks left and right"
+
+scale=$(grep '^H ' $cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let scaled_bloat=$bloat*$metal_pitch*$scale
+
+awk -v "FS= ||," '/A / {printf "%1s %1s,%1s,%1s,%1s\n", \
+"A",$2-'$scaled_bloat',$3,$4+'$scaled_bloat',$5 }
+!/A / {print}' $cell > $$temp
+echo "# Removing connectors from cell "$cell"."
+grep -v '^C ' $$temp | \
+grep -v "^I .*${feedth1}" | \
+grep -v "^I .*${feedth2}" > $cell
+rm $$temp

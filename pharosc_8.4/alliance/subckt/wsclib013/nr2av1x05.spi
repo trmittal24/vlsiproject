@@ -1,0 +1,16 @@
+* Spice description of nr2av1x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:25:18
+* wsclib 0.13um values
+.subckt nr2av1x05 a b vdd vss z
+M01 06    a     vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M02 06    a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 03    b     z     vdd p  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M04 z     b     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M05 vdd   06    03    vdd p  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M06 vss   06    z     vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+C4  06    vss   0.490f
+C5  a     vss   0.430f
+C3  b     vss   0.483f
+C2  z     vss   0.879f
+.ends

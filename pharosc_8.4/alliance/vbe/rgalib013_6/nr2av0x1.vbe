@@ -1,0 +1,32 @@
+ENTITY nr2av0x1 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 5632;   
+  CONSTANT cin_b         : NATURAL := 12;     
+  CONSTANT cin_a         : NATURAL := 13;     
+  CONSTANT rdown_b_z     : NATURAL := 1200;   
+  CONSTANT rdown_a_z     : NATURAL := 1180;   
+  CONSTANT rup_b_z       : NATURAL := 4160;   
+  CONSTANT rup_a_z       : NATURAL := 4170;   
+  CONSTANT tplh_b_z      : NATURAL := 55;     
+  CONSTANT tphl_b_z      : NATURAL := 31;     
+  CONSTANT tphh_a_z      : NATURAL := 82;     
+  CONSTANT tpll_a_z      : NATURAL := 76;     
+  CONSTANT transistors   : NATURAL := 6       
+);
+PORT (
+  b	 : in  BIT;
+  a	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nr2av0x1;
+
+ARCHITECTURE behaviour_data_flow OF nr2av0x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nr2av0x1"
+  SEVERITY WARNING;
+  z <= (not (b) and a) after 128 ps;
+END;

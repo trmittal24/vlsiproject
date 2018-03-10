@@ -1,0 +1,11 @@
+#!/bin/bash
+# alliv1 2007-07-06:07h22 graham
+
+./alliv1_delay $1
+./alliv1_vbe
+./alliv1_lib
+./alliv1_html
+if test -x alliv1_xtra
+then
+  ./alliv1_xtra
+fi

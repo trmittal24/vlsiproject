@@ -1,0 +1,6 @@
+#!/bin/bash
+# usage: makevbe_vsclib200 xor2_x1 | tee > xor2_x1.vbe
+# takes data from directory makevbe/vsclib200
+# GP 14-SEP-03 Copied from makevbe_vxlib100
+
+bash ../../makevbe/vsclib200/$1.bash

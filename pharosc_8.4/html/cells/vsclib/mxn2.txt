@@ -1,0 +1,5 @@
+Two types of non-inverting 2-way muxes. The <B>v0</B> muxes
+are minimum width but slow on pin <SPAN CLASS="boldred">s</SPAN>
+as the inverting path to pin <SPAN CLASS="boldred">z</SPAN>
+has three stage delays. The <B>v2</B> mux uses transfer gates for
+the best speed but is bigger.

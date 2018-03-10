@@ -1,0 +1,56 @@
+entity oai21a2v0x2 is
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end oai21a2v0x2;
+
+architecture structural of oai21a2v0x2 is
+
+Component oai21v0x2
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1v0x2
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal a2n : bit;
+
+begin
+
+a2n : iv1v0x2
+   port map (
+      a   => a2,
+      z   => a2n,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : oai21v0x2
+   port map (
+      a1  => a1,
+      a2  => a2n,
+      b   => b,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

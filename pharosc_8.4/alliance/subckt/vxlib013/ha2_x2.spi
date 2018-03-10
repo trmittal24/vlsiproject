@@ -1,0 +1,27 @@
+* Spice description of ha2_x2
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:33:42
+* vxlib 0.13um values
+.subckt ha2_x2 a b co so vdd vss
+M1a n3    a     vdd   vdd p  L=0.12U  W=1.87U  AS=0.49555P  AD=0.49555P  PS=4.27U   PD=4.27U
+M1b sig1  b     n3    vdd p  L=0.12U  W=1.87U  AS=0.49555P  AD=0.49555P  PS=4.27U   PD=4.27U
+M1c vdd   con   co    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M1s so    sig1  vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M1  vdd   con   sig1  vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M2a vdd   a     con   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2b con   b     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2c co    con   vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M2  n2    con   vss   vss n  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M2s vss   sig1  so    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M3a n2    a     sig1  vss n  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M3b sig1  b     n2    vss n  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M4a 4b    a     con   vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+M4b vss   b     4b    vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+C9  a     vss   0.790f
+C8  b     vss   1.233f
+C10 co    vss   0.644f
+C5  con   vss   1.364f
+C2  n2    vss   0.204f
+C1  sig1  vss   0.645f
+C4  so    vss   0.742f
+.ends

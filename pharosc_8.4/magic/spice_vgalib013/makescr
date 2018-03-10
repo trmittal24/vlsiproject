@@ -1,0 +1,6 @@
+#!/bin/bash
+
+libscr -check_mono -lib vgalib013.lib > vgalib013.scr
+libscr -check_minc -lib vgalib013.lib >> vgalib013.scr
+libscr -check_maxc -lib vgalib013.lib >> vgalib013.scr
+libscr -check_maxt -lib vgalib013.lib >> vgalib013.scr

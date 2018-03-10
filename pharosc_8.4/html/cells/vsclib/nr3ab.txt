@@ -1,0 +1,5 @@
+Minimum size 3-I/P NOR gate with 2 inverted inputs,
+made from a 2-I/P NAND followed by a 2-I/P NOR.
+The output P/N ratio is about 2, and the gain
+from inputs <SPAN CLASS="boldred">a</SPAN> and
+<SPAN CLASS="boldred">b</SPAN> is about 1.6.

@@ -1,0 +1,10 @@
+* Spice description of vfeed1
+* Spice driver version 134999461
+* Date 17/06/2007 at 14:03:41
+* vgalib 0.13um values
+.subckt vfeed1 vdd vss
+Mtr_00001 sig2  vss   sig1  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00002 sig3  vss   sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00003 sig5  vdd   sig6  vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+Mtr_00004 sig6  vdd   sig7  vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+.ends

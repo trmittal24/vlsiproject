@@ -1,0 +1,16 @@
+* Spice description of nd2av0x2
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:17:16
+* vsclib 0.13um values
+.subckt nd2av0x2 a b vdd vss z
+M01 06    a     vdd   vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M02 06    a     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M03 z     b     vdd   vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M04 sig3  b     z     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M05 vdd   06    z     vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M06 vss   06    sig3  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+C5  06    vss   0.601f
+C6  a     vss   0.391f
+C4  b     vss   0.392f
+C2  z     vss   0.739f
+.ends

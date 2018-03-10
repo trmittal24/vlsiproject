@@ -1,0 +1,16 @@
+#/bin/bash
+
+echo > Makefile
+echo "SHELL=/bin/bash" >> Makefile
+echo >> Makefile
+
+target=vbe
+prereq=pr
+
+ls -1 *.${target} | \
+  egrep -v '_x0|vfeed|tie' | \
+  sed "s|^\(.*\)\(v[0-9][0-9]*x[0-9][0-9]*\)\(\.${target}\)$|\1\2\3: ../../../magic/spice_vsclib013/\1/\1\2\.${prereq}\n\techo \"# Remake \1\2\3\"|" >> Makefile
+
+ls -1 *.${target} | \
+  egrep -v '_x0|vfeed|tie' | \
+  sed 's|^\(.*\)$|make -s \1|' | bash

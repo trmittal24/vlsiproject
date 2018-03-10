@@ -1,0 +1,14 @@
+* Spice description of iv1v5x8
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:13:44
+* vsclib 0.13um values
+.subckt iv1v5x8 a vdd vss z
+M01 z     a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M02 vdd   a     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M03 z     a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M04 vdd   a     z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M05 z     a     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M06 vss   a     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C3  a     vss   0.719f
+C2  z     vss   0.954f
+.ends

@@ -1,0 +1,11 @@
+* Spice description of iv1v0x2
+* Spice driver version 134894944
+* Date  4/10/2005 at 10:05:08
+*
+.subckt iv1v0x2 a vdd vss z 
+M1a vdd   a     z     vdd p  L=0.12U  W=1.65U  AS=0.45375P  AD=0.45375P  PS=3.85U   PD=3.85U  
+M2a z     a     vss   vss n  L=0.12U  W=0.825U AS=0.226875P AD=0.226875P PS=2.2U    PD=2.2U   
+C4  vdd   vss   0.473f
+C3  a     vss   0.461f
+C1  z     vss   0.478f
+.ends

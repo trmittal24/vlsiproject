@@ -1,0 +1,17 @@
+* Spice description of bf1v5x4
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:06:38
+* wsclib 0.13um values
+.subckt bf1v5x4 a vdd vss z
+M01 08    a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M02 vdd   a     08    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M03 08    a     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M04 vss   a     08    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M05 z     08    vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M06 vdd   08    z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M07 z     08    vss   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M08 vss   08    z     vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+C3  08    vss   0.692f
+C4  a     vss   0.414f
+C1  z     vss   1.003f
+.ends

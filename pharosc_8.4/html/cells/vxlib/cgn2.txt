@@ -1,0 +1,1 @@
+The output is the carry of bits a and b and carry input c, with the delay from pin c being favoured. The cgn2_x1 has a stage effort of about 1.7 and the cgn2_x2 about 2.2.

@@ -1,0 +1,72 @@
+* SPICE3 file created from xor3v0x05.ext - technology: scmos
+
+M1000 a_13_38# an vdd vdd pfet w=28u l=2u
++  ad=168p pd=68u as=1162p ps=308u
+M1001 a_21_38# b a_13_38# vdd pfet w=28u l=2u
++  ad=168p pd=68u as=0p ps=0u
+M1002 z c a_21_38# vdd pfet w=28u l=2u
++  ad=448p pd=144u as=0p ps=0u
+M1003 a_39_38# c z vdd pfet w=28u l=2u
++  ad=140p pd=66u as=0p ps=0u
+M1004 an bn a_39_38# vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1005 vdd a an vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 cn c vdd vdd pfet w=28u l=2u
++  ad=152p pd=70u as=0p ps=0u
+M1007 bn b vdd vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1008 a_116_38# a bn vdd pfet w=28u l=2u
++  ad=140p pd=66u as=0p ps=0u
+M1009 z cn a_116_38# vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1010 a_133_38# cn z vdd pfet w=28u l=2u
++  ad=168p pd=68u as=0p ps=0u
+M1011 a_141_38# bn a_133_38# vdd pfet w=28u l=2u
++  ad=168p pd=68u as=0p ps=0u
+M1012 vdd an a_141_38# vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1013 a_13_12# an vss vss nfet w=14u l=2u
++  ad=84p pd=40u as=540p ps=204u
+M1014 a_21_12# b a_13_12# vss nfet w=14u l=2u
++  ad=84p pd=40u as=0p ps=0u
+M1015 z c a_21_12# vss nfet w=14u l=2u
++  ad=216p pd=86u as=0p ps=0u
+M1016 a_39_12# c z vss nfet w=14u l=2u
++  ad=109p pd=52u as=0p ps=0u
+M1017 an bn a_39_12# vss nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1018 vss a an vss nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1019 cn c vss vss nfet w=14u l=2u
++  ad=82p pd=42u as=0p ps=0u
+M1020 bn b vss vss nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1021 a_116_12# a bn vss nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1022 z cn a_116_12# vss nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1023 a_133_12# cn z vss nfet w=13u l=2u
++  ad=78p pd=38u as=0p ps=0u
+M1024 a_141_12# bn a_133_12# vss nfet w=13u l=2u
++  ad=78p pd=38u as=0p ps=0u
+M1025 vss an a_141_12# vss nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+C0 vdd an 36.59fF
+C1 z bn 4.14fF
+C2 c vss 14.72fF
+C3 vss bn 21.87fF
+C4 b vss 11.66fF
+C5 vdd c 14.47fF
+C6 a vss 49.61fF
+C7 vss cn 15.39fF
+C8 vdd bn 9.97fF
+C9 vdd b 16.59fF
+C10 vdd a 7.63fF
+C11 vdd cn 17.87fF
+C12 an z 7.76fF
+C13 z vss 4.84fF
+C14 bn cn 2.20fF
+C15 an vss 14.04fF
+C16 an a_141_38# 2.26fF
+C17 vdd z 17.25fF

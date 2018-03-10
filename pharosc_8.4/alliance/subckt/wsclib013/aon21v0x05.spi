@@ -1,0 +1,20 @@
+* Spice description of aon21v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:04:00
+* wsclib 0.13um values
+.subckt aon21v0x05 a1 a2 b vdd vss z
+M01 03    a1    vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M02 vss   a1    sig4  vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M03 vdd   a2    03    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M04 sig4  a2    08    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M05 03    b     08    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M06 08    b     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 vdd   08    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 vss   08    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C9  03    vss   0.181f
+C3  08    vss   0.578f
+C7  a1    vss   0.559f
+C6  a2    vss   0.372f
+C5  b     vss   0.539f
+C2  z     vss   0.477f
+.ends

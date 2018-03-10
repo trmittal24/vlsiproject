@@ -1,0 +1,44 @@
+ENTITY oai31v0x1 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 5184;   
+  CONSTANT cin_b         : NATURAL := 5;      
+  CONSTANT cin_a3        : NATURAL := 10;     
+  CONSTANT cin_a2        : NATURAL := 10;     
+  CONSTANT cin_a1        : NATURAL := 10;     
+  CONSTANT rdown_b_z     : NATURAL := 3560;   
+  CONSTANT rdown_a3_z    : NATURAL := 3560;   
+  CONSTANT rdown_a2_z    : NATURAL := 3560;   
+  CONSTANT rdown_a1_z    : NATURAL := 3560;   
+  CONSTANT rup_b_z       : NATURAL := 3770;   
+  CONSTANT rup_a3_z      : NATURAL := 3610;   
+  CONSTANT rup_a2_z      : NATURAL := 3610;   
+  CONSTANT rup_a1_z      : NATURAL := 3610;   
+  CONSTANT tphl_a1_z	 : NATURAL := 174;
+  CONSTANT tphl_a3_z	 : NATURAL := 218;
+  CONSTANT tplh_b_z	 : NATURAL := 226;
+  CONSTANT tphl_a2_z	 : NATURAL := 237;
+  CONSTANT tplh_a3_z	 : NATURAL := 287;
+  CONSTANT tphl_b_z	 : NATURAL := 294;
+  CONSTANT tplh_a2_z	 : NATURAL := 307;
+  CONSTANT tplh_a1_z	 : NATURAL := 382;
+  CONSTANT transistors   : NATURAL := 11      
+);
+PORT (
+  b	 : in  BIT;
+  a3	 : in  BIT;
+  a2	 : in  BIT;
+  a1	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END oai31v0x1;
+
+ARCHITECTURE behaviour_data_flow OF oai31v0x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on oai31v0x1"
+  SEVERITY WARNING;
+  z <= not(b and ((a1 or a2) or a3)) after 1100 ps;
+END;

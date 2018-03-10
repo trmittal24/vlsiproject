@@ -1,0 +1,32 @@
+ENTITY on12_x1 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 1250;
+  CONSTANT cin_i0        : NATURAL := 5;      
+  CONSTANT cin_i1        : NATURAL := 5;      
+  CONSTANT rdown_i0_q    : NATURAL := 1840;   
+  CONSTANT rdown_i1_q    : NATURAL := 1830;   
+  CONSTANT rup_i0_q      : NATURAL := 2970;   
+  CONSTANT rup_i1_q      : NATURAL := 2950;   
+  CONSTANT tphl_i0_q     : NATURAL := 36;     
+  CONSTANT tplh_i0_q     : NATURAL := 50;     
+  CONSTANT tpll_i1_q     : NATURAL := 80;     
+  CONSTANT tphh_i1_q     : NATURAL := 83;     
+  CONSTANT transistors	 : NATURAL := 6
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  q	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END on12_x1;
+
+ARCHITECTURE behaviour_data_flow OF on12_x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on on12_x1"
+  SEVERITY WARNING;
+  q <= (not (i0) or i1) after 122 ps;
+END;

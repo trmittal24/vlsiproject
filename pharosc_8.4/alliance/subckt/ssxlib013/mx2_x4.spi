@@ -1,0 +1,26 @@
+* Spice description of mx2_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:47
+* ssxlib 0.13um values
+.subckt mx2_x4 cmd i0 i1 q vdd vss
+Mtr_00001 vss   i1    sig7  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00002 sig7  cmd   sig6  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00003 vss   cmd   sig2  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00004 sig6  sig2  sig3  vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00005 sig3  i0    vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00006 q     sig6  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00007 vss   sig6  q     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00008 sig12 i1    vdd   vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00009 sig2  cmd   vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00010 sig11 cmd   sig6  vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00011 sig6  sig2  sig12 vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00012 vdd   i0    sig11 vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00013 q     sig6  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00014 vdd   sig6  q     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C5  cmd   vss   1.118f
+C4  i0    vss   0.779f
+C8  i1    vss   0.893f
+C9  q     vss   0.900f
+C2  sig2  vss   0.998f
+C6  sig6  vss   0.773f
+.ends

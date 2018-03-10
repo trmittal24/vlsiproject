@@ -1,0 +1,1 @@
+2 XNOR gates designed with an AND-OR Invert gate and 2 input inverters. The nxr2_x4 then has a large output inverter to drive the output. The nxr2_x1 is a 1/2 stage 2-XNOR, and the nxr2_x4 is a 2/3 stage 2-XNOR. Stage efforts are about 2 for the inverter driving the AND-OR-Invert, and 3.5 driving the output inverter.

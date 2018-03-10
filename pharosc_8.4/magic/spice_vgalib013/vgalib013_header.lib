@@ -1,0 +1,144 @@
+library (vgalib013) { /* Post layout timing */
+technology (cmos) ;
+/* choose one delay_model */
+/* delay_model      : generic_cmos ; */ /* Prop-Ramp */
+delay_model      : table_lookup ; /* LUT */
+date             : "29-May-07" ;
+revision         : 0.0.3 ;
+comment          : "Copyright (c) 2007 Graham Petley. Released under the LGPL." ;
+
+time_unit 		: "1ps" ;
+voltage_unit 		: "1mV" ;
+current_unit 		: "1mA" ;
+pulling_resistance_unit : "1kohm" ;
+capacitive_load_unit (1.00,ff) ;
+leakage_power_unit      : "1pW" ;
+nom_voltage             : 1.2 ;
+nom_process             : 1.0 ;
+nom_temperature         : 27.0 ;
+
+operating_conditions (NOM_1.2_27) {
+  process     :  1.0 ;
+  voltage     :  1.2 ;
+  temperature : 27.0 ;
+  tree_type   : "balanced_tree" ;
+}
+
+/* Wireload tables are in fF, so capacitance attribute is 1.0 */
+/* Wires are routed over the cells, so the area attribute is 0 */
+wire_load ("1K") {
+  resistance  :  0.00175 ;
+  capacitance :  1.0 ;
+  area        :  0.0 ;
+  slope       : 4.58 ;
+  fanout_length (  1,  2.86 ) ;
+  fanout_length (  2,  9.15 ) ;
+  fanout_length (  3, 14.19 ) ;
+  fanout_length (  4, 19.22 ) ;
+  fanout_length (  5, 23.61 ) ;
+  fanout_length (  6, 28.01 ) ;
+  fanout_length (  7, 32.40 ) ;
+  fanout_length (  8, 36.79 ) ;
+  fanout_length (  9, 41.18 ) ;
+}
+wire_load ("10K") {
+  resistance  :  0.00175 ;
+  capacitance :  1.0 ;
+  area        :  0.0 ;
+  slope       : 5.72 ;
+  fanout_length (  1,  2.86 ) ;
+  fanout_length (  2, 11.44 ) ;
+  fanout_length (  3, 19.31 ) ;
+  fanout_length (  4, 27.17 ) ;
+  fanout_length (  5, 32.03 ) ;
+  fanout_length (  6, 36.89 ) ;
+  fanout_length (  7, 41.76 ) ;
+  fanout_length (  8, 46.62 ) ;
+  fanout_length (  9, 51.48 ) ;
+}
+wire_load ("100K") {
+  resistance  :  0.00175 ;
+  capacitance :  1.0 ;
+  area        :  0.0 ;
+  slope       : 7.15 ;
+  fanout_length (  1,  2.86 ) ;
+  fanout_length (  2, 14.30 ) ;
+  fanout_length (  3, 25.03 ) ;
+  fanout_length (  4, 35.75 ) ;
+  fanout_length (  5, 41.47 ) ;
+  fanout_length (  6, 47.19 ) ;
+  fanout_length (  7, 52.91 ) ;
+  fanout_length (  8, 58.63 ) ;
+  fanout_length (  9, 64.35 ) ;
+}
+wire_load ("500K") {
+  resistance  :  0.00175 ;
+  capacitance :  1.0 ;
+  area        :  0.0 ;
+  slope       : 7.61 ;
+  fanout_length (  1,  2.86 ) ;
+  fanout_length (  2, 15.22 ) ;
+  fanout_length (  3, 27.58 ) ;
+  fanout_length (  4, 39.94 ) ;
+  fanout_length (  5, 45.65 ) ;
+  fanout_length (  6, 51.35 ) ;
+  fanout_length (  7, 57.06 ) ;
+  fanout_length (  8, 62.76 ) ;
+  fanout_length (  9, 68.47 ) ;
+}
+wire_load ("top") {
+  resistance  :  0.00175 ;
+  capacitance :  1.0 ;
+  area        :  0.0 ;
+  slope       : 7.61 ;
+  fanout_length (  1, 22.82 ) ;
+  fanout_length (  2, 28.53 ) ;
+  fanout_length (  3, 34.23 ) ;
+  fanout_length (  4, 39.94 ) ;
+  fanout_length (  5, 45.65 ) ;
+  fanout_length (  6, 51.35 ) ;
+  fanout_length (  7, 57.06 ) ;
+  fanout_length (  8, 62.76 ) ;
+  fanout_length (  9, 68.47 ) ;
+}
+
+wire_load_selection ("by_gate_count") {
+/* numbers are tracks, which are 3X bigger than gates */
+  wire_load_from_area (       0,    3000,"1K") ;
+  wire_load_from_area (    3000,   30000,"10K") ;
+  wire_load_from_area (   30000,  300000,"100K") ;
+  wire_load_from_area (  300000, 1500000,"500K") ;
+  wire_load_from_area ( 1500000,30000000,"top") ;
+}
+
+input_threshold_pct_rise      :  50.0 ;
+input_threshold_pct_fall      :  50.0 ;
+output_threshold_pct_rise     :  50.0 ;
+output_threshold_pct_fall     :  50.0 ;
+slew_lower_threshold_pct_rise :   0.0 ;
+slew_upper_threshold_pct_rise : 100.0 ;
+slew_lower_threshold_pct_fall :   0.0 ;
+slew_upper_threshold_pct_fall : 100.0 ;
+slew_derate_from_library      :   1.0 ;
+
+default_leakage_power_density : 36 ;
+default_cell_leakage_power    : 3240 ;
+in_place_swap_mode            : match_footprint ;
+simulation                    : false ;
+library_features (report_delay_calculation) ;
+
+default_input_pin_cap         :    5.0 ;
+default_output_pin_cap        :    0.0 ;
+default_inout_pin_cap         :    0.0 ;
+default_fanout_load           :    1.0 ;
+default_max_fanout            :   30.0 ;
+default_max_transition        : 1500.0 ;
+
+default_wire_load_mode        : enclosed ;
+default_wire_load_capacitance : 5.0 ;
+default_wire_load_resistance  : 0.00175 ;
+default_wire_load_area        : 0.0 ;
+default_wire_load_selection   : "by_gate_count" ;
+
+default_operating_conditions  : NOM_1.2_27 ;
+

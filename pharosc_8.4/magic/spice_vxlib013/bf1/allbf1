@@ -1,0 +1,11 @@
+#!/bin/bash
+# allbf1 2007-07-06:07h55 graham
+
+./allbf1_delay $1
+./allbf1_vbe
+./allbf1_lib
+./allbf1_html
+if test -x allbf1_xtra
+then
+  ./allbf1_xtra
+fi

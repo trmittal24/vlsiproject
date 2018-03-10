@@ -1,0 +1,4 @@
+Single stage 2-I/P NAND gates with <B>x2</B> and <B>x4</B>
+drive strengths and a P:N ratio of about 2.4.
+The <B>nd2v6x4</B> is a layout variant of the <B>nd2v0x4</B>.
+

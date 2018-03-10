@@ -1,0 +1,20 @@
+* Spice description of oai22v0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:31:17
+* vsclib 0.13um values
+.subckt oai22v0x1 a1 a2 b1 b2 vdd vss z
+M01 vdd   a1    01    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M02 n3    a1    vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M03 01    a2    z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M04 vss   a2    n3    vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M05 07    b1    vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M06 z     b1    n3    vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M07 z     b2    07    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M08 n3    b2    z     vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+C7  a1    vss   0.431f
+C6  a2    vss   0.418f
+C4  b1    vss   0.363f
+C3  b2    vss   0.346f
+C1  n3    vss   0.305f
+C2  z     vss   0.665f
+.ends

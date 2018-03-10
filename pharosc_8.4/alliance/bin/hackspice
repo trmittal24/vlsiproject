@@ -1,0 +1,24 @@
+#!/bin/bash
+
+i=0
+k=0
+until [ "$k" -eq 1 ]
+do
+  line=$(grep -m 1 '#' $1.spi)
+  if [ "$line" = "" ]
+  then
+    k=1
+  else
+    for token in $line
+    do
+      newtoken=${token%#}
+      if [ "$newtoken" != "$token" ]
+      then
+        let i=$i+1
+        sed "s/${token}/n${i}/g" $1.spi > $$_temp
+        break
+      fi
+    done #for token in $line
+    mv $$_temp $1.spi
+  fi
+done #until [ "$k" -eq 1 ]

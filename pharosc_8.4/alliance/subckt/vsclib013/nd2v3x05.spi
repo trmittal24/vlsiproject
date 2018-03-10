@@ -1,0 +1,13 @@
+* Spice description of nd2v3x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:19:02
+* vsclib 0.13um values
+.subckt nd2v3x05 a b vdd vss z
+M01 vdd   a     z     vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M02 vss   a     sig1  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M03 z     b     vdd   vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M04 sig1  b     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C5  a     vss   0.362f
+C4  b     vss   0.361f
+C3  z     vss   0.530f
+.ends

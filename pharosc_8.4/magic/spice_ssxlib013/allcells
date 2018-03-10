@@ -1,0 +1,124 @@
+#!/bin/bash
+olddir=$PWD
+rm -f */*.error
+cd inv
+./allinv $1
+cd $olddir
+cd a2
+./alla2 $1
+cd $olddir
+cd a3
+./alla3 $1
+cd $olddir
+cd a4
+./alla4 $1
+cd $olddir
+cd an12
+./allan12 $1
+cd $olddir
+cd ao22
+./allao22 $1
+cd $olddir
+cd ao2o22
+./allao2o22 $1
+cd $olddir
+cd buf
+./allbuf $1
+cd $olddir
+cd halfadder
+./allhalfadder $1
+cd $olddir
+cd mx2
+./allmx2 $1
+cd $olddir
+cd na2
+./allna2 $1
+cd $olddir
+cd na3
+./allna3 $1
+cd $olddir
+cd na4
+./allna4 $1
+cd $olddir
+cd nao22
+./allnao22 $1
+cd $olddir
+cd nao2o22
+./allnao2o22 $1
+cd $olddir
+cd nmx2
+./allnmx2 $1
+cd $olddir
+cd no2
+./allno2 $1
+cd $olddir
+cd no3
+./allno3 $1
+cd $olddir
+cd no4
+./allno4 $1
+cd $olddir
+cd noa22
+./allnoa22 $1
+cd $olddir
+cd noa2a22
+./allnoa2a22 $1
+cd $olddir
+cd nxr2
+./allnxr2 $1
+cd $olddir
+cd o2
+./allo2 $1
+cd $olddir
+cd o3
+./allo3 $1
+cd $olddir
+cd o4
+./allo4 $1
+cd $olddir
+cd oa22
+./alloa22 $1
+cd $olddir
+cd oa2a22
+./alloa2a22 $1
+cd $olddir
+cd on12
+./allon12 $1
+cd $olddir
+cd xr2
+./allxr2 $1
+cd $olddir
+cat ssxlib013_header.lib  > ssxlib013.lib
+./makelut                >> ssxlib013.lib
+cat a2/a2.lib            >> ssxlib013.lib
+cat a3/a3.lib            >> ssxlib013.lib
+cat a4/a4.lib            >> ssxlib013.lib
+cat an12/an12.lib        >> ssxlib013.lib
+cat ao22/ao22.lib        >> ssxlib013.lib
+cat ao2o22/ao2o22.lib    >> ssxlib013.lib
+cat buf/buf.lib          >> ssxlib013.lib
+cat halfadder/halfadder.lib  >> ssxlib013.lib
+cat inv/inv.lib          >> ssxlib013.lib
+cat mx2/mx2.lib          >> ssxlib013.lib
+cat na2/na2.lib          >> ssxlib013.lib
+cat na3/na3.lib          >> ssxlib013.lib
+cat na4/na4.lib          >> ssxlib013.lib
+cat nao22/nao22.lib      >> ssxlib013.lib
+cat nao2o22/nao2o22.lib  >> ssxlib013.lib
+cat nmx2/nmx2.lib        >> ssxlib013.lib
+cat no2/no2.lib          >> ssxlib013.lib
+cat no3/no3.lib          >> ssxlib013.lib
+cat no4/no4.lib          >> ssxlib013.lib
+cat noa22/noa22.lib      >> ssxlib013.lib
+cat noa2a22/noa2a22.lib  >> ssxlib013.lib
+cat nxr2/nxr2.lib        >> ssxlib013.lib
+cat o2/o2.lib            >> ssxlib013.lib
+cat o3/o3.lib            >> ssxlib013.lib
+cat o4/o4.lib            >> ssxlib013.lib
+cat oa22/oa22.lib        >> ssxlib013.lib
+cat oa2a22/oa2a22.lib    >> ssxlib013.lib
+cat on12/on12.lib        >> ssxlib013.lib
+cat xr2/xr2.lib          >> ssxlib013.lib
+cat ssxlib013_footer.lib  >> ssxlib013.lib
+echo "# Listing error files"
+ls -l */*.error 2>/dev/null

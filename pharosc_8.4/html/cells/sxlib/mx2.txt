@@ -1,0 +1,1 @@
+The mx2 are 2 stage non-inverting muxes with an output P/N ratio of 1.8. The control signal <SPAN CLASS="boldred">cmd</SPAN> can have 2 or 3 stages with stage efforts of about 1 and 3.5 for the mx2_x2 and 1 and 7 for the mx2_x4.

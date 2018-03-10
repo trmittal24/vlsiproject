@@ -1,0 +1,20 @@
+* Spice description of nts_x2
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:31:21
+* sxlib 0.13um values
+.subckt nts_x2 cmd i nq vdd vss
+Mtr_00001 nq    cmd   sig3  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00002 sig4  cmd   nq    vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00003 vss   i     sig4  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00004 sig3  i     vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00005 sig10 cmd   vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00006 vdd   i     sig7  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00007 sig7  sig10 nq    vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00008 nq    sig10 sig5  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00009 sig5  i     vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00010 vdd   cmd   sig10 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C9  cmd   vss   1.059f
+C8  i     vss   1.101f
+C2  nq    vss   0.871f
+C10 sig10 vss   0.961f
+.ends

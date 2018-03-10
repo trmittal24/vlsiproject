@@ -1,0 +1,29 @@
+* Tue May 15 14:24:07 CEST 2007
+.subckt dfnt1v0x2 cp d vdd vss z
+*SPICE circuit <dfnt1v0x2> from XCircuit v3.4 rev 26
+
+m1 z zn vss vss n w=14u l=2u ad='14u*5u+12p' as='14u*5u+12p' pd='14u*2+14u' ps='14u*2+14u'
+m2 z zn vdd vdd p w=28u l=2u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m3 n5n zn vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m4 n5p zn vdd vdd p w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m5 n4 cn n5n vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m6 n4 ci n5p vdd p w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m7 cn cp vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m8 ci cn vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m9 cn cp vdd vdd p w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m10 ci cn vdd vdd p w=11u l=2u ad='11u*5u+12p' as='11u*5u+12p' pd='11u*2+14u' ps='11u*2+14u'
+m11 n1 ci n3n vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m12 n1 cn dnn vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m13 n1 ci dnp vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m14 n2 ci n4 vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m15 dnp d vdd vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m16 n3p n2 vdd vdd p w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m17 n4 cn n2 vdd p w=12u l=2u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m18 n2 n1 vdd vdd p w=12u l=2u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m19 n3n n2 vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m20 n2 n1 vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m21 dnn d vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m22 n1 cn n3p vdd p w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m23 zn n4 vdd vdd p w=14u l=2u ad='14u*5u+12p' as='14u*5u+12p' pd='14u*2+14u' ps='14u*2+14u'
+m24 zn n4 vss vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+.ends

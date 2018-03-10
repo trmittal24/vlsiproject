@@ -1,0 +1,15 @@
+
+
+for cell in aoi21 aoi22 iv1 nd2 nd3 nd4 nr2 nr3 nr4 oai21 oai22 xnr2 xor2
+do
+  mkdir ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/*_a*.cir $cell
+  cp $cell/*_b*.cir ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/*_c*.cir ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/*_d*.cir ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/*_func*.cir ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/ma* ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/all* ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/*.lib ../../../library/magic/spice_vsclib013/$cell
+  cp $cell/*.pr ../../../library/magic/spice_vsclib013/$cell
+done

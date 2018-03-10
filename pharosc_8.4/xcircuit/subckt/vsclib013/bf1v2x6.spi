@@ -1,0 +1,9 @@
+* Wed Apr  5 08:55:21 CEST 2006
+.subckt bf1v2x6 a vdd vss z 
+*SPICE circuit <bf1v2x6> from XCircuit v3.20
+
+m1 an a vss vss n w=18u l=2.3636u ad='18u*5u+12p' as='18u*5u+12p' pd='18u*2+14u' ps='18u*2+14u'
+m2 an a vdd vdd p w=36u l=2.3636u ad='36u*5u+12p' as='36u*5u+12p' pd='36u*2+14u' ps='36u*2+14u'
+m3 z an vss vss n w=40u l=2.3636u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m4 z an vdd vdd p w=81u l=2.3636u ad='81u*5u+12p' as='81u*5u+12p' pd='81u*2+14u' ps='81u*2+14u'
+.ends

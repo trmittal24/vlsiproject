@@ -1,0 +1,23 @@
+* Spice description of an4_x3
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:32:28
+* vxlib 0.13um values
+.subckt an4_x3 a b c d vdd vss z
+M1a sig9  a     vdd   vdd p  L=0.12U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U
+M1b vdd   b     sig9  vdd p  L=0.12U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U
+M1c sig9  c     vdd   vdd p  L=0.12U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U
+M1d vdd   d     sig9  vdd p  L=0.12U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U
+M1z z     sig9  vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M2a vss   a     sig3  vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2b sig3  b     n2    vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2c n2    c     sig4  vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2d sig4  d     sig9  vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2z vdd   sig9  z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M3z z     sig9  vss   vss n  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+C7  a     vss   0.650f
+C8  b     vss   0.655f
+C6  c     vss   0.625f
+C10 d     vss   0.576f
+C9  sig9  vss   1.413f
+C5  z     vss   0.869f
+.ends

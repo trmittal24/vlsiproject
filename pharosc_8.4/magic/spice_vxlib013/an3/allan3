@@ -1,0 +1,11 @@
+#!/bin/bash
+# allan3 2007-07-06:07h54 graham
+
+./allan3_delay $1
+./allan3_vbe
+./allan3_lib
+./allan3_html
+if test -x allan3_xtra
+then
+  ./allan3_xtra
+fi

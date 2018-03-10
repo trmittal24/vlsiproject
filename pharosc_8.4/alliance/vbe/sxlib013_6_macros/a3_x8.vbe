@@ -1,0 +1,38 @@
+ENTITY a3_x8 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 3000;
+  CONSTANT cin_i0        : NATURAL := 12;     
+  CONSTANT cin_i1        : NATURAL := 12;     
+  CONSTANT cin_i2        : NATURAL := 13;     
+  CONSTANT rdown_i0_q    : NATURAL := 290;    
+  CONSTANT rdown_i1_q    : NATURAL := 290;    
+  CONSTANT rdown_i2_q    : NATURAL := 290;    
+  CONSTANT rup_i0_q      : NATURAL := 370;    
+  CONSTANT rup_i1_q      : NATURAL := 370;    
+  CONSTANT rup_i2_q      : NATURAL := 370;    
+  CONSTANT tphh_i2_q     : NATURAL := 173;    
+  CONSTANT tphh_i1_q     : NATURAL := 175;    
+  CONSTANT tphh_i0_q     : NATURAL := 176;    
+  CONSTANT tpll_i0_q     : NATURAL := 207;    
+  CONSTANT tpll_i1_q     : NATURAL := 200;    
+  CONSTANT tpll_i2_q     : NATURAL := 193;    
+  CONSTANT transistors	 : NATURAL := 14
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  i2	 : in  BIT;
+  q	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END a3_x8;
+
+ARCHITECTURE behaviour_data_flow OF a3_x8 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on a3_x8"
+  SEVERITY WARNING;
+  q <= ((i0 and i1) and i2) after 1200 ps;
+END;

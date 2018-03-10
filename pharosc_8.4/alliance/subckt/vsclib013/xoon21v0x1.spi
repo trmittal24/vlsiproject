@@ -1,0 +1,25 @@
+* Spice description of xoon21v0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:39:58
+* vsclib 0.13um values
+.subckt xoon21v0x1 a1 a2 b vdd vss z
+M01 vdd   a1    01    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M02 vdd   a1    05    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M03 vss   a1    an    vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M04 01    a2    an    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M05 05    a2    an    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M06 vss   a2    an    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M07 13    b     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M08 an    b     z     vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M09 13    b     vss   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M10 z     an    13    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M11 sig3  an    vss   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M12 an    13    z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M13 z     13    sig3  vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+C5  13    vss   1.236f
+C8  a1    vss   0.600f
+C7  a2    vss   0.527f
+C4  an    vss   1.070f
+C6  b     vss   0.625f
+C2  z     vss   0.616f
+.ends

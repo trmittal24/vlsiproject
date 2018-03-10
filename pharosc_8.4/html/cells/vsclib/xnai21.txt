@@ -1,0 +1,9 @@
+Minimum size 2-XNOR gates followed by a 2-NAND,
+implemented as a single gate with a single stage
+inverting delay and a 2-stage non-inverting delay.
+The NAND gate is made by adding a series
+N-transistor in the pull down path and a parallel
+P-transistor to the pull up path.
+The Prop and Ramp delays below are the average of the
+inverting and non-inverting delays. The Synopsys Liberty
+format .LIB file has the correct delays for each case.

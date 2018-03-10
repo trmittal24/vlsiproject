@@ -1,0 +1,56 @@
+entity xnr3v1x3 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      c   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end xnr3v1x3;
+
+architecture structural of xnr3v1x3 is
+Component xnr2v0x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component xor2v0x3
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal xn : bit;
+
+begin
+
+xn : xnr2v0x2
+   port map (
+      a   => a,
+      b   => b,
+      z   => xn,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+z : xor2v0x3
+   port map (
+      a   => xn,
+      b   => c,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

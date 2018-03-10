@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Script which
+# 1/  removes TALU1 geometries;
+# 2/  removes ALU2 geometries lying on top of TALU2 geometries
+# 3/  removes CALU2 geometries lying on top of TALU2 geometries
+
+# Doesn't work properly. Not used.
+
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: wtc_clean_talu12 cell" 1>&2
+  echo "#" 1>&2
+  echo "#   will removes TALU1 and ALU2 on top of TALU2 from cell.ap" 1>&2
+  echo "#   eg  wtc_clean_talu12 fred  will clean fred.ap" 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: wtc_clean_talu12 cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+# 1/
+grep -v ',TALU1 *$' $cell > $$temp
+
+# 2/
+talu2_segments=$(grep ',TALU2 *$' $$temp | \
+  sort -u | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/S,\1,\2,\3,\4,\5/')
+
+for talu2_segment in $talu2_segments
+do
+  segment=$(echo $talu2_segment | \
+    sed 's/^S,/S /')
+    sed -i "/^$segment,[^,][^,]*,[^,][^,]*,ALU2 *$/ d" $$temp
+done
+
+mv -f $$temp fred.ap

@@ -1,0 +1,11 @@
+#!/bin/bash
+# allxooi21 2007-08-29:12h24 graham
+
+./allxooi21_delay $1
+./allxooi21_vbe
+./allxooi21_lib
+./allxooi21_html
+if test -x allxooi21_xtra
+then
+  ./allxooi21_xtra
+fi

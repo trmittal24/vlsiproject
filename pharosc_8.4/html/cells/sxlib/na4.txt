@@ -1,0 +1,1 @@
+The na4_x1 is a single stage 4-NAND with P/N ratio of about 3. The na4_x4 is a 3 stage 4-NAND with stage efforts of about 1.2 and 3.9.

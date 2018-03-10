@@ -1,0 +1,20 @@
+* Spice description of xor2_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:36:39
+* vxlib 0.13um values
+.subckt xor2_x1 a b vdd vss z
+M1  sig5  sig4  z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2  z     sig5  sig4  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M3  sig4  a     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M4  vdd   b     sig5  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M5  sig1  sig4  vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M6  z     sig5  sig1  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M7  sig4  b     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M8  vss   a     sig4  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M9  sig5  b     vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C8  a     vss   0.654f
+C7  b     vss   0.899f
+C4  sig4  vss   0.863f
+C5  sig5  vss   1.193f
+C3  z     vss   0.986f
+.ends

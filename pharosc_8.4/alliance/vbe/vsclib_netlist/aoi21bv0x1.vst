@@ -1,0 +1,56 @@
+entity aoi21bv0x1 is
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end aoi21bv0x1;
+
+architecture structural of aoi21bv0x1 is
+
+Component aoi21v0x1
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1v0x1
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal bn : bit;
+
+begin
+
+bn : iv1v0x1
+   port map (
+      a   => b,
+      z   => bn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : aoi21v0x1
+   port map (
+      a1  => a1,
+      a2  => a2,
+      b   => bn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

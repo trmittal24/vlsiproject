@@ -1,0 +1,17 @@
+* Spice description of nd3v0x1
+* Spice driver version 134894944
+* Date  4/10/2005 at 10:05:43
+*
+.subckt nd3v0x1 a b c vdd vss z 
+Ma.1 vdd   a     z     vdd p  L=0.12U  W=1.1U   AS=0.3025P   AD=0.3025P   PS=2.75U   PD=2.75U  
+Ma.3 z     b     vdd   vdd p  L=0.12U  W=1.1U   AS=0.3025P   AD=0.3025P   PS=2.75U   PD=2.75U  
+Ma.5 vdd   c     z     vdd p  L=0.12U  W=1.1U   AS=0.3025P   AD=0.3025P   PS=2.75U   PD=2.75U  
+M2c sig3  c     z     vss n  L=0.12U  W=1.1U   AS=0.3025P   AD=0.3025P   PS=2.75U   PD=2.75U  
+M2b sig2  b     sig3  vss n  L=0.12U  W=1.1U   AS=0.3025P   AD=0.3025P   PS=2.75U   PD=2.75U  
+M2a vss   a     sig2  vss n  L=0.12U  W=1.1U   AS=0.3025P   AD=0.3025P   PS=2.75U   PD=2.75U  
+C8  vdd   vss   0.874f
+C7  a     vss   0.346f
+C6  c     vss   0.370f
+C5  b     vss   0.421f
+C1  z     vss   0.918f
+.ends

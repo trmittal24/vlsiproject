@@ -1,0 +1,22 @@
+* Spice description of cgi2_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:58:05
+* vsxlib 0.13um values
+.subckt cgi2_x1 a b c vdd vss z
+M01 vdd   a     n1    vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M02 sig9  a     vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M03 n1    b     z     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M04 sig9  b     vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M05 z     c     sig9  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M06 sig3  a     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M07 vss   a     sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M08 z     b     sig3  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M09 vss   b     sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M10 sig2  c     z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+C4  a     vss   0.714f
+C6  b     vss   1.044f
+C7  c     vss   0.542f
+C2  sig2  vss   0.566f
+C9  sig9  vss   0.495f
+C5  z     vss   0.838f
+.ends

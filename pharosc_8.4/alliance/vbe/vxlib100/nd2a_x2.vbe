@@ -1,0 +1,32 @@
+ENTITY nd2a_x2 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 1250;   
+  CONSTANT cin_b         : NATURAL := 18;     
+  CONSTANT cin_a         : NATURAL := 16;     
+  CONSTANT rdown_b_z     : NATURAL := 1730;   
+  CONSTANT rdown_a_z     : NATURAL := 1730;   
+  CONSTANT rup_b_z       : NATURAL := 1910;   
+  CONSTANT rup_a_z       : NATURAL := 1910;   
+  CONSTANT tphl_b_z	 : NATURAL := 111;
+  CONSTANT tplh_b_z	 : NATURAL := 234;
+  CONSTANT tpll_a_z      : NATURAL := 299;    
+  CONSTANT tphh_a_z      : NATURAL := 321;    
+  CONSTANT transistors   : NATURAL := 6       
+);
+PORT (
+  b	 : in  BIT;
+  a	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nd2a_x2;
+
+ARCHITECTURE behaviour_data_flow OF nd2a_x2 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nd2a_x2"
+  SEVERITY WARNING;
+  z <= (not (b) or a) after 900 ps;
+END;

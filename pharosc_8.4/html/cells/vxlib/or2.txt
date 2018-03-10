@@ -1,0 +1,1 @@
+2 I/P OR gate designed with a large input stage. This reduces the delay, especially when the wire capacitance on the input pin is high.

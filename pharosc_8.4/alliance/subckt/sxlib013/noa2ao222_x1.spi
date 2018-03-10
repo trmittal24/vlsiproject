@@ -1,0 +1,24 @@
+* Spice description of noa2ao222_x1
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:31:06
+* sxlib 0.13um values
+.subckt noa2ao222_x1 i0 i1 i2 i3 i4 nq vdd vss
+Mtr_00001 sig4  i3    vss   vss n  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00002 sig2  i0    vss   vss n  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00003 vss   i2    sig4  vss n  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00004 sig4  i4    nq    vss n  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00005 nq    i1    sig2  vss n  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00006 nq    i4    sig6  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00007 sig7  i2    nq    vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00008 vdd   i0    sig6  vdd p  L=0.12U  W=1.585U AS=0.420025P AD=0.420025P PS=3.7U    PD=3.7U
+Mtr_00009 sig6  i1    vdd   vdd p  L=0.12U  W=1.585U AS=0.420025P AD=0.420025P PS=3.7U    PD=3.7U
+Mtr_00010 sig6  i3    sig7  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+C12 i0    vss   0.720f
+C8  i1    vss   0.624f
+C10 i2    vss   0.513f
+C11 i3    vss   0.609f
+C9  i4    vss   0.541f
+C1  nq    vss   0.842f
+C4  sig4  vss   0.219f
+C6  sig6  vss   0.436f
+.ends

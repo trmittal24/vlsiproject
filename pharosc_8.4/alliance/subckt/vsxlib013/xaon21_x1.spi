@@ -1,0 +1,23 @@
+* Spice description of xaon21_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 11:00:41
+* vsxlib 0.13um values
+.subckt xaon21_x1 a1 a2 b vdd vss z
+M01 an    a1    vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M02 vdd   a2    an    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M03 an    06    z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M04 z     an    06    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M05 06    b     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M06 n1    06    z     vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M07 vss   an    n1    vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M08 z     b     an    vss n  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M09 sig1  a1    vss   vss n  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M10 an    a2    sig1  vss n  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M11 06    b     vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C9  06    vss   0.832f
+C5  a1    vss   0.523f
+C4  a2    vss   0.527f
+C3  an    vss   1.117f
+C8  b     vss   0.780f
+C6  z     vss   0.548f
+.ends

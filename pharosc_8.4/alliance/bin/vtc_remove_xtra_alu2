@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Script which removes ALU2 rectangles which have an
+# identical TALU2 labelled '*".
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: vtc_remove_xtra_alu2 cell " 1>&2
+  echo "#" 1>&2
+  echo "#   will remove ALU2 rectangles with matching TALU2 rectangles" 1>&2
+  echo "#   labelled *" 1>&2
+  echo "#   eg  vtc_remove_xtra_alu2 fred  will remove ALU2 rectangles" 1>&2
+  echo "#   from fred.ap." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: vtc_remove_xtra_alu2 cell " 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+grep ',ALU2 *$' $cell > alu2_segments
+grep -v ',ALU2 *$' $cell > $$hold
+grep ',TALU2 *$' $cell | grep ',800,\*,' > talu2_segments
+
+sed "s|^S  *\([^ ][^ ]*\),\([^ ][^ ]*\),\([^ ][^ ]*\),\([^ ][^ ]*\),\([^ ][^ ]*\),\([^ ][^ ]*\),\([^ ][^ ]*\),TALU2 *$|grep -v '^S \1,\2,\3,\4,\5,\[^,\]\[^,\]\*,\7,ALU2\$' alu2_segments > \$\$temp; mv -f \$\$temp alu2_segments|" talu2_segments > remove_alu2
+
+bash remove_alu2
+
+sed '/^A / r alu2_segments' $$hold > $cell
+rm $$hold alu2_segments talu2_segments remove_alu2

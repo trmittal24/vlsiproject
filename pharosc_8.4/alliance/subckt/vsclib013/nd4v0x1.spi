@@ -1,0 +1,19 @@
+* Spice description of nd4v0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:23:59
+* vsclib 0.13um values
+.subckt nd4v0x1 a b c d vdd vss z
+M01 vdd   a     z     vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M02 vss   a     sig7  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M03 z     b     vdd   vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M04 sig7  b     sig3  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M05 vdd   c     z     vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M06 sig3  c     sig2  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M07 z     d     vdd   vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M08 sig2  d     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C9  a     vss   0.472f
+C8  b     vss   0.566f
+C5  c     vss   0.508f
+C4  d     vss   0.470f
+C1  z     vss   1.047f
+.ends

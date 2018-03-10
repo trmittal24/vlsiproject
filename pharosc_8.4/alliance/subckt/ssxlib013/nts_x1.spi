@@ -1,0 +1,16 @@
+* Spice description of nts_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:39:17
+* ssxlib 0.13um values
+.subckt nts_x1 cmd i nq vdd vss
+Mtr_00001 vss   cmd   sig6  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00002 nq    cmd   sig3  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00003 sig3  i     vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00004 sig6  cmd   vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00005 sig8  sig6  nq    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00006 vdd   i     sig8  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C4  cmd   vss   1.000f
+C5  i     vss   0.839f
+C2  nq    vss   0.771f
+C6  sig6  vss   0.515f
+.ends

@@ -1,0 +1,41 @@
+* Spice description of sff1_x4
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:32:29
+* sxlib 0.13um values
+.subckt sff1_x4 ck i q vdd vss
+Mtr_00001 sig13 nckr  sff_s vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00002 vss   q     sig13 vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00003 sff_s ckr   y     vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00004 vss   y     sig10 vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00005 sig10 ckr   sff_m vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00006 sff_m nckr  sig9  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00007 ckr   nckr  vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00008 vss   ck    nckr  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00009 sig9  u     vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00010 vss   i     u     vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00011 q     sff_s vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00012 vss   sff_s q     vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00013 y     sff_m vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00014 sig17 q     vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00015 sff_s ckr   sig17 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00016 y     nckr  sff_s vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00017 sff_m nckr  sig16 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00018 sig16 y     vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00019 sig15 ckr   sff_m vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00020 nckr  ck    vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00021 vdd   nckr  ckr   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00022 u     i     vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00023 vdd   u     sig15 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00024 vdd   sff_s q     vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00025 q     sff_s vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00026 y     sff_m vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C5  ck    vss   0.999f
+C2  ckr   vss   1.595f
+C6  i     vss   0.924f
+C4  nckr  vss   1.606f
+C12 q     vss   1.356f
+C8  sff_m vss   1.024f
+C11 sff_s vss   1.019f
+C1  u     vss   0.906f
+C7  y     vss   0.803f
+.ends

@@ -1,0 +1,4 @@
+inputpin_list i
+outputpin_list q
+i q positive_unate
+q logic_function i

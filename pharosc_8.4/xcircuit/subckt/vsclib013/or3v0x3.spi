@@ -1,0 +1,13 @@
+* Mon Sep 12 14:09:11 CEST 2005
+.subckt or3v0x3 a b c vdd vss z 
+*SPICE circuit <or3v0x3> from XCircuit v3.20
+
+m1 z zn vdd vdd p w=40u l=2.3636u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m2 z zn vss vss n w=20u l=2.3636u ad='20u*5u+12p' as='20u*5u+12p' pd='20u*2+14u' ps='20u*2+14u'
+m3 zn a vss vss n w=10u l=2.3636u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m4 zn b vss vss n w=10u l=2.3636u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m5 zn c vss vss n w=10u l=2.3636u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m6 n1 a vdd vdd p w=56u l=2.3636u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+m7 n2 b n1 vdd p w=56u l=2.3636u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+m8 zn c n2 vdd p w=56u l=2.3636u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+.ends

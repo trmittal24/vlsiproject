@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Script which creates a postscript file from a CIF
+
+../../../bin/cifplota $1
+grep -v ' BB$' $1.ps > $$temp
+mv -f $$temp $1.ps

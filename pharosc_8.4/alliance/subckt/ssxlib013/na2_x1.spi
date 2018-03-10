@@ -1,0 +1,13 @@
+* Spice description of na2_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:56
+* ssxlib 0.13um values
+.subckt na2_x1 i0 i1 nq vdd vss
+Mtr_00001 vss   i0    sig3  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00002 sig3  i1    nq    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00003 nq    i0    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00004 vdd   i1    nq    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C4  i0    vss   0.875f
+C5  i1    vss   0.812f
+C2  nq    vss   0.823f
+.ends

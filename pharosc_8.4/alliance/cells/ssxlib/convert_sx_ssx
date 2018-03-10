@@ -1,0 +1,1903 @@
+#!/bin/bash
+
+# Script which converts the sxlib to a 2um
+# technology by multiplying the value of MBK_SCALE_X
+# in the cells by 10 and multiplying all cell
+# co-ordinates by 20.
+# The cells are beautified:
+# - adjust ALU1 end points if width is 2 lambda instead of 1 lambda
+# - thin ALU1 set to min of 4 lambda wide
+# - realign NWELL
+# - add PWELL
+# - add AB in TALU8
+# - adjust ymin and ymax of transistors to match vsclib
+# - adjust PDIF and NDIF to match transistor adjustment
+# - adjust PTIE and NTIE to have same extent with larger overlap from RDS file
+# - adjust PDIF and NDIF end points if they land on a CONT
+# - relabel the REF geometries
+# - end extension of ALU1 over CONT and REF to 2 lambda
+# - add missing REF geometries
+#   - fulladder_x2 at (80,30)
+#   - noa2ao222_x1 at (30,30)
+#   - noa3ao322_x1 at (40,30)
+#   - o4_x4 at (70,60)
+#   - xr2_x1 at (30,60) and at (40,20)
+# - add CONT overlap if no existing ALU1 rectangle over the top
+# - edit tie_x0 to remove the ALU1
+# - add TALU1 geometry
+# - edit various cells to add CALU1/REF where possible
+#     an12_x1,
+comments_on=0
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+date1=$(date '+%s')
+#awk -v FS=, '/^H / {printf "%1s,%1s,%1s,%1s\n", \
+#$1,$2,$3,$4/2}
+#/^[^H ]/ {print}' ${cell}.ap > $$temp
+cp ${cell}.ap $$temp
+#
+#        Adjust end points of 200 wide ALU1 if not contiguous with a CONT, REF or other ALU1 end point
+#
+ref_coords=$(grep '^R ' $$temp | \
+  sed 's/^R  *\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2/')
+cont_coords=$(grep '^V  *[0-9]' $$temp | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2/')
+alu1_coords=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,200,[^,][^,]*,[^,][^,]*,ALU1 *' $$temp | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\7/')
+
+for alu1_coord in $alu1_coords
+do
+  x1=$(echo "$alu1_coord" | cut -f1 -d,)
+  x2=$(echo "$alu1_coord" | cut -f3 -d,)
+  let "xlower=x1+50"
+  let "xupper=x2-50"
+  y1=$(echo "$alu1_coord" | cut -f2 -d,)
+  y2=$(echo "$alu1_coord" | cut -f4 -d,)
+  dir=$(echo "$alu1_coord" | cut -f5 -d,)
+  let "ylower=y1+50"
+  let "yupper=y2-50"
+  lower_coord=0
+  upper_coord=0
+  alu1_coords2=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,ALU1 *' $cell.ap | \
+    grep -v "^S  *$x1,$y1,$x2,$y2,200,[^,][^,]*,[^,][^,]*,ALU1 *" | \
+    sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2 \3,\4/')
+  for cont_coord in $cont_coords $ref_coords $alu1_coords2
+  do
+    xcont=$(echo "$cont_coord" | cut -f1 -d,)
+    ycont=$(echo "$cont_coord" | cut -f2 -d,)
+    if [ "$dir" = UP -o "$dir" = DOWN ]
+    then
+      for scan_x in -200 -150 -100 -50 0 50 100 150 200
+      do
+        let "xcont2=xcont+scan_x"
+        if [ "$lower_coord" -eq 0 -a "$x1" -eq "$xcont2" -a "$y1" -eq "$ycont" ]
+        then
+          xlower=$x1
+          ylower=$y1
+          lower_coord=1
+        fi
+        if [ "$upper_coord" -eq 0 -a "$x2" -eq "$xcont2" -a "$y2" -eq "$ycont" ]
+        then
+          xupper=$x2
+          yupper=$y2
+          upper_coord=1
+        fi
+      done
+    fi
+    if [ "$dir" = LEFT -o "$dir" = RIGHT ]
+    then
+      for scan_y in -200 -150 -100 -50 0 50 100 150 200
+      do
+        let "ycont2=ycont+scan_y"
+        if [ "$lower_coord" -eq 0 -a "$x1" -eq "$xcont" -a "$y1" -eq "$ycont2" ]
+        then
+          xlower=$x1
+          ylower=$y1
+          lower_coord=1
+        fi
+        if [ "$upper_coord" -eq 0 -a "$x2" -eq "$xcont" -a "$y2" -eq "$ycont2" ]
+        then
+          xupper=$x2
+          yupper=$y2
+          upper_coord=1
+        fi
+      done
+    fi
+    if [ "$lower_coord" -eq 1 -a "$upper_coord" -eq 1 ]
+    then
+      break
+    fi
+  done
+  sed "s/^S  *\($x1,$y1,$x2,$y2\),\(200\),\([^,][^,]*\),\(RIGHT\),ALU1 *$/S $xlower,$y1,$xupper,$y2,\2,\3,\4,ALU1/" $$temp | \
+  sed "s/^S  *\($x1,$y1,$x2,$y2\),\(200\),\([^,][^,]*\),\(LEFT\),ALU1 *$/S $xlower,$y1,$xupper,$y2,\2,\3,\4,ALU1/" | \
+  sed "s/^S  *\($x1,$y1,$x2,$y2\),\(200\),\([^,][^,]*\),\(UP\),ALU1 *$/S $x1,$ylower,$x2,$yupper,\2,\3,\4,ALU1/" | \
+  sed "s/^S  *\($x1,$y1,$x2,$y2\),\(200\),\([^,][^,]*\),\(DOWN\),ALU1 *$/S $x1,$ylower,$x2,$yupper,\2,\3,\4,ALU1/" > $$temp1
+  mv -f $$temp1 $$temp
+done
+#
+#                             ALU1 width, NWELL alignment, add PWELL and add TALU8
+#
+sed -i 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(100\),\([^,][^,]*\),\([^,][^,]*\),ALU1 *$/S \1,\2,\3,\4,200,\6,\7,ALU1/' $$temp
+sed -i 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),NWELL *$/S \1,3800,\3,3800,2800,\6,\7,NWELL\nS \1,1100,\3,1100,2600,\6,\7,PWELL\nS \1,2500,\3,2500,5000,'$cell',\7,TALU8/' $$temp
+#
+#                          Adjust ymin and ymax of transistors, NDIF, PDIF, NTIE and PTIE
+#                                    1   2   3   4   5   6   7   8   9
+awk -v "FS= ||," '/,NTRANS/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+150,$4,$5-150,$6,$7,$8,$9}
+!/,NTRANS/ {print}' $$temp | \
+awk -v "FS= ||," '/,PTRANS/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+150,$4,$5-150,$6,$7,$8,$9}
+!/,PTRANS/ {print}' | \
+awk -v "FS= ||," '/,RIGHT,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+50,$3,$4-50,$5,$6,$7,$8,$9}
+!/,RIGHT,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,LEFT,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+50,$3,$4-50,$5,$6,$7,$8,$9}
+!/,LEFT,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,UP,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+50,$4,$5-50,$6,$7,$8,$9}
+!/,UP,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,DOWN,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+50,$4,$5-50,$6,$7,$8,$9}
+!/,DOWN,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,RIGHT,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+100,$3,$4-100,$5,$6,$7,$8,$9}
+!/,RIGHT,[NP]TIE/ {print}' | \
+awk -v "FS= ||," '/,LEFT,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+100,$3,$4-100,$5,$6,$7,$8,$9}
+!/,LEFT,[NP]TIE/ {print}' | \
+awk -v "FS= ||," '/,UP,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+100,$4,$5-100,$6,$7,$8,$9}
+!/,UP,[NP]TIE/ {print}' | \
+awk -v "FS= ||," '/,DOWN,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+100,$4,$5-100,$6,$7,$8,$9}
+!/,DOWN,[NP]TIE/ {print}' > $$temp1
+#
+# Adjust top of PTRANS down if y=4750 to y=4700, and PDIF from y=4650 to y=4600
+# Adjust bottom of NTRANS up if y=250 to y=300, and NDIF from y=350 to y=400
+#
+sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(4750\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,\2,\3,4700,\5,\6,\7,\8/' $$temp1 | \
+sed 's/^S  *\([^,][^,]*\),\(250\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,300,\3,\4,\5,\6,\7,\8/' | \
+sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(4650\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,4600,\5,\6,\7,\8/' | \
+sed 's/^S  *\([^,][^,]*\),\(350\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,400,\3,\4,\5,\6,\7,\8/' > $$temp
+
+if [ 1 -eq 0 ]
+then
+for tran_type in NTRANS PTRANS
+do
+  trans_segments=$(grep ",$tran_type" $$temp | \
+    sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4/')
+
+  for trans_coord in $trans_segments
+  do
+    x1=$(echo "$trans_coord" | cut -f1 -d,)
+    y1=$(echo "$trans_coord" | cut -f2 -d,)
+    x2=$(echo "$trans_coord" | cut -f3 -d,)
+    y2=$(echo "$trans_coord" | cut -f4 -d,)
+    let "width=y2-y1"
+    if [ "$width" -lt 0 ]
+    then
+      let "width=-width"
+    fi
+    if [ "$width" -gt 300 ]
+    then
+#     Reduce width of transistor
+      if [ "$tran_type" = NTRANS ]
+      then
+        for ycoord in 1250 1750
+        do
+          if [ "$y1" -eq "$ycoord" ]
+          then
+            let "ytran=y1-50"
+            let "dy1=y1-100"
+            let "ydif=dy1-50"
+            sed "s/^S  *\($x1\),\($y1\),\($x2\),\($y2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,$ytran,\3,\4,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\([^,][^,]*\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif,\3,\4,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+            break
+          elif [ "$y2" -eq "$ycoord" ]
+          then
+            let "ytran=y2-50"
+            let "dy2=y2-100"
+            let "ydif=dy2-50"
+            sed "s/^S  *\($x1\),\($y1\),\($x2\),\($y2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,\2,\3,$ytran,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+            break
+          fi
+        done
+      elif [ "$tran_type" = PTRANS ]
+      then
+        for ycoord in 2750 3250
+        do
+          if [ "$y1" -eq "$ycoord" ]
+          then
+            let "ytran=y1+50"
+            let "dy1=y1+100"
+            let "ydif=dy1+50"
+            sed "s/^S  *\($x1\),\($y1\),\($x2\),\($y2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,$ytran,\3,\4,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\([^,][^,]*\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif,\3,\4,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+            break
+          elif [ "$y2" -eq "$ycoord" ]
+          then
+            let "ytran=y2+50"
+            let "dy2=y2+100"
+            let "ydif=dy2+50"
+            sed "s/^S  *\($x1\),\($y1\),\($x2\),\($y2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,\2,\3,$ytran,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+            break
+          fi
+        done
+      fi
+    elif [ "$width" -eq 300 ]
+    then
+#     Move NTRANS down and PTRANS up
+      if [ "$tran_type" = NTRANS ]
+      then
+        for ycoord in 1250 1750
+        do
+          if [ "$y1" -eq "$ycoord" -o "$y2" -eq "$ycoord" ]
+          then
+            let "ytran1=y1-50"
+            let "ytran2=y2-50"
+            let "dy1=y1+100"
+            let "dy2=y2-100"
+            let "ydif1=dy1-50"
+            let "ydif2=dy2-50"
+            let "xdif1=x1-300"
+            let "xdif2=x1+300"
+            let "cy=(y1+y2)/2"
+            let "ycont=cy-50"
+            sed "s/^S  *\($x1\),\($y1\),\($x2\),\($y2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,$ytran1,\3,$ytran2,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($cy\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,$ycont,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($cy\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,\2,\3,$ycont,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($cy\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,$ycont,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($cy\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,\2,\3,$ycont,\5,\6,\7,\8/" | \
+            sed "s/^V  *\($xdif1\),\($cy\),\(CONT_DIF_N\),\([^,][^,]*\) *$/V \1,$ycont,\3,\4/" | \
+            sed "s/^V  *\($xdif2\),\($cy\),\(CONT_DIF_N\),\([^,][^,]*\) *$/V \1,$ycont,\3,\4/" > $$temp1
+            mv -f $$temp1 $$temp
+            break
+          fi
+        done
+      elif [ "$tran_type" = PTRANS ]
+      then
+        for ycoord in 2750 3250
+        do
+          if [ "$y1" -eq "$ycoord" -o "$y2" -eq "$ycoord" ]
+          then
+            let "ytran1=y1+50"
+            let "ytran2=y2+50"
+            let "dy1=y1+100"
+            let "dy2=y2-100"
+            let "ydif1=dy1+50"
+            let "ydif2=dy2+50"
+            let "xdif1=x1-300"
+            let "xdif2=x1+300"
+            let "cy=(y1+y2)/2"
+            let "ycont=cy+50"
+            sed "s/^S  *\($x1\),\($y1\),\($x2\),\($y2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,$ytran1,\3,$ytran2,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($cy\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,$ycont,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($cy\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,\2,\3,$ycont,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($cy\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,$ycont,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($cy\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(ALU1\) *$/S \1,\2,\3,$ycont,\5,\6,\7,\8/" | \
+            sed "s/^V  *\($xdif1\),\($cy\),\(CONT_DIF_P\),\([^,][^,]*\) *$/V \1,$ycont,\3,\4/" | \
+            sed "s/^V  *\($xdif2\),\($cy\),\(CONT_DIF_P\),\([^,][^,]*\) *$/V \1,$ycont,\3,\4/" > $$temp1
+            mv -f $$temp1 $$temp
+            break
+          fi
+        done
+      fi
+    fi
+  done 
+done
+fi
+#
+#                                      Check whether poly segment too close to new transistor positions
+#
+poly_segments=$(grep ',POLY' $$temp | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\5/')
+cont_coords=$(grep '^V  *[0-9]' $$temp | \
+  grep ",CONT_POLY" | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+ncont_coords=$(grep '^V  *[0-9]' $$temp | \
+  grep ",CONT_DIF_N" | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+pcont_coords=$(grep '^V  *[0-9]' $$temp | \
+  grep ",CONT_DIF_P" | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+ntcont_coords=$(grep '^V  *[0-9]' $$temp | \
+  grep ",CONT_BODY_N" | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+
+ptie_segments=$(grep ',PTIE' $$temp | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\5/')
+ntie_segments=$(grep ',NTIE' $$temp | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\5/')
+pdif_segments=$(grep ',PDIF' $$temp | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\5/')
+
+for tran_type in NTRANS PTRANS
+do
+  if [ "$comments_on" -eq 1 ]; then echo "# Scanning all $tran_type transistors"; fi
+  trans_segments=$(grep ",$tran_type" $$temp | \
+    sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4/')
+
+  for trans_coord in $trans_segments
+  do
+    tx1=$(echo "$trans_coord" | cut -f1 -d,)
+    ty1=$(echo "$trans_coord" | cut -f2 -d,)
+    tx2=$(echo "$trans_coord" | cut -f3 -d,)
+    ty2=$(echo "$trans_coord" | cut -f4 -d,)
+    if [ "$ty1" -gt "$ty2" ]
+    then
+      tyhi=$ty1
+      tylo=$ty2
+    else
+      tyhi=$ty2
+      tylo=$ty1
+    fi
+    violation_found=0
+    if [ "$comments_on" -eq 1 ]; then echo "#  Starting scan of poly_segments"; fi
+    for poly_coord in $poly_segments
+    do
+      if [ "$violation_found" -eq 1 ]
+      then
+        break
+      fi
+      px1=$(echo "$poly_coord" | cut -f1 -d,)
+      py1=$(echo "$poly_coord" | cut -f2 -d,)
+      px2=$(echo "$poly_coord" | cut -f3 -d,)
+      py2=$(echo "$poly_coord" | cut -f4 -d,)
+      width=$(echo "$poly_coord" | cut -f5 -d,)
+      if [ "$px1" -gt "$px2" ]
+      then
+        pxhi=$px1
+        pxlo=$px2
+      else
+        pxhi=$px2
+        pxlo=$px1
+      fi
+      if [ "$py1" -eq "$py2" ]
+      then
+#       Only consider horizontal POLY
+        let "txedge1=tx1-300"
+        let "txedge2=tx1+300"
+        if [ "$pxlo" -lt "$txedge2" -a "$pxhi" -gt "$txedge1" ]
+        then
+#         Check whether this segment is too close to the transistor
+          let "ydiff1=py1-tylo"
+          let "ydiff2=py1-tyhi"
+          if [ "$ydiff1" -lt 0 ]
+          then
+            let "ydiff1=-ydiff1"
+          fi
+          if [ "$ydiff2" -lt 0 ]
+          then
+            let "ydiff2=-ydiff2"
+          fi
+          let "space=150+$width/2"
+          if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+          then
+#         Violation between CHANNEL and POLY segment
+            violation_found=1
+            if [ "$tran_type" = NTRANS ]
+            then
+              if [ "$comments_on" -eq 1 ]; then echo "#   Found POLY segment to N-CHANNEL violation at ($tx1,$ty2)"; fi
+              let "ytran1=ty1-50"
+              let "ytran2=ty2-50"
+              let "dy1=ty1+100"
+              let "dy2=ty2-100"
+              let "ydif1=dy1-50"
+              let "ydif2=dy2-50"
+              let "xdif1=tx1-300"
+              let "xdif2=tx1+300"
+#             See whether NTRANS transistor can be moved down or has to be reduced in size
+              move_down=0
+              if [ "$tylo" -gt 300 ]
+              then
+#               Transistor could be moved down. Check for PTIE and NDIF_CONT
+                move_down=1
+                for ptie_coord in $ptie_segments
+                do
+                  ptx1=$(echo "$ptie_coord" | cut -f1 -d,)
+                  pty1=$(echo "$ptie_coord" | cut -f2 -d,)
+                  ptx2=$(echo "$ptie_coord" | cut -f3 -d,)
+                  pty2=$(echo "$ptie_coord" | cut -f4 -d,)
+                  ptw=$(echo "$ptie_coord" | cut -f5 -d,)
+                  if [ "$pty1" -eq "$pty2" ]
+                  then
+                    if [ "$ptx1" -gt "$ptx2" ]
+                    then
+                      ptxlo=$ptx2
+                      ptxhi=$ptx1
+                    else
+                      ptxlo=$ptx1
+                      ptxhi=$ptx2
+                    fi
+                    let "ptedge1=ptxlo-650"
+                    let "ptedge2=ptxhi+650"
+                    if [ "$tx1" -gt "$ptedge1" -a "$tx1" -lt "$ptedge2" ]
+                    then
+                      let "ptysep=tylo-pty1"
+                      let "space=50+300+ptw/2"
+                      if [ "$ptysep" -lt "$space" ]
+                      then
+                        move_down=0
+                        break
+                      fi
+                    fi
+                  fi
+                done
+                if [ "$move_down" = 1 ]
+                then
+                  for ncont_coord in $ncont_coords
+                  do
+                    nx1=$(echo "$ncont_coord" | cut -f1 -d,)
+                    ny1=$(echo "$ncont_coord" | cut -f2 -d,)
+                    let "nctedge1=tx1-300"
+                    let "nctedge2=tx1+300"
+                    if [ "$nx1" -gt "$nctedge1" -a "$nx1" -lt "$nctedge2" ]
+                    then
+#                     Check whether this contact is too close to the transistor
+                      let "ydiff1=ny1-tylo"
+                      let "ydiff2=ny1-tyhi"
+                      if [ "$ydiff1" -lt 0 ]
+                      then
+                        let "ydiff1=-ydiff1"
+                      fi
+                      if [ "$ydiff2" -lt 0 ]
+                      then
+                        let "ydiff2=-ydiff2"
+                      fi
+                      let "space=450+50"
+                      if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+                      then
+#                       Violation between CHANNEL and NDIF contact
+                        move_down=0
+                        break
+                      fi
+                    fi
+                  done
+                fi
+              fi # Transistor could be moved down.
+
+            elif [ "$tran_type" = PTRANS ]
+            then
+              if [ "$comments_on" -eq 1 ]; then echo "#   Found POLY segment to P-CHANNEL violation at ($tx1,$ty1)"; fi
+              let "ytran1=ty1+50"
+              let "ytran2=ty2+50"
+              let "dy1=ty1+100"
+              let "dy2=ty2-100"
+              let "ydif1=dy1+50"
+              let "ydif2=dy2+50"
+              let "xdif1=tx1-300"
+              let "xdif2=tx1+300"
+#             See whether PTRANS transistor can be moved up or has to be reduced in size
+              move_up=0
+              if [ "$tyhi" -lt 4700 ]
+              then
+#               Transistor could be moved up. Check for NTIE and PDIF CONT
+                move_up=1
+                for ntie_coord in $ntie_segments
+                do
+                  ntx1=$(echo "$ntie_coord" | cut -f1 -d,)
+                  nty1=$(echo "$ntie_coord" | cut -f2 -d,)
+                  ntx2=$(echo "$ntie_coord" | cut -f3 -d,)
+                  nty2=$(echo "$ntie_coord" | cut -f4 -d,)
+                  ntw=$(echo "$ntie_coord" | cut -f5 -d,)
+                  if [ "$nty1" -eq "$nty2" ]
+                  then
+                    if [ "$ntx1" -gt "$ntx2" ]
+                    then
+                      ntxlo=$ntx2
+                      ntxhi=$ntx1
+                    else
+                      ntxlo=$ntx1
+                      ntxhi=$ntx2
+                    fi
+                    let "ntedge1=ntxlo-650"
+                    let "ntedge2=ntxhi+650"
+                    if [ "$tx1" -gt "$ntedge1" -a "$tx1" -lt "$ntedge2" ]
+                    then
+                      let "ntysep=nty1-tyhi"
+                      let "space=50+300+ntw/2"
+                      if [ "$ntysep" -lt "$space" ]
+                      then
+                        move_up=0
+                        break
+                      fi
+                    fi
+                  fi
+                done
+                if [ "$move_up" = 1 ]
+                then
+                  for pcont_coord in $pcont_coords
+                  do
+                    px1=$(echo "$pcont_coord" | cut -f1 -d,)
+                    py1=$(echo "$pcont_coord" | cut -f2 -d,)
+                    let "pctedge1=tx1-300"
+                    let "pctedge2=tx1+300"
+                    if [ "$px1" -gt "$pctedge1" -a "$px1" -lt "$pctedge2" ]
+                    then
+#                     Check whether this contact is too close to the transistor
+                      let "ydiff1=py1-tylo"
+                      let "ydiff2=py1-tyhi"
+                      if [ "$ydiff1" -lt 0 ]
+                      then
+                        let "ydiff1=-ydiff1"
+                      fi
+                      if [ "$ydiff2" -lt 0 ]
+                      then
+                        let "ydiff2=-ydiff2"
+                      fi
+                      let "space=450+50"
+                      if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+                      then
+#                       Violation between CHANNEL and PDIF contact
+                        move_up=0
+                        break
+                      fi
+                    fi
+                  done
+                fi
+                if [ "$move_up" = 1 ]
+                then
+                  for pcont_coord in $ntcont_coords
+                  do
+                    px1=$(echo "$pcont_coord" | cut -f1 -d,)
+                    py1=$(echo "$pcont_coord" | cut -f2 -d,)
+                    let "pctedge1=tx1-500"
+                    let "pctedge2=tx1+500"
+                    if [ "$px1" -gt "$pctedge1" -a "$px1" -lt "$pctedge2" ]
+                    then
+#                     Check whether this contact is too close to the transistor
+                      let "ydiff1=py1-tylo"
+                      let "ydiff2=py1-tyhi"
+                      if [ "$ydiff1" -lt 0 ]
+                      then
+                        let "ydiff1=-ydiff1"
+                      fi
+                      if [ "$ydiff2" -lt 0 ]
+                      then
+                        let "ydiff2=-ydiff2"
+                      fi
+                      let "space=450+50"
+                      if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+                      then
+#                       Violation between CHANNEL and NTIE contact
+                        move_up=0
+                        break
+                      fi
+                    fi
+                  done
+                fi
+              fi # Transistor could be moved up. Check for NTIE
+            fi # See whether NTRANS or PTRANS transistor can be moved or has to be reduced in size
+          fi # Violation between CHANNEL and POLY segment
+        fi # Check whether this segment is too close to the transistor
+      fi #Only consider horizontal POLY
+    done # Looped thru all the poly segments
+
+    if [ "$comments_on" -eq 1 ]; then echo "#  Start scan of poly contacts if no violation_found"; fi
+    if [ "$violation_found" -eq 0 ]
+    then
+#     No violation already found for poly segments. Try contacts
+      for cont_coord in $cont_coords
+      do
+        if [ "$violation_found" -eq 1 ]
+        then
+          break
+        fi
+        px1=$(echo "$cont_coord" | cut -f1 -d,)
+        py1=$(echo "$cont_coord" | cut -f2 -d,)
+        let "pctedge1=tx1-400"
+        let "pctedge2=tx1+400"
+        if [ "$px1" -gt "$pctedge1" -a "$px1" -lt "$pctedge2" ]
+        then
+#         Check whether this contact is too close to the transistor
+          let "ydiff1=py1-tylo"
+          let "ydiff2=py1-tyhi"
+          if [ "$ydiff1" -lt 0 ]
+          then
+            let "ydiff1=-ydiff1"
+          fi
+          if [ "$ydiff2" -lt 0 ]
+          then
+            let "ydiff2=-ydiff2"
+          fi
+          let "space=300"
+          if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+          then
+#         Violation between CHANNEL and POLY contact
+            violation_found=1
+            if [ "$tran_type" = NTRANS ]
+            then
+              if [ "$comments_on" -eq 1 ]; then echo "#   Found POLY contact to N-CHANNEL violation at ($tx1,$ty2)"; fi
+              let "ytran1=ty1-50"
+              let "ytran2=ty2-50"
+              let "dy1=ty1+100"
+              let "dy2=ty2-100"
+              let "ydif1=dy1-50"
+              let "ydif2=dy2-50"
+              let "xdif1=tx1-300"
+              let "xdif2=tx1+300"
+#             See whether NTRANS transistor can be moved down or has to be reduced in size
+              move_down=0
+              if [ "$tylo" -gt 300 ]
+              then
+#               Transistor could be moved down. Check for PTIE
+                move_down=1
+                for ptie_coord in $ptie_segments
+                do
+                  ptx1=$(echo "$ptie_coord" | cut -f1 -d,)
+                  pty1=$(echo "$ptie_coord" | cut -f2 -d,)
+                  ptx2=$(echo "$ptie_coord" | cut -f3 -d,)
+                  pty2=$(echo "$ptie_coord" | cut -f4 -d,)
+                  ptw=$(echo "$ptie_coord" | cut -f5 -d,)
+                  if [ "$pty1" -eq "$pty2" ]
+                  then
+                    if [ "$ptx1" -gt "$ptx2" ]
+                    then
+                      ptxlo=$ptx2
+                      ptxhi=$ptx1
+                    else
+                      ptxlo=$ptx1
+                      ptxhi=$ptx2
+                    fi
+                    let "ptedge1=ptxlo-650"
+                    let "ptedge2=ptxhi+650"
+                    if [ "$tx1" -gt "$ptedge1" -a "$tx1" -lt "$ptedge2" ]
+                    then
+                      let "ptysep=tylo-pty1"
+                      let "space=50+300+ptw/2"
+                      if [ "$ptysep" -lt "$space" ]
+                      then
+                        move_down=0
+                        break
+                      fi
+                    fi
+                  fi
+                done
+                if [ "$move_down" = 1 ]
+                then
+                  for ncont_coord in $ncont_coords
+                  do
+                    nx1=$(echo "$ncont_coord" | cut -f1 -d,)
+                    ny1=$(echo "$ncont_coord" | cut -f2 -d,)
+                    let "nctedge1=tx1-300"
+                    let "nctedge2=tx1+300"
+                    if [ "$nx1" -gt "$nctedge1" -a "$nx1" -lt "$nctedge2" ]
+                    then
+#                     Check whether this contact is too close to the transistor
+                      let "ydiff1=ny1-tylo"
+                      let "ydiff2=ny1-tyhi"
+                      if [ "$ydiff1" -lt 0 ]
+                      then
+                        let "ydiff1=-ydiff1"
+                      fi
+                      if [ "$ydiff2" -lt 0 ]
+                      then
+                        let "ydiff2=-ydiff2"
+                      fi
+                      let "space=450+50"
+                      if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+                      then
+#                       Violation between CHANNEL and NDIF contact
+                        move_down=0
+                        break
+                      fi
+                    fi
+                  done
+                fi
+              fi # Transistor could be moved down
+
+            elif [ "$tran_type" = PTRANS ]
+            then
+              if [ "$ydiff2" -lt "$space" ]
+              then
+                if [ "$comments_on" -eq 1 ]; then echo "#   Found POLY contact to P-CHANNEL violation at ($tx1,$ty2)"; fi
+                move_up=0
+                violation_found=0
+                let "pynew=py1+50"
+                sed -i "s/^V  *$px1,$py1,CONT_POLY,\*$/V $px1,$pynew,CONT_POLY,\*/" $$temp
+                if [ "$comments_on" -eq 1 ]; then echo "#    Moving POLY contact at ($px1,$py1) to ($px1,$pynew)"; fi
+                for pdif_coord in $pdif_segments
+                do
+                  pdx1=$(echo "$pdif_coord" | cut -f1 -d,)
+                  pdy1=$(echo "$pdif_coord" | cut -f2 -d,)
+                  pdx2=$(echo "$pdif_coord" | cut -f3 -d,)
+                  pdy2=$(echo "$pdif_coord" | cut -f4 -d,)
+                  pdw=$(echo "$pdif_coord" | cut -f5 -d,)
+                  if [ "$pdx1" -eq "$pdx2" ]
+                  then
+                    if [ "$pdy1" -gt "$pdy2" ]
+                    then
+                      pdylo=$pdy2
+                    else
+                      pdylo=$pdy1
+                    fi
+                    if [ "$pdylo" -gt "$pynew" ]
+                    then
+                      let "pdedge1=pdx1-250-pdw/2"
+                      let "pdedge2=pdx1+250+pdw/2"
+                      if [ "$px1" -gt "$pdedge1" -a "$px1" -lt "$pdedge2" ]
+                      then
+                        let "ydiff=pdylo-pynew-350"
+                        if [ "$ydiff" -lt 0 ]
+                        then
+                          let "pdy1a=pdy1-ydiff"
+                          sed -i "s/S \($pdx1\),\($pdy1\),\($pdx2\),\($pdy2\),\($pdw\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$pdy1a,\3,\4,\5,\6,\7,\8/" $$temp
+                        fi
+                      fi
+                    fi
+                  fi
+                done
+                break
+              else
+                if [ "$comments_on" -eq 1 ]; then echo "#   Found POLY contact to P-CHANNEL violation at ($tx1,$ty1)"; fi
+              let "ytran1=ty1+50"
+              let "ytran2=ty2+50"
+              let "dy1=ty1+100"
+              let "dy2=ty2-100"
+              let "ydif1=dy1+50"
+              let "ydif2=dy2+50"
+              let "xdif1=tx1-300"
+              let "xdif2=tx1+300"
+#             See whether PTRANS transistor can be moved up or has to be reduced in size
+              move_up=0
+              if [ "$tyhi" -lt 4700 ]
+              then
+#               Transistor could be moved up. Check for NTIE
+                move_up=1
+                for ntie_coord in $ntie_segments
+                do
+                  ntx1=$(echo "$ntie_coord" | cut -f1 -d,)
+                  nty1=$(echo "$ntie_coord" | cut -f2 -d,)
+                  ntx2=$(echo "$ntie_coord" | cut -f3 -d,)
+                  nty2=$(echo "$ntie_coord" | cut -f4 -d,)
+                  ntw=$(echo "$ntie_coord" | cut -f5 -d,)
+                  if [ "$nty1" -eq "$nty2" ]
+                  then
+                    if [ "$ntx1" -gt "$ntx2" ]
+                    then
+                      ntxlo=$ntx2
+                      ntxhi=$ntx1
+                    else
+                      ntxlo=$ntx1
+                      ntxhi=$ntx2
+                    fi
+                    let "ntedge1=ntxlo-650"
+                    let "ntedge2=ntxhi+650"
+                    if [ "$tx1" -gt "$ntedge1" -a "$tx1" -lt "$ntedge2" ]
+                    then
+                      let "ntysep=nty1-tyhi"
+                      let "space=50+300+ntw/2"
+                      if [ "$ntysep" -lt "$space" ]
+                      then
+                        move_up=0
+                        break
+                      fi
+                    fi
+                  fi
+                done
+                if [ "$move_up" = 1 ]
+                then
+                  for pcont_coord in $pcont_coords
+                  do
+                    px1=$(echo "$pcont_coord" | cut -f1 -d,)
+                    py1=$(echo "$pcont_coord" | cut -f2 -d,)
+                    let "pctedge1=tx1-300"
+                    let "pctedge2=tx1+300"
+                    if [ "$px1" -gt "$pctedge1" -a "$px1" -lt "$pctedge2" ]
+                    then
+#                     Check whether this contact is too close to the transistor
+                      let "ydiff1=py1-tylo"
+                      let "ydiff2=py1-tyhi"
+                      if [ "$ydiff1" -lt 0 ]
+                      then
+                        let "ydiff1=-ydiff1"
+                      fi
+                      if [ "$ydiff2" -lt 0 ]
+                      then
+                        let "ydiff2=-ydiff2"
+                      fi
+                      let "space=450+50"
+                      if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+                      then
+#                       Violation between CHANNEL and PDIF contact
+                        move_up=0
+                        break
+                      fi
+                    fi
+                  done
+                fi
+                if [ "$move_up" = 1 ]
+                then
+                  for pcont_coord in $ntcont_coords
+                  do
+                    px1=$(echo "$pcont_coord" | cut -f1 -d,)
+                    py1=$(echo "$pcont_coord" | cut -f2 -d,)
+                    let "pctedge1=tx1-500"
+                    let "pctedge2=tx1+500"
+                    if [ "$px1" -gt "$pctedge1" -a "$px1" -lt "$pctedge2" ]
+                    then
+#                     Check whether this contact is too close to the transistor
+                      let "ydiff1=py1-tylo"
+                      let "ydiff2=py1-tyhi"
+                      if [ "$ydiff1" -lt 0 ]
+                      then
+                        let "ydiff1=-ydiff1"
+                      fi
+                      if [ "$ydiff2" -lt 0 ]
+                      then
+                        let "ydiff2=-ydiff2"
+                      fi
+                      let "space=450+50"
+                      if [ "$ydiff1" -lt "$space" -o "$ydiff2" -lt "$space" ]
+                      then
+#                       Violation between CHANNEL and NTIE contact
+                        move_up=0
+                        break
+                      fi
+                    fi
+                  done
+                fi
+              fi # Transistor could be moved up
+            fi
+            fi # See whether NTRANS or PTRANS transistor can be moved or has to be reduced in size
+          fi # Violation between CHANNEL and POLY contact
+        fi # Check whether this contact is too close to the transistor
+      done # Looped thru all the poly contacts
+    fi # Check on whether to check for poly contact violations
+
+    if  [ "$violation_found" -eq 1 ]
+    then
+#     Either move or transistor or reduce its size
+      if [ "$tran_type" = NTRANS ]
+      then
+#       Either move down or decrease the upper y transistor coord
+        if [ "$move_down" -eq 1 ]
+        then
+#         Move transistor down by 50
+          sed -i "s/^S  *\($tx1\),\($ty1\),\($tx2\),\($ty2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,$ytran1,\3,$ytran2,\5,\6,\7,\8/" $$temp
+          for offset in 200 250 300 350 400
+          do
+            let "xdif1=tx1-offset"
+            let "xdif2=tx1+offset"
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+          done
+          for offset_dir in -1 1
+          do
+            for troffset1 in 400 800 1200
+            do
+              let "troffset=troffset1*offset_dir"
+              let "txloc=tx1+troffset"
+              loc_tr=$(grep -c "^S  *$txloc,[^,][^,]*,$txloc,$ty2,[^,][^,]*,[^,][^,]*,[^,][^,]*,NTRANS *$" $$temp)
+              if [ "$loc_tr" -gt 0 ]
+              then
+                sed -i "s/^S  *\($txloc\),\([^,][^,]*\),\($txloc\),\($ty2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,\2,\3,$ytran2,\5,\6,\7,\8/" $$temp | \
+                for offset in 200 250 300 350 400
+                do
+                  if [ "$troffset" -lt 0 ]
+                  then
+                    let "xdif1=tx1+troffset-offset"
+                  else
+                    let "xdif1=tx1+troffset+offset"
+                  fi
+                  sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" $$temp | \
+                  sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" > $$temp1
+                  mv -f $$temp1 $$temp
+                done
+              else
+                break
+              fi
+            done
+          done
+        else
+#         Reduce transistor width by 50
+          sed -i "s/^S  *\($tx1\),\($ty1\),\($tx2\),\($ty2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,\2,\3,$ytran2,\5,\6,\7,\8/" $$temp
+          for offset in 200 250 300 350 400
+          do
+            let "xdif1=tx1-offset"
+            let "xdif2=tx1+offset"
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+          done
+          for offset_dir in -1 1
+          do
+            for troffset1 in 400 800 1200
+            do
+              let "troffset=troffset1*offset_dir"
+              let "txloc=tx1+troffset"
+              loc_tr=$(grep -c "^S  *$txloc,[^,][^,]*,$txloc,$ty2,[^,][^,]*,[^,][^,]*,[^,][^,]*,NTRANS *$" $$temp)
+              if [ "$loc_tr" -gt 0 ]
+              then
+                sed -i "s/^S  *\($txloc\),\([^,][^,]*\),\($txloc\),\($ty2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NTRANS\) *$/S \1,\2,\3,$ytran2,\5,\6,\7,\8/" $$temp | \
+                for offset in 200 250 300 350 400
+                do
+                  if [ "$troffset" -lt 0 ]
+                  then
+                    let "xdif1=tx1+troffset-offset"
+                  else
+                    let "xdif1=tx1+troffset+offset"
+                  fi
+                  sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" $$temp | \
+                  sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(NDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" > $$temp1
+                  mv -f $$temp1 $$temp
+                done
+              else
+                break
+              fi
+            done
+          done
+        fi # Move transistor down by 50 or reduce size by 50
+      elif [ "$tran_type" = PTRANS ]
+      then
+#       Either move up or increase the lower y transistor coord
+        if [ "$move_up" -eq 1 ]
+        then
+#         Move transistor up by 50
+          sed -i "s/^S  *\($tx1\),\($ty1\),\($tx2\),\($ty2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,$ytran1,\3,$ytran2,\5,\6,\7,\8/" $$temp
+          for offset in 200 250 300 350 400
+          do
+            let "xdif1=tx1-offset"
+            let "xdif2=tx1+offset"
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif1\),\($dy2\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif2,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\($dy2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,$ydif2,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy2\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif2,\3,$ydif1,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+          done
+          for offset_dir in -1 1
+          do
+            for troffset1 in 400 800 1200
+            do
+              let "troffset=troffset1*offset_dir"
+              let "txloc=tx1+troffset"
+              loc_tr=$(grep -c "^S  *$txloc,$ty1,$txloc,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,PTRANS *$" $$temp)
+              if [ "$loc_tr" -gt 0 ]
+              then
+                sed -i "s/^S  *\($txloc\),\($ty1\),\($txloc\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,$ytran1,\3,\4,\5,\6,\7,\8/" $$temp | \
+                for offset in 200 250 300 350 400
+                do
+                  if [ "$troffset" -lt 0 ]
+                  then
+                    let "xdif1=tx1+troffset-offset"
+                  else
+                    let "xdif1=tx1+troffset+offset"
+                  fi
+                  sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" $$temp | \
+                  sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" > $$temp1
+                  mv -f $$temp1 $$temp
+                done
+              else
+                break
+              fi
+            done
+          done
+        else
+#         Reduce transistor width by 50
+          sed -i "s/^S  *\($tx1\),\($ty1\),\($tx2\),\($ty2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,$ytran1,\3,\4,\5,\6,\7,\8/" $$temp
+          for offset in 200 250 300 350 400
+          do
+            let "xdif1=tx1-offset"
+            let "xdif2=tx1+offset"
+            sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" $$temp | \
+            sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\($dy1\),\($xdif2\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" | \
+            sed "s/^S  *\($xdif2\),\([^,][^,]*\),\($xdif2\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" > $$temp1
+            mv -f $$temp1 $$temp
+          done
+          for offset_dir in -1 1
+          do
+            for troffset1 in 400 800 1200
+            do
+              let "troffset=troffset1*offset_dir"
+              let "txloc=tx1+troffset"
+              loc_tr=$(grep -c "^S  *$txloc,$ty1,$txloc,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,PTRANS *$" $$temp)
+              if [ "$loc_tr" -gt 0 ]
+              then
+                sed -i "s/^S  *\($txloc\),\($ty1\),\($txloc\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PTRANS\) *$/S \1,$ytran1,\3,\4,\5,\6,\7,\8/" $$temp | \
+                for offset in 200 250 300 350 400
+                do
+                  if [ "$troffset" -lt 0 ]
+                  then
+                    let "xdif1=tx1+troffset-offset"
+                  else
+                    let "xdif1=tx1+troffset+offset"
+                  fi
+                  sed "s/^S  *\($xdif1\),\($dy1\),\($xdif1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,$ydif1,\3,\4,\5,\6,\7,\8/" $$temp | \
+                  sed "s/^S  *\($xdif1\),\([^,][^,]*\),\($xdif1\),\($dy1\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(PDIF\) *$/S \1,\2,\3,$ydif1,\5,\6,\7,\8/" > $$temp1
+                  mv -f $$temp1 $$temp
+                done
+              else
+                break
+              fi
+            done
+          done
+        fi # Move transistor up by 50 or reduce size by 50
+      fi # Choose between NTRANS and PTRANS transistors
+    fi # Moving or reducing transistors because violation was found
+  done # Looped thru all the transistors
+done # Looped thru NTRANS and PTRANS
+
+#
+#                             Add ALU1 rectangle under CALU1 if there isn't already on
+#
+calu1_coords=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,CALU1 *' $$temp | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vss,[^,][^,]*,CALU1 *' | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vdd,[^,][^,]*,CALU1 *' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\5,\6,\7/')
+alu1_segments=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,ALU1 *' $$temp | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2,\3,\4/')
+
+for calu1_coord in $calu1_coords
+do
+  cx1=$(echo "$calu1_coord" | cut -f1 -d,)
+  cy1=$(echo "$calu1_coord" | cut -f2 -d,)
+  cx2=$(echo "$calu1_coord" | cut -f3 -d,)
+  cy2=$(echo "$calu1_coord" | cut -f4 -d,)
+  cw=$(echo "$calu1_coord" | cut -f5 -d,)
+  cdir=$(echo "$calu1_coord" | cut -f7 -d,)
+  if [ "$cx1" -eq "$cx2" -a  "$cy1" -eq "$cy2" ]
+  then
+#   CALU1 rectangle is a single point
+    alu1_vsegments=$(echo "$alu1_segments" | grep "^$cx1,[^,][^,]*,$cx1,[^,][^,]*$")
+    alu1_hsegments=$(echo "$alu1_segments" | grep "^[^,][^,]*,$cy1,[^,][^,]*,$cy1$")
+    alu1_exists=0
+    for alu1_vsegment in $alu1_vsegments
+    do
+      ay1=$(echo "$alu1_vsegment" | cut -f2 -d,)
+      ay2=$(echo "$alu1_vsegment" | cut -f4 -d,)
+      if [ "$ay1" -le "$cy1" -a "$ay2" -ge "$cy2" \
+        -o "$ay1" -ge "$cy1" -a "$ay2" -le "$cy2" ]
+      then
+        alu1_exists=1
+        break
+      fi
+    done
+    if [ "$alu1_exists" -eq 0 ]
+    then
+      for alu1_hsegment in $alu1_hsegments
+      do
+        ax1=$(echo "$alu1_hsegment" | cut -f1 -d,)
+        ax2=$(echo "$alu1_hsegment" | cut -f3 -d,)
+        if [ "$ax1" -le "$cx1" -a "$ax2" -ge "$cx2" \
+          -o "$ax1" -ge "$cx1" -a "$ax2" -le "$cx2" ]
+        then
+          alu1_exists=1
+          break
+        fi
+      done
+    fi
+    if [ "$alu1_exists" -eq 0 ]
+    then
+#     This CALU1 segment has no matching ALU1 segment. Add it
+      echo "S $cx1,$cy1,$cx2,$cy2,$cw,*,$cdir,ALU1" >> $$alu1_segments
+      let "x=cx1/50"
+      let "y=cy1/50"
+      echo "#  o CALU1 with no ALU1 at ($x,$y)" >> $$calu1_comment
+    fi
+  elif [ "$cx1" -eq "$cx2" ]
+  then
+#   CALU1 rectangle is vertical
+    alu1_vsegments=$(echo "$alu1_segments" | grep "^$cx1,[^,][^,]*,$cx1,[^,][^,]*$")
+    alu1_exists=0
+    for alu1_vsegment in $alu1_vsegments
+    do
+      ay1=$(echo "$alu1_vsegment" | cut -f2 -d,)
+      ay2=$(echo "$alu1_vsegment" | cut -f4 -d,)
+      if [ "$ay1" -le "$cy1" -a "$ay2" -ge "$cy2" \
+        -o "$ay1" -ge "$cy1" -a "$ay2" -le "$cy2" ]
+      then
+        alu1_exists=1
+        break
+      fi
+    done
+    if [ "$alu1_exists" -eq 0 ]
+    then
+#     This CALU1 segment has no matching ALU1 segment. Add it
+      echo "S $cx1,$cy1,$cx2,$cy2,$cw,*,$cdir,ALU1" >> $$alu1_segments
+    fi
+  elif [ "$cy1" -eq "$cy2" ]
+  then
+#   CALU1 rectangle is horizontal
+    alu1_hsegments=$(echo "$alu1_segments" | grep "^[^,][^,]*,$cy1,[^,][^,]*,$cy1$")
+    alu1_exists=0
+    for alu1_hsegment in $alu1_hsegments
+    do
+      ax1=$(echo "$alu1_hsegment" | cut -f1 -d,)
+      ax2=$(echo "$alu1_hsegment" | cut -f3 -d,)
+      if [ "$ax1" -le "$cx1" -a "$ax2" -ge "$cx2" \
+        -o "$ax1" -ge "$cx1" -a "$ax2" -le "$cx2" ]
+      then
+        alu1_exists=1
+        break
+      fi
+    done
+    if [ "$alu1_exists" -eq 0 ]
+    then
+#     This CALU1 segment has no matching ALU1 segment. Add it
+      echo "S $cx1,$cy1,$cx2,$cy2,$cw,*,$cdir,ALU1" >> $$alu1_segments
+    fi
+  fi
+done # looped thru all CALU1 segments
+if test -e $$alu1_segments
+then
+  sed -i "/^A / r $$alu1_segments" $$temp
+  rm $$alu1_segments
+fi
+
+#
+#                             Adjust PDIF and NDIF end point if it terminates on a CONT
+#
+for cont_type in CONT_DIF_N CONT_DIF_P
+do
+  cont_coords=$(grep '^V  *[0-9]' $$temp | \
+    grep ",$cont_type" | \
+    sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+
+  for cont_coord in $cont_coords
+  do
+    if [ "$cont_type" = CONT_DIF_N ]
+    then
+      layer=NDIF
+    elif [ "$cont_type" = CONT_DIF_P ]
+    then
+      layer=PDIF
+    else
+      break
+    fi
+    xcont=$(echo "$cont_coord" | cut -f1 -d,)
+    let "xlower=$(echo "$cont_coord" | cut -f1 -d,)-50"
+    let "xupper=$(echo "$cont_coord" | cut -f1 -d,)+50"
+    ycont=$(echo "$cont_coord" | cut -f2 -d,)
+    let "ylower=$(echo "$cont_coord" | cut -f2 -d,)-50"
+    let "yupper=$(echo "$cont_coord" | cut -f2 -d,)+50"
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\($layer\) *$/S $xlower,$ycont,\2,\3,\4,\5,\6,\7/" $$temp | \
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\($layer\) *$/S $xlower,$ycont,\2,\3,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\($layer\) *$/S \1,\2,$xupper,$ycont,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\($layer\) *$/S \1,\2,$xupper,$ycont,\4,\5,\6,\7/" | \
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\($layer\) *$/S $xcont,$ylower,\2,\3,\4,\5,\6,\7/" | \
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\($layer\) *$/S $xcont,$ylower,\2,\3,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\($layer\) *$/S \1,\2,$xcont,$yupper,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\($layer\) *$/S \1,\2,$xcont,$yupper,\4,\5,\6,\7/" > $$temp1
+    mv -f $$temp1 $$temp
+  done
+done
+cp $$temp $$temp1
+#
+#                                   Label REF geometries according to 2um technology
+#
+awk -v "FS=_" '/,ref_ref,/ {printf "%1s_%1s_%1s\n", \
+$1,$2,$3*2}
+!/,ref_ref,/ {print}' $$temp1 > $$temp
+
+# Change techno from 1um to 2um by scaling all geometries
+# Constructs which need co-ordinates scaled by 20
+# H, A, R, S, V, B
+
+awk -v FS=, '/^H / {printf "%1s,%1s,%1s,%1s\n", \
+$1,$2,$3,$4*10}
+/^[^H ]/ {print}' $$temp | \
+awk -v "FS= ||," '/^A / {printf "%1s %1s,%1s,%1s,%1s\n", \
+$1,$2*20,$3*20,$4*20,$5*20}
+/^[^A ]/ {print}' | \
+awk -v "FS= ||," '/^R / {printf "%1s %1s,%1s,%1s,%1s\n", \
+$1,$2*20,$3*20,$4,$5}
+/^[^R ]/ {print}' | \
+awk -v "FS= ||," '/^S / {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2*20,$3*20,$4*20,$5*20,$6*20,$7,$8,$9}
+/^[^S ]/ {print}' | \
+awk -v "FS= ||," '/^V  *[0-9]/ {printf "%1s %1s,%1s,%1s,%1s\n", \
+$1,$2*20,$3*20,$4,$5}
+/^[^V ]/ {print}
+/^V  *A/ {print}' | \
+awk -v "FS= ||," '/^B / {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2*20,$3*20,$4*20-2000,$5*20,$6,$7}
+/^[^B ]/ {print}' > $$temp1
+#
+# Check that all CALU1 has a REF over it
+#
+calu1_coords=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,CALU1 *' $$temp1 | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vss,[^,][^,]*,CALU1 *' | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vdd,[^,][^,]*,CALU1 *' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\6/')
+
+for calu1_coord in $calu1_coords
+do
+  cx1=$(echo "$calu1_coord" | cut -f1 -d,)
+  cy1=$(echo "$calu1_coord" | cut -f2 -d,)
+  cx2=$(echo "$calu1_coord" | cut -f3 -d,)
+  cy2=$(echo "$calu1_coord" | cut -f4 -d,)
+  cname=$(echo "$calu1_coord" | cut -f5 -d,)
+  if [ "$cy1" -gt "$cy2" ]
+  then
+    let cylo=$cy2
+    let cyhi=$cy1
+  else
+    let cylo=$cy1
+    let cyhi=$cy2
+  fi
+  let cy=$cylo
+  while [ "$cy" -le "$cyhi" ]
+  do
+    ref_count=$(grep -c "^R  *$cx1,$cy,ref_ref,[^,][^,]* *$" $$temp1)
+    if [ "$ref_count" -eq 0 ]
+    then
+#     This point has a CALU1 but no REF
+      let "x=cx1/1000"
+      let "y=cy/1000"
+      echo "#  o CALU1 at ($x,$y) has no REF" >> $$ref_comment
+      echo "R $cx1,$cy,ref_ref,${cname}_$y" >> $$ref_segments
+    fi
+    let cy=$cy+10000
+  done
+done
+if test -e $$ref_segments
+then
+  sed -i "/^A / r $$ref_segments" $$temp1
+  rm $$ref_segments
+fi
+#
+#          Extend ALU1 terminating on CONT or REF by 1 lambda if needed to ensure 2 lambda overlap
+#
+alu1_width=4000
+ref_coords=$(grep '^R ' $$temp1 | \
+  sed 's/^R  *\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2/')
+cont_coords=$(grep '^V  *[0-9]' $$temp1 | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2/')
+
+overlap_coords=$(echo "$ref_coords $cont_coords" | sort -u)
+
+for overlap_coord in $overlap_coords
+do
+# Any ALU1 terminating on overlap_coord will be extended by 1 lambda
+# unless there is an existing rectangle providing coverage
+
+  xcoord=$(echo $overlap_coord | cut -f1 -d,)
+  ycoord=$(echo $overlap_coord | cut -f2 -d,)
+  let "south_ycoord=ycoord-1000"
+  let "north_ycoord=ycoord+1000"
+  right_alu1=$(grep -c "^S  *[^,][^,]*,$ycoord,[^,][^,]*,$ycoord,[^,][^,]*,[^,][^,]*,RIGHT,ALU1 *$" $$temp1)
+  left_alu1=$(grep -c "^S  *[^,][^,]*,$ycoord,[^,][^,]*,$ycoord,[^,][^,]*,[^,][^,]*,LEFT,ALU1 *$" $$temp1)
+  let "hor_alu1=right_alu1+left_alu1"
+  no_ver_alu1=0
+  already_alu1=0
+  if [ "$hor_alu1" -gt 0 ]
+  then
+#   Check whether this ALU1 passes over overlap_coord
+    alu1_xcoords1=$(grep "^S  *[^,][^,]*,$ycoord,[^,][^,]*,$ycoord,[^,][^,]*,[^,][^,]*,RIGHT,ALU1 *$" $$temp1 | \
+      sed "s/^S  *\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\(ALU1\) */\1,\3/")
+    alu1_xcoords2=$(grep "^S  *[^,][^,]*,$ycoord,[^,][^,]*,$ycoord,[^,][^,]*,[^,][^,]*,LEFT,ALU1 *$" $$temp1 | \
+      sed "s/^S  *\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\(ALU1\) */\1,\3/")
+    for alu1_xcoord in $alu1_xcoords1 $alu1_xcoords2
+    do
+      xmin=$(echo $alu1_xcoord | cut -f1 -d,)
+      xmax=$(echo $alu1_xcoord | cut -f2 -d,)
+      if [ "$xmin" -lt "$xcoord" -a "$xmax" -gt "$xcoord" \
+        -o "$xmin" -gt "$xcoord" -a "$xmax" -lt "$xcoord" ]
+      then
+        already_alu1=1
+        break
+      fi
+    done
+  fi
+  if [ "$already_alu1" -eq 0 ]
+  then
+    sed "s/^S  *\($xcoord\),\($ycoord\),\($xcoord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\(ALU1\) *$/S \1,$south_ycoord,\3,\4,\5,\6,\7,\8/" $$temp1 | \
+    sed "s/^S  *\($xcoord\),\($ycoord\),\($xcoord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\(ALU1\) *$/S \1,$south_ycoord,\3,\4,\5,\6,\7,\8/" | \
+    sed "s/^S  *\($xcoord\),\([^,][^,]*\),\($xcoord\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\(ALU1\) *$/S \1,\2,\3,$north_ycoord,\5,\6,\7,\8/" | \
+    sed "s/^S  *\($xcoord\),\([^,][^,]*\),\($xcoord\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\(ALU1\) *$/S \1,\2,\3,$north_ycoord,\5,\6,\7,\8/" > $$temp
+    cmp -s $$temp1 $$temp
+    if [ "$?" -eq 0 ]
+    then
+      no_ver_alu1=1
+    fi
+    cp $$temp $$temp1
+  fi
+
+  let "west_xcoord=xcoord-1000"
+  let "east_xcoord=xcoord+1000"
+  up_alu1=$(grep -c "^S  *$xcoord,[^,][^,]*,$xcoord,[^,][^,]*,[^,][^,]*,[^,][^,]*,UP,ALU1 *$" $$temp1)
+  down_alu1=$(grep -c "^S  *$xcoord,[^,][^,]*,$xcoord,[^,][^,]*,[^,][^,]*,[^,][^,]*,DOWN,ALU1 *$" $$temp1)
+  let "ver_alu1=up_alu1+down_alu1"
+  no_hor_alu1=0
+  already_alu1=0
+  if [ "$ver_alu1" -gt 0 ]
+  then
+#   Check whether this ALU1 passes over overlap_coord
+    alu1_ycoords1=$(grep "^S  *$xcoord,[^,][^,]*,$xcoord,[^,][^,]*,[^,][^,]*,[^,][^,]*,UP,ALU1 *$" $$temp1 | \
+      sed "s/^S  *\($xcoord\),\([^,][^,]*\),\($xcoord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\(ALU1\) */\2,\4/")
+    alu1_ycoords2=$(grep "^S  *$xcoord,[^,][^,]*,$xcoord,[^,][^,]*,[^,][^,]*,[^,][^,]*,DOWN,ALU1 *$" $$temp1 | \
+      sed "s/^S  *\($xcoord\),\([^,][^,]*\),\($xcoord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\(ALU1\) */\2,\4/")
+    for alu1_ycoord in $alu1_ycoords1 $alu1_ycoords2
+    do
+      ymin=$(echo $alu1_ycoord | cut -f1 -d,)
+      ymax=$(echo $alu1_ycoord | cut -f2 -d,)
+      if [ "$ymin" -lt "$ycoord" -a "$ymax" -gt "$ycoord" \
+        -o "$ymin" -gt "$ycoord" -a "$ymax" -lt "$ycoord" ]
+      then
+        already_alu1=1
+        break
+      fi
+    done
+  fi
+  if [ "$already_alu1" -eq 0 ]
+  then
+    sed "s/^S  *\($xcoord\),\($ycoord\),\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\(ALU1\) *$/S $west_xcoord,\2,\3,\4,\5,\6,\7,\8/" $$temp1 | \
+    sed "s/^S  *\($xcoord\),\($ycoord\),\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\(ALU1\) *$/S $west_xcoord,\2,\3,\4,\5,\6,\7,\8/" | \
+    sed "s/^S  *\([^,][^,]*\),\($ycoord\),\($xcoord\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\(ALU1\) *$/S \1,\2,$east_xcoord,\4,\5,\6,\7,\8/" | \
+    sed "s/^S  *\([^,][^,]*\),\($ycoord\),\($xcoord\),\($ycoord\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\(ALU1\) *$/S \1,\2,$east_xcoord,\4,\5,\6,\7,\8/" > $$temp
+    cmp -s $$temp1 $$temp
+    if [ "$?" -eq 0 ]
+    then
+      no_hor_alu1=1
+    fi
+    cp $$temp $$temp1
+  fi
+
+  if [ "$no_hor_alu1" -eq 1 -a "$no_ver_alu1" -eq 1 ]
+  then
+    if [ "$ycoord" -gt 10000 -a "$ycoord" -lt 90000 ]
+    then
+      echo "S $west_xcoord,$ycoord,$east_xcoord,$ycoord,$alu1_width,*,RIGHT,ALU1" >> $$alu1_segments
+#      echo "No ALU1 segment at $overlap_coord"
+    fi
+  fi
+done # looped thru all via and ref coords
+
+if test -e $$alu1_segments
+then
+  sed -i "/^A / r $$alu1_segments" $$temp1
+  rm $$alu1_segments
+fi
+#
+#                                               Edit tie_x0 to remove ALU1
+#
+if [ "$cell" = tie_x0 ]
+then
+  grep -v '^S  *[^ ][^ ]*,UP,ALU1' $$temp1 | \
+  grep -v '^S  *[^ ][^ ]*,DOWN,ALU1' > $$temp
+
+  ntcont_coords=$(grep '^V  *[0-9]' $$temp | \
+    grep ",CONT_BODY_N" | \
+    sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+  ptcont_coords=$(grep '^V  *[0-9]' $$temp | \
+    grep ",CONT_BODY_P" | \
+    sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+
+  for cont_coord in $ntcont_coords
+  do
+    x=$(echo "$cont_coord" | cut -f1 -d,)
+    y=$(echo "$cont_coord" | cut -f2 -d,)
+    if [ "$y" != 90000 ]
+    then
+      sed -i "/^V  *$x,$y,CONT_BODY_N,/ d" $$temp
+    fi
+  done
+  for cont_coord in $ptcont_coords
+  do
+    x=$(echo "$cont_coord" | cut -f1 -d,)
+    y=$(echo "$cont_coord" | cut -f2 -d,)
+    if [ "$y" != 10000 ]
+    then
+      sed -i "/^V  *$x,$y,CONT_BODY_P,/ d" $$temp
+    fi
+  done
+  mv $$temp $$temp1
+fi
+#
+#                                                  Add TALU1 geometries
+#
+grep '^S .*ALU1$' $$temp1 | \
+  sed 's/,LEFT,/,RIGHT,/' | \
+  grep -v 'vdd,RIGHT,CALU1$' | \
+  grep -v 'vss,RIGHT,CALU1$' | \
+  sed 's/,DOWN,/,UP,/' > $$alu1_segments
+hor_alu1=$(grep 'RIGHT' $$alu1_segments)
+ver_alu1=$(grep 'UP' $$alu1_segments)
+
+scale=$(grep '^H ' $$temp1 | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+abxmin=$(grep '^A ' $$temp1 | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1/')
+abxmax=$(grep '^A ' $$temp1 | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\3/')
+let "pitch=10*scale"
+talu1_width=4000
+
+for yloc in 20 30 40 50 60 70 80
+do
+  no_hor_talu1=0
+  no_ver_talu1=0
+  xmin=$abxmax
+  xmax=$abxmin
+  let "ystart=yloc*scale"
+  let "yoffset=-8*scale"
+  let "ylimit=8*scale"
+  if [ "$hor_alu1" != "" ]
+  then
+    while [ "$yoffset" -le "$ylimit" ]
+    do
+      let "ycoord=ystart+yoffset"
+      xcoords=$(echo "$hor_alu1\n" | \
+        grep "^S  *[^,][^,]*,$ycoord,[^,][^,]*,$ycoord,[^,][^,]*,[^,][^,]*,RIGHT,[^,][^,]* *$" | \
+        sed "s/^S  *\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),.*$/\1,\3/")
+      for xcoord in $xcoords
+      do
+        rxmin=$(echo $xcoord | cut -f1 -d,)
+        rxmax=$(echo $xcoord | cut -f2 -d,)
+        if [ "$rxmin" -lt "$xmin" ]
+        then
+          xmin=$rxmin
+        fi
+        if [ "$rxmax" -lt "$xmin" ]
+        then
+          xmin=$rxmax
+        fi
+        if [ "$rxmin" -gt "$xmax" ]
+        then
+          xmax=$rxmin
+        fi
+        if [ "$rxmax" -gt "$xmax" ]
+        then
+          xmax=$rxmax
+        fi
+      done #looped thru all hor alu1 segments at y=ycoord to find xmin and xmax
+      let "yoffset=yoffset+scale"
+    done #looped thru all hor alu1 segments above and below y=ystart
+  else
+    no_hor_talu1=1
+  fi
+
+  if [ "$ver_alu1" != "" ]
+  then
+   let "yoffset=-8*scale"
+    let "ylower=ystart+yoffset"
+    let "yupper=ystart+ylimit"
+    xycoords=$(echo "$ver_alu1\n" | \
+      sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4/')
+    for xycoord in $xycoords
+    do
+      rxmin=$(echo $xycoord | cut -f1 -d,)
+      rymin=$(echo $xycoord | cut -f2 -d,)
+      rymax=$(echo $xycoord | cut -f4 -d,)
+      if [ "$rymin" -lt "$yupper" -a "$rymax" -gt "$ylower" \
+        -o "$rymin" -gt "$ylower" -a "$rymax" -lt "$yupper" ]
+      then
+        if [ "$rxmin" -lt "$xmin" ]
+        then
+          xmin=$rxmin
+        fi
+        if [ "$rxmin" -gt "$xmax" ]
+        then
+          xmax=$rxmin
+        fi
+      fi
+    done #looped thru all ver alu1 segments to check if xcoord affects xmin or xmax value
+  else
+    no_ver_talu1=1
+  fi
+
+  if [ "$no_hor_talu1" -eq 0 -o "$no_ver_talu1" -eq 0 ]
+  then
+    let "xmin=xmin/pitch"
+    let "xmax=(xmax+pitch-1)/pitch"
+    let "xmin=xmin*pitch"
+    let "xmax=xmax*pitch"
+    echo "S $xmin,$ystart,$xmax,$ystart,$talu1_width,*,RIGHT,TALU1" >> $$talu1_segments
+  fi
+done #looped thru all y locations for hor alu1 segments
+
+if test -e $$talu1_segments
+then
+  sed -i "/^A / r $$talu1_segments" $$temp1
+  rm $$talu1_segments
+fi
+#
+# Add extra CALU1 and REF to the cells which have space for them
+#
+if [ "$cell" = an12_x1 ]
+then
+  loc=20000,20000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_20" >> $$calu1_segments
+fi
+if [ "$cell" = buf_x8 ]
+then
+  loc=40000,40000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_40" >> $$calu1_segments
+  loc=50000,40000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_40" >> $$calu1_segments
+fi
+if [ "$cell" = halfadder_x2 ]
+then
+  loc=40000,40000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_40" >> $$calu1_segments
+  loc=40000,50000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_50" >> $$calu1_segments
+  loc=40000,60000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_60" >> $$calu1_segments
+  loc=50000,70000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_70" >> $$calu1_segments
+  loc=60000,70000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_70" >> $$calu1_segments
+fi
+if [ "$cell" = halfadder_x4 ]
+then
+  loc=50000,40000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_40" >> $$calu1_segments
+  loc=50000,50000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_50" >> $$calu1_segments
+  loc=50000,60000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_60" >> $$calu1_segments
+  loc=60000,70000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_70" >> $$calu1_segments
+  loc=70000,70000
+  echo "S $loc,$loc,4000,b,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,b_70" >> $$calu1_segments
+fi
+if [ "$cell" = inv_x8 ]
+then
+  loc=30000,40000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_40" >> $$calu1_segments
+  loc=40000,40000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_40" >> $$calu1_segments
+fi
+if [ "$cell" = mx3_x2 ]
+then
+  loc=20000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+  loc=30000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+fi
+if [ "$cell" = mx3_x4 ]
+then
+  loc=20000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+  loc=30000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+fi
+if [ "$cell" = na3_x1 ]
+then
+  loc=20000,80000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_80" >> $$calu1_segments
+  loc=30000,80000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_80" >> $$calu1_segments
+fi
+if [ "$cell" = na4_x1 ]
+then
+  loc=20000,80000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_80" >> $$calu1_segments
+  loc=30000,80000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_80" >> $$calu1_segments
+  loc=40000,80000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_80" >> $$calu1_segments
+fi
+if [ "$cell" = nao22_x1 ]
+then
+  loc=20000,30000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_30" >> $$calu1_segments
+fi
+if [ "$cell" = nao2o22_x1 ]
+then
+  loc=20000,30000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_30" >> $$calu1_segments
+fi
+if [ "$cell" = nmx3_x1 ]
+then
+  loc=20000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+  loc=30000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+  loc=50000,40000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_40" >> $$calu1_segments
+  loc=60000,50000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_50" >> $$calu1_segments
+  loc=60000,60000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_60" >> $$calu1_segments
+  loc=50000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=60000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=70000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=80000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=90000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=100000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=100000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+fi
+if [ "$cell" = nmx3_x4 ]
+then
+  loc=20000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+  loc=30000,70000
+  echo "S $loc,$loc,4000,cmd1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd1_70" >> $$calu1_segments
+fi
+if [ "$cell" = no2_x1 ]
+then
+  loc=20000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+fi
+if [ "$cell" = no3_x1 ]
+then
+  loc=20000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=30000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+fi
+if [ "$cell" = no4_x1 ]
+then
+  loc=20000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=30000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=40000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+fi
+if [ "$cell" = noa22_x1 ]
+then
+  loc=20000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+fi
+if [ "$cell" = noa2a22_x1 ]
+then
+  loc=20000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+fi
+if [ "$cell" = noa2a2a23_x1 ]
+then
+  loc=20000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=30000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=40000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=50000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=60000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=70000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+fi
+if [ "$cell" = noa2a2a2a24_x1 ]
+then
+  loc=30000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=40000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=50000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=60000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=70000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=80000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=90000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=100000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+fi
+if [ "$cell" = nts_x2 ]
+then
+  loc=40000,30000
+  echo "S $loc,$loc,4000,cmd,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd_30" >> $$calu1_segments
+  loc=50000,30000
+  echo "S $loc,$loc,4000,cmd,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,cmd_30" >> $$calu1_segments
+fi
+if [ "$cell" = nxr2_x1 ]
+then
+  loc=40000,20000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_20" >> $$calu1_segments
+  loc=40000,70000
+  echo "S $loc,$loc,4000,nq,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,nq_70" >> $$calu1_segments
+  loc=40000,50000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_50" >> $$calu1_segments
+  loc=50000,50000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_50" >> $$calu1_segments
+  loc=60000,50000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_50" >> $$calu1_segments
+fi
+if [ "$cell" = nxr2_x4 ]
+then
+  loc=40000,30000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_30" >> $$calu1_segments
+  loc=50000,30000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_30" >> $$calu1_segments
+  loc=60000,30000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_30" >> $$calu1_segments
+fi
+if [ "$cell" = sff1_x4 ]
+then
+  loc=150000,30000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_30" >> $$calu1_segments
+  loc=150000,50000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_50" >> $$calu1_segments
+fi
+if [ "$cell" = sff2_x4 ]
+then
+  loc=210000,30000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_30" >> $$calu1_segments
+  loc=210000,50000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_50" >> $$calu1_segments
+fi
+if [ "$cell" = sff3_x4 ]
+then
+  loc=250000,30000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_30" >> $$calu1_segments
+  loc=250000,50000
+  echo "S $loc,$loc,4000,q,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,q_50" >> $$calu1_segments
+fi
+if [ "$cell" = xr2_x1 ]
+then
+  loc=40000,30000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_30" >> $$calu1_segments
+  loc=50000,30000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_30" >> $$calu1_segments
+  loc=60000,30000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_30" >> $$calu1_segments
+fi
+if [ "$cell" = xr2_x4 ]
+then
+  loc=40000,50000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_50" >> $$calu1_segments
+  loc=50000,50000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_50" >> $$calu1_segments
+  loc=60000,50000
+  echo "S $loc,$loc,4000,i1,LEFT,CALU1" >> $$calu1_segments
+  echo "R $loc,ref_ref,i1_50" >> $$calu1_segments
+fi
+
+if test -e $$calu1_segments
+then
+  sed -i "/^A / r $$calu1_segments" $$temp1
+  rm $$calu1_segments
+fi
+
+cp $$temp1 ${cell}.ap
+
+rm -f $$temp $$temp1 $$alu1_segments
+date2=$(date '+%s')
+let "elapsed_time=date2-date1"
+echo "# convert_cell $cell in ${elapsed_time}s"
+if test -e $$calu1_comment
+then
+  cat $$calu1_comment
+  rm $$calu1_comment
+fi
+if test -e $$ref_comment
+then
+  cat $$ref_comment
+  rm $$ref_comment
+fi

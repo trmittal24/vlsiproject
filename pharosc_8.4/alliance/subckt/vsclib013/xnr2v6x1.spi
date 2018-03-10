@@ -1,0 +1,25 @@
+* Spice description of xnr2v6x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:38:44
+* vsclib 0.13um values
+.subckt xnr2v6x1 a b vdd vss z
+M01 vdd   a     an    vdd p  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M02 vss   a     an    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 n1    a     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M04 z     a     n2    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M05 12    b     vdd   vdd p  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M06 12    b     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 n1    b     z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M08 n2    b     z     vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M09 z     an    n1    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M10 n2    an    vss   vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M11 vdd   12    n1    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M12 vss   12    n2    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+C6  12    vss   0.484f
+C4  a     vss   0.574f
+C2  an    vss   0.461f
+C7  b     vss   0.652f
+C9  n1    vss   0.171f
+C3  n2    vss   0.207f
+C5  z     vss   0.462f
+.ends

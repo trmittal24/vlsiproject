@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cell=$1
+
+date | sed s/^/\*\ / > $cell.spi
+sed 's/end/ends/' $cell.spc | \
+sort -mr - /home/dev/magic/etc/vsclib/$cell.subckt >> $cell.spi

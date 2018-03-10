@@ -1,0 +1,11 @@
+#!/bin/bash
+# allxor2 2007-08-29:12h25 graham
+
+./allxor2_delay $1
+./allxor2_vbe
+./allxor2_lib
+./allxor2_html
+if test -x allxor2_xtra
+then
+  ./allxor2_xtra
+fi

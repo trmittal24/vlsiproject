@@ -1,0 +1,3 @@
+Single stage 2-I/P NOR gates with one inverted input.
+The output P:N ratio is about 0.75 and the stage effort on
+pin <SPAN CLASS="boldred">a</SPAN> is 1.2.

@@ -1,0 +1,781 @@
+* i1_q transition of o4_x2, 0.13um, Berkeley generic bsim3 params
+* o4_x2_i1_q.cir 2007-07-06:07h45 graham
+* FLOW
+* instantiate one subckt for each load cap to be measured
+* for each input to output transition (two, LH and HL)
+*   for each input transition (10 here)
+*     measure time where Vin crosses VDD*input_threshold (tP)
+*     for each subckt with its different load
+*       meaasure time between tP and where Vout crosses VDD*output_threshold
+*       measure the output slope between VDD*slope_lo and VDD*slope_hi and scale to full swing value
+*     measure input current for each input transition and convert to capacitance
+*     calculate Prop Ramp delays for each input transition from x1, x2 and x3 (normal load cap values)
+*     average the power caused by the 2 transitions for each subckt (except one with largest load)
+*         and subtract the load power
+*   average input pin capacitance over transitions 90ps to 450ps (likeliest transitions)
+*   write Prop-Ramp info in VBE file format for Alliance tools
+*   write table of delays for each of the 6 load caps and 10 transitions (6x10 LUT)
+*   write table of transition times for each of the 6 load caps and 10 transitions (6x10 LUT)
+* write power LUT for each of 5 load caps and 10 transitions (5x10 LUT)
+*
+.include ../../../magic/subckt/sxlib013/spice_model.lib
+.include ../../../magic/subckt/sxlib013/o4_x2.spi
+.include ../../../magic/subckt/sxlib013/params.inc
+*
+x0  i0_0  i1_0  i2_0  i3_0  x0z  vdd0 vss0  o4_x2
+x1  i0_1  i1_1  i2_1  i3_1  x1z  vdd1 vss1  o4_x2
+x2  i0_2  i1_2  i2_2  i3_2  x2z  vdd2 vss2  o4_x2
+x3  i0_3  i1_3  i2_3  i3_3  x3z  vdd3 vss3  o4_x2
+x4  i0_4  i1_4  i2_4  i3_4  x4z  vdd4 vss4  o4_x2
+x5  i0_5  i1_5  i2_5  i3_5  x5z  vdd5 vss5  o4_x2
+*
+cx0z  x0z  0 0
+cx1z  x1z  0 0
+cx2z  x2z  0 0
+cx3z  x3z  0 0
+cx4z  x4z  0 0
+cx5z  x5z  0 0
+* 
+vdd0 vdd0 0 'vdd'
+vdd1 vdd1 0 'vdd'
+vdd2 vdd2 0 'vdd'
+vdd3 vdd3 0 'vdd'
+vdd4 vdd4 0 'vdd'
+vdd5 vdd5 0 'vdd'
+vss0 0 vss0 'vss'
+vss1 0 vss1 'vss'
+vss2 0 vss2 'vss'
+vss3 0 vss3 'vss'
+vss4 0 vss4 'vss'
+vss5 0 vss5 'vss'
+*
+Vref ref 0 dc 0 pwl(0 0 100p 0 )
+cref ref 0 100f
+Vi0_0 i0_0 0 dc 0 pwl(0 0 100p 0 )
+Vi0_1 i0_1 0 dc 0 pwl(0 0 100p 0 )
+Vi0_2 i0_2 0 dc 0 pwl(0 0 100p 0 )
+Vi0_3 i0_3 0 dc 0 pwl(0 0 100p 0 )
+Vi0_4 i0_4 0 dc 0 pwl(0 0 100p 0 )
+Vi0_5 i0_5 0 dc 0 pwl(0 0 100p 0 )
+Vi1_0 i1_0 0 dc 0 pwl(0 0 100p 0 )
+Vi1_1 i1_1 0 dc 0 pwl(0 0 100p 0 )
+Vi1_2 i1_2 0 dc 0 pwl(0 0 100p 0 )
+Vi1_3 i1_3 0 dc 0 pwl(0 0 100p 0 )
+Vi1_4 i1_4 0 dc 0 pwl(0 0 100p 0 )
+Vi1_5 i1_5 0 dc 0 pwl(0 0 100p 0 )
+Vi2_0 i2_0 0 dc 0 pwl(0 0 100p 0 )
+Vi2_1 i2_1 0 dc 0 pwl(0 0 100p 0 )
+Vi2_2 i2_2 0 dc 0 pwl(0 0 100p 0 )
+Vi2_3 i2_3 0 dc 0 pwl(0 0 100p 0 )
+Vi2_4 i2_4 0 dc 0 pwl(0 0 100p 0 )
+Vi2_5 i2_5 0 dc 0 pwl(0 0 100p 0 )
+Vi3_0 i3_0 0 dc 0 pwl(0 0 100p 0 )
+Vi3_1 i3_1 0 dc 0 pwl(0 0 100p 0 )
+Vi3_2 i3_2 0 dc 0 pwl(0 0 100p 0 )
+Vi3_3 i3_3 0 dc 0 pwl(0 0 100p 0 )
+Vi3_4 i3_4 0 dc 0 pwl(0 0 100p 0 )
+Vi3_5 i3_5 0 dc 0 pwl(0 0 100p 0 )
+*
+
+.control
+  set width=136 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+
+  set unitcap=2.6f
+  set loadcap0=1
+  set loadcap1=4
+  set loadcap2=12
+  set loadcap3=30
+  set loadcap4=62
+  set loadcap5=130
+  set drive_strength = 2
+  set input_threshold_rise = 0.5
+  set input_threshold_fall = 0.5
+  set output_threshold_rise = 0.5
+  set output_threshold_fall = 0.5
+  set lower_lh = 0.100
+  set upper_lh = 0.900
+  set lower_hl = 0.100
+  set upper_hl = 0.900
+  set lower_hh = 0.100
+  set upper_hh = 0.900
+  set lower_ll = 0.100
+  set upper_ll = 0.900
+
+  foreach n 0 1 2 3 4 5 6 7 8 9
+    let pvdd0[ $n ] = 0
+    let pvdd1[ $n ] = 0
+    let pvdd2[ $n ] = 0
+    let pvdd3[ $n ] = 0
+    let pvdd4[ $n ] = 0
+  end
+  alter cx0z = $loadcap0 *$unitcap *$drive_strength
+  alter cx1z = $loadcap1 *$unitcap *$drive_strength
+  alter cx2z = $loadcap2 *$unitcap *$drive_strength
+  alter cx3z = $loadcap3 *$unitcap *$drive_strength
+  alter cx4z = $loadcap4 *$unitcap *$drive_strength
+  alter cx5z = $loadcap5 *$unitcap *$drive_strength
+  let sumx =  @cx1z[capacitance] + @cx2z[capacitance] + @cx3z[capacitance] + @cx4z[capacitance]
+  let sumx2 = @cx1z[capacitance]^2 + @cx2z[capacitance]^2 + @cx3z[capacitance]^2 + @cx4z[capacitance]^2
+  let in_cap = 0
+  let ave_cap[1] = 0
+  let tPlh_z = 0
+  let tPhl_z = 0
+  let tPhh_z = 0
+  let tPll_z = 0
+  let rup_z = 0
+  let rdown_z = 0
+  let simulation_no = 0
+  let pwr_simulation_no = 0
+  foreach timing_sense 1
+    if $timing_sense=-1
+      set power_type=n
+    end
+    if $timing_sense=1
+      set power_type=p
+    end
+    if $timing_sense=0
+      set power_type=u
+    end
+    foreach output_file 1 2
+      let num_pin_states = 0
+      if $timing_sense < 0
+        let pin_state[0]=-1
+        let pin_state[1]=-1
+        let pin_state[2]=-1
+        let pin_state[3]=-1
+        let pin_state[4]=-1
+        let pin_state[5]=-1
+        let pin_state[6]=-1
+        let pin_state[7]=-1
+        if ( pin_state[ 0 ] = -1 )
+          echo "# ? Cell has timing_sense negative_unate but other pin states have not been set."
+        end
+      end
+      if $timing_sense > 0
+        let pin_state[0]=0
+        let pin_state[1]=-1
+        let pin_state[2]=-1
+        let pin_state[3]=-1
+        let pin_state[4]=-1
+        let pin_state[5]=-1
+        let pin_state[6]=-1
+        let pin_state[7]=-1
+        if ( pin_state[ 0 ] = -1 )
+          echo "# ? Cell has timing_sense positive_unate but other pin states have not been set."
+        end
+      end
+      if $timing_sense = 0
+        let pin_state[0]=-1
+        let pin_state[1]=-1
+        let pin_state[2]=-1
+        let pin_state[3]=-1
+        let pin_state[4]=-1
+        let pin_state[5]=-1
+        let pin_state[6]=-1
+        let pin_state[7]=-1
+        if ( pin_state[ 0 ] = -1 )
+          echo "# ? Cell has pin_power condition, but other pin states have not been set."
+        end
+      end
+      let pin_state_index = 0
+      while pin_state_index <= 7
+        if ( pin_state[ pin_state_index ] = 0 )
+          set other_pin_state=000
+        else
+          if ( pin_state[ pin_state_index ] = 1 )
+            set other_pin_state=001
+          else
+            if ( pin_state[ pin_state_index ] = 2 )
+              set other_pin_state=010
+            else
+              if ( pin_state[ pin_state_index ] = 3 )
+                set other_pin_state=011
+              else
+                if ( pin_state[ pin_state_index ] = 4 )
+                  set other_pin_state=100
+                else
+                  if ( pin_state[ pin_state_index ] = 5 )
+                    set other_pin_state=101
+                  else
+                    if ( pin_state[ pin_state_index ] = 6 )
+                      set other_pin_state=110
+                    else
+                      if ( pin_state[ pin_state_index ] = 7 )
+                        set other_pin_state=111
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+        end
+        if ( pin_state[ pin_state_index ] < 0 )
+          set other_pin_state=-1
+        else
+          if $timing_sense = 0
+            let pwr_simulation_no = pwr_simulation_no + 1
+          else
+            let simulation_no = simulation_no + 1
+          end
+          let num_pin_states = num_pin_states + 1
+          let tPROP[0] = 0
+          let tRAMP[0] = 0
+          let step[0] = 0
+          let prop_z[1] = 0
+          let ramp_z[1] = 0
+          if $output_file = 1
+            set outfall = -1
+            set outhresh=$output_threshold_rise
+            if $timing_sense <= 0
+              set slope1 = $lower_lh
+              set slope2 = $upper_lh
+              set infall = 1
+              set i1_v1 = $vdd
+              set i1_v2 = $vss
+              set inthresh = $input_threshold_fall
+              set unate = LH
+            else
+              if $timing_sense > 0
+                set slope1 = $lower_hh
+                set slope2 = $upper_hh
+                set infall = -1
+                set i1_v1 = $vss
+                set i1_v2 = $vdd
+                set inthresh = $input_threshold_rise
+                set unate = HH
+              else
+                echo "# Timing sense must be positive_unate, negative_unate or pin_power and isn't. Try again."
+                break
+              end
+            end
+          end *$output_file = 1
+          if $output_file = 2
+            set outfall = 1
+            set outhresh=$output_threshold_fall
+            if $timing_sense <= 0
+              set slope1 = $upper_hl
+              set slope2 = $lower_hl
+              set infall = -1
+              set i1_v1 = $vss
+              set i1_v2 = $vdd
+              set inthresh = $input_threshold_rise
+              set unate = HL
+            else
+              if $timing_sense > 0
+                set slope1 = $upper_ll
+                set slope2 = $lower_ll
+                set infall = 1
+                set i1_v1 = $vdd
+                set i1_v2 = $vss
+                set inthresh = $input_threshold_fall
+                set unate = LL
+              else
+                echo "# Timing sense must be positive_unate, negative_unate or pin_power and isn't. Try again."
+                break
+              end
+            end
+          end *$output_file = 2
+          if pin_state[ pin_state_index ] = 0
+            set i0_v1 = $vss
+            set i0_v2 = $vss
+            set i2_v1 = $vss
+            set i2_v2 = $vss
+            set i3_v1 = $vss
+            set i3_v2 = $vss
+          else
+            if pin_state[ pin_state_index ] = 1
+              set i0_v1 = $vss
+              set i0_v2 = $vss
+              set i2_v1 = $vss
+              set i2_v2 = $vss
+              set i3_v1 = $vdd
+              set i3_v2 = $vdd
+            else
+              if pin_state[ pin_state_index ] = 2
+                set i0_v1 = $vss
+                set i0_v2 = $vss
+                set i2_v1 = $vdd
+                set i2_v2 = $vdd
+                set i3_v1 = $vss
+                set i3_v2 = $vss
+              else
+                if pin_state[ pin_state_index ] = 3
+                  set i0_v1 = $vss
+                  set i0_v2 = $vss
+                  set i2_v1 = $vdd
+                  set i2_v2 = $vdd
+                  set i3_v1 = $vdd
+                  set i3_v2 = $vdd
+                else
+                  if pin_state[ pin_state_index ] = 4
+                    set i0_v1 = $vdd
+                    set i0_v2 = $vdd
+                    set i2_v1 = $vss
+                    set i2_v2 = $vss
+                    set i3_v1 = $vss
+                    set i3_v2 = $vss
+                  else
+                    if pin_state[ pin_state_index ] = 5
+                      set i0_v1 = $vdd
+                      set i0_v2 = $vdd
+                      set i2_v1 = $vss
+                      set i2_v2 = $vss
+                      set i3_v1 = $vdd
+                      set i3_v2 = $vdd
+                    else
+                      if pin_state[ pin_state_index ] = 6
+                        set i0_v1 = $vdd
+                        set i0_v2 = $vdd
+                        set i2_v1 = $vdd
+                        set i2_v2 = $vdd
+                        set i3_v1 = $vss
+                        set i3_v2 = $vss
+                      else
+                        if pin_state[ pin_state_index ] = 7
+                          set i0_v1 = $vdd
+                          set i0_v2 = $vdd
+                          set i2_v1 = $vdd
+                          set i2_v2 = $vdd
+                          set i3_v1 = $vdd
+                          set i3_v2 = $vdd
+                        end
+                      end
+                    end
+                  end
+                end
+              end
+            end
+          end
+          let n = 0
+          foreach transition 20p 60p 90p 130p 200p 300p 450p 670p 1000p 1500p
+            let intran[n] = $transition
+            alter @Vref[pwl] =[ 0 $vdd $transition $vss ]
+            alter @Vi0_0[pwl] =[ 0 $i0_v1 $transition $i0_v2 ]
+            alter @Vi0_1[pwl] =[ 0 $i0_v1 $transition $i0_v2 ]
+            alter @Vi0_2[pwl] =[ 0 $i0_v1 $transition $i0_v2 ]
+            alter @Vi0_3[pwl] =[ 0 $i0_v1 $transition $i0_v2 ]
+            alter @Vi0_4[pwl] =[ 0 $i0_v1 $transition $i0_v2 ]
+            alter @Vi0_5[pwl] =[ 0 $i0_v1 $transition $i0_v2 ]
+            alter @Vi1_0[pwl] =[ 0 $i1_v1 $transition $i1_v2 ]
+            alter @Vi1_1[pwl] =[ 0 $i1_v1 $transition $i1_v2 ]
+            alter @Vi1_2[pwl] =[ 0 $i1_v1 $transition $i1_v2 ]
+            alter @Vi1_3[pwl] =[ 0 $i1_v1 $transition $i1_v2 ]
+            alter @Vi1_4[pwl] =[ 0 $i1_v1 $transition $i1_v2 ]
+            alter @Vi1_5[pwl] =[ 0 $i1_v1 $transition $i1_v2 ]
+            alter @Vi2_0[pwl] =[ 0 $i2_v1 $transition $i2_v2 ]
+            alter @Vi2_1[pwl] =[ 0 $i2_v1 $transition $i2_v2 ]
+            alter @Vi2_2[pwl] =[ 0 $i2_v1 $transition $i2_v2 ]
+            alter @Vi2_3[pwl] =[ 0 $i2_v1 $transition $i2_v2 ]
+            alter @Vi2_4[pwl] =[ 0 $i2_v1 $transition $i2_v2 ]
+            alter @Vi2_5[pwl] =[ 0 $i2_v1 $transition $i2_v2 ]
+            alter @Vi3_0[pwl] =[ 0 $i3_v1 $transition $i3_v2 ]
+            alter @Vi3_1[pwl] =[ 0 $i3_v1 $transition $i3_v2 ]
+            alter @Vi3_2[pwl] =[ 0 $i3_v1 $transition $i3_v2 ]
+            alter @Vi3_3[pwl] =[ 0 $i3_v1 $transition $i3_v2 ]
+            alter @Vi3_4[pwl] =[ 0 $i3_v1 $transition $i3_v2 ]
+            alter @Vi3_5[pwl] =[ 0 $i3_v1 $transition $i3_v2 ]
+            if $output_file = 1
+              if $transition = 1500p
+                set tstop = 5000p
+              else
+                if $transition = 1000p or $transition = 670p or $transition = 450p or $transition = 300p
+                  set tstop = 4000p
+                else
+                  set tstop = 3500p
+                end
+              end
+            else
+              if $transition = 1500p
+                set tstop = 4000p
+              else
+                if $transition = 1000p
+                  set tstop = 3500p
+                else
+                  set tstop = 3000p
+                end
+              end
+            end
+            tran $tstep $tstop
+            linearize
+            let tint = length(time)-1
+            let simtime = time[tint]
+*            plot v(i1_0) v(x0z) v(x1z) v(x2z) v(x3z) v(x4z) v(x5z)
+            if ( $timing_sense < 0 | $timing_sense > 0 )
+              let simpoints = length(time)-1
+*
+*             set tP, the point where the input waveform crosses its threshold
+*
+              if $infall = 1
+                let tP = ( 1 - $inthresh ) * $transition
+              else
+                let tP = $inthresh * $transition
+              end
+*
+*             measure delay from tP to the nets x0z-x5z
+*
+              let next_est = 0
+              let j = 0
+              while j <= 5
+                let m = simpoints/2
+                let int_m = length ( vector ( m ))
+                let k = 2
+                repeat 16
+                  let k = k * 2
+                  if j=0
+                    let lower_v = x0z[int_m-1]
+                    let upper_v = x0z[int_m]
+                  end
+                  if j=1
+                    let lower_v = x1z[int_m-1]
+                    let upper_v = x1z[int_m]
+                  end
+                  if j=2
+                    let lower_v = x2z[int_m-1]
+                    let upper_v = x2z[int_m]
+                  end
+                  if j=3
+                    let lower_v = x3z[int_m-1]
+                    let upper_v = x3z[int_m]
+                  end
+                  if j=4
+                    let lower_v = x4z[int_m-1]
+                    let upper_v = x4z[int_m]
+                  end
+                  if j=5
+                    let lower_v = x5z[int_m-1]
+                    let upper_v = x5z[int_m]
+                  end
+
+                  if $outfall * ( upper_v - $vdd*$outhresh ) <= 0
+                    if $outfall * ( lower_v - $vdd*$outhresh ) >= 0
+                      goto found_m
+                    else
+                      let m = m - simpoints / k
+                      let int_m = length ( vector ( m )) + 1
+                    end
+                  else
+                    let m = m + simpoints / k
+                    let int_m = length ( vector ( m )) + 1
+                    if m >= simpoints
+                      goto notfound_m
+                    end
+                  end
+                end *repeat 16
+                label notfound_m
+                if j = 0
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap0
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap0 >> o4_x2_i1.error
+                end
+                if j = 1
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap1
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap1 >> o4_x2_i1.error
+                end
+                if j = 2
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap2
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap2 >> o4_x2_i1.error
+                end
+                if j = 3
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap3
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap3 >> o4_x2_i1.error
+                end
+                if j = 4
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap4
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap4 >> o4_x2_i1.error
+                end
+                if j = 5
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap5
+                  echo #Error: Failed to find output threshold ... setting m=simpoints/2 at unate = $unate transition = $transition, loadcap = $loadcap5 >> o4_x2_i1.error
+                end
+                let m = simpoints / 2
+                let int_m = length ( vector ( int_m )) + 1
+                label found_m
+
+                let prop_m = int_m-1+($vdd*$outhresh -lower_v)/(upper_v -lower_v)
+                let tPROP[10*j+n] = time[int_m-1]+($vdd*$outhresh -lower_v)/(upper_v -lower_v)*(time[int_m]-time[int_m-1])-tP
+                let step[10*j+n] = m
+*
+*               find when the waveform passes the first slope threshold
+*
+                if next_est = 0
+                  let out_slope1 = int_m
+                else
+                  let out_slope1 = (int_m + next_est)/2
+                end
+                let index_count = 0
+                set incr = 8
+                set found_thresh = 0
+                while $found_thresh = 0
+                  let index_count = index_count + 1
+                  if out_slope1 < 1
+                    echo #Error: Failed to find first slope threshold at T gt 0
+                    echo #Error: Failed to find first slope threshold at T gt 0 >> o4_x2_i1.error
+                    set found_thresh = 1
+                    let index_count = tint
+                  else
+                    if j=0
+                      let lower_v = x0z[out_slope1-1]
+                      let upper_v = x0z[out_slope1]
+                    end
+                    if j=1
+                      let lower_v = x1z[out_slope1-1]
+                      let upper_v = x1z[out_slope1]
+                    end
+                    if j=2
+                      let lower_v = x2z[out_slope1-1]
+                      let upper_v = x2z[out_slope1]
+                    end
+                    if j=3
+                      let lower_v = x3z[out_slope1-1]
+                      let upper_v = x3z[out_slope1]
+                    end
+                    if j=4
+                      let lower_v = x4z[out_slope1-1]
+                      let upper_v = x4z[out_slope1]
+                    end
+                    if j=5
+                      let lower_v = x5z[out_slope1-1]
+                      let upper_v = x5z[out_slope1]
+                    end
+                    if $outfall *(upper_v - $slope1 *$vdd ) <= 0
+                      if $outfall *(lower_v - $slope1 *$vdd ) >= 0
+                        set found_thresh = 1
+                      else
+                        if out_slope1 <= $incr
+                          set incr = 1
+                        end
+                        let out_slope1 = out_slope1 - $incr
+                      end
+                    else
+                      set incr = 1
+                      let out_slope1 = out_slope1 + $incr
+                    end
+                    if index_count >= tint
+                      set found_thresh = 1
+                    end
+                  end
+                end
+                if index_count >= tint
+                  if j = 0
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap0
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap0 >> o4_x2_i1.error
+                  end
+                  if j = 1
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap1
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap1 >> o4_x2_i1.error
+                  end
+                  if j = 2
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap2
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap2 >> o4_x2_i1.error
+                  end
+                  if j = 3
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap3
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap3 >> o4_x2_i1.error
+                  end
+                  if j = 4
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap4
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap4 >> o4_x2_i1.error
+                  end
+                  if j = 5
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap5
+                    echo #Error: Failed to find first slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap5 >> o4_x2_i1.error
+                  end
+                  let out_slope1 = int_m - 1
+                  let next_est = 0
+                  let first_time = time[out_slope1-1]
+                else
+                  let next_est = out_slope1
+                  let first_time = time[out_slope1-1]+($slope1 *$vdd -lower_v)/(upper_v-lower_v)*(time[out_slope1]-time[out_slope1-1])
+                end
+
+*
+*               find when the waveform passes the second slope threshold
+*
+                if next_est = 0
+                  let out_slope1 = int_m
+                else
+                  let out_slope1 = int_m + (int_m - next_est)/2
+                end
+                let index_count = 0
+                set incr = 8
+                set found_thresh = 0
+                while $found_thresh = 0
+                  let index_count = index_count + 1
+                  if out_slope1 > tint
+                    echo #Error: Failed to find second slope threshold at T lt $tstop
+                    echo #Error: Failed to find second slope threshold at T lt $tstop >> o4_x2_i1.error
+                    set found_thresh = 1
+                    let index_count = tint
+                  else
+                    if j=0
+                      let lower_v = x0z[out_slope1]
+                      let upper_v = x0z[out_slope1+1]
+                    end
+                    if j=1
+                      let lower_v = x1z[out_slope1]
+                      let upper_v = x1z[out_slope1+1]
+                    end
+                    if j=2
+                      let lower_v = x2z[out_slope1]
+                      let upper_v = x2z[out_slope1+1]
+                    end
+                    if j=3
+                      let lower_v = x3z[out_slope1]
+                      let upper_v = x3z[out_slope1+1]
+                    end
+                    if j=4
+                      let lower_v = x4z[out_slope1]
+                      let upper_v = x4z[out_slope1+1]
+                    end
+                    if j=5
+                      let lower_v = x5z[out_slope1]
+                      let upper_v = x5z[out_slope1+1]
+                    end
+                    if $outfall *(lower_v - $slope2 *$vdd ) >= 0
+                      if $outfall *(upper_v - $slope2 *$vdd ) <= 0
+                        set found_thresh = 1
+                      else
+                        let out_slope1 = out_slope1 + $incr
+                      end
+                    else
+                      set incr = 1
+                      let out_slope1 = out_slope1 - $incr
+                    end
+                    if index_count >= tint
+                      set found_thresh = 1
+                    end
+                  end
+                end
+                if index_count >= tint
+                  if j = 0
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap0
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap0 >> o4_x2_i1.error
+                  end
+                  if j = 1
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap1
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap1 >> o4_x2_i1.error
+                  end
+                  if j = 2
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap2
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap2 >> o4_x2_i1.error
+                  end
+                  if j = 3
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap3
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap3 >> o4_x2_i1.error
+                  end
+                  if j = 4
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap4
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap4 >> o4_x2_i1.error
+                  end
+                  if j = 5
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap5
+                    echo #Error: Failed to find second slope threshold ... using slope at tPROP, unate = $unate transition = $transition, loadcap = $loadcap5 >> o4_x2_i1.error
+                  end
+                  let out_slope1 = int_m
+                  let second_time = time[out_slope1+1]
+                else
+                  let second_time = time[out_slope1]+($slope2 *$vdd -lower_v)/(upper_v-lower_v)*(time[out_slope1]-time[out_slope1-1])
+                end
+
+                let out_slope = second_time - first_time
+                let tRAMP[10*j+n] = abs ( out_slope / ( $slope1 - $slope2 ))
+                let j = j+1
+              end *while j <= 5
+*
+*             Consider current flowing into input pin during input transition time
+*
+              let trantime = pos(vref#branch)
+              if $infall=1
+                let in_current = trantime * ( vi1_1#branch + vi1_2#branch + vi1_3#branch )
+              else
+                let in_current = -trantime * ( vi1_1#branch + vi1_2#branch + vi1_3#branch )
+              end
+              let ave_cap[n] = mean(in_current) * simtime / $vdd / 3
+*
+*             Calculate Prop and Ramp delays using all load caps
+*             between the second and fourth using the method of least squares
+*
+              let sumxy = @cx1z[capacitance]*tPROP[10+n]+@cx2z[capacitance]*tPROP[20+n]+@cx3z[capacitance]*tPROP[30+n]+@cx4z[capacitance]*tPROP[40+n]
+              let sumy = tPROP[10+n] + tPROP[20+n] + tPROP[30+n] + tPROP[40+n]
+              let ramp_z[n] = (4*sumxy-sumx*sumy)/(4*sumx2-sumx^2)
+              let prop_z[n]= (sumy*sumx2-sumx*sumxy)/(4*sumx2-sumx^2)
+              let pvdd0[n] = ((-mean(vdd0#branch)-mean(vss0#branch))*$tstop *$vdd - $loadcap0 *$unitcap *$drive_strength *$vdd *$vdd )/simulation_no + pvdd0[n] *( simulation_no -1)/simulation_no
+              let pvdd1[n] = ((-mean(vdd1#branch)-mean(vss1#branch))*$tstop *$vdd - $loadcap1 *$unitcap *$drive_strength *$vdd *$vdd )/simulation_no + pvdd1[n] *( simulation_no -1)/simulation_no
+              let pvdd2[n] = ((-mean(vdd2#branch)-mean(vss2#branch))*$tstop *$vdd - $loadcap2 *$unitcap *$drive_strength *$vdd *$vdd )/simulation_no + pvdd2[n] *( simulation_no -1)/simulation_no
+              let pvdd3[n] = ((-mean(vdd3#branch)-mean(vss3#branch))*$tstop *$vdd - $loadcap3 *$unitcap *$drive_strength *$vdd *$vdd )/simulation_no + pvdd3[n] *( simulation_no -1)/simulation_no
+              let pvdd4[n] = ((-mean(vdd4#branch)-mean(vss4#branch))*$tstop *$vdd - $loadcap4 *$unitcap *$drive_strength *$vdd *$vdd )/simulation_no + pvdd4[n] *( simulation_no -1)/simulation_no
+            end *if ( $timing_sense < 0 | $timing_sense > 0 )
+            if $timing_sense = 0
+              let pvdd0[n] = (-mean(vdd0#branch)-mean(vss0#branch))*$tstop *$vdd /pwr_simulation_no + pvdd0[n] *( pwr_simulation_no -1)/pwr_simulation_no
+              let pvdd1[n] = (-mean(vdd1#branch)-mean(vss1#branch))*$tstop *$vdd /pwr_simulation_no + pvdd1[n] *( pwr_simulation_no -1)/pwr_simulation_no
+              let pvdd2[n] = (-mean(vdd2#branch)-mean(vss2#branch))*$tstop *$vdd /pwr_simulation_no + pvdd2[n] *( pwr_simulation_no -1)/pwr_simulation_no
+              let pvdd3[n] = (-mean(vdd3#branch)-mean(vss3#branch))*$tstop *$vdd /pwr_simulation_no + pvdd3[n] *( pwr_simulation_no -1)/pwr_simulation_no
+              let pvdd4[n] = (-mean(vdd4#branch)-mean(vss4#branch))*$tstop *$vdd /pwr_simulation_no + pvdd4[n] *( pwr_simulation_no -1)/pwr_simulation_no
+            end
+            let n = n + 1
+            destroy all
+          end *foreach transition
+*
+*         Only consider caps from the likeliest input transitions ... 3rd to 7th chosen here ... and sims which change the output value
+*         in_cap expression changes depending on number of simulations run for this function
+*
+          let in_cap = in_cap*(simulation_no -1)/(simulation_no ) + ( ave_cap[2]+ave_cap[3]+ave_cap[4]+ave_cap[5]+ave_cap[6] )/5/(simulation_no )
+          if $timing_sense < 0
+*           For input falling, use transition=130ps for prop-ramp calculation
+            if $output_file = 1
+              print col intran tPROP[0,9] tPROP[10,19] tPROP[20,29] tPROP[30,39] tPROP[40,49] tPROP[50,59] > o4_x2_i1_q_{$other_pin_state}_lh.delay
+              print col intran tRAMP[0,9] tRAMP[10,19] tRAMP[20,29] tRAMP[30,39] tRAMP[40,49] tRAMP[50,59] > o4_x2_i1_q_{$other_pin_state}_lh.ramp
+              print col intran prop_z ramp_z ave_cap > o4_x2_i1_q_{$other_pin_state}_lh.vbe
+              if $other_pin_state ne -1
+                let tPlh_z = (tPlh_z + prop_z[4]) / num_pin_states
+                let rup_z = (rup_z + ramp_z[4]) / num_pin_states
+                print tPlh_z rup_z in_cap
+              end
+            end
+*           For input rising, use transition=130ps for prop-ramp calculation
+            if $output_file = 2
+              print col intran tPROP[0,9] tPROP[10,19] tPROP[20,29] tPROP[30,39] tPROP[40,49] tPROP[50,59] > o4_x2_i1_q_{$other_pin_state}_hl.delay
+              print col intran tRAMP[0,9] tRAMP[10,19] tRAMP[20,29] tRAMP[30,39] tRAMP[40,49] tRAMP[50,59] > o4_x2_i1_q_{$other_pin_state}_hl.ramp
+              print col intran prop_z ramp_z ave_cap > o4_x2_i1_q_{$other_pin_state}_hl.vbe
+              if $other_pin_state ne -1
+                let tPhl_z = (tPhl_z + prop_z[4]) / num_pin_states
+                let rdown_z = (rdown_z + ramp_z[4]) / num_pin_states
+                print tPhl_z rdown_z in_cap
+              end
+            end
+          end *$timing_sense < 0
+          if $timing_sense > 0
+*           For input rising, use transition=130ps for prop-ramp calculation
+            if $output_file = 1
+              print col intran tPROP[0,9] tPROP[10,19] tPROP[20,29] tPROP[30,39] tPROP[40,49] tPROP[50,59] > o4_x2_i1_q_{$other_pin_state}_hh.delay
+              print col intran tRAMP[0,9] tRAMP[10,19] tRAMP[20,29] tRAMP[30,39] tRAMP[40,49] tRAMP[50,59] > o4_x2_i1_q_{$other_pin_state}_hh.ramp
+              print col intran prop_z ramp_z ave_cap > o4_x2_i1_q_{$other_pin_state}_hh.vbe
+              if $other_pin_state ne -1
+                let tPhh_z = (tPhh_z + prop_z[4]) / num_pin_states
+                let rup_z = (rup_z + ramp_z[4]) / num_pin_states
+                print tPhh_z rup_z in_cap
+              end
+            end
+*           For input falling, use transition=130ps for prop-ramp calculation
+            if $output_file = 2
+              print col intran tPROP[0,9] tPROP[10,19] tPROP[20,29] tPROP[30,39] tPROP[40,49] tPROP[50,59] > o4_x2_i1_q_{$other_pin_state}_ll.delay
+              print col intran tRAMP[0,9] tRAMP[10,19] tRAMP[20,29] tRAMP[30,39] tRAMP[40,49] tRAMP[50,59] > o4_x2_i1_q_{$other_pin_state}_ll.ramp
+              print col intran prop_z ramp_z ave_cap > o4_x2_i1_q_{$other_pin_state}_ll.vbe
+              if $other_pin_state ne -1
+                let tPll_z = (tPll_z + prop_z[4]) / num_pin_states
+                let rdown_z = (rdown_z + ramp_z[4]) / num_pin_states
+                print tPll_z rdown_z in_cap
+              end
+            end
+          end *$timing_sense > 0
+*          plot tPROP[0,9] tPROP[10,19] tPROP[20,29] tPROP[30,39] tPROP[40,49] tPROP[50,59] vs intran
+        end *if ( pin_state[ pin_state_index ] < 0 )
+        let pin_state_index = pin_state_index + 1
+      end *while pin_state_index <= 7
+    end *foreach output_file
+    print col pvdd0 pvdd1 pvdd2 pvdd3 pvdd4
+    print col pvdd0 pvdd1 pvdd2 pvdd3 pvdd4 > o4_x2_i1_q_{$power_type}.power
+  end *foreach timing_sense 1
+  rusage trantime
+.endc
+.end

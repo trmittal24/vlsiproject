@@ -1,0 +1,27 @@
+#!/bin/bash
+# allbf1_delay 2007-07-06:07h55 graham
+
+function=$(basename $PWD)
+
+if test ! -f "$function".pmd
+then
+  echo "# There is no function pmd file "$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+# list the pmd files and run the script on the ones actually there
+set $(ls -1 -x *.pmd ) 1>/dev/null
+shift                             # remove first pmd file $function.pmd
+pmd_names="$*"
+
+for pmd in $pmd_names
+do
+  cell=${pmd%.pmd}
+  nice -10 wspice3 "$cell"_func.cir
+  if test -e ${cell}_func.error
+  then
+    echo "# Cell "$cell" functional sim fail."
+  else
+    echo "# Cell "$cell" functional sim OK."
+  fi
+done

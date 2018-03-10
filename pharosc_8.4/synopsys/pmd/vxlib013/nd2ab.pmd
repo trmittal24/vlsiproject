@@ -1,0 +1,8 @@
+inputpin_list a b
+outputpin_list z
+a z positive_unate when 0
+b z positive_unate when 0
+a z pin_power when 1
+b z pin_power when 1
+z logic_function (a+b)
+cell_footprint or2

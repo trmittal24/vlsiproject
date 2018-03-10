@@ -1,0 +1,10 @@
+na3_x1     Prop   Ramp   Cap1   LE     LE     FO=4   FO=4
+# nq timing; average characteristic_delay  14.584 ps  1.69
+# nq timing; average FO4_delay            112.29 ps  1.60
+i0_nq_lh   69.0   2.97   4.87  1.753  1.629  1.849  1.630
+i0_nq_hl   47.0   2.55   5.33  1.504         1.412       
+i1_nq_lh   62.2   2.96   5.32  1.863  1.732  1.807  1.626
+i1_nq_hl   46.0   2.55   5.53  1.601         1.445       
+i2_nq_lh   55.0   2.97   5.42  1.846  1.713  1.695  1.551
+i2_nq_hl   44.0   2.55   5.30  1.581         1.407       
+

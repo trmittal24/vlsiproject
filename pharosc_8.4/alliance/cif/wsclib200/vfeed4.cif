@@ -1,0 +1,49 @@
+(rds to CIF driver cvs version $Revision: 1.1.1.1 $
+technology /home/dev/alliance/etc/vsc200.rds
+Thu May 17 09:36:01 2007
+vfeed4
+graham);
+DS 1 100 2;
+9 vfeed4;
+(AB : 0.00, 0.00 32.00, 80.00 in micron);
+4A 0 0 64 160; 
+L CWN;
+B 80 102 32 123;
+L CWP;
+B 80 86 32 29;
+L CSN;
+B 68 64 32 40;
+B 68 16 32 160;
+L CSP;
+B 68 16 32 0;
+B 68 80 32 112;
+L CAA;
+B 64 12 32 0;
+B 64 12 32 160;
+L CPS;
+B 64 12 32 0;
+L CNS;
+B 64 12 32 160;
+L CCC;
+B 4 4 56 160;
+B 4 4 56 0;
+B 4 4 40 160;
+B 4 4 40 0;
+B 4 4 24 160;
+B 4 4 24 0;
+B 4 4 8 160;
+B 4 4 8 0;
+L CM1;
+4X vss 1 32 12 8 vss;
+L CM1;
+B 8 8 32 12;
+4X vdd 2 32 148 8 vdd;
+B 8 8 32 148;
+B 72 28 32 10;
+B 72 28 32 150;
+L AB;
+B 64 160 32 80;
+DF;
+C 1;
+(AB : 0.00, 0.00 32.00, 80.00 in micron); 
+E 

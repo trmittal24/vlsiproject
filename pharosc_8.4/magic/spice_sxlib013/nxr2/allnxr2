@@ -1,0 +1,11 @@
+#!/bin/bash
+# allnxr2 2007-07-06:07h45 graham
+
+./allnxr2_delay $1
+./allnxr2_vbe
+./allnxr2_lib
+./allnxr2_html
+if test -x allnxr2_xtra
+then
+  ./allnxr2_xtra
+fi

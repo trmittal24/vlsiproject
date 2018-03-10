@@ -1,0 +1,25 @@
+* Spice description of mxi2v2x1
+* Spice driver version 134999461
+* Date 14/02/2007 at 11:07:01
+* rgalib 0.13um values
+.subckt mxi2v2x1 a0 a1 s vdd vss z
+Mtr_00001 vss   s     sig7  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00002 sig9  vdd   vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00003 z     sig7  sig2  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00004 sig1  s     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00005 vss   a1    sig1  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00006 sig2  a0    vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00007 vdd   s     sig7  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00008 sig11 vdd   vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00009 z     sig7  sig1  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00010 sig2  s     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00011 vdd   a1    sig1  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00012 sig2  a0    vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+C5  a0    vss   0.408f
+C4  a1    vss   0.408f
+C8  s     vss   0.902f
+C1  sig1  vss   1.215f
+C2  sig2  vss   0.734f
+C7  sig7  vss   0.950f
+C6  z     vss   0.375f
+.ends

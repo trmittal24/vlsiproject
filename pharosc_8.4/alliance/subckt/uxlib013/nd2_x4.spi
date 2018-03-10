@@ -1,0 +1,18 @@
+* Spice description of nd2_x4
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt nd2_x4 a b vdd vss z 
+M1  z     a     vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M2  vdd   a     z     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M3  z     b     vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M4  vdd   b     z     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M8  sig4  a     vss   vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+M7  z     b     sig4  vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+M6  sig3  b     z     vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+M5  vss   a     sig3  vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+C7  a     vss   2.029f
+C6  b     vss   1.214f
+C5  vdd   vss   1.874f
+C2  z     vss   3.743f
+.ends

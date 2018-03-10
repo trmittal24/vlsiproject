@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>CIF</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=PREV HREF="linux_help5.html">
+	<LINK REL=NEXT HREF="linux_help7.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Linux.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070825;10300000">
+	<META NAME="CHANGED" CONTENT="20070825;10300000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="linux_help6.html">/Linux help/CIF layout</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="linux_help5.html">PREV</A></LI>
+<LI><A HREF="linux_help7.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">CIF layout</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html" CLASS="current"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+The layout of all the cells has been converted to <TT>CIF</TT> format
+in 0.13&micro;m technology. It can be found at
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+pharosc/magic/cif</PRE></TD></TR></TABLE>
+<P>
+The <TT>CIF</TT> files have been written from Magic and then
+hacked with a script
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+pharosc/alliance/bin/make_alliance_cif</PRE></TD></TR></TABLE>
+<P>
+which
+<UL>
+<LI>puts back the Alliance format abutment box;
+<LI>puts back the <TT>REF</TT> geometries.
+</UL>
+<P>
+The <TT>CIF</TT> format only defines layout geometries, so extra features
+like an abutment box and text are defined with user extensions. Alliance uses
+an extension coming originally from the company VLSI Technology. Magic
+uses an extension from
+<A HREF="http://en.wikipedia.org/wiki/Mead_&_Conway_revolution">Mead and Conway</A>.
+This is why a script is needed to put an Alliance abutment box
+into a <TT>CIF</TT> file written from Magic.
+<P>
+Magic also doesn't understand <TT>REF</TT> geometries so these too have
+to be put in with a script.
+<P>
+The <TT>CIF</TT> files have the diffusion geometries both as separate
+N&nbsp;and P&nbsp;diffusions and as a single diffusion layer with
+separate N&nbsp;and P&nbsp;implant layers. The layer definitions can be found
+in the file
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+pharosc/alliance/etc/vsc200.rds</PRE></TD></TR></TABLE>
+<P>
+in the section <TT>TABLE CIF_LAYER</TT>.<BR>
+<B>These are the <A HREF="http://www.mosis.org">MOSIS</A> layer definitions,
+not the Alliance ones.</B>
+<P>
+The <TT>CIF</TT> files can be viewed with Dreal. The right environment can be
+set up by sourcing the README file in each <TT>CIF</TT> directory. The
+example on the right shows the <TT>CIF</TT> layout of the <B>vsclib an2v0x1</B>
+cell in 0.13&micro;m with separate N&nbsp;and P&nbsp;diffusions and as a single diffusion
+layer with separate N&nbsp;and P&nbsp;implant layers.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/dreal_cif.gif" NAME="Dreal CIF example" ALIGN=LEFT BORDER=0 ALT="Dreal CIF example" TITLE="Dreal CIF example">
+</DIV>
+
+</DIV>
+<P></P>
+<P></P>
+<P></P>
+</BODY>
+</HTML>

@@ -1,0 +1,36 @@
+ENTITY xor2_x2 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 2500;   
+  CONSTANT cin_b         : NATURAL := 10;     
+  CONSTANT cin_a         : NATURAL := 7;     
+  CONSTANT rdown_b_z     : NATURAL := 1200;   
+  CONSTANT rdown_a_z     : NATURAL := 1200;   
+  CONSTANT rup_b_z       : NATURAL := 1560;   
+  CONSTANT rup_a_z       : NATURAL := 1560;   
+  CONSTANT tplh_a_z      : NATURAL := 143;     
+  CONSTANT tphl_b_z      : NATURAL := 129;     
+  CONSTANT tplh_b_z      : NATURAL := 115;     
+  CONSTANT tphh_b_z      : NATURAL := 117;     
+  CONSTANT tphl_a_z      : NATURAL := 146;     
+  CONSTANT tpll_a_z      : NATURAL := 119;     
+  CONSTANT tpll_b_z      : NATURAL := 87;     
+  CONSTANT tphh_a_z      : NATURAL := 116;     
+  CONSTANT transistors   : NATURAL := 11       
+);
+PORT (
+  b	 : in  BIT;
+  a	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END xor2_x2;
+
+ARCHITECTURE behaviour_data_flow OF xor2_x2 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on xor2_x2"
+  SEVERITY WARNING;
+  z <= (b xor a) after 1000 ps;
+END;

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo '# Script which copies all the cells in ../sxlib013 across,'
+  echo '# adding the value in argument 1 to their input pin capacitances.'
+  exit 1
+fi
+
+source_dir=../sxlib013
+inccap=$1
+
+allcells=$(ls "$source_dir" | grep '\.vbe' | sed 's/\.vbe//')
+
+for cell in $allcells
+do
+  ./makecell $cell $inccap
+done
+
+cp ../sxlib013_6_macros/tempbf1.vbe .
+./make_catal

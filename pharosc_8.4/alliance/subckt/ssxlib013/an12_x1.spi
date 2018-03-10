@@ -1,0 +1,16 @@
+* Spice description of an12_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:36:58
+* ssxlib 0.13um values
+.subckt an12_x1 i0 i1 q vdd vss
+Mtr_00001 vss   i1    sig4  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00002 q     sig4  vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00003 vss   i0    q     vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00004 sig4  i1    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00005 vdd   sig4  sig7  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00006 sig7  i0    q     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C3  i0    vss   0.822f
+C5  i1    vss   0.987f
+C2  q     vss   1.007f
+C4  sig4  vss   0.574f
+.ends

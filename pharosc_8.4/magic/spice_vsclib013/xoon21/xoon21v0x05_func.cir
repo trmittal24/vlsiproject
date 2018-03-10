@@ -1,0 +1,65 @@
+* functionality check of xoon21v0x05, 0.13um, Berkeley generic bsim3 params
+* xoon21v0x05_func.cir 2007-08-29:12h25 graham
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/xoon21v0x05.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x01 va1   va2   vb   vdd vss x01z xoon21v0x05
+x02 va1   va2   vb   vdd vss x02z xoon21v0x05
+*
+.param unitcap=1.25f
+cx01z  x01z  0 '0.5*unitcap'
+cx02z  x02z  0 '130*0.5*unitcap'
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+vstrobe strobe 0 dc 0 pulse (0 1 '0.97*tPER' '0.01*tPER' '0.01*tPER' '0.01*tPER' 'tPER')
+*
+* cba  000 001 011 111 110 100 000 001 101 111 110 010 000 010 011 111 101 100 000
+*           0   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17
+* cba  010 110 111 101 001 000 100 101 111 011 010 000 100 110 111 011 001 000
+*       18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+Vb  vb 0 pwl(0  'vss' '2*tPER' 'vss' '2*tPER+tRISE' 'vdd' '5*tPER' 'vdd' '5*tPER+tFALL'  'vss'
++           '7*tPER'  'vss' '7*tPER+tRISE'  'vdd' '10*tPER' 'vdd' '10*tPER+tFALL'  'vss'
++           '14*tPER' 'vss' '14*tPER+tRISE' 'vdd' '17*tPER' 'vdd' '17*tPER+tFALL' 'vss'
++           '19*tPER' 'vss' '19*tPER+tRISE' 'vdd' '22*tPER' 'vdd' '22*tPER+tFALL' 'vss'
++           '24*tPER' 'vss' '24*tPER+tRISE' 'vdd' '27*tPER' 'vdd' '27*tPER+tFALL' 'vss'
++           '30*tPER' 'vss' '30*tPER+tRISE' 'vdd' '33*tPER' 'vdd' '33*tPER+tFALL' 'vss' )
+Va2  va2 0 pwl(0  'vss' '1*tPER' 'vss' '1*tPER+tRISE' 'vdd' '4*tPER' 'vdd' '4*tPER+tFALL'  'vss'
++           '8*tPER'  'vss' '8*tPER+tRISE'  'vdd' '11*tPER' 'vdd' '11*tPER+tFALL'  'vss'
++           '12*tPER' 'vss' '12*tPER+tRISE' 'vdd' '15*tPER' 'vdd' '15*tPER+tFALL' 'vss'
++           '18*tPER' 'vss' '18*tPER+tRISE' 'vdd' '21*tPER' 'vdd' '21*tPER+tFALL' 'vss'
++           '26*tPER' 'vss' '26*tPER+tRISE' 'vdd' '29*tPER' 'vdd' '29*tPER+tFALL' 'vss'
++           '31*tPER' 'vss' '31*tPER+tRISE' 'vdd' '34*tPER' 'vdd' '34*tPER+tFALL' 'vss' )
+Va1  va1 0 pwl(0 'vss' 'tRISE'  'vdd' '3*tPER' 'vdd'  '3*tPER+tFALL' 'vss'
++           '6*tPER' 'vss'  '6*tPER+tRISE'  'vdd' '9*tPER'  'vdd' '9*tPER+tFALL'  'vss'
++           '13*tPER' 'vss' '13*tPER+tRISE' 'vdd' '16*tPER' 'vdd' '16*tPER+tFALL' 'vss'
++           '20*tPER' 'vss' '20*tPER+tRISE' 'vdd' '23*tPER' 'vdd' '23*tPER+tFALL' 'vss'
++           '25*tPER' 'vss' '25*tPER+tRISE' 'vdd' '28*tPER' 'vdd' '28*tPER+tFALL' 'vss'
++           '32*tPER' 'vss' '32*tPER+tRISE' 'vdd' '35*tPER' 'vdd' '35*tPER+tFALL' 'vss' )
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep 80000p
+  linearize
+  let a1 = va1 / $vdd
+  let a2 = va2 / $vdd
+  let b = vb / $vdd
+  let pa1 = va1 + ( $vdd + 0.3 )
+  let pa2 = va2 + 2 * ( $vdd + 0.3 )
+  let pb = vb + 3 * ( $vdd + 0.3 )
+  let pz = $vdd * ((a1 or a2) ne b) - $vdd - 0.3
+* check output is within 10mV of ideal at strobe point
+  let perr =  vecmax ( pos (abs (( pz - x02z + $vdd + 0.3 ) * strobe ) - 0.01 ))
+*  plot v(pa1) v(pa2) v(pb) v(pz) v(x01z) v(x02z)
+*  print col v(va1) v(va2) v(vb) v(x01z) v(x02z) > xoon21v0x05_func.spo
+  if perr > 0
+    echo #Error: Functional simulation xoon21v0x05_func.cir failed
+    echo #Error: Functional simulation xoon21v0x05_func.cir failed >> xoon21v0x05_func.error
+  else
+    echo Functional simulation OK
+  end
+  destroy all
+.endc
+.end

@@ -1,0 +1,7 @@
+* Sat Aug 27 22:10:11 CEST 2005
+.subckt iv1v4x12 a vdd vss z 
+*SPICE circuit <iv1v4x12> from XCircuit v3.20
+
+m1 z a vss vss n w=40u l=2.3636u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m2 z a vdd vdd p w=160u l=2.3636u ad='160u*5u+12p' as='160u*5u+12p' pd='160u*2+14u' ps='160u*2+14u'
+.ends

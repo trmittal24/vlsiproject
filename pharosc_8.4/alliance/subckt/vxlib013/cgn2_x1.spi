@@ -1,0 +1,25 @@
+* Spice description of cgn2_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:33:33
+* vxlib 0.13um values
+.subckt cgn2_x1 a b c vdd vss z
+M1a 2b    a     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M1b 2a    b     zn    vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M1c zn    c     2b    vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M1z vdd   zn    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2a vdd   a     2a    vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M2b 2b    b     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M2c sig2  c     zn    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M2z z     zn    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M3a vss   a     sig2  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M3b zn    b     sig1  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M4a sig1  a     vss   vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M4b vss   b     sig2  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+C10 2b    vss   0.408f
+C6  a     vss   0.850f
+C8  b     vss   0.925f
+C7  c     vss   0.792f
+C2  sig2  vss   0.381f
+C9  z     vss   0.571f
+C3  zn    vss   0.943f
+.ends

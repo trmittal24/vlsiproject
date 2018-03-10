@@ -1,0 +1,20 @@
+* Spice description of aon21_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:57:27
+* vsxlib 0.13um values
+.subckt aon21_x1 a1 a2 b vdd vss z
+M1  vdd   a1    1     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M2  1     a2    vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M3_1 z     sig3  vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M3  sig3  b     1     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M4  vss   a1    n1    vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M5_2 vss   sig3  z     vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M5  n1    a2    sig3  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M6  sig3  b     vss   vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+C9  1     vss   0.198f
+C7  a1    vss   0.698f
+C6  a2    vss   0.590f
+C5  b     vss   0.668f
+C3  sig3  vss   0.657f
+C2  z     vss   0.644f
+.ends

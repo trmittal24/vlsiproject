@@ -1,0 +1,427 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>ao22 ssxlib013 standard cell family</TITLE>
+<LINK REL=HOME HREF="../../../index.html">
+<LINK REL=PREVIOUS HREF="an12.html">
+<LINK REL=NEXT HREF="ao2o22.html">
+<LINK REL=UP HREF="lib_gif_index.html">
+<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+<META NAME="DESCRIPTION" CONTENT="standard cell library web page">
+<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+<META NAME="CREATED" CONTENT="20040523;07300000">
+<META NAME="CHANGED" CONTENT="20070716;19410000">
+<STYLE TYPE="text/css">
+<!--
+body{
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: red;
+	text-align: left;
+	margin: .2em .8em .5em .8em;
+	padding: 0;
+}
+h3{
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 1.5em;
+	font-weight: bold;
+	color:blue;
+	margin-top: 0.5em;
+}
+p{
+	margin-top: 0;
+	margin-bottom: .4em;
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: #3F3F3F;
+}
+.mathsvar{font-style:italic; font-family:serif;}
+.bold{font-weight:bold;}
+.boldred{color:red;font-weight:bold;}
+.small{font-size:0.8em;}
+.smallcaps{font-variant: small-caps;}
+.large{font-size:1em;}
+.mono{font-family:monospace;}
+STRONG{color:white;}
+.boxed{border: .1em solid #000000;}
+.vcentre{vertical-align: middle;}
+.charrowleft{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	font-family:monospace;
+}
+.charrow{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+	background: #FFE7E7;
+}
+.charrow2{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	font-size:0.8em;
+	background: #FFE7E7;
+}
+.attrrowleft{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #000000;
+}
+.attrrow{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+	background: #FFE7E7;
+}
+.graphicsbox{
+	padding: 0;
+}
+.cellrowleft{
+	border-right: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #FFE7E7;
+}
+.cellrow{
+	border-right: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.footer{
+	border-top: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #FFE7E7;
+}
+table.boxed{
+	border-collapse: collapse;
+	border: .2em solid #000000;
+	width: 100%;
+}
+th, td{
+	margin: 0;
+	padding: 0 .5em 0 .5em;
+	color: black;
+}
+.navholder{border: .1em solid #000000;}
+.navbox{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 1em;
+}
+table.nav{
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.graphicsleft{
+	padding-top: .4em;
+	padding-bottom .4em;
+	border-right: .1em solid #000000;
+}
+.graphics{padding-top: .4em; padding-bottom .4em}
+ul.dir{
+	float: right;
+	margin: .4em 0 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	list-style-type: none;
+	background: white;
+	font-size: 1em;
+}
+ul.dir li{display: inline;}
+ul.dir a{
+	display: block;
+	text-decoration: none;
+	background: black;
+	float: right;
+	width: 3.5em;
+	margin: 0;
+	border-left: .1em solid white;
+	padding: .2em .4em .2em .4em;
+	text-align: center;
+	color: white;
+}
+ul.dir a:hover{background: rgb(0,0,128);color: rgb(255,128,0);}
+table.graphics{
+	border-collapse: collapse;
+	border-top: .1em solid #000000;
+	width: 100%;
+}
+table.eff{
+	border-collapse: collapse;
+	border: 1px solid #000000;
+	background-color: #E7FFE7;
+}
+.efftdu{
+	border-left: 1px solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.efftduleft{vertical-align: middle; text-align: left;}
+.efftduright{vertical-align: middle; text-align: center;}
+.efftdb{
+	padding-bottom: 2px;
+	border-left: 1px solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.efftdbright{
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+.effcellname{padding-bottom: 0.8em;}
+.effth{
+	font-weight: normal;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+.effthleft{
+	font-weight: normal;
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+.efftr{border-top: 1px solid #CCCCCC;}
+-->
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE CLASS="boxed">
+<THEAD>
+<TR CLASS="vcentre">
+	<TD COLSPAN=5 CLASS="boxed">
+		<H3>ao22 standard cell family</H3></TD>
+	<TD COLSPAN=4 CLASS="boxed">
+		<SPAN CLASS="large"><B>2-OR into 2-AND gate</B></SPAN></TD>
+	<TD COLSPAN=2 CLASS="navholder">
+		<TABLE CLASS="nav"><TR><TD CLASS="navbox">
+		<UL CLASS="dir">
+		<LI><A HREF="lib_gif_index.html">UP</A></LI>
+		<LI><A HREF="an12.html">PREV</A></LI>
+		<LI><A HREF="ao2o22.html">NEXT</A></LI>
+		</UL></TD></TR></TABLE></TD>
+</TR>
+</THEAD>
+<TBODY>
+<TR CLASS="vcentre">
+	<TD COLSPAN=2 CLASS="boxed">
+		<IMG SRC="../../../xcircuit/gif/ssxlib/ao22.gif" NAME="ao22" BORDER=0 ALT="ao22 symbol" TITLE="ao22 symbol">
+		<BR CLEAR=LEFT>
+	</TD>
+	<TD COLSPAN=9 CLASS="boxed">
+2-1 I/P OR-AND gate with stage efforts of about 3.5 for pins <SPAN CLASS="boldred">i0</SPAN> and <SPAN CLASS="boldred">i1</SPAN> and 2.6 for pin <SPAN CLASS="boldred">i2</SPAN> of the ao22_x2, and about 7 for pins <SPAN CLASS="boldred">i0</SPAN> and <SPAN CLASS="boldred">i1</SPAN> and 5.2 for pin <SPAN CLASS="boldred">i2</SPAN> of the ao22_x4.	</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR CLASS="vcentre">
+	<TD ROWSPAN=2 CLASS="charrowleft">
+		q:((i0+i1)*i2)</TD>
+	<TD COLSPAN=3 ROWSPAN=2 CLASS="charrow">
+		cell width</TD>
+	<TD COLSPAN=2 CLASS="charrow">
+		power</TD>
+	<TD COLSPAN=5 CLASS="charrow">
+		Generic 0.13um typical timing (ps & ps/fF),
+		pin&nbsp;<SPAN CLASS="boldred">i1</SPAN>.</TD>
+</TR>
+<TR CLASS="vcentre">
+	<TD CLASS="charrow">
+		leakage</TD>
+	<TD CLASS="charrow">
+		dynamic</TD>
+	<TD COLSPAN=5 CLASS="charrow2">
+		tR=PropR+RampR&times;Load(fF), tF=PropF+RampF&times;Load(fF)</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD CLASS="attrrowleft">
+  		<STRONG>ssxlib013</STRONG></TD>
+	<TD CLASS="attrrow">
+		gates</TD>
+	<TD CLASS="attrrow">
+		lambda</TD>
+	<TD CLASS="attrrow">
+		0.13um</TD>
+	<TD CLASS="attrrow">
+		nW</TD>
+	<TD CLASS="attrrow">
+		<SPAN CLASS="small">nW/MHz</SPAN></TD>
+	<TD CLASS="attrrow">
+		PinCap</TD>
+	<TD CLASS="attrrow">
+		PropR</TD>
+	<TD CLASS="attrrow">
+		RampR</TD>
+	<TD CLASS="attrrow">
+		PropF</TD>
+	<TD CLASS="attrrow">
+		RampF</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD CLASS="cellrowleft"><B>ao22_x2</B></TD>
+	<TD CLASS="cellrow">2.0</TD>
+	<TD CLASS="cellrow">&nbsp;60</TD>
+	<TD CLASS="cellrow">3.30</TD>
+	<TD CLASS="cellrow">1.27</TD>
+	<TD CLASS="cellrow">&nbsp;29.6</TD>
+	<TD CLASS="cellrow">&nbsp;3.8f</TD>
+	<TD CLASS="cellrow">109</TD>
+	<TD CLASS="cellrow">&nbsp;1.53</TD>
+	<TD CLASS="cellrow">146</TD>
+	<TD CLASS="cellrow">&nbsp;1.23</TD>
+</TR>
+<TR>
+	<TD CLASS="cellrowleft"><B>ao22_x4</B></TD>
+	<TD CLASS="cellrow">2.7</TD>
+	<TD CLASS="cellrow">&nbsp;80</TD>
+	<TD CLASS="cellrow">4.40</TD>
+	<TD CLASS="cellrow">1.96</TD>
+	<TD CLASS="cellrow">&nbsp;45.2</TD>
+	<TD CLASS="cellrow">&nbsp;3.6f</TD>
+	<TD CLASS="cellrow">138</TD>
+	<TD CLASS="cellrow">&nbsp;0.77</TD>
+	<TD CLASS="cellrow">190</TD>
+	<TD CLASS="cellrow">&nbsp;0.63</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR><TD COLSPAN=11 CLASS="graphicsbox">
+<TABLE CLASS="graphics">
+<TR>
+<TD CLASS="effcellname"><B>ao22_x2</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">i0</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"></TD>
+<TD CLASS="efftduright"></TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.27</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">i1</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"></TD>
+<TD CLASS="efftduright"></TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.12</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">i2</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"></TD>
+<TD CLASS="efftduright"></TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 1.94</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/ssxlib/ao22_x2.gif" NAME="ao22_x2" ALIGN=LEFT BORDER=0
+              ALT="ao22_x2 schematic" TITLE="ao22_x2 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/ssxlib013/ao22_x2.gif">
+		<IMG SRC="../../../alliance/gif/ssxlib013/ao22_x2.gif" NAME="ao22_x2" ALIGN=LEFT HEIGHT=250 WIDTH=157
+              BORDER=0 ALT="ao22_x2 standard cell layout" TITLE="ao22_x2 standard cell layout">
+		</A></TD>
+</TR>
+<TR>
+<TD CLASS="effcellname"><B>ao22_x4</B><BR>&nbsp;
+<TABLE CLASS=eff>
+<TR>
+<TH ROWSPAN=2 COLSPAN=2></TH>
+<TH COLSPAN=2 CLASS="effthleft">Effort</TH>
+</TR>
+<TR>
+<TH CLASS="effthleft">FO4</TH>
+<TH CLASS="effth">Log.</TH>
+</TR>
+<TR>
+<TD ROWSPAN=2 CLASS="efftduleft">i0</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"></TD>
+<TD CLASS="efftduright"></TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.64</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">i1</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"></TD>
+<TD CLASS="efftduright"></TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.48</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+<TR CLASS="efftr">
+<TD ROWSPAN=2 CLASS="efftduleft">i2</TD>
+<TD CLASS="efftduright"><TT>/\</TT></TD>
+<TD CLASS="efftdu"></TD>
+<TD CLASS="efftduright"></TD>
+</TR>
+<TR>
+<TD CLASS="efftdbright"><TT>&macr;_</TT></TD>
+<TD CLASS="efftdb"> 2.12</TD>
+<TD CLASS="efftdbright"></TD>
+</TR>
+</TABLE></TD>
+	<TD CLASS="graphicsleft">
+		<IMG SRC="../../../xcircuit/gif/ssxlib/ao22_x4.gif" NAME="ao22_x4" ALIGN=LEFT BORDER=0
+              ALT="ao22_x4 schematic" TITLE="ao22_x4 standard cell schematic"></TD>
+	<TD CLASS="graphics">
+		<A HREF="../../../alliance/gif/ssxlib013/ao22_x4.gif">
+		<IMG SRC="../../../alliance/gif/ssxlib013/ao22_x4.gif" NAME="ao22_x4" ALIGN=LEFT HEIGHT=250 WIDTH=203
+              BORDER=0 ALT="ao22_x4 standard cell layout" TITLE="ao22_x4 standard cell layout">
+		</A></TD>
+</TR>
+</TABLE></TD></TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD COLSPAN=11 CLASS="footer">
+<SMALL>Web data book for the ssxlib. V<SPAN CLASS="smallcaps">dd</SPAN>=1.2V, T=27&deg;C,
+nominal process, generic 0.13um technology.
+&nbsp;&nbsp;Copyright &copy; 2005-2007 Graham Petley.&nbsp;&nbsp;16 JUL 2007</SMALL></TD>
+</TR>
+</TBODY>
+</TABLE>
+</BODY>
+</HTML>

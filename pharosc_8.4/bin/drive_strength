@@ -1,0 +1,92 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: drive_strength netlist instance drive"
+  echo "#"
+  echo "#   will change the drive strength of instance in netlist to value drive."
+  echo "#   eg  drive_strength multi8 r_0_ins x2"
+  echo "#   will change the drive strength of instance r_0_ins in multi8.vst to at least an x2."
+  echo "#   If the drive strength is already an x2 or more, it won't be changed."
+  exit 1
+fi
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: drive_strength netlist instance drive"
+  echo "#"
+  echo "#   Missing instance."
+  echo "#   Please supply the instance name."
+  exit 1
+fi
+if [ "$#" -eq 2 ]
+then
+  echo "# Usage: drive_strength netlist instance drive"
+  echo "#"
+  echo "#   Missing drive."
+  echo "#   Please supply the required drive strength."
+  exit 1
+fi
+if test -f $1.vst
+then
+  netlist=$1
+else
+  echo "# Usage: drive_strength netlist instance drive"
+  echo "#"
+  echo "#   The netlist supplied "$1".vst does not exist. Please check."
+  exit 1
+fi
+inst=$2
+inst_no=$(grep -c "^ *$inst *:" ${netlist}.vst)
+if [ "$inst_no" -eq 0 ]
+then
+  echo "# Usage: drive_strength netlist instance drive"
+  echo "#"
+  echo "#   The instance name supplied  "$inst"  is not present in the netlist. Please check."
+  exit 1
+else
+  cell=$(grep "^ *${inst} " ${netlist}.vst | \
+    sed 's/^ *//' | \
+    cut -f 3 -d ' ')
+fi
+drive=$3
+if [ "${drive:1:1}" -eq 0 ]
+then
+  drivex10=${drive:2:1}
+else
+  drivex10=$(echo ${drive:1:1} | awk '{printf "%3d\n", $1*10 }')
+fi
+
+# Find existing drive strength
+
+old_drive=${cell##*v?}
+if [ "${old_drive:1:1}" -eq 0 ]
+then
+  old_drivex10=${old_drive:2:1}
+else
+  old_drivex10=$(echo ${old_drive:1:1} | awk '{printf "%3d\n", $1*10 }')
+fi
+if [ "$drivex10" -le "$old_drivex10" ]
+then
+  echo "# Instance "$inst", cell "$cell" already has a drive strength of "$old_drive"."
+  echo "# Netlist "$netlist".vst has not been changed."
+  exit 0
+fi
+cell2=$(echo $cell | sed "s/${old_drive}$/${drive}/")
+
+# Change drive strength of instance to new value
+
+sed -i "/^ *${inst} / s/^ *${inst}  *:  *\([^ ][^ ]*v[^ ][^ ]*\)x[^ ][^ ]* *$/${inst} : \1${drive}/" ${netlist}.vst
+echo "# Instance "$inst", cell "$cell" has been buffered up to "$cell2"."
+
+# Add new cell name to Component list if not already there
+
+if [ "$(grep -c "^ *Component  *${cell2} *$" ${netlist}.vst)" -eq 0 ]
+then
+  sed -n "/^ *Component  *${cell} *$/,/^ *end / p" ${netlist}.vst > this_comp
+  sed -i "1 s/${cell}/${cell2}/" this_comp
+  let "comp_lines=$(wc -l this_comp | cut -f 1 -d ' ')-1"
+  sed -i "1,${comp_lines} s/^.*$/&\\\/" this_comp
+  sed -i "1 i\/^ *Component  *${cell}/ i" this_comp
+  sed -i '1 s/$/\\/' this_comp
+  sed -i -f this_comp ${netlist}.vst
+fi

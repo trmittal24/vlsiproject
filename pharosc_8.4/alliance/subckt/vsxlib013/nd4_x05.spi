@@ -1,0 +1,19 @@
+* Spice description of nd4_x05
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:59:10
+* vsxlib 0.13um values
+.subckt nd4_x05 a b c d vdd vss z
+M1  z     d     vdd   vdd p  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M2  vdd   c     z     vdd p  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M3  z     b     vdd   vdd p  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M4  vdd   a     z     vdd p  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M5  z     d     n3    vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M6  n3    c     n2    vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M7  n2    b     sig5  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M8  sig5  a     vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C9  a     vss   0.598f
+C8  b     vss   0.681f
+C7  c     vss   0.694f
+C4  d     vss   0.606f
+C1  z     vss   1.365f
+.ends

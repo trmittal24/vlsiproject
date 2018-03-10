@@ -1,0 +1,29 @@
+#!/bin/bash
+# allbf1_lib 2007-08-29:12h09 graham
+
+function=$(basename $PWD)
+
+if test ! -f "$function".pmd
+then
+  echo "# There is no function pmd file "$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+
+# list the pmd files in alphabetical then drive strength order
+# and run the script on the ones actually there
+set $(ls -1 *.pmd | sed 's/\.pmd//' | \
+  sed 's/x\([0-9]\)$/x0zz\1/' | \
+  sort | \
+  sed 's/0zz//' ) 1>/dev/null
+shift                                 # remove first pmd file $function.pmd
+pmd_names="$*"
+for pmd in $pmd_names
+do
+  cell=${pmd%.pmd}
+  ./makenewdotlib $cell > $cell.lib   # make .LIB files using makenewdotlib
+  cat $cell.lib >> $$temp
+done
+
+cat $$temp > bf1.lib
+rm $$temp

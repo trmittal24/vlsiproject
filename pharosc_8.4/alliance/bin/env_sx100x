@@ -1,0 +1,12 @@
+#!/bin/bash
+DREAL_TECHNO_NAME=/home/dev/alliance/etc/s100.dreal
+GRAAL_TECHNO_NAME=/home/dev/alliance/etc/sx.graal
+RDS_TECHNO_NAME=/home/dev/alliance/etc/sx100x.rds
+MBK_CATA_LIB=.:/home/dev/alliance/cells/sxlib:/home/dev/alliance/cif/sxlib100
+MBK_TARGET_LIB=/home/dev/alliance/cells/sxlib
+export DREAL_TECHNO_NAME
+export GRAAL_TECHNO_NAME
+export RDS_TECHNO_NAME
+export MBK_CATA_LIB
+export MBK_TARGET_LIB
+echo "# RDS_TECHNO_NAME is "$RDS_TECHNO_NAME

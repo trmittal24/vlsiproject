@@ -1,0 +1,10 @@
+#!/bin/bash
+# change pin name from $1 to $2 in Alliance vbe file on standard input
+# GP 13-AUG-03 Initial version
+# GP 14-AUG-03 Changed to correctly handle only real pin locations
+# GP 23-DEC-03 Changed after identifer to <= (for vddtie, vsstie)
+
+sed '/CONSTANT/ s/_'$1'/_'$2'/' | \
+sed '/BIT/ s/  '$1'/  '$2'/' | \
+sed '/<=/ s/'$1'/'$2'/g'
+#sed '/after/ s/'$1'/'$2'/g'

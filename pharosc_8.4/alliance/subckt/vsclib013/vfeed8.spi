@@ -1,0 +1,6 @@
+* Spice description of vfeed8
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:36:24
+* vsclib 0.13um values
+.subckt vfeed8 vdd vss
+.ends

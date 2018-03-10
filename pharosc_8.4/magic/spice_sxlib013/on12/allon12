@@ -1,0 +1,11 @@
+#!/bin/bash
+# allon12 2007-07-06:07h46 graham
+
+./allon12_delay $1
+./allon12_vbe
+./allon12_lib
+./allon12_html
+if test -x allon12_xtra
+then
+  ./allon12_xtra
+fi

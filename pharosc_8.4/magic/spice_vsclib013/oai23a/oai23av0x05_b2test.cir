@@ -1,0 +1,34 @@
+* functionality check of oai23av0x05, 0.13um, Berkeley generic bsim3 params
+* oai23av0x05_func.cir 2007-02-10:10h31 graham
+*
+* This files shows the char problem coming from the output spike.
+* At 60ps input transition, the spike dips below the 90% threshold point
+* and triggers the wrong measurement point.
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/oai23av0x05.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x01 a3   b1   b2     vdd vss x01z oai23av0x05
+x02 a3   b1   b2     vdd vss x02z oai23av0x05
+*
+.param unitcap=1.5f
+cx01z  x01z  0 0.75f
+cx02z  x02z  0 3.0f
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+Va3 a3  0 'vss'
+Vb1 b1  0 'vdd'
+Vb2 b2  0 pwl(0  'vdd' 60p 'vss')
+v90 v90 0 'vdd*0.9'
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran 1p 260p
+  linearize
+  plot v(v90) v(x01:w3) v(x02:w3) v(x01:w1) v(x02:w1) v(x01:w2) v(x02:w2) v(b2) v(x01z) v(x02z)
+  print v(v90) v(x01:w3) v(x02:w3) v(x01:w1) v(x02:w1) v(x01:w2) v(x02:w2) v(b2) v(x01z) v(x02z) > oai23av0x05_b2test.spo
+  destroy all
+.endc
+.end

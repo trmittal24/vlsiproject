@@ -1,0 +1,19 @@
+* Spice description of nr3av0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:27:45
+* wsclib 0.13um values
+.subckt nr3av0x05 a b c vdd vss z
+M01 vdd   an    03    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M02 vss   an    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 03    b     05    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M04 z     b     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 05    c     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M06 vss   c     z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 an    a     vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M08 an    a     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+C6  a     vss   0.397f
+C5  an    vss   0.661f
+C4  b     vss   0.386f
+C3  c     vss   0.372f
+C1  z     vss   0.903f
+.ends

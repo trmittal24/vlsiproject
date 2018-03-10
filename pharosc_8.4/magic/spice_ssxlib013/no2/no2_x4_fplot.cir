@@ -1,0 +1,49 @@
+* functionality check of no2_x4, 0.13um, Berkeley generic bsim3 params
+* no2_x4_func.cir 2007-07-06:07h34 graham
+*
+.include ../../../magic/subckt/ssxlib013/spice_model.lib
+.include ../../../magic/subckt/ssxlib013/no2_x4.spi
+.include ../../../magic/subckt/ssxlib013/params.inc
+*
+x01 vi0   vi1   x01z vdd vss no2_x4
+x02 vi0   vi1   x02z vdd vss no2_x4
+*
+.param unitcap=2.6f
+cx01z  x01z  0 '4*unitcap'
+cx02z  x02z  0 '130*4*unitcap'
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+vstrobe strobe 0 dc 0 pulse (0 1 '0.97*tPER' '0.01*tPER' '0.01*tPER' '0.01*tPER' 'tPER')
+*
+* ba      00   10     11     01     00     01     11     10     00
+*          0    1      0      1      0      1      0      1      0
+*             thh_AZ thl_BZ tlh_AZ tll_BZ thh_BZ thl_AZ tlh_BZ tll_AZ
+*                 0      1      2      3      4      5      6      7      8
+Vi1  vi1 0 dc 0 pwl(0 'vss' '1*tPER' 'vss' '1*tPER+tRISE' 'vdd' '3*tPER' 'vdd' '3*tPER+tFALL' 'vss'
++           '4*tPER' 'vss' '4*tPER+tRISE' 'vdd' '6*tPER' 'vdd' '6*tPER+tFALL' 'vss' )
+Vi0  vi0 0 dc 0 pwl(0 'vss' 'tRISE'  'vdd' '2*tPER' 'vdd'  '2*tPER+tFALL' 'vss'
++           '5*tPER' 'vss' '5*tPER+tRISE' 'vdd' '7*tPER' 'vdd' '7*tPER+tFALL' 'vss' )
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep 40000p
+  linearize
+  let i0 = vi0 / $vdd
+  let i1 = vi1 / $vdd
+  let pi0 = vi0 + ( $vdd + 0.3 )
+  let pi1 = vi1 + 2 * ( $vdd + 0.3 )
+  let pz = $vdd * (not (i0 or i1)) - $vdd - 0.3
+* check output is within 10mV of ideal at strobe point
+  let perr =  vecmax ( pos ( abs (( pz - x02z + $vdd + 0.3 ) * strobe ) - 0.01 ))
+  plot v(pi0) v(pi1) v(pz) v(x01z) v(x02z)
+*  print col v(vi0) v(vi1) v(x01z) v(x02z) > no2_x4_func.spo
+  if perr > 0
+    echo #Error: Functional simulation no2_x4_func.cir failed
+    echo #Error: Functional simulation no2_x4_func.cir failed >> no2_x4_func.error
+  else
+    echo Functional simulation OK
+  end
+  destroy all
+.endc
+.end

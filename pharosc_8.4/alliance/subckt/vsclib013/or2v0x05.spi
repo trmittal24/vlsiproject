@@ -1,0 +1,16 @@
+* Spice description of or2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:32:26
+* vsclib 0.13um values
+.subckt or2v0x05 a b vdd vss z
+M01 01    a     vdd   vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M02 zn    a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 zn    b     01    vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M04 vss   b     zn    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 vdd   zn    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M06 vss   zn    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  a     vss   0.331f
+C5  b     vss   0.383f
+C3  z     vss   0.640f
+C2  zn    vss   0.687f
+.ends

@@ -1,0 +1,23 @@
+*SPICE circuit <halfadder_x2> from XCircuit v3.20
+
+m1 sout son vss vss n w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m2 n3 a vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m3 sout son vdd vdd p w=39u l=2u ad='39u*5u+12p' as='39u*5u+12p' pd='39u*2+14u' ps='39u*2+14u'
+m4 son a n5 vdd p w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m5 cout con vss vss n w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m6 cout con vdd vdd p w=39u l=2u ad='39u*5u+12p' as='39u*5u+12p' pd='39u*2+14u' ps='39u*2+14u'
+m7 bn b vss vss n w=8u l=2u ad='8u*5u+12p' as='8u*5u+12p' pd='8u*2+14u' ps='8u*2+14u'
+m8 son bn n3 vss n w=12u l=2u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m9 bn b vdd vdd p w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m10 an a vdd vdd p w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m11 n4 an vdd vdd p w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m12 n5 b vdd vdd p w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m13 son bn n4 vdd p w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m14 n2 b vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m15 son an n2 vss n w=12u l=2u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m16 an a vss vss n w=8u l=2u ad='8u*5u+12p' as='8u*5u+12p' pd='8u*2+14u' ps='8u*2+14u'
+m17 n1 a vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m18 con b vdd vdd p w=18u l=2u ad='18u*5u+12p' as='18u*5u+12p' pd='18u*2+14u' ps='18u*2+14u'
+m19 con a vdd vdd p w=18u l=2u ad='18u*5u+12p' as='18u*5u+12p' pd='18u*2+14u' ps='18u*2+14u'
+m20 con b n1 vss n w=14u l=2u ad='14u*5u+12p' as='14u*5u+12p' pd='14u*2+14u' ps='14u*2+14u'
+.end

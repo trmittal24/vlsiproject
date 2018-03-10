@@ -1,0 +1,25 @@
+* Spice description of cgi2a_x05
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:57:56
+* vsxlib 0.13um values
+.subckt cgi2a_x05 a b c vdd vss z
+M1a vdd   a     6a    vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M1b n2    b     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M1c z     c     n2    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2a 6a    a     vss   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M2b vdd   b     3a    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2c sig1  c     z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M3a 3a    6a    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M3b vss   b     sig1  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M4a n2    6a    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M4b n3    b     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M5a z     6a    n3    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M6a vss   6a    sig1  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C7  6a    vss   0.932f
+C8  a     vss   0.600f
+C4  b     vss   0.918f
+C6  c     vss   0.585f
+C11 n2    vss   0.495f
+C1  sig1  vss   0.368f
+C5  z     vss   0.831f
+.ends

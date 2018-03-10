@@ -1,0 +1,1 @@
+The na3_x1 is a single stage 3-NAND with P/N ratio of about 2.3, which makes the P and N transistors the same size. The na3_x4 is a 3 stage 3-NAND with stage efforts of about 1.1 and 3.9.

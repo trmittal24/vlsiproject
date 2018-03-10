@@ -1,0 +1,8 @@
+#!/bin/bash
+# change a field in an Alliance vbe file
+# eg chfield area 5001 < fred.vbe gives
+#   CONSTANT area          : NATURAL := 5001;
+# GP 13-AUG-03 Initial version
+# 
+awk '$2 ~ /'$1'/ {printf "%-11s%-14s%-2s%-8s%-3s%-8s\n", "  "$1,$2,$3,$4,$5,$6='$2'";"}
+$2 !~ /'$1'/ {print}'

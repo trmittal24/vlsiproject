@@ -1,0 +1,1 @@
+A set of inverters with P/N ratio of 2 (iv1_x), 1.5 (iv1_w) and 2.25 (iv1_y). The P/N ratio of 2 offers good output skew, while 1.5 is close to the fastest speed and 2.25 is close to balanced output skews. The iv1_y2 is considered as the reference inverter for logical effort calculations.

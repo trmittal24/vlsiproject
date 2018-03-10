@@ -1,0 +1,38 @@
+ENTITY nd3v0x6 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 9792;   
+  CONSTANT cin_a         : NATURAL := 44;     
+  CONSTANT cin_b         : NATURAL := 44;     
+  CONSTANT cin_c         : NATURAL := 44;     
+  CONSTANT rdown_a_z     : NATURAL := 1030;   
+  CONSTANT rdown_b_z     : NATURAL := 1030;   
+  CONSTANT rdown_c_z     : NATURAL := 1030;   
+  CONSTANT rup_a_z       : NATURAL := 930;    
+  CONSTANT rup_b_z       : NATURAL := 930;    
+  CONSTANT rup_c_z       : NATURAL := 930;    
+  CONSTANT tphl_a_z	 : NATURAL := 119;
+  CONSTANT tphl_b_z	 : NATURAL := 171;
+  CONSTANT tphl_c_z	 : NATURAL := 193;
+  CONSTANT tplh_c_z	 : NATURAL := 265;
+  CONSTANT tplh_b_z	 : NATURAL := 316;
+  CONSTANT tplh_a_z	 : NATURAL := 363;
+  CONSTANT transistors   : NATURAL := 24      
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  c	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nd3v0x6;
+
+ARCHITECTURE behaviour_data_flow OF nd3v0x6 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nd3v0x6"
+  SEVERITY WARNING;
+  z <= not (((a and b) and c)) after 1000 ps;
+END;

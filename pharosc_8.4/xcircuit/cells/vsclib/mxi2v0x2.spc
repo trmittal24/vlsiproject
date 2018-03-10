@@ -1,0 +1,13 @@
+*SPICE circuit <mxi2v0x2> from XCircuit v3.4 rev 26
+
+m1 n3 s vdd vdd p w=50u l=2u ad='50u*5u+12p' as='50u*5u+12p' pd='50u*2+14u' ps='50u*2+14u'
+m2 z a0 n3 vdd p w=50u l=2u ad='50u*5u+12p' as='50u*5u+12p' pd='50u*2+14u' ps='50u*2+14u'
+m3 z a1 n4 vdd p w=50u l=2u ad='50u*5u+12p' as='50u*5u+12p' pd='50u*2+14u' ps='50u*2+14u'
+m4 n1 a1 vss vss n w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m5 z s n1 vss n w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m6 z a0 n2 vss n w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+m7 sn s vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m8 n4 sn vdd vdd p w=50u l=2u ad='50u*5u+12p' as='50u*5u+12p' pd='50u*2+14u' ps='50u*2+14u'
+m9 sn s vdd vdd p w=18u l=2u ad='18u*5u+12p' as='18u*5u+12p' pd='18u*2+14u' ps='18u*2+14u'
+m10 n2 sn vss vss n w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+.end

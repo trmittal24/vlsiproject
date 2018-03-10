@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# Script which oversizes the cell abutment box before
+# writing out the CIF. This gives a correct implant
+# width when the 's2r -i' option is being used. The
+# AB of the writen CIF is then replaced with the
+# correct one.
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: s2r_vsc200 cell" 1>&2
+  echo "#" 1>&2
+  echo "#   is used instead of  s2r -i cell  to write a CIF" 1>&2
+  echo "#   file with implants meeting minimum width rules." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: s2r_vsc200 cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+isab=$(grep -c '^A ' $cell.ap)
+if [ "$isab" -eq 0 ]
+then
+  echo "# The cell $cell.ap has no AB defined and cannot be used. Please check." 1>&2
+  exit 1
+fi
+
+lambda_abextend=1
+scale=$(grep '^H ' $cell.ap | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+let "abextend=lambda_abextend*scale"
+
+if [ "$RDS_OUT" = cif ]
+then
+  s2r -i $cell
+  sed -n '/^(AB /,/^4A / p;/^4A / q' $cell.cif > $$abox
+fi
+
+cp -p $cell.ap ${cell}.ap_bak
+awk -v "FS= ||," '/^A / {printf "%1s %1s,%1s,%1s,%1s\n", $1,$2,$3-'$abextend',$4,$5+'$abextend' }
+!/^A / {print}' $cell.ap > s2r_vsc200.ap
+mv -f s2r_vsc200.ap $cell.ap
+
+if [ "$RDS_OUT" = cif ]
+then
+  s2r -i $cell > /dev/null
+  sed '/^(AB /,/^4A / {//d;}' $cell.cif > $$temp
+
+  sed "/^9 .*; *$/ r $$abox" $$temp | \
+    sed "s/s2r_vsc200/$cell/g" > $cell.cif
+  rm $$abox $$temp
+else
+  sed -i '/CALU1/! s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/S \1,\2,\3,\4,\5,\*,\7,\8/' $cell.ap
+  sed -i 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/V \1,\2,\3,\*/' $cell.ap
+  s2r -i $cell > /dev/null
+fi
+mv -f ${cell}.ap_bak $cell.ap

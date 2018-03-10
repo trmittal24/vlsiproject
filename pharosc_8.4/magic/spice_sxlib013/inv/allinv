@@ -1,0 +1,11 @@
+#!/bin/bash
+# allinv 2007-07-06:07h42 graham
+
+./allinv_delay $1
+./allinv_vbe
+./allinv_lib
+./allinv_html
+if test -x allinv_xtra
+then
+  ./allinv_xtra
+fi

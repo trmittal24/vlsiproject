@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>tar download</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=NEXT HREF="linux_help2.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the pharosc libraries under Linux.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20040430;18200000">
+	<META NAME="CHANGED" CONTENT="20070916;11400000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="linux_help1.html">/Linux help/tar download</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="../index.html">PREV</A></LI>
+<LI><A HREF="linux_help2.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Download the TAR file</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html" CLASS="current">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV>
+<P CLASS="col_2a3">
+There are
+<A HREF="win_help1.html">more complete instructions</A>
+for using the library, especially the examples, with a Linux Live CD.
+<DIV CLASS="col_2">
+<P CLASS="first">
+Download
+the<TT> <A HREF="../pharosc_8.4.tar.gz">pharosc_8.4.tar.gz</A> </TT> and
+<TT> <A HREF="../pharosc_examples_8.4.tar.gz">pharosc_examples_8.4.tar.gz</A> </TT> files.
+Decide where you want to install the library,
+and put the files there. Then unpack with:
+<P>
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+~ $ gunzip pharosc_8.4.tar.gz
+~ $ gunzip pharosc_examples_8.4.tar.gz
+~ $ tar xvf pharosc_8.4.tar
+~ $ tar xvf pharosc_examples_8.4.tar</PRE></TD></TR></TABLE>
+<P>
+The tar files can now be recompressed to save space.
+There will be a directory<TT><B> pharosc_8.4</B></TT>. I recommend making
+a link<TT><B> pharosc </B></TT> which points to<TT><B> pharosc_8.4</B></TT>.
+This way you can have multiple releases and point to the
+one you want to use by changing the link. The example here shows
+the library release and unpacked library in the home directory.
+Note that the link won't work on a FAT formatted disk (like a
+USB disk).
+<P>
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+~ $ gzip pharosc_8.4.tar
+~ $ gzip pharosc_examples_8.4.tar
+~ $ ln -s pharosc_8.4 pharosc
+~ $ ls -gGh
+lrwxrwxrwx 1  11 2007-09-14 14:39 pharosc -> pharosc_8.4
+drwxr-xr-x 9 368 2007-09-14 14:02 pharosc_8.4
+-rw-r--r-- 1 63M 2007-09-14 14:12 pharosc_8.4.tar.gz
+-rw-r--r-- 1 57M 2007-09-14 14:12 pharosc_examples_8.4.tar.gz</PRE></TD></TR></TABLE>
+<P>
+The total unpacked library size is about 595MB, about 200MB in
+the examples and 395MB in the rest of the library.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+Screen shot of unpacking.
+<IMG SRC="../gif/linux_unpack.gif" NAME="linux unpack" ALIGN=LEFT BORDER=0 ALT="linux unpack" TITLE="linux unpack">
+</DIV></DIV>
+
+</DIV>
+<P></P>
+<P></P>
+<P></P>
+</BODY>
+</HTML>
+

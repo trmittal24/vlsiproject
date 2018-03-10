@@ -1,0 +1,11 @@
+#!/bin/bash
+# alloan21 2007-07-06:07h59 graham
+
+./alloan21_delay $1
+./alloan21_vbe
+./alloan21_lib
+./alloan21_html
+if test -x alloan21_xtra
+then
+  ./alloan21_xtra
+fi

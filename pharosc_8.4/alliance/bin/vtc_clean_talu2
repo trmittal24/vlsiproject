@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Script which 
+# 1/  removes TALU1 geometries
+# 2/  removes text associated with TALU geometries
+# 3/  renames ALU1 and CALU1 vss and vdd geometries to ALU2 and CALU2
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: vtc_clean_talu2 cell" 1>&2
+  echo "#" 1>&2
+  echo "#   will removes TALU1 and ALU2 on top of TALU2 from cell.ap" 1>&2
+  echo "#   eg  vtc_clean_talu2 fred  will clean fred.ap" 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: vtc_clean_talu2 cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+sed '/,TALU1 *$/ d' $cell | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(TALU[0-9]\) *$/S \1,\2,\3,\4,\5,\*,\7,\8/' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),vss,\([^,][^,]*\),CALU1 *$/S \1,\2,\3,\4,\5,vss,\6,CALU2/' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),vdd,\([^,][^,]*\),CALU1 *$/S \1,\2,\3,\4,\5,vdd,\6,CALU2/' | \
+  sed 's/$C  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),ALU1 *$/C \1,\2,\3,\4,\5,\6,ALU2/' > $$temp
+
+mv -f $$temp $cell

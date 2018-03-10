@@ -1,0 +1,33 @@
+* Spice description of oa3ao322_x2
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:40:09
+* ssxlib 0.13um values
+.subckt oa3ao322_x2 i0 i1 i2 i3 i4 i5 i6 q vdd vss
+Mtr_00001 q     sig3  vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00002 sig9  i6    sig3  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+Mtr_00003 vss   i3    sig9  vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00004 sig9  i4    vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00005 vss   i5    sig9  vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+Mtr_00006 sig3  i2    sig4  vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+Mtr_00007 sig4  i1    sig5  vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+Mtr_00008 sig5  i0    vss   vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+Mtr_00009 vdd   sig3  q     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00010 sig15 i3    sig3  vdd p  L=0.12U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U
+Mtr_00011 sig16 i4    sig15 vdd p  L=0.12U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U
+Mtr_00012 sig17 i5    sig16 vdd p  L=0.12U  W=1.65U  AS=0.43725P  AD=0.43725P  PS=3.83U   PD=3.83U
+Mtr_00013 sig17 i0    vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00014 vdd   i1    sig17 vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00015 sig17 i2    vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+Mtr_00016 sig3  i6    sig17 vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+C8  i0    vss   0.654f
+C7  i1    vss   0.639f
+C6  i2    vss   0.532f
+C11 i3    vss   0.654f
+C12 i4    vss   0.647f
+C13 i5    vss   0.639f
+C10 i6    vss   0.575f
+C1  q     vss   0.771f
+C17 sig17 vss   0.463f
+C3  sig3  vss   0.955f
+C9  sig9  vss   0.198f
+.ends

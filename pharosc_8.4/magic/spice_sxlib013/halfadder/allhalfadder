@@ -1,0 +1,11 @@
+#!/bin/bash
+# allhalfadder 2007-07-06:07h42 graham
+
+./allhalfadder_delay $1
+./allhalfadder_vbe
+./allhalfadder_lib
+./allhalfadder_html
+if test -x allhalfadder_xtra
+then
+  ./allhalfadder_xtra
+fi

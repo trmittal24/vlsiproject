@@ -1,0 +1,23 @@
+* Spice description of xaoi21v0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:36:51
+* wsclib 0.13um values
+.subckt xaoi21v0x1 a1 a2 b vdd vss z
+M01 vdd   a1    09    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M02 vss   a1    sig6  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M03 09    a2    vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M04 sig6  a2    09    vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M05 z     b     09    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M06 bn    b     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M07 bn    b     vss   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M08 08    09    z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M09 z     09    bn    vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M10 vdd   bn    08    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M11 09    bn    z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C5  09    vss   1.030f
+C8  a1    vss   0.352f
+C7  a2    vss   0.376f
+C4  b     vss   0.501f
+C1  bn    vss   0.678f
+C2  z     vss   0.518f
+.ends

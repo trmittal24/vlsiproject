@@ -1,0 +1,34 @@
+* Spice description of nmx3_x1
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:30:20
+* sxlib 0.13um values
+.subckt nmx3_x1 cmd0 cmd1 i0 i1 i2 nq vdd vss
+Mtr_00001 vss   cmd1  sig5  vss n  L=0.12U  W=0.43U  AS=0.11395P  AD=0.11395P  PS=1.39U   PD=1.39U
+Mtr_00002 sig2  i1    sig3  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00003 sig3  cmd1  nq    vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00004 nq    sig5  sig1  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00005 sig1  i2    sig2  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00006 vss   cmd0  sig2  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00007 sig12 sig11 vss   vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00008 nq    i0    sig12 vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00009 sig11 cmd0  vss   vss n  L=0.12U  W=0.43U  AS=0.11395P  AD=0.11395P  PS=1.39U   PD=1.39U
+Mtr_00010 sig17 sig5  nq    vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00011 vdd   sig11 sig16 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00012 sig18 cmd0  vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00013 nq    i0    sig18 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00014 sig16 i1    sig17 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00015 sig15 i2    sig16 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00016 nq    cmd1  sig15 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00017 sig5  cmd1  vdd   vdd p  L=0.12U  W=0.76U  AS=0.2014P   AD=0.2014P   PS=2.05U   PD=2.05U
+Mtr_00018 vdd   cmd0  sig11 vdd p  L=0.12U  W=0.76U  AS=0.2014P   AD=0.2014P   PS=2.05U   PD=2.05U
+C14 cmd0  vss   0.816f
+C8  cmd1  vss   0.898f
+C13 i0    vss   0.713f
+C9  i1    vss   0.393f
+C10 i2    vss   0.338f
+C4  nq    vss   1.387f
+C11 sig11 vss   0.821f
+C16 sig16 vss   0.344f
+C2  sig2  vss   0.344f
+C5  sig5  vss   0.821f
+.ends

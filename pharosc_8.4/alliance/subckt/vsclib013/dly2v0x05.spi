@@ -1,0 +1,18 @@
+* Spice description of dly2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:09:29
+* vsclib 0.13um values
+.subckt dly2v0x05 a vdd vss z
+M01 01    a     vdd   vdd p  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M02 02    a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 08    vss   01    vdd p  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M04 08    vdd   n4    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 n4    vdd   sig8  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M06 sig8  vdd   02    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 vdd   08    z     vdd p  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M08 vss   08    sig3  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M09 sig3  08    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C5  08    vss   1.024f
+C4  a     vss   0.604f
+C2  z     vss   0.655f
+.ends

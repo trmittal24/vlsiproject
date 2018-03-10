@@ -1,0 +1,6 @@
+ls -1 *.vbe | sed 's/\(.*\)\.vbe/\1 C/' > WSCLIB200
+ls -1 rowend*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> WSCLIB200
+ls -1 tie*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> WSCLIB200
+ls -1 vfeed*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> WSCLIB200
+
+sort -o WSCLIB200 WSCLIB200

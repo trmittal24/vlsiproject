@@ -1,0 +1,13 @@
+* Spice description of bf1_w2
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:57:39
+* vsxlib 0.13um values
+.subckt bf1_w2 a vdd vss z
+M1a 2z    a     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M1z vdd   2z    z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2a vss   a     2z    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M2z z     2z    vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+C4  2z    vss   0.815f
+C3  a     vss   0.436f
+C1  z     vss   0.664f
+.ends

@@ -1,0 +1,143 @@
+#!/bin/bash
+
+talu2_pitch=8
+talu2_width=4
+xoffset=4
+yoffset=4
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: wtc_create_talu2_blockages cell [blockage_cell]" 1>&2
+  echo "#" 1>&2
+  echo "#   will write the location of every grid which has a TALU2 blockage" 1>&2
+  echo "#   to file talu2_blockages, and write the newly created blockages to arg_2" 1>&2
+  echo "#   or cell_bg.ap if not given" 1>&2
+  echo "#   eg  wtc_create_talu2_blockages fred  will create file talu2_blockages" 1>&2
+  echo "#   from fred.ap and write new blockages to fred_bg.ap." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: wtc_create_talu2_blockages cell [blockage_cell]" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  block_cell=$1_bg.ap
+else
+  block_cell=$2.ap
+fi
+
+scale=$(grep '^H ' $cell.ap | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+let "scaled_talu2_pitch=talu2_pitch*scale"
+let "scaled_talu2_width=talu2_width*scale"
+let "scaled_xoffset=xoffset*scale"
+let "scaled_yoffset=yoffset*scale"
+
+talu2_segments=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,\*,[^,][^,]*,TALU2 *$' $cell.ap | \
+  sed 's/,/ /g' | \
+  sort -u -n +2 +1 | \
+  sed 's/ /,/g')
+
+# Write out an xy coord for each location that has a TALU2 blockage
+
+for talu2_segment in $talu2_segments
+do
+  let "xmin=($(echo $talu2_segment | cut -f2 -d,)-scaled_xoffset)/scale"
+  let "ymin=($(echo $talu2_segment | cut -f3 -d,)-scaled_yoffset)/scale"
+  let "xmax=($(echo $talu2_segment | cut -f4 -d,)-scaled_xoffset)/scale"
+  let "ymax=($(echo $talu2_segment | cut -f5 -d,)-scaled_yoffset)/scale"
+  let "width=(($(echo $talu2_segment | cut -f6 -d,)/scale+talu2_pitch-talu2_width)/talu2_pitch)"
+  if [ "$ymin" -eq "$ymax" ]
+  then
+    let "xlower=xmin/talu2_pitch"
+    let "xupper=xmax/talu2_pitch"
+    let "ylower=(ymin-(width-1)*talu2_pitch/2)/talu2_pitch"
+    let "yupper=(ymin+(width-1)*talu2_pitch/2)/talu2_pitch"
+    y=$ylower
+    while [ "$y" -le "$yupper" ]
+    do
+      x=$xlower
+      while [ "$x" -le "$xupper" ]
+      do
+        echo "$x $y" >> $$talu2_blockages
+        let "x=x+1"
+      done
+      let "y=y+1"
+    done
+  elif [ "$xmin" -eq "$xmax" ]
+  then
+    let "ylower=ymin/talu2_pitch"
+    let "yupper=ymax/talu2_pitch"
+    let "xlower=(xmin-(width-1)*talu2_pitch/2)/talu2_pitch"
+    let "xupper=(xmin+(width-1)*talu2_pitch/2)/talu2_pitch"
+    x=$xlower
+    while [ "$x" -le "$xupper" ]
+    do
+      y=$ylower
+      while [ "$y" -le "$yupper" ]
+      do
+        echo "$x $y" >> $$talu2_blockages
+        let "y=y+1"
+      done
+      let "x=x+1"
+    done
+  fi
+done
+
+sort -u $$talu2_blockages | sort -n +1 +0 > talu2_blockages
+rm $$talu2_blockages
+
+# Write out extra TALU2 blockages where there is only a single
+# track opening between two adjacent blockages
+
+talu2_coords=$(grep '^' talu2_blockages)
+index=1
+for talu2_coord in $talu2_coords
+do
+  if [ "$index" -eq 3 ]
+  then
+    x2=$talu2_coord
+    let "index=index+1"
+    continue
+  fi
+  if [ "$index" -eq 4 ]
+  then
+    y2=$talu2_coord
+    let "index=index+1"
+    if [ "$y2" -eq "$y1" ]
+    then
+      let "xdiff=x2-x1"
+      if [ "$xdiff" -eq 2 ]
+      then
+        let "x=(x1+1)*scaled_talu2_pitch+scaled_xoffset"
+        let "y=y1*scaled_talu2_pitch+scaled_yoffset"
+        echo "S $x,$y,$x,$y,$scaled_talu2_width,*,RIGHT,TALU2" >> $$talu2_segments
+      fi
+    fi
+    x1=$x2
+    y1=$y2
+    index=3
+    continue
+  fi
+  if [ "$index" -eq 1 ]
+  then
+    x1=$talu2_coord
+    let "index=index+1"
+    continue
+  fi
+  if [ "$index" -eq 2 ]
+  then
+    y1=$talu2_coord
+    let "index=index+1"
+  fi
+done
+
+sed -i "/^A / r $$talu2_segments" $block_cell
+rm $$talu2_segments

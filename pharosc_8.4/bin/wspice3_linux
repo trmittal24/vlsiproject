@@ -1,0 +1,4 @@
+#!/bin/bash
+echo $1
+nice -n 10 /opt/cxoffice/bin/wine --workdir $PWD c:\\winspice3\\wspice3.exe -b $PWD/$1
+date

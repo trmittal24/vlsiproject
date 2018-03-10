@@ -1,0 +1,95 @@
+#!/bin/bash
+
+# Script which converts a vsclib cell to a vtclib cell.
+# The cells are beautified:
+# - copy ALU1 to ALU2 to match vtxlib and wtclib
+comments_on=0
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+
+if test -f ../vsclib/$1.ap
+then
+  cell=$1
+else
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+date1=$(date '+%s')
+cp ../vsclib/${cell}.ap $$temp1
+
+#
+# Check that all CALU1 has a REF over it
+#
+calu1_coords=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,CALU1 *' $$temp1 | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vss,[^,][^,]*,CALU1 *' | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vdd,[^,][^,]*,CALU1 *' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\6/')
+
+for calu1_coord in $calu1_coords
+do
+  cx1=$(echo "$calu1_coord" | cut -f1 -d,)
+  cy1=$(echo "$calu1_coord" | cut -f2 -d,)
+  cx2=$(echo "$calu1_coord" | cut -f3 -d,)
+  cy2=$(echo "$calu1_coord" | cut -f4 -d,)
+  cname=$(echo "$calu1_coord" | cut -f5 -d,)
+  if [ "$cy1" -gt "$cy2" ]
+  then
+    let cylo=$cy2
+    let cyhi=$cy1
+  else
+    let cylo=$cy1
+    let cyhi=$cy2
+  fi
+  let cy=$cylo
+  while [ "$cy" -le "$cyhi" ]
+  do
+    ref_count=$(grep -c "^R  *$cx1,$cy,ref_ref,[^,][^,]* *$" $$temp1)
+    if [ "$ref_count" -eq 0 ]
+    then
+#     This point has a CALU1 but no REF
+      let "x=cx1/1000"
+      let "y=cy/1000"
+      echo "#  o CALU1 at ($x,$y) has no REF" >> $$ref_comment
+      echo "R $cx1,$cy,ref_ref,${cname}_$y" >> $$ref_segments
+    fi
+    let cy=$cy+8000
+  done
+done
+if test -e $$ref_segments
+then
+  sed -i "/^A / r $$ref_segments" $$temp1
+  rm $$ref_segments
+fi
+
+#
+#                                             Change ALU1 to ALU2 and ALU3 to ALU4
+#
+sed 's/ALU3$/ALU4/' $$temp1 | \
+  sed 's/ALU2$/ALU3/' | \
+  sed 's/ALU1$/ALU2/' | \
+  sed 's/POLY2$/ALU1/' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(8000\),\(vdd\),\([^,][^,]*\),CALU2 *$/S \1,\2,\3,\4,\5,\6,RIGHT,CALU1\nS \1,\2,\3,\4,\5,\6,RIGHT,CALU2/' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(8000\),\(vss\),\([^,][^,]*\),CALU2 *$/S \1,\2,\3,\4,\5,\6,RIGHT,CALU1\nS \1,\2,\3,\4,\5,\6,RIGHT,CALU2/' > $$temp
+
+cp $$temp ${cell}.ap
+
+rm $$temp $$temp1
+date2=$(date '+%s')
+let "elapsed_time=date2-date1"
+echo "# convert_cell $cell in ${elapsed_time}s"
+if test -e $$calu1_comment
+then
+  cat $$calu1_comment
+  rm $$calu1_comment
+fi
+if test -e $$ref_comment
+then
+  cat $$ref_comment
+  rm $$ref_comment
+fi

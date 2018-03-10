@@ -1,0 +1,48 @@
+* functionality check of dfnt1v0x2, 0.13um, Berkeley generic bsim3 params
+* dfnt1v0x2_func.cir 2007-08-29:12h11 graham
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/dfnt1v0x2.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x01 cp        d        vdd vss x01z dfnt1v0x2
+x02 cp        d        vdd vss x02z dfnt1v0x2
+*
+.param unitcap=1.0f
+cx01z  x01z  0 '2*unitcap'
+cx02z  x02z  0 '130*2*unitcap'
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+vstrobe strobe 0 dc 0 pulse (0 1 '0.97*tPER' '0.01*tPER' '0.01*tPER' '0.01*tPER' 'tPER')
+*
+* ba      00   10     11     01     00     01     11     10     00
+*          0    1      0      1      0      1      0      1      0
+*             thh_AZ thl_BZ tlh_AZ tll_BZ thh_BZ thl_AZ tlh_BZ tll_AZ
+*                 0      1      2      3      4      5      6      7      8
+Vd  d 0 dc 0 pwl(0 'vss' '1*tPER' 'vss' '1*tPER+tRISE' 'vdd' '3*tPER' 'vdd' '3*tPER+tFALL' 'vss'
++           '4*tPER' 'vss' '4*tPER+tRISE' 'vdd' '6*tPER' 'vdd' '6*tPER+tFALL' 'vss' )
+Vcp  cp 0 dc 0 pwl(0 'vdd' 'tFALL'  'vss' '2*tPER' 'vss'  '2*tPER+tRISE' 'vdd'
++           '5*tPER' 'vdd' '5*tPER+tFALL' 'vss' '7*tPER' 'vss' '7*tPER+tRISE' 'vdd' )
+Vxxx_labelled_pz  xxx_labelled_pz 0 dc 0 pwl(0 'vss' '2*tPER' 'vss' '2*tPER+tRISE'  'vdd' '7*tPER' 'vdd' '7*tPER+tFALL' 'vss' )
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep 40000p
+  linearize
+  let pcp = cp + ( $vdd + 0.3 )
+  let pd = d + 2 * ( $vdd + 0.3 )
+  let pz = xxx_labelled_pz -$vdd -0.3
+* check output is within 10mV of ideal at strobe point
+  let perr =  vecmax ( pos ( abs (( pz - x02z + $vdd + 0.3 ) * strobe ) - 0.01 ))
+  plot v(pcp) v(pd) v(pz) v(x01z) v(x02z)
+*  print col v(cp) v(d) v(x01z) v(x02z) > dfnt1v0x2_func.spo
+  if perr > 0
+    echo #Error: Functional simulation dfnt1v0x2_func.cir failed
+    echo #Error: Functional simulation dfnt1v0x2_func.cir failed >> dfnt1v0x2_func.error
+  else
+    echo Functional simulation OK
+  end
+  destroy all
+.endc
+.end

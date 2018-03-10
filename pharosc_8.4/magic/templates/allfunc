@@ -1,0 +1,11 @@
+#!/bin/bash
+xxx_timestamp
+
+./allxxx_function_delay $1
+./allxxx_function_vbe
+./allxxx_function_lib
+./allxxx_function_html
+if test -x allxxx_function_xtra
+then
+  ./allxxx_function_xtra
+fi

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -f *.vbe
+
+ls -1 ../vxlib013/*.vbe | sed 's|^../vxlib013/\(.*\).vbe$|./convert_vx_vsx \1|' | bash
+
+cp ../vxlib013/VXLIB013 .

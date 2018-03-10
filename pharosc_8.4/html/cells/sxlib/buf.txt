@@ -1,0 +1,1 @@
+Non-inverting buffers with a stage effort of about 3.3 for the buf_x2 and 3.9 for the buf_x4 and buf_x8.

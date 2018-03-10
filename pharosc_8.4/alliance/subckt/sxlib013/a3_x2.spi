@@ -1,0 +1,19 @@
+* Spice description of a3_x2
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:28:32
+* sxlib 0.13um values
+.subckt a3_x2 i0 i1 i2 q vdd vss
+Mtr_00001 vss   sig5  q     vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00002 sig2  i2    vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00003 sig4  i1    sig2  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00004 sig5  i0    sig4  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00005 vdd   i2    sig5  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00006 q     sig5  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00007 vdd   i0    sig5  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00008 sig5  i1    vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C8  i0    vss   0.645f
+C9  i1    vss   0.668f
+C7  i2    vss   0.690f
+C1  q     vss   1.077f
+C5  sig5  vss   1.066f
+.ends

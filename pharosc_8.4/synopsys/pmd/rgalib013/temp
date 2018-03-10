@@ -1,0 +1,7 @@
+pmd=$1.pmd
+grep logic_function $pmd | \
+  cut -f 3 -d' ' | \
+  sed "s|^\([^ ][^ ]*\)'|(not \1)|" | \
+  sed "s|^\([(*+^][(*+^]*\)'|(not \1)|" | \
+  sed 's|^.*$|let pz = $vdd * & - $vdd - 0.3|'
+

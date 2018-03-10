@@ -1,0 +1,1 @@
+The P/N ratio has been kept as close to 2 as possible for balanced output skew, even if this is not the fastest configuration, except for the nr4v1x05 which is fast but with unbalanced output skews.

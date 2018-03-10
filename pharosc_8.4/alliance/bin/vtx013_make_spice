@@ -1,0 +1,37 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: vtx013_make_spice cell" 1>&2
+  echo "#" 1>&2
+  echo "#   No file given. Please check." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: vtx013_make_spice cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+MBK_OUT_LO=spi
+cougar -ac $cell >/dev/null
+grep -v '^$' $cell.spi | \
+  sed 's/\.ends.*$/.ends/' | \
+  sed 's/Date .*:\ /Date /' | \
+  sed 's/ INTERF .*$/ vtxlib 0.13um values/' | \
+  grep -iv '^C.* vss vss' | \
+awk '$1 ~ /^C/ {printf "%-4s%-6s%-4s%7.3f%-1s\n", $1, $2, $3, $4*=1000000000000000, "f"}
+$1 ~ /^M/ {printf "%-3s %-5s %-5s %-5s %-3s %-2s %-8s %-8s %-12s %-12s %-10s %-10s\n",$1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12}
+$1 !~ /^[CM]/ {print}' > $$temp
+
+sed -n '1,/^\.subckt/ p' $$temp > $$temp1
+grep '^M' $$temp | sort >> $$temp1
+grep '^C' $$temp | grep -v 'vdd *vss' | sort -b -f +1 -2 >> $$temp1
+sed -n '/\.ends/, $ p' $$temp >> $$temp1
+sed 's/ *$//' $$temp1 > $cell.spi
+rm -f $$temp $$temp1

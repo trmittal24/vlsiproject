@@ -1,0 +1,20 @@
+* Spice description of aoi211v5x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:00:07
+* vsclib 0.13um values
+.subckt aoi211v5x05 a1 a2 b c vdd vss z
+M01 vdd   a1    n1    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M02 n3    a1    vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M03 n1    a2    vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M04 z     a2    n3    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M05 n1    b     07    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M06 vss   b     z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 07    c     z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M08 z     c     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C7  a1    vss   0.465f
+C6  a2    vss   0.418f
+C4  b     vss   0.475f
+C3  c     vss   0.395f
+C9  n1    vss   0.171f
+C2  z     vss   0.955f
+.ends

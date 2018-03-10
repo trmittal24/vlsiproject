@@ -1,0 +1,12 @@
+* Spice description of iv1v4x4
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:12:35
+* vsclib 0.13um values
+.subckt iv1v4x4 a vdd vss z
+M01 vdd   a     z     vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M02 z     a     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M03 vdd   a     z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M04 vss   a     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C3  a     vss   0.502f
+C2  z     vss   0.932f
+.ends

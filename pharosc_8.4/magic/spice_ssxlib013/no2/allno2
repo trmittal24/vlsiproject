@@ -1,0 +1,11 @@
+#!/bin/bash
+# allno2 2007-07-06:07h34 graham
+
+./allno2_delay $1
+./allno2_vbe
+./allno2_lib
+./allno2_html
+if test -x allno2_xtra
+then
+  ./allno2_xtra
+fi

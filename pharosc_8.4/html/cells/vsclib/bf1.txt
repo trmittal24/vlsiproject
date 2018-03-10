@@ -1,0 +1,23 @@
+The buffers allow a large load to be driven with a small input capacitance.
+The selection includes a variety of stage efforts and P/N transistor
+ratios.<BR>
+The buffers have an output P/N ratio of 2 except for the v1 version which
+uses a P/N ratio of 1.5.
+A P/N ratio of 2 offers good output skew,
+while 1.5 is close to the fastest speed.<BR>
+The stage effort of the v0, v1 and v2 cells is designed to optimise
+speed with typical wireload values.
+The v4 version provides a minimum input capacitance.
+The inverters of the v5 version are the same size, so the delay is
+minimised at the expense of a higher input capacitance.<BR>
+The v0 and v2 versions are similar, but use different P/N ratios on
+the first stage.
+The v2 cells use a first stage P/N ratio of 2. The v0 version tries to
+optimise the average delay by adjusting the first stage P/N ratio.
+The FO4 measure shows the delays relative to an <B>iv1v2x2</B>.<BR>
+The v6 and v8 versions are experimental
+versions looking at the effect of layout and transistor size variations.<BR>
+The v0 and v2 stage efforts are 1.3 for the <B>x05</B>; 1.5 for the <B>x1</B>;
+1.8 <B>x2</B>; 2.1 <B>x3</B>, 2.3 <B>x4</B>, 2.6 <B>x6</B>, 2.8 <B>x8</B>
+and 3.1 for the <B>x12</B>.
+The stage effort for the v5 buffers is 1.2.

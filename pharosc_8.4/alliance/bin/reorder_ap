@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Copies $1.ap to $1.ap_bak and then reorders the geometries
+# in $1.ap so that COUGAR will use the net names in its
+# output spice deck
+
+if test ! -f $1.ap
+then
+  echo "# File to reorder "$1".ap doesn't exist. Please check"
+  echo "# Nothing done"
+  exit 1
+fi
+cell=$1
+cp -p ${cell}.ap ${cell}.ap_bak
+
+# reverse sort on 1st y co-ord of AP file then name field
+
+grep '^S ' ${cell}.ap | sort -b -t, -f +1nr -2 +5 -6  > $$_temp
+grep '^V ALLIANCE' ${cell}.ap > $$_temp1
+grep '^H ' ${cell}.ap >> $$_temp1
+grep '^A ' ${cell}.ap >> $$_temp1
+grep '^R ' ${cell}.ap >> $$_temp1
+cat $$_temp >> $$_temp1
+grep '^V [^a-zA-Z]' ${cell}.ap >> $$_temp1
+grep '^EOF' ${cell}.ap >> $$_temp1
+mv -f $$_temp1 ${cell}.ap
+rm -f $$_temp
+
+# check contents are the same, just ordered differently
+
+sort ${cell}.ap > $$_temp1
+sort ${cell}.ap_bak > $$_temp2
+diff $$_temp1 $$_temp2 > $$_temp3
+
+if test -s $$_temp3
+then
+  echo "# WARNING! New "$cell".ap has different content to old cell"
+fi
+rm -f $$_temp1 $$_temp2 $$_temp3

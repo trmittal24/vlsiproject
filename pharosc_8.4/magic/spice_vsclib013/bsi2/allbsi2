@@ -1,0 +1,11 @@
+#!/bin/bash
+# allbsi2 2007-08-29:12h09 graham
+
+./allbsi2_delay $1
+./allbsi2_vbe
+./allbsi2_lib
+./allbsi2_html
+if test -x allbsi2_xtra
+then
+  ./allbsi2_xtra
+fi

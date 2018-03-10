@@ -1,0 +1,11 @@
+The directories with names ending in 100 and 200 contain
+.bash scripts which are run to produce the initial VBE
+files. These are the files in ../vbe/---100 or 200.
+The sxlib timing comes from Alliance. The other libraries
+don't have meaningful timing.
+
+The directories with names ending in 013 have .bash
+scripts produced by the characterisation (in directory
+magic/spice_vsclib013/an2 for the vsclib 1-AND gates
+for example). The characterisation script executes the
+.bash files and writes the VBE files to the vbe directory.

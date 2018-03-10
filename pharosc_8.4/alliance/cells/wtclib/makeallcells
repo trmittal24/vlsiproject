@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Script to remake all wtclib cells from the wsclib contents
+
+ls -1 ../wsclib/*.ap | \
+  grep -v test | \
+  grep -v ram | \
+  sed 's|^../wsclib/\(.*\)\.ap|./convert_wsc_wtc \1|' | bash

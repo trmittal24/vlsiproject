@@ -1,0 +1,11 @@
+#!/bin/bash
+# allxnr3 2007-08-29:12h24 graham
+
+./allxnr3_delay $1
+./allxnr3_vbe
+./allxnr3_lib
+./allxnr3_html
+if test -x allxnr3_xtra
+then
+  ./allxnr3_xtra
+fi

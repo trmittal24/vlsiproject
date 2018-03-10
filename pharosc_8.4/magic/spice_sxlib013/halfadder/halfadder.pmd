@@ -1,0 +1,10 @@
+inputpin_list a b
+outputpin_list cout sout
+a cout positive_unate when 1
+b cout positive_unate when 1
+cout logic_function (a*b)
+a sout negative_unate when 1
+a sout positive_unate when 0
+b sout negative_unate when 1
+b sout positive_unate when 0
+sout logic_function (a^b)

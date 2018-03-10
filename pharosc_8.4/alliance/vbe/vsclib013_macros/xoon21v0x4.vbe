@@ -1,0 +1,44 @@
+ENTITY xoon21v0x4 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 13824;  
+  CONSTANT cin_b         : NATURAL := 19;     
+  CONSTANT cin_a1        : NATURAL := 11;     
+  CONSTANT cin_a2        : NATURAL := 12;     
+  CONSTANT rdown_b_z     : NATURAL := 820;    
+  CONSTANT rdown_a1_z    : NATURAL := 820;    
+  CONSTANT rdown_a2_z    : NATURAL := 820;    
+  CONSTANT rup_b_z       : NATURAL := 1060;   
+  CONSTANT rup_a1_z      : NATURAL := 1060;   
+  CONSTANT rup_a2_z      : NATURAL := 1060;   
+  CONSTANT tphh_a1_z     : NATURAL := 128;    
+  CONSTANT tphh_a2_z     : NATURAL := 120;    
+  CONSTANT tphh_b_z      : NATURAL := 117;     
+  CONSTANT tpll_a1_z     : NATURAL := 146;    
+  CONSTANT tpll_a2_z     : NATURAL := 138;     
+  CONSTANT tpll_b_z      : NATURAL := 84;     
+  CONSTANT tplh_a1_z     : NATURAL := 170;     
+  CONSTANT tplh_a2_z     : NATURAL := 161;     
+  CONSTANT tplh_b_z      : NATURAL := 112;     
+  CONSTANT tphl_a1_z     : NATURAL := 158;     
+  CONSTANT tphl_a2_z     : NATURAL := 149;     
+  CONSTANT tphl_b_z      : NATURAL := 144;     
+  CONSTANT transistors   : NATURAL := 29
+);
+PORT (
+  b	 : in  BIT;
+  a1	 : in  BIT;
+  a2	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END xoon21v0x4;
+
+ARCHITECTURE behaviour_data_flow OF xoon21v0x4 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on xoon21v0x4"
+  SEVERITY WARNING;
+  z <= (b xor (a1 or a2)) after 1000 ps;
+END;

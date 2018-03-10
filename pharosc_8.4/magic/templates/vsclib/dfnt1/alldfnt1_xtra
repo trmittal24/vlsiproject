@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Script to create extra wsclib files
+
+dir=$PWD
+function=$(basename $PWD)
+
+if test ! -f "$function".pmd
+then
+  echo "# There is no function pmd file "$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+cp -p *.lib ../../spice_wsclib013/$function
+
+# list the pmd files and run the script on the ones actually there
+set $(ls -1 -x *.pmd ) 1>/dev/null
+shift                             # remove first pmd file $function.pmd
+pmd_names="$*"
+
+cd ../../../alliance/vbe/wsclib013
+for pmd in $pmd_names
+do
+  cell=${pmd%.pmd}
+  ./convert_vsc_wsc $cell
+done
+
+cd ../../../html/cells/wsclib013
+./convert_cell $function
+
+cd $dir

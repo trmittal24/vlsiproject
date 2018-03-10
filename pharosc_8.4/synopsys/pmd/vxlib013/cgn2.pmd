@@ -1,0 +1,9 @@
+inputpin_list a b c
+outputpin_list z
+a z positive_unate when 01 10
+a z non_unate when 10
+b z positive_unate when 01 10
+b z non_unate when 10
+c z positive_unate when 01 10
+c z non_unate when 10
+z logic_function ((a*b)+(a*c)+(b*c))

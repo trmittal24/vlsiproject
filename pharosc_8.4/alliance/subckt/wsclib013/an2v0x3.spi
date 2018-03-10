@@ -1,0 +1,17 @@
+* Spice description of an2v0x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  8:56:20
+* wsclib 0.13um values
+.subckt an2v0x3 a b vdd vss z
+M01 07    a     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M02 sig4  a     vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M03 vdd   b     07    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M04 07    b     sig4  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M05 vdd   07    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M06 z     07    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M07 vss   07    z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C3  07    vss   0.873f
+C5  a     vss   0.396f
+C6  b     vss   0.367f
+C1  z     vss   0.793f
+.ends

@@ -1,0 +1,19 @@
+* Spice description of or3v4x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:34:18
+* vsclib 0.13um values
+.subckt or3v4x05 a b c vdd vss z
+M01 sig7  a     vdd   vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M02 zn    a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 n2    b     sig7  vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M04 vss   b     zn    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 zn    c     n2    vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M06 zn    c     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 vdd   zn    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 vss   zn    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  a     vss   0.390f
+C6  b     vss   0.415f
+C5  c     vss   0.308f
+C3  z     vss   0.711f
+C2  zn    vss   0.869f
+.ends

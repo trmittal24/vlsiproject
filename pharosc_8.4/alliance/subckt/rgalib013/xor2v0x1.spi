@@ -1,0 +1,23 @@
+* Spice description of xor2v0x1
+* Spice driver version 134999461
+* Date  6/02/2007 at 12:04:08
+* rgalib 0.13um values
+.subckt xor2v0x1 a b vdd vss z
+Mtr_00001 vss   vdd   sig3  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00002 sig1  b     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00003 sig6  sig1  z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00004 vss   sig8  sig6  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00005 sig8  b     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00006 vss   a     sig8  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00007 vdd   vdd   sig10 vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00008 sig1  b     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00009 z     sig1  sig8  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00010 sig1  sig8  z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00011 vdd   b     sig1  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00012 sig8  a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+C9  a     vss   0.408f
+C5  b     vss   0.936f
+C1  sig1  vss   1.049f
+C8  sig8  vss   1.021f
+C7  z     vss   0.875f
+.ends

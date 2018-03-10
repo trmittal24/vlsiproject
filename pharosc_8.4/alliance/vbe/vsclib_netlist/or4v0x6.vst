@@ -1,0 +1,58 @@
+entity or4v0x6 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      c   : in      bit;
+      d   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end or4v0x6;
+
+architecture structural of or4v0x6 is
+Component nr4v0x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      c   : in      bit;
+      d   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1v0x6
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal zn : bit;
+
+begin
+
+zn : nr4v0x2
+   port map (
+      a   => a,
+      b   => b,
+      c   => c,
+      d   => d,
+      z   => zn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : iv1v0x6
+   port map (
+      a   => zn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

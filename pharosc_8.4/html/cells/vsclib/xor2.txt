@@ -1,0 +1,106 @@
+<TABLE ALIGN=RIGHT>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD>&nbsp;&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">a</SPAN>&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">b</SPAN>&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">a</SPAN>&nbsp;</TD>
+<TD ALIGN=CENTER>pin <SPAN CLASS="boldred">b</SPAN></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD>&nbsp;&nbsp;</TD>
+<TD COLSPAN=2 ALIGN=CENTER>inverting</TD>
+<TD COLSPAN=2 ALIGN=CENTER>non-inverting&nbsp;</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v0x1&nbsp;</TT></TD>
+<TD><TT>&nbsp;84</TT></TD>
+<TD><TT>&nbsp;78</TT></TD>
+<TD><TT>&nbsp;97</TT></TD>
+<TD><TT>102</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v1x1</TT></TD>
+<TD><TT>&nbsp;88</TT></TD>
+<TD><TT>&nbsp;71</TT></TD>
+<TD><TT>106</TT></TD>
+<TD><TT>&nbsp;87</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v2x1</TT></TD>
+<TD><TT>&nbsp;78</TT></TD>
+<TD><TT>&nbsp;70</TT></TD>
+<TD><TT>107</TT></TD>
+<TD><TT>100</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v3x1</TT></TD>
+<TD><TT>&nbsp;86</TT></TD>
+<TD><TT>&nbsp;84</TT></TD>
+<TD><TT>126</TT></TD>
+<TD><TT>122</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v4x1</TT></TD>
+<TD><TT>&nbsp;79</TT></TD>
+<TD><TT>&nbsp;71</TT></TD>
+<TD><TT>152</TT></TD>
+<TD><TT>121</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v5x1</TT></TD>
+<TD><TT>&nbsp;81</TT></TD>
+<TD><TT>&nbsp;78</TT></TD>
+<TD><TT>126</TT></TD>
+<TD><TT>123</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v6x1</TT></TD>
+<TD><TT>&nbsp;92</TT></TD>
+<TD><TT>&nbsp;81</TT></TD>
+<TD><TT>120</TT></TD>
+<TD><TT>126</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v7x1</TT></TD>
+<TD><TT>166</TT></TD>
+<TD><TT>171</TT></TD>
+<TD><TT>124</TT></TD>
+<TD><TT>111</TT></TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>xor2v8x1</TT></TD>
+<TD><TT>155</TT></TD>
+<TD><TT>122</TT></TD>
+<TD><TT>127</TT></TD>
+<TD><TT>102</TT></TD></TR>
+</TABLE>
+<P>There are a number of ways to implement an XOR gate,
+and 9 of them are shown here.<BR>
+- <B>xor2v0</B> has the smallest number of transistors.<BR>
+- <B>xor2v1</B> is the classic two inverters with transfer gate onto the
+output node.<BR>
+- <B>xor2v2</B> is an alternative inverter plus transfer gate configuration.<BR>
+- <B>xor2v3</B> is an <B>aoi22</B> with input inverters.<BR>
+- <B>xor2v4</B> is an <B>oai22</B> with input inverters.<BR>
+- <B>xor2v5</B> is the <B>aoi22</B> or <B>oai22</B> with the connexion
+for the parallel P&nbsp;or N&nbsp; transistors removed.<BR>
+- <B>xor2v6</B> is like the <B>xor2v5</B> but with a connexion
+for both the parallel P&nbsp;or N&nbsp; transistors.<BR>
+- <B>xor2v7</B> is a 2-NAND and OR-NAND combination with output buffering
+inverter. The schematic came from a public web site; the layout uses
+vsclib rules.<BR>
+- <B>xor2v8</B> is a <B>xnr2v1</B> with an inverter output.
+This is a common style in commercial standard cell libraries.<BR>
+XOR2 gates are one of the most common gate types: in most designs they
+are amongst the top-10 used cells. Their speed has a direct impact on
+overall circuit performance, as they are widely used in arithmetic
+functions. The 9 variants here have been characterised in the generic
+0.13um technology, and a summary of their performance is shown in
+the table below.
+The fastest inverting gate is the <B>xor2v2</B> on pin <SPAN CLASS="boldred">b</SPAN>.
+The fastest non-inverting gate is the <B>xor2v1</B> on pin <SPAN CLASS="boldred">b</SPAN>,
+but this is slow for  pin <SPAN CLASS="boldred">a</SPAN>.
+The <B>xor2v0</B> is slower but smaller.<BR>
+The <B>xor2v3</B>/<B>v4</B>/<B>v5</B>/<B>v6</B> gates have very similar
+performances. The ones with larger diffusion parasitic capacitances
+have simpler layouts and lower metal parasitics. All these gates aren't
+really needed but are included to show their performance.
+The <B>xor2v3x1</B> is similar to the sxlib <B>xr2_x1</B>.<BR>
+The <B>xor2v7</B> is fairly nasty. It's big and slow, and the transistors
+are wrongly sized. The non-inverting path is quicker because the
+inverting path uses 3 stage delays, rather than the single stage delay
+of the other gates.
+The <B>xor2v8</B> is also a 2/3 stage delay gate which is slower than the others.<BR>
+The average delay of each <B>x1</B> gate and pin when driving just itself in
+a ring oscillator, inverting and non-inverting modes,
+is shown on the right.

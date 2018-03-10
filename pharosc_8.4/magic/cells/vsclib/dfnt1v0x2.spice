@@ -1,0 +1,81 @@
+D-type flip-flop standard cell
+
+.include /home/tarun/ngspice/t14y_tsmc_025_level3.txt
+
+M1000 vdd zn z vdd cmosp w=28u l=2u
++  ad=502p pd=218u as=168p ps=70u
+M1001 zn n4 vdd vdd cmosp w=14u l=2u
++  ad=82p pd=42u as=0p ps=0u
+M1002 a_40_48# zn vdd vdd cmosp w=6u l=2u
++  ad=30p pd=22u as=0p ps=0u
+M1003 n4 ci a_40_48# vdd cmosp w=6u l=2u
++  ad=78p pd=40u as=0p ps=0u
+M1004 n2 cn n4 vdd cmosp w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1005 vdd n1 n2 vdd cmosp w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 a_77_54# n2 vdd vdd cmosp w=6u l=2u
++  ad=30p pd=22u as=0p ps=0u
+M1007 n1 cn a_77_54# vdd cmosp w=6u l=2u
++  ad=83p pd=42u as=0p ps=0u
+M1008 vss zn z vss cmosn w=14u l=2u
++  ad=317p pd=170u as=82p ps=42u
+M1009 vss n4 zn vss cmosn w=7u l=2u
++  ad=0p pd=0u as=47p ps=28u
+M1010 a_94_47# ci n1 vdd cmosp w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1011 vdd d a_94_47# vdd cmosp w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1012 ci cn vdd vdd cmosp w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1013 cn cp vdd vdd cmosp w=10u l=2u
++  ad=62p pd=34u as=0p ps=0u
+M1014 vss cn ci vss cmosn w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1015 a_40_13# zn vss vss cmosn w=6u l=2u
++  ad=30p pd=22u as=0p ps=0u
+M1016 n4 cn a_40_13# vss cmosn w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1017 n2 ci n4 vss cmosn w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1018 vss n1 n2 vss cmosn w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1019 a_77_13# n2 vss vss cmosn w=6u l=2u
++  ad=30p pd=22u as=0p ps=0u
+M1020 n1 ci a_77_13# vss cmosn w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1021 a_94_13# cn n1 vss cmosn w=6u l=2u
++  ad=30p pd=22u as=0p ps=0u
+M1022 vss d a_94_13# vss cmosn w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1023 cn cp vss vss cmosn w=7u l=2u
++  ad=49p pd=28u as=0p ps=0u
+C0 vdd cp 11.58fF
+C1 n1 vdd 8.44fF
+C2 ci vdd 16.59fF
+C3 d vss 6.30fF
+C4 vdd zn 10.24fF
+C5 n2 vss 7.21fF
+C6 cn vdd 46.52fF
+C7 vss cp 3.10fF
+C8 n4 vdd 8.90fF
+C9 n1 vss 9.91fF
+C10 z vdd 2.73fF
+C11 ci vss 27.54fF
+C12 zn vss 20.06fF
+C13 cn vss 17.08fF
+C14 d vdd 7.95fF
+C15 n4 vss 7.28fF
+C16 n2 vdd 12.38fF
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_cp cp 0 PULSE(0 5 0 0 0 31.1n 62.2n)
+v_gg_d d 0 PULSE(0 5 0 0 0 58.8n 117.6n)
+
+.control
+ tran 0.01n 500n
+ plot (d + 10) (cp + 5) (z)
+.endc
+
+.end

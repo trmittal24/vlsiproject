@@ -1,0 +1,1 @@
+2-2 I/P OR-AND gate with a stage effort of about 3.5 for the ao2o22_x2, and about 7 for the ao2o22_x4.

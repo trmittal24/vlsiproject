@@ -1,0 +1,22 @@
+* Spice description of or3v0x2
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:33:50
+* wsclib 0.13um values
+.subckt or3v0x2 a b c vdd vss z
+M01 sig7  a     vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M02 vdd   a     05    vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M03 sig1  a     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M04 07    b     sig7  vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M05 05    b     08    vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M06 vss   b     sig1  vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M07 sig1  c     07    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M08 08    c     sig1  vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M09 sig1  c     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M10 vdd   sig1  z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M11 vss   sig1  z     vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+C4  a     vss   0.824f
+C5  b     vss   0.555f
+C6  c     vss   0.445f
+C1  sig1  vss   0.865f
+C3  z     vss   0.696f
+.ends

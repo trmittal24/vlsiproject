@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Script to convert vsclib013 html page to wsclib013 html page
+
+sed 's|vsclib|wsclib|g' ../vsclib013/$1.html > $1.html

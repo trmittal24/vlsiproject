@@ -1,0 +1,67 @@
+entity cg2_x1 is
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      i2  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end cg2_x1;
+
+architecture structural of cg2_x1 is
+Component na2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      nq  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component nao22_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      i2  : in      bit;
+      nq  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal a : bit;
+signal b : bit;
+
+begin
+
+a : na2_x1
+   port map (
+      i0  => i0,
+      i1  => i1,
+      nq  => a,
+      vdd => vdd,
+      vss => vss
+   );
+
+b : nao22_x1
+   port map (
+      i0  => i0,
+      i1  => i1,
+      i2  => i2,
+      nq  => b,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : na2_x1
+   port map (
+      i0  => a,
+      i1  => b,
+      nq  => q,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

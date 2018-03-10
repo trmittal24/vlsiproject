@@ -1,0 +1,13 @@
+<IMG SRC="../../../gif/nd2_fo4effort.gif" NAME="nd2 effort graph"
+ALT="nd2 effort graph" TITLE="nd2 effort graph" ALIGN=RIGHT BORDER=0>
+Single stage 2-I/P NAND gates. 7 drive strengths with four choices of
+P:N transistor ratio. The <B>v0</B> version has a P:N ratio of about 2;
+in the <B>v3</B> version it is 1, in the <B>v4</B> version it is 4
+and in the <B>v5</B> version it is 2.6, the actual value of &micro;,
+the conductivity ratio between the N&nbsp;and P&nbsp;transistors.<BR>
+<B>nd2v6x3</B> is an alternate and slower layout version of the
+<B>nd2v0x3</B>. It is slower because the the input transistors
+are distributed across the cell, which means they must be connected
+by relatively long wires which gives the pins a higher capacitance.<BR>
+The graph on the right shows the FO4 effort values of the different
+NAND gates.

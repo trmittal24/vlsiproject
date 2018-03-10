@@ -1,0 +1,241 @@
+#!/bin/bash
+
+# Script which creates an AP cell with blockages
+# and then instantiates it in the main cell.
+# The vertical blockages depend on the preferred
+# direction of ALU2 which is given by argument_2.
+
+if ! test -d $MBK_TARGET_LIB
+then
+  echo "#?! No MBK_TARGET_LIB found. Please check." 1>&2
+  exit 1
+else
+  library=$(basename $MBK_TARGET_LIB)
+  case $library in
+  rgalib013)
+    metal_width=4; metal_pitch=8; xoffset=0; yoffset=4; type=s
+    ;;
+  ssxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=s
+    ;;
+  stxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=t
+    ;;
+  sxlib013)
+    metal_width=2; metal_pitch=5; xoffset=0; yoffset=0; type=s
+    ;;
+  sxlib100)
+    metal_width=2; metal_pitch=5; xoffset=0; yoffset=0; type=s
+    ;;
+  vgalib013)
+    metal_width=4; metal_pitch=8; xoffset=0; yoffset=0; type=s
+    ;;
+  vsclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=0; type=s
+    ;;
+  vtclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=0; type=t
+    ;;
+  vsxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=s
+    ;;
+  vtxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=t
+    ;;
+  vxlib013)
+    metal_width=2; metal_pitch=5; xoffset=0; yoffset=0; type=s
+    ;;
+  wsclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=4; type=s
+    ;;
+  wtclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=4; type=t
+    ;;
+  *)
+    echo "#?! Library "$library" not supported yet. Please check." 1>&2
+    exit 1
+    ;;
+  esac
+fi
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: pnr_block_inst cell H|V" [out_cell] 1>&2
+  echo "#" 1>&2
+  echo "#   will create cell out_cell, or cell_bg.ap if not given," 1>&2
+  echo "#   fill it with blockages and instantiate it at the southwest" 1>&2
+  echo "#   corner of cell.ap." 1>&2
+  echo "#   eg  pnr_block_inst fred H  creates fred_bg.ap with" 1>&2
+  echo "#   TALU3 and TALU5 blockages EAST and WEST, all layer" 1>&2
+  echo "#   blockages north and south, and instantiates it at the" 1>&2
+  echo "#   xmin,ymin position of the AB in fred.ap." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: pnr_block_inst cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: pnr_block_inst cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   Argument H or V must be given. Please check." 1>&2
+  exit 1
+else
+  if [ "$2" = H ]
+  then
+    orient=H
+    echo "# Horizontal ALU2, vertical blockages in TALU3 and TALU5"
+  else
+    if [ "$2" = V ]
+    then
+      orient=V
+      echo "# Vertical ALU2, vertical blockages in TALU2, TALU4 and TALU6"
+    else
+      echo "# Usage: pnr_block_inst cell H|V" 1>&2
+      echo "#"
+      echo "#   Second argument must be H or V. Please check."
+      exit 1
+    fi
+  fi
+fi
+
+if [ "$#" -eq 2 ]
+then
+  cell_bg=${cell}_bg
+else
+  cell_bg=$3
+fi
+
+date=$(date '+%d/%m/%Y')
+
+scale=$MBK_SCALE_X
+ab_extent=$(grep '^A ' ${cell}.ap)
+
+if [ "$orient" = H ]
+then
+  layers='TALU3 TALU5'
+else
+  layers='TALU2 TALU4 TALU6'
+fi
+
+xmin=$(grep '^A ' ${cell}.ap | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1/')
+ymin=$(grep '^A ' ${cell}.ap | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\2/')
+xmax=$(grep '^A ' ${cell}.ap | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\3/')
+ymax=$(grep '^A ' ${cell}.ap | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let "scaled_metal=metal_width*scale"
+let "scaled_metal6=2*metal_width*scale"
+let "xwest=xmin+xoffset*scale"
+let "xeast=xmax-xoffset*scale"
+let "ysouth=ymin+yoffset*scale"
+let "ynorth=ymax-yoffset*scale"
+
+echo "V ALLIANCE : 6" > $$temp
+echo "H $cell_bg,P,$date,$scale" >> $$temp
+echo "$ab_extent" >> $$temp
+
+if [ "$type" = s ]
+then
+  if [ "$xoffset" = 0 ]
+  then
+    layers='TALU2 TALU3 TALU4 TALU5 TALU6'
+  else
+    if [ "$orient" = H ]
+    then
+      layers='TALU3 TALU5'
+    else
+      layers='TALU2 TALU4 TALU6'
+    fi
+  fi
+elif [ "$type" = t ]
+then
+  if [ "$xoffset" = 0 ]
+  then
+    layers='TALU2 TALU3 TALU4 TALU5 TALU6 TALU7'
+  else
+    if [ "$orient" = V ]
+    then
+      layers='TALU3 TALU5 TALU7'
+    else
+      layers='TALU2 TALU4 TALU6'
+    fi
+  fi
+else
+  echo "#? Something wrong. ALU3 ne metal-2 (t) or metal-3 (s). Please check." 1>&2
+  exit 1
+fi
+
+for blockage in $layers
+do
+  if [ "$type" = s -a "$blockage" = TALU6 -o "$type" = t -a "$blockage" = TALU7 ]
+  then
+    metal_width=$scaled_metal6
+  else
+    metal_width=$scaled_metal
+  fi
+  echo "S $xwest,$ysouth,$xwest,$ynorth,$metal_width,zzzblock,UP,$blockage" >> $$temp
+  echo "S $xeast,$ysouth,$xeast,$ynorth,$metal_width,zzzblock,UP,$blockage" >> $$temp
+done
+
+if [ "$type" = s ]
+then
+  if [ "$yoffset" = 0 ]
+  then
+    layers='TALU2 TALU3 TALU4 TALU5 TALU6'
+  else
+    if [ "$orient" = H ]
+    then
+      layers='TALU2 TALU4 TALU6'
+    else
+      layers='TALU3 TALU5'
+    fi
+  fi
+elif [ "$type" = t ]
+then
+  if [ "$yoffset" = 0 ]
+  then
+    layers='TALU2 TALU3 TALU4 TALU5 TALU6 TALU7'
+  else
+    if [ "$orient" = V ]
+    then
+      layers='TALU2 TALU4 TALU6'
+    else
+      layers='TALU3 TALU5 TALU7'
+    fi
+  fi
+else
+  echo "#? Something wrong. ALU3 ne metal-2 (t) or metal-3 (s). Please check." 1>&2
+  exit 1
+fi
+
+for blockage in $layers
+do
+  if [ "$type" = s -a "$blockage" = TALU6 -o "$type" = t -a "$blockage" = TALU7 ]
+  then
+    metal_width=$scaled_metal6
+  else
+    metal_width=$scaled_metal
+  fi
+  echo "S $xwest,$ysouth,$xeast,$ysouth,$metal_width,zzzblock,RIGHT,$blockage" >> $$temp
+  echo "S $xwest,$ynorth,$xeast,$ynorth,$metal_width,zzzblock,RIGHT,$blockage" >> $$temp
+done
+echo "EOF" >> $$temp
+
+mv -f $$temp ${cell_bg}.ap
+
+sed -i '/^I .*zzzblock/ d' ${cell}.ap
+sed -i "s/^EOF/I $xmin,$ymin,${cell_bg},zzzblock,NOSYM\nEOF/" ${cell}.ap
+
+if [ "$(grep -c "${cell_bg}" $MBK_CATAL_NAME)" -lt 2 ]
+then
+  echo "${cell_bg} C" >> $MBK_CATAL_NAME
+  echo "${cell_bg} F" >> $MBK_CATAL_NAME
+fi

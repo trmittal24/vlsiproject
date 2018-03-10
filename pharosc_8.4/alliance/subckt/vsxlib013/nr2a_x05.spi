@@ -1,0 +1,16 @@
+* Spice description of nr2a_x05
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:59:20
+* vsxlib 0.13um values
+.subckt nr2a_x05 a b vdd vss z
+M1a 3z    a     vdd   vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M1z vdd   3z    1z    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M2a vss   a     3z    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M2z 1z    b     z     vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M3z z     3z    vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M4z vss   b     z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  3z    vss   0.653f
+C5  a     vss   0.660f
+C3  b     vss   0.710f
+C1  z     vss   0.763f
+.ends

@@ -1,0 +1,58 @@
+* functionality check of halfadder_x4, 0.13um, Berkeley generic bsim3 params
+* halfadder_x4_func.cir 2007-07-06:07h32 graham
+*
+.include ../../../magic/subckt/ssxlib013/spice_model.lib
+.include ../../../magic/subckt/ssxlib013/halfadder_x4.spi
+.include ../../../magic/subckt/ssxlib013/params.inc
+*
+x01 va   vb    x01co    x01so vdd vss halfadder_x4
+x02 va   vb    x02co    x02so vdd vss halfadder_x4
+*
+.param unitcap=2.6f
+cx01co  x01co  0 '4*unitcap'
+cx02co  x02co  0 '130*4*unitcap'
+cx01so  x01so  0 '4*unitcap'
+cx02so  x02so  0 '130*4*unitcap'
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+vstrobe strobe 0 dc 0 pulse (0 1 '0.97*tPER' '0.01*tPER' '0.01*tPER' '0.01*tPER' 'tPER')
+*
+* ba      00   10     11     01     00     01     11     10     00
+*          0    1      0      1      0      1      0      1      0
+*             thh_AZ thl_BZ tlh_AZ tll_BZ thh_BZ thl_AZ tlh_BZ tll_AZ
+*                 0      1      2      3      4      5      6      7      8
+Vb  vb 0 dc 0 pwl(0 'vss' '1*tPER' 'vss' '1*tPER+tRISE' 'vdd' '3*tPER' 'vdd' '3*tPER+tFALL' 'vss'
++           '4*tPER' 'vss' '4*tPER+tRISE' 'vdd' '6*tPER' 'vdd' '6*tPER+tFALL' 'vss' )
+Va  va 0 dc 0 pwl(0 'vss' 'tRISE'  'vdd' '2*tPER' 'vdd'  '2*tPER+tFALL' 'vss'
++           '5*tPER' 'vss' '5*tPER+tRISE' 'vdd' '7*tPER' 'vdd' '7*tPER+tFALL' 'vss' )
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep 40000p
+  linearize
+  let a = va / $vdd
+  let b = vb / $vdd
+  let pa = va +  $vdd + 0.3 
+  let pb = vb + 2 * ( $vdd + 0.3 )
+  let pco = $vdd * ( a & b )  - $vdd - 0.3
+  let pso = $vdd * (( a & not ( b ) ) | ( not ( a ) & b )) - $vdd - 0.3
+* check output is within 10mV of ideal at strobe point
+  let perr0 =  vecmax ( pos ( abs (( pco - x02co + $vdd + 0.3 ) * strobe ) - 0.01 ))
+  let perr1 =  vecmax ( pos ( abs (( pso - x02so + $vdd + 0.3 ) * strobe ) - 0.01 ))
+  plot v(pa) v(pb) v(pco) v(x01co) v(x02co)
+  plot v(pa) v(pb) v(pso) v(x01so) v(x02so)
+*  print col v(va) v(vb) v(x01co) v(x02co) v(x01so) v(x02so) > halfadder_x4_func.spo
+  if perr0 < 0
+    if perr1 < 0
+      echo Functional simulation OK
+    else
+      echo #Error: Functional simulation halfadder_x4_func.cir failed
+      echo #Error: Functional simulation halfadder_x4_func.cir failed >> halfadder_x4_func.error
+    end
+    echo #Error: Functional simulation halfadder_x4_func.cir failed
+    echo #Error: Functional simulation halfadder_x4_func.cir failed >> halfadder_x4_func.error
+  end
+  destroy all
+.endc
+.end

@@ -1,0 +1,11 @@
+#!/bin/bash
+# allo2 2007-07-06:07h45 graham
+
+./allo2_delay $1
+./allo2_vbe
+./allo2_lib
+./allo2_html
+if test -x allo2_xtra
+then
+  ./allo2_xtra
+fi

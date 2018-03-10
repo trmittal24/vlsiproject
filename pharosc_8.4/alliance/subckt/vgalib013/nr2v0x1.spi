@@ -1,0 +1,13 @@
+* Spice description of nr2v0x1
+* Spice driver version 134999461
+* Date 17/06/2007 at 14:03:22
+* vgalib 0.13um values
+.subckt nr2v0x1 a b vdd vss z
+Mtr_00001 z     a     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00002 vss   b     z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00003 z     b     sig5  vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+Mtr_00004 sig5  a     vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+C3  a     vss   0.535f
+C4  b     vss   0.508f
+C2  z     vss   0.798f
+.ends

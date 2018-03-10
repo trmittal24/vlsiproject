@@ -1,0 +1,16 @@
+* Spice description of an2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  8:55:53
+* wsclib 0.13um values
+.subckt an2v0x05 a b vdd vss z
+M01 zn    a     vdd   vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M02 sig3  a     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M03 vdd   b     zn    vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M04 zn    b     sig3  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M05 vdd   zn    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M06 vss   zn    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C5  a     vss   0.459f
+C6  b     vss   0.450f
+C1  z     vss   0.592f
+C4  zn    vss   0.547f
+.ends

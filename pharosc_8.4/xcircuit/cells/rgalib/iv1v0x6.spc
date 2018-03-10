@@ -1,0 +1,5 @@
+*SPICE circuit <iv1v0x6> from XCircuit v3.20
+
+m1 z a vss vss n w=60u l=2u ad='60u*5u+12p' as='60u*5u+12p' pd='60u*2+14u' ps='60u*2+14u'
+m2 z a vdd vdd p w=84u l=2u ad='84u*5u+12p' as='84u*5u+12p' pd='84u*2+14u' ps='84u*2+14u'
+.end

@@ -1,0 +1,8 @@
+inputpin_list a1 a2 a3 b
+outputpin_list z
+a1 z negative_unate when 001
+a2 z negative_unate when 001
+a3 z negative_unate when 001
+b z negative_unate when 001 010 011 100 101 110 111
+b z non_unate when 001
+z logic_function ((a1+a2+a3)*b)'

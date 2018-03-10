@@ -1,0 +1,14 @@
+* Spice description of nr2v0x1
+* Spice driver version 134894944
+* Date  4/10/2005 at 10:05:50
+*
+.subckt nr2v0x1 a b vdd vss z 
+M1b n1    b     vdd   vdd p  L=0.12U  W=1.65U  AS=0.45375P  AD=0.45375P  PS=3.85U   PD=3.85U  
+M1a z     a     n1    vdd p  L=0.12U  W=1.65U  AS=0.45375P  AD=0.45375P  PS=3.85U   PD=3.85U  
+M2b z     b     vss   vss n  L=0.12U  W=0.44U  AS=0.121P    AD=0.121P    PS=1.43U   PD=1.43U  
+M2a vss   a     z     vss n  L=0.12U  W=0.44U  AS=0.121P    AD=0.121P    PS=1.43U   PD=1.43U  
+C5  vdd   vss   0.620f
+C4  b     vss   0.423f
+C3  a     vss   0.253f
+C2  z     vss   0.483f
+.ends

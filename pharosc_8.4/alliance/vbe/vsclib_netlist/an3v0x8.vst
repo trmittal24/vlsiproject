@@ -1,0 +1,55 @@
+entity an3v0x8 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      c   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end an3v0x8;
+
+architecture structural of an3v0x8 is
+Component nd3v0x3
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      c   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1v0x8
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal zn : bit;
+
+begin
+
+zn : nd3v0x3
+   port map (
+      a   => a,
+      b   => b,
+      c   => c,
+      z   => zn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : iv1v0x8
+   port map (
+      a   => zn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

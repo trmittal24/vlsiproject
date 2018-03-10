@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Graal</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=PREV HREF="linux_help2.html">
+	<LINK REL=NEXT HREF="linux_help4.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Linux.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20040430;19100000">
+	<META NAME="CHANGED" CONTENT="20070824;20300000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="linux_help3.html">/Linux help/Graal layout</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="linux_help2.html">PREV</A></LI>
+<LI><A HREF="linux_help4.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Graal layout</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html" CLASS="current">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+Graal is the lambda based layout editor from Alliance.
+All the <I>pharosc</I> layout drawings are entered here first,
+and then converted to Magic by writing
+out and hacking CIF files. The layout files for Graal are in:
+<P>
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+~ $ pharosc/alliance/cells</PRE></TD></TR></TABLE>
+<P>
+The appearance of the layout depends on the <TT>RDS</TT> file
+pointed to by the environment variable
+<TT><B>RDS_TECHNO_NAME</B></TT>.
+If it is equal to <TT>vsc200.rds</TT>
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+~ $ echo $RDS_TECHNO_NAME
+~/pharosc/alliance/etc/vsc200.rds</PRE></TD></TR></TABLE>
+<P>
+then the editor will show 2&micro;m layout.
+This is the best file for editing layout drawn with the <I>pharosc</I>
+2&micro;m rule set.
+If <TT><B>RDS_TECHNO_NAME</B></TT> is set to <TT>vsc013.rds</TT>
+then the editor will show layout using the generic 0.13&micro;m
+rule set.
+<P>
+Other values like the default <TT>cmos.rds</TT> cause the editor to
+show unintelligible layout because these files
+are written for the <B>sxlib</B> and <B>vxlib</B>. These libraries
+have been designed around a transistor length of 1&lambda; rather
+than the 2&lambda; used for the <B>vsclib</B>, <B>wsclib</B>,
+<B>rgalib</B> and <B>vgalib</B>.
+<P>
+The screenshot shows the vsclib <B>nd2v0x2</B> cell
+in Graal with the <TT>vsc200.rds</TT> file. For editing, I recommend
+switching off the<TT> nwell</TT>,<TT> pwell </TT>,<TT> talu1 </TT>and<TT> AB </TT>layers.
+<P>
+Make sure that the Graal binary is on your search path. In
+my <TT>.bashrc</TT> file I have something like
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+export ALLIANCE_TOP=/home/cad/alliance
+export PATH=$ALLIANCE_TOP/bin:...more...</PRE></TD></TR></TABLE>
+<P>
+The <TT>which</TT> command shows the location of Graal:
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+~ 9551$ which graal
+/home/cad/alliance/bin/graal</PRE></TD></TR></TABLE>
+<P>
+This is not the location of a default Alliance setup, which is
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+/opt/alliance</PRE></TD></TR></TABLE>
+<P>
+I recommend that Alliance is <B>not</B> installed in the same partition
+used by the Linux OS, such as under <TT>/opt</TT>. If it is, then
+it could be deleted if you change your Linux distribution,
+and then you will need to reinstall Alliance from scratch.
+I speak from experience!
+<P>
+I think this recommendation means that you cannot install Alliance from
+the binaries, which will locate it under <TT>/opt</TT>.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/graal_layout.gif" NAME="Graal layout example" ALIGN=LEFT BORDER=0 ALT="Graal layout example" TITLE="Graal layout example">
+</DIV>
+
+</DIV>
+<P></P>
+<P></P>
+<P></P>
+</BODY>
+</HTML>

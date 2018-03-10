@@ -1,0 +1,23 @@
+* Spice description of aon21bv0x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:03:36
+* vsclib 0.13um values
+.subckt aon21bv0x3 a1 a2 b vdd vss z
+M01 an    a1    vdd   vdd p  L=0.12U  W=1.375U AS=0.364375P AD=0.364375P PS=3.28U   PD=3.28U
+M02 sig6  a1    vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M03 vdd   a2    an    vdd p  L=0.12U  W=1.375U AS=0.364375P AD=0.364375P PS=3.28U   PD=3.28U
+M04 an    a2    sig6  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M05 vdd   b     z     vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M06 z     b     vdd   vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M07 z     b     sig3  vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M08 08    b     z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M09 z     an    vdd   vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M10 vdd   an    z     vdd p  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M11 sig3  an    vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M12 vss   an    08    vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C8  a1    vss   0.429f
+C9  a2    vss   0.433f
+C4  an    vss   1.088f
+C5  b     vss   0.540f
+C2  z     vss   1.226f
+.ends

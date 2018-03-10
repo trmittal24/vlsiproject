@@ -1,0 +1,3 @@
+<B>x1</B> drive strength cell, with a P/N ratio of about 1.28 for the
+<SPAN CLASS="boldred">a1</SPAN> and <SPAN CLASS="boldred">a2</SPAN>
+inputs, and about 2.4 for the <SPAN CLASS="boldred">b</SPAN> input.

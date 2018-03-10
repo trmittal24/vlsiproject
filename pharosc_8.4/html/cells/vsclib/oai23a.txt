@@ -1,0 +1,2 @@
+Minimum sized cell with a P/N ratio of about 2 on the output.
+Implemented as a 2-NAND followed by an 2x 2-OR into 2-NAND gate (oai22).

@@ -1,0 +1,22 @@
+pwidth 120
+nwidth 60
+min_capacitance 2.6
+max_capacitance 338
+max_fanout 4
+fanout_load 1
+i0 lower_hl_pct 8
+i0 upper_hl_pct 92
+i0 lower_lh_pct 7
+i0 upper_lh_pct 93
+i1 lower_hl_pct 7
+i1 upper_hl_pct 93
+i1 lower_lh_pct 8
+i1 upper_lh_pct 92
+i0 lower_hh_pct 10
+i0 upper_hh_pct 90
+i0 lower_ll_pct 15
+i0 upper_ll_pct 85
+i1 lower_hh_pct 10
+i1 upper_hh_pct 90
+i1 lower_ll_pct 15
+i1 upper_ll_pct 85

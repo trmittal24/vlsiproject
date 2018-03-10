@@ -1,0 +1,140 @@
+#!/bin/bash
+
+# Script which converts a vsclib cell to a wsclib cell.
+echo "# Converting $1"
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+
+if test -f ../vsclib/$1.ap
+then
+  cell=$1
+else
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+date1=$(date '+%s')
+cp ../vsclib/$1.ap $$rest
+
+lambda_xoffset=0
+lambda_yoffset=4
+lambda_xab=0
+lambda_yab=8
+old_lambda_vss=4
+old_lambda_vdd=68
+lambda_vss=6
+lambda_vdd=74
+lambda_power_width=12
+lambda_extra_well_height=7
+lambda_extra_well_width=0
+lambda_tie_offset=2
+
+#                cell    ,      P      ,     date    , scale
+scale=$(grep '^H ' $$rest | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+eastab=$(grep '^A ' $$rest | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\3/')
+northab=$(grep '^A ' $$rest | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let "xoffset=lambda_xoffset*scale"
+let "yoffset=lambda_yoffset*scale"
+let "xab=lambda_xab*scale"
+let "yab=lambda_yab*scale"
+let "old_vss=old_lambda_vss*scale"
+let "old_vdd=old_lambda_vdd*scale"
+let "vss=lambda_vss*scale"
+let "vss2=vss-scale"
+let "vdd=lambda_vdd*scale"
+let "vdd2=vdd+scale"
+let "power_width=lambda_power_width*scale"
+let "power_width2=(lambda_power_width+2)*scale"
+let "extra_well_height=2*lambda_extra_well_height*scale"
+let "extra_well_width=lambda_extra_well_width*scale"
+
+# Step 1. Copy across geometries with required offsets
+
+sed -n '1,2 p' $$rest > $$hold
+sed -i '1,2 d' $$rest
+
+awk -v "FS=," '/^A / {printf "%1s,%1s,%1s,%1s\n", $1,$2,$3+'$xab',$4+'$yab' }' $$rest >> $$hold
+sed -i '/^A / d' $$rest
+
+awk -v "FS= ||," '/^R / {printf "%1s %1s,%1s,%1s,%1s\n", $1,$2+'$xoffset',$3+'$yoffset',$4,$5 }' $$rest | \
+awk -v "FS=_" '{printf "%1s_%1s_%1s\n", $1,$2,$3+'$lambda_yoffset' }'>> $$hold
+sed -i '/^R / d' $$rest
+
+awk -v "FS= ||," '/^S / {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", $1,$2+'$xoffset',$3+'$yoffset',$4+'$xoffset',$5+'$yoffset',$6,$7,$8,$9 }' $$rest >> $$hold
+sed -i '/^S / d' $$rest
+
+awk -v "FS= ||," '/^V / {printf "%1s %1s,%1s,%1s,%1s\n", $1,$2+'$xoffset',$3+'$yoffset',$4,$5 }' $$rest >> $$hold
+sed -i '/^V / d' $$rest
+
+sed -n '/^EOF/ p' $$rest >> $$hold
+sed -i '/^EOF/ d' $$rest
+
+# Step 2. Change power supply widths
+let "vss_loc=old_vss+yoffset"
+let "vdd_loc=old_vdd+yoffset"
+
+awk -v "FS=," '/^S 0,'$vss_loc','$eastab','$vss_loc',8000,.*,CALU1 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", $1,'$vss',$3,'$vss','$power_width',$6,$7,$8 }
+!/^S 0,'$vss_loc','$eastab','$vss_loc',8000,.*,CALU1/ {print}' $$hold | \
+awk -v "FS=," '/^S 0,'$vss_loc','$eastab','$vss_loc',8000,.*,ALU1 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", $1,'$vss2',$3,'$vss2','$power_width2',$6,$7,$8 }
+!/^S 0,'$vss_loc','$eastab','$vss_loc',8000,.*,ALU1 *$/ {print}' | \
+awk -v "FS=," '/^S 0,'$vdd_loc','$eastab','$vdd_loc',8000,.*,CALU1 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", $1,'$vdd',$3,'$vdd','$power_width',$6,$7,$8 }
+!/^S 0,'$vdd_loc','$eastab','$vdd_loc',8000,.*,CALU1 *$/ {print}' | \
+awk -v "FS=," '/^S 0,'$vdd_loc','$eastab','$vdd_loc',8000,.*,ALU1 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", $1,'$vdd2',$3,'$vdd2','$power_width2',$6,$7,$8 }
+!/^S 0,'$vdd_loc','$eastab','$vdd_loc',8000,.*,ALU1 *$/ {print}' > $$temp
+mv $$temp $$hold
+
+# Step 3. Adjust TALU8 abutment box
+
+awk -v "FS=," '/^S .*,TALU8 *$/ {printf "%1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", $1,$2,$3,$4,'$northab'+'$yab',$6,$7,$8 }
+!/^S .*,TALU8 *$/ {print}' $$hold > $$temp
+
+# Step 4. Adjust NWELL and PWELL and add extra NWELL and PWELL
+
+awk -v "FS= ||," '/PWELL *$/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2-'$extra_well_width',$3,$4+'$extra_well_width',$5,$6,$7,$8,$9 RS \
+"S "0-'$extra_well_width'",0,"'$eastab'+'$extra_well_width'",0,"'$extra_well_height'",*,RIGHT,PWELL" }
+!/PWELL *$/ {print}' $$temp | \
+awk -v "FS= ||," '/NWELL *$/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2-'$extra_well_width',$3,$4+'$extra_well_width',$5,$6,$7,$8,$9 RS \
+"S "0-'$extra_well_width'","'$northab'+'$yab'","'$eastab'+'$extra_well_width'","'$northab'+'$yab'","'$extra_well_height'",*,RIGHT,NWELL" }
+!/NWELL *$/ {print}' > $$hold
+
+# Step 5. Delete existing PTIE contacts and rectangles
+
+sed -i '/^S .*,NTIE *$/ d' $$hold
+sed -i '/^S .*,PTIE *$/ d' $$hold
+sed -i '/^V .*,CONT_BODY_N,/ d' $$hold
+sed -i '/^V .*,CONT_BODY_P,/ d' $$hold
+
+# Step 6. Add in the tie contacts and rectangles top and bottom
+
+let "west_tie=lambda_tie_offset*scale"
+let "east_tie=eastab-lambda_tie_offset*scale"
+
+echo "S "$west_tie",0,"$east_tie",0,6000,*,RIGHT,PTIE" > $$addon
+echo "S "$west_tie",80000,"$east_tie",80000,6000,*,RIGHT,NTIE" >> $$addon
+
+lambda_xloc=4
+let "xloc=lambda_xloc*scale"
+let "yloc=northab+yab"
+while [ "$xloc" -lt "$eastab" ]
+do
+  echo "V "$xloc",0,CONT_BODY_P,*" >> $$addon
+  echo "V "$xloc","$yloc",CONT_BODY_N,*" >> $$addon
+  lambda_xloc=$lambda_xloc+8
+  let "xloc=lambda_xloc*scale"
+done
+
+sed "/^A / r $$addon" $$hold > $1.ap
+if test -s $$rest
+then
+  echo $1 >> cell_to_check.txt
+fi
+
+rm $$temp $$addon $$rest $$hold

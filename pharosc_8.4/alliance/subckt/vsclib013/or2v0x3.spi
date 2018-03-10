@@ -1,0 +1,19 @@
+* Spice description of or2v0x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:32:50
+* vsclib 0.13um values
+.subckt or2v0x3 a b vdd vss z
+M01 04    a     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M02 vdd   a     05    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M03 sig3  a     vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M04 sig3  b     04    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M05 05    b     sig3  vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M06 vss   b     sig3  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M07 z     sig3  vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M08 vdd   sig3  z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M09 vss   sig3  z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C4  a     vss   0.766f
+C5  b     vss   0.482f
+C3  sig3  vss   0.701f
+C2  z     vss   0.712f
+.ends

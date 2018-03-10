@@ -1,0 +1,40 @@
+#!/bin/bash
+# allan4_delay 2007-08-29:12h04 graham
+
+norun=$1
+function=$(basename $PWD)
+
+if test ! -f "$function".pmd
+then
+  echo "# There is no function pmd file "$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+# list the pmd files and run the script on the ones actually there
+set $(ls -1 -x *.pmd ) 1>/dev/null
+shift                             # remove first pmd file $function.pmd
+pmd_names="$*"
+
+if test "$norun" == ""
+then
+  # Only run the spice sims if no argument has been passed
+  date
+  for pmd in $pmd_names
+  do
+    cell=${pmd%.pmd}
+    for out_pin in z
+    do
+      for pin in a b c d
+      do
+        nice -10 wspice3 "$cell"_"$pin"_"$out_pin".cir
+      done
+    done
+  done
+fi
+
+# repeat for each cell listed by  $ ls -1 *.pmd
+for pmd in $pmd_names
+do
+  cell=${pmd%.pmd}
+  ./makenewpr $cell
+done

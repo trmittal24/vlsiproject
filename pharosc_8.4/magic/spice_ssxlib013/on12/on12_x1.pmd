@@ -1,0 +1,11 @@
+pwidth 60
+nwidth 30
+min_capacitance 2.6
+max_capacitance 338
+max_fanout 4
+fanout_load 1
+i1 q pin_power when 0
+i0 lower_lh_pct 8
+i0 upper_lh_pct 92
+i0 lower_hl_pct 8
+i0 upper_hl_pct 92

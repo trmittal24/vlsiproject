@@ -1,0 +1,14 @@
+#/bin/bash
+
+echo > Makefile
+echo "SHELL=/bin/bash" >> Makefile
+echo >> Makefile
+
+target=delay
+prereq=ap
+
+ls -1 */*.${target} | \
+  sed "s|^\(.*\)/\([^_][^_]*\)_\([^_][^_]*\)\(_.*\.${target}\)$|\1/\2_\3\4: ../../alliance/cells/ssxlib/\2_\3\.${prereq}\n\techo \"# Remake \2\3\"|" >> Makefile
+
+ls -1 */*.${target} | \
+  sed 's|^\(.*\)$|make -s \1|' | bash

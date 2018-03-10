@@ -1,0 +1,36 @@
+ENTITY nxr2_x4 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 3000;
+  CONSTANT cin_i0        : NATURAL := 12;     
+  CONSTANT cin_i1        : NATURAL := 12;     
+  CONSTANT rdown_i0_nq   : NATURAL := 590;    
+  CONSTANT rdown_i1_nq   : NATURAL := 590;    
+  CONSTANT rup_i0_nq     : NATURAL := 750;    
+  CONSTANT rup_i1_nq     : NATURAL := 750;    
+  CONSTANT tpll_i1_nq    : NATURAL := 152;    
+  CONSTANT tphh_i0_nq    : NATURAL := 113;    
+  CONSTANT tpll_i0_nq    : NATURAL := 167;    
+  CONSTANT tphl_i0_nq    : NATURAL := 168;    
+  CONSTANT tplh_i1_nq    : NATURAL := 163;    
+  CONSTANT tphl_i1_nq    : NATURAL := 194;    
+  CONSTANT tplh_i0_nq    : NATURAL := 153;    
+  CONSTANT tphh_i1_nq    : NATURAL := 114;    
+  CONSTANT transistors	 : NATURAL := 16
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  nq	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nxr2_x4;
+
+ARCHITECTURE behaviour_data_flow OF nxr2_x4 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nxr2_x4"
+  SEVERITY WARNING;
+  nq <= not ((i0 xor i1)) after 170 ps;
+END;

@@ -1,0 +1,48 @@
+* SPICE3 file created from xor2v0x1.ext - technology: scmos
+
+.option scale=1u
+.include /home/tarun/ngspice/t14y_tsmc_025_level3.txt
+
+
+M1000 vdd b bn vdd cmosp w=27 l=2
++ ad=360 pd=82 as=294 ps=136 
+M1001 an a vdd vdd cmosp w=18 l=2
++ ad=144 pd=52 as=0 ps=0 
+M1002 z bn an vdd cmosp w=18 l=2
++ ad=189 pd=70 as=0 ps=0 
+M1003 bn an z vdd cmosp w=27 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1004 vss b bn vss cmosn w=9 l=2
++ ad=258 pd=108 as=57 ps=32 
+M1005 an a vss vss cmosn w=9 l=2
++ ad=72 pd=34 as=0 ps=0 
+M1006 z b an vss cmosn w=9 l=2
++ ad=87 pd=40 as=0 ps=0 
+M1007 a_47_9# bn z vss cmosn w=12 l=2
++ ad=60 pd=34 as=0 ps=0 
+M1008 vss an a_47_9# vss cmosn w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+C0 vss an 9.3fF
+C1 z vdd 3.3fF
+C2 z vss 4.9fF
+C3 vdd b 14.4fF
+C4 vss b 17.1fF
+C5 vdd bn 16.1fF
+C6 bn an 2.1fF
+C7 vss bn 7.3fF
+C8 z bn 2.9fF
+C9 vdd a 5.6fF
+C10 vdd an 5.2fF
+C11 vss a 10.4fF
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_cp a 0 PULSE(0 5 0 0 0 50n 100n)
+v_gg_t b 0 PULSE(0 5 25n 0 0 50n 100n)
+
+.control
+ tran 0.01n 500n
+ plot (a + 10 ) (b + 5) (z)
+.endc
+
+.end

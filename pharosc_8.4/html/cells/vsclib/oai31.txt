@@ -1,0 +1,1 @@
+2 cells with a P/N ratio of about 2. The width of the P-transistor connected to pin <SPAN CLASS="boldred">b</SPAN> is designed to have a similar conductivity to the three series P-transistors in order to maintain a consistent output drive capability.

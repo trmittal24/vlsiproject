@@ -1,0 +1,10 @@
+pmd=$1.pmd
+echo -n $1:
+grep logic_function $1.pmd | \
+  cut -f 3 -d' ' | \
+  sed "s|^\([^ ][^ ]*\)'$|(not \1)|" | \
+  sed "s|\([(*+^][(*+^]*\)\([^(*+^][^(*+^]*\)'|\1not (\2)|g" | \
+  sed 's/\+/ | /g' | \
+  sed 's/\*/ \& /g' | \
+  sed 's/\^/ ne /g'
+

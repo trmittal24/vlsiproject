@@ -1,0 +1,15 @@
+* Spice description of nd2v3x2
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:19:24
+* wsclib 0.13um values
+.subckt nd2v3x2 a b vdd vss z
+M01 z     a     vdd   vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M02 sig3  a     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M03 vss   a     n1b   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M04 vdd   b     z     vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M05 z     b     sig3  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M06 n1b   b     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C4  a     vss   0.583f
+C5  b     vss   0.357f
+C1  z     vss   0.687f
+.ends

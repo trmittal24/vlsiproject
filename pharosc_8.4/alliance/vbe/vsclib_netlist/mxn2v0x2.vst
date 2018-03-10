@@ -1,0 +1,56 @@
+entity mxn2v0x2 is
+   port (
+      a0  : in      bit;
+      a1  : in      bit;
+      s   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end mxn2v0x2;
+
+architecture structural of mxn2v0x2 is
+
+Component mxi2v0x1
+   port (
+      a0  : in      bit;
+      a1  : in      bit;
+      s   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1v0x2
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal zn : bit;
+
+begin
+
+zn : mxi2v0x1
+   port map (
+      a0  => a0,
+      a1  => a1,
+      s   => s,
+      z   => zn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : iv1v0x2
+   port map (
+      a   => zn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

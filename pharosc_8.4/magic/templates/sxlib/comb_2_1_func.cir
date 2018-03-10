@@ -1,0 +1,49 @@
+* functionality check of xxx_cell, xxx_techno, xxx_param_description
+xxx_timestamp
+*
+.include ../../../magic/subckt/xxx_library/spice_model.lib
+.include ../../../magic/subckt/xxx_library/xxx_cell.spi
+.include ../../../magic/subckt/xxx_library/params.inc
+*
+x01 vxxx_labelled_pin1   vxxx_labelled_pin2   x01z vdd vss xxx_cell
+x02 vxxx_labelled_pin1   vxxx_labelled_pin2   x02z vdd vss xxx_cell
+*
+.param unitcap=xxx_unitcapf
+cx01z  x01z  0 'xxx_drive*unitcap'
+cx02z  x02z  0 'xxx_loadcap5*xxx_drive*unitcap'
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+vstrobe strobe 0 dc 0 pulse (0 1 '0.97*tPER' '0.01*tPER' '0.01*tPER' '0.01*tPER' 'tPER')
+*
+* ba      00   10     11     01     00     01     11     10     00
+*          0    1      0      1      0      1      0      1      0
+*             thh_AZ thl_BZ tlh_AZ tll_BZ thh_BZ thl_AZ tlh_BZ tll_AZ
+*                 0      1      2      3      4      5      6      7      8
+Vxxx_labelled_pin2  vxxx_labelled_pin2 0 dc 0 pwl(0 'vss' '1*tPER' 'vss' '1*tPER+tRISE' 'vdd' '3*tPER' 'vdd' '3*tPER+tFALL' 'vss'
++           '4*tPER' 'vss' '4*tPER+tRISE' 'vdd' '6*tPER' 'vdd' '6*tPER+tFALL' 'vss' )
+Vxxx_labelled_pin1  vxxx_labelled_pin1 0 dc 0 pwl(0 'vss' 'tRISE'  'vdd' '2*tPER' 'vdd'  '2*tPER+tFALL' 'vss'
++           '5*tPER' 'vss' '5*tPER+tRISE' 'vdd' '7*tPER' 'vdd' '7*tPER+tFALL' 'vss' )
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep xxx_func_sim_timep
+  linearize
+  let xxx_labelled_pin1 = vxxx_labelled_pin1 / $vdd
+  let xxx_labelled_pin2 = vxxx_labelled_pin2 / $vdd
+  let pxxx_labelled_pin1 = vxxx_labelled_pin1 + ( $vdd + 0.3 )
+  let pxxx_labelled_pin2 = vxxx_labelled_pin2 + 2 * ( $vdd + 0.3 )
+  let pz = $vdd * xxx_logic_function - $vdd - 0.3
+* check output is within 10mV of ideal at strobe point
+  let perr =  vecmax ( pos ( abs (( pz - x02z + $vdd + 0.3 ) * strobe ) - 0.01 ))
+*  plot v(pxxx_labelled_pin1) v(pxxx_labelled_pin2) v(pz) v(x01z) v(x02z)
+*  print col v(vxxx_labelled_pin1) v(vxxx_labelled_pin2) v(x01z) v(x02z) > xxx_cell_func.spo
+  if perr > 0
+    echo #Error: Functional simulation xxx_cell_func.cir failed
+    echo #Error: Functional simulation xxx_cell_func.cir failed >> xxx_cell_func.error
+  else
+    echo Functional simulation OK
+  end
+  destroy all
+.endc
+.end

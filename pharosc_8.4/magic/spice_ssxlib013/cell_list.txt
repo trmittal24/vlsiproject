@@ -1,0 +1,29 @@
+a2 x2 x4
+a3 x2 x4
+a4 x2 x4
+an12 x1 x4
+ao22 x2 x4
+ao2o22 x2 x4
+buf x2 x4 x8
+halfadder x2 x4
+inv x1 x2 x4 x8
+mx2 x2 x4
+na2 x1 x4
+na3 x1 x4
+na4 x1 x4
+nao22 x1 x4
+nao2o22 x1 x4
+nmx2 x1 x4
+no2 x1 x4
+no3 x1 x4
+no4 x1 x4
+noa22 x1 x4
+noa2a22 x1 x4
+nxr2 x1 x4
+o2 x2 x4
+o3 x2 x4
+o4 x2 x4
+oa22 x2 x4
+oa2a22 x2 x4
+on12 x1 x4
+xr2 x1 x4

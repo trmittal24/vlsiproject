@@ -1,0 +1,1 @@
+This two-way inverting mux uses a CMOS transfer gate for the fastest speed.

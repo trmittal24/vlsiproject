@@ -1,0 +1,656 @@
+#!/bin/bash
+
+# Script which reads 921, 1521, 2221 and 2621 errors
+# from a .drc file and uses the co-ordinates to place
+# TALU blockages for another routing session.
+
+if ! test -d $MBK_TARGET_LIB
+then
+  echo "#?! No MBK_TARGET_LIB found. Please check." 1>&2
+  exit 1
+else
+  library=$(basename $MBK_TARGET_LIB)
+  case $library in
+  rgalib013)
+    metal_width=4; metal_pitch=8; xoffset=0; yoffset=4; type=s
+    ;;
+  ssxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=s
+    ;;
+  stxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=t
+    ;;
+  sxlib100)
+    metal_width=2; metal_pitch=5; xoffset=0; yoffset=0; type=s
+    ;;
+  vgalib013)
+    metal_width=4; metal_pitch=8; xoffset=0; yoffset=0; type=s
+    ;;
+  vsclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=0; type=s
+    ;;
+  vtclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=0; type=t
+    ;;
+  vsxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=s
+    ;;
+  vtxlib013)
+    metal_width=4; metal_pitch=10; xoffset=0; yoffset=0; type=t
+    ;;
+  vxlib013)
+    metal_width=2; metal_pitch=5; xoffset=0; yoffset=0; type=s
+    ;;
+  wsclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=4; type=s
+    ;;
+  wtclib013)
+    metal_width=4; metal_pitch=8; xoffset=4; yoffset=4; type=t
+    ;;
+  *)
+    echo "#?! Library "$library" not supported yet. Please check." 1>&2
+    exit 1
+    ;;
+  esac
+fi
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: pnr_via_drc_block cell [blockage_cell]" 1>&2
+  echo "#" 1>&2
+  echo "#   will check file cell.drc for DRC violations and write out" 1>&2
+  echo "#   TALU geometries to blockage_cell.ap, or cell_bg.ap if not" 1>&2
+  echo "#   given, to try to stop the violation on the next execution of NERO." 1>&2
+  echo "#   eg  pnr_via_drc_block fred fred_hor_bg  will read fred.drc and" 1>&2
+  echo "#   write TALU geometries to fred_hor_bg.ap." 1>&2
+  exit 1
+fi
+
+if test -f $1.drc
+then
+  cell=$1.drc
+  layout_cell=$1.ap
+else
+  echo "# Usage: pnr_via_drc_block cell [blockage_cell]" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".drc does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  block_cell=$1_bg.ap
+else
+  block_cell=$2.ap
+fi
+
+scale=$(grep '^H ' $layout_cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+let "scaled_pitch=metal_pitch*scale"
+let "scaled_width=metal_width*scale"
+let "scaled_xoffset=xoffset*scale"
+let "scaled_yoffset=yoffset*scale"
+
+ab=$(grep '^A ' $layout_cell | sed 's/^A  *\([^ ][^ ]*\) *$/A,\1/')
+let "xwest=$(echo $ab | cut -f2 -d,)+scaled_pitch-scaled_xoffset"
+let "ysouth=$(echo $ab | cut -f3 -d,)+scaled_pitch-scaled_yoffset"
+let "xeast=$(echo $ab | cut -f4 -d,)-scaled_pitch+scaled_xoffset"
+let "ynorth=$(echo $ab | cut -f5 -d,)-scaled_pitch+scaled_yoffset"
+
+if [ "$type" = s ]
+then
+  for error_code in 921 1521 2221 2621
+  do
+    error_coords=$(grep -v '^ *$' $cell | \
+      sed -n "/${error_code}/,+2 p" | \
+      grep -v ERROR | \
+      sed 's/://g' | \
+      sed 's/\t/ /g' | \
+      tr -s ' ' ' ')
+
+    touch $$temp
+    index=0
+    for point in $error_coords
+    do
+      let index=$index+1
+#     tokens are locations 5, 8, 11, 14
+#     each error line takes 14 tokens
+      if [ "$index" -eq 5 ]
+      then
+        xmin1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 8 ]
+      then
+        ymin1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 11 ]
+      then
+        xdelta1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 14 ]
+      then
+        ydelta1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 19 ]
+      then
+        xmin2=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 22 ]
+      then
+        ymin2=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 25 ]
+      then
+        xdelta2=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 28 ]
+      then
+        adjvia=1
+        ydelta2=$(echo $point $scale | awk '{print $1*$2 }')
+        let "xmax1=xmin1+xdelta1"
+        let "ymax1=ymin1+ydelta1"
+        let "xmax2=xmin2+xdelta2"
+        let "ymax2=ymin2+ydelta2"
+        let "xbox1=xmin1-xmax2"
+        if [ "$xbox1" -lt 0 ] ;then let xbox1=-$xbox1;fi
+        let "xbox2=xmin2-xmax1"
+        if [ "$xbox2" -lt 0 ] ;then let xbox2=-$xbox2;fi
+        if [ "$xbox1" -lt "$xbox2" ]
+        then
+          xbox=$xbox1
+        else
+          xbox=$xbox2
+        fi
+        let "ybox1=ymin1-ymax2"
+        if [ "$ybox1" -lt 0 ] ;then let ybox1=-$ybox1;fi
+        let "ybox2=ymin2-ymax1"
+        if [ "$ybox2" -lt 0 ] ;then let ybox2=-$ybox2;fi
+        if [ "$ybox1" -lt "$ybox2" ]
+        then
+          ybox=$ybox1
+        else
+          ybox=$ybox2
+        fi
+#
+#       Calculate the location of the two error geometries causing violation
+#
+        if [ "$xmin2" -gt "$xmax1" -o "$xmin1" -gt "$xmax2" ]
+        then
+#echo "#     horizontal error"
+          let "yerr1=ymin1/scaled_pitch*scaled_pitch+scaled_pitch-yoffset*scale"
+          let "yerr2=ymin2/scaled_pitch*scaled_pitch+scaled_pitch-yoffset*scale"
+          if [ "$yerr1" -gt "$ymax1" -o "$yerr1" -gt "$ymax2" \
+            -o "$yerr1" -lt "$ymin1" -o "$yerr1" -lt "$ymin2" ]
+          then
+            if [ "$yerr2" -gt "$ymax1" -o "$yerr2" -gt "$ymax2" \
+              -o "$yerr2" -lt "$ymin1" -o "$yerr2" -lt "$ymin2" ]
+            then
+              adjvia=0
+            else
+              yerr1=$yerr2
+            fi
+          else
+            if [ "$yerr2" -gt "$ymax1" -o "$yerr2" -gt "$ymax2" \
+              -o "$yerr2" -lt "$ymin1" -o "$yerr2" -lt "$ymin2" ]
+            then
+              yerr2=$yerr1
+            fi
+          fi
+          if [ "$xmin2" -gt "$xmax1" ]
+          then
+            let "xmax=xmax1/scaled_pitch"
+          else
+            let "xmax=xmax2/scaled_pitch"
+          fi
+          let "xerr1=xmax*scaled_pitch+xoffset*scale"
+          let "xerr2=xmax*scaled_pitch+scaled_pitch+xoffset*scale"
+        else
+#echo "#     vertical error"
+          if [ "$xmin1" -ge 0 ]
+          then
+            let "xerr1=xmin1/scaled_pitch*scaled_pitch+scaled_pitch-xoffset*scale"
+          else
+            let "xerr1=xmin1/scaled_pitch*scaled_pitch-xoffset*scale"
+          fi
+          if [ "$xmin2" -ge 0 ]
+          then
+            let "xerr2=xmin2/scaled_pitch*scaled_pitch+scaled_pitch-xoffset*scale"
+          else
+           let "xerr2=xmin2/scaled_pitch*scaled_pitch-xoffset*scale"
+          fi
+          if [ "$xerr1" -gt "$xmax1" -o "$xerr1" -gt "$xmax2" \
+            -o "$xerr1" -lt "$xmin1" -o "$xerr1" -lt "$xmin2" ]
+          then
+            if [ "$xerr2" -gt "$xmax1" -o "$xerr2" -gt "$xmax2" \
+              -o "$xerr2" -lt "$xmin1" -o "$xerr2" -lt "$xmin2" ]
+            then
+              adjvia=0
+            else
+              xerr1=$xerr2
+            fi
+          else
+            if [ "$xerr2" -gt "$xmax1" -o "$xerr2" -gt "$xmax2" \
+              -o "$xerr2" -lt "$xmin1" -o "$xerr2" -lt "$xmin2" ]
+            then
+              xerr2=$xerr1
+            fi
+          fi
+          if [ "$ymin2" -gt "$ymax1" ]
+          then
+            let "ymax=ymax1/scaled_pitch"
+          else
+            let "ymax=ymax2/scaled_pitch"
+          fi
+          let "yerr1=ymax*scaled_pitch+yoffset*scale"
+          let "yerr2=ymax*scaled_pitch+scaled_pitch+yoffset*scale"
+        fi
+
+        case $error_code in
+        921)
+          layer=TALU2; via=CONT_VIA; via2=CONT_VIA2
+          ;;
+        1521)
+          layer=TALU3; via=CONT_VIA2; via2=CONT_VIA3
+          ;;
+        2221)
+          layer=TALU4; via=CONT_VIA3; via2=CONT_VIA4
+          ;;
+        2621)
+          layer=TALU5; via=CONT_VIA4; via2=CONT_VIA5
+          ;;
+        *)
+          layer=XXX
+          ;;
+        esac
+        if [ "$layer" != XXX ]
+        then
+          is1via=$(grep -c "^V $xerr1,$yerr1,$via," $layout_cell)
+          is1via2=$(grep -c "^V $xerr1,$yerr1,$via2," $layout_cell)
+          is2via=$(grep -c "^V $xerr2,$yerr2,$via," $layout_cell)
+          is2via2=$(grep -c "^V $xerr2,$yerr2,$via2," $layout_cell)
+          let "viacode=is2via+2*is2via2+4*is1via+8*is1via2"
+#echo $viacode $xerr1 $yerr1 $xerr2 $yerr2 $xwest $ysouth $xeast $ynorth
+#      -------+   +------
+#           1 |   | 2
+#      -------+   +------
+#  Place blockage at err location, where err determined as:
+#  if (1) is via or via2,                        err=2     4, 6, 8  
+#  if (2) is via or via2,                        err=1     1, 2, 9
+#  if both are vias or via2s,                    err=2     5,10
+#  if (1) is stacked via and (2) is via,         err=1    13
+#  if (1) is stacked via and (2) is via2,        err=2    14
+#  if (2) is stacked via and (1) is via,         err=2     7
+#  if (2) is stacked via and (1) is via2,        err=1    11
+#  if (1) is stacked via and (2) none,           err=2    12
+#  if (2) is stacked via and (1) none,           err=1     3
+#  if (1) and (2) stacked vias,                  err=2    15
+
+          case $viacode in
+          0)
+            xerr=$xerr1; yerr=$yerr1; adjvia=0
+            ;;
+          1|2|3|9|11|13)
+            if [ "$xerr1" -ne "$xwest" -a "$xerr1" -ne "$xeast" ]
+            then
+              xerr=$xerr1
+            else
+              xerr=$xerr2
+            fi
+            if [ "$yerr1" -ne "$ynorth" -a "$yerr1" -ne "$ysouth" ]
+            then
+              yerr=$yerr1
+            else
+              yerr=$yerr2
+            fi
+            ;;
+          4|5|6|7|8|10|12|14|15)
+            if [ "$xerr2" -ne "$xwest" -a "$xerr2" -ne "$xeast" ]
+            then
+              xerr=$xerr2
+            else
+              xerr=$xerr1
+            fi
+            if [ "$yerr2" -ne "$ynorth" -a "$yerr2" -ne "$ysouth" ]
+            then
+              yerr=$yerr2
+            else
+              yerr=$yerr1
+             fi
+            ;;
+          *)
+            xerr=$xerr1; yerr=$yerr1; adjvia=0
+            ;;
+          esac
+          if [ "$adjvia" -eq 1 ]
+          then
+            echo "S $xerr,$yerr,$xerr,$yerr,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+          fi
+        fi
+        index=0
+        continue
+      fi
+    done
+  done
+
+  grep -v '^EOF' $block_cell > $$temp2
+  sort -u $$temp >> $$temp2
+  echo "EOF" >> $$temp2
+  mv -f $$temp2 $block_cell
+  rm $$temp
+
+elif [ "$type" = t ]
+then
+  for error_code in 723 724 921 1521 2221 2621 3021
+  do
+    error_coords=$(grep -v '^ *$' $cell | \
+      sed -n "/${error_code}/,+2 p" | \
+      grep -v ERROR | \
+      sed 's/://g' | \
+      sed 's/\t/ /g' | \
+      tr -s ' ' ' ')
+
+    touch $$temp
+    index=0
+    for point in $error_coords
+    do
+      let index=$index+1
+#     tokens are locations 5, 8, 11, 14
+#     each error line takes 14 tokens
+      if [ "$index" -eq 5 ]
+      then
+        xmin1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 8 ]
+      then
+        ymin1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 11 ]
+      then
+        xdelta1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 14 ]
+      then
+        ydelta1=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 19 ]
+      then
+        xmin2=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 22 ]
+      then
+        ymin2=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 25 ]
+      then
+        xdelta2=$(echo $point $scale | awk '{print $1*$2 }')
+        continue
+      fi
+      if [ "$index" -eq 28 ]
+      then
+        adjvia=1
+        ydelta2=$(echo $point $scale | awk '{print $1*$2 }')
+        let "xmax1=xmin1+xdelta1"
+        let "ymax1=ymin1+ydelta1"
+        let "xmax2=xmin2+xdelta2"
+        let "ymax2=ymin2+ydelta2"
+        let "xbox1=xmin1-xmax2"
+        if [ "$xbox1" -lt 0 ] ; then let xbox1=-$xbox1; fi
+        let "xbox2=xmin2-xmax1"
+        if [ "$xbox2" -lt 0 ] ; then let xbox2=-$xbox2; fi
+        if [ "$xbox1" -lt "$xbox2" ]
+        then
+          xbox=$xbox1
+        else
+          xbox=$xbox2
+        fi
+        let "ybox1=ymin1-ymax2"
+        if [ "$ybox1" -lt 0 ] ; then let ybox1=-$ybox1; fi
+        let "ybox2=ymin2-ymax1"
+        if [ "$ybox2" -lt 0 ] ; then let ybox2=-$ybox2; fi
+        if [ "$ybox1" -lt "$ybox2" ]
+        then
+          ybox=$ybox1
+        else
+          ybox=$ybox2
+        fi
+#
+#       Calculate the location of the two error geometries causing violation
+#
+        if [ "$xmin2" -gt "$xmax1" -o "$xmin1" -gt "$xmax2" ]
+        then
+#echo "#     horizontal error"
+          let "yerr1=ymin1/scaled_pitch*scaled_pitch+scaled_pitch-yoffset*scale"
+          let "yerr2=ymin2/scaled_pitch*scaled_pitch+scaled_pitch-yoffset*scale"
+          if [ "$yerr1" -gt "$ymax1" -o "$yerr1" -gt "$ymax2" \
+            -o "$yerr1" -lt "$ymin1" -o "$yerr1" -lt "$ymin2" ]
+          then
+            if [ "$yerr2" -gt "$ymax1" -o "$yerr2" -gt "$ymax2" \
+              -o "$yerr2" -lt "$ymin1" -o "$yerr2" -lt "$ymin2" ]
+            then
+              adjvia=0
+            else
+              yerr1=$yerr2
+            fi
+          else
+            if [ "$yerr2" -gt "$ymax1" -o "$yerr2" -gt "$ymax2" \
+              -o "$yerr2" -lt "$ymin1" -o "$yerr2" -lt "$ymin2" ]
+            then
+              yerr2=$yerr1
+            fi
+          fi
+          if [ "$xmin2" -gt "$xmax1" ]
+          then
+            let "xmax=xmax1/scaled_pitch"
+          else
+            let "xmax=xmax2/scaled_pitch"
+          fi
+          let "xerr1=xmax*scaled_pitch+xoffset*scale"
+          let "xerr2=xmax*scaled_pitch+scaled_pitch+xoffset*scale"
+        else
+#echo "#     vertical error"
+          if [ "$xmin1" -ge 0 ]
+          then
+            let "xerr1=xmin1/scaled_pitch*scaled_pitch+scaled_pitch-xoffset*scale"
+          else
+            let "xerr1=xmin1/scaled_pitch*scaled_pitch-xoffset*scale"
+          fi
+          if [ "$xmin2" -ge 0 ]
+          then
+            let "xerr2=xmin2/scaled_pitch*scaled_pitch+scaled_pitch-xoffset*scale"
+          else
+           let "xerr2=xmin2/scaled_pitch*scaled_pitch-xoffset*scale"
+          fi
+          if [ "$xerr1" -gt "$xmax1" -o "$xerr1" -gt "$xmax2" \
+            -o "$xerr1" -lt "$xmin1" -o "$xerr1" -lt "$xmin2" ]
+          then
+            if [ "$xerr2" -gt "$xmax1" -o "$xerr2" -gt "$xmax2" \
+              -o "$xerr2" -lt "$xmin1" -o "$xerr2" -lt "$xmin2" ]
+            then
+              adjvia=0
+            else
+              xerr1=$xerr2
+            fi
+          else
+            if [ "$xerr2" -gt "$xmax1" -o "$xerr2" -gt "$xmax2" \
+              -o "$xerr2" -lt "$xmin1" -o "$xerr2" -lt "$xmin2" ]
+            then
+              xerr2=$xerr1
+            fi
+          fi
+          if [ "$ymin2" -gt "$ymax1" ]
+          then
+            let "ymax=ymax1/scaled_pitch"
+          else
+            let "ymax=ymax2/scaled_pitch"
+          fi
+          let "yerr1=ymax*scaled_pitch+yoffset*scale"
+          let "yerr2=ymax*scaled_pitch+scaled_pitch+yoffset*scale"
+        fi
+        case $error_code in
+        720|723|724)
+          layer=TALU2; via=CONT_VIA; via2=CONT_VIA2
+         ;;
+        921)
+          layer=TALU3; via=CONT_VIA2; via2=CONT_VIA3
+          ;;
+        1521)
+          layer=TALU4; via=CONT_VIA3; via2=CONT_VIA4
+          ;;
+        2221)
+          layer=TALU5; via=CONT_VIA4; via2=CONT_VIA5
+         ;;
+        2621)
+          layer=TALU6; via=CONT_VIA5; via2=CONT_VIA6
+         ;;
+        3021)
+          layer=TALU7; via=CONT_VIA6; via2=CONT_VIA7
+         ;;
+        *)
+          layer=XXX
+         ;;
+        esac
+        if [ "$layer" != XXX ]
+        then
+          is1via=$(grep -c "^V $xerr1,$yerr1,$via," $layout_cell)
+          is1via2=$(grep -c "^V $xerr1,$yerr1,$via2," $layout_cell)
+          is2via=$(grep -c "^V $xerr2,$yerr2,$via," $layout_cell)
+          is2via2=$(grep -c "^V $xerr2,$yerr2,$via2," $layout_cell)
+#echo $viacode $xerr1 $yerr1 $xerr2 $yerr2
+          if [ "$layer" != TALU2 ]
+          then
+            let "viacode=is2via+2*is2via2+4*is1via+8*is1via2"
+#echo $viacode $xerr1 $yerr1 $xerr2 $yerr2 $xwest $ysouth $xeast $ynorth
+#      -------+   +------
+#           1 |   | 2
+#      -------+   +------
+#  Place blockage at err location, where err determined as:
+#  if (1) is via or via2,                        err=2     4, 6, 8  
+#  if (2) is via or via2,                        err=1     1, 2, 9
+#  if both are vias or via2s,                    err=2     5,10
+#  if (1) is stacked via and (2) is via,         err=1    13
+#  if (1) is stacked via and (2) is via2,        err=2    14
+#  if (2) is stacked via and (1) is via,         err=2     7
+#  if (2) is stacked via and (1) is via2,        err=1    11
+#  if (1) is stacked via and (2) none,           err=2    12
+#  if (2) is stacked via and (1) none,           err=1     3
+#  if (1) and (2) stacked vias,                  err=2    15
+
+            case $viacode in
+            0)
+              xerr=$xerr1; yerr=$yerr1; adjvia=0
+              ;;
+            1|2|3|9|11|13)
+              if [ "$xerr1" -ne "$xwest" -a "$xerr1" -ne "$xeast" ]
+              then
+                xerr=$xerr1
+              else
+                xerr=$xerr2
+              fi
+              if [ "$yerr1" -ne "$ynorth" -a "$yerr1" -ne "$ysouth" ]
+              then
+                yerr=$yerr1
+              else
+                yerr=$yerr2
+              fi
+              ;;
+            4|5|6|7|8|10|12|14|15)
+              if [ "$xerr2" -ne "$xwest" -a "$xerr2" -ne "$xeast" ]
+              then
+                xerr=$xerr2
+              else
+                xerr=$xerr1
+              fi
+              if [ "$yerr2" -ne "$ynorth" -a "$yerr2" -ne "$ysouth" ]
+              then
+                yerr=$yerr2
+              else
+                yerr=$yerr1
+               fi
+              ;;
+            *)
+              xerr=$xerr1; yerr=$yerr1; adjvia=0
+              ;;
+            esac
+            if [ "$adjvia" -eq 1 ]
+            then
+              echo "S $xerr,$yerr,$xerr,$yerr,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+            fi
+          else
+#           layer is TALU2
+            let "viacode=is2via2+2*is1via2"
+            case $viacode in
+            0)
+              xerr=$xerr1; yerr=$yerr1; adjvia=0; ;;
+            1)
+              xerr=$xerr2; yerr=$yerr2; ;;
+            2)
+              xerr=$xerr1; yerr=$yerr1; ;;
+            3)
+#             choose via2 which has no cell TALU2 blockage underneath, otherwise both
+              if test -e talu2_blockages
+              then
+                let "scaled_xerr1=(xerr1-scaled_xoffset)/scaled_pitch"
+                let "scaled_yerr1=(yerr1-scaled_yoffset)/scaled_pitch"
+                let "scaled_xerr2=(xerr2-scaled_xoffset)/scaled_pitch"
+                let "scaled_yerr2=(yerr2-scaled_yoffset)/scaled_pitch"
+                err1_count=$(grep -c "^$scaled_xerr1  *$scaled_yerr1 *$" talu2_blockages)
+                err2_count=$(grep -c "^$scaled_xerr2  *$scaled_yerr2 *$" talu2_blockages)
+                if [ "$err1_count" -eq 0 ]
+                then
+                  echo "S $xerr1,$yerr1,$xerr1,$yerr1,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+                fi
+                if [ "$err2_count" -eq 0 ]
+                then
+                  echo "S $xerr2,$yerr2,$xerr2,$yerr2,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+                fi
+              else
+               echo "S $xerr1,$yerr1,$xerr1,$yerr1,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+                echo "S $xerr2,$yerr2,$xerr2,$yerr2,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+              fi
+              adjvia=0
+            ;;
+            esac
+            if [ "$adjvia" -eq 1 ]
+            then
+              echo "S $xerr,$yerr,$xerr,$yerr,$scaled_width,mosl,RIGHT,$layer" >> $$temp
+            fi
+          fi # [ "$layer" != TALU2 ]
+        fi #if [ "$layer" != XXX ]
+        index=0
+        continue
+      fi # [ "$index" -eq 28 ]
+    done
+  done
+
+  if test -e "$block_cell"
+  then
+    sed 's/^V  *ALLIANCE/000V ALLIANCE/' $block_cell | \
+      sed 's/^H /00H /' | \
+      sed 's/^EOF/zzzEOF/' > $$temp2
+  else
+    touch $$temp2
+  fi
+  cat $$temp >> $$temp2
+  sort -u $$temp2 | \
+    sed 's/^000V /V /' | \
+    sed 's/^00H /H /' | \
+    sed 's/^zzz//' > $$temp
+  mv -f $$temp $block_cell
+  rm $$temp2
+
+else
+  echo "#? Something wrong. ALU3 ne metal-2 (t) or metal-3 (s). Please check." 1>&2
+  exit 1
+fi

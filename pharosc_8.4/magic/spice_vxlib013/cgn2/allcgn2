@@ -1,0 +1,11 @@
+#!/bin/bash
+# allcgn2 2007-07-06:07h56 graham
+
+./allcgn2_delay $1
+./allcgn2_vbe
+./allcgn2_lib
+./allcgn2_html
+if test -x allcgn2_xtra
+then
+  ./allcgn2_xtra
+fi

@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Unpacking library</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="livecd_help2.html">
+	<LINK REL=PREV HREF="livecd_help9.html">
+	<LINK REL=NEXT HREF="livecd_help11.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows and Linux Live CD.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070917;21000000">
+	<META NAME="CHANGED" CONTENT="20070917;21000000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Live CD help</A>
+<A HREF="livecd_help10.html">/unpacking library</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="livecd_help2.html">UP</A></LI>
+<LI><A HREF="livecd_help9.html">PREV</A></LI>
+<LI><A HREF="livecd_help11.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Unpacking the library</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html" CLASS="current">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The library is split into two archives: <TT>pharosc_8.4.tar.gz</TT>
+and <TT>pharosc_examples_8.4.tar.gz</TT>. The examples archive is supplementary
+to the regular library archive, and has a copy of all required files
+including the compiled binaries. So jobs can just be run and results just be
+viewed. The help text shows how to use the examples archive, but can
+equally be applied to the library archive.
+<P>
+I recommend unpacking the archive to the <TT>/home/ubuntu</TT> directory
+instead of onto the USB drive.
+<UL>
+<LI>The USB drive is formatted with Micro<SMALL>$</SMALL>oft FAT which is a
+rudimentary disk format that does not support regular Linux file permissions.
+Stuff works, but if you later want to use the results on a Linux system,
+fixing the wrong file permissions will be tiresome.
+<LI>By running the examples in <TT>/home/ubuntu</TT> all disk accesses are
+to RAM. There is a significant job speed up because of this
+(see <A HREF="http://ubuntuforums.org/showthread.php?t=552205">the Ubuntu forums</A>).</UL>
+<P>
+The archive is a gzipped tar file, so unpacking it means first gunzipping it and
+then untarring it. The untarring can set the destination with the<TT> -C </TT>option,
+as shown on the right.
+<P CLASS="first">
+The <TT>pharosc</TT> directory contains the examples, an html help file
+and html support directories. The help file is the same as the web one
+so that the library can be easily tested without an internet connection.
+<P>
+The library and the examples both sit under <TT>pharosc_8.4</TT>. Note
+however that together they are large &hellip;&nbsp;in excess of 500MB.
+They won't both sit together on a computer with 1GB of RAM, as the
+Live CD only allocates half of that to the user.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/unpack_tar1.gif" NAME="untarring archive" ALIGN=LEFT BORDER=0 ALT="untarring archive" TITLE="untarring archive">
+</DIV>
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/unpack_tar2.gif" NAME="archive contents" ALIGN=LEFT BORDER=0 ALT="archive contents" TITLE="archive contents">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The examples directory has three examples: <TT>adder4</TT>,
+<TT>multi4</TT> and <TT>ram4x4</TT>. The <TT>bin</TT> directory
+has all the commands; the <TT>cells</TT> directory all the cells and
+all their views; and the <TT>etc</TT> directory the configuration files
+for the different software programs, like the design rules for a particular
+technology.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/unpack_tar3.gif" NAME="examples contents" ALIGN=LEFT BORDER=0 ALT="examples contents" TITLE="examples contents">
+</DIV>
+</DIV>
+
+</DIV>
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>

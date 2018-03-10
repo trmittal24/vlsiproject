@@ -1,0 +1,52 @@
+entity nr2a_x2 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end nr2a_x2;
+
+architecture structural of nr2a_x2 is
+Component nr2_x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1_x2
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal an : bit;
+
+begin
+
+an : iv1_x2
+   port map (
+      a   => a,
+      z   => an,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : nr2_x2
+   port map (
+      a   => b,
+      b   => an,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

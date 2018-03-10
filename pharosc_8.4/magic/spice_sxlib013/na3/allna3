@@ -1,0 +1,11 @@
+#!/bin/bash
+# allna3 2007-07-06:07h43 graham
+
+./allna3_delay $1
+./allna3_vbe
+./allna3_lib
+./allna3_html
+if test -x allna3_xtra
+then
+  ./allna3_xtra
+fi

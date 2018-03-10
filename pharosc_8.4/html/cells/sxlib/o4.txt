@@ -1,0 +1,1 @@
+4 I/P OR gate with a stage effort of about 3.4 for the o4_x2 and about 5.6 for the o4_x4.

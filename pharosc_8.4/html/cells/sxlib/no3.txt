@@ -1,0 +1,1 @@
+The no3_x1 is a single stage 3-NOR with P/N ratio of 1.5. The no3_x4 is a 3 stage 3-NOR with stage efforts of about 1.2 and 3.9.

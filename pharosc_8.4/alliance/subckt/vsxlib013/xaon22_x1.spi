@@ -1,0 +1,27 @@
+* Spice description of xaon22_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 11:00:45
+* vsxlib 0.13um values
+.subckt xaon22_x1 a1 a2 b1 b2 vdd vss z
+M1a sig2  a1    vdd   vdd p  L=0.12U  W=1.925U AS=0.510125P AD=0.510125P PS=4.38U   PD=4.38U
+M1b bn    b1    vdd   vdd p  L=0.12U  W=1.925U AS=0.510125P AD=0.510125P PS=4.38U   PD=4.38U
+M1z sig2  bn    z     vdd p  L=0.12U  W=1.925U AS=0.510125P AD=0.510125P PS=4.38U   PD=4.38U
+M2a vdd   a2    sig2  vdd p  L=0.12U  W=1.925U AS=0.510125P AD=0.510125P PS=4.38U   PD=4.38U
+M2b vdd   b2    bn    vdd p  L=0.12U  W=1.925U AS=0.510125P AD=0.510125P PS=4.38U   PD=4.38U
+M2z z     sig2  bn    vdd p  L=0.12U  W=1.925U AS=0.510125P AD=0.510125P PS=4.38U   PD=4.38U
+M3a n2    a1    vss   vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M3b 4b    b1    vss   vss n  L=0.12U  W=1.265U AS=0.335225P AD=0.335225P PS=3.06U   PD=3.06U
+M3z sig6  b2    sig2  vss n  L=0.12U  W=1.265U AS=0.335225P AD=0.335225P PS=3.06U   PD=3.06U
+M4a sig2  a2    n2    vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M4b bn    b2    4b    vss n  L=0.12U  W=1.265U AS=0.335225P AD=0.335225P PS=3.06U   PD=3.06U
+M4z z     b1    sig6  vss n  L=0.12U  W=1.265U AS=0.335225P AD=0.335225P PS=3.06U   PD=3.06U
+M5z vss   sig2  sig8  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M6z sig8  bn    z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+C5  a1    vss   0.542f
+C4  a2    vss   0.538f
+C10 b1    vss   0.783f
+C11 b2    vss   0.858f
+C9  bn    vss   1.132f
+C2  sig2  vss   1.455f
+C7  z     vss   0.690f
+.ends

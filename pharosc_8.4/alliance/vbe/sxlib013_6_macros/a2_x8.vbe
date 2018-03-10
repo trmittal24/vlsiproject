@@ -1,0 +1,32 @@
+ENTITY a2_x8 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 2750;
+  CONSTANT cin_i0        : NATURAL := 12;     
+  CONSTANT cin_i1        : NATURAL := 12;     
+  CONSTANT rdown_i0_q    : NATURAL := 290;    
+  CONSTANT rdown_i1_q    : NATURAL := 370;    
+  CONSTANT rup_i0_q      : NATURAL := 290;    
+  CONSTANT rup_i1_q      : NATURAL := 370;    
+  CONSTANT tphh_i1_q     : NATURAL := 140;     
+  CONSTANT tphh_i0_q     : NATURAL := 138;     
+  CONSTANT tpll_i0_q     : NATURAL := 196;    
+  CONSTANT tpll_i1_q     : NATURAL := 187;    
+  CONSTANT transistors	 : NATURAL := 12
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  q	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END a2_x8;
+
+ARCHITECTURE behaviour_data_flow OF a2_x8 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on a2_x8"
+  SEVERITY WARNING;
+  q <= (i0 and i1) after 1100 ps;
+END;

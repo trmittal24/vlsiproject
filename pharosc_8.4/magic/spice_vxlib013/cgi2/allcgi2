@@ -1,0 +1,11 @@
+#!/bin/bash
+# allcgi2 2007-07-06:07h55 graham
+
+./allcgi2_delay $1
+./allcgi2_vbe
+./allcgi2_lib
+./allcgi2_html
+if test -x allcgi2_xtra
+then
+  ./allcgi2_xtra
+fi

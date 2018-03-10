@@ -1,0 +1,23 @@
+* Spice description of oai31v0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:31:56
+* wsclib 0.13um values
+.subckt oai31v0x1 a1 a2 a3 b vdd vss z
+M01 sig8  a1    vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M02 vdd   a1    05    vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M03 vss   a1    sig1  vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M04 n2a   a2    sig8  vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M05 05    a2    n2b   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M06 vss   a2    sig1  vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M07 z     a3    n2a   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M08 n2b   a3    z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+M09 sig1  a3    vss   vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M10 vdd   b     z     vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M11 sig1  b     z     vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+C5  a1    vss   0.982f
+C7  a2    vss   0.683f
+C6  a3    vss   0.379f
+C4  b     vss   0.337f
+C1  sig1  vss   0.307f
+C3  z     vss   1.015f
+.ends

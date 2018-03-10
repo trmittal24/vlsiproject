@@ -1,0 +1,16 @@
+* Tue Dec 14 18:00:56 CET 2004
+.subckt xooi21v0x1 a1 a2 b vdd vss z 
+*SPICE circuit <xooi21v0x1> from XCircuit v3.20
+
+m1 an a1 vss vss n w=12u l=2u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m2 an a2 vss vss n w=12u l=2u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m3 n1 a1 vdd vdd p w=40u l=2u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m4 an a2 n1 vdd p w=40u l=2u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m5 n2 bn vdd vdd p w=28u l=2u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m6 z b an vdd p w=40u l=2u ad='40u*5u+12p' as='40u*5u+12p' pd='40u*2+14u' ps='40u*2+14u'
+m7 bn b vss vss n w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m8 z an bn vss n w=14u l=2u ad='14u*5u+12p' as='14u*5u+12p' pd='14u*2+14u' ps='14u*2+14u'
+m9 bn b vdd vdd p w=28u l=2u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m10 z bn an vss n w=14u l=2u ad='14u*5u+12p' as='14u*5u+12p' pd='14u*2+14u' ps='14u*2+14u'
+m11 z an n2 vdd p w=28u l=2u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+.ends

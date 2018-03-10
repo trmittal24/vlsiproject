@@ -1,0 +1,775 @@
+#!/bin/bash
+# makenewdotlib 2007-05-09:13h02 graham
+
+# reformat the data in the .pr, .pmd, .vbe, ,delay, .ramp and .power files
+# into a Synopsys liberty (LIB) format
+# usage makenewdotlib fred   will create fred.lib
+#
+# FLOW
+# write the cell.lib header
+# for each input pin
+#   for each value of timing_sense (negative_unate and/or positive_unate)
+#     for each of the states that the other input pins might have
+#       check if the largest input transition gives a negative delay
+#       for each of the 5 most likely input transitions
+#         find the capacitance of the pin
+#     write the input pin name and header
+#     write the averaged rise, fall and average input pin capacitances
+#     write the max_transition for this input based on whether a negative delay was found
+# for each output pin
+#   calculate the max_capacitance which is the load giving a worst case max_transition
+#   write the output pin name and header incl the calculated max_capacitance
+#   for each input pin
+#     for each value of timing_sense (negative_unate and/or positive_unate)
+#       write the power LUT for this pin and unateness
+#       (the power has been averaged in the spice sim over all other pin states)
+#   for each input pin
+#     for each value of timing_sense (negative_unate and/or positive_unate)
+#       for each of the states that the other input pins might have
+#          if only 1 other pin state, then write a single timing LUT
+#          else if more than 1 other pin state, then write a timing LUT for each state
+#               and write a non_unate timing LUT at the end
+#
+function=$(basename $PWD)
+
+if test $# -eq 0
+then
+  echo "# Usage ./makenewdotlib cell_name. Please supply cell_name." 1>&2
+  exit 1
+fi
+
+vbedir=../../../alliance/vbe/vsclib013
+
+# test that all input files exist, otherwise exit
+cell=$1
+if [ "$#" -eq 1 ]
+then
+  hold_margin=50
+else
+  hold_margin=$2
+fi
+err=0
+# check files in local directory
+for type in pr pmd vbe delay ramp power
+do
+  num_args=$(ls -1 "$cell"*."$type" 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# Missing file  "$cell"*."$type"  which is needed to make "$cell".lib." 1>&2
+    err=1
+  fi
+done
+if [ "$err" -eq 1 ]
+then
+  exit 1
+fi
+
+date=$(date '+%Y-%m-%d:%Hh%M')
+if [ vsclib013 = vsclib013 -o vsclib013 = rgalib013 -o vsclib013 = vgalib013 ]
+then
+  drive=${cell##*v?x}
+else
+  drive=${cell##*_?}
+fi
+if [ "${drive:0:1}" -eq 0 ]
+then
+  drivex10=${drive:1:1}
+else
+  let "drivex10=10*$drive"
+#  drivex10=$(echo $drive | awk '{printf "%3d\n", $1*10 }' )
+fi
+
+transition_9=1000.0
+transition_10=1500.0
+area=$(cat $vbedir/$cell.vbe | grep area | sed 's/;//' | awk '{print $6/576 }')
+tau=$(grep characteristic_delay $cell.pr | awk '{printf"%4.1f\n", $6 }')
+pwidth=$(cat $cell.pmd | grep pwidth | awk '{print $2 }')
+nwidth=$(cat $cell.pmd | grep nwidth | awk '{print $2 }')
+leakage=$(echo $[ ( $pwidth*350 + $nwidth*350 )*55*12/2 ] | awk '{printf "%5.0f\n", $1/10000}')
+
+unitcap=$(grep '^unitcap' "$cell".pmd | tr -s ' ' | sed  's/^unitcap\ //g')
+if [ "$unitcap" = "" ]
+then
+  unitcap=0
+fi
+
+if [ "$tau" = "" ]
+then
+  echo "cell("$cell") { /* "$date" */"
+else
+  echo "cell("$cell") { /* "$date" characteristic delay "$tau" ps */"
+fi
+
+# flag if single input pin gate
+single_pin=-1;
+for pin in cp d
+do
+  let single_pin=$single_pin+1
+done
+
+echo "area               : "$area" ; /* tracks */"
+echo "cell_leakage_power : "$leakage" ; /* "$cell" */"
+echo "cell_footprint     : dfnt1 ;"
+echo "ff(IQ,IQN) {clocked_on : "cp" ;"
+echo "            next_state : "d" ; }"
+
+neg_delay=0; pin_no=0
+for pin in cp
+do
+  let pin_no=$pin_no+1
+  cap1=0; cap2=0
+  for out_pin in z
+  do
+#   repeat once if one timing_sense otherwise twice
+    rup=0; rdown=0; h=0; fo4n=0; fo4p=0
+    for timing_sense in one
+    do
+#     define timing arcs based on value of timing_sense
+      timing_arc1=hl; timing_arc2=hh
+
+      other_pin_state=0
+
+#     get value of other pins when this one is toggled
+      for k in $other_pin_state
+      do
+        let h=$h+1
+        n="$k"_
+
+#       check if the largest input transition gives a negative delay
+        neg_rise_delay=$(grep '^9' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".delay | awk '{printf "%7d\n", $4*1000000000000000 }')
+        neg_fall_delay=$(grep '^9' "$cell"_"$pin"_"$out_pin"_0_"$timing_arc2".delay | awk '{printf "%7d\n", $4*1000000000000000 }')
+        if [ "$neg_rise_delay" -lt "$neg_delay" ]
+        then
+          neg_delay=$neg_rise_delay
+        fi
+        if [ "$neg_fall_delay" -lt "$neg_delay" ]
+        then
+          neg_delay=$neg_fall_delay
+        fi
+
+#       calculate cap as average of the cap measured on the 3rd to 7th transitions
+        new_cap1=0; new_cap2=0; j=0
+        for i in 2 3 4 5 6
+        do
+          let j=$j+1
+#         sum the cap values for each considered input transition and other pin state
+#         value is integer which is 5000X larger than the real cap value in fF
+          let new_cap1=$new_cap1+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".vbe | awk '{printf "%5d\n", $3*1000000000000000000 }') ]
+          let new_cap2=$new_cap2+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_0_"$timing_arc2".vbe | awk '{printf "%5d\n", $3*1000000000000000000 }') ]
+        done
+#       capacitance is average over all pin states and timing averages
+        let "cap1=(10*($h-1)*$cap1+10*$new_cap1+5*$h)/$h/10"
+        let "cap2=(10*($h-1)*$cap2+10*$new_cap2+5*$h)/$h/10"
+      done #for k in $other_pin_state
+#     copy fo4 values from cell.pr
+      fo4p=$(cat $cell.pr | grep "$pin"_"$out_pin"_"$timing_arc1" | awk '{printf "%5.2f\n", $5 }')
+      fo4n=$(cat $cell.pr | grep "$pin"_"$out_pin"_"$timing_arc2" | awk '{printf "%5.2f\n", $5 }')
+      fo4=$(cat $cell.pr | grep "$pin"_"$out_pin"_"$timing_arc1" | awk '{printf "%5.2f\n", $6 }')
+    done #for timing_sense in one
+  done #for out_pin in z
+
+  echo "pin("$pin") { /* "$cell" FO4 effort "$fo4" */"
+  echo "direction          : input ;"
+# single cap value is averaged over transitions, states and timing_senses
+  echo $[ ($cap1+$cap2)/$j/2 ] | awk '{printf "%18s%6.2f%2s\n", "capacitance        : ", $1/1000, " ;" }'
+  echo $[ $cap1/$j ] | awk '{printf "%18s%6.2f%2s\n", "rise_capacitance   : ", $1/1000, " ;" }'
+  echo $[ $cap2/$j ] | awk '{printf "%18s%6.2f%2s\n", "fall_capacitance   : ", $1/1000, " ;" }'
+  echo "fanout_load        :  1 ;"
+# Max cp transition hard coded here
+  echo "max_transition     : 670.0 ; /* pin "$pin" of "$cell" */"
+  echo "clock              : true ;"
+
+# check if this pin has an internal power component
+  if test -f "$cell"_"$pin"_"$out_pin"_u.power
+  then
+    pinpwr=$(grep '^3' "$cell"_"$pin"_"$out_pin"_u.power | awk '{printf "%7.2f\n", $4*1000000000000000 }' )
+    echo "internal_power("$pin") { /* "$cell" "$pinpwr" nW/MHz */"
+    echo "power(pwr_intran_x10) {"
+    echo -e "values( \" \c"
+    for i in 0 1 2 3 4 5 6 7 8 9
+    do
+      k=0; pinpwr=0
+      for j in 2 3 4 5 6
+      do
+#       sum pin power for this transition across all output loads
+        let k=$k+1
+        let pinpwr=$pinpwr+$(grep "^$i" "$cell"_"$pin"_"$out_pin"_u.power | awk '{printf "%1d\n", $'$j'*1000000000000000000 }' )
+      done
+#     take average of pin power and write out
+      if [ "$i" -eq 9 ]
+      then
+        echo $[ (10*$pinpwr+5)/$k/10 ] | awk '{printf"%5.2f%7s\n", $1/2000, "\" ); }} " }'
+      else
+        echo $[ (10*$pinpwr+5)/$k/10 ] | awk '{printf"%5.2f%2s", $1/2000, ", " }'
+      fi
+    done
+  fi
+
+  echo "}"
+done #for pin in cp
+
+for pin in d
+do
+  let pin_no=$pin_no+1
+  cap1=0; cap2=0
+  for out_pin in z
+  do
+#   repeat once if one timing_sense otherwise twice
+    rup=0; rdown=0; h=0; fo4n=0; fo4p=0
+    for timing_sense in one
+    do
+#     define timing arcs based on value of timing_sense
+      timing_arc1=lh; timing_arc2=hl
+
+      other_pin_state=0
+
+#     get value of other pins when this one is toggled
+      for k in $other_pin_state
+      do
+        let h=$h+1
+        n="$k"_
+
+#       calculate cap as average of the cap measured on the 3rd to 7th transitions
+        new_cap1=0; new_cap2=0; j=0
+        for i in 2 3 4 5 6
+        do
+          let j=$j+1
+#         sum the cap values for each considered input transition and other pin state
+#         value is integer which is 5000X larger than the real cap value in fF
+          let new_cap1=$new_cap1+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_"$n$timing_arc1".vbe | awk '{printf "%5d\n", $3*1000000000000000000 }') ]
+          let new_cap2=$new_cap2+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_"$n$timing_arc2".vbe | awk '{printf "%5d\n", $3*1000000000000000000 }') ]
+        done
+#       capacitance is average over all pin states and timing averages
+        let "cap1=(10*($h-1)*$cap1+10*$new_cap1+5*$h)/$h/10"
+        let "cap2=(10*($h-1)*$cap2+10*$new_cap2+5*$h)/$h/10"
+      done #for k in $other_pin_state
+#     copy fo4 values from cell.pr
+      fo4p=$(cat $cell.pr | grep "$pin"_"$out_pin"_"$timing_arc1" | awk '{printf "%5.2f\n", $5 }')
+      fo4n=$(cat $cell.pr | grep "$pin"_"$out_pin"_"$timing_arc2" | awk '{printf "%5.2f\n", $5 }')
+      fo4=$(cat $cell.pr | grep "$pin"_"$out_pin"_"$timing_arc1" | awk '{printf "%5.2f\n", $6 }')
+    done #for timing_sense in one
+  done #for out_pin in z
+
+  echo "pin("$pin") { /* "$cell" */"
+  echo "direction          : input ;"
+# single cap value is averaged over transitions, states and timing_senses
+  echo $[ ($cap1+$cap2)/$j/2 ] | awk '{printf "%18s%6.2f%2s\n", "capacitance        : ", $1/1000, " ;" }'
+  echo $[ $cap1/$j ] | awk '{printf "%18s%6.2f%2s\n", "rise_capacitance   : ", $1/1000, " ;" }'
+  echo $[ $cap2/$j ] | awk '{printf "%18s%6.2f%2s\n", "fall_capacitance   : ", $1/1000, " ;" }'
+  echo "fanout_load        :  1 ;"
+  echo "max_transition     : $transition_10 ; /* pin "$pin" of "$cell" */"
+
+# check if this pin has an internal power component
+  if test -f "$cell"_"$pin"_"$out_pin"_u.power
+  then
+    pinpwr=$(grep '^3' "$cell"_"$pin"_"$out_pin"_u.power | awk '{printf "%7.2f\n", $4*500000000000000 }' )
+    echo "internal_power("$pin") { /* "$cell" "$pinpwr" nW/MHz (at clock frequency) */"
+    echo "power(pwr_intran_x10) {"
+    echo -e "values( \" \c"
+    for i in 0 1 2 3 4 5 6 7 8 9
+    do
+      k=0; pinpwr=0
+      for j in 2 3 4 5 6
+      do
+#       sum pin power for this transition across all output loads
+        let k=$k+1
+        let pinpwr=$pinpwr+$(grep "^$i" "$cell"_"$pin"_"$out_pin"_u.power | awk '{printf "%1d\n", $'$j'*1000000000000000000 }' )
+      done
+#     take average of pin power and write out
+      if [ "$i" -eq 9 ]
+      then
+        echo $[ (10*$pinpwr+5)/$k/10 ] | awk '{printf"%5.2f%7s\n", $1/2000, "\" ); }}" }'
+      else
+        echo $[ (10*$pinpwr+5)/$k/10 ] | awk '{printf"%5.2f%2s", $1/2000, ", " }'
+      fi
+    done
+  fi
+  echo "timing() {"
+  echo "related_pin        : "cp" ;"
+
+  echo "timing_type        : setup_rising ;"
+  echo "rise_constraint(suh_4x4) {"
+  grep '^[0-9]' ${cell}_${pin}_cp_0_lh.delay | sed 's/^\(.*\).$/\1/' > $$sur_0
+  grep '^[0-9]' ${cell}_${pin}_cp_1_lh.delay | sed 's/^\(.*\).$/\1/' > $$sur_1
+  paste $$sur_0 $$sur_1 | tr -s '\t' ' ' > $$sur
+# Choose max setup time
+  { while read index_0 tran0 su0_1 su0_2 su0_3 su0_4 index_1 tran1 su1_1 su1_2 su1_3 su1_4
+  do
+    let "su_1=($(echo $su0_1 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_1 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_1 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_1 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    let "su_2=($(echo $su0_2 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_2 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_2 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_2 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    let "su_3=($(echo $su0_3 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_3 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_3 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_3 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    let "su_4=($(echo $su0_4 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_4 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_4 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_4 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    echo $index_0 $su_1 $su_2 $su_3 $su_4 | awk '{printf "%1d%7.2f%7.2f%7.2f%7.2f\n", $1,$2/100,$3/100,$4/100,$5/100}' >> $$sur1
+  done } < $$sur
+  rm -f $$sur_0 $$sur_1 $$sur
+
+  for i in 0 1 2 3
+  do
+    if [ "$i" -eq 0 ]
+    then
+      grep '^0' $$sur1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "values( \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    elif [ "$i" -gt 0 -a "$i" -lt 3 ]
+    then
+      grep "^$i" $$sur1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    else
+      grep '^3' $$sur1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\" ); }"}'
+    fi
+  done #for i in 0 1 2 3
+  rm -f $$sur1
+
+  echo "fall_constraint(suh_4x4) {"
+  grep '^[0-9]' ${cell}_${pin}_cp_0_hl.delay | sed 's/^\(.*\).$/\1/' > $$suf_0
+  grep '^[0-9]' ${cell}_${pin}_cp_1_hl.delay | sed 's/^\(.*\).$/\1/' > $$suf_1
+  paste $$suf_0 $$suf_1 | tr -s '\t' ' ' > $$suf
+# Choose max setup time
+  { while read index_0 tran0 su0_1 su0_2 su0_3 su0_4 index_1 tran1 su1_1 su1_2 su1_3 su1_4
+  do
+    let "su_1=($(echo $su0_1 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_1 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_1 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_1 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    let "su_2=($(echo $su0_2 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_2 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_2 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_2 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    let "su_3=($(echo $su0_3 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_3 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_3 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_3 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    let "su_4=($(echo $su0_4 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $su1_4 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $su1_4 | awk '{printf "%7d\n", $1*100000000000000 }'):$(echo $su0_4 | awk '{printf "%7d\n", $1*100000000000000 }')+50)"
+    echo $index_0 $su_1 $su_2 $su_3 $su_4 | awk '{printf "%1d%7.2f%7.2f%7.2f%7.2f\n", $1,$2/100,$3/100,$4/100,$5/100}' >> $$suf1
+  done } < $$suf
+  rm -f $$suf_0 $$suf_1 $$suf
+
+  for i in 0 1 2 3
+  do
+    if [ "$i" -eq 0 ]
+    then
+      grep '^0' $$suf1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "values( \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    elif [ "$i" -gt 0 -a "$i" -lt 3 ]
+    then
+      grep "^$i" $$suf1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    else
+      grep '^3' $$suf1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\" ); }}"}'
+    fi
+  done #for i in 0 1 2 3
+  rm -f $$suf1
+
+  echo "timing() {"
+  echo "related_pin        : "cp" ;"
+
+  echo "timing_type        : hold_rising ;"
+  echo "rise_constraint(suh_4x4) {"
+  grep '^[0-9]' ${cell}_cp_${pin}_0_lh.delay | sed 's/^\(.*\).$/\1/' > $$hor_0
+  grep '^[0-9]' ${cell}_cp_${pin}_1_lh.delay | sed 's/^\(.*\).$/\1/' > $$hor_1
+  paste $$hor_0 $$hor_1 | tr -s '\t' ' ' > $$hor
+# Choose max hold time
+  { while read index_0 tran0 ho0_1 ho0_2 ho0_3 ho0_4 index_1 tran1 ho1_1 ho1_2 ho1_3 ho1_4
+  do
+    let "ho_1=($(echo $ho0_1 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_1 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_1 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_1 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    let "ho_2=($(echo $ho0_2 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_2 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_2 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_2 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    let "ho_3=($(echo $ho0_3 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_3 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_3 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_3 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    let "ho_4=($(echo $ho0_4 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_4 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_4 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_4 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    echo $index_0 $ho_1 $ho_2 $ho_3 $ho_4 | awk '{printf "%1d%7.2f%7.2f%7.2f%7.2f\n", $1,$2/100,$3/100,$4/100,$5/100}' >> $$hor1
+  done } < $$hor
+  rm -f $$hor_0 $$hor_1 $$hor
+
+  for i in 0 1 2 3
+  do
+    if [ "$i" -eq 0 ]
+    then
+      grep '^0' $$hor1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "values( \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    elif [ "$i" -gt 0 -a "$i" -lt 3 ]
+    then
+      grep "^$i" $$hor1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    else
+      grep '^3' $$hor1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\" ); }"}'
+    fi
+  done #for i in 0 1 2 3
+  rm -f $$hor1
+
+  echo "fall_constraint(suh_4x4) {"
+  grep '^[0-9]' ${cell}_cp_${pin}_0_hl.delay | sed 's/^\(.*\).$/\1/' > $$hof_0
+  grep '^[0-9]' ${cell}_cp_${pin}_1_hl.delay | sed 's/^\(.*\).$/\1/' > $$hof_1
+  paste $$hof_0 $$hof_1 | tr -s '\t' ' ' > $$hof
+# Choose max hold time
+  { while read index_0 tran0 ho0_1 ho0_2 ho0_3 ho0_4 index_1 tran1 ho1_1 ho1_2 ho1_3 ho1_4
+  do
+    let "ho_1=($(echo $ho0_1 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_1 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_1 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_1 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    let "ho_2=($(echo $ho0_2 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_2 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_2 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_2 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    let "ho_3=($(echo $ho0_3 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_3 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_3 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_3 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    let "ho_4=($(echo $ho0_4 | awk '{printf "%7d\n", $1*100000000000000 }')<$(echo $ho1_4 | awk '{printf "%7d\n", $1*100000000000000 }')?$(echo $ho1_4 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50:$(echo $ho0_4 | awk '{printf "%7d\n", $1*100000000000000 }')+$hold_margin*100+50)"
+    echo $index_0 $ho_1 $ho_2 $ho_3 $ho_4 | awk '{printf "%1d%7.2f%7.2f%7.2f%7.2f\n", $1,$2/100,$3/100,$4/100,$5/100}' >> $$hof1
+  done } < $$hof
+  rm -f $$hof_0 $$hof_1 $$hof
+
+  for i in 0 1 2 3
+  do
+    if [ "$i" -eq 0 ]
+    then
+      grep '^0' $$hof1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "values( \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    elif [ "$i" -gt 0 -a "$i" -lt 3 ]
+    then
+      grep "^$i" $$hof1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\", \\"}'
+    else
+      grep '^3' $$hof1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+        $2, ", ", \
+        $3, ", ", \
+        $4, ", ", \
+        $5, "\" ); }}"}'
+    fi
+  done #for i in 0 1 2 3
+  rm -f $$hof1
+  echo "}"
+done #for pin in d
+
+for out_pin in z
+do
+  #
+  # ----- This section calculates a value for max_capacitance which either equals the max -----
+  # ----- value in the LUT, or the capacitance which gives an output transition equal to  -----
+  # -----                    the max input net transition in the LUT                      -----
+  #
+  # define the library constants: unitcap and max_rise_transition
+  if [ "$unitcap" = 0 ]
+  then
+#   no value in cell.pmd, so use the value coming from technology.pmd
+    unitcap=2.0
+  fi
+  unitcapx100=$(echo $unitcap | awk '{printf "%3d\n", $1*100 }' )
+
+  lower_net_cap=$(grep '^total_output_net_capacitance' ../technology.pmd | awk '{printf "%4d\n", $6 }')
+  let "lower_net_cap=lower_net_cap *drivex10 *unitcapx100 +5"
+  upper_net_cap=$(grep '^total_output_net_capacitance' ../technology.pmd | awk '{printf "%4d\n", $7 }')
+  let "upper_net_cap=upper_net_cap *drivex10 *unitcapx100 +5"
+  lutcap=$(echo $upper_net_cap | awk '{printf "%1d\n", $1/1000 }')
+# max transition on pin cp set here. Should be moved to technology.pmd.
+  max_rise_transition=$(echo "20p 60p 90p 130p 200p 300p 450p 670p 1000p 1500p" | awk '{print $10}')
+  max_rise_transition=$(echo $[ (${max_rise_transition%*p} *10 ) ] )
+
+  maxcap=0; lower_rise_transition=0
+  for pin in cp
+  do
+#   first loop thru input pins to find lower_rise_transition
+    rup=0; rdown=0
+    for timing_sense in one
+    do
+      timing_arc1=hl; timing_arc2=hh
+      other_pin_state=0
+
+#     get value of other pins when this one is toggled
+      for k in $other_pin_state
+      do
+        n="$k"_
+
+        this_lower_rise_transition=$(grep '^9' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".ramp | awk '{printf "%7d\n", ($7*100000000000000+5)/10 }')
+        this_upper_rise_transition=$(grep '^9' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".ramp | awk '{printf "%7d\n", ($8*100000000000000+5)/10 }')
+
+        if [ "$lower_rise_transition" -lt "$this_lower_rise_transition" ]
+        then
+          lower_rise_transition=$this_lower_rise_transition
+          upper_rise_transition=$this_upper_rise_transition
+          wc_ramp_file="$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".ramp
+          wc_unate_value=$timing_sense
+        fi
+      done #for k in $other_pin_state
+    done #for timing_sense in $unate_values
+  done #for pin cp
+# found value for lower_rise_transition and associated ramp delay file
+
+# make sure max_rise_transition lies between lower and upper rise_transition values
+
+  lower_rise_transition=$(grep '^9' "$wc_ramp_file" | awk '{printf "%7d\n", ($7*100000000000000+5)/10 }')
+  upper_rise_transition=$(grep '^9' "$wc_ramp_file" | awk '{printf "%7d\n", ($8*100000000000000+5)/10 }')
+
+  field_index=6
+  while [ "$lower_rise_transition" -gt "$max_rise_transition" ]
+  do
+    upper_rise_transition=$lower_rise_transition
+    lower_rise_transition=$(grep '^0' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".ramp | awk '{printf "%7d\n", ($'$field_index'*100000000000000+5)/10 }')
+    let "field_index=field_index-1"
+    upper_net_cap=$lower_net_cap
+
+    lower_net_cap=$(grep '^total_output_net_capacitance' ../technology.pmd | awk '{printf "%4d\n", $'$field_index' }')
+    let "lower_net_cap=lower_net_cap *drivex10 *unitcapx100 +5"
+
+    if [ "$field_index" -le 1 ]
+    then
+      echo "/* !? Something odd happened when calculating the max input transition */"  
+      break
+    fi
+  done
+  if [ "$upper_rise_transition" -gt "$max_rise_transition" ]
+  then
+    maxcap1=$(echo $[ $lower_net_cap+($max_rise_transition-$lower_rise_transition)*($upper_net_cap-$lower_net_cap)/($upper_rise_transition-$lower_rise_transition)+50 ] )
+    if [ "$maxcap" -eq 0 -o "$maxcap" -gt "$maxcap1" ]
+    then
+      maxcap=$(echo $maxcap1 | awk '{printf "%4d\n", $1/1000 }')
+    fi
+  else
+    maxcap=$(echo $upper_net_cap | awk '{printf "%4d\n", $1/1000 }')
+  fi
+# check whether PMD max_cap value is lower
+  pmd_max_cap=$(cat $cell.pmd | grep max_capacitance | awk '{print $2 }')
+  if [ "$pmd_max_cap" -lt "$maxcap" ]
+  then
+    maxcap=$pmd_max_cap
+  fi
+# value of max cap now calculated
+
+  logic_function=$(grep "^$out_pin" "$function".pmd | tr -s ' ' | sed "s/^$out_pin\ //g" | \
+    grep '^logic_function' | sed 's/^logic_function\ //g')
+
+  echo "pin("$out_pin") {"
+  echo "direction          : output ;"
+  echo "min_transition     : 20 ;"
+  echo "min_capacitance    : "$(grep min_capacitance "$cell".pmd | sed 's/^min_capacitance[ *]//g')" ;"
+  echo "max_capacitance    : "$maxcap" ;"
+  echo "max_fanout         : "$(grep max_fanout "$cell".pmd | sed 's/^max_fanout[ *]//g')" ;"
+  echo "function           : \""$logic_function"\" ;"
+
+# write out the internal power LUTs for each input pin and timing_sense
+  for pin in cp
+  do
+    for timing_sense in one
+    do
+      power_name_n=n
+      power_name_p=p
+      pinpwr_n=$(grep '^3' "$cell"_"$pin"_"$out_pin"_"$power_name_n".power | awk '{printf "%7d\n", $4*100000000000000000 }' )
+      pinpwr_p=$(grep '^3' "$cell"_"$pin"_"$out_pin"_"$power_name_p".power | awk '{printf "%7d\n", $4*100000000000000000 }' )
+      let "pinpwr=pinpwr_n+pinpwr_p+100"
+      pinpwr=$(echo $pinpwr | awk '{printf "%7.2f\n", $1/200 }')
+      echo "internal_power("$pin"_"$out_pin") { /* "$cell" "$pinpwr" nW/MHz (at clock frequency) */"
+      echo "related_pin        : \""$pin"\" ;"
+
+#     The sed fixes a problem with the last character buggering the paste command
+      grep '^[0-9]' ${cell}_${pin}_${out_pin}_n.power | sed 's/^\(.*\).$/\1/' > $$power_n
+      grep '^[0-9]' ${cell}_${pin}_${out_pin}_p.power | sed 's/^\(.*\).$/\1/' > $$power_p
+      grep '^[0-9]' ${cell}_${pin}_${out_pin}_u.power | sed 's/^\(.*\).$/\1/' > $$power_u
+      paste $$power_n $$power_p $$power_u | tr -s '\t' ' ' > $$power
+#     Power is average of power_n and power_p minus the power from clock switching only. p0-4 are 200x bigger than real values.
+      { while read index_n pn0 pn1 pn2 pn3 pn4 index_p pp0 pp1 pp2 pp3 pp4 index_u pu0 pu1 pu2 pu3 pu4
+      do
+        let "p0=(($(echo $pn0 | awk '{printf "%7d\n", $1*100000000000000000 }')+$(echo $pp0 | awk '{printf "%7d\n", $1*100000000000000000 }')+1)/2-$(echo $pu0 | awk '{printf "%7d\n", $1*100000000000000000 }')+50)"
+        let "p1=(($(echo $pn1 | awk '{printf "%7d\n", $1*100000000000000000 }')+$(echo $pp1 | awk '{printf "%7d\n", $1*100000000000000000 }')+1)/2-$(echo $pu1 | awk '{printf "%7d\n", $1*100000000000000000 }')+50)"
+        let "p2=(($(echo $pn2 | awk '{printf "%7d\n", $1*100000000000000000 }')+$(echo $pp2 | awk '{printf "%7d\n", $1*100000000000000000 }')+1)/2-$(echo $pu2 | awk '{printf "%7d\n", $1*100000000000000000 }')+50)"
+        let "p3=(($(echo $pn3 | awk '{printf "%7d\n", $1*100000000000000000 }')+$(echo $pp3 | awk '{printf "%7d\n", $1*100000000000000000 }')+1)/2-$(echo $pu3 | awk '{printf "%7d\n", $1*100000000000000000 }')+50)"
+        let "p4=(($(echo $pn4 | awk '{printf "%7d\n", $1*100000000000000000 }')+$(echo $pp4 | awk '{printf "%7d\n", $1*100000000000000000 }')+1)/2-$(echo $pu4 | awk '{printf "%7d\n", $1*100000000000000000 }')+50)"
+        echo $index_n $p0 $p1 $p2 $p3 $p4 | awk '{printf "%1d%7.2f%7.2f%7.2f%7.2f%7.2f\n", $1,$2/100,$3/100,$4/100,$5/100,$6/100}' >> $$power1
+      done } < $$power
+      rm -f $$power_n $$power_p $$power_u $$power
+
+      for i in 0 1 2 3 4 5 6 7 8 9
+      do
+        if [ "$i" -eq 0 ]
+        then
+          echo "power(pwr_x"$drive"_"$lutcap"_5x10) {"
+          grep '^0' $$power1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "values( \"", \
+            $2<0?0:$2, ", ", \
+            $3<0?0:$3, ", ", \
+            $4<0?0:$4, ", ", \
+            $5<0?0:$5, ", ", \
+            $6<0?0:$6, "\", \\" }'
+        elif [ "$i" -gt 0 -a "$i" -lt 9 ]
+        then
+          grep "^$i" $$power1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+            $2<0?0:$2, ", ", \
+            $3<0?0:$3, ", ", \
+            $4<0?0:$4, ", ", \
+            $5<0?0:$5, ", ", \
+            $6<0?0:$6, "\", \\" }'
+        else
+          grep '^9' $$power1 | awk '{printf "%9s%7s%-2s%7s%-2s%7s%-2s%7s%-2s%7s%-4s\n", "        \"", \
+            $2<0?0:$2, ", ", \
+            $3<0?0:$3, ", ", \
+            $4<0?0:$4, ", ", \
+            $5<0?0:$5, ", ", \
+            $6<0?0:$6, "\" ); }}" }'
+        fi
+      done #for i in 0 1 2 3 4 5 6 7 8 9
+    done #for timing_sense in one
+  done #for pin power LUTs written
+  rm -f $$power1
+
+#
+# set output transition threshold to library value or function value if this has been set differently
+#
+  threshold_pct[0]=$(grep '^lower_lh_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[1]=$(grep '^upper_lh_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[2]=$(grep '^lower_hl_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[3]=$(grep '^upper_hl_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[4]=$(grep '^lower_hh_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[5]=$(grep '^upper_hh_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[6]=$(grep '^lower_ll_pct' ../technology.pmd | awk '{print $2 }')
+  threshold_pct[7]=$(grep '^upper_ll_pct' ../technology.pmd | awk '{print $2 }')
+  i=0
+  for threshold_type in lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct
+  do
+    temp=$(grep "^ *$threshold_type " "$function".pmd | awk '{print $2 }')
+    if [ "$temp" != "" ]
+    then
+      threshold_pct[$i]=$temp
+    fi
+    let i=$i+1
+  done
+#
+# write out the timing LUTs for each input pin
+#
+  for pin in cp
+  do
+#
+#   read and set transition thresholds from cell.pmd if defined there
+#
+    i=0
+    for threshold_type in lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct
+    do
+#
+#     first check if output transition threshold defined for all input pins
+#
+      temp=$(grep "^ *$threshold_type " "$cell".pmd | awk '{print $2 }')
+      if [ "$temp" != "" ]
+      then
+#
+#       threshold defined in cell.pmd
+#
+        threshold_pct[$i]=$temp
+      fi
+      let i=$i+1
+    done
+#
+#   second check if threshold defined for individual pin
+#
+    i=0
+    for threshold_type in lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct
+    do
+      temp=$(grep "^ *$pin " "$cell".pmd | grep "$threshold_type" | awk '{print $3 }')
+      if [ "$temp" != "" ]
+      then
+#
+#       threshold defined for this pin in cell.pmd
+#
+        threshold_pct[$i]=$temp
+      fi
+      let i=$i+1
+    done
+
+    for timing_sense in one
+    do
+      timing_arc1=hl
+      timing_arc2=hh
+
+#     get value of other pins when this one is toggled
+      other_pin_state=0
+#     see how many other states there are: more than 1 means adding when and sdf_cond    
+      num_states=0
+      for k in $other_pin_state
+      do
+        let num_states=$num_states+1
+      done
+      if [ "$num_states" -gt 1 ]
+      then
+#       find the names of the other pins
+        j=0
+        for pin2 in cp d
+        do
+          if [ "$pin" != "$pin2" ]
+          then
+            let j=$j+1
+            other_pin[$j]=$pin2
+          fi
+        done
+      fi
+#     each value of other_pin_state will have its own set of timing
+#     must add a dummy state (nu) to handle the non_unate case
+      for k in $other_pin_state 
+      do
+        echo "timing() {"
+        echo "related_pin        : \""$pin"\" ;"
+        echo "timing_type        : rising_edge ;"
+        echo "/* intrinsic_rise     : "$(grep "^${pin}_${out_pin}_hl" "$cell".pr | awk '{print $2 }')" ; */"
+        echo "/* intrinsic_fall     : "$(grep "^${pin}_${out_pin}_hh" "$cell".pr | awk '{print $2 }')" ; */"
+        echo "/* rise_resistance    : "$(grep "^${pin}_${out_pin}_hl" "$cell".pr | awk '{print $3 }')" ; */"
+        echo "/* fall_resistance    : "$(grep "^${pin}_${out_pin}_hh" "$cell".pr | awk '{print $3 }')" ; */"
+        for transition in $timing_arc1 $timing_arc2
+        do
+          if [ "$transition" = "$timing_arc1" ]
+          then
+            n=1_
+          else
+            n=0_
+          fi
+          for extension in delay ramp
+          do 
+            if [ "$extension" = delay -a "$transition" = "$timing_arc1" ]
+            then
+              echo "cell_rise(x"$drive"_"$lutcap"_6x10) { /* 50.0% of input to 50.0% of output */"
+            elif [ "$extension" = ramp -a "$transition" = "$timing_arc1" ]
+            then
+              echo "rise_transition(x"$drive"_"$lutcap"_6x10) { /* "${threshold_pct[0]}"%-"${threshold_pct[1]}"%, scaled to 0%-100% */"
+            elif [ "$extension" = delay -a "$transition" = "$timing_arc2" ]
+            then
+              echo "cell_fall(x"$drive"_"$lutcap"_6x10) { /* 50.0% of input to 50.0% of output */"
+            elif [ "$extension" = ramp -a "$transition" = "$timing_arc2" ]
+            then
+              echo "fall_transition(x"$drive"_"$lutcap"_6x10) { /* "${threshold_pct[2]}"%-"${threshold_pct[3]}"%, scaled to 0%-100% */"
+            fi
+            grep '^0' ${cell}_${pin}_${out_pin}_${n}${transition}.${extension} | awk '{printf "%9s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-4s\n", "values( \"", \
+              $3*1000000000000, ", ", $4*1000000000000, ", ", $5*1000000000000, ", ", $6*1000000000000, ", ", $7*1000000000000, ", ", $8*1000000000000, "\", \\" }'
+            for  transition_index in 1 2 3 4 5 6 7 8
+            do
+              grep "^$transition_index" ${cell}_${pin}_${out_pin}_${n}${transition}.${extension} | awk '{printf "%9s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-4s\n", "        \"", \
+                $3*1000000000000, ", ", $4*1000000000000, ", ", $5*1000000000000, ", ", $6*1000000000000, ", ", $7*1000000000000, ", ", $8*1000000000000, "\", \\" }'
+            done
+            grep '^9' ${cell}_${pin}_${out_pin}_${n}${transition}.${extension} | awk '{printf "%9s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-2s%6.1f%-4s", "        \"", \
+              $3*1000000000000, ", ", $4*1000000000000, ", ", $5*1000000000000, ", ", $6*1000000000000, ", ", $7*1000000000000, ", ", $8*1000000000000, "\" ); }" }'
+
+            if [ "$extension" = ramp -a "$transition" = "$timing_arc2" ]
+            then
+              echo "}"
+            else
+              echo
+            fi
+          done #for extension in delay ramp
+        done #for transition in $timing_arc1 $timing_arc2
+      done #for k in $other_pin_state
+    done #for timing_sense in $unate_values
+  done #for pin in cp
+  echo "}"
+done #for out_pin in z
+echo "}"
+

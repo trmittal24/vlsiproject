@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -f *.vbe
+
+ls -1 ../vsclib013/*.vbe | sed 's|^../vsclib013/\(.*\).vbe$|./convert_vsc_wsc \1|' | bash
+
+cp ../vsclib013/VSCLIB013 WSCLIB013

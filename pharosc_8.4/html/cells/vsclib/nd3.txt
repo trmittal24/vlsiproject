@@ -1,0 +1,12 @@
+5 cells with their P/N ratio set to 2.33.
+The fastest speed occurs when the shape factor
+<SPAN CLASS="mathsvar">r</SPAN>=&radic;(<SPAN CLASS="mathsvar">K<SUB>P</SUB></SPAN>&divide;<SPAN CLASS="mathsvar">K<SUB>N</SUB></SPAN>&times;&micro;).
+For a 3-NAND gate, we use
+<SPAN CLASS="mathsvar">K<SUB>P</SUB></SPAN>=1;
+<SPAN CLASS="mathsvar">K<SUB>N</SUB></SPAN>=7/3,
+and &micro;=9/4, giving
+<SPAN CLASS="mathsvar">r</SPAN>=&radic;(27/28).
+We chooose to set <SPAN CLASS="mathsvar">r</SPAN>=1 instead,
+so the P/N ratio is close to the maximum speed,
+as well as giving balanced rise and fall drive strengths,
+with the convenience of the P and N transistors having the same size.

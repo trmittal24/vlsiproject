@@ -1,0 +1,13 @@
+* Sun Feb 25 16:40:25 CET 2007
+.subckt aoi211v5x05 a1 a2 b c vdd vss z
+*SPICE circuit <aoi211v5x05> from XCircuit v3.4 rev 26
+
+m1 n3 a1 vss vss n w=9u l=2.3636u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m2 z b vss vss n w=6u l=2.3636u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m3 n1 a2 vdd vdd p w=27u l=2.3636u ad='27u*5u+12p' as='27u*5u+12p' pd='27u*2+14u' ps='27u*2+14u'
+m4 z c n2 vdd p w=27u l=2.3636u ad='27u*5u+12p' as='27u*5u+12p' pd='27u*2+14u' ps='27u*2+14u'
+m5 z a2 n3 vss n w=9u l=2.3636u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m6 n1 a1 vdd vdd p w=27u l=2.3636u ad='27u*5u+12p' as='27u*5u+12p' pd='27u*2+14u' ps='27u*2+14u'
+m7 z c vss vss n w=6u l=2.3636u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m8 n2 b n1 vdd p w=27u l=2.3636u ad='27u*5u+12p' as='27u*5u+12p' pd='27u*2+14u' ps='27u*2+14u'
+.ends

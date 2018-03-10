@@ -1,0 +1,21 @@
+* Spice description of nmx2_x1
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:30:15
+* sxlib 0.13um values
+.subckt nmx2_x1 cmd i0 i1 nq vdd vss
+Mtr_00001 sig4  cmd   nq    vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00002 nq    sig1  sig5  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00003 vss   i1    sig4  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00004 sig5  i0    vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00005 vss   cmd   sig1  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00006 nq    sig1  sig8  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00007 sig7  cmd   nq    vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00008 sig8  i1    vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00009 vdd   i0    sig7  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00010 sig1  cmd   vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C11 cmd   vss   0.805f
+C10 i0    vss   0.665f
+C9  i1    vss   0.835f
+C2  nq    vss   0.787f
+C1  sig1  vss   1.265f
+.ends

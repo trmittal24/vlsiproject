@@ -1,0 +1,53 @@
+(rds to CIF driver cvs version $Revision: 1.1.1.1 $
+technology /home/dev/alliance/etc/sx200.rds
+Sat Jul 21 19:32:25 2007
+powmid_x0
+graham);
+DS 1 100 2;
+9 powmid_x0;
+L AB;
+B 140 200 70 100;
+4A 0 0 140 200; 
+L CM1;
+4X vss 1 70 12 4 vss;
+L CM1;
+B 4 4 70 12;
+4X vss 2 70 12 4 vss;
+B 4 4 70 12;
+B 48 30 40 189;
+4X vdd 3 70 188 4 vdd;
+B 4 4 70 188;
+4X vdd 4 70 188 4 vdd;
+B 4 4 70 188;
+B 48 30 100 11;
+B 148 28 70 12;
+B 148 28 70 188;
+L CV1;
+B 4 4 20 200;
+B 4 4 40 200;
+B 4 4 60 200;
+B 4 4 80 0;
+B 4 4 100 0;
+B 4 4 120 0;
+L CM2;
+B 48 8 40 200;
+B 48 8 100 0;
+L CV2;
+B 4 4 20 200;
+B 4 4 40 200;
+B 4 4 60 200;
+B 4 4 80 0;
+B 4 4 100 0;
+B 4 4 120 0;
+L CM3;
+4X vdd 5 40 100 8 vdd;
+L CM3;
+B 8 8 40 100;
+B 48 208 40 100;
+4X vss 6 100 100 8 vss;
+B 8 8 100 100;
+B 48 208 100 100;
+DF;
+C 1;
+(AB : 0.00  0.00 70.00, 100.00 in micron); 
+E 

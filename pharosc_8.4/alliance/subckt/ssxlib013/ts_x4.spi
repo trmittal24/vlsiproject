@@ -1,0 +1,24 @@
+* Spice description of ts_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:40:38
+* ssxlib 0.13um values
+.subckt ts_x4 cmd i q vdd vss
+Mtr_00001 q     sig3  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00002 vss   sig3  q     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00003 sig4  cmd   vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00004 sig6  cmd   sig3  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00005 vss   sig4  sig3  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00006 sig3  i     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00007 sig4  cmd   vdd   vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00008 q     sig6  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00009 sig6  i     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00010 sig6  sig4  sig3  vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00011 vdd   cmd   sig6  vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00012 vdd   sig6  q     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C5  cmd   vss   1.546f
+C7  i     vss   0.679f
+C2  q     vss   0.900f
+C3  sig3  vss   0.892f
+C4  sig4  vss   0.736f
+C6  sig6  vss   1.092f
+.ends

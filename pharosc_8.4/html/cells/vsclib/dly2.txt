@@ -1,0 +1,2 @@
+The dly2 cells use two inverters with series transistors. The layout style maximises internal node parasitic capacitances.
+

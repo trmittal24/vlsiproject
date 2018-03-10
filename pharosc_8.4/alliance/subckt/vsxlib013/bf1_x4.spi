@@ -1,0 +1,15 @@
+* Spice description of bf1_x4
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:57:45
+* vsxlib 0.13um values
+.subckt bf1_x4 a vdd vss z
+M1a 3z    a     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M1b vss   a     3z    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M1z vdd   3z    z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2z z     3z    vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M3z z     3z    vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M4z vss   3z    z     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+C3  3z    vss   0.824f
+C4  a     vss   0.565f
+C2  z     vss   0.910f
+.ends

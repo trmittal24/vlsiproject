@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Running example</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="livecd_help2.html">
+	<LINK REL=PREV HREF="livecd_help10.html">
+	<LINK REL=NEXT HREF="livecd_help12.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows and Linux Live CD.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070917;22400000">
+	<META NAME="CHANGED" CONTENT="20070917;22400000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Live CD help</A>
+<A HREF="livecd_help11.html">/running example</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="livecd_help2.html">UP</A></LI>
+<LI><A HREF="livecd_help10.html">PREV</A></LI>
+<LI><A HREF="livecd_help12.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Running an example</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html" CLASS="current">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The <TT>adder4</TT> example has some common files and directories
+for each of the different technologies. A <TT>README</TT> file
+offers more information.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/unpack_tar4.gif" NAME="adder4 example" ALIGN=LEFT BORDER=0 ALT="adder4 example" TITLE="adder4 example">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The file <TT><B>flow.txt</B></TT> shows the command syntax. The
+script <TT>syn_loop</TT> will loop the Alliance synthesis to find the fastest
+netlist. The <TT>layout_loop</TT> will run the layout. For some libraries,
+the layout will cause DRC violations, so the layout is looped until
+there are no more violations.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/unpack_tar5.gif" NAME="rgalib files" ALIGN=LEFT BORDER=0 ALT="rgalib files" TITLE="rgalib files">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The command shown starts the synthesis script. Output is written to the
+journal file <TT>syn_loop.jou2</TT> and also to the terminal window.
+<P>
+Note how the CPU activity has risen to 100% in the System Monitor in the panel,
+showing that the job is running (as well as the output scrolled to the
+terminal window).
+<P>
+The Alliance synthesis and layout command are all in the <TT>examples/bin</TT>
+directory.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/unpack_tar6.gif" NAME="starting synthesis job" ALIGN=LEFT BORDER=0 ALT="starting synthesis job" TITLE="starting synthesis job">
+</DIV>
+</DIV>
+
+</DIV>
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>

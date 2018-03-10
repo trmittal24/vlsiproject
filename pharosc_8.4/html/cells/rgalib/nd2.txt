@@ -1,0 +1,8 @@
+Single stage 2-I/P NAND gates with <B>x2</B> and <B>x4</B>
+drive strengths and a P:N ratio of about 2.3.
+The <B>nd2v6x2</B> is a layout variant of the <B>nd2v0x2</B>
+copied from a published design by Virage Logic. It's
+faster, but doesn't double contacts where possible and
+has poorer connectivity.
+The <B>nd2v6x4</B> is a slower layout variant of the <B>nd2v0x4</B>
+with the series N transistors arranged differently.

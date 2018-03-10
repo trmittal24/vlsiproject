@@ -1,0 +1,10 @@
+* Spice description of inv_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:34
+* ssxlib 0.13um values
+.subckt inv_x1 i nq vdd vss
+Mtr_00001 vss   i     nq    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00002 nq    i     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C3  i     vss   0.875f
+C2  nq    vss   0.753f
+.ends

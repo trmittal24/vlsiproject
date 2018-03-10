@@ -1,0 +1,6 @@
+* Spice description of tie_x0
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:35:25
+* vsclib 0.13um values
+.subckt tie_x0 vdd vss
+.ends

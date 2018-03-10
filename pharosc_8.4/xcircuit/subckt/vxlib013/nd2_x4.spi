@@ -1,0 +1,9 @@
+* Tue Aug 10 11:21:07 CEST 2004
+.subckt nd2_x4 a b vdd vss z 
+*SPICE circuit <nd2_x4> from XCircuit v3.10
+
+m1 n1 a vss vss n w=64u l=2.3636u ad='64u*5u+12p' as='64u*5u+12p' pd='64u*2+14u' ps='64u*2+14u'
+m2 z a vdd vdd p w=76u l=2.3636u ad='76u*5u+12p' as='76u*5u+12p' pd='76u*2+14u' ps='76u*2+14u'
+m3 z b n1 vss n w=64u l=2.3636u ad='64u*5u+12p' as='64u*5u+12p' pd='64u*2+14u' ps='64u*2+14u'
+m4 z b vdd vdd p w=76u l=2.3636u ad='76u*5u+12p' as='76u*5u+12p' pd='76u*2+14u' ps='76u*2+14u'
+.ends

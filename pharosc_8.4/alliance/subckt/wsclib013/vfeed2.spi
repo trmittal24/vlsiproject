@@ -1,0 +1,6 @@
+* Spice description of vfeed2
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:35:50
+* wsclib 0.13um values
+.subckt vfeed2 vdd vss
+.ends

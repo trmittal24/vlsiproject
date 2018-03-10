@@ -1,0 +1,7 @@
+The output is the inverted carry of carry inputs
+<SPAN CLASS="boldred">a</SPAN> and <SPAN CLASS="boldred">c</SPAN>
+and the carry of input <SPAN CLASS="boldred">b</SPAN>.
+The stage efforts for pin <SPAN CLASS="boldred">b</SPAN>
+is 1.6, 1.9 and 2.4 for the x05,
+x1 and x2 drive strengths respectively.
+The cells here use a P/N ratio of about 2.

@@ -1,0 +1,5 @@
+2 styles of mux are shown here. The v0 muxes use two clocked inverters
+to drive the output; the v2 muxes use a CMOS transfer gate.<BR>
+The v0 style of 2-way mux has the smallest dimensions but is not as
+fast as the v2 style. This is because the output CMOS transfer
+gate transistors help drive the output both high and low.

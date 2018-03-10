@@ -1,0 +1,24 @@
+Non Monotonic Delay Arcs
+rgalib013.lib: rgalib013 (23 cells)
+OC (0.0012V, 27degC); Units (1ff, 1ps, 1mA, 1mV)
+#    .lib Line# Cell       Arc                                                Input Slope
+
+
+Bad Design Rules
+rgalib013.lib: rgalib013 (23 cells)
+OC (0.0012V, 27degC); Units (1ff, 1ps, 1mA, 1mV)
+#    .lib Line# Cell       Arc                            Load Range          Min Cap   
+
+
+Bad Design Rules
+rgalib013.lib: rgalib013 (23 cells)
+OC (0.0012V, 27degC); Units (1ff, 1ps, 1mA, 1mV)
+#    .lib Line# Cell       Arc                            Load Range           Max Cap  
+
+
+Bad Design Rules
+rgalib013.lib: rgalib013 (23 cells)
+OC (0.0012V, 27degC); Units (1ff, 1ps, 1mA, 1mV)
+#    .lib Line# Cell       Arc                             Slope Range          Max Trans
+
+

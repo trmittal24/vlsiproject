@@ -1,0 +1,19 @@
+* Spice description of or3v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:33:35
+* wsclib 0.13um values
+.subckt or3v0x05 a b c vdd vss z
+M01 01    a     vdd   vdd p  L=0.12U  W=1.375U AS=0.364375P AD=0.364375P PS=3.28U   PD=3.28U
+M02 zn    a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 03    b     01    vdd p  L=0.12U  W=1.375U AS=0.364375P AD=0.364375P PS=3.28U   PD=3.28U
+M04 vss   b     zn    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 zn    c     03    vdd p  L=0.12U  W=1.375U AS=0.364375P AD=0.364375P PS=3.28U   PD=3.28U
+M06 zn    c     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 vdd   zn    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 vss   zn    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  a     vss   0.435f
+C5  b     vss   0.439f
+C6  c     vss   0.452f
+C3  z     vss   0.600f
+C2  zn    vss   0.982f
+.ends

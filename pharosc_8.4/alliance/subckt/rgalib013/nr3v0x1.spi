@@ -1,0 +1,24 @@
+* Spice description of nr3v0x1
+* Spice driver version 134999461
+* Date  6/02/2007 at 12:03:43
+* rgalib 0.13um values
+.subckt nr3v0x1 a b c vdd vss z
+Mtr_00001 z     a     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00002 vss   a     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00003 z     b     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00004 vss   b     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00005 z     c     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00006 vss   c     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00007 sig6  a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00008 vdd   a     sig6  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00009 sig8  b     sig6  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00010 sig6  b     sig8  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00011 z     c     sig8  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00012 sig8  c     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+C3  a     vss   0.858f
+C4  b     vss   0.672f
+C5  c     vss   0.878f
+C6  sig6  vss   0.580f
+C8  sig8  vss   0.467f
+C2  z     vss   1.349f
+.ends

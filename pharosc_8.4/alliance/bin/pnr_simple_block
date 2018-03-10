@@ -1,0 +1,237 @@
+#!/bin/bash
+
+# Script which removes the layer in argument_2
+# from an AP file, and replaces it with a single
+# rectangle which is either 4 lambda inside
+# the AB (small) or aligned to the maximum extent
+# of the layer geometries in the file (big).
+# TALU8 treated specially, being aligned to the AB.
+
+if ! test -d $MBK_TARGET_LIB
+then
+  echo "#?! No MBK_TARGET_LIB found. Please check." 1>&2
+  exit 1
+else
+  library=$(basename $MBK_TARGET_LIB)
+  case $library in
+  rgalib013)
+    metal_width=4; metal_pitch=8; row_height=88; type=s
+    ;;
+  ssxlib013)
+    metal_width=4; metal_pitch=10; row_height=100; type=s
+    ;;
+  stxlib013)
+    metal_width=4; metal_pitch=10; row_height=100; type=t
+    ;;
+  sxlib013)
+    metal_width=2; metal_pitch=5; row_height=50; type=s
+    ;;
+  sxlib100)
+    metal_width=2; metal_pitch=5; row_height=50; type=s
+    ;;
+  vgalib013)
+    metal_width=4; metal_pitch=8; row_height=88; type=s
+    ;;
+  vsclib013)
+    metal_width=4; metal_pitch=8; row_height=72; type=s
+    ;;
+  vtclib013)
+    metal_width=4; metal_pitch=8; row_height=72; type=t
+    ;;
+  vsxlib013)
+    metal_width=4; metal_pitch=10; row_height=100; type=s
+    ;;
+  vtxlib013)
+    metal_width=4; metal_pitch=10; row_height=100; type=t
+    ;;
+  vxlib013)
+    metal_width=2; metal_pitch=5; row_height=50; type=s
+    ;;
+  wsclib013)
+    metal_width=4; metal_pitch=8; row_height=80; type=s
+    ;;
+  wtclib013)
+    metal_width=4; metal_pitch=8; row_height=80; type=t
+    ;;
+  *)
+    echo "#?! Library "$library" not supported yet. Please check." 1>&2
+    exit 1
+    ;;
+  esac
+fi
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: pnr_simple_block cell layer small|big" 1>&2
+  echo "#" 1>&2
+  echo "#   will remove rectangles in layer from cell.ap and add a new" 1>&2
+  echo "#   one which is 2 lambda inside the AB (option small) or" 1>&2
+  echo "#   aligned to the maximum extent of the layer (option big)." 1>&2
+  echo "#   eg  pnr_simple_block fred TALU1 small" 1>&2
+  echo "#   will replace all TALU1 geometries with a single rectangle" 1>&2
+  echo "#   undersized from the AB by 2 lambda" 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: pnr_simple_block cell layer small|big" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: pnr_simple_block cell layer small|big" 1>&2
+  echo "#" 1>&2
+  echo "#   Argument layer must be given. Please check." 1>&2
+  exit 1
+else
+  layer=$2
+fi
+
+if [ "$#" -eq 2 ]
+then
+  echo "# Usage: pnr_simple_block cell layer small|big" 1>&2
+  echo "#" 1>&2
+  echo "#   Please specify whether layer "$layer" should be small or big." 1>&2
+  exit 1
+else
+  if [ "$3" = small ]
+  then
+    blockage=H
+    echo "# Putting in small blockage for layer "$layer
+  else
+    if [ "$3" = big ]
+    then
+      blockage=big
+      echo "# Putting in big blockage for layer "$layer
+    else
+      echo "# Usage: pnr_simple_block cell layer small|big" 1>&2
+      echo "#"
+      echo "#   Third argument must be small or big. Instead found "$3"."
+      exit 1
+    fi
+  fi
+fi
+
+#                cell    ,      P      ,     date    , scale
+scale=$(grep '^H ' $cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+xmin=$(grep '^A ' $cell | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1/')
+ymin=$(grep '^A ' $cell | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\2/')
+xmax=$(grep '^A ' $cell | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\3/')
+ymax=$(grep '^A ' $cell | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let "rxmin=xmin+metal_width*scale"
+let "rxmax=xmax-metal_width*scale"
+let "width=ymax-ymin"
+let "why=ymin+width/2"
+let "rwidth=width-metal_pitch*scale+metal_width*scale"
+let "rwidth6=width-metal_pitch*scale+2*metal_width*scale"
+
+if [ "$blockage" = big ]
+then
+  if [ "$layer" = TALU8 ]
+  then
+    egrep -v "$layer" $cell | \
+      sed "s/^EOF *$/S $xmin,$why,$xmax,$why,$width,*,RIGHT,TALU8\nEOF/" > $$temp
+  elif [ "$layer" = TALU6 -a "$type" = s ]
+  then
+    egrep -v "$layer" $cell | \
+      sed "s/^EOF *$/S $rxmin,$why,$rxmax,$why,$rwidth6,*,RIGHT,$layer\nEOF/" > $$temp
+  elif [ "$layer" = TALU7 -a "$type" = t ]
+  then
+    egrep -v "$layer" $cell | \
+      sed "s/^EOF *$/S $rxmin,$why,$rxmax,$why,$rwidth6,*,RIGHT,$layer\nEOF/" > $$temp
+  else
+    egrep -v "$layer" $cell | \
+      sed "s/^EOF *$/S $rxmin,$why,$rxmax,$why,$rwidth,*,RIGHT,$layer\nEOF/" > $$temp
+  fi
+else
+
+  rxmin=$xmax; rxmax=$xmin; rymin=$ymax; rymax=$ymin
+
+  geometries=$(grep -c "^S  *.*$layer" $cell)
+  if [ "$geometries" -gt 0 ]
+  then
+
+    values=$(grep "^S  *.*$layer" $cell | \
+      sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),$layer/\1/" | \
+      while read line
+      do
+        echo -e $line" \c"
+      done)
+    for coord in $values
+    do
+      if [ "$rxmin" -gt "$coord" ]
+      then
+        rxmin=$coord
+      fi
+    done
+
+    values=$(grep "^S  *.*$layer" $cell | \
+      sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),$layer/\2/" | \
+      while read line
+      do
+        echo -e $line" \c"
+      done)
+    for coord in $values
+    do
+      if [ "$rymin" -gt "$coord" ]
+      then
+        rymin=$coord
+      fi
+    done
+
+    values=$(grep "^S  *.*$layer" $cell | \
+      sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),$layer/\3/" | \
+      while read line
+      do
+        echo -e $line" \c"
+      done)
+    for coord in $values
+    do
+      if [ "$rxmax" -lt "$coord" ]
+      then
+        rxmax=$coord
+      fi
+    done
+
+    values=$(grep "^S  *.*$layer" $cell | \
+      sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),$layer/\4/" | \
+      while read line
+      do
+        echo -e $line" \c"
+      done)
+    for coord in $values
+    do
+      if [ "$rymax" -lt "$coord" ]
+      then
+        rymax=$coord
+      fi
+    done
+
+    let "width=rymax-rymin"
+    let "why=rymin+width/2"
+
+    if [ "$layer" = TALU8 ]
+    then
+      let "rwidth=width+row_height*scale"
+    elif [ "$layer" = TALU6 ]
+    then
+      let "rwidth=width+2*metal_width*scale"
+    else
+      let "rwidth=width+metal_width*scale"
+    fi
+    egrep -v "$layer" $cell | \
+      sed "s/^EOF *$/S $rxmin,$why,$rxmax,$why,$rwidth,*,RIGHT,$layer\nEOF/" > $$temp
+  else
+    cat $cell > $$temp
+  fi
+fi
+
+mv -f $$temp $cell

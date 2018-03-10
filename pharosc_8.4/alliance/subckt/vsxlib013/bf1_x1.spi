@@ -1,0 +1,13 @@
+* Spice description of bf1_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:57:41
+* vsxlib 0.13um values
+.subckt bf1_x1 a vdd vss z
+M1a 2z    a     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M1z vdd   2z    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2a vss   a     2z    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M2z z     2z    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+C3  2z    vss   0.778f
+C4  a     vss   0.476f
+C1  z     vss   0.559f
+.ends

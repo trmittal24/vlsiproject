@@ -1,0 +1,19 @@
+* Spice description of no4_x1
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:30:38
+* sxlib 0.13um values
+.subckt no4_x1 i0 i1 i2 i3 nq vdd vss
+Mtr_00001 nq    i3    vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00002 vss   i1    nq    vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00003 vss   i2    nq    vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00004 nq    i0    vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00005 vdd   i3    sig3  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00006 sig4  i0    sig6  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00007 sig6  i1    nq    vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00008 sig3  i2    sig4  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+C7  i0    vss   0.794f
+C9  i1    vss   0.786f
+C8  i2    vss   0.801f
+C10 i3    vss   0.779f
+C2  nq    vss   1.146f
+.ends

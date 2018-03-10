@@ -1,0 +1,18 @@
+<IMG SRC="../../../gif/nr2_fo4effort.gif" NAME="nr2 effort graph"
+ALT="nr2 effort graph" TITLE="nr2 effort graph" ALIGN=RIGHT BORDER=0>
+The fastest speed occurs when the shape factor
+<SPAN CLASS="mathsvar">r</SPAN>=&radic;(
+<SPAN CLASS="mathsvar">K<SUB>P</SUB></SPAN>&divide;
+<SPAN CLASS="mathsvar">K<SUB>N</SUB></SPAN>&times;&micro;).
+For a 2-NOR gate, we use <SPAN CLASS="mathsvar">K<SUB>P</SUB></SPAN>=15/8;
+<SPAN CLASS="mathsvar">K<SUB>N</SUB></SPAN>=1, and &micro;=9/4,
+which gives <SPAN CLASS="mathsvar">r</SPAN>=&radic;(135/32)&asymp;2.
+This value has been used for the <B>v1</B> version,
+which are fast with unbalanced output skews.
+The P/N ratio has been kept as close to 2 as possible for the <B>v0</B> version
+in order to give more balanced output skews,
+even if this is not the fastest configuration.<BR>
+The effort measured by the fanout=4 method is shown in the graph on the right,
+which shows that the <B>v1</B> cells are generally faster than the <B>v0</B>
+cells.
+The variations are caused by the parasitic capacitances.

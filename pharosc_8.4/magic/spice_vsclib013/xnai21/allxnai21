@@ -1,0 +1,11 @@
+#!/bin/bash
+# allxnai21 2007-08-29:12h24 graham
+
+./allxnai21_delay $1
+./allxnai21_vbe
+./allxnai21_lib
+./allxnai21_html
+if test -x allxnai21_xtra
+then
+  ./allxnai21_xtra
+fi

@@ -1,0 +1,9 @@
+* Spice description of vddtie
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:35:51
+* vxlib 0.13um values
+.subckt vddtie vdd vss z
+M1  z     vss   vdd   vdd p  L=0.12U  W=1.65U  AS=0.43725P  AD=0.43725P  PS=3.83U   PD=3.83U
+M2  vss   vss   z     vss n  L=0.12U  W=1.265U AS=0.335225P AD=0.335225P PS=3.06U   PD=3.06U
+C2  z     vss   0.935f
+.ends

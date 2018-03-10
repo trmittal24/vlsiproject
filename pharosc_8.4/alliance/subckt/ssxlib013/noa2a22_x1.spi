@@ -1,0 +1,20 @@
+* Spice description of noa2a22_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:38:50
+* ssxlib 0.13um values
+.subckt noa2a22_x1 i0 i1 i2 i3 nq vdd vss
+Mtr_00001 sig6  i2    vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00002 nq    i3    sig6  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00003 sig2  i1    nq    vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00004 vss   i0    sig2  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00005 sig9  i1    nq    vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00006 nq    i0    sig9  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00007 vdd   i3    sig9  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00008 sig9  i2    vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C5  i0    vss   0.624f
+C4  i1    vss   0.652f
+C7  i2    vss   0.732f
+C8  i3    vss   0.759f
+C3  nq    vss   0.758f
+C9  sig9  vss   0.345f
+.ends

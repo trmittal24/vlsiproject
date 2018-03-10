@@ -1,0 +1,345 @@
+#!/bin/bash
+
+# Script which converts the vxlib to a 2um
+# technology by multiplying the value of MBK_SCALE_X
+# in the cells by 10 and multiplying all cell
+# co-ordinates by 20.
+# The cells are beautified:
+# - adjust ALU1 end points
+# - realign NWELL
+# - add PWELL
+# - add AB in TALU8
+# - adjust ymin and ymax of transistors to match vsclib
+# - adjust PDIF and NDIF to match transistor adjustment
+# - adjust PTIE and NTIE to have same extent with larger overlap from RDS file
+# - adjust PDIF and NDIF end points if they land on a CONT
+# - relabel the REF geometries
+# - add missing REF geometries
+# - copy ALU1 to ALU2 to match vtclib and wtclib
+# - add TALU2 geometry
+comments_on=0
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: convert_cell cell" 1>&2
+  echo "#   eg  convert_cell fred" 1>&2
+  exit 1
+fi
+date1=$(date '+%s')
+#awk -v FS=, '/^H / {printf "%1s,%1s,%1s,%1s\n", \
+#$1,$2,$3,$4/2}
+#/^[^H ]/ {print}' ${cell}.ap > $$temp
+cp ${cell}.ap $$temp
+#
+#                                     Adjust end points of ALU1
+#
+awk -v "FS= ||," '/,RIGHT,ALU1/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+500,$3,$4-500,$5,$6,$7,$8,$9}
+!/,RIGHT,ALU1/ {print}' $$temp | \
+awk -v "FS= ||," '/,LEFT,ALU1/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+500,$3,$4-500,$5,$6,$7,$8,$9}
+!/,LEFT,ALU1/ {print}' | \
+awk -v "FS= ||," '/,UP,ALU1/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+500,$4,$5-500,$6,$7,$8,$9}
+!/,UP,ALU1/ {print}' | \
+awk -v "FS= ||," '/,DOWN,ALU1/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+500,$4,$5-500,$6,$7,$8,$9}
+!/,DOWN,ALU1/ {print}' > $$temp1
+mv -f $$temp1 $$temp
+#
+#                                     NWELL alignment, add PWELL and add TALU8
+#
+sed -i 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),NWELL *$/S \1,38000,\3,38000,28000,\6,\7,NWELL\nS \1,11000,\3,11000,26000,\6,\7,PWELL\nS \1,25000,\3,25000,50000,'$cell',\7,TALU8/' $$temp
+#
+#                          Adjust ymin and ymax of transistors, NDIF, PDIF, NTIE and PTIE
+#                                    1   2   3   4   5   6   7   8   9
+awk -v "FS= ||," '/,NTRANS/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+1500,$4,$5-1500,$6,$7,$8,$9}
+!/,NTRANS/ {print}' $$temp | \
+awk -v "FS= ||," '/,PTRANS/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+1500,$4,$5-1500,$6,$7,$8,$9}
+!/,PTRANS/ {print}' | \
+awk -v "FS= ||," '/,RIGHT,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+500,$3,$4-500,$5,$6,$7,$8,$9}
+!/,RIGHT,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,LEFT,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+500,$3,$4-500,$5,$6,$7,$8,$9}
+!/,LEFT,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,UP,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+500,$4,$5-500,$6,$7,$8,$9}
+!/,UP,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,DOWN,[NP]DIF/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+500,$4,$5-500,$6,$7,$8,$9}
+!/,DOWN,[NP]DIF/ {print}' | \
+awk -v "FS= ||," '/,RIGHT,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+500,$3,$4-500,$5,$6,$7,$8,$9}
+!/,RIGHT,[NP]TIE/ {print}' | \
+awk -v "FS= ||," '/,LEFT,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2+500,$3,$4-500,$5,$6,$7,$8,$9}
+!/,LEFT,[NP]TIE/ {print}' | \
+awk -v "FS= ||," '/,UP,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+500,$4,$5-500,$6,$7,$8,$9}
+!/,UP,[NP]TIE/ {print}' | \
+awk -v "FS= ||," '/,DOWN,[NP]TIE/ {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2,$3+500,$4,$5-500,$6,$7,$8,$9}
+!/,DOWN,[NP]TIE/ {print}' > $$temp1
+mv -f $$temp1 $$temp
+
+#
+#                             Adjust PDIF and NDIF end point if it terminates on a CONT
+#
+for cont_type in CONT_DIF_N CONT_DIF_P
+do
+  cont_coords=$(grep '^V  *[0-9]' $$temp | \
+    grep ",$cont_type" | \
+    sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+
+  for cont_coord in $cont_coords
+  do
+    if [ "$cont_type" = CONT_DIF_N ]
+    then
+      layer=NDIF
+    elif [ "$cont_type" = CONT_DIF_P ]
+    then
+      layer=PDIF
+    else
+      break
+    fi
+    xcont=$(echo "$cont_coord" | cut -f1 -d,)
+    let "xlower=$(echo "$cont_coord" | cut -f1 -d,)-50"
+    let "xupper=$(echo "$cont_coord" | cut -f1 -d,)+50"
+    ycont=$(echo "$cont_coord" | cut -f2 -d,)
+    let "ylower=$(echo "$cont_coord" | cut -f2 -d,)-50"
+    let "yupper=$(echo "$cont_coord" | cut -f2 -d,)+50"
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\($layer\) *$/S $xlower,$ycont,\2,\3,\4,\5,\6,\7/" $$temp | \
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\($layer\) *$/S $xlower,$ycont,\2,\3,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(RIGHT\),\($layer\) *$/S \1,\2,$xupper,$ycont,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(LEFT\),\($layer\) *$/S \1,\2,$xupper,$ycont,\4,\5,\6,\7/" | \
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\($layer\) *$/S $xcont,$ylower,\2,\3,\4,\5,\6,\7/" | \
+    sed "s/^S  *\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\($layer\) *$/S $xcont,$ylower,\2,\3,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(UP\),\($layer\) *$/S \1,\2,$xcont,$yupper,\4,\5,\6,\7/" | \
+    sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),\($cont_coord\),\([^,][^,]*\),\([^,][^,]*\),\(DOWN\),\($layer\) *$/S \1,\2,$xcont,$yupper,\4,\5,\6,\7/" > $$temp1
+    mv -f $$temp1 $$temp
+  done
+done
+cp $$temp $$temp1
+#
+#                                   Label REF geometries according to 2um technology
+#
+awk -v "FS=_" '/,ref_ref,/ {printf "%1s_%1s_%1s\n", \
+$1,$2,$3*2}
+!/,ref_ref,/ {print}' $$temp1 > $$temp
+
+# Change techno from 1um to 2um by scaling all geometries
+# Constructs which need co-ordinates scaled by 2
+# H, A, R, S, V, B
+
+awk -v "FS= ||," '/^A / {printf "%1s %1s,%1s,%1s,%1s\n", \
+$1,$2*2,$3*2,$4*2,$5*2}
+/^[^A ]/ {print}' $$temp | \
+awk -v "FS= ||," '/^R / {printf "%1s %1s,%1s,%1s,%1s\n", \
+$1,$2*2,$3*2,$4,$5}
+/^[^R ]/ {print}' | \
+awk -v "FS= ||," '/^S / {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2*2,$3*2,$4*2,$5*2,$6*2,$7,$8,$9}
+/^[^S ]/ {print}' | \
+awk -v "FS= ||," '/^V  *[0-9]/ {printf "%1s %1s,%1s,%1s,%1s\n", \
+$1,$2*2,$3*2,$4,$5}
+/^[^V ]/ {print}
+/^V  *A/ {print}' | \
+awk -v "FS= ||," '/^B / {printf "%1s %1s,%1s,%1s,%1s,%1s,%1s\n", \
+$1,$2*2,$3*2,$4*2-1000,$5*2,$6,$7}
+/^[^B ]/ {print}' | \
+sed 's/,CONT_VIA2,/,CONT_VIA3,/' | \
+sed 's/,CONT_VIA,/,CONT_VIA2,/' > $$temp1
+#
+# Check that all CALU1 has a REF over it
+#
+calu1_coords=$(grep '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,CALU1 *' $$temp1 | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vss,[^,][^,]*,CALU1 *' | \
+  grep -v '^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,vdd,[^,][^,]*,CALU1 *' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\6/')
+
+for calu1_coord in $calu1_coords
+do
+  cx1=$(echo "$calu1_coord" | cut -f1 -d,)
+  cy1=$(echo "$calu1_coord" | cut -f2 -d,)
+  cx2=$(echo "$calu1_coord" | cut -f3 -d,)
+  cy2=$(echo "$calu1_coord" | cut -f4 -d,)
+  cname=$(echo "$calu1_coord" | cut -f5 -d,)
+  if [ "$cy1" -gt "$cy2" ]
+  then
+    let cylo=$cy2
+    let cyhi=$cy1
+  else
+    let cylo=$cy1
+    let cyhi=$cy2
+  fi
+  let cy=$cylo
+  while [ "$cy" -le "$cyhi" ]
+  do
+    ref_count=$(grep -c "^R  *$cx1,$cy,ref_ref,[^,][^,]* *$" $$temp1)
+    if [ "$ref_count" -eq 0 ]
+    then
+#     This point has a CALU1 but no REF
+      let "x=cx1/1000"
+      let "y=cy/1000"
+      echo "#  o CALU1 at ($x,$y) has no REF" >> $$ref_comment
+      echo "R $cx1,$cy,ref_ref,${cname}_$y" >> $$ref_segments
+    fi
+    let cy=$cy+10000
+  done
+done
+if test -e $$ref_segments
+then
+  sed -i "/^A / r $$ref_segments" $$temp1
+  rm $$ref_segments
+fi
+
+#
+#                                                  Add TALU1 geometries
+#
+grep '^S .*ALU1$' $$temp1 | \
+  sed 's/,LEFT,/,RIGHT,/' | \
+  grep -v 'vdd,RIGHT,CALU1$' | \
+  grep -v 'vss,RIGHT,CALU1$' | \
+  sed 's/,DOWN,/,UP,/' > $$alu1_segments
+hor_alu1=$(grep 'RIGHT' $$alu1_segments)
+ver_alu1=$(grep 'UP' $$alu1_segments)
+
+scale=$(grep '^H ' $$temp1 | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+abxmin=$(grep '^A ' $$temp1 | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1/')
+abxmax=$(grep '^A ' $$temp1 | sed 's/^A  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\3/')
+let "pitch=10*scale"
+talu1_width=4000
+
+for yloc in 20 30 40 50 60 70 80
+do
+  no_hor_talu1=0
+  no_ver_talu1=0
+  xmin=$abxmax
+  xmax=$abxmin
+  let "ystart=yloc*scale"
+  let "yoffset=-8*scale"
+  let "ylimit=8*scale"
+  if [ "$hor_alu1" != "" ]
+  then
+    none_found=1
+    while [ "$yoffset" -le "$ylimit" ]
+    do
+      let "ycoord=ystart+yoffset"
+      xcoords=$(echo "$hor_alu1\n" | \
+        grep "^S  *[^,][^,]*,$ycoord,[^,][^,]*,$ycoord,[^,][^,]*,[^,][^,]*,RIGHT,[^,][^,]* *$" | \
+        sed "s/^S  *\([^,][^,]*\),\($ycoord\),\([^,][^,]*\),.*$/\1,\3/")
+      for xcoord in $xcoords
+      do
+        none_found=0
+        let "rxmin=$(echo $xcoord | cut -f1 -d,)"
+        let "rxmax=$(echo $xcoord | cut -f2 -d,)"
+        if [ "$rxmin" -lt "$xmin" ]
+        then
+          let "xmin=rxmin"
+        fi
+        if [ "$rxmax" -lt "$xmin" ]
+        then
+          let "xmin=rxmax"
+        fi
+        if [ "$rxmin" -gt "$xmax" ]
+        then
+          let "xmax=rxmin"
+        fi
+        if [ "$rxmax" -gt "$xmax" ]
+        then
+          let "xmax=rxmax"
+        fi
+      done #looped thru all hor alu1 segments at y=ycoord to find xmin and xmax
+      let "yoffset=yoffset+scale"
+    done #looped thru all hor alu1 segments above and below y=ystart
+    if [ "$none_found" -eq 1 ]
+    then
+      no_hor_talu1=1
+    fi
+  else
+    no_hor_talu1=1
+  fi
+
+  if [ "$ver_alu1" != "" ]
+  then
+   let "yoffset=-8*scale"
+    let "ylower=ystart+yoffset"
+    let "yupper=ystart+ylimit"
+    xycoords=$(echo "$ver_alu1\n" | \
+      sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),.*$/\1,\2,\3,\4,\5/')
+    for xycoord in $xycoords
+    do
+      rxmin=$(echo $xycoord | cut -f1 -d,)
+      rymin=$(echo $xycoord | cut -f2 -d,)
+      rymax=$(echo $xycoord | cut -f4 -d,)
+      rwidth=$(echo $xycoord | cut -f5 -d,)
+      let "rxmin=rxmin-(rwidth-4000)/2"
+      if [ "$rymin" -lt "$yupper" -a "$rymax" -gt "$ylower" \
+        -o "$rymin" -gt "$ylower" -a "$rymax" -lt "$yupper" ]
+      then
+        if [ "$rxmin" -lt "$xmin" ]
+        then
+          xmin=$rxmin
+        fi
+        if [ "$rxmin" -gt "$xmax" ]
+        then
+          xmax=$rxmin
+        fi
+      fi
+    done #looped thru all ver alu1 segments to check if xcoord affects xmin or xmax value
+  else
+    no_ver_talu1=1
+  fi
+
+  if [ "$no_hor_talu1" -eq 0 -o "$no_ver_talu1" -eq 0 ]
+  then
+    let "xmin=(xmin+1000)/pitch"
+    let "xmax=(xmax+pitch-1001)/pitch"
+    let "xmin=xmin*pitch"
+    let "xmax=xmax*pitch"
+    echo "S $xmin,$ystart,$xmax,$ystart,$talu1_width,*,RIGHT,TALU1" >> $$talu1_segments
+  fi
+done #looped thru all y locations for hor alu1 segments
+
+if test -e $$talu1_segments
+then
+  sed -i "/^A / r $$talu1_segments" $$temp1
+  rm $$talu1_segments
+fi
+#
+#                                             Change ALU1 to ALU2 and ALU3 to ALU4
+#
+sed 's/ALU3$/ALU4/' $$temp1 | \
+  sed 's/ALU2$/ALU3/' | \
+  sed 's/ALU1$/ALU2/' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(12000\),\(vdd\),\([^,][^,]*\),CALU2 *$/S \1,\2,\3,\4,\5,\6,RIGHT,CALU1\nS \1,\2,\3,\4,\5,\6,RIGHT,CALU2\nS \1,\2,\3,\4,\5,\*,RIGHT,ALU2/' | \
+  sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\(12000\),\(vss\),\([^,][^,]*\),CALU2 *$/S \1,\2,\3,\4,\5,\6,RIGHT,CALU1\nS \1,\2,\3,\4,\5,\6,RIGHT,CALU2\nS \1,\2,\3,\4,\5,\*,RIGHT,ALU2/' > $$temp
+
+cp $$temp ${cell}.ap
+
+rm $$temp $$temp1 $$alu1_segments
+date2=$(date '+%s')
+let "elapsed_time=date2-date1"
+echo "# convert_cell $cell in ${elapsed_time}s"
+if test -e $$calu1_comment
+then
+  cat $$calu1_comment
+  rm $$calu1_comment
+fi
+if test -e $$ref_comment
+then
+  cat $$ref_comment
+  rm $$ref_comment
+fi

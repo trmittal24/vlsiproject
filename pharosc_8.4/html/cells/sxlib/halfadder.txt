@@ -1,0 +1,1 @@
+2 I/P half adder with carry and sum outputs.

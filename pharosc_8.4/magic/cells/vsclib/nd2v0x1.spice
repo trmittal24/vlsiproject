@@ -1,0 +1,41 @@
+NAND2 standard cell
+
+.include /home/34.5/Documents/programs/Ngspice/t14y_tsmc_025_level3.txt
+
+M1000 z b vdd vdd cmosp w=14u l=2u
++  ad=112p pd=44u as=236p ps=92u
+M1001 vdd a z vdd cmosp w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1002 a_11_7# b z w_n4_n4# cmosn w=12u l=2u
++  ad=60p pd=34u as=72p ps=38u
+M1003 vss a a_11_7# w_n4_n4# cmosn w=12u l=2u
++  ad=144p pd=48u as=0p ps=0u
+C0 w_n4_n4# a 9.45fF
+C1 b vdd 7.38fF
+C2 w_n4_n4# z 2.44fF
+C3 vdd a 4.05fF
+C4 w_n4_n4# b 5.55fF
+C5 w_n4_n4# vss 11.56fF
+C6 z vdd 4.79fF
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_a a 0 PULSE(0 5 0 0 0 31.6n 63.2n)
+v_gg_b b 0 PULSE(0 5 0 0 0 45.7n 91.4n)
+
+.control
+ tran 0.01n 250n
+ plot (a + 10) (b + 5) (z)
+.endc
+
+.control
+ dc v_gg_a 0 5 0.01 v_gg_b 5
+ plot z
+.endc
+
+.control
+ dc v_gg_b 0 5 0.01 v_gg_a 5
+ plot z
+.endc
+
+.end

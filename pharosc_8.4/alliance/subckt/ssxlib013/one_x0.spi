@@ -1,0 +1,8 @@
+* Spice description of one_x0
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:40:20
+* ssxlib 0.13um values
+.subckt one_x0 q vdd vss
+Mtr_00001 q     vss   vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C2  q     vss   0.735f
+.ends

@@ -1,0 +1,32 @@
+* a_z transition of iv1v2x2, 0.13um, Berkeley generic bsim3 params
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/iv1v1x2.spi
+.include ../../../magic/subckt/vsclib013/iv1v2x2.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x0  a  vdd  vss   x0z  iv1v1x2
+x1  a  vdd  vss   x1z  iv1v2x2
+x3  x0z  vdd  vss   x3z  iv1v1x2
+x4  x1z  vdd  vss   x4z  iv1v2x2
+*
+cx0z  x0z  0 '1.5*10.17f'
+cx1z  x1z  0 '1.5*8.18f'
+cx3z  x3z  0 '2*10.17f'
+cx4z  x4z  0 '2*8.18f'
+* 
+vdd  vdd  0 'vdd'
+vss  0 vss  'vss'
+*
+Va a 0 dc 0 pwl(0 0 130p 'vdd' 300p 'vdd' 430p 0)
+*
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep 700p
+  linearize
+  plot v(a) v(x0z) v(x1z) v(x3z) v(x4z)
+  destroy all
+.endc
+.end
+

@@ -1,0 +1,13 @@
+* Spice description of bf1_y05
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:33:10
+* vxlib 0.13um values
+.subckt bf1_y05 a vdd vss z
+M1a an    a     vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M1z vdd   an    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M2a vss   a     an    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M2z z     an    vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  a     vss   0.494f
+C2  an    vss   0.708f
+C3  z     vss   0.526f
+.ends

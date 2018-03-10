@@ -1,0 +1,3 @@
+Minimum size 3-I/P NOR gate with an inverted input.
+The output P/N ratio is about 1.7, and the gain
+from input <SPAN CLASS="boldred">a</SPAN> is about 1.6.

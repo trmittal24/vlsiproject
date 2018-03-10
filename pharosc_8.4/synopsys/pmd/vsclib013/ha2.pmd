@@ -1,0 +1,10 @@
+inputpin_list a b
+outputpin_list co so
+a co positive_unate when 1
+b co positive_unate when 1
+co logic_function (a*b)
+a so negative_unate when 1
+a so positive_unate when 0
+b so negative_unate when 1
+b so positive_unate when 0
+so logic_function (a^b)

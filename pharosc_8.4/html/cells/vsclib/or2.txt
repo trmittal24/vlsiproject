@@ -1,0 +1,12 @@
+2 I/P OR gates designed with large (v0 version) and small (v4 version)
+input stages, and the or2v7x2 which uses an N transistor pull-up on
+the output to speed up the rise delay. This leads to a temporary high
+short circuit current which is about 30% higher than the equivalent
+or2v0x2 cell.
+The stage effort is 1.5 for the or2v0x05, 1.8 for the or2v0x1,
+2.2 for the or2v0x2, 2.4 for the or2v0x3, 2.6 for the or2v0x4,
+3.0 for the or2v0x8 and 4.0 for the or2v4x1.
+The v0 cells are optimised for speed with typical wireload values,
+while the v4 cell is optimised for a zero wireload capacitance.<BR>
+The <A HREF="nd2ab.html">nd2ab</A> cells do the same function faster
+but use more power.

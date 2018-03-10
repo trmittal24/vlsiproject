@@ -1,0 +1,24 @@
+* Spice description of xnai21v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:37:38
+* vsclib 0.13um values
+.subckt xnai21v0x05 a1 a2 b vdd vss z
+M01 vdd   a2    a2n   vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M02 n1    a2n   sig3  vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M03 z     b     vdd   vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M04 a2n   a1n   z     vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M05 sig3  b     vss   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M06 z     a1n   n1    vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M07 z     a2n   a1n   vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M08 sig3  a1    a1n   vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M09 a1n   a1    vdd   vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M10 a1n   a2    z     vss n  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M11 vss   a2    a2n   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+C9  a1    vss   0.441f
+C7  a1n   vss   0.460f
+C8  a2    vss   0.667f
+C5  a2n   vss   0.911f
+C4  b     vss   0.734f
+C3  sig3  vss   0.260f
+C6  z     vss   1.132f
+.ends

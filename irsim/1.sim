@@ -1,0 +1,7 @@
+| sim circuit "irsim_logic" from XCircuit v3.60 rev 43
+n b n2 out 2 4
+n a n2 out 2 4
+p c Vdd out 2 4
+p b n1 out 2 4
+n c GND n2 2 4
+p a Vdd n1 2 4

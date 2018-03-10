@@ -1,0 +1,38 @@
+ENTITY nr3v0x1 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 8448;   
+  CONSTANT cin_b         : NATURAL := 17;     
+  CONSTANT cin_c         : NATURAL := 17;     
+  CONSTANT cin_a         : NATURAL := 17;     
+  CONSTANT rdown_b_z     : NATURAL := 610;    
+  CONSTANT rdown_c_z     : NATURAL := 620;    
+  CONSTANT rdown_a_z     : NATURAL := 620;    
+  CONSTANT rup_b_z       : NATURAL := 3140;   
+  CONSTANT rup_c_z       : NATURAL := 3120;   
+  CONSTANT rup_a_z       : NATURAL := 3140;   
+  CONSTANT tplh_a_z      : NATURAL := 115;    
+  CONSTANT tphl_c_z      : NATURAL := 31;     
+  CONSTANT tplh_c_z      : NATURAL := 71;     
+  CONSTANT tplh_b_z      : NATURAL := 101;    
+  CONSTANT tphl_b_z      : NATURAL := 37;     
+  CONSTANT tphl_a_z      : NATURAL := 38;     
+  CONSTANT transistors   : NATURAL := 9       
+);
+PORT (
+  b	 : in  BIT;
+  c	 : in  BIT;
+  a	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nr3v0x1;
+
+ARCHITECTURE behaviour_data_flow OF nr3v0x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nr3v0x1"
+  SEVERITY WARNING;
+  z <= not (((b or c) or a)) after 112 ps;
+END;

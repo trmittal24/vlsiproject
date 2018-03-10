@@ -1,0 +1,10 @@
+* Spice description of rowend_x0
+* Spice driver version 134999461
+* Date  6/02/2007 at 12:03:49
+* rgalib 0.13um values
+.subckt rowend_x0 vdd vss
+Mtr_00001 vss   vdd   sig2  vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00002 sig3  vdd   vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00003 vdd   vdd   sig6  vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+Mtr_00004 sig5  vdd   vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+.ends

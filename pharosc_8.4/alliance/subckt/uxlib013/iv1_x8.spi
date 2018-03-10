@@ -1,0 +1,17 @@
+* Spice description of iv1_x8
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt iv1_x8 a vdd vss z 
+M1  z     a     vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M2  vdd   a     z     vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M3  z     a     vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M4  vdd   a     z     vdd p  L=0.13U  W=1.595U AS=0.422675P AD=0.422675P PS=3.72U   PD=3.72U  
+M5  vss   a     z     vss n  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+M6  z     a     vss   vss n  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+M7  vss   a     z     vss n  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+M8  z     a     vss   vss n  L=0.13U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U  
+C4  a     vss   2.486f
+C3  vdd   vss   2.445f
+C1  z     vss   5.279f
+.ends

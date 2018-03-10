@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Script to create all html cells from the vsclib013
+
+cell_list=$(ls -1 ../vsclib013/*.html | \
+  grep -v lib_gif | \
+  sed 's|\.\./vsclib013/||' | \
+  sed 's|^\(.*\)\.html$|\1|')
+
+for cell in $cell_list
+do
+  cp -p ../vsclib013/${cell}.html .
+  ./convert_cell $cell
+  awk -v "FS= ||=" '/IMG SRC=\"..\/..\/..\/alliance\/gif/ {printf "%1s %1s=%1s %1s=%1s %1s=%1s %1s=%1s %1s=%1d\n", $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,($11*80+47)/94} \
+  !/IMG SRC=\"..\/..\/..\/alliance\/gif/ {print}' ${cell}.html > $$temp
+  mv -f $$temp ${cell}.html
+done

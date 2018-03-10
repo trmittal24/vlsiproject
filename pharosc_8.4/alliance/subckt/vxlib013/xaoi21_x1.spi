@@ -1,0 +1,23 @@
+* Spice description of xaoi21_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:36:19
+* vxlib 0.13um values
+.subckt xaoi21_x1 a1 a2 b vdd vss z
+M1a vdd   a1    sig4  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M1b vdd   b     sig2  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M1z 2z    sig4  vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2a sig5  a1    vss   vss n  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M2b sig4  b     z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2z z     sig2  2z    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M3a sig4  a2    vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M3b vss   b     sig2  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M3z sig2  sig4  z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M4a sig4  a2    sig5  vss n  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M4z z     sig2  sig4  vss n  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+C9  a1    vss   0.653f
+C8  a2    vss   0.597f
+C10 b     vss   1.093f
+C2  sig2  vss   0.816f
+C4  sig4  vss   1.544f
+C1  z     vss   0.697f
+.ends

@@ -1,0 +1,8 @@
+* Spice description of zero_x0
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:32:51
+* sxlib 0.13um values
+.subckt zero_x0 nq vdd vss
+Mtr_00001 vss   vdd   nq    vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+C1  nq    vss   0.768f
+.ends

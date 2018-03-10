@@ -1,0 +1,11 @@
+#!/bin/bash
+# allno4 2007-07-06:07h44 graham
+
+./allno4_delay $1
+./allno4_vbe
+./allno4_lib
+./allno4_html
+if test -x allno4_xtra
+then
+  ./allno4_xtra
+fi

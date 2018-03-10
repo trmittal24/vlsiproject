@@ -1,0 +1,31 @@
+* Tue Dec 14 17:54:18 CET 2004
+.subckt xor3v0x05 a b c vdd vss z 
+*SPICE circuit <xor3v0x05> from XCircuit v3.20
+
+m1 cn c vss vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m2 z cn n8 vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m3 cn c vdd vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m4 bn b vss vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m5 n11 an vss vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m6 n8 a bn vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m7 n12 bn n11 vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m8 z cn n2 vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m9 z cn n12 vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m10 z cn n6 vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m11 n9 an vss vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m12 an a vss vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m13 n7 bn an vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m14 z c n7 vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m15 z c n10 vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m16 n10 b n9 vss n w=12u l=2.3636u ad='12u*5u+12p' as='12u*5u+12p' pd='12u*2+14u' ps='12u*2+14u'
+m17 z c n4 vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m18 z c n1 vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m19 n2 a bn vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m20 n6 bn n5 vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m21 n1 bn an vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m22 bn b vdd vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m23 n5 an vdd vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m24 n4 b n3 vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m25 n3 an vdd vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+m26 an a vdd vdd p w=28u l=2.3636u ad='28u*5u+12p' as='28u*5u+12p' pd='28u*2+14u' ps='28u*2+14u'
+.ends

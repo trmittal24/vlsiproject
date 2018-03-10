@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1 ../rgalib/ | sed 's/^.*$/sed\ s\/l=2u\/l=2.3636u\/g\ ..\/rgalib\/&\ >\ &/' | bash

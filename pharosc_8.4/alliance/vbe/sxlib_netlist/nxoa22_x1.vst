@@ -1,0 +1,55 @@
+entity nxoa22_x1 is
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      i2  : in      bit;
+      nq  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end nxoa22_x1;
+
+architecture structural of nxoa22_x1 is
+Component na2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      nq  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component xr2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal nd : bit;
+
+begin
+
+nd : na2_x1
+   port map (
+      i0  => i0,
+      i1  => i1,
+      nq  => nd,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : xr2_x1
+   port map (
+      i0  => nd,
+      i1  => i2,
+      q   => nq,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

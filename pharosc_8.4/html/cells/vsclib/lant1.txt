@@ -1,0 +1,10 @@
+Latch with <B>x05</B> and <B>x1</B> drive strengths non-inverted output,
+transparent when enable pin <SPAN CLASS="boldred">e</SPAN> is high.
+Clocked inverters are used on the input and feedback nodes.
+The power numbers are given at the clock frequency both when the output
+is stable and when it changes. The setup and hold times are the maximum
+for pin <SPAN CLASS="boldred">d</SPAN> transition times up to 1500ps
+and for clock pin <SPAN CLASS="boldred">e</SPAN> up to 670ps.
+The fanout&nbsp;4 values are those when the <SPAN CLASS="boldred">z</SPAN>
+output drives the <SPAN CLASS="boldred">e</SPAN> and
+<SPAN CLASS="boldred">d</SPAN> inputs.

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# copy xcircuit ps files from vsclib and change to vxlib ones
+
+# delete all cells with v# not equal to 0
+ls -1 | grep -v '.*v0.*x.*.ps' | grep '.*v.x.*.ps' | sed 's/^.*$/rm\ &/g' | bash
+
+# write out new name ps files with internal names changed as well
+ls -1 | grep '.*v0.*x.*.ps' | sed 's/\(..*\)\(v0\)\(x..*\)\.ps$/\1\2\3/g' | \
+sed "s/\(..*\)\(v0\)\(x..*\)/sed\ 's\/\1\2\3\/\1_\3\/g'\ \1\2\3\.ps\ >\ \1_\3\.ps/g" | bash
+
+# remove all the old vsclib files
+rm *v0*x*.ps

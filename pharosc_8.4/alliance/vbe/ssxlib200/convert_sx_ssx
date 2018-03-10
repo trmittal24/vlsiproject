@@ -1,0 +1,10 @@
+#!/bin/bash
+
+old_height=25
+new_height=100
+
+cp -p ../sxlib100/$1.vbe .
+awk -v "FS==||;" '/^ *CONSTANT  *area / {printf "%1s%1s\n", $1,"= " $2*'$new_height'/'$old_height'";" }
+!/^ *CONSTANT  *area / {print}' $1.vbe > $$temp
+
+mv -f $$temp $1.vbe

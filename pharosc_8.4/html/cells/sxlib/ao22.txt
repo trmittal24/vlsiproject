@@ -1,0 +1,1 @@
+2-1 I/P OR-AND gate with stage efforts of about 3.5 for pins <SPAN CLASS="boldred">i0</SPAN> and <SPAN CLASS="boldred">i1</SPAN> and 2.6 for pin <SPAN CLASS="boldred">i2</SPAN> of the ao22_x2, and about 7 for pins <SPAN CLASS="boldred">i0</SPAN> and <SPAN CLASS="boldred">i1</SPAN> and 5.2 for pin <SPAN CLASS="boldred">i2</SPAN> of the ao22_x4.

@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Script which maps the layers used in tlib layouts to those
+# used in slib layouts.
+# Segments
+# ALU2   ALU1
+# ALU3   ALU2
+# ALU4   ALU3
+# ALU5   ALU4
+# ALU6   ALU5
+# ALU7   ALU6
+# CALU2 CALU1 
+# CALU3 CALU2
+# CALU4 CALU3
+# CALU5 CALU4
+# CALU6 CALU5
+# CALU7 CALU6
+# TALU2 TALU1
+# TALU3 TALU2
+# TALU4 TALU3
+# TALU5 TALU4
+# TALU6 TALU5
+# TALU7 TALU6
+# TALU8  same
+
+#Vias
+# CONT_VIA2 CONT_VIA
+# CONT_VIA3 CONT_VIA2
+# CONT_VIA4 CONT_VIA3
+# CONT_VIA5 CONT_VIA4
+# CONT_VIA6 CONT_VIA5
+
+#Connectors
+# ALU1   same
+# ALU2   ALU1
+# ALU3   ALU2
+# ALU4   ALU3
+# ALU5   ALU4
+# ALU6   ALU5
+# ALU7   ALU6
+cp $1.ap $1.ap_orig
+
+sed 's/^S  *\(.*\),\([CT]*\)ALU2 *$/S \1,\2ALU1/' $1.ap | \
+sed 's/^S  *\(.*\),\([CT]*\)ALU3 *$/S \1,\2ALU2/' | \
+sed 's/^S  *\(.*\),\([CT]*\)ALU4 *$/S \1,\2ALU3/' | \
+sed 's/^S  *\(.*\),\([CT]*\)ALU5 *$/S \1,\2ALU4/' | \
+sed 's/^S  *\(.*\),\([CT]*\)ALU6 *$/S \1,\2ALU5/' | \
+sed 's/^S  *\(.*\),\([CT]*\)ALU7 *$/S \1,\2ALU6/' | \
+sed 's/^V  *\(.*\),CONT_VIA2,\(.*\)$/V \1,CONT_VIA,\2/' | \
+sed 's/^V  *\(.*\),CONT_VIA3,\(.*\)$/V \1,CONT_VIA2,\2/' | \
+sed 's/^V  *\(.*\),CONT_VIA4,\(.*\)$/V \1,CONT_VIA3,\2/' | \
+sed 's/^V  *\(.*\),CONT_VIA5,\(.*\)$/V \1,CONT_VIA4,\2/' | \
+sed 's/^V  *\(.*\),CONT_VIA6,\(.*\)$/V \1,CONT_VIA5,\2/' | \
+sed 's/^C  *\(.*\),ALU2 *$/C \1,ALU1/' | \
+sed 's/^C  *\(.*\),ALU3 *$/C \1,ALU2/' | \
+sed 's/^C  *\(.*\),ALU4 *$/C \1,ALU3/' | \
+sed 's/^C  *\(.*\),ALU5 *$/C \1,ALU4/' | \
+sed 's/^C  *\(.*\),ALU6 *$/C \1,ALU5/' | \
+sed 's/^C  *\(.*\),ALU7 *$/C \1,ALU6/' > $$temp
+
+mv -f $$temp $1.ap

@@ -1,0 +1,16 @@
+* Spice description of an2_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:56:54
+* vsxlib 0.13um values
+.subckt an2_x1 a b vdd vss z
+M1a vdd   a     sig2  vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M1b sig2  b     vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M1z z     sig2  vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2a sig3  a     vss   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M2b sig2  b     sig3  vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M2z vss   sig2  z     vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+C5  a     vss   0.579f
+C4  b     vss   0.657f
+C2  sig2  vss   0.792f
+C6  z     vss   0.645f
+.ends

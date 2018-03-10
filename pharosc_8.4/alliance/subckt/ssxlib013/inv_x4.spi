@@ -1,0 +1,12 @@
+* Spice description of inv_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:39
+* ssxlib 0.13um values
+.subckt inv_x4 i nq vdd vss
+Mtr_00001 vss   i     nq    vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00002 nq    i     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00003 vdd   i     nq    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+Mtr_00004 nq    i     vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+C3  i     vss   1.059f
+C2  nq    vss   0.771f
+.ends

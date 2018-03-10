@@ -1,0 +1,148 @@
+#!/bin/bash
+olddir=$PWD
+rm -f */*.error
+cd iv1
+./alliv1 $1
+cd $olddir
+cd an2
+./allan2 $1
+cd $olddir
+cd an3
+./allan3 $1
+cd $olddir
+cd an4
+./allan4 $1
+cd $olddir
+cd aoi21
+./allaoi21 $1
+cd $olddir
+cd aoi22
+./allaoi22 $1
+cd $olddir
+cd aon21
+./allaon21 $1
+cd $olddir
+cd aon22
+./allaon22 $1
+cd $olddir
+cd bf1
+./allbf1 $1
+cd $olddir
+cd cgi2
+./allcgi2 $1
+cd $olddir
+cd cgi2a
+./allcgi2a $1
+cd $olddir
+cd cgn2
+./allcgn2 $1
+cd $olddir
+cd ha2
+./allha2 $1
+cd $olddir
+cd mxi2
+./allmxi2 $1
+cd $olddir
+cd nd2
+./allnd2 $1
+cd $olddir
+cd nd2a
+./allnd2a $1
+cd $olddir
+cd nd2ab
+./allnd2ab $1
+cd $olddir
+cd nd3
+./allnd3 $1
+cd $olddir
+cd nd4
+./allnd4 $1
+cd $olddir
+cd nr2
+./allnr2 $1
+cd $olddir
+cd nr2a
+./allnr2a $1
+cd $olddir
+cd nr3
+./allnr3 $1
+cd $olddir
+cd nr4
+./allnr4 $1
+cd $olddir
+cd oai21
+./alloai21 $1
+cd $olddir
+cd oai22
+./alloai22 $1
+cd $olddir
+cd oan21
+./alloan21 $1
+cd $olddir
+cd oan22
+./alloan22 $1
+cd $olddir
+cd or2
+./allor2 $1
+cd $olddir
+cd or3
+./allor3 $1
+cd $olddir
+cd or4
+./allor4 $1
+cd $olddir
+cd xaoi21
+./allxaoi21 $1
+cd $olddir
+cd xaon21
+./allxaon21 $1
+cd $olddir
+cd xaon22
+./allxaon22 $1
+cd $olddir
+cd xnr2
+./allxnr2 $1
+cd $olddir
+cd xor2
+./allxor2 $1
+cd $olddir
+cat vxlib013_header.lib  >  vxlib013.lib
+./makelut                >> vxlib013.lib
+cat an2/an2.lib          >> vxlib013.lib
+cat an3/an3.lib          >> vxlib013.lib
+cat an4/an4.lib          >> vxlib013.lib
+cat aoi21/aoi21.lib      >> vxlib013.lib
+cat aoi22/aoi22.lib      >> vxlib013.lib
+cat aon21/aon21.lib      >> vxlib013.lib
+cat aon22/aon22.lib      >> vxlib013.lib
+cat bf1/bf1.lib          >> vxlib013.lib
+cat cgi2/cgi2.lib        >> vxlib013.lib
+cat cgi2a/cgi2a.lib      >> vxlib013.lib
+cat cgn2/cgn2.lib        >> vxlib013.lib
+cat ha2/ha2.lib          >> vxlib013.lib
+cat iv1/iv1.lib          >> vxlib013.lib
+cat mxi2/mxi2.lib        >> vxlib013.lib
+cat nd2/nd2.lib          >> vxlib013.lib
+cat nd2a/nd2a.lib        >> vxlib013.lib
+cat nd2ab/nd2ab.lib      >> vxlib013.lib
+cat nd3/nd3.lib          >> vxlib013.lib
+cat nd4/nd4.lib          >> vxlib013.lib
+cat nr2/nr2.lib          >> vxlib013.lib
+cat nr2a/nr2a.lib        >> vxlib013.lib
+cat nr3/nr3.lib          >> vxlib013.lib
+cat nr4/nr4.lib          >> vxlib013.lib
+cat oai21/oai21.lib      >> vxlib013.lib
+cat oai22/oai22.lib      >> vxlib013.lib
+cat oan21/oan21.lib      >> vxlib013.lib
+cat oan22/oan22.lib      >> vxlib013.lib
+cat or2/or2.lib          >> vxlib013.lib
+cat or3/or3.lib          >> vxlib013.lib
+cat or4/or4.lib          >> vxlib013.lib
+cat xaoi21/xaoi21.lib    >> vxlib013.lib
+cat xaon21/xaon21.lib    >> vxlib013.lib
+cat xaon22/xaon22.lib    >> vxlib013.lib
+cat xnr2/xnr2.lib        >> vxlib013.lib
+cat xor2/xor2.lib        >> vxlib013.lib
+cat vxlib013_footer.lib  >> vxlib013.lib
+echo "# Listing error files"
+ls -l */*.error 2>/dev/null

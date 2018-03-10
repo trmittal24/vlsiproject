@@ -1,0 +1,58 @@
+library vxlib013
+techno 0.13um
+# cell area in the vbe file is  the actual area in "conventional" lambda
+# because this area matches the Alliance convention of the transistor length
+# being 1 lambda and not the Mead-Conway 2 lambda.
+# For the Synopsys .LIB file we want the cell width to be measured in
+# Mead-Conway lambda: width = area/height
+# The area is Alliance area, so the height must be divided by 2 in order
+# to achieve a width in Mead-Conway lambda. The vxlib cells are 50 Alliance
+# lambda tall, so we set the cell height equal to 25.
+one_track_area 250
+cell_height 25
+ns_well_overlap 6
+ew_well_overlap 4
+libdir ..
+pmddir ../../../synopsys/pmd
+vbesourcedir ../../../alliance/vbe/vxlib100
+htmlsourcedir ../../../html/cells/vxlib
+home_page ../../../index
+symboldir ../../../xcircuit/gif/vxlib
+layoutdir ../../../alliance/gif/vxlib013
+param_description Berkeley generic bsim3 params
+inverter_name iv1
+separator _
+ref_inverter iv1_y2
+reftau 8.634
+reffo4 70.07
+# unitcap units are fF
+unitcap 2.6
+std_load 25
+# min_transition units are ps
+min_transition 20
+# sim_time units are ps
+func_sim_time 20000
+char_sim_time 5000
+char_sim_time2 4000
+char_sim_time3 3500
+char_sim_time4 3000
+input_net_transition 20p 60p 90p 130p 200p 300p 450p 670p 1000p 1500p
+total_output_net_capacitance 1 4 12 30 62 130
+vdd 1.2
+temperature 27
+input_threshold_rise 0.5
+input_threshold_fall 0.5
+output_threshold_rise 0.5
+output_threshold_fall 0.5
+lower_lh_pct 10
+upper_lh_pct 90
+lower_hl_pct 10
+upper_hl_pct 90
+lower_hh_pct 10
+upper_hh_pct 90
+lower_ll_pct 10
+upper_ll_pct 90
+# leakage units are pA/um
+nleakage 350
+pleakage 350
+lambda 0.055

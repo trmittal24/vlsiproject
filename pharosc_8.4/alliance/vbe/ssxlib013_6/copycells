@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo '# Script which copies all the cells in ../ssxlib013 across,'
+  echo '# adding the value in argument 1 to their input pin capacitances.'
+  exit 1
+fi
+
+source_dir=../ssxlib013
+catal_name=SSXLIB013
+inccap=$1
+
+allcells=$(cat $source_dir/$catal_name | cut -f1 -d' ')
+
+rm -f *.vbe
+for cell in $allcells
+do
+  ./makecell $cell $inccap
+done
+
+cp $source_dir/$catal_name .
+
+cp ../ssxlib013_6_macros/tempbf1.vbe .

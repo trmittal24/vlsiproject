@@ -1,0 +1,17 @@
+* Spice description of nr3_x05
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt nr3_x05 a b c vdd vss z 
+M3  vdd   a     n1    vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M2  n1    b     n2    vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M1  n2    c     z     vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M6  z     a     vss   vss n  L=0.13U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U   
+M5  vss   b     z     vss n  L=0.13U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U   
+M4  z     c     vss   vss n  L=0.13U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U   
+C8  b     vss   0.700f
+C7  c     vss   0.993f
+C6  a     vss   0.951f
+C5  vdd   vss   1.198f
+C1  z     vss   2.783f
+.ends

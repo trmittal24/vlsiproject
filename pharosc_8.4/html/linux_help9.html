@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>cell characterisation</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=PREV HREF="linux_help8.html">
+	<LINK REL=NEXT HREF="linux_help9.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Linux.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20040430;20200000">
+	<META NAME="CHANGED" CONTENT="20070825;12100000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="linux_help9.html">/Linux help/new cell characterisation</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="linux_help8.html">PREV</A></LI>
+<LI><A HREF="linux_help9.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Characterising new cells</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html" CLASS="current">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+
+To add new cells to an existing function in the <B>vsclib</B>,
+use the following flow, explained for the <B>aoi21v0x2</B>.
+It is similar for the other libraries.
+<OL>
+<LI>Draw the cell with Graal in
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ cd alliance/cells/vsclib</PRE></TD></TR></TABLE>
+Run <TT>makeallviews</TT> to create all the cell views
+that can be automatically created.
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ ./makeallviews aoi21v0x2</PRE></TD></TR></TABLE>
+
+<LI>Go to
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ cd magic/cif/vsclib013</PRE></TD></TR></TABLE>
+and convert the <TT>CIF</TT> file to Postscript
+using the script <TT>makeps</TT>
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ ./makeps aoi21v0x2</PRE></TD></TR></TABLE>
+Convert the postscript file to a <TT>GIF</TT> file and
+move it to
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+alliance/gif/vsclib013</PRE></TD></TR></TABLE>
+
+<LI>Create a <TT>PMD</TT> file
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+synopsys/pmd/vsclib013/aoi21v0x2.pmd</PRE></TD></TR></TABLE>
+
+<LI>Create a <TT>bash</TT> file in
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ cd alliance/makevbe/vsclib200</PRE></TD></TR></TABLE>
+with nominal (equals guessed)
+characteristics compatible with the Alliance <B>sxlib</B>.
+Run the <TT>bash</TT> file and redirect the output to
+the <TT>VBE</TT> directory.
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ ./aoi21v0x2.bash > aoi21v0x2.vbe
+$ mv aoi21v0x2.vbe ../../vbe/vsclib200</PRE></TD></TR></TABLE>
+
+<LI>Draw the schematic with
+<A HREF="http://opencircuitdesign.com/xcircuit">Xcircuit</A> in
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ cd xcircuit/cells/vsclib</PRE></TD></TR></TABLE>
+Make a GIF file from the schematic and move it to
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+xcircuit/gif/vsclib</PRE></TD></TR></TABLE>
+
+<LI>Alter the web data book comment at
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+html/cells/vsclib/aoi21.txt</PRE></TD></TR></TABLE>
+This will appear on the data sheet.
+
+<LI>Add the new cell name to the file
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+magic/spice_vsclib013/cell_list.txt</PRE></TD></TR></TABLE>
+It is important that the name reflects the correct
+drive strength.
+
+<LI>Run command<TT> makefunction </TT>for the
+new cell. This creates all the Spice and characterisation
+scripts in directory<TT> function</TT>. Alternatively
+run<TT> makelib </TT>to remake all the library cells.
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ cd magic/spice_vsclib013
+$ ./makefunction aoi21</PRE></TD></TR></TABLE>
+
+<LI><TT>makefunction </TT>has created in directory<TT> aoi21 </TT>a
+file<TT> aoi21v0x2_func.cir</TT>. Run this with Winspice
+and check that the functionality is correct. The cell
+waveforms can be viewed by running<TT> aoi21v0x2_fplot.cir</TT>.
+You will need to do this if the functionality is reported as incorrect.
+The functionality comes from the logical expression in the <TT>PMD</TT>
+file and is compared to what the cell actually does in Spice.
+
+<LI>In directory<TT> aoi21 </TT> run<TT> allaoi21 </TT>
+to simulate all the <B>aoi21</B> cells with Winspice
+and create a Liberty format <TT>.LIB</TT> file, Alliance format
+<TT>VBE</TT> files in
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+alliance/vbe/vsclib013</PRE></TD></TR></TABLE>
+and an html format data sheet in
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+html/cells/vsclib013.</PRE></TD></TR></TABLE>
+Alternatively run<TT> allcells </TT> from directory
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+magic/spice_vsclib013</PRE></TD></TR></TABLE>
+in order to characterise the whole library
+(this takes a long time). If<TT> allcells </TT>is
+run with an argument, then the Winspice simulation
+is skipped, and existing output files are used to
+remake the <TT>.LIB</TT>, <TT>VBE</TT> and html files.
+</OL>
+</DIV>
+
+<DIV CLASS="col_3pic">
+<TABLE>
+<TR>	
+<TD VALIGN=TOP>
+
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD COLSPAN=2 ALIGN=CENTER><U><TT>PMD</TT> File Example for <B>aoi21v0x2</B></U></TD></TR>
+<TR><TD VALIGN=TOP>
+<TABLE BORDER=1><TR><TD>
+<PRE>
+pwidth 54
+nwidth 40
+unitcap 1.0
+min_capacitance 2
+max_capacitance 260
+max_fanout 6
+fanout_load 1
+a1 lower_lh_pct 7
+a1 upper_lh_pct 93
+a2 lower_lh_pct 7
+a2 upper_lh_pct 93
+b lower_lh_pct 8
+b upper_lh_pct 92
+a1 lower_hl_pct 7
+a1 upper_hl_pct 93
+a2 lower_hl_pct 8
+a2 upper_hl_pct 92
+b lower_hl_pct 8
+b upper_hl_pct 92</PRE></TD></TR></TABLE>
+</TD>
+<TD VALIGN=TOP>
+<P>
+<I>pwidth</I> and <I>nwidth</I> are used for the leakage current
+calculation.
+<P>
+<I>unitcap</I> sets the load capacitances in the Lookup
+Table (LUT). These are the product of <I>unitcap</I>, the
+drive strength and the values of <TT>total_output_net_capacitance</TT>
+from the <TT>technology.pmd</TT> file.
+
+<TABLE BGCOLOR="#FFFFFF">
+<TR><TD>
+<PRE>
+$ more magic/spice_vsclib013/technology.pmd
+total_output_net_capacitance 1 4 12 30 62 130</PRE></TD></TR>
+</TABLE>
+<P>
+For the <B>aoi21v0x2</B> this means 1&times;2&times;130 for the
+maximum load, or 260fF.
+<P>
+The maximum load should be set such that when both the input and
+output rise transitions are 1500ps, the load capacitance lies between
+the maximum and second largest values &hellip; between 124fF and 260fF
+in this case.
+<P>
+If for the <B>aoi21v0x2</B> the <I>unitcap</I> is set
+to 1.0, then when we check the LUT we see:
+<TABLE BGCOLOR="#FFFFFF">
+<TR><TD>
+<PRE>
+timing() {
+related_pin        : "a1" ;
+ ...
+rise_transition(x2_260_6x10) { /* 7%-93%, scaled to 0%-100% */
+values( "  89.0,  125.4,  223.5,  445.7,  841.6, 1683.1", \
+ ...
+        " 367.2,  404.6,  500.2,  702.8, <SPAN CLASS="boldred">1046.4</SPAN>, <SPAN CLASS="boldred">1821.1</SPAN>" ); }
+</PRE></TD></TR>
+</TABLE>
+<P>
+This shows that the max load is 260fF (1.0&times;130&times;2),
+and that the transition time at this load and an input
+transition time of 1500ps is 1821.1ps, which is larger
+than 1500ps. At the previous load of 124fF
+(1.0&times;62&times;2), the transition time is 1046.4ps,
+which is less than 1500ps. 1500ps is defined as the max
+allowed transition time, and we want delays at this load
+to be interpolated between 2 values in the LUT rather than
+extrapolated beyond the LUT.
+<P>
+The values <I>min_capacitance</I>, <I>max_capacitance</I>
+and <I>fanout_load</I>
+are written straight to the <TT>.LIB</TT> file, except that the
+<I>max_capacitance</I> will be reduced to the load that gives
+an output transition of 1500ps when the input also has a
+transition time of 1500ps.
+<P>
+The upper and lower threshold values have to be determined
+for each technology by test simulations. For this technology
+the values are listed on the
+<a href="linux_help9a.html">threshold page</a>.</TD></TR>
+</TABLE>
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TH COLSPAN=2 ALIGN=CENTER><U><TT>VBE</TT> File Example for <B>aoi21v0x2</B></U></TH></TR>
+<TR>
+<TD VALIGN=TOP>
+<TABLE BORDER=1><TR><TD>
+<PRE>
+#!/bin/bash
+sxlib=noa22_x1
+cell=aoi21v0x1
+cat $ALLIANCE_TOP/cells/sxlib/$sxlib.vbe | \
+sed s/$sxlib/$cell/ | \
+chpin   i0 a1  | \
+chpin   i1 a2 | \
+chpin   i2 b | \
+chpin   nq z | \
+chfield area 2880 | \
+chfield rdown_a1_z 4750 | \
+chfield rdown_a2_z 4750 | \
+chfield rdown_b_z  4630 | \
+chfield rup_a1_z   4760 | \
+chfield rup_a2_z   4760 | \
+chfield rup_b_z    4760 | \
+chfield cin_a1 9 | \
+chfield cin_a2 9 | \
+chfield cin_b 9 | \
+chlfield transistors 6</PRE></TD></TR></TABLE>
+</TD>
+<TD VALIGN=TOP>
+<TABLE BORDER=1><TR><TD>
+<PRE>
+#!/bin/bash
+sxlib=noa22_x1
+cell=aoi21v0x2
+cat $ALLIANCE_TOP/cells/sxlib/$sxlib.vbe | \
+sed s/$sxlib/$cell/ | \
+chpin   i0 a1  | \
+chpin   i1 a2 | \
+chpin   i2 b | \
+chpin   nq z | \
+chfield area 5184 | \
+chfield rdown_a1_z 2280 | \
+chfield rdown_a2_z 2280 | \
+chfield rdown_b_z  2160 | \
+chfield rup_a1_z   2290 | \
+chfield rup_a2_z   2290 | \
+chfield rup_b_z    2290 | \
+chfield cin_a1 19 | \
+chfield cin_a2 19 | \
+chfield cin_b 18 | \
+chlfield transistors 9</PRE></TD></TR></TABLE>
+</TD></TR>
+<TR>
+<TD COLSPAN=2 VALIGN=TOP>
+<P>
+In <TT>alliance/makevbe/vsclib200</TT> an existing <TT>BASH</TT>
+file like the one for the <B>aoi21v0x1</B>
+can be copied and edited for the <B>aoi21v0x2</B>.
+The only field that really needs to be updated is
+the<TT> area </TT>field since the other values are replaced
+by the values from the characterisation.
+But making some sort of reasonable
+guess for the others will allow the library to be used
+with pseudo Alliance 0.35&micro;m timing.
+<P>
+I use a spreadsheet to link transistor widths to values
+of drive resistance and pin capacitance.
+</TD></TR>
+</TABLE>
+
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TH COLSPAN=2 ALIGN=CENTER><U>Winspice Logical Check with Plot Output</U></TH></TR>
+<TR><TD>
+<IMG SRC="../gif/func_sim.gif" NAME="winspice output" ALIGN=LEFT BORDER=0 ALT="winspice output">
+</TD>
+<TD VALIGN=TOP>
+<P>
+The bottom line of the Winspice plot output is
+the expected logical response. The waveforms above
+it are from the extracted Spice deck, one lightly
+loaded and one heavily loaded. They should match
+the expected logical output.
+<P>
+If they don't match, likely causes are missing
+contacts, missing pieces of metal and mislabelled
+connectors.
+</TD></TR></TABLE>
+</TD></TR></TABLE>
+</DIV>
+
+</DIV>
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+</BODY>
+</HTML>

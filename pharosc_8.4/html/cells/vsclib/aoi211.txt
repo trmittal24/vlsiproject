@@ -1,0 +1,8 @@
+4 cells with a P/N ratio of about 2.
+The width of the N-transistors connected to pins
+<SPAN CLASS="boldred">b</SPAN> and <SPAN CLASS="boldred">c</SPAN>
+are designed to have a similar conductivity to the two series
+N-transistors connected to pins <SPAN CLASS="boldred">a1</SPAN>
+and <SPAN CLASS="boldred">a2</SPAN>, so that there is a
+consistent output drive capability. Cell <B>aoi211v5x05</B>
+is a layout variant of <B>aoi211v0x05</B>.

@@ -1,0 +1,15 @@
+* Wed May  2 18:42:08 CEST 2007
+.subckt mxi2v2x4 a0 a1 s vdd vss z
+*SPICE circuit <mxi2v2x4> from XCircuit v3.4 rev 26
+
+m1 a0n a0 vdd vdd p w=112u l=2u ad='112u*5u+12p' as='112u*5u+12p' pd='112u*2+14u' ps='112u*2+14u'
+m2 a1n a1 vdd vdd p w=110u l=2u ad='110u*5u+12p' as='110u*5u+12p' pd='110u*2+14u' ps='110u*2+14u'
+m3 z sn a1n vdd p w=110u l=2u ad='110u*5u+12p' as='110u*5u+12p' pd='110u*2+14u' ps='110u*2+14u'
+m4 a0n s z vdd p w=110u l=2u ad='110u*5u+12p' as='110u*5u+12p' pd='110u*2+14u' ps='110u*2+14u'
+m5 sn s vdd vdd p w=38u l=2u ad='38u*5u+12p' as='38u*5u+12p' pd='38u*2+14u' ps='38u*2+14u'
+m6 a1n a1 vss vss n w=54u l=2u ad='54u*5u+12p' as='54u*5u+12p' pd='54u*2+14u' ps='54u*2+14u'
+m7 z sn a0n vss n w=52u l=2u ad='52u*5u+12p' as='52u*5u+12p' pd='52u*2+14u' ps='52u*2+14u'
+m8 a1n s z vss n w=54u l=2u ad='54u*5u+12p' as='54u*5u+12p' pd='54u*2+14u' ps='54u*2+14u'
+m9 a0n a0 vss vss n w=56u l=2u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+m10 sn s vss vss n w=22u l=2u ad='22u*5u+12p' as='22u*5u+12p' pd='22u*2+14u' ps='22u*2+14u'
+.ends

@@ -1,0 +1,8 @@
+# Directories containing CIF layout files of the libraries used to
+# make the Magic cells.
+#
+# The files can be viewed with Dreal by sourcing the README file in
+# the directory. e.g.
+# $ cd vsclib013
+# $ source ./README
+# $ dreal

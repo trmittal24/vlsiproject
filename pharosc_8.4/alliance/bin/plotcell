@@ -1,0 +1,2 @@
+#!/bin/bash 
+l2p -color -noheader -nrname -real -scale=2.0 nd2v0x07

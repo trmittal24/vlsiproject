@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ls -1 *.vbe | sed 's|^\(.*\)\.vbe|./convert_sx_ssx \1|' | bash
+
+# change expression for inverting mux
+
+sed -i s/'nq <='.*/'nq <= (not i0 and not cmd) or (not i1 and cmd) after 1000 ps;'/ nmx2_x1.vbe
+sed -i s/'nq <='.*/'nq <= (not i0 and not cmd) or (not i1 and cmd) after 1000 ps;'/ nmx2_x4.vbe

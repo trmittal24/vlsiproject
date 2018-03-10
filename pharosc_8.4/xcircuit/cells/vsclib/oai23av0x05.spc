@@ -1,0 +1,15 @@
+*SPICE circuit <oai23av0x05> from XCircuit v3.4 rev 26
+
+m1 n1 b1 vss vss n w=11u l=2u ad='11u*5u+12p' as='11u*5u+12p' pd='11u*2+14u' ps='11u*2+14u'
+m2 b b2 n1 vss n w=11u l=2u ad='11u*5u+12p' as='11u*5u+12p' pd='11u*2+14u' ps='11u*2+14u'
+m3 b b2 vdd vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m4 b b1 vdd vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m5 n3 b vdd vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m6 z b1 n4 vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m7 n2 b1 vdd vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m8 z b2 n2 vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m9 n4 a3 vss vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m10 n4 b vss vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m11 z b2 n4 vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m12 z a3 n3 vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+.end

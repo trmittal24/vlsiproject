@@ -1,0 +1,518 @@
+#!/bin/bash
+
+# Script which add a metal segment around each via
+# with the extra overlap defined by the overlap
+# variable below.
+# The geometries are sorted at the end and duplicates removed.
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: wtc_fix_vias cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   will add metal rectangles around each via to ensure that" 1>&2
+  echo "#   there is a 2 lambda end overlap. The second argument will" 1>&2
+  echo "#   set the preferred direction of ALU4." 1>&2
+  echo "#   eg  wtc_fix_vias fred H  will add ALU3 rectangles vertically," 1>&2
+  echo "#   ALU4 rectangles horizontally etc up to ALU7." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: wtc_fix_vias cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: wtc_fix_vias cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   Argument H or V must be given. Please check." 1>&2
+  exit 1
+else
+  if [ "$2" = H ]
+  then
+    orient=H
+    echo "# Horizontal metal-2 or ALU3"
+  else
+    if [ "$2" = V ]
+    then
+      orient=V
+      echo "# Vertical metal-2 or ALU3"
+    else
+      echo "# Usage: wtc_fix_vias cell H|V"
+      echo "#"
+      echo "#   Second argument must be H or V. Please check."
+      exit 1
+    fi
+  fi
+fi
+
+alu2_width=4
+alu3_width=4
+alu4_width=4
+alu5_width=4
+alu6_width=4
+alu7_width=8
+
+alu2_pitch=8
+
+alu2_overlap_via1=1
+alu2_overlap_via2=1
+alu3_overlap_via2=1
+alu3_overlap_via3=1
+alu4_overlap_via3=1
+alu4_overlap_via4=1
+alu5_overlap_via4=1
+alu5_overlap_via5=1
+alu6_overlap_via5=1
+alu6_overlap_via6=3
+alu7_overlap_via7=1
+
+#                cell    ,      P      ,     date    , scale
+scale=$(grep '^H ' $cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let "scaled_alu2_width=$alu2_width*$scale"
+let "scaled_alu2_pitch=$alu2_pitch*$scale"
+scaled_alu2_overlap_via1=$(echo $alu2_overlap_via1" "$scale | awk '{print $1*$2 }')
+
+let "scaled_alu3_width=$alu3_width*$scale"
+scaled_alu2_overlap_via2=$(echo $alu2_overlap_via2" "$scale | awk '{print $1*$2 }')
+scaled_alu3_overlap_via2=$(echo $alu3_overlap_via2" "$scale | awk '{print $1*$2 }')
+
+let "scaled_alu4_width=$alu4_width*$scale"
+scaled_alu3_overlap_via3=$(echo $alu3_overlap_via3" "$scale | awk '{print $1*$2 }')
+scaled_alu4_overlap_via3=$(echo $alu4_overlap_via3" "$scale | awk '{print $1*$2 }')
+
+let "scaled_alu5_width=$alu5_width*$scale"
+scaled_alu4_overlap_via4=$(echo $alu4_overlap_via4" "$scale | awk '{print $1*$2 }')
+scaled_alu5_overlap_via4=$(echo $alu5_overlap_via4" "$scale | awk '{print $1*$2 }')
+
+let "scaled_alu6_width=$alu6_width*$scale"
+scaled_alu5_overlap_via5=$(echo $alu5_overlap_via5" "$scale | awk '{print $1*$2 }')
+scaled_alu6_overlap_via5=$(echo $alu6_overlap_via5" "$scale | awk '{print $1*$2 }')
+
+let "scaled_alu7_width=$alu7_width*$scale"
+scaled_alu5_overlap_via6=$(echo $alu6_overlap_via6" "$scale | awk '{print $1*$2 }')
+scaled_alu6_overlap_via6=$(echo $alu7_overlap_via6" "$scale | awk '{print $1*$2 }')
+
+if [ "$orient" = V ]
+then
+# CONT_VIA not used with this library design
+#  via=,CONT_VIA,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e
+#  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+#  $1,$2,$3,$4,$5,$6 RS \
+#  "S",$2-'$scaled_alu2_overlap_via1',$3,$2+'$scaled_alu2_overlap_via1',$3,'$scaled_alu2_width',$5,$6,"LEFT,ALU2" }
+#  !/'$via'/ {print}' $cell > $$temp
+  cp $cell $$temp
+
+  via=,CONT_VIA2,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2,$3-'$scaled_alu3_overlap_via2',$2,$3+'$scaled_alu3_overlap_via2','$scaled_alu3_width',$5,$6,"UP,ALU3" }
+  !/'$via'/ {print}' $$temp > $$temp1
+
+  via=,CONT_VIA3,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu4_overlap_via3',$3,$2+'$scaled_alu4_overlap_via3',$3,'$scaled_alu4_width',$5,$6,"LEFT,ALU4" RS \
+  "S",$2,$3-'$scaled_alu3_overlap_via3',$2,$3+'$scaled_alu3_overlap_via3','$scaled_alu3_width',$5,$6,"UP,ALU3" }
+  !/'$via'/ {print}' $$temp1 > $$temp
+
+  via=,CONT_VIA4,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu4_overlap_via4',$3,$2+'$scaled_alu4_overlap_via4',$3,'$scaled_alu5_width',$5,$6,"LEFT,ALU4" RS \
+  "S",$2,$3-'$scaled_alu5_overlap_via4',$2,$3+'$scaled_alu5_overlap_via4','$scaled_alu5_width',$5,$6,"UP,ALU5" }
+  !/'$via'/ {print}' $$temp > $$temp1
+
+  via=,CONT_VIA5,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu6_overlap_via5',$3,$2+'$scaled_alu6_overlap_via5',$3,'$scaled_alu6_width',$5,$6,"LEFT,ALU6" RS \
+  "S",$2,$3-'$scaled_alu5_overlap_via5',$2,$3+'$scaled_alu5_overlap_via5','$scaled_alu6_width',$5,$6,"UP,ALU5" }
+  !/'$via5''$via'/ {print}' $$temp1 > $$temp
+
+else
+
+#  via=,CONT_VIA,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e
+#  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+#  $1,$2,$3,$4,$5,$6 RS \
+#  "S",$2,$3-'$scaled_alu2_overlap_via1',$2,$3+'$scaled_alu2_overlap_via1','$scaled_alu2_width',$5,$6,"UP,ALU2" }
+#  !/'$via'/ {print}' $cell | sed '/^S / s/  *,/,/' > $$temp
+  cp $cell $$temp
+
+  via=,CONT_VIA2,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu3_overlap_via2',$3,$2+'$scaled_alu3_overlap_via2',$3,'$scaled_alu3_width',$5,$6,"LEFT,ALU3" }
+  !/'$via'/ {print}' $$temp | sed '/^S / s/  *,/,/' > $$temp1
+
+  via=,CONT_VIA3,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu3_overlap_via3',$3,$2+'$scaled_alu3_overlap_via3',$3,'$scaled_alu3_width',$5,$6,"LEFT,ALU3" RS \
+  "S",$2,$3-'$scaled_alu4_overlap_via3',$2,$3+'$scaled_alu4_overlap_via3','$scaled_alu4_width',$5,$6,"UP,ALU4" }
+  !/'$via'/ {print}' $$temp1 > $$temp
+
+  via=,CONT_VIA4,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu5_overlap_via4',$3,$2+'$scaled_alu5_overlap_via4',$3,'$scaled_alu5_width',$5,$6,"LEFT,ALU5" RS \
+  "S",$2,$3-'$scaled_alu4_overlap_via4',$2,$3+'$scaled_alu4_overlap_via4','$scaled_alu4_width',$5,$6,"UP,ALU4" }
+  !/'$via'/ {print}' $$temp > $$temp1
+
+  via=,CONT_VIA5,
+#                                      1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+  awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+  $1,$2,$3,$4,$5,$6 RS \
+  "S",$2-'$scaled_alu5_overlap_via5',$3,$2+'$scaled_alu5_overlap_via5',$3,'$scaled_alu6_width',$5,$6,"LEFT,ALU5" RS \
+  "S",$2,$3-'$scaled_alu6_overlap_via5',$2,$3+'$scaled_alu6_overlap_via5','$scaled_alu6_width',$5,$6,"UP,ALU6" }
+  !/'$via5''$via'/ {print}' $$temp1 > $$temp
+
+fi
+cp $$temp $$temp1
+
+#
+# Special treatment for ALU7 (=metal-6)
+#
+via=,CONT_VIA6,
+via6_coords=$(grep "$via" $cell | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+
+for via6 in $via6_coords
+do
+  alu6_dir=RIGHT
+  alu7_dir=UP
+  alu7_coords=$(grep ',ALU7' $cell | \
+    sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2 \3,\4/')
+  for alu7_segment in $alu7_coords
+  do
+    if [ "$alu7_segment" != "$via6" ]
+    then
+      continue
+    else
+      alu6_coords=$(grep ',ALU6' $cell | \
+        sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2 \3,\4/')
+      for alu6_segment in $alu6_coords
+      do
+        if [ "$alu6_segment" != "$via6" ]
+        then
+          continue
+        else
+#         have found the ALU6 and ALU7 segments which meet at this VIA6
+          alu6_dir=$(grep ',ALU6' $cell | \
+            grep "$alu6_segment" | \
+            sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\7/')
+          alu7_dir=$(grep ',ALU7' $cell | \
+            grep "$alu7_segment" | \
+            sed 's/^S  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\7/')
+
+          if [ "$alu6_dir" = LEFT -o "$alu6_dir" = RIGHT ]
+          then
+            if [ "$alu7_dir" = LEFT -o "$alu7_dir" = RIGHT ]
+            then
+#                                                         1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+              awk -v "FS= ||," '/ '$via6''$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+              $1,$2,$3,$4,$5,$6 RS \
+              "S",$2-'$scaled_alu7_overlap_via6',$3,$2+'$scaled_alu7_overlap_via6',$3,'$scaled_alu7_width',$5,$6,"LEFT,ALU7" RS \
+              "S",$2-'$scaled_alu6_overlap_via6',$3,$2+'$scaled_alu6_overlap_via6',$3,'$scaled_alu7_width',$5,$6,"LEFT,ALU6" }
+              !/'$via6''$via'/ {print}' $$temp1 > $$temp
+              cp $$temp $$temp1
+            elif [ "$alu7_dir" = UP -o "$alu7_dir" = DOWN ]
+            then
+#                                                         1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+              awk -v "FS= ||," '/ '$via6''$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+              $1,$2,$3,$4,$5,$6 RS \
+              "S",$2-'$scaled_alu6_overlap_via6',$3,$2+'$scaled_alu6_overlap_via6',$3,'$scaled_alu7_width',$5,$6,"LEFT,ALU6" RS \
+              "S",$2,$3-'$scaled_alu7_overlap_via6',$2,$3+'$scaled_alu7_overlap_via6','$scaled_alu7_width',$5,$6,"UP,ALU7" }
+              !/'$via6''$via'/ {print}' $$temp1 > $$temp
+              cp $$temp $$temp1
+            fi
+          elif [ "$alu6_dir" = UP -o "$alu6_dir" = DOWN ]
+          then
+            if [ "$alu7_dir" = LEFT -o "$alu7_dir" = RIGHT ]
+            then
+#                                                         1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+              awk -v "FS= ||," '/ '$via6''$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+              $1,$2,$3,$4,$5,$6 RS \
+              "S",$2-'$scaled_alu7_overlap_via6',$3,$2+'$scaled_alu7_overlap_via6',$3,'$scaled_alu7_width',$5,$6,"LEFT,ALU7" RS \
+              "S",$2,$3-'$scaled_alu6_overlap_via6',$2,$3+'$scaled_alu6_overlap_via6','$scaled_alu7_width',$5,$6,"UP,ALU6" }
+              !/'$via6''$via'/ {print}' $$temp1 > $$temp
+              cp $$temp $$temp1
+            elif [ "$alu7_dir" = UP -o "$alu7_dir" = DOWN ]
+            then
+#                                                         1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+              awk -v "FS= ||," '/ '$via6''$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+              $1,$2,$3,$4,$5,$6 RS \
+              "S",$2,$3-'$scaled_alu7_overlap_via6',$2,$3+'$scaled_alu7_overlap_via6','$scaled_alu7_width',$5,$6,"UP,ALU7" RS \
+              "S",$2,$3-'$scaled_alu6_overlap_via6',$2,$3+'$scaled_alu6_overlap_via6','$scaled_alu7_width',$5,$6,"UP,ALU6" }
+              !/'$via6''$via'/ {print}' $$temp1 > $$temp
+              cp $$temp $$temp1
+            fi
+          fi
+          break
+        fi
+      done # looped thru all ALU6 segments
+    fi
+   done # looped thru all ALU7 segments
+done # looped thru all the CONT_VIA6's
+
+#
+# Special treatment for ALU2 (=metal-1)
+#
+via=,CONT_VIA2,
+via2_coords=$(grep "$via" $cell | \
+  sort -u | \
+  sed 's/^V  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\1,\2/')
+
+grep "^S .*,TALU2 *$" $cell > $$talu2_segments
+
+let "scaled_talu2_width=scaled_alu2_width"
+grep "^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $cell > $$talu2_04
+
+let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+grep "^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $cell > $$talu2_12
+
+let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+grep "^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $cell > $$talu2_20
+
+let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+grep "^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $cell > $$talu2_28
+
+let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+grep "^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $cell > $$talu2_36
+
+let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+grep "^S  *[^,][^,]*,[^,][^,]*,[^,][^,]*,[^,][^,]*,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $cell > $$talu2_44
+
+for via2 in $via2_coords
+do
+  for metal in ,ALU2 ,CALU2
+  do
+    alu2_count1=$(grep -c "^S  *$via2,\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$metal *$" $cell)
+    alu2_count2=$(grep -c "^S  *\([^,][^,]*\),\([^,][^,]*\),$via2,\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$metal *$" $cell)
+    let "alu2_count=alu2_count1+alu2_count2"
+    if [ "$alu2_count" -gt 0 ]
+    then
+#     This via2 has an ALU2 segment terminating on it which might need extending
+#     If metal = ALU2, there is no extension if
+#       (i)  there is a TALU2 segment labelled obs and
+#       (ii) there is a TALU2 segment labelled *.
+#     If metal = CALU2, there is no extension if
+#       (i)  there is a TALU2 segment (any label)
+#
+      alu2_dir1=$(grep "^S  *$via2,\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$metal *$" $cell | \
+        sed "s/^S  *$via2,\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$metal *$/\5/" )
+      alu2_dir2=$(grep "^S  *\([^,][^,]*\),\([^,][^,]*\),$via2,\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$metal *$" $cell | \
+        sed "s/^S  *\([^,][^,]*\),\([^,][^,]*\),$via2,\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$metal *$/\5/" )
+      if [ "$alu2_dir1" = UP -o "$alu2_dir1" = DOWN ]
+      then
+        alu2_dir=$alu2_dir1
+      elif [ "$alu2_dir2" = UP -o "$alu2_dir2" = DOWN ]
+      then
+        alu2_dir=$alu2_dir2
+      elif [ "$alu2_dir1" = LEFT -o "$alu2_dir1" = RIGHT ]
+      then
+        alu2_dir=$alu2_dir1
+      elif [ "$alu2_dir2" = LEFT -o "$alu2_dir2" = RIGHT ]
+      then
+        alu2_dir=$alu2_dir2
+      else
+        alu2_dir=UP
+      fi
+
+      obs1=$(grep -c "^S $via2,\([^,][^,]*\),\([^,][^,]*\),$scaled_alu2_width,obs,\([^,][^,]*\),TALU2 *$" $$talu2_segments)
+      obs2=$(grep -c "^S \([^,][^,]*\),\([^,][^,]*\),$via2,$scaled_alu2_width,obs,\([^,][^,]*\),TALU2 *$" $$talu2_segments)
+      let "obs=obs1+obs2"
+      none=0
+      if [ "$obs" -gt 0 -a "$metal" = ,ALU2 -o "$obs" -eq 0 -a "$metal" = ,CALU2 ]
+      then
+#       Scan TALU2 to see whether a segment labelled '*' is at y=yvia2
+#       Then vary yvia2 to account for wide TALU2 blockages
+#
+        xvia2=$(echo "$via2" | cut -f1 -d,)
+        yvia2=$(echo "$via2" | cut -f2 -d,)
+#
+#       x1x2_10 is the min and max x-values for each TALU2 segment whose y coord matches the CONT_VIA2
+#
+#       4 lambda wide TALU2
+        let "scaled_talu2_width=scaled_alu2_width"
+        yvia2_lo=$yvia2
+        x1x2_10=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_04 | \
+          sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+
+        for xloc in $x1x2_10
+        do
+          xmin=$(echo "$xloc" | cut -f1 -d,)
+          xmax=$(echo "$xloc" | cut -f2 -d,)
+#
+#         xmin and xmax are the 2 x coords of a TALU2 segment on the same y coord as the CONT_VIA2
+#
+          if [ "$xmin" -le "$xvia2" -a "$xmax" -ge "$xvia2" \
+           -o  "$xmin" -ge "$xvia2" -a "$xmax" -le "$xvia2" ]
+          then
+#           CONT_VIA2 lies above this TALU2 segment
+#
+            none=1
+            break
+          fi
+        done # looped thru all 4 lambda TALU2 segments at y=y(CONT_VIA2)
+
+        if [ "$none" -eq 0 ]
+        then
+#         12 lambda wide TALU2
+          let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+          let "yvia2_lo=yvia2_lo-scaled_alu2_pitch/2"
+          let "yvia2=yvia2_lo"
+          x1x2_20=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_12 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_21=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_12 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+
+#         20 lambda wide TALU2
+          let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+          let "yvia2_lo=yvia2_lo-scaled_alu2_pitch/2"
+          let "yvia2=yvia2_lo"
+          x1x2_30=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_20 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_31=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_20 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_32=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_20 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+
+#         28 lambda wide TALU2
+          let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+          let "yvia2_lo=yvia2_lo-scaled_alu2_pitch/2"
+          let "yvia2=yvia2_lo"
+          x1x2_40=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_28 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_41=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_28 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_42=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_28 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_43=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_28 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+
+#         36 lambda wide TALU2
+          let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+          let "yvia2_lo=yvia2_lo-scaled_alu2_pitch/2"
+          let "yvia2=yvia2_lo"
+          x1x2_50=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_36 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_51=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_36 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_52=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_36 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_53=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_36 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_54=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_36 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+
+#         44 lambda wide TALU2
+          let "scaled_talu2_width=scaled_talu2_width+scaled_alu2_pitch"
+          let "yvia2_lo=yvia2_lo-scaled_alu2_pitch/2"
+          let "yvia2=yvia2_lo"
+          x1x2_60=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_44 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_61=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_44 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_62=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_44 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_63=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_44 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_64=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_44 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+          let "yvia2=yvia2+scaled_alu2_pitch"
+          x1x2_65=$(grep "^S  *[^,][^,]*,$yvia2,[^,][^,]*,$yvia2,$scaled_talu2_width,\*,[^,][^,]*,TALU2 *$" $$talu2_44 | \
+            sed "s/^S  *\([^,][^,]*\),$yvia2,\([^,][^,]*\),$yvia2,$scaled_talu2_width,\*,\([^,][^,]*\),TALU2 *$/\1,\2/")
+
+          for xloc in $x1x2_20 $x1x2_21 $x1x2_30 $x1x2_31 $x1x2_32 $x1x2_40 $x1x2_41 $x1x2_42 $x1x2_43 \
+                      $x1x2_50 $x1x2_51 $x1x2_52 $x1x2_53 $x1x2_54 $x1x2_60 $x1x2_61 $x1x2_62 $x1x2_63 $x1x2_64 $x1x2_65
+          do
+            xmin=$(echo "$xloc" | cut -f1 -d,)
+            xmax=$(echo "$xloc" | cut -f2 -d,)
+#
+#           xmin and xmax are the 2 x coords of a TALU2 segment on the same y coord as the CONT_VIA2
+#
+            if [ "$xmin" -le "$xvia2" -a "$xmax" -ge "$xvia2" \
+             -o  "$xmin" -ge "$xvia2" -a "$xmax" -le "$xvia2" ]
+            then
+#             CONT_VIA2 lies above this TALU2 segment
+#
+              none=1
+              break
+            fi
+          done # looped thru all TALU2 segments wider than 4 lambda at y=y(CONT_VIA2)
+        fi
+      fi
+
+      let "any=obs+none"
+      if [ "$metal" = ,ALU2 -a "$obs" -eq 0 -o \
+           "$metal" = ,ALU2 -a "$none" -eq 0 -o \
+           "$metal" = ,CALU2 -a "$any" -eq 0 ]
+      then
+#       This ALU2/CALU2 segment terminating on a CONT_VIA2 needs extending
+        if [ "$alu2_dir" = LEFT -o "$alu2_dir" = RIGHT ]
+        then
+#         This ALU2 segment needs extending in an EAST-WEST direction
+#                                                     1   2   3   4   5   6   2   3   2   3   w   5   6   e
+          awk -v "FS= ||," '/ '$via2''$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+          $1,$2,$3,$4,$5,$6 RS \
+          "S",$2-'$scaled_alu2_overlap_via2',$3,$2+'$scaled_alu2_overlap_via2',$3,'$scaled_alu2_width',$5,$6,"LEFT,ALU2" }
+          !/'$via2''$via'/ {print}' $$temp1 > $$temp
+          cp $$temp $$temp1
+        elif [ "$alu2_dir" = UP -o "$alu2_dir" = DOWN ]
+        then
+#         This ALU2 segment needs extending in a NORTH-SOUTH direction
+#                                                     1   2   3   4   5   6   2   3   2   3   w   5   6   e
+          awk -v "FS= ||," '/ '$via2''$via'/ {printf "%1s %1s,%1s,%1s,%1s %1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+          $1,$2,$3,$4,$5,$6 RS \
+          "S",$2,$3-'$scaled_alu2_overlap_via2',$2,$3+'$scaled_alu2_overlap_via2','$scaled_alu2_width',$5,$6,"UP,ALU2" }
+          !/'$via2''$via'/ {print}' $$temp1 > $$temp
+          cp $$temp $$temp1
+        fi
+        break
+      fi
+    fi # operations if alu2_count > 0
+  done #looped thru ALU2 and CALU2
+done # looped thru all CONT_VIA2'a
+
+sed 's/^V  *ALLIANCE/000V ALLIANCE/' $$temp1 | \
+  sed 's/^H /00H /' | \
+  sed 's/^EOF/zzzEOF/' | \
+  sort -u | \
+  sed 's/^000V /V /' | \
+  sed 's/^00H /H /' | \
+  sed 's/^zzz//' | \
+  sed 's/  *,/,/' | \
+  sed 's/  *$//' > ${cell}
+
+rm $$temp $$temp1 $$talu2_segments $$talu2_04 $$talu2_12 $$talu2_20 $$talu2_28 $$talu2_36 $$talu2_44

@@ -1,0 +1,12 @@
+inputpin_list a b c
+outputpin_list z
+a z negative_unate when 01 10
+a z positive_unate when 00 11
+a z non_unate when 00
+b z negative_unate when 01 10
+b z positive_unate when 00 11
+b z non_unate when 00
+c z negative_unate when 01 10
+c z positive_unate when 00 11
+c z non_unate when 00
+z logic_function (a^b^c)

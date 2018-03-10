@@ -1,0 +1,59 @@
+#!/bin/bash
+#  With no supplied argument, the entire library characterisation is run
+#  With an argument, the LIB, VBE and HTML files are regenerated from
+#  existing timing files
+olddir=$PWD
+rm -f */*.error
+cd iv1
+./alliv1 $1
+cd $olddir
+cd aoi21
+./allaoi21 $1
+cd $olddir
+cd mxi2
+./allmxi2 $1
+cd $olddir
+cd nd2
+./allnd2 $1
+cd $olddir
+cd nd2a
+./allnd2a $1
+cd $olddir
+cd nd3
+./allnd3 $1
+cd $olddir
+cd nr2
+./allnr2 $1
+cd $olddir
+cd nr2a
+./allnr2a $1
+cd $olddir
+cd nr3
+./allnr3 $1
+cd $olddir
+cd oai21
+./alloai21 $1
+cd $olddir
+cd xnr2
+./allxnr2 $1
+cd $olddir
+cd xor2
+./allxor2 $1
+cd $olddir
+cat vgalib013_header.lib >  vgalib013.lib
+./makelut                >> vgalib013.lib
+cat aoi21/aoi21.lib      >> vgalib013.lib
+cat iv1/iv1.lib          >> vgalib013.lib
+cat mxi2/mxi2.lib        >> vgalib013.lib
+cat nd2/nd2.lib          >> vgalib013.lib
+cat nd2a/nd2a.lib        >> vgalib013.lib
+cat nd3/nd3.lib          >> vgalib013.lib
+cat nr2/nr2.lib          >> vgalib013.lib
+cat nr2a/nr2a.lib        >> vgalib013.lib
+cat nr3/nr3.lib          >> vgalib013.lib
+cat oai21/oai21.lib      >> vgalib013.lib
+cat xnr2/xnr2.lib        >> vgalib013.lib
+cat xor2/xor2.lib        >> vgalib013.lib
+cat vgalib013_footer.lib >> vgalib013.lib
+echo "# Listing error files"
+ls -l */*.error

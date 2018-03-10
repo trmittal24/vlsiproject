@@ -1,0 +1,7 @@
+*SPICE circuit <nr2v1x8> from XCircuit v3.20
+
+m1 z a vss vss n w=100u l=2u ad='100u*5u+12p' as='100u*5u+12p' pd='100u*2+14u' ps='100u*2+14u'
+m2 n1 a vdd vdd p w=205u l=2u ad='205u*5u+12p' as='205u*5u+12p' pd='205u*2+14u' ps='205u*2+14u'
+m3 z b vss vss n w=100u l=2u ad='100u*5u+12p' as='100u*5u+12p' pd='100u*2+14u' ps='100u*2+14u'
+m4 z b n1 vdd p w=205u l=2u ad='205u*5u+12p' as='205u*5u+12p' pd='205u*2+14u' ps='205u*2+14u'
+.end

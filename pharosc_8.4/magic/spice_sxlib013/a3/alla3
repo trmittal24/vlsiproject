@@ -1,0 +1,11 @@
+#!/bin/bash
+# alla3 2007-07-06:07h41 graham
+
+./alla3_delay $1
+./alla3_vbe
+./alla3_lib
+./alla3_html
+if test -x alla3_xtra
+then
+  ./alla3_xtra
+fi

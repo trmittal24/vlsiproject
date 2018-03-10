@@ -1,0 +1,11 @@
+D-type flip-flop with single <B>x2</B> drive strength non-inverted output
+clocked on the rising edge of pin <SPAN CLASS="boldred">cp</SPAN>.
+Clocked inverters are used on the input and feedback nodes, and a CMOS
+transfer gate is used to drive the slave.
+The power numbers are given at the clock frequency both when the output
+is stable and when it changes. The setup and hold times are the maximum
+for pin <SPAN CLASS="boldred">d</SPAN> transition times up to 1500ps
+and for clock pin <SPAN CLASS="boldred">cp</SPAN> up to 670ps.
+The fanout&nbsp;4 value is when the <SPAN CLASS="boldred">z</SPAN>
+output drives the <SPAN CLASS="boldred">cp</SPAN> input,
+as in a ripple counter.

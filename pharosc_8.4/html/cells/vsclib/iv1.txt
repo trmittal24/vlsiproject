@@ -1,0 +1,30 @@
+<TABLE ALIGN=RIGHT>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>v0&nbsp;</TT></TD>
+<TD>P/N=2</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>v1</TT></TD>
+<TD>P/N=1.5</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>v2</TT></TD>
+<TD>P/N=2.25</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>v3</TT></TD>
+<TD>P/N=1</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>v4</TT></TD>
+<TD>P/N=4</TD></TR>
+<TR>	<TD>&nbsp;&nbsp;</TD>
+<TD><TT>v5</TT></TD>
+<TD>P/N=2.6</TD></TR>
+</TABLE>
+<P>Inverters with different drive strengths and P/N ratios.<BR>
+The P/N ratios used for each version are shown to the right.
+The P:N ratio of 2 offers good output skew and speed,
+while 1.5 is close to the fastest speed. 2.25 is a balanced ratio if
+the mobility ratio &micro; equals 2.25 and 2.6 is balanced for this
+techno where &micro; is close to 2.6. P/N ratios of 1 and 4 give
+heavily skewed outputs for specific applications.<BR>
+The v6, v7 and v8 versions are experimental cells.
+The iv1v2x2 is considered as the reference inverter for
+logical effort calculations.

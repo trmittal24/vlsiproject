@@ -1,0 +1,5 @@
+2-input XOR gate with output P/N ratio of about 1.28.
+The Prop and Ramp delays below are the average of the inverting
+and non-inverting delays.
+The Synopsys Liberty format .LIB file has the correct delays
+for each case.

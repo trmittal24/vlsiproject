@@ -1,0 +1,30 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: makeal cell" 1>&2
+  echo "#" 1>&2
+  echo "#   No file given. Please check." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1
+else
+  echo "# Usage: makeal cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+MBK_OUT_LO=al
+cougar -ac $cell >/dev/null
+sed 's/UNKNOWN/IN/' $1.al | \
+sed 's/^C  *z,IN/C z,OUT/' | \
+sed 's/^C  *z0,IN/C z0,OUT/' | \
+sed 's/^C  *z1,IN/C z1,OUT/' | \
+sed 's/^C  *so,IN/C so,OUT/' | \
+sed 's/^C  *co,IN/C co,OUT/' > $$temp
+
+mv -f $$temp $cell.al

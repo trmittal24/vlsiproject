@@ -1,0 +1,50 @@
+library vgalib013
+techno 0.13um
+one_track_area 704
+cell_height 88
+ns_well_overlap 8
+ew_well_overlap 7
+libdir ..
+pmddir ../../../synopsys/pmd
+vbesourcedir ../../../alliance/vbe/vgalib200
+htmlsourcedir ../../../html/cells/vgalib
+home_page ../../../index
+symboldir ../../../xcircuit/gif/vgalib
+layoutdir ../../../alliance/gif/vgalib013
+param_description Berkeley generic bsim3 params
+inverter_name iv1
+separator v
+ref_inverter iv1v0x2
+reftau 8.634
+reffo4 70.07
+# unitcap units are fF
+unitcap 2.0
+std_load 25
+# min_transition units are ps
+min_transition 20
+# sim_time units are ps
+func_sim_time 20000
+char_sim_time 5000
+char_sim_time2 4000
+char_sim_time3 3500
+char_sim_time4 3000
+input_net_transition 20p 60p 90p 130p 200p 300p 450p 670p 1000p 1500p
+total_output_net_capacitance 1 4 12 30 62 130
+vdd 1.2
+temperature 27
+input_threshold_rise 0.5
+input_threshold_fall 0.5
+output_threshold_rise 0.5
+output_threshold_fall 0.5
+lower_lh_pct 10
+upper_lh_pct 90
+lower_hl_pct 10
+upper_hl_pct 90
+lower_hh_pct 10
+upper_hh_pct 90
+lower_ll_pct 10
+upper_ll_pct 90
+# leakage units are pA/um
+nleakage 350
+pleakage 350
+lambda 0.055

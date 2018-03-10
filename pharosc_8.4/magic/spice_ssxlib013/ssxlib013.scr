@@ -1,0 +1,24 @@
+Non Monotonic Delay Arcs
+ssxlib013.lib: ssxlib013 (61 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                                                Input Slope
+
+
+Bad Design Rules
+ssxlib013.lib: ssxlib013 (61 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                            Load Range          Min Cap   
+
+
+Bad Design Rules
+ssxlib013.lib: ssxlib013 (61 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                            Load Range           Max Cap  
+
+
+Bad Design Rules
+ssxlib013.lib: ssxlib013 (61 cells)
+OC (1.2V, 27degC); Units (1ff, 1ps, 1mA, 1V)
+#    .lib Line# Cell       Arc                             Slope Range          Max Trans
+
+

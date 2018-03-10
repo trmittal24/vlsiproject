@@ -1,0 +1,13 @@
+* Spice description of nr2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:25:22
+* vsclib 0.13um values
+.subckt nr2v0x05 a b vdd vss z
+M01 vdd   a     01    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M02 vss   a     z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 01    b     z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M04 z     b     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C3  a     vss   0.353f
+C4  b     vss   0.324f
+C2  z     vss   0.600f
+.ends

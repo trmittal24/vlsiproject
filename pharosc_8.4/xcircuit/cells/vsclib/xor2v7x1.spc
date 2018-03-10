@@ -1,0 +1,15 @@
+*SPICE circuit <xor2v7x1> from XCircuit v3.10
+
+m1 z n5 vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m2 n5 b n3 vdd p w=26u l=2u ad='26u*5u+12p' as='26u*5u+12p' pd='26u*2+14u' ps='26u*2+14u'
+m3 n1 b vss vss n w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m4 n2 a n1 vss n w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m5 n2 a vdd vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m6 n2 b vdd vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m7 n4 n2 vss vss n w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m8 n5 n2 vdd vdd p w=13u l=2u ad='13u*5u+12p' as='13u*5u+12p' pd='13u*2+14u' ps='13u*2+14u'
+m9 n3 a vdd vdd p w=26u l=2u ad='26u*5u+12p' as='26u*5u+12p' pd='26u*2+14u' ps='26u*2+14u'
+m10 n5 a n4 vss n w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m11 n5 b n4 vss n w=10u l=2u ad='10u*5u+12p' as='10u*5u+12p' pd='10u*2+14u' ps='10u*2+14u'
+m12 z n5 vdd vdd p w=11u l=2u ad='11u*5u+12p' as='11u*5u+12p' pd='11u*2+14u' ps='11u*2+14u'
+.end

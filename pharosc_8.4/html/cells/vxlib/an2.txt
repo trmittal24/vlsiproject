@@ -1,0 +1,1 @@
+2 I/P AND gate designed with a large input stage. This reduces the delay, especially when the wire capacitance on the input pin is high. The stage effort is 1.2 for the an2_x05, 1.5 for the an2_x1 and 1.9 for the an2_x2.

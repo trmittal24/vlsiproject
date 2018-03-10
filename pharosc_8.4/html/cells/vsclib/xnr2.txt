@@ -1,0 +1,1 @@
+4 XNOR gates designed for minimum transistor count and hence smallest size. The Prop and Ramp delays below are the average of the inverting and non-inverting delays. The Synopsys Liberty format .LIB file has the correct delays for each case.

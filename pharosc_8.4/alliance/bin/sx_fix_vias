@@ -1,0 +1,149 @@
+#!/bin/bash
+
+# Script which add a metal segment around each via
+# with the extra overlap defined by the overlap
+# variable below.
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: sx_fix_vias cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   will add metal rectangles around each via to ensure that" 1>&2
+  echo "#   there is a 2 lambda end overlap. The second argument will" 1>&2
+  echo "#   set the preferred direction of ALU2." 1>&2
+  echo "#   eg  sx_fix_vias fred H  will add ALU2 rectangles horizontally," 1>&2
+  echo "#   ALU3 rectangles vertically etc up to ALU6." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: sx_fix_vias cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: sx_fix_vias cell H|V" 1>&2
+  echo "#" 1>&2
+  echo "#   Argument H or V must be given. Please check." 1>&2
+  exit 1
+else
+  if [ "$2" = H ]
+  then
+    orient=H
+    echo "# Horizontal ALU2"
+  else
+    if [ "$2" = V ]
+    then
+      orient=V
+      echo "# Vertical ALU2"
+    else
+      echo "# Usage: sx_fix_vias cell H|V"
+      echo "#"
+      echo "#   Second argument must be H or V. Please check."
+      exit 1
+    fi
+  fi
+fi
+
+width=2
+overlap=0.5
+
+#                cell    ,      P      ,     date    , scale
+scale=$(grep '^H ' $cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let "scaled_width=$width*$scale"
+scaled_overlap=$(echo $overlap" "$scale | awk '{print $1*$2 }')
+
+if [ "$orient" = H ]
+then
+
+via=,CONT_VIA,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU2" }
+!/'$via'/ {print}' $cell > $$temp
+
+via=,CONT_VIA2,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU2" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU3" }
+!/'$via'/ {print}' $$temp > $$temp1
+
+via=,CONT_VIA3,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU4" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU3" }
+!/'$via'/ {print}' $$temp1 > $$temp
+
+via=,CONT_VIA4,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU4" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU5" }
+!/'$via'/ {print}' $$temp > $$temp1
+
+via=,CONT_VIA5,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU6" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU5" }
+!/'$via'/ {print}' $$temp1 > $$temp
+
+else
+
+via=,CONT_VIA,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU2" }
+!/'$via'/ {print}' $cell > $$temp
+
+via=,CONT_VIA2,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU3" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU2" }
+!/'$via'/ {print}' $$temp > $$temp1
+
+via=,CONT_VIA3,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU3" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU4" }
+!/'$via'/ {print}' $$temp1 > $$temp
+
+via=,CONT_VIA4,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU5" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU4" }
+!/'$via'/ {print}' $$temp > $$temp1
+
+via=,CONT_VIA5,
+#                                    1   2   3   4   5   6   2   3   2   3   w   5   6   e   2   3   2   3   w   5   6   e
+awk -v "FS= ||," '/'$via'/ {printf "%1s %1s,%1s,%1s,%1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s %1s,%1s,%1s,%1s,%1s,%1s %1s,%1s\n", \
+$1,$2,$3,$4,$5,$6 RS \
+"S",$2-'$scaled_overlap',$3,$2+'$scaled_overlap',$3,'$scaled_width',$5,$6,"LEFT,ALU5" RS \
+"S",$2,$3-'$scaled_overlap',$2,$3+'$scaled_overlap','$scaled_width',$5,$6,"UP,ALU6" }
+!/'$via'/ {print}' $$temp1 > $$temp
+
+fi
+cp $$temp ${cell}
+
+rm $$temp $$temp1

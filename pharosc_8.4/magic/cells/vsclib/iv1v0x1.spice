@@ -1,0 +1,28 @@
+NOT1 standard cell
+
+.include /home/34.5/Documents/programs/Ngspice/t14y_tsmc_025_level3.txt
+
+M1000 vdd a z vdd cmosp w=18u l=2u
++  ad=183p pd=60u as=116p ps=50u
+M1001 vss a z vss cmosn w=9u l=2u
++  ad=72p pd=34u as=57p ps=32u
+C0 vss z 2.16fF
+C1 vdd a 7.94fF
+C2 vss a 4.93fF
+C3 vdd z 2.54fF
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg a 0 PULSE(0 5 0 0 0 50n 100n)
+
+.control
+ dc v_gg 0 5 0.01
+ plot z
+.endc
+
+.control
+ tran 0.01n 400n
+ plot (a + 5) (z)
+.endc
+
+.end

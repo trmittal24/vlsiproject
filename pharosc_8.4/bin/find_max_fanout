@@ -1,0 +1,36 @@
+#!/bin/bash
+
+i=0
+max_fanout=0
+if [ "$2" = '' ]
+then
+  signals=$(grep '^signal' $1.vst | \
+    sed 's/^\(signal[ ][ ]*\)\([^ ][^ ]*\)\([ ][ ]*\)\(: bit;[ ]*\)$/\2/' |
+  while read line
+  do
+    let i=$i+1
+    echo -e $line" \c"
+  done )
+  signals=$(echo $signals | tr -s ' ')
+else
+  signals=$2
+fi
+for signal in $signals
+do
+  let i=$i+1
+  fanout=$[ $(grep -v signal $1.vst | \
+  grep -c " ${signal},") -1 ]
+  if [ "$fanout" -gt "$max_fanout" ]
+  then
+    max_fanout=$fanout
+    name=$signal
+  fi
+done
+if [ "$2" = '' ]
+then
+  echo "Number of nets: "$i
+  echo "Max fanout    : "$max_fanout
+else
+  echo "Fanout        : "$max_fanout
+fi
+echo "on net        : "$name

@@ -1,0 +1,1 @@
+Single stage 2-I/P NOR gates with one inverted input. 2 drive strengths with a P:N ratio of 2.

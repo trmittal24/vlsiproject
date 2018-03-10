@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# move the EAST or WEST connectors over a power supply
+# arg1 is file on which to do it
+# eg.
+# fix_conn multi8_p
+
+pitch=100
+
+if test $# -eq 0
+then
+  echo "# Usage vsx_align_conn cell_name" 1>&2
+  echo "#" 1>&2
+  echo "#   will move the EAST and WEST connectors of cell_name over the nearest" 1>&2
+  echo "#   power supply." 1>&2
+  echo "#   eg  vsx_align_conn fred  will move the left and right connectors" 1>&2
+  echo "#   above the nearest horizontal ALU1 power supplies on cell cell_name.ap." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage vsx_align_conn cell_name" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+#                cell    ,      P      ,     date    , scale
+scale=$(grep '^H ' $cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+for side in EAST WEST
+do
+
+awk -v FS=, '$6 ~ /'$side'/ {print $1","int($2/'$scale'/'$pitch')*'$scale'*'$pitch'","$3","$4","$5","$6","$7}
+$6 !~ /'$side'/ {print}' $cell > $$temp
+mv -f $$temp $cell
+done

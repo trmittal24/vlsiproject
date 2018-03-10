@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Magic</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=PREV HREF="linux_help4.html">
+	<LINK REL=NEXT HREF="linux_help6.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Linux.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20040430;19300000">
+	<META NAME="CHANGED" CONTENT="20070825;09500000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="linux_help5.html">/Linux help/Magic layout</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="linux_help4.html">PREV</A></LI>
+<LI><A HREF="linux_help6.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Magic layout</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html" CLASS="current">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+<A HREF="http://opencircuitdesign.com/magic">Magic</A>
+is a layout editor which has been around for a long time
+and is still being maintained and improved. The <I>pharosc</I>
+layout has been converted to Magic with a script which writes
+<TT>CIF</TT> files from Alliance, hacks them and then reads them into
+Magic. For the <B>vsclib</B>, look at
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+pharosc/alliance/cells/vsclib/makeallviews</PRE></TD></TR></TABLE>
+<P>
+Magic is used to extract the layout to a Spice deck and write
+<TT>CIF</TT> and <TT>GDS</TT> files.
+<P>
+The Magic extraction is more accurate than Alliance. The <TT>CIF</TT>
+and <TT>GDS</TT> layout files are also more accurate. Indeed it is hard
+or even impossible to write correct layout files from Alliance.
+The problem is in the generation of the implant layers which in
+deep sub-micron layout have to cover poly. In Alliance the implant
+layers are generated from the diffusion which can lead to poly
+interconnect being uncovered.
+<P>
+To be honest, my Magic editing environment is poor.
+<UL>
+<LI>I have to copy the config file vsc200.tech27 to the working directory
+because I don't know how to set up a search path;
+<LI> I have dodgy fonts in the tkcon window (the blue ones on the right);
+<LI> there is no grid appearing in the layout and the graphics, especially
+the "chain mail" appearance of the metal is unsatisfactory.
+</UL>
+<P>
+I don't know how to fix any of this and I am only using Magic in batch mode.
+If you have some fixes, please email me at graham.petley at vlsitechnology dot org.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/magic_layout.gif" NAME="Magic layout example" ALIGN=LEFT BORDER=0 ALT="Magic layout example" TITLE="Magic layout example">
+</DIV>
+
+</DIV>
+<P></P>
+<P></P>
+<P></P>
+</BODY>
+</HTML>

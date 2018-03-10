@@ -1,0 +1,78 @@
+* functionality check of nd4v0x2, 0.13um, Berkeley generic bsim3 params
+* nd4v0x2_func.cir 2007-08-29:12h17 graham
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/nd4v0x2.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x01 va   vb   vc   vd   vdd vss x01z nd4v0x2
+x02 va   vb   vc   vd   vdd vss x02z nd4v0x2
+*
+.param unitcap=1.0f
+cx01z  x01z  0 '2*unitcap'
+cx02z  x02z  0 '130*2*unitcap'
+* 
+vdd vdd 0 'vdd'
+vss 0 vss 'vss'
+vstrobe strobe 0 dc 0 pulse (0 1 '0.97*tPER' '0.01*tPER' '0.01*tPER' '0.01*tPER' 'tPER')
+*
+Vd  vd 0 pwl(0  'vss' '5*tPER' 'vss' '5*tPER+tRISE' 'vdd' '7*tPER' 'vdd' '7*tPER+tFALL'  'vss'
++           '9*tPER'  'vss' '9*tPER+tRISE'  'vdd' '17*tPER' 'vdd' '17*tPER+tFALL' 'vss'
++           '19*tPER' 'vss' '19*tPER+tRISE' 'vdd' '21*tPER' 'vdd' '21*tPER+tFALL' 'vss'
++           '26*tPER' 'vss' '26*tPER+tRISE' 'vdd' '28*tPER' 'vdd' '28*tPER+tFALL' 'vss'
++           '30*tPER' 'vss' '30*tPER+tRISE' 'vdd' '38*tPER' 'vdd' '38*tPER+tFALL' 'vss'
++           '40*tPER' 'vss' '40*tPER+tRISE' 'vdd' '42*tPER' 'vdd' '42*tPER+tFALL' 'vss'
++           '48*tPER' 'vss' '48*tPER+tRISE' 'vdd' '52*tPER' 'vdd' '52*tPER+tFALL' 'vss'
++           '59*tPER' 'vss' '59*tPER+tRISE' 'vdd' '63*tPER' 'vdd' '63*tPER+tFALL' 'vss' )
+Vc  vc 0 pwl(0  'vss' '2*tPER' 'vss' '2*tPER+tRISE' 'vdd' '4*tPER' 'vdd' '4*tPER+tFALL'  'vss'
++           '6*tPER'  'vss' '6*tPER+tRISE'  'vdd' '14*tPER' 'vdd' '14*tPER+tFALL' 'vss'
++           '16*tPER' 'vss' '16*tPER+tRISE' 'vdd' '18*tPER' 'vdd' '18*tPER+tFALL' 'vss'
++           '29*tPER' 'vss' '29*tPER+tRISE' 'vdd' '31*tPER' 'vdd' '31*tPER+tFALL' 'vss'
++           '33*tPER' 'vss' '33*tPER+tRISE' 'vdd' '41*tPER' 'vdd' '41*tPER+tFALL' 'vss'
++           '43*tPER' 'vss' '43*tPER+tRISE' 'vdd' '45*tPER' 'vdd' '45*tPER+tFALL' 'vss'
++           '51*tPER' 'vss' '51*tPER+tRISE' 'vdd' '55*tPER' 'vdd' '55*tPER+tFALL' 'vss'
++           '56*tPER' 'vss' '56*tPER+tRISE' 'vdd' '60*tPER' 'vdd' '60*tPER+tFALL' 'vss' )
+Vb  vb 0 pwl(0  'vss' '1*tPER' 'vss' '1*tPER+tRISE' 'vdd' '3*tPER' 'vdd' '3*tPER+tFALL'  'vss'
++           '11*tPER' 'vss' '11*tPER+tRISE' 'vdd' '13*tPER' 'vdd' '13*tPER+tFALL' 'vss'
++           '15*tPER' 'vss' '15*tPER+tRISE' 'vdd' '23*tPER' 'vdd' '23*tPER+tFALL' 'vss'
++           '24*tPER' 'vss' '24*tPER+tRISE' 'vdd' '32*tPER' 'vdd' '32*tPER+tFALL' 'vss'
++           '34*tPER' 'vss' '34*tPER+tRISE' 'vdd' '36*tPER' 'vdd' '36*tPER+tFALL' 'vss'
++           '44*tPER' 'vss' '44*tPER+tRISE' 'vdd' '46*tPER' 'vdd' '46*tPER+tFALL' 'vss'
++           '50*tPER' 'vss' '50*tPER+tRISE' 'vdd' '54*tPER' 'vdd' '54*tPER+tFALL' 'vss'
++           '57*tPER' 'vss' '57*tPER+tRISE' 'vdd' '61*tPER' 'vdd' '61*tPER+tFALL' 'vss' )
+Va  va 0 pwl(0 'vss' 'tRISE'  'vdd' '8*tPER' 'vdd'  '8*tPER+tFALL' 'vss'
++           '10*tPER' 'vss' '10*tPER+tRISE' 'vdd' '12*tPER' 'vdd' '12*tPER+tFALL' 'vss'
++           '20*tPER' 'vss' '20*tPER+tRISE' 'vdd' '22*tPER' 'vdd' '22*tPER+tFALL' 'vss'
++           '25*tPER' 'vss' '25*tPER+tRISE' 'vdd' '27*tPER' 'vdd' '27*tPER+tFALL' 'vss'
++           '35*tPER' 'vss' '35*tPER+tRISE' 'vdd' '37*tPER' 'vdd' '37*tPER+tFALL' 'vss'
++           '39*tPER' 'vss' '39*tPER+tRISE' 'vdd' '47*tPER' 'vdd' '47*tPER+tFALL' 'vss'
++           '49*tPER' 'vss' '49*tPER+tRISE' 'vdd' '53*tPER' 'vdd' '53*tPER+tFALL' 'vss'
++           '58*tPER' 'vss' '58*tPER+tRISE' 'vdd' '62*tPER' 'vdd' '62*tPER+tFALL' 'vss'
++           '64*tPER' 'vss' '64*tPER+tRISE' 'vdd' )
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+  tran $tstep 160000p
+  linearize
+  let a = va / $vdd
+  let b = vb / $vdd
+  let c = vc / $vdd
+  let d = vd / $vdd
+  let pa = va + ( $vdd + 0.3 )
+  let pb = vb + 2 * ( $vdd + 0.3 )
+  let pc = vc + 3 * ( $vdd + 0.3 )
+  let pd = vd + 4 * ( $vdd + 0.3 )
+  let pz = $vdd * (not (a and b and c and d)) - $vdd - 0.3
+* check output is within 10mV of ideal at strobe point
+  let perr =  vecmax ( pos ( abs (( pz - x02z + $vdd + 0.3 ) * strobe ) - 0.01 ))
+  plot v(pa) v(pb) v(pc) v(pd) v(pz) v(x01z) v(x02z)
+*  print col v(va) v(vb) v(vc) v(vd) v(x01z) v(x02z) > nd4v0x2_func.spo
+  if perr > 0
+    echo #Error: Functional simulation nd4v0x2_func.cir failed
+    echo #Error: Functional simulation nd4v0x2_func.cir failed >> nd4v0x2_func.error
+  else
+    echo Functional simulation OK
+  end
+  destroy all
+.endc
+.end

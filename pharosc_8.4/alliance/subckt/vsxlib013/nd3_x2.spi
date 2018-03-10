@@ -1,0 +1,16 @@
+* Spice description of nd3_x2
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:59:06
+* vsxlib 0.13um values
+.subckt nd3_x2 a b c vdd vss z
+M1a z     a     vdd   vdd p  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M1b vdd   b     z     vdd p  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M1z z     c     vdd   vdd p  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2a vss   a     n1    vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2b n1    b     sig2  vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M2c sig2  c     z     vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+C5  a     vss   0.746f
+C7  b     vss   0.651f
+C4  c     vss   0.529f
+C1  z     vss   1.271f
+.ends

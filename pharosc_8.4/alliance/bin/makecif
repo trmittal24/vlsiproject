@@ -1,0 +1,4 @@
+#!/bin/bash
+RDS_OUT=cif
+s2r -s -v $1 1>&2
+cat $1.cif

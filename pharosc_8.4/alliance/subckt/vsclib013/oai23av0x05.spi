@@ -1,0 +1,24 @@
+* Spice description of oai23av0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:31:34
+* vsclib 0.13um values
+.subckt oai23av0x05 a3 b1 b2 vdd vss z
+M01 n2    b2    z     vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M02 z     b2    n4    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M03 04    08    vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M04 z     a3    04    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M05 n4    a3    vss   vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M06 n4    b1    z     vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M07 vdd   b1    n2    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M08 vss   08    n4    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M09 08    b1    vdd   vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M10 n1    b1    vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M11 vdd   b2    08    vdd p  L=0.12U  W=0.715U AS=0.189475P AD=0.189475P PS=1.96U   PD=1.96U
+M12 08    b2    n1    vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+C8  08    vss   1.116f
+C4  a3    vss   0.539f
+C7  b1    vss   0.655f
+C5  b2    vss   0.955f
+C2  n4    vss   0.270f
+C3  z     vss   0.487f
+.ends

@@ -1,0 +1,7 @@
+pwidth 168
+nwidth 120
+unitcap 1.5
+min_capacitance 18
+max_capacitance 2340
+max_fanout 30
+fanout_load 1

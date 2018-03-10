@@ -1,0 +1,2 @@
+#!/bin/bash
+ls -1 ../vxlib/ | sed 's/^.*$/sed\ s\/l=2u\/l=2.3636u\/g\ ..\/vxlib\/&\ >\ &/' | bash

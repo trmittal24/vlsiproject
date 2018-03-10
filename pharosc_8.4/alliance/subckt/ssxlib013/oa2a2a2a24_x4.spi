@@ -1,0 +1,39 @@
+* Spice description of oa2a2a2a24_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:40:01
+* ssxlib 0.13um values
+.subckt oa2a2a2a24_x4 i0 i1 i2 i3 i4 i5 i6 i7 q vdd vss
+Mtr_00001 sig6  i5    vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00002 vss   i2    sig9  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00003 sig12 i1    sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00004 q     sig2  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00005 vss   i0    sig12 vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00006 q     sig2  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00007 sig2  i4    sig6  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00008 sig9  i3    sig2  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00009 sig2  i6    sig3  vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00010 sig3  i7    vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00011 q     sig2  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00012 vdd   sig2  q     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00013 sig18 i1    vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00014 vdd   i0    sig18 vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00015 sig18 i3    sig17 vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00016 sig2  i7    sig16 vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00017 sig17 i2    sig18 vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00018 sig17 i4    sig16 vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00019 sig16 i5    sig17 vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00020 sig16 i6    sig2  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+C15 i0    vss   0.672f
+C13 i1    vss   0.516f
+C10 i2    vss   0.539f
+C11 i3    vss   0.517f
+C8  i4    vss   0.517f
+C7  i5    vss   0.517f
+C4  i6    vss   0.553f
+C5  i7    vss   0.624f
+C14 q     vss   0.900f
+C16 sig16 vss   0.569f
+C17 sig17 vss   0.443f
+C18 sig18 vss   0.359f
+C2  sig2  vss   1.477f
+.ends

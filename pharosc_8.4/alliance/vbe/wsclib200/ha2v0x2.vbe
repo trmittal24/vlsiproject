@@ -1,0 +1,46 @@
+ENTITY ha2v0x2 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 7680;   
+  CONSTANT cin_a         : NATURAL := 22;     
+  CONSTANT cin_b         : NATURAL := 22;     
+  CONSTANT rdown_a_co    : NATURAL := 2600;   
+  CONSTANT rdown_a_so    : NATURAL := 2800;   
+  CONSTANT rdown_b_co    : NATURAL := 2600;   
+  CONSTANT rdown_b_so    : NATURAL := 2800;   
+  CONSTANT rup_a_co      : NATURAL := 2660;   
+  CONSTANT rup_a_so      : NATURAL := 2860;   
+  CONSTANT rup_b_co      : NATURAL := 2660;   
+  CONSTANT rup_b_so      : NATURAL := 2860;   
+  CONSTANT tphh_a_co	 : NATURAL := 361;
+  CONSTANT tpll_b_co	 : NATURAL := 383;
+  CONSTANT tphh_b_co	 : NATURAL := 386;
+  CONSTANT tpll_a_co	 : NATURAL := 398;
+  CONSTANT tphh_a_so	 : NATURAL := 421;
+  CONSTANT tpll_b_so	 : NATURAL := 497;
+  CONSTANT tphl_b_so	 : NATURAL := 531;
+  CONSTANT tplh_b_so	 : NATURAL := 556;
+  CONSTANT tphh_b_so	 : NATURAL := 558;
+  CONSTANT tpll_a_so	 : NATURAL := 562;
+  CONSTANT tphl_a_so	 : NATURAL := 575;
+  CONSTANT tplh_a_so	 : NATURAL := 607;
+  CONSTANT transistors   : NATURAL := 14      
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  co	 : out BIT;
+  so	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END ha2v0x2;
+
+ARCHITECTURE behaviour_data_flow OF ha2v0x2 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on ha2v0x2"
+  SEVERITY WARNING;
+  so <= (a xor b) after 1200 ps;
+  co <= (a and b) after 1000 ps;
+END;

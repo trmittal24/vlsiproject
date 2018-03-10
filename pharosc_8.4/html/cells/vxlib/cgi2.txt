@@ -1,0 +1,1 @@
+The output is the inverted carry of bits <SPAN CLASS="boldred">a</SPAN> and <SPAN CLASS="boldred">b</SPAN> and carry input <SPAN CLASS="boldred">c</SPAN>, with the delay from pin <SPAN CLASS="boldred">c</SPAN> being favoured. The cells here use a P/N ratio of 2.

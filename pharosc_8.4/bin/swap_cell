@@ -1,0 +1,104 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: swap_cell netlist instance new_cell"
+  echo "#"
+  echo "#   will change the cell of instance in netlist to new_cell."
+  echo "#   eg  swap_cell multi8 r_0_ins xor2v4x2"
+  echo "#   will change instance r_0_ins in multi8.vst to cell xor2v4x2."
+  echo "#   If the existing cell type is nor an xor2, then the swap will not be done."
+  exit 1
+fi
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: swap_cell netlist instance new_cell"
+  echo "#"
+  echo "#   Missing instance."
+  echo "#   Please supply the instance name."
+  exit 1
+fi
+if [ "$#" -eq 2 ]
+then
+  echo "# Usage: swap_cell netlist instance new_cell"
+  echo "#"
+  echo "#   Missing new_cell."
+  echo "#   Please supply the desired new cell name."
+  exit 1
+fi
+if test -f $1.vst
+then
+  netlist=$1
+else
+  echo "# Usage: swap_cell netlist instance new_cell"
+  echo "#"
+  echo "#   The netlist supplied "$1".vst does not exist. Please check."
+  exit 1
+fi
+inst=$2
+inst_no=$(grep -c "^ *$inst *:" ${netlist}.vst)
+if [ "$inst_no" -eq 0 ]
+then
+  echo "# Usage: swap_cell netlist instance new_cell"
+  echo "#"
+  echo "#   The instance name supplied  "$inst"  is not present in the netlist. Please check."
+  exit 1
+else
+  old_cell=$(grep "^ *${inst} " ${netlist}.vst | \
+    sed 's/^ *//' | \
+    cut -f 3 -d ' ')
+fi
+new_cell=$3
+new_drive=${new_cell##*v?}
+if [ "${new_drive:1:1}" -eq 0 ]
+then
+  new_type=${new_cell%*v?x??}
+else
+  new_type=${new_cell%*v?x?}
+fi
+
+# Find existing cell type
+
+old_drive=${old_cell##*v?}
+if [ "${old_drive:1:1}" -eq 0 ]
+then
+  old_type=${old_cell%*v?x??}
+else
+  if [ "${old_drive:1:1}" -eq 1 ]
+  then
+    if [ "$old_drive" = x12 ]
+    then
+      old_type=${old_cell%*v?x??}
+    else
+      old_type=${old_cell%*v?x?}
+    fi
+  else
+    old_type=${old_cell%*v?x?}
+  fi
+fi
+
+if [ "$new_type" != "$old_type" ]
+then
+  echo "# Instance "$inst", cell "$old_cell" is not the same type as "$new_cell"."
+  echo "# Netlist "$netlist".vst has not been changed."
+  exit 0
+fi
+cell2=$(echo $old_cell | sed "s/${old_drive}$/${drive}/")
+
+# Change instance from old cell name to new one
+
+sed -i "/^ *${inst} / s/^ *${inst}  *:  *[^ ][^ ]* *$/${inst} : ${new_cell}/" ${netlist}.vst
+echo "# Instance "$inst", cell "$old_cell" has been changed to "$new_cell"."
+
+# Add new cell name to Component list if not already there
+
+if [ "$(grep -c "^ *Component  *${new_cell} *$" ${netlist}.vst)" -eq 0 ]
+then
+  sed -n "/^ *Component  *${old_cell} *$/,/^ *end / p" ${netlist}.vst > this_comp
+  sed -i "1 s/${old_cell}/${new_cell}/" this_comp
+  let "comp_lines=$(wc -l this_comp | cut -f 1 -d ' ')-1"
+  sed -i "1,${comp_lines} s/^.*$/&\\\/" this_comp
+  sed -i "1 i\/^ *Component  *${old_cell}/ i" this_comp
+  sed -i '1 s/$/\\/' this_comp
+  sed -i -f this_comp ${netlist}.vst
+fi

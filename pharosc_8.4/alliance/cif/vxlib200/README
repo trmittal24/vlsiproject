@@ -1,0 +1,7 @@
+# Use the following Alliance variables to view these cells with DREAL.
+# You can 
+# $ source README
+# to set them.
+export RDS_IN=cif
+export RDS_TECHNO_NAME=../../../alliance/etc/vx200.rds
+export DREAL_TECHNO_NAME=../../../alliance/etc/s200.dreal

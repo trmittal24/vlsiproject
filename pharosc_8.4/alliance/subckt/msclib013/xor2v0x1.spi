@@ -1,0 +1,22 @@
+* Spice description of xor2v0x1
+* Spice driver version 134894944
+* Date  4/10/2005 at 10:06:49
+*
+.subckt xor2v0x1 a b vdd vss z 
+M1b 2bn   b     vdd   vdd p  L=0.12U  W=0.825U AS=0.226875P AD=0.226875P PS=2.2U    PD=2.2U   
+M2b 2b    b     2bn   vdd p  L=0.12U  W=0.825U AS=0.226875P AD=0.226875P PS=2.2U    PD=2.2U   
+M1a vdd   a     an    vdd p  L=0.12U  W=1.65U  AS=0.45375P  AD=0.45375P  PS=3.85U   PD=3.85U  
+M1bn an    2bn   z     vdd p  L=0.12U  W=1.65U  AS=0.45375P  AD=0.45375P  PS=3.85U   PD=3.85U  
+M1an z     an    2bn   vdd p  L=0.12U  W=1.65U  AS=0.45375P  AD=0.45375P  PS=3.85U   PD=3.85U  
+M3b an    b     z     vss n  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+M4b 2bn   b     vss   vss n  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+M2a vss   a     an    vss n  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+M2bn z     2bn   sig3  vss n  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+M2an sig3  an    vss   vss n  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+C9  vdd   vss   1.055f
+C7  b     vss   0.681f
+C6  a     vss   0.396f
+C5  2bn   vss   1.136f
+C4  an    vss   0.564f
+C1  z     vss   0.827f
+.ends

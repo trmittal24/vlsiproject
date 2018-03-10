@@ -1,0 +1,21 @@
+*SPICE circuit <xnr3v1x05> from XCircuit v3.20
+
+m1 z cn izn vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m2 cn c vss vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m3 izn iz vss vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m4 n2 izn vss vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m5 z cn n2 vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m6 izn iz vdd vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m7 cn c vdd vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m8 z c izn vss n w=7u l=2u ad='7u*5u+12p' as='7u*5u+12p' pd='7u*2+14u' ps='7u*2+14u'
+m9 z izn cn vdd p w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m10 n1 bn vdd vdd p w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m11 iz b an vdd p w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m12 bn b vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m13 an a vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m14 iz an bn vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m15 an a vdd vdd p w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m16 bn b vdd vdd p w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+m17 iz bn an vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m18 iz an n1 vdd p w=19u l=2u ad='19u*5u+12p' as='19u*5u+12p' pd='19u*2+14u' ps='19u*2+14u'
+.end

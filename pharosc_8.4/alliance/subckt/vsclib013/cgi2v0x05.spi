@@ -1,0 +1,22 @@
+* Spice description of cgi2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:08:39
+* vsclib 0.13um values
+.subckt cgi2v0x05 a b c vdd vss z
+M01 vdd   a     n1    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M02 06    a     vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M03 vss   a     n3    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M04 n4    a     vss   vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M05 vdd   b     n1    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M06 z     b     06    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M07 vss   b     n3    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M08 z     b     n4    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M09 n1    c     z     vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M10 n3    c     z     vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+C4  a     vss   0.538f
+C6  b     vss   0.790f
+C7  c     vss   0.273f
+C9  n1    vss   0.415f
+C2  n3    vss   0.315f
+C5  z     vss   0.734f
+.ends

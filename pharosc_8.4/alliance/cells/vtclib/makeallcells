@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Script to remake all vtclib cells from the vsclib contents
+
+ls -1 ../vsclib/*.ap | \
+  grep -v test | \
+  grep -v ram | \
+  sed 's|^../vsclib/\(.*\)\.ap|./convert_cell \1|' | bash

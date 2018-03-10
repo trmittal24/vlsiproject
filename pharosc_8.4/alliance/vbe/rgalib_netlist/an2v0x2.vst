@@ -1,0 +1,52 @@
+entity an2v0x2 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end an2v0x2;
+
+architecture structural of an2v0x2 is
+Component iv1v0x2
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component nd2v0x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal zn : bit;
+
+begin
+
+zn : nd2v0x2
+   port map (
+      a   => a,
+      b   => b,
+      z   => zn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : iv1v0x2
+   port map (
+      a   => zn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

@@ -1,0 +1,6 @@
+#!/bin/bash
+# Convert 4N to 94
+# This works if the 4X connectors coming from Alliance CIF have already been hacked to 4N
+
+#grep -v '^4A ' $1.cif | sed 's/^4N/94/g'
+sed 's/^4N/94/g' $1.cif 

@@ -1,0 +1,52 @@
+entity an2_x4 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end an2_x4;
+
+architecture structural of an2_x4 is
+Component nd2_x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1_x4
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal zn : bit;
+
+begin
+
+zn : nd2_x2
+   port map (
+      a   => a,
+      b   => b,
+      z   => zn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : iv1_x4
+   port map (
+      a   => zn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

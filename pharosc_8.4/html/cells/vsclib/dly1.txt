@@ -1,0 +1,1 @@
+The dly1 cell uses four chained inverters. The layout style maximises internal node parasitic capacitances, which contributes about 12ps of the dly1v0x05 fixed delay.

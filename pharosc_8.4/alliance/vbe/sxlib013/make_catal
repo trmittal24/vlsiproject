@@ -1,0 +1,5 @@
+ls -1 *.vbe | sed 's/\(.*\)\.vbe/\1 C/' > SXLIB013
+ls -1 rowend*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> SXLIB013
+ls -1 tie*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> SXLIB013
+
+sort -o SXLIB013 SXLIB013

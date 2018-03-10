@@ -1,0 +1,48 @@
+#!/bin/bash
+
+rm -f *.vbe
+
+cp -p ../vxlib013_6/an2_x05.vbe .
+cp -p ../vxlib013_6/an3_x1.vbe .
+cp -p ../vxlib013_6/an4_x1.vbe .
+cp -p ../vxlib013_6/aoi21_x05.vbe .
+cp -p ../vxlib013_6/aoi22_x05.vbe .
+cp -p ../vxlib013_6/aon21_x1.vbe .
+cp -p ../vxlib013_6/aon22_x1.vbe .
+cp -p ../vxlib013_6/bf1_w05.vbe .
+cp -p ../vxlib013_6/cgi2a_x05.vbe .
+cp -p ../vxlib013_6/cgi2_x05.vbe .
+cp -p ../vxlib013_6/cgn2_x1.vbe .
+cp -p ../vxlib013_6/iv1_x05.vbe .
+cp -p ../vxlib013_6/mxi2_x05.vbe .
+cp -p ../vxlib013_6/nd2a_x1.vbe .
+cp -p ../vxlib013_6/nd2_x05.vbe .
+cp -p ../vxlib013_6/nd3_x05.vbe .
+cp -p ../vxlib013_6/nd4_x05.vbe .
+cp -p ../vxlib013_6/nr2a_x05.vbe .
+cp -p ../vxlib013_6/nr2_x05.vbe .
+cp -p ../vxlib013_6/nr3_x05.vbe .
+cp -p ../vxlib013_6/nr4_x05.vbe .
+cp -p ../vxlib013_6/oai21_x05.vbe .
+cp -p ../vxlib013_6/oai22_x05.vbe .
+cp -p ../vxlib013_6/oan21_x1.vbe .
+cp -p ../vxlib013_6/oan22_x1.vbe .
+cp -p ../vxlib013_6/or2_x1.vbe .
+cp -p ../vxlib013_6/or3_x1.vbe .
+cp -p ../vxlib013_6/or4_x1.vbe .
+cp -p ../vxlib013_6/rowend_x0.vbe .
+cp -p ../vxlib013_6/tie_x0.vbe .
+cp -p ../vxlib013_6/vddtie.vbe .
+cp -p ../vxlib013_6/vfeed1.vbe .
+cp -p ../vxlib013_6/vfeed2.vbe .
+cp -p ../vxlib013_6/vsstie.vbe .
+cp -p ../vxlib013_6/xaoi21_x05.vbe .
+cp -p ../vxlib013_6/xaon21_x05.vbe .
+cp -p ../vxlib013_6/xaon22_x05.vbe .
+cp -p ../vxlib013_6/xnr2_x05.vbe .
+cp -p ../vxlib013_6/xor2_x05.vbe .
+
+ls -1 *.vbe | sed 's/\.vbe/ C/' > VXLIB013_6_MIN
+ls -1 rowend*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> VXLIB013_6_MIN
+ls -1 tie*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> VXLIB013_6_MIN
+ls -1 vfeed*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> VXLIB013_6_MIN

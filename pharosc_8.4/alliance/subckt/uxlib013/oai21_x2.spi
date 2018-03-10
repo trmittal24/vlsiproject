@@ -1,0 +1,20 @@
+* Spice description of oai21_x2
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt oai21_x2 a1 a2 b vdd vss z 
+M5  z     b     vdd   vdd p  L=0.13U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U  
+M4  sig6  a2    z     vdd p  L=0.13U  W=1.98U  AS=0.5247P   AD=0.5247P   PS=4.49U   PD=4.49U  
+M3  vdd   a1    sig6  vdd p  L=0.13U  W=1.98U  AS=0.5247P   AD=0.5247P   PS=4.49U   PD=4.49U  
+M2  z     a2    sig4  vdd p  L=0.13U  W=1.98U  AS=0.5247P   AD=0.5247P   PS=4.49U   PD=4.49U  
+M1  sig4  a1    vdd   vdd p  L=0.13U  W=1.98U  AS=0.5247P   AD=0.5247P   PS=4.49U   PD=4.49U  
+M8  n3    b     z     vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+M7  n3    a2    vss   vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+M6  vss   a1    n3    vss n  L=0.13U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U  
+C9  a1    vss   1.964f
+C8  b     vss   0.976f
+C7  a2    vss   1.075f
+C5  vdd   vss   1.799f
+C3  n3    vss   0.529f
+C1  z     vss   3.252f
+.ends

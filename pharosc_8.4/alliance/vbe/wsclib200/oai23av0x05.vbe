@@ -1,0 +1,42 @@
+ENTITY oai23av0x05 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 5760;   
+  CONSTANT cin_b1        : NATURAL := 9;      
+  CONSTANT cin_b2        : NATURAL := 9;      
+  CONSTANT cin_a2        : NATURAL := 5;      
+  CONSTANT rdown_b1_z    : NATURAL := 8140;   
+  CONSTANT rdown_b2_z    : NATURAL := 8140;   
+  CONSTANT rdown_a2_z    : NATURAL := 8140;   
+  CONSTANT rup_b1_z      : NATURAL := 8030;   
+  CONSTANT rup_b2_z      : NATURAL := 8030;   
+  CONSTANT rup_a2_z      : NATURAL := 8030;   
+  CONSTANT tphl_a2_z	 : NATURAL := 165;
+  CONSTANT tphl_b2_z	 : NATURAL := 218;
+  CONSTANT tpll_b2_z     : NATURAL := 526;    
+  CONSTANT tplh_b1_z	 : NATURAL := 226;
+  CONSTANT tphh_b1_z     : NATURAL := 558;    
+  CONSTANT tplh_a2_z	 : NATURAL := 238;
+  CONSTANT tplh_b2_z	 : NATURAL := 287;
+  CONSTANT tphh_b2_z     : NATURAL := 493;    
+  CONSTANT tphl_b1_z	 : NATURAL := 294;
+  CONSTANT tpll_b1_z     : NATURAL := 447;    
+  CONSTANT transistors   : NATURAL := 12      
+);
+PORT (
+  b1	 : in  BIT;
+  b2	 : in  BIT;
+  a2	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END oai23av0x05;
+
+ARCHITECTURE behaviour_data_flow OF oai23av0x05 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on oai23av0x05"
+  SEVERITY WARNING;
+  z <= (not b1 and not b2) or (not a2 and (b1 and b2)) after 1000 ps;
+END;

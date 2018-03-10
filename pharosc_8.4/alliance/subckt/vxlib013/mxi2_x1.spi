@@ -1,0 +1,21 @@
+* Spice description of mxi2_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:34:08
+* vxlib 0.13um values
+.subckt mxi2_x1 a0 a1 s vdd vss z
+M1s vdd   s     sig5  vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M1  vdd   s     sig7  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2  sig6  sig5  vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2s sig5  s     vss   vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M3  sig7  a0    z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M4  z     a1    sig6  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M5  sig2  a1    vss   vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M6  vss   sig5  sig4  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M7  z     s     sig2  vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+M8  sig4  a0    z     vss n  L=0.12U  W=0.935U AS=0.247775P AD=0.247775P PS=2.4U    PD=2.4U
+C11 a0    vss   0.686f
+C10 a1    vss   0.697f
+C9  s     vss   1.286f
+C5  sig5  vss   0.684f
+C1  z     vss   0.843f
+.ends

@@ -1,0 +1,16 @@
+* Spice description of or2v4x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:33:13
+* vsclib 0.13um values
+.subckt or2v4x1 a b vdd vss z
+M01 n1    a     vdd   vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M02 sig1  a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 sig1  b     n1    vdd p  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M04 vss   b     sig1  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 vdd   sig1  z     vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M06 vss   sig1  z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C4  a     vss   0.427f
+C5  b     vss   0.365f
+C1  sig1  vss   0.556f
+C3  z     vss   0.608f
+.ends

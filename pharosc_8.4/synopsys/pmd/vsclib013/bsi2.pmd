@@ -1,0 +1,12 @@
+inputpin_list a0 a1 s
+outputpin_list z0 z1
+a0 z0 negative_unate when 00 10
+a1 z0 negative_unate when 01 11
+s z0 negative_unate when 01
+s z0 positive_unate when 10
+z0 logic_function ((a0*s')+(a1*s))'
+a0 z1 negative_unate when 01 11
+a1 z1 negative_unate when 00 10
+s z1 negative_unate when 10
+s z1 positive_unate when 01
+z1 logic_function ((a1*s')+(a0*s))'

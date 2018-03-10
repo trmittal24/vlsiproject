@@ -1,0 +1,6 @@
+* Spice description of rowend_x0
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:35:19
+* vsclib 0.13um values
+.subckt rowend_x0 vdd vss
+.ends

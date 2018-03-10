@@ -1,0 +1,35 @@
+* Spice description of cgn2_x4
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:58:18
+* vsxlib 0.13um values
+.subckt cgn2_x4 a b c vdd vss z
+M1a vdd   a     1c    vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M1b 1c    b     vdd   vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M1c 1c    c     zn    vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M1z vdd   zn    z     vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M2a 1c    a     vdd   vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M2b vdd   b     1c    vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M2c zn    c     1c    vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M2z z     zn    vdd   vdd p  L=0.12U  W=2.035U AS=0.539275P AD=0.539275P PS=4.6U    PD=4.6U
+M3a vdd   a     3b    vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M3b 3b    b     zn    vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M3c zn    c     sig1  vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M3z z     zn    vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M4a n1a   a     vdd   vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M4b zn    b     n1a   vdd p  L=0.12U  W=1.705U AS=0.451825P AD=0.451825P PS=3.94U   PD=3.94U
+M4c sig1  c     zn    vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M4z vss   zn    z     vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M5a sig1  a     vss   vss n  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M5b vss   b     sig1  vss n  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M7a n3b   a     vss   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M7b zn    b     n3b   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M8a vss   a     8a    vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M8b 8a    b     zn    vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+C10 1c    vss   0.653f
+C4  a     vss   2.018f
+C6  b     vss   1.350f
+C5  c     vss   0.752f
+C1  sig1  vss   0.279f
+C9  z     vss   0.680f
+C3  zn    vss   1.599f
+.ends

@@ -1,0 +1,7 @@
+* Spice description of rowend_x0
+* Spice driver version 134894944
+* Date  4/10/2005 at 10:06:16
+*
+.subckt rowend_x0 vdd vss 
+C2  vdd   vss   0.219f
+.ends

@@ -1,0 +1,7 @@
+2um version of sxlib using ALU2 for metal-1.
+Design rules are vtc200, adapted from vsc200 for the
+different use of ALU2.
+
+DREAL_TECHNO_NAME=/home/dev/alliance/etc/t200.dreal
+GRAAL_TECHNO_NAME=/home/dev/alliance/etc/t.graal
+RDS_TECHNO_NAME=/home/dev/alliance/etc/vtc200.rds

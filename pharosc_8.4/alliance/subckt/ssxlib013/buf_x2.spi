@@ -1,0 +1,13 @@
+* Spice description of buf_x2
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:14
+* ssxlib 0.13um values
+.subckt buf_x2 i q vdd vss
+Mtr_00001 vss   sig2  q     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00002 sig2  i     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+Mtr_00003 q     sig2  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00004 vdd   i     sig2  vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+C4  i     vss   0.942f
+C3  q     vss   0.771f
+C2  sig2  vss   0.495f
+.ends

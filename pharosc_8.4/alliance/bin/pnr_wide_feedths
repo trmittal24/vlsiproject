@@ -1,0 +1,145 @@
+#/bin/bash
+
+# Script which replaces successive feedthru
+# cells with a single larger one.
+
+# The script assumes the feedthrus are named successively
+# vfeed1, vfeed2, vfeed3 .. vfeed8, so it can't be used with an incompatible library.
+
+if ! test -d $MBK_TARGET_LIB
+then
+  echo "#?! No MBK_TARGET_LIB found. Please check." 1>&2
+  exit 1
+else
+  library=$(basename $MBK_TARGET_LIB)
+  case $library in
+  rgalib013)
+    rowheight=88
+    ;;
+  ssxlib013)
+    rowheight=100
+    ;;
+  stxlib013)
+    rowheight=100
+    ;;
+  sxlib100)
+    rowheight=50
+    ;;
+  vgalib013)
+    rowheight=88
+    ;;
+  vsclib013)
+    rowheight=72
+    ;;
+  vtclib013)
+    rowheight=72
+    ;;
+  vsxlib013)
+    rowheight=100
+    ;;
+  vtxlib013)
+    rowheight=100
+    ;;
+  vxlib013)
+    rowheight=50
+    ;;
+  wsclib013)
+    rowheight=80
+    ;;
+  wtclib013)
+    rowheight=80
+    ;;
+  *)
+    echo "#?! Library "$library" not supported yet. Please check." 1>&2
+    exit 1
+    ;;
+  esac
+fi
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: pnr_wide_feedths cell" 1>&2
+  echo "#" 1>&2
+  echo "#   will replace successive feedthru cells with a single wider one" 1>&2
+  echo "#   eg  pnr_wide_feedths fred  will replace successive feedthru" 1>&2
+  echo "#   cells in fred.ap with a single wider one." 1>&2
+  exit 1
+fi
+
+if test -f $1.ap
+then
+  cell=$1.ap
+else
+  echo "# Usage: pnr_wide_feedths cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".ap does not exist. Please check." 1>&2
+  exit 1
+fi
+
+scale=$(grep '^H ' $cell | sed 's/^H  *\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\) *$/\4/')
+
+let scaled_rowheight=$rowheight*$scale
+
+sed -n '/^I / p' $cell | \
+  grep -v 'zzzblock' | \
+  sed 's/^I  */I,/' | \
+  sort -t, +2n +1n > $$inst 2>/dev/null
+grep -v '^I ' $cell | \
+  grep -v '^EOF' > $$temp
+
+row_no=1
+let "scaled_row_no=(row_no-1)*scaled_rowheight"
+cell_count=$(sed -n "/^[^,][^,]*,[^,][^,]*,$scaled_row_no,/ p" $$inst | grep '^' -c)
+echo "# Row $row_no with $cell_count cells"
+until [ "$cell_count" -eq 0 ]
+do
+  vfeed_width=0
+  inst_list=$(sed -n "/^[^,][^,]*,[^,][^,]*,$scaled_row_no,/ p" $$inst | cut -f5 -d, | while read line; do echo -n $line" "; done)
+    for inst_name in $inst_list
+    do
+      cell_name=$(grep ",$inst_name," $$inst | sed "s/^\([^,][^,]*,[^,][^,]*,$scaled_row_no\),\([^,][^,]*\),\(.*\)$/\2/")
+      if [ "$cell_name" = vfeed1 -o "$cell_name" = vfeed2 ]
+      then
+        if [ "$vfeed_width" -eq 0 ]
+        then
+#         first feedthru cell found
+          scaled_column_no=$(grep ",$inst_name," $$inst | sed "s/^\([^,][^,]*\),\([^,][^,]*\),.*$/\2/")
+        else
+#         second or subsequent feedthru cell found; remove
+          sed -i "/,$inst_name,/ d" $$inst
+        fi
+        if [ "$cell_name" = vfeed1 ]
+        then
+          let vfeed_width=$vfeed_width+1
+        elif [ "$cell_name" = vfeed2 ]
+        then
+          let vfeed_width=$vfeed_width+2
+        fi
+        if [ "$vfeed_width" -ge 7 ]
+        then
+#         can't have any more feedthrus as may be up to 9
+          sed -i "s/^\([^,][^,]*\),\($scaled_column_no\),\($scaled_row_no\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$/\1,\2,\3,vfeed${vfeed_width},\5,\6/" $$inst
+          vfeed_width=0
+        fi
+      else
+        if [ "$vfeed_width" -gt 0 ]
+        then
+          sed -i "s/^\([^,][^,]*\),\($scaled_column_no\),\($scaled_row_no\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$/\1,\2,\3,vfeed${vfeed_width},\5,\6/" $$inst
+          vfeed_width=0
+        fi
+      fi
+    done # end of row
+  if [ "$vfeed_width" -gt 0 ]
+  then
+    sed -i "s/^\([^,][^,]*\),\($scaled_column_no\),\($scaled_row_no\),\([^,][^,]*\),\([^,][^,]*\),\([^,][^,]*\)$/\1,\2,\3,vfeed${vfeed_width},\5,\6/" $$inst
+  fi    
+  let row_no=$row_no+1
+  let "scaled_row_no=(row_no-1)*scaled_rowheight"
+  cell_count=$(sed -n "/^[^,][^,]*,[^,][^,]*,$scaled_row_no,/ p" $$inst | grep '^' -c)
+  echo "# Row $row_no with $cell_count cells"
+done
+
+sed 's/^I,/I /' $$inst >> $$temp
+echo "EOF" >> $$temp
+mv $$temp $cell
+rm $$inst

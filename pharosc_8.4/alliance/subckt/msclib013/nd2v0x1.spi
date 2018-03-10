@@ -1,0 +1,14 @@
+* Spice description of nd2v0x1
+* Spice driver version 134894944
+* Date  4/10/2005 at 10:05:25
+*
+.subckt nd2v0x1 a b vdd vss z 
+M1a vdd   a     z     vdd p  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+M1b z     b     vdd   vdd p  L=0.12U  W=0.77U  AS=0.21175P  AD=0.21175P  PS=2.09U   PD=2.09U  
+M2b sig3  b     z     vss n  L=0.12U  W=0.66U  AS=0.1815P   AD=0.1815P   PS=1.87U   PD=1.87U  
+M2a vss   a     sig3  vss n  L=0.12U  W=0.66U  AS=0.1815P   AD=0.1815P   PS=1.87U   PD=1.87U  
+C6  vdd   vss   0.803f
+C5  b     vss   0.473f
+C4  a     vss   0.450f
+C2  z     vss   0.553f
+.ends

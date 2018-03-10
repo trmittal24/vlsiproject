@@ -1,0 +1,22 @@
+* Spice description of xor2v1x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:41:29
+* wsclib 0.13um values
+.subckt xor2v1x1 a b vdd vss z
+M01 an    a     vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M02 an    a     vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M03 10    b     vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M04 10    b     vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M05 ai    b     z     vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M06 z     b     an    vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M07 vdd   an    ai    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M08 vss   an    ai    vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M09 z     10    an    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M10 ai    10    z     vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+C7  10    vss   0.961f
+C5  a     vss   0.328f
+C6  ai    vss   0.252f
+C3  an    vss   0.711f
+C4  b     vss   0.741f
+C2  z     vss   0.361f
+.ends

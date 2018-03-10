@@ -1,0 +1,39 @@
+* Spice description of mx3_x4
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:29:44
+* sxlib 0.13um values
+.subckt mx3_x4 cmd0 cmd1 i0 i1 i2 q vdd vss
+Mtr_00001 vss   cmd1  sig5  vss n  L=0.12U  W=0.43U  AS=0.11395P  AD=0.11395P  PS=1.39U   PD=1.39U
+Mtr_00002 sig13 cmd0  vss   vss n  L=0.12U  W=0.32U  AS=0.0848P   AD=0.0848P   PS=1.17U   PD=1.17U
+Mtr_00003 q     sig1  vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00004 sig4  cmd1  sig1  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00005 sig1  sig5  sig2  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00006 sig12 sig13 vss   vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00007 sig1  i0    sig12 vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00008 sig3  i1    sig4  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00009 vss   sig1  q     vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00010 sig2  i2    sig3  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00011 vss   cmd0  sig3  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00012 vdd   sig1  q     vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00013 sig16 sig5  sig1  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00014 vdd   sig13 sig17 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00015 sig19 cmd0  vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00016 sig1  i0    sig19 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00017 sig17 i1    sig16 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00018 sig18 i2    sig17 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00019 sig1  cmd1  sig18 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00020 q     sig1  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00021 sig5  cmd1  vdd   vdd p  L=0.12U  W=0.76U  AS=0.2014P   AD=0.2014P   PS=2.05U   PD=2.05U
+Mtr_00022 vdd   cmd0  sig13 vdd p  L=0.12U  W=0.76U  AS=0.2014P   AD=0.2014P   PS=2.05U   PD=2.05U
+C15 cmd0  vss   0.812f
+C8  cmd1  vss   0.886f
+C14 i0    vss   0.736f
+C9  i1    vss   0.393f
+C10 i2    vss   0.365f
+C11 q     vss   1.081f
+C1  sig1  vss   1.717f
+C13 sig13 vss   0.919f
+C17 sig17 vss   0.344f
+C3  sig3  vss   0.344f
+C5  sig5  vss   0.787f
+.ends

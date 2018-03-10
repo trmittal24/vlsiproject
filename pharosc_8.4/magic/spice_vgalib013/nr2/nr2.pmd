@@ -1,0 +1,7 @@
+inputpin_list a b
+outputpin_list z
+a z negative_unate when 0
+b z negative_unate when 0
+z logic_function (a+b)'
+lower_hl_pct 8
+upper_hl_pct 92

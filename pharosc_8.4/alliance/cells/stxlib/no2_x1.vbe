@@ -1,0 +1,32 @@
+ENTITY no2_x1 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 4000;
+  CONSTANT cin_i0        : NATURAL := 6;      
+  CONSTANT cin_i1        : NATURAL := 6;      
+  CONSTANT rdown_i0_nq   : NATURAL := 2290;   
+  CONSTANT rdown_i1_nq   : NATURAL := 2280;   
+  CONSTANT rup_i0_nq     : NATURAL := 3060;   
+  CONSTANT rup_i1_nq     : NATURAL := 3060;   
+  CONSTANT tplh_i0_nq    : NATURAL := 55;     
+  CONSTANT tplh_i1_nq    : NATURAL := 46;     
+  CONSTANT tphl_i1_nq    : NATURAL := 46;     
+  CONSTANT tphl_i0_nq    : NATURAL := 55;     
+  CONSTANT transistors	 : NATURAL := 4
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  nq	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END no2_x1;
+
+ARCHITECTURE behaviour_data_flow OF no2_x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on no2_x1"
+  SEVERITY WARNING;
+  nq <= not ((i0 or i1)) after 117 ps;
+END;

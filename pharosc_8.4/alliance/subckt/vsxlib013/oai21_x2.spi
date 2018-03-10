@@ -1,0 +1,20 @@
+* Spice description of oai21_x2
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:59:44
+* vsxlib 0.13um values
+.subckt oai21_x2 a1 a2 b vdd vss z
+M1  n1    a1    vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2  z     a2    n1    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M3  vdd   a1    4     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M4  4     a2    z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M5  z     b     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M6  vss   a2    n3    vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M7  n3    a2    vss   vss n  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M8  vss   a1    n3    vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+M9  n3    b     z     vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+C4  a1    vss   0.941f
+C6  a2    vss   0.656f
+C3  b     vss   0.595f
+C2  n3    vss   0.291f
+C1  z     vss   1.008f
+.ends

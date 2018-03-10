@@ -1,0 +1,7 @@
+inputpin_list d e
+outputpin_list z
+isflop 2
+d z positive_unate when 1
+e z positive_unate when 1
+e z negative_unate when 0
+z logic_function latch(e,d)

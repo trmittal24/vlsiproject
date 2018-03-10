@@ -1,0 +1,20 @@
+* Spice description of aoi22v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:01:27
+* wsclib 0.13um values
+.subckt aoi22v0x05 a1 a2 b1 b2 vdd vss z
+M01 n3    a1    vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M02 vss   a1    sig6  vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M03 vdd   a2    n3    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M04 sig6  a2    z     vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M05 z     b1    n3    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M06 sig3  b1    vss   vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M07 n3    b2    z     vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M08 z     b2    sig3  vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+C8  a1    vss   0.479f
+C7  a2    vss   0.459f
+C4  b1    vss   0.490f
+C5  b2    vss   0.379f
+C9  n3    vss   0.477f
+C2  z     vss   0.853f
+.ends

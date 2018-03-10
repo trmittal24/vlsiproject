@@ -1,0 +1,20 @@
+* Spice description of nr4_x05
+* Spice driver version 134934782
+* Date 15/09/2003 at 17:05:10
+*
+.subckt nr4_x05 a b c d vdd vss z 
+M4  vdd   a     sig4  vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M3  sig4  b     n2    vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M2  n2    c     sig6  vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M1  sig6  d     z     vdd p  L=0.13U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U  
+M8  z     a     vss   vss n  L=0.13U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U  
+M7  vss   b     z     vss n  L=0.13U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U  
+M6  z     c     vss   vss n  L=0.13U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U  
+M5  vss   d     z     vss n  L=0.13U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U  
+C10 c     vss   0.854f
+C9  d     vss   1.151f
+C8  a     vss   1.190f
+C7  b     vss   0.801f
+C5  vdd   vss   1.429f
+C1  z     vss   3.154f
+.ends

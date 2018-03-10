@@ -1,0 +1,20 @@
+* Spice description of xnr2_x05
+* Spice driver version 134999461
+* Date 22/07/2007 at 11:00:47
+* vsxlib 0.13um values
+.subckt xnr2_x05 a b vdd vss z
+M1  vdd   an    n1    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2  n1    bn    z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M3  z     b     an    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M4  an    a     vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M5  vdd   b     bn    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M6  z     an    bn    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M7  an    bn    z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M8  vss   a     an    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M9  bn    b     vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C6  a     vss   0.613f
+C2  an    vss   0.766f
+C5  b     vss   0.725f
+C3  bn    vss   1.219f
+C1  z     vss   1.062f
+.ends

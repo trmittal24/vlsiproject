@@ -1,0 +1,19 @@
+* Spice description of na4_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:38:05
+* ssxlib 0.13um values
+.subckt na4_x1 i0 i1 i2 i3 nq vdd vss
+Mtr_00001 vss   i0    sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00002 sig2  i1    sig3  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00003 sig3  i2    sig8  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00004 sig8  i3    nq    vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00005 vdd   i1    nq    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00006 nq    i2    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00007 vdd   i3    nq    vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00008 nq    i0    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C4  i0    vss   0.768f
+C5  i1    vss   0.790f
+C6  i2    vss   0.813f
+C9  i3    vss   0.827f
+C7  nq    vss   1.016f
+.ends

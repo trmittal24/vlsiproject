@@ -1,0 +1,6 @@
+bf1_y2     Prop   Ramp   Cap1   LE     LE     FO=4   FO=4
+# z timing
+# z timing; average FO4_delay            109.84 ps  1.57
+a_z_hh     87.0   1.56   2.45                1.454  1.568
+a_z_ll    106.3   1.21   2.32                1.681       
+

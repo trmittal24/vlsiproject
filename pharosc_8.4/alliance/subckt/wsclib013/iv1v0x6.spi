@@ -1,0 +1,13 @@
+* Spice description of iv1v0x6
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:10:48
+* wsclib 0.13um values
+.subckt iv1v0x6 a vdd vss z
+M01 vdd   a     z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M02 z     a     vdd   vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M03 vdd   a     z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M04 z     a     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M05 vss   a     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C3  a     vss   0.618f
+C2  z     vss   0.861f
+.ends

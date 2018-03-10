@@ -1,0 +1,6 @@
+7 single stage cells with different drive strengths,
+each with a P/N ratio of about 2.
+The width of the P-transistor connected to pin
+<SPAN CLASS="boldred">b</SPAN> is designed to have a similar
+conductivity to the two series P-transistors in order to keep
+a consistent output drive capability.

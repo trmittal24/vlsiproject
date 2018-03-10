@@ -1,0 +1,10 @@
+* Spice description of iv1_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:58:28
+* vsxlib 0.13um values
+.subckt iv1_x1 a vdd vss z
+M1  vdd   a     z     vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M2  z     a     vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+C3  a     vss   0.447f
+C1  z     vss   0.715f
+.ends

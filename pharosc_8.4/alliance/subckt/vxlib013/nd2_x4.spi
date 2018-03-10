@@ -1,0 +1,17 @@
+* Spice description of nd2_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:34:27
+* vxlib 0.13um values
+.subckt nd2_x4 a b vdd vss z
+M1  z     a     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M2  vdd   a     z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M3  z     b     vdd   vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M4  vdd   b     z     vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+M5  vss   a     sig2  vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+M6  sig2  b     z     vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+M7  z     b     n2    vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+M8  n2    a     vss   vss n  L=0.12U  W=1.76U  AS=0.4664P   AD=0.4664P   PS=4.05U   PD=4.05U
+C6  a     vss   1.076f
+C7  b     vss   0.530f
+C4  z     vss   1.567f
+.ends

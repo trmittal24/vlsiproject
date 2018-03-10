@@ -1,0 +1,1 @@
+The on12_x1 is a single stage 2-NAND with one inverted input having a stage effort of about 1.3 and output P/N ratio of 1.7. The on12_x4 is a 2-NOR with an inverted input driving an output inverter, with stage efforts of about 1.3 and 4.4 and output P/N ratio of 2.

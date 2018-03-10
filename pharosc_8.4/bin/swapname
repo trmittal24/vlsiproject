@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# swap pin name $1 with pin name $2 on standard input, write to standard output
+sed "s/^$1\ /$2\ /g" | \
+sed "s/\ $1$/\ $2/g" | \
+sed "s/($1/($2/g" | \
+sed "s/$1)/$2)/g" | \
+sed "s/\ $1\ /\ $2\ /g"

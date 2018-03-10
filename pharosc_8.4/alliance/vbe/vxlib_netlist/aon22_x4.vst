@@ -1,0 +1,66 @@
+entity aon22_x4 is
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b1  : in      bit;
+      b2  : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end aon22_x4;
+
+architecture structural of aon22_x4 is
+Component nd2_x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component nd2_x4
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal an : bit;
+signal bn : bit;
+
+begin
+
+an : nd2_x2
+   port map (
+      a   => a1,
+      b   => a2,
+      z   => an,
+      vdd => vdd,
+      vss => vss
+   );
+
+bn : nd2_x2
+   port map (
+      a   => b1,
+      b   => b2,
+      z   => bn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : nd2_x4
+   port map (
+      a   => an,
+      b   => bn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

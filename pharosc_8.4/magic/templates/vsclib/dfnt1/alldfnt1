@@ -1,0 +1,11 @@
+#!/bin/bash
+# alldfnt1 2007-05-09:13h02 graham
+
+./alldfnt1_delay $1
+./alldfnt1_vbe
+./alldfnt1_lib
+./alldfnt1_html
+if test -x alldfnt1_xtra
+then
+  ./alldfnt1_xtra
+fi

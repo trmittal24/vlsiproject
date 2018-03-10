@@ -1,0 +1,24 @@
+* Spice description of mxn2v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:15:40
+* wsclib 0.13um values
+.subckt mxn2v0x05 a0 a1 s vdd vss z
+M01 08    s     n3    vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M02 08    sn    n1    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 n4    sn    08    vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M04 n1    a0    vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 sn    s     vdd   vdd p  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M06_2 vss   a1    sig6  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M06 sn    s     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07_1 n3    a0    vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M07 vdd   08    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 vss   08    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M09 vdd   a1    n4    vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M10 sig6  s     08    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  08    vss   0.800f
+C5  a0    vss   0.441f
+C9  a1    vss   0.413f
+C8  s     vss   0.739f
+C7  sn    vss   0.674f
+C1  z     vss   0.591f
+.ends

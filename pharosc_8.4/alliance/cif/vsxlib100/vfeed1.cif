@@ -1,0 +1,30 @@
+(rds to CIF driver cvs version $Revision: 1.1.1.1 $
+technology /home/dev/alliance/etc/ssx100.rds
+Sun Jul 22 11:00:16 2007
+vfeed1
+graham);
+DS 1 50 2;
+9 vfeed1;
+(AB : 0.00, 0.00 5.00, 50.00 in micron);
+4A 0 0 20 200; 
+L CWN;
+B 36 112 10 152;
+L CWP;
+B 36 104 10 44;
+L CSN;
+B 24 98 10 47;
+L CSP;
+B 24 108 10 150;
+L CM1;
+B 28 24 10 12;
+4X vss 1 10 12 8 vss;
+B 8 8 10 12;
+B 28 24 10 188;
+4X vdd 2 10 188 8 vdd;
+B 8 8 10 188;
+L AB;
+B 20 200 10 100;
+DF;
+C 1;
+(AB : 0.00, 0.00 5.00, 50.00 in micron); 
+E 

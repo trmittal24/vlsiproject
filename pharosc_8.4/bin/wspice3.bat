@@ -1,0 +1,1 @@
+cmd /c "start /wait /min /low c:/WinSpice/wspice3.exe -b $1"

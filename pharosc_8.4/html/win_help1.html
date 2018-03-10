@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Windows or Linux Live CD</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=NEXT HREF="win_help2.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20040429;19300000">
+	<META NAME="CHANGED" CONTENT="20070916;12400000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Windows help/Windows and Live CD</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="../index.html">PREV</A></LI>
+<LI><A HREF="win_help2.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Windows and Linux Live CD options</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html" CLASS="current">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+The library is built around Linux scripts which will not run
+natively on a Windows machine. Two solutions are illustrated here:
+<OL>
+<LI>A Linux environment like
+<A HREF="http://www.cygwin.com">cygwin</A> can be installed.
+Linux programs like those from Alliance, Magic and Xcircuit can
+then be installed and used under
+<A HREF="http://www.cygwin.com">cygwin</A> (I think, as I haven't
+tested this myself).
+<LI>A Linux Live CD can be used to boot a Windows computer.
+The library release has compiled versions of the Linux programs
+from Alliance, and these can then be used
+to exercise the supplied examples and view the layout.
+</OL>
+
+<H3>Using the library in Windows</H3>
+<P>
+The Spice characterisation uses the Windows program
+<A HREF="http://www.winspice.co.uk">Winspice</A>
+wrapped inside some Linux scripts. If this is run from
+<A HREF="http://www.cygwin.com">cygwin</A>
+then it runs pretty well. Other activities like running the
+synthesis and layout flow from the examples directory are
+tough because custom versions of the place and route software
+are needed and the source code modifications that have to
+be made for these custom programs are poorly documented.
+
+<H3><A HREF="livecd_help2.html">Using the library with a Linux Live CD</A></H3>
+<P>
+Booting a Windows computer from a Linux Live CD gives a Linux
+operating system which is surely a better option than Windows.
+However, the computer's hard disk is not accessible, so actually
+doing useful stuff and saving it can be difficult.
+<P>
+The best way is to use a large capacity USB disk onto
+which has been downloaded the
+<A HREF="tar_download.html"><I>pharosc</I> library</A>.
+This can be unpacked and since it contains all the required
+Linux programs, the examples can be run without the user
+needing to do any program installation or source code compiling.
+<P>
+Although Live CD's are thought of as being slow,
+some of the examples can actually run more quickly with a Live CD
+than with the Linux operating system resident on disk!
+</DIV>
+
+<DIV CLASS="col_3">
+<P>
+Since the Linux Live CD option is likely to be
+used by a Windows user, the explanations on how to do it are
+quite detailed. 
+Two Linux distributions have been considered,
+Ubuntu 6.10 (aka Edgy Eft) and 7.04 (aka Feisty Fart),
+and these are from my experience the best options. I have
+<A HREF="win_help1a.html">tested other Live CD's</A> but with less success.
+<P>
+<P CLASS="black">
+Unfortunately the examples don't just run with the Live CD
+out of the box. The Linux program <TT>gawk</TT> needs to be
+installed, and so does <TT>openmotif</TT>.
+I also recommend making some changes to the Linux environment
+before testing the library release, although this is not necessary.
+The help files show how to do this.
+</DIV>
+
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>
+

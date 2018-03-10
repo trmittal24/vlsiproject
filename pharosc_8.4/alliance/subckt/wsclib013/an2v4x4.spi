@@ -1,0 +1,18 @@
+* Spice description of an2v4x4
+* Spice driver version 134999461
+* Date 17/05/2007 at  8:57:22
+* wsclib 0.13um values
+.subckt an2v4x4 a b vdd vss z
+M01 07    a     vdd   vdd p  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M02 sig4  a     vss   vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M03 vdd   b     07    vdd p  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M04 07    b     sig4  vss n  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M05 z     07    vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M06 vdd   07    z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M07 z     07    vss   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M08 vss   07    z     vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+C3  07    vss   0.807f
+C5  a     vss   0.314f
+C6  b     vss   0.330f
+C2  z     vss   0.780f
+.ends

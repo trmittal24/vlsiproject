@@ -1,0 +1,1 @@
+3 I/P AND gate designed with a stage effort of about 2.1 for the a3_x2 and about 4.2 for the a3_x4.

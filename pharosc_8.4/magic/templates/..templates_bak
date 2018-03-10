@@ -1,0 +1,374 @@
+* xxx_active_pin1_z transition of xxx_cell, xxx_techno, xxx_param_description
+xxx_timestamp
+* FLOW
+* instantiate one subckt for each load cap to be measured
+* for each input to output transition (two, LH and HL)
+*   for each input transition (10 here)
+*     measure time where Vin crosses VDD*input_threshold (tP)
+*     for each subckt with its different load
+*       meaasure time between tP and where Vout crosses VDD*output_threshold
+*       measure the output slope between VDD*slope_lo and VDD*slope_h and scale to full swing value
+*     measure input current for each input transition and convert to capacitance
+*     calculate Prop Ramp delays for each input transition from x1, x2 and x3 (normal load cap values)
+*     average the power caused by the 2 transitions for each subckt (except one with largest load)
+*         and subtract the load power
+*   average input pin capacitance over transitions 60ps to 450ps (likeliest transitions)
+*   write Prop-Ramp info in VBE file format for Alliance tools
+*   write table of delays for each of the 6 load caps and 10 transitions (6x10 LUT)
+*   write table of transition times for each of the 6 load caps and 10 transitions (6x10 LUT)
+* write power LUT for each of 5 load caps and 10 transitions (5x10 LUT)
+* write cap1 file with input pin capacitance
+*
+.include ../../subckt/xxx_library/spice_model.lib
+.include ../../subckt/xxx_library/xxx_cell.spi
+.include ../../subckt/xxx_library/params.inc
+*
+x0  xxx_labelled_pin1  xxx_labelled_pin2  xxx_labelled_pin3  xxx_labelled_pin4  vdd  vss   x0z  xxx_cell
+x1  xxx_labelled_pin1  xxx_labelled_pin2  xxx_labelled_pin3  xxx_labelled_pin4  vdd1 vss1  x1z  xxx_cell
+x2  xxx_labelled_pin1  xxx_labelled_pin2  xxx_labelled_pin3  xxx_labelled_pin4  vdd2 vss2  x2z  xxx_cell
+x3  xxx_labelled_pin1  xxx_labelled_pin2  xxx_labelled_pin3  xxx_labelled_pin4  vdd3 vss3  x3z  xxx_cell
+x4  xxx_labelled_pin1  xxx_labelled_pin2  xxx_labelled_pin3  xxx_labelled_pin4  vdd4 vss4  x4z  xxx_cell
+x5  xxx_labelled_pin1  xxx_labelled_pin2  xxx_labelled_pin3  xxx_labelled_pin4  vdd5 vss5  x5z  xxx_cell
+*
+cx0z  x0z  0 0
+cx1z  x1z  0 0
+cx2z  x2z  0 0
+cx3z  x3z  0 0
+cx4z  x4z  0 0
+cx5z  x5z  0 0
+* 
+vdd  vdd  0 'vdd'
+vdd1 vdd1 0 'vdd'
+vdd2 vdd2 0 'vdd'
+vdd3 vdd3 0 'vdd'
+vdd4 vdd4 0 'vdd'
+vdd5 vdd5 0 'vdd'
+vss  0 vss  'vss'
+vss1 0 vss1 'vss'
+vss2 0 vss2 'vss'
+vss3 0 vss3 'vss'
+vss4 0 vss4 'vss'
+vss5 0 vss5 'vss'
+*
+Vref ref 0 dc 0 pwl(0 0 100p 0 )
+Vxxx_labelled_pin1   xxx_labelled_pin1   0 dc 0 pwl(0 0 100p 0 )
+Vxxx_labelled_pin2   xxx_labelled_pin2   0 dc 0 pwl(0 0 100p 0 )
+Vxxx_labelled_pin3   xxx_labelled_pin3   0 dc 0 pwl(0 0 100p 0 )
+Vxxx_labelled_pin4   xxx_labelled_pin4   0 dc 0 pwl(0 0 100p 0 )
+*
+
+.control
+  set width=120 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+
+  set unitcap=xxx_unitcapf
+  set loadcap0=xxx_loadcap0
+  set loadcap1=xxx_loadcap1
+  set loadcap2=xxx_loadcap2
+  set loadcap3=xxx_loadcap3
+  set loadcap4=xxx_loadcap4
+  set loadcap5=xxx_loadcap5
+  set drive_strength = xxx_drive
+  set input_threshold_rise = xxx_input_threshold_rise
+  set input_threshold_fall = xxx_input_threshold_fall
+  set output_threshold_rise = xxx_output_threshold_rise
+  set output_threshold_fall = xxx_output_threshold_fall
+  set rise_slope_lo = xxx_rise_slope_lo
+  set rise_slope_hi = xxx_rise_slope_hi
+  set fall_slope_lo = xxx_fall_slope_lo
+  set fall_slope_hi = xxx_fall_slope_hi
+
+  let pvdd0[1] = 0
+  let pvdd1[1] = 0
+  let pvdd2[1] = 0
+  let pvdd3[1] = 0
+  let pvdd4[1] = 0
+  let in_cap = 0
+  let in_pin_cap[1] = 0
+  let input_cap[1] = 0
+  alter cx0z = $loadcap0 *$unitcap *$drive_strength
+  alter cx1z = $loadcap1 *$unitcap *$drive_strength
+  alter cx2z = $loadcap2 *$unitcap *$drive_strength
+  alter cx3z = $loadcap3 *$unitcap *$drive_strength
+  alter cx4z = $loadcap4 *$unitcap *$drive_strength
+  alter cx5z = $loadcap5 *$unitcap *$drive_strength
+  let sumx =  @cx1z[capacitance] + @cx2z[capacitance] + @cx3z[capacitance]
+  let sumx2 = @cx1z[capacitance]^2 + @cx2z[capacitance]^2 + @cx3z[capacitance]^2
+  foreach output_file 1 2
+    let tP0[1] = 0
+    let tP1[1] = 0
+    let tP2[1] = 0
+    let tP3[1] = 0
+    let tP4[1] = 0
+    let tP5[1] = 0
+    let tR0[1] = 0
+    let tR1[1] = 0
+    let tR2[1] = 0
+    let tR3[1] = 0
+    let tR4[1] = 0
+    let tR5[1] = 0
+    let prop_z[1] = 0
+    let ramp_z[1] = 0
+    if $output_file = 1
+      set infall = 1
+      set outfall = -1
+      set xxx_active_pin1_v1 = $vdd
+      set xxx_active_pin1_v2 = $vss
+      set xxx_quiet_pin1_v1 = $vss
+      set xxx_quiet_pin1_v2 = $vss
+      set xxx_quiet_pin2_v1 = $vss
+      set xxx_quiet_pin2_v2 = $vss
+      set xxx_quiet_pin3_v1 = $vss
+      set xxx_quiet_pin3_v2 = $vss
+      set inthresh=1-$input_threshold_fall
+      set outhresh=$output_threshold_rise
+      set slope1 = $rise_slope_lo
+      set slope2 = $rise_slope_hi
+      set tstop = xxx_char_sim_timep
+    end
+    if $output_file = 2
+      set infall = -1
+      set outfall = 1
+      set xxx_active_pin1_v1 = $vss
+      set xxx_active_pin1_v2 = $vdd
+      set xxx_quiet_pin1_v1 = $vss
+      set xxx_quiet_pin1_v2 = $vss
+      set xxx_quiet_pin2_v1 = $vss
+      set xxx_quiet_pin2_v2 = $vss
+      set xxx_quiet_pin3_v1 = $vss
+      set xxx_quiet_pin3_v2 = $vss
+      set inthresh=$input_threshold_rise
+      set outhresh=$output_threshold_fall
+      set slope1 = $fall_slope_hi
+      set slope2 = $fall_slope_lo
+      set tstop = xxx_char_sim_timep
+    end
+    let n = 0
+    foreach transition xxx_input_net_transition
+      let intran[n] = $transition
+      alter @Vref[pwl] =[ 0 $vdd $transition $vss ]
+      alter @Vxxx_labelled_pin1[pwl] =[ 0 $xxx_labelled_pin1_v1 $transition $xxx_labelled_pin1_v2 ]
+      alter @Vxxx_labelled_pin2[pwl] =[ 0 $xxx_labelled_pin2_v1 $transition $xxx_labelled_pin2_v2 ]
+      alter @Vxxx_labelled_pin3[pwl] =[ 0 $xxx_labelled_pin3_v1 $transition $xxx_labelled_pin3_v2 ]
+      alter @Vxxx_labelled_pin4[pwl] =[ 0 $xxx_labelled_pin4_v1 $transition $xxx_labelled_pin4_v2 ]
+      tran $tstep $tstop
+      linearize
+      let simtime = time[length(time)-1]
+*      plot v(xxx_active_pin1) v(x0z) v(x1z) v(x2z) v(x3z) v(x4z) v(x5z)
+      let simpoints = length(time)-1
+      let m = simpoints/2
+      let k = 2
+      repeat 16
+        k = k * 2
+        if ref[m] <= vdd[m]*$inthresh
+          if ref[m-1] <= vdd[m-1]*$inthresh
+            let m = m - simpoints/k
+          else
+            let tP = time[m-1]+(vdd[m]*$inthresh -ref[m-1])/(ref[m]-ref[m-1])*(time[m]-time[m-1])
+            goto found_tp
+          end
+        else
+          let m = m + simpoints/k
+          if m >= simpoints
+            goto notfound_tp
+          end
+        end
+      end *repeat 16
+      label notfound_tp
+      echo # Error: Couldn't calculate tP ... setting to zero
+      echo # Error: Couldn't calculate tP ... setting to zero > xxx_cell_xxx_active_pin1.error
+      let tP = 0
+      label found_tp
+*     measure delay from tP to the nets x0z-x5z
+      let j = 0
+      while j <= 5
+        let m = simpoints/2
+        let k = 2
+        repeat 16
+          k = k * 2
+          if j=0
+            let lower_v = x0z[m-1]
+            let upper_v = x0z[m]
+          end
+          if j=1
+            let lower_v = x1z[m-1]
+            let upper_v = x1z[m]
+          end
+          if j=2
+            let lower_v = x2z[m-1]
+            let upper_v = x2z[m]
+          end
+          if j=3
+            let lower_v = x3z[m-1]
+            let upper_v = x3z[m]
+          end
+          if j=4
+            let lower_v = x4z[m-1]
+            let upper_v = x4z[m]
+          end
+          if j=5
+            let lower_v = x5z[m-1]
+            let upper_v = x5z[m]
+          end
+          if $outfall * ( upper_v - vdd[m]*$outhresh ) <= 0
+            if $outfall * ( lower_v - vdd[m-1]*$outhresh ) <= 0
+              let m = m - simpoints/k
+            else
+              goto found_m
+            end
+          else
+            let m = m + simpoints/k
+            if m >= simpoints
+              goto notfound_m
+            end
+          end
+        end *repeat 16
+        label notfound_m
+        echo #Error: Failed to find output threshold ... setting m=simpoints/2
+        echo #Error: Failed to find output threshold ... setting m=simpoints/2 >> xxx_cell_xxx_active_pin1.error
+        let m = m - simpoints/2
+        label found_m
+        let out_v = time[m-1]+(vdd[m]*$outhresh -lower_v)/(upper_v-lower_v)*(time[m]-time[m-1])-tP
+*       measure the time from slope1 to slope2 of x0x-x5z
+        let q = 1
+        foreach threshold $slope1 $slope2
+          let m = simpoints/2
+          let k = 2
+          repeat 16
+            k = k * 2
+            if j=0
+              let lower_v = x0z[m-1]
+              let upper_v = x0z[m]
+            end
+            if j=1
+              let lower_v = x1z[m-1]
+              let upper_v = x1z[m]
+            end
+            if j=2
+              let lower_v = x2z[m-1]
+              let upper_v = x2z[m]
+            end
+            if j=3
+              let lower_v = x3z[m-1]
+              let upper_v = x3z[m]
+            end
+            if j=4
+              let lower_v = x4z[m-1]
+              let upper_v = x4z[m]
+            end
+            if j=5
+              let lower_v = x5z[m-1]
+              let upper_v = x5z[m]
+            end
+            if $outfall * ( upper_v - vdd[m]*$threshold ) <= 0
+              if $outfall * ( lower_v - vdd[m-1]*$threshold ) <= 0
+                let m = m - simpoints/k
+              else
+                goto found_slope
+              end
+            else
+              let m = m + simpoints/k
+              if m >= simpoints
+                goto notfound_slope
+              end
+            end 
+          end *repeat 16
+          label notfound_slope
+          echo #Error: Failed to find slope ... setting m=simpoints/2
+          echo #Error: Failed to find slope ... setting m=simpoints/2 >> xxx_cell_xxx_active_pin1.error
+          let m = simpoints/2
+          label found_slope
+          if q=1
+            let out_slope1 = time[m-1]+(vdd[m]*$threshold -lower_v)/(upper_v-lower_v)*(time[m]-time[m-1])
+          end
+          if q=2
+            let out_slope2 = time[m-1]+(vdd[m]*$threshold -lower_v)/(upper_v-lower_v)*(time[m]-time[m-1])
+            let out_slope = out_slope2-out_slope1
+          end
+          let q = q+1
+        end *foreach threshold $slope1 $slope2
+        if j=0
+          let tP0[n] = out_v
+          let tR0[n] = abs(out_slope/( $slope1 - $slope2 ))
+        end
+        if j=1
+          let tP1[n] = out_v
+          let tR1[n] = abs(out_slope/( $slope1 - $slope2 ))
+        end
+        if j=2
+          let tP2[n] = out_v
+          let tR2[n] = abs(out_slope/( $slope1 - $slope2 ))
+        end
+        if j=3
+          let tP3[n] = out_v
+          let tR3[n] = abs(out_slope/( $slope1 - $slope2 ))
+        end
+        if j=4
+          let tP4[n] = out_v
+          let tR4[n] = abs(out_slope/( $slope1 - $slope2 ))
+        end
+        if j=5
+          let tP5[n] = out_v
+          let tR5[n] = abs(out_slope/( $slope1 - $slope2 ))
+        end
+        let j = j+1
+      end *while j <= 5
+
+      let ave_cap = mean(vxxx_active_pin1#branch)
+      let in_pin_cap[n] = abs(( ave_cap * simtime/$vdd )/6 )
+*     Calculate Prop and Ramp delays using all load caps
+*     between the second and fourth using the method of least squares.
+      let sumxy = @cx1z[capacitance]*tP1[n]+@cx2z[capacitance]*tP2[n]+@cx3z[capacitance]*tP3[n]
+      let sumy = tP1[n]+tP2[n]+tP3[n]
+      let ramp_z[n] = (3*sumxy-sumx*sumy)/(3*sumx2-sumx^2)
+      let prop_z[n]= (sumy*sumx2-sumx*sumxy)/(3*sumx2-sumx^2)
+      if $output_file=1
+        let pvdd0[n] = ( -mean(vdd#branch)*$tstop /$vdd - $loadcap0 *$unitcap *$drive_strength )*$vdd *$vdd
+        let pvdd1[n] = ( -mean(vdd1#branch)*$tstop /$vdd - $loadcap1 *$unitcap *$drive_strength )*$vdd *$vdd
+        let pvdd2[n] = ( -mean(vdd2#branch)*$tstop /$vdd - $loadcap2 *$unitcap *$drive_strength )*$vdd *$vdd
+        let pvdd3[n] = ( -mean(vdd3#branch)*$tstop /$vdd - $loadcap3 *$unitcap *$drive_strength )*$vdd *$vdd
+        let pvdd4[n] = ( -mean(vdd4#branch)*$tstop /$vdd - $loadcap4 *$unitcap *$drive_strength )*$vdd *$vdd
+      end
+      if $output_file=2
+        let pvdd0[n] = (( -mean(vss#branch)*$tstop /$vdd - $loadcap0 *$unitcap *$drive_strength )*$vdd *$vdd + pvdd0[n] )/2
+        let pvdd1[n] = (( -mean(vss1#branch)*$tstop /$vdd - $loadcap1 *$unitcap *$drive_strength )*$vdd *$vdd + pvdd1[n] )/2
+        let pvdd2[n] = (( -mean(vss2#branch)*$tstop /$vdd - $loadcap2 *$unitcap *$drive_strength )*$vdd *$vdd + pvdd2[n] )/2
+        let pvdd3[n] = (( -mean(vss3#branch)*$tstop /$vdd - $loadcap3 *$unitcap *$drive_strength )*$vdd *$vdd + pvdd3[n] )/2
+        let pvdd4[n] = (( -mean(vss4#branch)*$tstop /$vdd - $loadcap4 *$unitcap *$drive_strength )*$vdd *$vdd + pvdd4[n] )/2
+      end
+      let n = n + 1
+      destroy all
+    end *foreach transition
+
+*   Only consider caps from the likeliest input transitions
+*   in_cap expression changes depending on number of $output_files used for this function
+    let in_cap = in_cap*($output_file -1)/($output_file ) + ( in_pin_cap[1]+in_pin_cap[2]+in_pin_cap[3]+in_pin_cap[4]+in_pin_cap[5]+in_pin_cap[6] )/6/($output_file )
+    foreach n 0 1 2 3 4 5 6 7 8 9
+      let input_cap[ $n ] = in_cap
+    end
+*   For input falling, use transition=130ps for prop-ramp calculation
+    if $output_file = 1
+      let tPxxx_timing_1st_arc_z = prop_z[3]
+      let rup_z = ramp_z[3]
+      let rise_transition = tR1[3]
+      print tPxxx_timing_1st_arc_z rup_z rise_transition in_cap
+      print col intran prop_z ramp_z input_cap > xxx_cell_xxx_active_pin1_xxx_timing_1st_arc.vbe
+      print col intran tP0 tP1 tP2 tP3 tP4 tP5 > xxx_cell_xxx_active_pin1_xxx_timing_1st_arc.delay
+      print col intran tR0 tR1 tR2 tR3 tR4 tR5 > xxx_cell_xxx_active_pin1_xxx_timing_1st_arc.ramp
+    end
+*   For input rising, use transition=130ps for prop-ramp calculation
+    if $output_file = 2
+      let tPxxx_timing_2nd_arc_z = prop_z[3]
+      let rdown_z = ramp_z[3]
+      let fall_transition = tR1[3]
+      print tPxxx_timing_2nd_arc_z rdown_z fall_transition in_cap
+      print col intran prop_z ramp_z input_cap > xxx_cell_xxx_active_pin1_xxx_timing_2nd_arc.vbe
+      print col intran tP0 tP1 tP2 tP3 tP4 tP5 > xxx_cell_xxx_active_pin1_xxx_timing_2nd_arc.delay
+      print col intran tR0 tR1 tR2 tR3 tR4 tR5 > xxx_cell_xxx_active_pin1_xxx_timing_2nd_arc.ramp
+    end
+*    plot tP0 tP1 tP2 tP3 tP4 tP5 vs intran
+  end *foreach output_file
+  print col pvdd0 pvdd1 pvdd2 pvdd3 pvdd4 > xxx_cell_xxx_active_pin1.power
+  print in_cap > xxx_cell_xxx_active_pin1.cap1
+  rusage trantime
+.endc
+.end

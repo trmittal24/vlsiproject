@@ -1,0 +1,32 @@
+ENTITY o2_x1 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 2000;
+  CONSTANT cin_i0        : NATURAL := 13;     
+  CONSTANT cin_i1        : NATURAL := 11;     
+  CONSTANT rdown_i0_q    : NATURAL := 1850;   
+  CONSTANT rdown_i1_q    : NATURAL := 1840;   
+  CONSTANT rup_i0_q      : NATURAL := 2970;   
+  CONSTANT rup_i1_q      : NATURAL := 2960;   
+  CONSTANT tpll_i0_q     : NATURAL := 102;    
+  CONSTANT tphh_i1_q     : NATURAL := 82;     
+  CONSTANT tpll_i1_q     : NATURAL := 80;    
+  CONSTANT tphh_i0_q     : NATURAL := 96;     
+  CONSTANT transistors	 : NATURAL := 8
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  q	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END o2_x1;
+
+ARCHITECTURE behaviour_data_flow OF o2_x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on o2_x1"
+  SEVERITY WARNING;
+  q <= (i0 or i1) after 1000 ps;
+END;

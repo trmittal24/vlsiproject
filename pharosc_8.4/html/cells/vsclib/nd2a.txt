@@ -1,0 +1,1 @@
+Single stage 2-I/P NAND gates with one inverted input. 7 drive strengths with a P/N ratio of about 2. The stage efforts for pin <SPAN CLASS="boldred">a</SPAN> are 1.1, 1.4, 1.8, 2.1, 2.3, 2.6 and 2.8 for the nd2av0x05, x1, x2, x3, x4, x6 and x8 respectively.

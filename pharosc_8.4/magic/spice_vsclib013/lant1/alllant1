@@ -1,0 +1,11 @@
+#!/bin/bash
+# alllant1 2007-07-08:19h02 graham
+
+./alllant1_delay $1
+./alllant1_vbe
+./alllant1_lib
+./alllant1_html
+if test -x alllant1_xtra
+then
+  ./alllant1_xtra
+fi

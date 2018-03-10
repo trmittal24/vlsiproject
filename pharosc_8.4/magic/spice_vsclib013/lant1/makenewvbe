@@ -1,0 +1,229 @@
+#!/bin/bash
+# makenewvbe 2007-07-09:15h54 graham
+
+# make a new vbe file from an existing one
+# usage makenewvbe fred   will use the vbe declarations in $dir and the
+#                         values from the fred_a_lh/hl.vbe files
+#
+# FLOW
+# write the cell.bash file header
+# for each input pin
+#   for each output pin
+#     for each value of timing_sense (negative_unate and/or positive_unate)
+#       for each of the states that the other input pins might have
+#         read rup and rdown from each of the .vbe files and sum them using the 4th input transition
+#         read the Prop delays from each of the .vbe files and sum them using the 4th input transition
+#         for each of the 5 most likely input transitions (nos. 3-7)
+#           read the input pin cap from the .vbe files and sum them
+#       average the Prop delays for each of the timing_sense values
+#       write the changed Prop values to cell.bash
+#     average rup and rdown over all values of timing_sense and other pin states
+#     write the new values of rup and rdown to cell.bash
+#   average the pin cap over all values of timing_sense, other pin states input and output pin transitions
+#   write this averaged pin cap to cell.bash
+# make cell.bash executable so that it can be run to make the new .vbe file for Alliance
+# 
+function=$(basename $PWD)
+
+if test $# -eq 0
+then
+  echo "# Usage ./makenewvbe cell_name. Please supply cell_name." 1>&2
+  exit 1
+fi
+
+# directory $vbedir has the manually created Alliance timing files for this lib
+# using ther .bash files from the original makevbe directory
+vbedir=../../../alliance/vbe/vsclib200
+newdir=$vbedir../../makevbe/vsclib013
+cell=$1
+date=$(date '+%Y-%m-%d:%Hh%M')
+owner=$(whoami)
+timestamp=$(echo "# "$cell".bash created using makenewvbe on "$date" by "$owner)
+load_cap=25
+
+echo "#!/bin/bash" > $cell.bash
+echo $timestamp >> $cell.bash
+echo "cell="$cell >> $cell.bash
+echo >> $cell.bash
+echo "cat "$vbedir"/"$cell".vbe | \\" >> $cell.bash
+
+# check if an inverting gate and flag if single input pin gate
+single_pin=-1;
+for pin in d e
+do
+  let single_pin=$single_pin+1
+done
+
+op=0
+for out_pin in z
+do
+  tpdx1000[$op]=0; tpd_iter[$op]=0; rupx1[$op]=0; rdownx1[$op]=0; r_iter[$op]=0
+  let "op=op+1"
+done
+for pin in d e
+do
+  cap1=0; cap2=0; op=0
+  for out_pin in z
+  do
+    unate_values=$(grep "^$pin" "$function".pmd | tr -s ' ' | \
+      sed "s/^$pin\ //" | grep "^$out_pin" | cut -f2 -d' ' | \
+      grep 'unate' | grep -v 'non_unate' | awk '{print $1}' |
+    while read line
+    do
+      echo -e $line" \c"
+    done )
+    unate_values=$(echo $unate_values | tr -s ' ')
+
+    if [ "$pin" = e ]
+    then
+      timing_arc1=hl
+      timing_arc2=hh
+      let rup=$[ $(grep '^3' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".vbe | awk '{printf "%5d\n", $5*10}') ]
+      let rdown=$[ $(grep '^3' "$cell"_"$pin"_"$out_pin"_0_"$timing_arc2".vbe | awk '{printf "%5d\n", $5*10}') ]
+      let tplh=$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".vbe | awk '{printf "%5d\n", $4*10000000000000}')) ]
+      let tphl=$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_0_"$timing_arc2".vbe | awk '{printf "%5d\n", $4*10000000000000}')) ]
+      let "tpr=(tplh+5)/10" 
+      let "tpf=(tphl+5)/10"
+      let "tpd_iter[$op]=tpd_iter[$op]+1"
+      let "tpdx1000[$op]=(2*tpdx1000[$op]*(tpd_iter[$op]-1)+2000*tpr+2000*tpf+tpd_iter[$op])/tpd_iter[$op]/2"
+      let "rup=(rup+50)/100*10"
+      let "rdown=(rdown+50)/100*10"
+      let "r_iter[$op]=r_iter[$op]+1"
+      let "rupx1[$op]=(2*rupx1[$op]*(r_iter[$op]-1)+2*rup+r_iter[$op])/r_iter[$op]/2"
+      let "rdownx1[$op]=(2*rdownx1[$op]*(r_iter[$op]-1)+2*rdown+r_iter[$op])/r_iter[$op]/2"
+      let "op=op+1"
+    elif [ "$pin" = d ]
+    then
+      timing_arc1=hh
+      timing_arc2=ll
+      let rup=$[ $(grep '^3' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".vbe | awk '{printf "%5d\n", $4*10}') ]
+      let rdown=$[ $(grep '^3' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc2".vbe | awk '{printf "%5d\n", $4*10}') ]
+      let tplh=$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".vbe | awk '{printf "%5d\n", $3*10000000000000}')) ]
+      let tphl=$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_1_"$timing_arc2".vbe | awk '{printf "%5d\n", $3*10000000000000}')) ]
+      let "tpr=(tplh+5)/10" 
+      let "tpf=(tphl+5)/10"
+      let "tpd_iter[$op]=tpd_iter[$op]+1"
+      let "tpdx1000[$op]=(2*tpdx1000[$op]*(tpd_iter[$op]-1)+2000*tpr+2000*tpf+tpd_iter[$op])/tpd_iter[$op]/2"
+      let "rup=(rup+50)/100*10"
+      let "rdown=(rdown+50)/100*10"
+      let "r_iter[$op]=r_iter[$op]+1"
+      let "rupx1[$op]=(2*rupx1[$op]*(r_iter[$op]-1)+2*rup+r_iter[$op])/r_iter[$op]/2"
+      let "rdownx1[$op]=(2*rdownx1[$op]*(r_iter[$op]-1)+2*rdown+r_iter[$op])/r_iter[$op]/2"
+      let "op=op+1"
+    fi
+
+#   calculate cap as average of the cap measured on the 3rd to 7th transitions
+    cap1=0; cap2=0; j=0
+    for i in 2 3 4 5 6
+    do
+      let j=$j+1
+#     sum the cap values for each considered input transition and other pin state
+      if [ "$pin" = e ]
+      then
+        let cap1=$cap1+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_1_"$timing_arc1".vbe | awk '{printf "%5d\n", $3*1000000000000000000 }') ]
+        let cap2=$cap2+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_0_"$timing_arc2".vbe | awk '{printf "%5d\n", $3*1000000000000000000 }') ]
+      fi
+      if [ "$pin" = d ]
+      then
+        let cap1=$cap1+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_1_hh.vbe | awk '{printf "%5d\n", $5*1000000000000000000 }') ]
+        let cap2=$cap2+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_1_ll.vbe | awk '{printf "%5d\n", $5*1000000000000000000 }') ]
+      fi
+    done
+    let "cin=(cap1+cap2+2000*j)/j/2000"
+
+#    if [ "$pin" = e ]
+#    then
+      echo "../../../alliance/bin/chfield tar_"$pin"_"$out_pin" "$tpr" | \\" >> $cell.bash
+      echo "../../../alliance/bin/chfield taf_"$pin"_"$out_pin" "$tpf" | \\" >> $cell.bash
+      echo "../../../alliance/bin/chfield rup_"$pin"_"$out_pin" "$rup" | \\" >> $cell.bash
+      echo "../../../alliance/bin/chfield rdown_"$pin"_"$out_pin" "$rdown" | \\" >> $cell.bash
+#    fi
+    echo "../../../alliance/bin/chfield cin_"$pin" "$cin" | \\" >> $cell.bash
+
+  done #for out_pin in z
+done #for pin in d e
+op=0
+for out_pin in z
+do
+  let "tpd=(tpdx1000[$op]+rupx1[$op]*load_cap+rdownx1[$op]*load_cap+1000)/2000"
+  echo "sed \"s/ after  *[0-9][0-9]*  *ps;/ after "$tpd" ps;/\" | \\" >> $cell.bash
+  let "op=op+1"
+done
+
+max_hold=-99999
+for delay_file in ${cell}_e_d_1_lh
+do
+  hold_values=$(sed -n '6,+2 p' ${delay_file}.delay | \
+    tr -s '\t' ' ' | cut -f3-6 -d' ')
+  for hold in $hold_values
+  do
+    holdx100=$(echo $hold | awk '{printf "%6d\n", $1*100000000000000}')
+    if [ "$holdx100" -gt "$max_hold" ]
+    then
+      max_hold=$holdx100
+    fi
+  done
+done
+
+let "max_hold=max_hold+5000"
+thr=$(echo $max_hold | awk '{printf"%3d\n", ($1+50)/100}')
+
+max_hold=-99999
+for delay_file in ${cell}_e_d_0_hl
+do
+  hold_values=$(sed -n '6,+2 p' ${delay_file}.delay | \
+    tr -s '\t' ' ' | cut -f3-6 -d' ')
+  for hold in $hold_values
+  do
+    holdx100=$(echo $hold | awk '{printf "%6d\n", $1*100000000000000}')
+    if [ "$holdx100" -gt "$max_hold" ]
+    then
+      max_hold=$holdx100
+    fi
+  done
+done
+
+let "max_hold=max_hold+5000"
+thf=$(echo $max_hold | awk '{printf"%3d\n", ($1+50)/100}')
+
+max_setup=-99999
+for delay_file in ${cell}_d_e_0_lh
+do
+  setup_values=$(sed -n '6,+2 p' ${delay_file}.delay | \
+    tr -s '\t' ' ' | cut -f3-6 -d' ')
+  for setup in $setup_values
+  do
+    setupx100=$(echo $setup | awk '{printf "%6d\n", $1*100000000000000}')
+    if [ "$setupx100" -gt "$max_setup" ]
+    then
+      max_setup=$setupx100
+    fi
+  done
+done
+
+tsr=$(echo $max_setup | awk '{printf"%3d\n", ($1+50)/100}')
+
+max_setup=-99999
+for delay_file in ${cell}_d_e_1_hl
+do
+  setup_values=$(sed -n '6,+2 p' ${delay_file}.delay | \
+    tr -s '\t' ' ' | cut -f3-6 -d' ')
+  for setup in $setup_values
+  do
+    setupx100=$(echo $setup | awk '{printf "%6d\n", $1*100000000000000}')
+    if [ "$setupx100" -gt "$max_setup" ]
+    then
+      max_setup=$setupx100
+    fi
+  done
+done
+
+tsf=$(echo $max_setup | awk '{printf"%3d\n", ($1+50)/100}')
+
+echo "../../../alliance/bin/chfield thr_d_e "$thr" | \\" >> $cell.bash
+echo "../../../alliance/bin/chfield thf_d_e "$thf" | \\" >> $cell.bash
+echo "../../../alliance/bin/chfield tsr_d_e "$tsr" | \\" >> $cell.bash
+echo "../../../alliance/bin/chfield tsf_d_e "$tsf" | \\" >> $cell.bash
+
+echo cat >> $cell.bash
+chmod 755 $cell.bash

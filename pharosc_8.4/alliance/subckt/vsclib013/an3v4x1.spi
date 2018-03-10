@@ -1,0 +1,19 @@
+* Spice description of an3v4x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  8:58:12
+* vsclib 0.13um values
+.subckt an3v4x1 a b c vdd vss z
+M01 08    a     vdd   vdd p  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M02 n1    a     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 vdd   b     08    vdd p  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M04 sig7  b     n1    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 08    c     vdd   vdd p  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M06 08    c     sig7  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 vdd   08    z     vdd p  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+M08 vss   08    z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C4  08    vss   0.923f
+C5  a     vss   0.456f
+C8  b     vss   0.474f
+C6  c     vss   0.524f
+C3  z     vss   0.672f
+.ends

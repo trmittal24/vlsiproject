@@ -1,0 +1,16 @@
+The fastest speed occurs when the shape factor
+<SPAN CLASS="mathsvar">r</SPAN>=&radic;(
+<SPAN CLASS="mathsvar">K<SUB>P</SUB></SPAN>&divide;
+<SPAN CLASS="mathsvar">K<SUB>N</SUB></SPAN>&times;&micro;).
+For a 3-NOR gate, we use <SPAN CLASS="mathsvar">K<SUB>P</SUB></SPAN>=22/8;
+<SPAN CLASS="mathsvar">K<SUB>N</SUB></SPAN>=1, and &micro;=9/4,
+which gives <SPAN CLASS="mathsvar">r</SPAN>=&radic;(99/16)&asymp;2.5.
+This gives a P/N ratio of &gamma;=0.9 which is lower than
+&gamma;=1 which we want to set as the minimum. For the fastest
+gates then we will use P/N=1 which gives a shape factor
+<SPAN CLASS="mathsvar">r</SPAN>=&radic;=22/8=2.75.
+This value has been used for the <B>v1</B> version,
+which are fast with unbalanced output skews.
+The P/N ratio has been kept as close to 2 as possible for the <B>v0</B>
+version in order to give more balanced output skews,
+even if this is not the fastest configuration.

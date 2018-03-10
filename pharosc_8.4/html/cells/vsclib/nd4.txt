@@ -1,0 +1,1 @@
+4 cells with their P/N ratio set to 2.5, close to the P/N ratio of 2.6 which gives the fastest speed, as well as balanced rise and fall drive strengths.

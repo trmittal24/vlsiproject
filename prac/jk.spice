@@ -1,0 +1,126 @@
+* SPICE3 file created from jk.ext - technology: scmos
+
+.include /home/tarun/ngspice/t14y_tsmc_025_level3.txt
+
+
+.option scale=1u
+
+M1000 a a vdd vdd cmosp w=24 l=2
++ ad=384 pd=128 as=1642 ps=602 
+M1001 vdd k a vdd cmosp w=24 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1002 k k vdd vdd cmosp w=18 l=2
++ ad=102 pd=50 as=0 ps=0 
+M1003 vdd j z vdd cmosp w=28 l=2
++ ad=0 pd=0 as=168 ps=70 
+M1004 j n4 vdd vdd cmosp w=14 l=2
++ ad=82 pd=42 as=0 ps=0 
+M1005 a_44_52# j vdd vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1006 n4 ci a_44_52# vdd cmosp w=6 l=2
++ ad=78 pd=40 as=0 ps=0 
+M1007 n2 cn n4 vdd cmosp w=12 l=2
++ ad=96 pd=40 as=0 ps=0 
+M1008 vdd n1 n2 vdd cmosp w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1009 a_81_58# n2 vdd vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1010 n1 cn a_81_58# vdd cmosp w=6 l=2
++ ad=83 pd=42 as=0 ps=0 
+M1011 a_n48_10# a a vss cmosn w=19 l=2
++ ad=95 pd=48 as=219 ps=106 
+M1012 vss k a_n48_10# vss cmosn w=19 l=2
++ ad=885 pd=348 as=0 ps=0 
+M1013 k k vss vss cmosn w=9 l=2
++ ad=57 pd=32 as=0 ps=0 
+M1014 vss j z vss cmosn w=14 l=2
++ ad=0 pd=0 as=82 ps=42 
+M1015 vss n4 j vss cmosn w=7 l=2
++ ad=0 pd=0 as=47 ps=28 
+M1016 a_98_51# ci n1 vdd cmosp w=13 l=2
++ ad=65 pd=36 as=0 ps=0 
+M1017 vdd d a_98_51# vdd cmosp w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1018 ci cn vdd vdd cmosp w=11 l=2
++ ad=67 pd=36 as=0 ps=0 
+M1019 cn cp vdd vdd cmosp w=10 l=2
++ ad=62 pd=34 as=0 ps=0 
+M1020 vss cn ci vss cmosn w=6 l=2
++ ad=0 pd=0 as=42 ps=26 
+M1021 a_44_17# j vss vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1022 n4 cn a_44_17# vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1023 n2 ci n4 vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1024 vss n1 n2 vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1025 a_81_17# n2 vss vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1026 n1 ci a_81_17# vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1027 a_98_17# cn n1 vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1028 vss d a_98_17# vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1029 cn cp vss vss cmosn w=7 l=2
++ ad=49 pd=28 as=0 ps=0 
+M1030 a_n49_n22# j vss vss cmosn w=20 l=2
++ ad=100 pd=50 as=0 ps=0 
+M1031 a j a_n49_n22# vss cmosn w=20 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1032 a_n9_n22# a vss vss cmosn w=20 l=2
++ ad=100 pd=50 as=0 ps=0 
+M1033 d a a_n9_n22# vss cmosn w=20 l=2
++ ad=112 pd=54 as=0 ps=0 
+M1034 a j vdd w_n66_n72# cmosp w=24 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1035 vdd j a w_n66_n72# cmosp w=24 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1036 d a vdd w_n66_n72# cmosp w=24 l=2
++ ad=192 pd=64 as=0 ps=0 
+M1037 vdd a d w_n66_n72# cmosp w=24 l=2
++ ad=0 pd=0 as=0 ps=0 
+C0 k vdd 14.9fF
+C1 n1 vdd 8.4fF
+C2 j w_n66_n72# 18.0fF
+C3 cp vdd 11.6fF
+C4 vdd w_n66_n72# 23.4fF
+C5 k vss 11.9fF
+C6 n1 vss 9.9fF
+C7 a w_n66_n72# 16.2fF
+C8 d vdd 11.3fF
+C9 vdd ci 16.6fF
+C10 cn vdd 46.5fF
+C11 cp vss 3.1fF
+C12 n4 vdd 8.9fF
+C13 j vdd 14.0fF
+C14 d vss 13.3fF
+C15 vss ci 27.5fF
+C16 n2 vdd 12.4fF
+C17 cn vss 17.1fF
+C18 a vdd 14.1fF
+C19 z vdd 2.8fF
+C20 n4 vss 7.3fF
+C21 j vss 32.8fF
+C22 n2 vss 7.2fF
+C23 a vss 36.2fF
+C24 z vss 6.5fF
+C25 d w_n66_n72# 3.3fF
+C26 d 0 15.6fF
+C27 j 0 7.1fF
+C28 vdd 0 57.1fF
+
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_cp cp 0 PULSE(0 5 0 0 0 31.1n 62.2n)
+v_gg_j j 0 PULSE(0 5 0 0 0 58.8n 117.6n)
+v_gg_k k 0 PULSE(0 5 25n 0 0 58.8n 117.6n)
+
+.control
+ tran 0.01n 500n
+ plot (j + 10) (k + 10) (cp + 5) (z)
+.endc
+
+.end

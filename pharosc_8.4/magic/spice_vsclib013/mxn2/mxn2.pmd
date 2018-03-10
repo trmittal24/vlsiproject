@@ -1,0 +1,9 @@
+inputpin_list a0 a1 s
+outputpin_list z
+a0 z positive_unate when 00 10
+a1 z positive_unate when 01 11
+s z positive_unate when 01
+s z negative_unate when 10
+s z pin_power when 00 11
+z logic_function ((a0*s')+(a1*s))
+cell_footprint mxn2

@@ -1,0 +1,22 @@
+* Spice description of a4_x2
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:28:38
+* sxlib 0.13um values
+.subckt a4_x2 i0 i1 i2 i3 q vdd vss
+Mtr_00001 sig4  i2    sig2  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00002 vss   i0    sig1  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00003 sig2  i3    sig3  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00004 sig1  i1    sig4  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00005 vss   sig3  q     vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00006 q     sig3  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00007 sig3  i0    vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00008 vdd   i1    sig3  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00009 sig3  i2    vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00010 vdd   i3    sig3  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C11 i0    vss   0.756f
+C10 i1    vss   0.779f
+C8  i2    vss   0.801f
+C9  i3    vss   0.705f
+C6  q     vss   1.077f
+C3  sig3  vss   0.927f
+.ends

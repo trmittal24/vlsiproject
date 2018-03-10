@@ -1,0 +1,19 @@
+* Spice description of nd2ab_x2
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:58:45
+* vsxlib 0.13um values
+.subckt nd2ab_x2 a b vdd vss z
+M1a sig4  a     vdd   vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M1b vdd   b     bn    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M1z vdd   sig4  z     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M2a vss   a     sig4  vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M2b bn    b     vss   vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+M2z z     bn    vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M3z n1    sig4  vss   vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+M4z z     bn    n1    vss n  L=0.12U  W=1.815U AS=0.480975P AD=0.480975P PS=4.16U   PD=4.16U
+C7  a     vss   0.677f
+C3  b     vss   0.550f
+C2  bn    vss   0.797f
+C4  sig4  vss   0.636f
+C5  z     vss   0.798f
+.ends

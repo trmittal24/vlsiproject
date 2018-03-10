@@ -1,0 +1,7 @@
+inputpin_list cp d
+outputpin_list z
+isflop 1
+cp z positive_unate when 1
+cp z negative_unate when 0
+d z positive_unate when 1
+z logic_function ff(cp,d)

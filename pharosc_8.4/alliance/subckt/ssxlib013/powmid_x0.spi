@@ -1,0 +1,6 @@
+* Spice description of powmid_x0
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:40:22
+* ssxlib 0.13um values
+.subckt powmid_x0 vdd vss
+.ends

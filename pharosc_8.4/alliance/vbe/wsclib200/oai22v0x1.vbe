@@ -1,0 +1,44 @@
+ENTITY oai22v0x1 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 4480;   
+  CONSTANT cin_b1        : NATURAL := 9;      
+  CONSTANT cin_b2        : NATURAL := 9;      
+  CONSTANT cin_a1        : NATURAL := 9;      
+  CONSTANT cin_a2        : NATURAL := 9;      
+  CONSTANT rdown_b1_z    : NATURAL := 4750;   
+  CONSTANT rdown_b2_z    : NATURAL := 4750;   
+  CONSTANT rdown_a1_z    : NATURAL := 4750;   
+  CONSTANT rdown_a2_z    : NATURAL := 4750;   
+  CONSTANT rup_b1_z      : NATURAL := 4760;   
+  CONSTANT rup_b2_z      : NATURAL := 4760;   
+  CONSTANT rup_a1_z      : NATURAL := 4760;   
+  CONSTANT rup_a2_z      : NATURAL := 4760;   
+  CONSTANT tphl_a2_z	 : NATURAL := 174;
+  CONSTANT tphl_b2_z	 : NATURAL := 218;
+  CONSTANT tplh_b1_z	 : NATURAL := 226;
+  CONSTANT tphl_a1_z	 : NATURAL := 237;
+  CONSTANT tplh_b2_z	 : NATURAL := 287;
+  CONSTANT tphl_b1_z	 : NATURAL := 294;
+  CONSTANT tplh_a1_z	 : NATURAL := 307;
+  CONSTANT tplh_a2_z	 : NATURAL := 382;
+  CONSTANT transistors   : NATURAL := 8       
+);
+PORT (
+  b1	 : in  BIT;
+  b2	 : in  BIT;
+  a1	 : in  BIT;
+  a2	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END oai22v0x1;
+
+ARCHITECTURE behaviour_data_flow OF oai22v0x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on oai22v0x1"
+  SEVERITY WARNING;
+  z <= not (((b1 or b2) and (a1 or a2))) after 1000 ps;
+END;

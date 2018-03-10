@@ -1,0 +1,69 @@
+#!/bin/bash
+
+# Inserts AB co-ordinates from Alliance CIF ($2) into another CIF file ($1)
+# Puts back the REF geometries
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: make_alliance_cif cell abcell reffile" 1>&2
+  echo "#" 1>&2
+  echo "#   No file given. Please check." 1>&2
+  exit 1
+fi
+
+if test -f $1.cif
+then
+  cell=$1
+else
+  echo "# Usage: make_alliance_cif cell abcell reffile" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".cif does not exist. Please check." 1>&2
+  exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+  echo "# Usage: make_alliance_cif cell abcell reffile" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell with the AB information must be given. Please check." 1>&2
+  exit 1
+else
+  if test -f $2.cif
+  then
+    abfile=$2.cif
+  else
+    echo "# Usage: make_alliance_cif cell abcell reffile" 1>&2
+    echo "#" 1>&2
+    echo "#   The abcell name supplied "$2".cif does not exist. Please check." 1>&2
+    exit 1
+  fi
+fi
+
+if [ "$#" -eq 2 ]
+then
+  echo "# Usage: make_alliance_cif cell abcell reffile" 1>&2
+  echo "#" 1>&2
+  echo "#   The file with the REF information must be given. Please check." 1>&2
+  exit 1
+else
+  if test -f $3
+  then
+    reffile=$3
+  else
+    echo "# Usage: make_alliance_cif cell abcell reffile" 1>&2
+    echo "#" 1>&2
+    echo "#   The reffile name supplied "$3" does not exist. Please check." 1>&2
+    exit 1
+  fi
+fi
+
+grep '4A ' $abfile > $$temp
+sed "/^9\ / r $$temp" $cell.cif | \
+  sort -mu | \
+  sed 's/^DF/L REF/' | \
+  sed "/^L REF/ r $reffile" > $$temp2
+
+mv -f $$temp2 $cell.cif
+rm $$temp
+
+

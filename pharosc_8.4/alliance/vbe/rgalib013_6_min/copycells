@@ -1,0 +1,35 @@
+#!/bin/bash
+
+rm -f *.vbe
+
+cp -p ../rgalib013_6/aoi21v0x1.vbe .
+cp -p ../rgalib013_6/iv1v0x2.vbe .
+cp -p ../rgalib013_6/mxi2v2x1.vbe .
+cp -p ../rgalib013_6/nd2av0x2.vbe .
+cp -p ../rgalib013_6/nd2v0x2.vbe .
+cp -p ../rgalib013_6/nd3v0x2.vbe .
+cp -p ../rgalib013_6/nr2av0x1.vbe .
+cp -p ../rgalib013_6/nr2v0x1.vbe .
+cp -p ../rgalib013_6/nr3v0x1.vbe .
+cp -p ../rgalib013_6/oai21v0x1.vbe .
+cp -p ../rgalib013_6/rowend_x0.vbe .
+cp -p ../rgalib013_6/tie_x0.vbe .
+cp -p ../rgalib013_6/vddtie.vbe .
+cp -p ../rgalib013_6/vfeed1.vbe .
+cp -p ../rgalib013_6/vfeed2.vbe .
+cp -p ../rgalib013_6/vsstie.vbe .
+cp -p ../rgalib013_6/xnr2v0x1.vbe .
+cp -p ../rgalib013_6/xor2v0x1.vbe .
+
+ls -1 *.vbe | sed 's/\(.*\)\.vbe/\1 C/' > RGALIB013_6_MIN
+ls -1 rowend*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> RGALIB013_6_MIN
+ls -1 tie*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> RGALIB013_6_MIN
+ls -1 vfeed*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> RGALIB013_6_MIN
+
+sort -o RGALIB013_6_MIN RGALIB013_6_MIN
+
+cp -p ../rgalib013_6_macros/an2v0x2.vbe .
+cp -p ../rgalib013_6_macros/an3v0x2.vbe .
+cp -p ../rgalib013_6_macros/bf1v0x2.vbe .
+cp -p ../rgalib013_6_macros/or2v0x2.vbe .
+cp -p ../rgalib013_6_macros/or3v0x2.vbe .

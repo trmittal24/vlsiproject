@@ -1,0 +1,11 @@
+#!/bin/bash
+# allna4 2007-07-06:07h43 graham
+
+./allna4_delay $1
+./allna4_vbe
+./allna4_lib
+./allna4_html
+if test -x allna4_xtra
+then
+  ./allna4_xtra
+fi

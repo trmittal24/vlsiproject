@@ -1,0 +1,42 @@
+#!/bin/bash
+#  All library cell are simulated to check their functionality
+olddir=$PWD
+rm -f */*.error
+cd iv1
+./alliv1_func
+cd $olddir
+cd aoi21
+./allaoi21_func
+cd $olddir
+cd mxi2
+./allmxi2_func
+cd $olddir
+cd nd2
+./allnd2_func
+cd $olddir
+cd nd2a
+./allnd2a_func
+cd $olddir
+cd nd3
+./allnd3_func
+cd $olddir
+cd nr2
+./allnr2_func
+cd $olddir
+cd nr2a
+./allnr2a_func
+cd $olddir
+cd nr3
+./allnr3_func
+cd $olddir
+cd oai21
+./alloai21_func
+cd $olddir
+cd xnr2
+./allxnr2_func
+cd $olddir
+cd xor2
+./allxor2_func
+cd $olddir
+echo "# Listing error files"
+ls -l */*.error

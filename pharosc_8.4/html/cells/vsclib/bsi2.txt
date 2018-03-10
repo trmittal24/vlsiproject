@@ -1,0 +1,26 @@
+<TABLE ALIGN=RIGHT BORDER=1>
+<TR>	<TD>&nbsp;</TD>
+<TD ALIGN=CENTER COLSPAN=4>32-bit barrel shifter made with:&nbsp;</TD></TR>
+<TR>	<TD>&nbsp;</TD>
+<TD>&nbsp;&nbsp;</TD>
+<TD ALIGN=CENTER>gates</TD>
+<TD ALIGN=CENTER>&nbsp;pins&nbsp;</TD>
+<TD ALIGN=CENTER>delay&nbsp;</TD></TR>
+<TR>	<TD>&nbsp;</TD>
+<TD>mxi2v0x1</TD>
+<TD ALIGN=CENTER>427</TD>
+<TD ALIGN=CENTER>640</TD>
+<TD ALIGN=CENTER>468</TD></TR>
+<TR>	<TD>&nbsp;</TD>
+<TD>mxi2v2x1</TD>
+<TD ALIGN=CENTER>480</TD>
+<TD ALIGN=CENTER>640</TD>
+<TD ALIGN=CENTER>441</TD></TR>
+<TR>	<TD>&nbsp;</TD>
+<TD>bsi2v2x1</TD>
+<TD ALIGN=CENTER>373</TD>
+<TD ALIGN=CENTER>400</TD>
+<TD ALIGN=CENTER>418</TD></TR>
+</TABLE>
+2 bit inverting barrel shifter. When select pin <SPAN CLASS="boldred">s</SPAN> is low, the inverse of input <SPAN CLASS="boldred">a0</SPAN> is routed to output <SPAN CLASS="boldred">z0</SPAN> and <SPAN CLASS="boldred">a1</SPAN> to <SPAN CLASS="boldred">z1</SPAN>. when the select pin <SPAN CLASS="boldred">s</SPAN> is high, then <SPAN CLASS="boldred">z0</SPAN> is the inverse of <SPAN CLASS="boldred">a1</SPAN> and <SPAN CLASS="boldred">z1</SPAN> is the inverse of <SPAN CLASS="boldred">a0</SPAN>.<BR>
+The advantage of using this cell instead of 2 inverting muxes is the reduced capacitance of pins <SPAN CLASS="boldred">a0</SPAN> and <SPAN CLASS="boldred">a1</SPAN>. For example, a 32-bit barrel shifter, with 5 cells in sequence, has a smaller average delay, as shown on the right. It's also smaller and has fewer pins.

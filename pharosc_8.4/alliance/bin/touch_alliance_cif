@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# beautifies the CIF files written from Alliance
+# - inserts a space after the initial layer letter (L,B,C,DS)
+# - removes the 4N names associated with the transistor numbers
+# - removes the 4N names which are also present as 4X connectors
+# - removes 4N names on diffusion and contact
+# - removes any duplicate lines (not the same as removing all
+#   duplicate geometries)
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: touch_alliance_cif cell" 1>&2
+  echo "#" 1>&2
+  echo "#   No file given. Please check." 1>&2
+  exit 1
+fi
+
+if test -f $1.cif
+then
+  cell=$1
+else
+  echo "# Usage: touch_alliance_cif cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".cif does not exist. Please check." 1>&2
+  exit 1
+fi
+
+sed 's/^L\([^ ]\)/L \1/' $cell.cif | \
+sed 's/^B\([^ ]\)/B \1/' | \
+sed 's/^C\([^ ]\)/C \1/' | \
+sed 's/^DS\([^ ]\)/DS \1/' | \
+grep -v '^4N  *[0-9]' > $$temp
+
+connector_list=$(grep '^4X ' $cell.cif | cut -f2 -d' ' | sort -u)
+
+for connector in $connector_list
+do
+   sed -i "/^4N  *$connector / d" $$temp
+done
+
+sed '/^L  *CAA/,/^L / s/^4N .*$//' $$temp | \
+sed '/^L  *CND/,/^L / s/^4N .*$//' | \
+sed '/^L  *CPD/,/^L / s/^4N .*$//' | \
+sed '/^L  *CCC/,/^L / s/^4N .*$//' | \
+grep -v '^ *$' | \
+sort -mu > $$temp1
+
+mv -f $$temp1 $cell.cif
+rm $$temp

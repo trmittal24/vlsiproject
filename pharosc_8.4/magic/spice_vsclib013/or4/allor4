@@ -1,0 +1,11 @@
+#!/bin/bash
+# allor4 2007-08-29:12h22 graham
+
+./allor4_delay $1
+./allor4_vbe
+./allor4_lib
+./allor4_html
+if test -x allor4_xtra
+then
+  ./allor4_xtra
+fi

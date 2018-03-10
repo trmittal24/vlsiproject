@@ -1,0 +1,11 @@
+#!/bin/bash
+# allan4 2007-07-06:07h54 graham
+
+./allan4_delay $1
+./allan4_vbe
+./allan4_lib
+./allan4_html
+if test -x allan4_xtra
+then
+  ./allan4_xtra
+fi

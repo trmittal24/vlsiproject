@@ -1,0 +1,50 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo '# Script which copies the cell in argument 1 from ../vxlib013'
+  echo '# and adds the value in argument 2 to its input pin capacitances.'
+  exit 1
+fi
+
+source_dir=../vxlib013
+cell=$1.vbe
+function=${1%_x?*}
+inccap=$2
+
+if test -f "$source_dir"/"$cell"
+then
+  cp "$source_dir"/"$cell" .
+else
+  echo "# Cell "$cell" does not exist. Please check."
+  echo "# Nothing done."
+  exit 1
+fi
+
+if [ "$inccap" = "" ]
+then
+  inccap=0
+fi
+
+pins=$(awk '$2 ~ /cin_/ {print $2}' $cell)
+
+for input_pins in $pins
+do
+  pincap=$(awk '$2 ~ /'$input_pins'/ {print $6}' $cell | sed 's/;//')
+  let pincap=$pincap+$inccap
+  awk '$2 ~ /'$input_pins'/ {printf "%-11s%-14s%-2s%-8s%-3s%-8s\n", "  "$1,$2,$3,$4,$5,'$pincap'";"}
+  $2 !~ /'$input_pins'/ {print}' $cell >$$_temp
+  mv -f $$_temp $cell
+done
+
+# special treatment for cgi2
+if [ "$function" = cgi2 ]
+then
+  sed -i s/'z <='.*/'z <= not ((c or (a and b)) and (a or b)) after 1000 ps;'/ $cell
+fi
+
+# special treatment for cgi2ab
+if [ "$function" = cgi2ab ]
+then
+  sed -i s/'z <='.*/'z <= not ((c or (not a and not b)) and (not a or not b)) after 1000 ps;'/ $cell
+fi

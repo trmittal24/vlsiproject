@@ -1,0 +1,6 @@
+* Spice description of vfeed6
+* Spice driver version 134999461
+* Date 31/05/2007 at 21:36:06
+* vxlib 0.13um values
+.subckt vfeed6 vdd vss
+.ends

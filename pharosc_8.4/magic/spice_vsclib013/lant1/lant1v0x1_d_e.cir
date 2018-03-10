@@ -1,0 +1,216 @@
+* d_e setup time of lant1v0x1, 0.13um, Berkeley generic bsim3 params
+* lant1v0x1_d_e.cir 2007-07-09:10h08 graham
+* FLOW
+* instantiate one subckt
+* for each clock transition from 20p to 1500p (4 in all)
+*   for each data transition from 20p to 1500p (4 in all)
+*     for each d-in and z-out combination (2 in all)
+*       until the timing increment has been reduced to 0.1ps
+*         start with tSU=409.6ps and increase (if fail) or decrease (if pass)
+*       assign setup time to output vector
+* print output vectors (4x4) to screen and file
+*
+*    output_file=1   output_file=2
+*         ________   ____
+* d  ____/               \________
+*    ______          ______
+* e        \______         \______
+*             ____   ________
+* z  ________/               \____
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/lant1v0x1.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x0  d_0  e_0  vdd0 vss0  x0z  lant1v0x1
+*
+cx0z  x0z  0 10.80f
+* 
+vdd0 vdd0 0 'vdd'
+vss0 0 vss0 'vss'
+*
+Ve_0 e_0 0 dc 0 pwl(0 0 100p 0 )
+Vd_0 d_0 0 dc 0 pwl(0 0 100p 0 )
+*
+
+.control
+  set width=136 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+
+  set measure_point = 1500p
+  set max_timing_err = 2p
+  set max_timing_perc = 0.02
+  set input_threshold_rise = 0.5
+  set input_threshold_fall = 0.5
+  set output_threshold_rise = 0.5
+  set output_threshold_fall = 0.5
+  set e_v1 = $vdd
+  set e_v2 = $vss
+
+  let tsuh1[15] = 0
+  let tsul1[15] = 0
+  let n = 0
+  foreach tran_e 20p 200p 670p 1500p
+    let intran[n] = $tran_e
+    let e_lo = $measure_point -$tran_e /2
+    let e_hi = $measure_point +$tran_e /2
+    set e_input = ( 0 $e_v1 "$&e_lo" $e_v1 "$&e_hi" $e_v2 )
+    let j = 0
+    foreach tran_d 20p 200p 670p 1500p
+      foreach output_file 1 2
+        if $output_file = 1
+          set d_v1 = $vss
+          set d_v2 = $vss
+          set d_v3 = $vdd
+          set inthresh = $input_threshold_rise
+          set z_v1 = $vss
+          set z_v2 = $vdd
+          set outhresh = $output_threshold_rise
+          set outfall = -1
+        end
+        if $output_file = 2
+          set d_v1 = $vdd
+          set d_v2 = $vdd
+          set d_v3 = $vss
+          set inthresh = $input_threshold_fall
+          set z_v1 = $vdd
+          set z_v2 = $vss
+          set outhresh = $output_threshold_fall
+          set outfall = 1
+        end
+        set functional = 1
+        let count = 0
+        set max_su = 0
+        foreach su 409.6p 409.6p 204.8p 102.4p 51.2p 25.6p 12.8p 6.4p 3.2p 1.6p 0.8p 0.4p 0.2p 0.1p 0.1p 0.1p 0.1p
+          let count = count + 1
+          if count = 1
+            let setup = $su
+          else
+            if $functional = 1
+              let setup = setup - $su
+            else
+              let setup = setup + $su
+            end
+          end
+          let setup100x = setup * 1E12
+          if $max_su < $su
+            set max_su = $su
+          end
+          let d_lo = $measure_point -setup -$tran_d *$inthresh
+          let d_hi = $measure_point -setup +$tran_d *$inthresh
+          if $output_file = 1
+            let tP = d_lo + $input_threshold_rise * $tran_d
+          end
+          if $output_file = 2
+            let tP = d_lo + $input_threshold_fall * $tran_d
+          end
+          if d_lo < 0
+            echo # !? Error: setup time is greater than $measure_point ps
+            break
+          end
+          set d_input = ( 0 $d_v1 100p $d_v2 "$&d_lo" $d_v2 "$&d_hi" $d_v3 )
+          set tstop = 2500p
+          alter @Vd_0[pwl] = [ $d_input ]
+          alter @Ve_0[pwl] =[ $e_input ]
+          tran $tstep $tstop
+          linearize
+*          plot v(e_0) v(d_0) v(x0:n1) v(x0:n2) v(x0z)
+
+          let tint = length(time)-1
+*          let simtime = time[tint]
+          let simpoints = length(time)-1
+*
+*         Check whether output switched or not
+*
+          let output_v = x0z[tint]
+          if $z_v2 lt $vdd *$outhresh and output_v gt $vdd *$outhresh
+            set functional = 0
+          else
+            if $z_v2 gt $vdd *$outhresh and output_v lt $vdd *$outhresh
+              set functional = 0
+            else
+              set functional = 1
+            end
+          end
+*
+*         measure delay from tP to x0z passing its threshold
+*
+          if $functional = 1
+            let m = simpoints
+            let int_m = length ( vector ( m ))
+            let k = 1
+            repeat 16
+              let k = k * 2
+              let lower_v = x0z[int_m-1]
+              let upper_v = x0z[int_m]
+              if $outfall * ( upper_v - $vdd*$outhresh ) <= 0
+                if $outfall * ( lower_v - $vdd*$outhresh ) >= 0
+                  goto found_m
+                else
+                  let m = m - simpoints / k
+                  let int_m = length ( vector ( m )) + 1
+                end
+              else
+                let m = m + simpoints / k
+                let int_m = length ( vector ( m )) + 1
+                if m > simpoints
+                  goto notfound_m
+                end
+              end
+            end *repeat 16
+            label notfound_m
+            echo #Error: Failed to find output threshold ... setting m=1700p at e transition = $tran_e, d transition = $tran_d
+            echo #Error: Failed to find output threshold ... setting m=1700p at e transition = $tran_e, d transition = $tran_d >> lant1v0x1_d_e.error
+            let m = simpoints * 1700/$measure_point
+            let int_m = length ( vector ( int_m )) + 1
+
+            label found_m
+            let tpropa = time[int_m-1]+($vdd *$outhresh -lower_v)/(upper_v -lower_v)*(time[int_m]-time[int_m-1])
+            let tprop = time[int_m-1]+($vdd *$outhresh -lower_v)/(upper_v -lower_v)*(time[int_m]-time[int_m-1])-tP
+            let tprop100x = tprop * 1E12
+            if setup >= $max_su
+              let ref_tprop = tprop
+            end
+
+            let timing_diff = abs( tprop - ref_tprop )
+            let timing_perc = timing_diff / ref_tprop
+            if timing_diff > $max_timing_err or timing_perc > $max_timing_perc
+              set functional = 0
+            end
+            if $output_file = 1
+*              echo "n= $&n ,j= $&j ,tran_e= $tran_e ,tran_d= $tran_d"
+              echo "Trying tSU $&setup100x ps gives tRISE $&tprop100x ps"
+            else
+*              echo "n= $&n ,j= $&j ,tran_e= $tran_e ,tran_d= $tran_d"
+              echo "Trying tSU $&setup100x ps gives tFALL $&tprop100x ps"
+            end
+          else
+*            echo "n= $&n ,j= $&j ,tran_e= $tran_e ,tran_d= $tran_d"
+            echo "Trying tSU $&setup100x ps"
+          end
+
+          if $functional = 1 and $su = 0.1p
+            break
+          end
+        end *foreach su
+*        plot v(e_0) v(d_0) v(x0:n1) v(x0:n2) v(x0z)
+        if $output_file = 1
+          let tsuh1[4*j+n] = setup
+*          print setup
+        end
+        if $output_file = 2
+          let tsul1[4*j+n] = setup
+*          print setup
+        end
+        destroy all
+      end *foreach output_file
+      let j = j + 1
+    end *foreach tran_d
+    let n = n + 1
+  end *foreach tran_e
+  print col intran tsuh1[0,3] tsuh1[4,7] tsuh1[8,11] tsuh1[12,15]
+  print col intran tsuh1[0,3] tsuh1[4,7] tsuh1[8,11] tsuh1[12,15] > lant1v0x1_d_e_0_lh.delay
+  print col intran tsul1[0,3] tsul1[4,7] tsul1[8,11] tsul1[12,15]
+  print col intran tsul1[0,3] tsul1[4,7] tsul1[8,11] tsul1[12,15] > lant1v0x1_d_e_1_hl.delay
+  rusage trantime
+.endc
+.end

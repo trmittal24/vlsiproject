@@ -1,0 +1,4 @@
+1 cell with a P/N ratio of about 2.
+The function is the same as the <B>aoi211</B>,
+but with the parallel P-transistors next to the output node
+rather than the VDD connection which gives a slower cell.

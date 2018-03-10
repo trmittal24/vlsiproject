@@ -1,0 +1,11 @@
+#!/bin/bash
+# alla2 2007-07-06:07h30 graham
+
+./alla2_delay $1
+./alla2_vbe
+./alla2_lib
+./alla2_html
+if test -x alla2_xtra
+then
+  ./alla2_xtra
+fi

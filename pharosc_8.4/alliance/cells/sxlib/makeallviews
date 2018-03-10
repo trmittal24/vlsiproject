@@ -1,0 +1,171 @@
+#!/bin/bash
+#
+# script to create all cell views. Using Alliance version 20060218 and
+# Magic version 7.4.8 with Magic compiled with the TCL option
+#
+if test $# -eq 0
+then
+  echo "# Usage ./makeallviews cell_name (without AP extension). Please supply cell_name."
+  exit 1
+fi
+if test -f "$1.ap"
+then
+dir=$PWD
+
+#echo "#"
+#echo "# Write sxlib013 CIF from Alliance"
+
+source ../../../alliance/bin/env_sx013
+../../../alliance/bin/make_al $1
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_sx013 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+cp $1.cif ../../../alliance/cif/sxlib013
+../../../alliance/bin/grep_ref_boxes $1 ../../../magic/etc/sxlib/$1_sx013.ref
+grep '^4A' $1.cif > ../../../magic/etc/sxlib/$1_sx013.ab
+
+#echo "# Write sxlib013 GDS from Alliance"
+
+#RDS_IN=gds
+#RDS_OUT=gds
+#rm -f $1.gds
+#s2r_sx013 $1 >/dev/null
+#cp $1.gds ../../../alliance/gds/sxlib013
+
+echo "# Write spice deck using sx013 values"
+
+../../../alliance/bin/sx013_make_spice $1
+grep subckt $1.spi > ../../../magic/etc/sxlib/$1.subckt
+cp $1.spi ../../../alliance/subckt/sxlib013
+
+echo "# Write sxlib100 CIF from Alliance"
+
+source ../../../alliance/bin/env_sx100
+../../../alliance/bin/make_al $1
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_sx100 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+cp $1.cif ../../../alliance/cif/sxlib100
+../../../alliance/bin/grep_ref_boxes $1 ../../../magic/etc/sxlib/$1_sx100.ref
+grep '^4A' $1.cif > ../../../magic/etc/sxlib/$1_sx100.ab
+
+echo "# Write sxlib200 CIF from Alliance for Magic"
+
+source ../../../alliance/bin/env_sx200
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_sx200 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+sx_add_ab $1
+cp $1.cif ../../../alliance/cif/sxlib200
+../../../alliance/bin/grep_ref_boxes $1 ../../../magic/etc/sxlib/$1_sx200.ref
+grep '^4A' $1.cif > ../../../magic/etc/sxlib/$1_sx200.ab
+
+../../../alliance/bin/make_magic_cif $1
+cp $1.cif ../../../magic/cells/sxlib
+
+rm -f $1.al
+rm -f $1.spi
+rm -f $1.cif
+rm -f $1.gds
+
+cd ../../../magic/cells/sxlib
+
+#
+# Script update 23-JUN-06 to run with Magic compiled with TCL. The
+# actual version of Magic being used is the 7.4.8 release.
+#
+# xhost + command needed for -noconsole option to be accepted
+#
+xhost + 1>/dev/null
+
+echo
+echo "# Read sxlib200 CIF into Magic"
+magic -Tsx200  -dnull -noconsole <<EOF  >/dev/null 2>&1
+;cif read $1.cif
+;load $1
+;drc count total
+;save
+exit
+EOF
+
+echo
+echo "# Extract 0.13um SPI file from Magic"
+magic -Tsx013 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;box 0 0 1 1
+;select more box pwell
+;delete
+;box 0 99 1 100
+;select more box nwell
+;delete
+;select
+;extract do capacitance
+;extract do coupling
+;extract do adjust
+;extract do resistance
+;extract all
+;ext2spice -f spice3 -c 0.001 -r 1 -y 3 -d
+;quit
+EOF
+
+echo
+echo "# Write sxlib200 CIF file from Magic"
+magic -Tsx200 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/sxlib200/$1 ../../../magic/etc/sxlib/$1_sx200.ref
+cp $1.cif ../../../magic/cif/sxlib200
+cp $1.gds ../../../magic/gds/sxlib200
+
+echo
+echo "# Write sxlib100 CIF file from Magic"
+magic -Tsx200 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif ostyle lambda=0.5um(sxlib100)
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/sxlib100/$1 ../../../magic/etc/sxlib/$1_sx100.ref
+cp $1.cif ../../../magic/cif/sxlib100
+cp $1.gds ../../../magic/gds/sxlib100
+
+echo
+echo "# Write sxlib013 CIF and GDS files from Magic"
+magic -Tsx013 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/sxlib013/$1 ../../../magic/etc/sxlib/$1_sx013.ref
+mv $1.cif ../../../magic/cif/sxlib013
+mv $1.gds ../../../magic/gds/sxlib013
+
+echo
+echo "# Convert Magic SPICE output to SPI subckt"
+../../../alliance/bin/spice2spi_013 $1 sxlib
+mv $1.spi ../../../magic/subckt/sxlib013
+cd $dir
+else
+  echo "# Usage ./makeallviews cell_name (without AP extension). cell_name supplied does not exist."
+  exit 1
+fi

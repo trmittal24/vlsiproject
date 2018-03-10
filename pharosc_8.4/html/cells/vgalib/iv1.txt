@@ -1,0 +1,4 @@
+There are five inverters with drive strengths from <B>x2</B> to
+<B>x12</B> and a P:N ratio of 1.44. The effort tables
+show the effort relative to the reference inverter in the vsclib,
+the <B>iv1v2x2</B>, which has a P:N ratio of 2.25.

@@ -1,0 +1,35 @@
+#!/bin/bash
+# allan4_vbe 2007-07-06:07h54 graham
+
+newdir=../../../alliance/makevbe/vxlib013
+vbedir=../../../alliance/vbe/vxlib013
+function=$(basename $PWD)
+
+if test ! -f "$function".pmd
+then
+  echo "# There is no function pmd file "$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+# list the pmd files and run the script on the ones actually there
+set $(ls -1 -x *.pmd ) 1>/dev/null
+shift                             # remove first pmd file $function.pmd
+pmd_names="$*"
+for pmd in $pmd_names
+do
+  cell=${pmd%.pmd}
+  ./makenewvbe $cell              # make $cell.bash file using makenewvbe
+done
+
+for pmd in $pmd_names
+do                                # copy $cell.bash files to the makevbe directory
+  cell=${pmd%.pmd}
+  cp $cell.bash $newdir
+done
+
+cd $newdir
+for pmd in $pmd_names
+do                                # go to the makevbe directory and execute $cell.bash to make the vbe file
+  cell=${pmd%.pmd}
+  ./$cell.bash > $vbedir/$cell.vbe
+done

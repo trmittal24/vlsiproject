@@ -1,0 +1,16 @@
+* Spice description of an2_x05
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:56:52
+* vsxlib 0.13um values
+.subckt an2_x05 a b vdd vss z
+M1a vdd   a     sig2  vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M1b sig2  b     vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M1z z     sig2  vdd   vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M2a sig3  a     vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M2b sig2  b     sig3  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M2z vss   sig2  z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C5  a     vss   0.558f
+C4  b     vss   0.635f
+C2  sig2  vss   0.694f
+C6  z     vss   0.656f
+.ends

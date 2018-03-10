@@ -1,0 +1,55 @@
+entity xrai21_x1 is
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      i2  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end xrai21_x1;
+
+architecture structural of xrai21_x1 is
+Component na2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      nq  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component xr2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal xr : bit;
+
+begin
+
+xr : xr2_x1
+   port map (
+      i0  => i0,
+      i1  => i1,
+      q   => xr,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : na2_x1
+   port map (
+      i0  => xr,
+      i1  => i2,
+      nq  => q,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

@@ -1,0 +1,11 @@
+#!/bin/bash
+# allmxn2 2007-08-29:12h14 graham
+
+./allmxn2_delay $1
+./allmxn2_vbe
+./allmxn2_lib
+./allmxn2_html
+if test -x allmxn2_xtra
+then
+  ./allmxn2_xtra
+fi

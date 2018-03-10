@@ -1,0 +1,1 @@
+4 cells with different drive strengths, each with a P/N ratio of about 2. The width of the N-transistor connected to pin <SPAN CLASS="boldred">b</SPAN> is designed to have a similar conductivity to the three series N-transistors in order to maintain a consistent output drive capability.

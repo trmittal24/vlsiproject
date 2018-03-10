@@ -1,0 +1,6 @@
+iv1v6x2    Prop   Ramp   Cap1   LE     LE     FO=4   FO=4
+# z timing; average characteristic_delay  9.106 ps  1.05
+# z timing; average FO4_delay             72.58 ps  1.04
+a_z_lh     40.7   2.11   5.45  1.378  1.065  1.260  1.036
+a_z_hl     30.9   1.15   5.83  0.752         0.811       
+

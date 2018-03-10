@@ -1,0 +1,11 @@
+#!/bin/bash
+# allnao2o22 2007-07-06:07h43 graham
+
+./allnao2o22_delay $1
+./allnao2o22_vbe
+./allnao2o22_lib
+./allnao2o22_html
+if test -x allnao2o22_xtra
+then
+  ./allnao2o22_xtra
+fi

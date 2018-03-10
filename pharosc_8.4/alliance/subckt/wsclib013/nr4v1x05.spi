@@ -1,0 +1,19 @@
+* Spice description of nr4v1x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:29:11
+* wsclib 0.13um values
+.subckt nr4v1x05 a b c d vdd vss z
+M1a vdd   a     1b    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M1b 1b    b     1c    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M1c 1c    c     1d    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M1d 1d    d     z     vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M2a vss   a     z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M2b z     b     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M2c vss   c     z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M2d z     d     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C6  a     vss   0.350f
+C5  b     vss   0.533f
+C4  c     vss   0.621f
+C3  d     vss   0.338f
+C2  z     vss   0.909f
+.ends

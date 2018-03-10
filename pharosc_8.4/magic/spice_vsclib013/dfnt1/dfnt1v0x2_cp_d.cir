@@ -1,0 +1,262 @@
+* cp_d hold time of dfnt1v0x2, 0.13um, Berkeley generic bsim3 params
+* dfnt1v0x2_cp_d.cir 2007-05-10:20h15 graham
+* FLOW
+* instantiate one subckt
+* for each clock transition from 20p to 1500p (4 in all)
+*   for each data transition from 20p to 1500p (4 in all)
+*     for each d-in and z-out combination (4 in all)
+*       until the timing increment has been reduced to 0.1ps
+*         start with tH=409.6ps and increase (if fail) or decrease (if pass)
+*       assign hold time to output vector
+* print output vectors (4x4) to screen and file
+*
+*    output_file=1   output_file=2   output_file=3   output_file=4
+*    _0_lh           _1_hl           _1_lh           _0_hl
+*    _______                 _____   _______                 _____
+* d         \_____   _______/               \_____   _______/
+*           ______          ______          ______          ______
+* cp ______/         ______/         ______/         ______/
+*             ____   ________        _____________
+* z  ________/               \____                   _____________
+*
+.include ../../../magic/subckt/vsclib013/spice_model.lib
+.include ../../../magic/subckt/vsclib013/dfnt1v0x2.spi
+.include ../../../magic/subckt/vsclib013/params.inc
+*
+x0  cp_0  d_0  vdd0 vss0  x0z  dfnt1v0x2
+*
+.nodeset v(x0:cn)=0.6 v(x0:ci)=0.6
+*
+cx0z  x0z  0 10.80f
+* 
+vdd0 vdd0 0 'vdd'
+vss0 0 vss0 'vss'
+*
+Vcp_0 cp_0 0 dc 0 pwl(0 0 100p 0 )
+Vd_0 d_0 0 dc 0 pwl(0 0 100p 0 )
+*
+
+.control
+  set width=136 height=500 numdgt=3 noprintscale nobreak noaskquit=1
+
+  set measure_point = 1500p
+  set max_timing_err = 2p
+  set max_timing_perc = 0.02
+  set input_threshold_rise = 0.5
+  set input_threshold_fall = 0.5
+  set output_threshold_rise = 0.5
+  set output_threshold_fall = 0.5
+  set cp_v1 = $vss
+  set cp_v2 = $vdd
+
+  let thoh1[15] = 0
+  let thol1[15] = 0
+  let thoh2[15] = 0
+  let thol2[15] = 0
+  let n = 0
+  foreach tran_cp 20p 200p 670p 1500p
+    let intran[n] = $tran_cp
+    let cp_lo = $measure_point -$tran_cp /2
+    let cp_hi = $measure_point +$tran_cp /2
+    set cp_input = ( 0 $cp_v1 "$&cp_lo" $cp_v1 "$&cp_hi" $cp_v2 )
+    let j = 0
+    foreach tran_d 20p 200p 670p 1500p
+      foreach output_file 1 2 3 4
+        if $output_file = 1
+          set d_v1 = $vss
+          set d_v2 = $vdd
+          set d_v3 = $vss
+          set inthresh = $input_threshold_fall
+          set z_v1 = $vss
+          set z_v2 = $vdd
+          set outhresh = $output_threshold_rise
+          set outfall = -1
+        end
+        if $output_file = 2
+          set d_v1 = $vdd
+          set d_v2 = $vss
+          set d_v3 = $vdd
+          set inthresh = $input_threshold_rise
+          set z_v1 = $vdd
+          set z_v2 = $vss
+          set outhresh = $output_threshold_fall
+          set outfall = 1
+        end
+        if $output_file = 3
+          set d_v1 = $vdd
+          set d_v2 = $vdd
+          set d_v3 = $vss
+          set inthresh = $input_threshold_rise
+          set z_v1 = $vdd
+          set z_v2 = $vdd
+          set outhresh = $output_threshold_fall
+          set outfall = 1
+        end
+        if $output_file = 4
+          set d_v1 = $vss
+          set d_v2 = $vss
+          set d_v3 = $vdd
+          set inthresh = $input_threshold_fall
+          set z_v1 = $vss
+          set z_v2 = $vss
+          set outhresh = $output_threshold_rise
+          set outfall = -1
+        end
+*
+*       set tP, the point where the cp waveform crosses its threshold
+*
+        let tP = cp_lo + $input_threshold_rise * $tran_cp
+
+        set functional = 1
+        let count = 0
+        set max_ho = 0
+        foreach ho 409.6p 409.6p 204.8p 102.4p 51.2p 25.6p 12.8p 6.4p 3.2p 1.6p 0.8p 0.4p 0.2p 0.1p 0.1p 0.1p 0.1p
+          let count = count + 1
+          if count = 1
+            let hold = $ho
+          else
+            if $functional = 1
+              let hold = hold - $ho
+            else
+              let hold = hold + $ho
+            end
+          end
+          let hold100x = hold * 1E12
+          if $max_ho < $ho
+            set max_ho = $ho
+          end
+          let d_lo = $measure_point +hold -$tran_d *$inthresh
+          let d_hi = $measure_point +hold +$tran_d *$inthresh
+          if d_lo < 0
+            echo # !? Error: hold time is less than -$measure_point ps
+            break
+          end
+          set d_input = ( 0 $d_v1 100p $d_v2 "$&d_lo" $d_v2 "$&d_hi" $d_v3 )
+          if $output_file < 3
+            set tstop = 2000p
+          else
+            set tstop = 3000p
+          end
+          alter @Vd_0[pwl] = [ $d_input ]
+          alter @Vcp_0[pwl] =[ $cp_input ]
+          tran $tstep $tstop
+          linearize
+*          if n = 0 and j = 3 and $output_file = 3
+*            plot v(cp_0) v(d_0) v(x0:n1) v(x0:n2) v(x0:n4) v(x0:zn) v(x0z)
+*          end
+
+          let tint = length(time)-1
+*          let simtime = time[tint]
+          let simpoints = length(time)-1
+*
+*         Check whether output switched or not
+*
+          let output_v = x0z[tint]
+          if $z_v2 lt $vdd *$outhresh and output_v gt $vdd *$outhresh
+            set functional = 0
+          else
+            if $z_v2 gt $vdd *$outhresh and output_v lt $vdd *$outhresh
+              set functional = 0
+            else
+              set functional = 1
+            end
+          end
+*
+*         measure delay from tP to x0z passing its threshold
+*
+          if $output_file < 3
+*         Output should switch. Measure its delay.
+            if $functional = 1
+              let m = simpoints
+              let int_m = length ( vector ( m ))
+              let k = 1
+              repeat 16
+                let k = k * 2
+                let lower_v = x0z[int_m-1]
+                let upper_v = x0z[int_m]
+                if $outfall * ( upper_v - $vdd*$outhresh ) <= 0
+                  if $outfall * ( lower_v - $vdd*$outhresh ) >= 0
+                    goto found_m
+                  else
+                    let m = m - simpoints / k
+                    let int_m = length ( vector ( m )) + 1
+                  end
+                else
+                  let m = m + simpoints / k
+                  let int_m = length ( vector ( m )) + 1
+                  if m > simpoints
+                    goto notfound_m
+                  end
+                end
+              end *repeat 16
+              label notfound_m
+              echo #Error: Failed to find output threshold ... setting m=1700p at cp transition = $tran_cp, d transition = $tran_d
+              echo #Error: Failed to find output threshold ... setting m=1700p at cp transition = $tran_cp, d transition = $tran_d >> dfnt1v0x2_cp_d.error
+              let m = simpoints * 1700/$measure_point
+              let int_m = length ( vector ( int_m )) + 1
+
+              label found_m
+              let tprop = time[int_m-1]+($vdd *$outhresh -lower_v)/(upper_v -lower_v)*(time[int_m]-time[int_m-1])-tP
+              let tprop100x = tprop * 1E12
+              if hold >= $max_ho
+                let ref_tprop = tprop
+              end
+
+              let timing_diff = abs( tprop - ref_tprop )
+              let timing_perc = timing_diff / ref_tprop
+              if timing_diff > $max_timing_err or timing_perc > $max_timing_perc
+                set functional = 0
+              end
+              if $output_file = 1
+*                echo "n= $&n ,j= $&j ,tran_cp= $tran_cp ,tran_d= $tran_d"
+                echo "Trying tH $&hold100x ps gives tRISE $&tprop100x ps"
+              else
+*                echo "n= $&n ,j= $&j ,tran_cp= $tran_cp ,tran_d= $tran_d"
+                echo "Trying tH $&hold100x ps gives tFALL $&tprop100x ps"
+              end
+            else
+*              echo "n= $&n ,j= $&j ,tran_cp= $tran_cp ,tran_d= $tran_d"
+              echo "Trying tH $&hold100x ps"
+            end
+          else
+*         Output should not switch from late input change
+*            echo "n= $&n ,j= $&j ,tran_cp= $tran_cp ,tran_d= $tran_d"
+            echo "Trying tH $&hold100x ps"
+          end *if $output_file < 3
+          if $functional = 1 and $ho = 0.1p
+            break
+          end
+        end *foreach ho
+        if $output_file = 1
+          let thoh1[4*j+n] = hold
+*          print hold
+        end
+        if $output_file = 2
+          let thol1[4*j+n] = hold
+*          print hold
+        end
+        if $output_file = 3
+          let thoh2[4*j+n] = hold
+*          print hold
+        end
+        if $output_file = 4
+          let thol2[4*j+n] = hold
+*          print hold
+        end
+        destroy all
+      end *foreach output_file
+      let j = j + 1
+    end *foreach tran_d
+    let n = n + 1
+  end *foreach tran_cp
+  print col intran thoh1[0,3] thoh1[4,7] thoh1[8,11] thoh1[12,15]
+  print col intran thoh1[0,3] thoh1[4,7] thoh1[8,11] thoh1[12,15] > dfnt1v0x2_cp_d_0_lh.delay
+  print col intran thoh2[0,3] thoh2[4,7] thoh2[8,11] thoh2[12,15]
+  print col intran thoh2[0,3] thoh2[4,7] thoh2[8,11] thoh2[12,15] > dfnt1v0x2_cp_d_1_lh.delay
+  print col intran thol1[0,3] thol1[4,7] thol1[8,11] thol1[12,15]
+  print col intran thol1[0,3] thol1[4,7] thol1[8,11] thol1[12,15] > dfnt1v0x2_cp_d_1_hl.delay
+  print col intran thol2[0,3] thol2[4,7] thol2[8,11] thol2[12,15]
+  print col intran thol2[0,3] thol2[4,7] thol2[8,11] thol2[12,15] > dfnt1v0x2_cp_d_0_hl.delay
+  rusage trantime
+.endc
+.end

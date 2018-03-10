@@ -1,0 +1,11 @@
+inputpin_list i0 i1 i2 i3
+outputpin_list nq
+i0 nq negative_unate when 001 010 011
+i0 nq non_unate when 010
+i1 nq negative_unate when 001 010 011
+i1 nq non_unate when 010
+i2 nq negative_unate when 010 100 110
+i2 nq non_unate when 100
+i3 nq negative_unate when 010 100 110
+i3 nq non_unate when 100
+nq logic_function ((i2+i3)*(i0+i1))'

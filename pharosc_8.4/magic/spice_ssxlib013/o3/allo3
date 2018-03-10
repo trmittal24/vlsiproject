@@ -1,0 +1,11 @@
+#!/bin/bash
+# allo3 2007-07-06:07h35 graham
+
+./allo3_delay $1
+./allo3_vbe
+./allo3_lib
+./allo3_html
+if test -x allo3_xtra
+then
+  ./allo3_xtra
+fi

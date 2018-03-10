@@ -1,0 +1,25 @@
+* Spice description of nao22_x4
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:30:07
+* sxlib 0.13um values
+.subckt nao22_x4 i0 i1 i2 nq vdd vss
+Mtr_00001 nq    sig2  vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00002 sig2  sig3  vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00003 sig3  i0    sig1  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00004 sig1  i1    sig3  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00005 vss   sig2  nq    vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00006 vss   i2    sig1  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00007 nq    sig2  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00008 vdd   sig2  nq    vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00009 vdd   sig3  sig2  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00010 sig3  i2    vdd   vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00011 vdd   i0    sig10 vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00012 sig10 i1    sig3  vdd p  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+C5  i0    vss   0.779f
+C6  i1    vss   0.598f
+C7  i2    vss   0.931f
+C8  nq    vss   0.871f
+C1  sig1  vss   0.219f
+C2  sig2  vss   0.853f
+C3  sig3  vss   1.147f
+.ends

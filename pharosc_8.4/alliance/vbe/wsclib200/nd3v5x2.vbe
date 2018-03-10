@@ -1,0 +1,38 @@
+ENTITY nd3v5x2 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 5120;   
+  CONSTANT cin_a         : NATURAL := 15;     
+  CONSTANT cin_b         : NATURAL := 15;     
+  CONSTANT cin_c         : NATURAL := 15;     
+  CONSTANT rdown_a_z     : NATURAL := 2940;   
+  CONSTANT rdown_b_z     : NATURAL := 2940;   
+  CONSTANT rdown_c_z     : NATURAL := 2940;   
+  CONSTANT rup_a_z       : NATURAL := 2660;   
+  CONSTANT rup_b_z       : NATURAL := 2660;   
+  CONSTANT rup_c_z       : NATURAL := 2660;   
+  CONSTANT tphl_a_z	 : NATURAL := 119;
+  CONSTANT tphl_b_z	 : NATURAL := 171;
+  CONSTANT tphl_c_z	 : NATURAL := 193;
+  CONSTANT tplh_c_z	 : NATURAL := 265;
+  CONSTANT tplh_b_z	 : NATURAL := 316;
+  CONSTANT tplh_a_z	 : NATURAL := 363;
+  CONSTANT transistors   : NATURAL := 9       
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  c	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nd3v5x2;
+
+ARCHITECTURE behaviour_data_flow OF nd3v5x2 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nd3v5x2"
+  SEVERITY WARNING;
+  z <= not (((a and b) and c)) after 1000 ps;
+END;

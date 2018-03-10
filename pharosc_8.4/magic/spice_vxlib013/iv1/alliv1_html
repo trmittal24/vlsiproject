@@ -1,0 +1,112 @@
+#!/bin/bash
+# alliv1_html 2007-07-06:07h56 graham
+
+newdir=../../../alliance/makevbe/vxlib013
+function=$(basename $PWD)
+cell_list=../cell_list.txt
+generic_library=$(basename ../../../html/cells/vxlib)
+date=$(date '+%d %b %Y' | tr 'a-z' 'A-Z')
+
+if test ! -f "$function".pmd
+then
+  echo "# There is no function pmd file "$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+#get previous and next functions for page links
+functions=$(grep '^' $cell_list | awk '{print $1}')
+i=0
+for this_function in $functions
+do
+  function_array[$i]=$this_function
+  let i=$i+1
+  function_array[$i]=${function_array[0]}
+done
+
+j=0
+for this_function in $functions
+do
+  if [ "$this_function" = "$function" ]
+  then
+    if [ "$j" -ne 0 ]
+    then
+      function_prev=${function_array[$j-1]}
+    else
+      function_prev=${function_array[$i-1]}
+    fi
+    function_next=${function_array[$j+1]}
+    break
+  fi
+  let j=$j+1
+done
+
+# write out html header
+./makenewhtml 0 $function_prev $function_next > "$function".html
+
+for out_pin in z
+do
+  ./makenewhtml $function $out_pin 0 >> "$function".html
+
+# run the script on files listed in cell_list.txt
+  pmd_names=$(grep "^ *$function " ../cell_list.txt | \
+    tr -s ' ' | \
+    sed 's/^ *[^ ][^ ]* //')
+  i=0
+# Write one line description for each cell
+  for pmd in $pmd_names
+  do
+    cell=${function}"_"${pmd}
+    let i=$i+1
+    ./makenewhtml $cell $out_pin 1 > "$cell"_1.html
+  done
+
+  for pmd in $pmd_names
+  do
+    cell=${function}"_"${pmd}
+    cat "$cell"_1.html >> "$function".html
+    rm "$cell"_1.html
+  done
+
+  cat >> "$function".html <<!!
+</TBODY>
+<TBODY>
+<TR><TD COLSPAN=11 CLASS="graphicsbox">
+<TABLE CLASS="graphics">
+!!
+done #for out_pin in z
+
+# Write effort table, schematic and layout graphics
+for pmd in $pmd_names
+do
+  cell=${function}"_"${pmd}
+  let i=$i+1
+  ./makenewhtml $cell $out_pin 2 > "$cell"_2.html
+done
+
+for pmd in $pmd_names
+do
+  cell=${function}"_"${pmd}
+  cat "$cell"_2.html >> "$function".html
+  rm "$cell"_2.html
+done
+cat >> "$function".html <<!!
+</TABLE></TD></TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD COLSPAN=11 CLASS="footer">
+!!
+
+echo "<SMALL>Web data book for the "$generic_library". V<SPAN CLASS=\"smallcaps\">dd</SPAN>=1.2V, T=27&deg;C," >> "$function".html
+echo "nominal process, generic 0.13um technology." >> "$function".html
+echo "&nbsp;&nbsp;Copyright &copy; 2005-2007 Graham Petley.&nbsp;&nbsp;"$date"</SMALL></TD>" >> "$function".html
+
+cat >> "$function".html <<!!
+</TR>
+</TBODY>
+</TABLE>
+</BODY>
+</HTML>
+!!
+
+cp "$function".html ../../../html/cells/vxlib/../vxlib013

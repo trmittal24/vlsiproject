@@ -1,0 +1,22 @@
+* Spice description of ao22_x4
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:37:06
+* ssxlib 0.13um values
+.subckt ao22_x4 i0 i1 i2 q vdd vss
+Mtr_00001 q     sig1  vss   vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00002 vss   sig1  q     vss n  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00003 vss   i2    sig2  vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+Mtr_00004 sig2  i1    sig1  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00005 sig1  i0    sig2  vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00006 q     sig1  vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00007 vdd   sig1  q     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+Mtr_00008 sig9  i1    sig1  vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+Mtr_00009 vdd   i0    sig9  vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+Mtr_00010 sig1  i2    vdd   vdd p  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C5  i0    vss   0.660f
+C4  i1    vss   0.708f
+C7  i2    vss   0.893f
+C6  q     vss   0.771f
+C1  sig1  vss   0.823f
+C2  sig2  vss   0.198f
+.ends

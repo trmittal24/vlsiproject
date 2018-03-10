@@ -1,0 +1,185 @@
+#!/bin/bash
+# makenewvbe 2007-07-06:07h43 graham
+
+# make a new vbe file from an existing one
+# usage makenewvbe fred   will use the vbe declarations in $dir and the
+#                         values from the fred_a_lh/hl.vbe files
+#
+# FLOW
+# write the cell.bash file header
+# for each input pin
+#   for each output pin
+#     for each value of timing_sense (negative_unate and/or positive_unate)
+#       for each of the states that the other input pins might have
+#         read rup and rdown from each of the .vbe files and sum them using the 4th input transition
+#         read the Prop delays from each of the .vbe files and sum them using the 4th input transition
+#         for each of the 5 most likely input transitions (nos. 3-7)
+#           read the input pin cap from the .vbe files and sum them
+#       average the Prop delays for each of the timing_sense values
+#       write the changed Prop values to cell.bash
+#     average rup and rdown over all values of timing_sense and other pin states
+#     write the new values of rup and rdown to cell.bash
+#   average the pin cap over all values of timing_sense, other pin states input and output pin transitions
+#   write this averaged pin cap to cell.bash
+# make cell.bash executable so that it can be run to make the new .vbe file for Alliance
+# 
+function=$(basename $PWD)
+
+if test $# -eq 0
+then
+  echo "# Usage ./makenewvbe cell_name. Please supply cell_name." 1>&2
+  exit 1
+fi
+
+# directory $vbedir has the manually created Alliance timing files for this lib
+# using ther .bash files from the original makevbe directory
+vbedir=$ALLIANCE_TOP/cells/sxlib
+newdir=$vbedir../../makevbe/sxlib013
+cell=$1
+date=$(date '+%Y-%m-%d:%Hh%M')
+owner=$(whoami)
+timestamp=$(echo "# "$cell".bash created using makenewvbe on "$date" by "$owner)
+load_cap=25
+
+echo "#!/bin/bash" > $cell.bash
+echo $timestamp >> $cell.bash
+echo "cell="$cell >> $cell.bash
+echo >> $cell.bash
+echo "cat "$vbedir"/"$cell".vbe | \\" >> $cell.bash
+
+# check if an inverting gate and flag if single input pin gate
+single_pin=-1;
+for pin in i0 i1 i2 i3
+do
+  let single_pin=$single_pin+1
+done
+
+op=0
+for out_pin in nq
+do
+  tpdx1000[$op]=0; tpd_iter[$op]=0; rupx1[$op]=0; rdownx1[$op]=0; r_iter[$op]=0
+  let "op=op+1"
+done
+for pin in i0 i1 i2 i3
+do
+  cap1=0; cap2=0; op=0
+  for out_pin in nq
+  do
+    unate_values=$(grep "^$pin" "$function".pmd | tr -s ' ' | \
+      sed "s/^$pin\ //" | grep "^$out_pin" | cut -f2 -d' ' | \
+      grep 'unate' | grep -v 'non_unate' | awk '{print $1}' |
+    while read line
+    do
+      echo -e $line" \c"
+    done )
+    unate_values=$(echo $unate_values | tr -s ' ')
+
+#   repeat once if one timing_sense otherwise twice
+    rup=0; rdown=0; l=0
+    for timing_sense in $unate_values
+    do
+#     define timing arcs based on value of timing_sense
+      if [ "$timing_sense" = negative_unate ]
+      then
+        timing_arc1=lh
+        timing_arc2=hl
+      fi
+      if [ "$timing_sense" = positive_unate ]
+      then
+        timing_arc1=hh
+        timing_arc2=ll
+      fi
+
+#     calculate the average pin capacitance
+      other_pin_state=$(grep "^$pin" "$function".pmd | tr -s ' ' | sed  "s/^$pin\ //g" | \
+        grep "^$out_pin" | sed "s/^$out_pin\ //g" | \
+        grep "^$timing_sense" | sed "s/^$timing_sense\ //g" | \
+        grep '^when' | sed 's/^when\ //g')
+      if [ "$other_pin_state" = "" ]
+      then
+        other_pin_state=0
+      fi
+
+#     get value of other pins when this one is toggled
+      m=0; tplh=0; tphl=0; tphh=0; tpll=0
+      for k in $other_pin_state
+      do
+#       adjust $k if there is only one input
+        if [ "$single_pin" -eq 0 ]
+        then
+          n=
+        else
+          n="$k"_
+        fi
+        let l=$l+1 m=$m+1
+        let rup=$rup+$[ $(grep '^3' "$cell"_"$pin"_"$out_pin"_"$n$timing_arc1".vbe | awk '{printf "%5d\n", $4*10}') ]
+        let rdown=$rdown+$[ $(grep '^3' "$cell"_"$pin"_"$out_pin"_"$n$timing_arc2".vbe | awk '{printf "%5d\n", $4*10}') ]
+        if [ "$timing_sense" = negative_unate ]
+        then
+          tplh=$tplh+$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_"$n"lh.vbe | awk '{printf "%5d\n", $3*10000000000000}')) ]
+          tphl=$tphl+$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_"$n"hl.vbe | awk '{printf "%5d\n", $3*10000000000000}')) ]
+        fi
+        if [ "$timing_sense" = positive_unate ]
+        then
+          tphh=$tphh+$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_"$n"hh.vbe | awk '{printf "%5d\n", $3*10000000000000}')) ]
+          tpll=$tpll+$[ ($(grep '^3' "$cell"_"$pin"_"$out_pin"_"$n"ll.vbe | awk '{printf "%5d\n", $3*10000000000000}')) ]
+        fi
+#       calculate cap as average of the cap measured on the 3rd to 7th transitions
+        new_cap1=0; new_cap2=0; j=0
+        for i in 2 3 4 5 6
+        do
+          let j=$j+1
+#         sum the cap values for each considered input transition and other pin state
+          let new_cap1=$new_cap1+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_"$n$timing_arc1".vbe | awk '{printf "%5d\n", $5*1000000000000000000 }') ]
+          let new_cap2=$new_cap2+$[ $(grep "^$i" "$cell"_"$pin"_"$out_pin"_"$n$timing_arc2".vbe | awk '{printf "%5d\n", $5*1000000000000000000 }') ]
+        done
+        if [ "$new_cap1" -gt "$cap1" ]
+        then
+          let cap1=$new_cap1
+        fi
+        if [ "$new_cap2" -gt "$cap2" ]
+        then
+          let cap2=$new_cap2
+        fi
+      done
+      if [ "$timing_sense" = negative_unate ]
+      then
+        let "tpr=(tplh+5*m)/m/10"    
+        let "tpf=(tphl+5*m)/m/10"
+      fi
+      if [ "$timing_sense" = positive_unate ]
+      then
+        let "tpr=(tphh+5*m)/m/10"    
+        let "tpf=(tpll+5*m)/m/10"
+      fi
+      let "tpd_iter[$op]=tpd_iter[$op]+1"
+      let "tpdx1000[$op]=(2*tpdx1000[$op]*(tpd_iter[$op]-1)+2000*tpr+2000*tpf+tpd_iter[$op])/tpd_iter[$op]/2"
+      echo "../../../alliance/bin/chfield tp"$timing_arc1"_"$pin"_"$out_pin" ${tpr} | \\" >> $cell.bash
+      echo "../../../alliance/bin/chfield tp"$timing_arc2"_"$pin"_"$out_pin" ${tpf} | \\" >> $cell.bash
+    done #for timing_sense
+
+#   single value of drive strength is averaged over other pin states and timing_senses
+    let "rup=(rup+50*l)/l/100*10"
+    let "rdown=(rdown+50*l)/l/100*10"
+    let "r_iter[$op]=r_iter[$op]+1"
+    let "rupx1[$op]=(2*rupx1[$op]*(r_iter[$op]-1)+2*rup+r_iter[$op])/r_iter[$op]/2"
+    let "rdownx1[$op]=(2*rdownx1[$op]*(r_iter[$op]-1)+2*rdown+r_iter[$op])/r_iter[$op]/2"
+    echo "../../../alliance/bin/chfield rup_"$pin"_"$out_pin" "$rup" | \\" >> $cell.bash
+    echo "../../../alliance/bin/chfield rdown_"$pin"_"$out_pin" "$rdown" | \\" >> $cell.bash
+
+    let "op=op+1"
+  done #for out_pin in nq
+# single cap value is averaged over transitions, states and timing_senses
+  let "cin=(cap1+cap2+2000*j)/j/2000"
+  echo "../../../alliance/bin/chfield cin_"$pin" "$cin" | \\" >> $cell.bash
+
+done #for pin in i0 i1 i2 i3
+op=0
+for out_pin in nq
+do
+  let "tpd=(tpdx1000[$op]+rupx1[$op]*load_cap+rdownx1[$op]*load_cap+1000)/2000"
+  echo "sed \"s/^\\( *\\)\\($out_pin\\)\\(.*\\) after  *[0-9][0-9]*  *ps;/\\1\\2\\3 after "$tpd" ps;/\" | \\" >> $cell.bash
+  let "op=op+1"
+done
+echo cat >> $cell.bash
+chmod 755 $cell.bash

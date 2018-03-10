@@ -1,0 +1,35 @@
+an2 x05 x1 x2
+an3 x1 x2
+an4 x1 x2 x3
+aoi21 x05 x1 x2
+aoi22 x05 x1 x2
+aon21 x1 x2
+aon22 x1 x2
+bf1 w05 y05 x1 w2 y1 x2 y2 x4 x8
+cgi2 x05 x1 x2
+cgi2a x05 x1 x2
+cgn2 x1 x2 x3 x4
+ha2 x2
+iv1 x05 x1 w2 x2 y2 x3 x4 x8
+mxi2 x05 x1
+nd2 x05 x1 x2 x4
+nd2a x1 x2
+nd2ab x1 x2
+nd3 x05 x1 x2 x4
+nd4 x05 x1 x2 x3
+nr2 x05 x1 x2
+nr2a x05 x1
+nr3 x05 x1
+nr4 x05 x1
+oai21 x05 x1 x2
+oai22 x05 x1 x2
+oan21 x1 x2
+oan22 x1 x2
+or2 x1
+or3 x1
+or4 x1
+xaoi21 x05 x1
+xaon21 x05 x1
+xaon22 x05 x1
+xnr2 x05 x1
+xor2 x05 x1

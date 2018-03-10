@@ -1,0 +1,96 @@
+#!/bin/bash
+
+# Script which extends the AB 8 lambda at the top
+# and 8 lambda at the bottom and fills the extra space
+# with CALU1 and ALU1.
+
+cell=adder4_ver.ap
+
+first_row_orient=$(sed -n '/^I  *[^,][^,]*,0/ p' $cell | \
+  cut -f5 -d,)
+
+old_supply=0
+for orient in $first_row_orient
+do
+  case $orient in
+  NOSYM)
+    supply=vss
+    ;;
+  SYM_X)
+    supply=vss
+    ;;
+  SYM_Y)
+    supply=vdd
+    ;;
+  SYMXY)
+    supply=vdd
+    ;;
+  *)
+    supply=bad
+    ;;
+  esac
+  if [ "$old_supply" != 0 ]
+  then
+    if [ "$old_supply" != "$supply" ]
+    then
+      echo "# Warning !! The instances in the first row are not all" 1>&2
+      echo "#   aligned in the same direction. Exiting." 1>&2
+      exit 1
+    fi
+    if [ "$old_supply" = bad -o "$supply" = bad ]
+    then
+      echo "# Warning !! There is an illegal cell orientation in the" 1>&2
+      echo "#   first row. Exiting." 1>&2
+      exit 1
+    fi
+  fi
+  old_supply=$supply
+done
+south_supply=$supply
+
+top_row=$(grep '^I ' $cell | cut -f2 -d, | sort -nur | head -1)
+
+last_row_orient=$(sed -n "/^I  *[^,][^,]*,$top_row/ p" $cell | \
+  cut -f5 -d,)
+
+old_supply=0
+for orient in $last_row_orient
+do
+  case $orient in
+  NOSYM)
+    supply=vdd
+    ;;
+  SYM_X)
+    supply=vdd
+    ;;
+  SYM_Y)
+    supply=vss
+    ;;
+  SYMXY)
+    supply=vss
+    ;;
+  *)
+    supply=bad
+    ;;
+  esac
+  if [ "$old_supply" != 0 ]
+  then
+    if [ "$old_supply" != "$supply" ]
+    then
+      echo "# Warning !! The instances in the last row are not all" 1>&2
+      echo "#   aligned in the same direction. Exiting." 1>&2
+      exit 1
+    fi
+    if [ "$old_supply" = bad -o "$supply" = bad ]
+    then
+      echo "# Warning !! There is an illegal cell orientation in the" 1>&2
+      echo "#   last row. Exiting." 1>&2
+      exit 1
+    fi
+  fi
+  old_supply=$supply
+done
+north_supply=$supply
+
+echo $south_supply $north_supply
+

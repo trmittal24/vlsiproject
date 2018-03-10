@@ -1,0 +1,19 @@
+* Spice description of nr3_x1
+* Spice driver version 134999461
+* Date 22/07/2007 at 10:59:33
+* vsxlib 0.13um values
+.subckt nr3_x1 a b c vdd vss z
+M1  sig7  a     vdd   vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M2  sig6  b     sig7  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M3  z     c     sig6  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M4  sig9  c     z     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M5  6     b     sig9  vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M6  vdd   a     6     vdd p  L=0.12U  W=2.145U AS=0.568425P AD=0.568425P PS=4.82U   PD=4.82U
+M7  z     a     vss   vss n  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M8  vss   b     z     vss n  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+M9  z     c     vss   vss n  L=0.12U  W=0.825U AS=0.218625P AD=0.218625P PS=2.18U   PD=2.18U
+C3  a     vss   1.290f
+C5  b     vss   0.798f
+C4  c     vss   0.719f
+C1  z     vss   1.475f
+.ends

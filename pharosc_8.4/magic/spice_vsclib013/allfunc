@@ -1,0 +1,189 @@
+#!/bin/bash
+#  All library cell are simulated to check their functionality
+olddir=$PWD
+rm -f */*func.error
+cd iv1
+./alliv1_func
+cd $olddir
+cd an2
+./allan2_func
+cd $olddir
+cd an3
+./allan3_func
+cd $olddir
+cd an4
+./allan4_func
+cd $olddir
+cd aoi21
+./allaoi21_func
+cd $olddir
+cd aoi112
+./allaoi112_func
+cd $olddir
+cd aoi21a2
+./allaoi21a2_func
+cd $olddir
+cd aoi21a2b
+./allaoi21a2b_func
+cd $olddir
+cd aoi21b
+./allaoi21b_func
+cd $olddir
+cd aoi211
+./allaoi211_func
+cd $olddir
+cd aoi22
+./allaoi22_func
+cd $olddir
+cd aoi31
+./allaoi31_func
+cd $olddir
+cd aon21
+./allaon21_func
+cd $olddir
+cd aon21b
+./allaon21b_func
+cd $olddir
+cd bf1
+./allbf1_func
+cd $olddir
+cd bsi2
+./allbsi2_func
+cd $olddir
+cd cgi2
+./allcgi2_func
+cd $olddir
+cd cgi2ab
+./allcgi2ab_func
+cd $olddir
+cd cgi2b
+./allcgi2b_func
+cd $olddir
+cd cgi2c
+./allcgi2c_func
+cd $olddir
+cd dfnt1
+./alldfnt1_func
+cd $olddir
+cd dly1
+./alldly1_func
+cd $olddir
+cd dly2
+./alldly2_func
+cd $olddir
+cd ha2
+./allha2_func
+cd $olddir
+cd lant1
+./alllant1_func
+cd $olddir
+cd mxi2
+./allmxi2_func
+cd $olddir
+cd nd2
+./allnd2_func
+cd $olddir
+cd nd2ab
+./allnd2ab_func
+cd $olddir
+cd nd2a
+./allnd2a_func
+cd $olddir
+cd nd3
+./allnd3_func
+cd $olddir
+cd nd3a
+./allnd3a_func
+cd $olddir
+cd nd3ab
+./allnd3ab_func
+cd $olddir
+cd nd4
+./allnd4_func
+cd $olddir
+cd nr2
+./allnr2_func
+cd $olddir
+cd nr2a
+./allnr2a_func
+cd $olddir
+cd nr3
+./allnr3_func
+cd $olddir
+cd nr3a
+./allnr3a_func
+cd $olddir
+cd nr3ab
+./allnr3ab_func
+cd $olddir
+cd nr4
+./allnr4_func
+cd $olddir
+cd oai21
+./alloai21_func
+cd $olddir
+cd oai21a2
+./alloai21a2_func
+cd $olddir
+cd oai21a2b
+./alloai21a2b_func
+cd $olddir
+cd oai21b
+./alloai21b_func
+cd $olddir
+cd oai211
+./alloai211_func
+cd $olddir
+cd oai22
+./alloai22_func
+cd $olddir
+cd oai23a
+./alloai23a_func
+cd $olddir
+cd oai31
+./alloai31_func
+cd $olddir
+cd oan21
+./alloan21_func
+cd $olddir
+cd oan21b
+./alloan21b_func
+cd $olddir
+cd or2
+./allor2_func
+cd $olddir
+cd or3
+./allor3_func
+cd $olddir
+cd or4
+./allor4_func
+cd $olddir
+cd xaoi21
+./allxaoi21_func
+cd $olddir
+cd xaon21
+./allxaon21_func
+cd $olddir
+cd xnai21
+./allxnai21_func
+cd $olddir
+cd xnr2
+./allxnr2_func
+cd $olddir
+cd xnr3
+./allxnr3_func
+cd $olddir
+cd xooi21
+./allxooi21_func
+cd $olddir
+cd xoon21
+./allxoon21_func
+cd $olddir
+cd xor2
+./allxor2_func
+cd $olddir
+cd xor3
+./allxor3_func
+cd $olddir
+echo "# Listing error files"
+ls -l */*func.error 2>/dev/null

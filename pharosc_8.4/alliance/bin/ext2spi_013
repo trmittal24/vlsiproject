@@ -1,0 +1,48 @@
+#!/bin/bash
+#
+# 17-OCT-03 GP First version, Special for 0.13um techno with length adjustment
+#              of output transistors to 2.3636um.
+#
+#/usr/local/magic-7.1/bin/ext2spice -f spice3 -cthresh=0.1 -rthresh=1 $1
+#
+# This ext2spice gives ad and ps on one of the transistor s/d regions connected
+# to the node. The absence of a cthresh and rthresh option means that no caps are
+# produced for DSM technologies
+# 
+#/usr/local/magic-7.1/bin/ext2spice -f spice3 $1
+#
+# the -d switch distributes the ad and ps over all transistor s/d areas
+#
+#/usr/local/magic-7.1/bin/ext2spice -d -f spice3 $1
+# This ext2spice gives ad and ps on one of the transistor s/d regions connected
+# to the node. The absence of a cthresh and rthresh option means that no caps are
+# produced for DSM technologies
+#/usr/local/magic/bin-7.2/ext2spice -f spice3 $1
+#
+# the -d switch distributes the ad and ps over all transistor s/d areas
+#
+#/usr/local/magic/bin-7.2/ext2spice -d -f spice3 $1
+#
+# This distributes the ad and ps over all transistor s/d regions, and gives small
+# fixed caps on nodes for DSM technos. But the -d switch also causes an inconvenient
+# **FLOATING message to appear on input nodes
+# If cap threshold is set to 0.1fF, then the output precision needs to be set to
+# 2 decimal places with the -y switch
+
+#/usr/local/magic/bin-7.2/ext2spice -c 0.1 -r 1 -d -f spice3 $1
+/usr/local/magic/bin-7.2/ext2spice -c 0.001 -r 1 -y 3 -d -f spice3 $1
+
+sed 's/GND/vss/g' <$1.spice | \
+grep -v '^C.*vss.*vss' | \
+grep -v '^C.*vdd.*vss' | \
+sed 's/\*\*FLOATING//g' | \
+sed 's/fF/f/g' | \
+sed 's/fet\ /\ /g' | \
+awk '$1 ~ /^m/ {printf "%-5s %-4s %-4s %-4s %-4s %-2s %-8s %-8s", $1, $2, $3, $4, $5, $6, $7, $8}
+$1 !~ /^m/ {print}' | \
+sed s/+//g | \
+sed s/^m../m/g | \
+awk '{printf "%-3s %-4s %-4s %-4s %-4s %-2s %-8s %-8s %-12s %-12s %-12s %-12s\n", $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12}' | \
+sed 's/l=2u/l=2.3636u/g' > $1.spi
+sort -m -o $1.spi $1.spi /home/dev/magic/etc/$1.subckt
+echo ".ends" >> $1.spi

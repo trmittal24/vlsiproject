@@ -1,0 +1,11 @@
+#!/bin/bash
+
+old_height=50
+new_height=100
+
+cp -p ../sxlib200/$1.bash .
+awk -v "FS= " '/^chfield  *area / {printf "%1s %1s %1s %1s %1s\n", $1,$2,$3*'$new_height'/'$old_height',$4,$5 }
+!/^chfield  *area / {print}' $1.bash > $$temp
+
+mv -f $$temp $1.bash
+/bin/chmod 755 $1.bash

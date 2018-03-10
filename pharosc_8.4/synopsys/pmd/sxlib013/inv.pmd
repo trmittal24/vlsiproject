@@ -1,0 +1,8 @@
+inputpin_list i
+outputpin_list nq
+i nq negative_unate
+nq logic_function i'
+lower_lh_pct 8
+upper_lh_pct 92
+lower_hl_pct 8
+upper_hl_pct 92

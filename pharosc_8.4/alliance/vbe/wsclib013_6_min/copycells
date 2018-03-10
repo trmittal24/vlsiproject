@@ -1,0 +1,83 @@
+#!/bin/bash
+
+rm -f *.vbe
+
+cp -p ../wsclib013_6/an2v0x05.vbe .
+cp -p ../wsclib013_6/an3v0x05.vbe .
+cp -p ../wsclib013_6/an3v6x05.vbe .
+cp -p ../wsclib013_6/an4v0x05.vbe .
+cp -p ../wsclib013_6/aoi112v0x05.vbe .
+cp -p ../wsclib013_6/aoi211v0x05.vbe .
+cp -p ../wsclib013_6/aoi21a2bv0x05.vbe .
+cp -p ../wsclib013_6/aoi21a2v0x05.vbe .
+cp -p ../wsclib013_6/aoi21bv0x05.vbe .
+cp -p ../wsclib013_6/aoi21v0x05.vbe .
+cp -p ../wsclib013_6/aoi22v0x05.vbe .
+cp -p ../wsclib013_6/aoi31v0x05.vbe .
+cp -p ../wsclib013_6/aon21bv0x05.vbe .
+cp -p ../wsclib013_6/aon21v0x05.vbe .
+cp -p ../wsclib013_6/bf1v0x05.vbe .
+cp -p ../wsclib013_6/cgi2abv0x05.vbe .
+cp -p ../wsclib013_6/cgi2bv0x05.vbe .
+cp -p ../wsclib013_6/cgi2cv0x05.vbe .
+cp -p ../wsclib013_6/cgi2v0x05.vbe .
+cp -p ../wsclib013_6/dfnt1v0x2.vbe .
+cp -p ../wsclib013_6/iv1v0x05.vbe .
+cp -p ../wsclib013_6/lant1v0x05.vbe .
+cp -p ../wsclib013_6/mxi2v0x05.vbe .
+cp -p ../wsclib013_6/mxn2v0x05.vbe .
+cp -p ../wsclib013_6/nd2av0x05.vbe .
+cp -p ../wsclib013_6/nd2v0x05.vbe .
+cp -p ../wsclib013_6/nd3abv0x05.vbe .
+cp -p ../wsclib013_6/nd3av0x05.vbe .
+cp -p ../wsclib013_6/nd3v0x05.vbe .
+cp -p ../wsclib013_6/nd4v0x05.vbe .
+cp -p ../wsclib013_6/nr2av1x05.vbe .
+cp -p ../wsclib013_6/nr2v0x05.vbe .
+cp -p ../wsclib013_6/nr3abv0x05.vbe .
+cp -p ../wsclib013_6/nr3av0x05.vbe .
+cp -p ../wsclib013_6/nr3v0x05.vbe .
+cp -p ../wsclib013_6/nr4v1x05.vbe .
+cp -p ../wsclib013_6/oai211v0x05.vbe .
+cp -p ../wsclib013_6/oai21a2bv0x05.vbe .
+cp -p ../wsclib013_6/oai21a2v0x05.vbe .
+cp -p ../wsclib013_6/oai21bv0x05.vbe .
+cp -p ../wsclib013_6/oai21v0x05.vbe .
+cp -p ../wsclib013_6/oai22v0x05.vbe .
+cp -p ../wsclib013_6/oai23av0x05.vbe .
+cp -p ../wsclib013_6/oai31v0x05.vbe .
+cp -p ../wsclib013_6/oan21bv0x05.vbe .
+cp -p ../wsclib013_6/oan21v0x05.vbe .
+cp -p ../wsclib013_6/or2v0x05.vbe .
+cp -p ../wsclib013_6/or3v4x05.vbe .
+cp -p ../wsclib013_6/or4v4x05.vbe .
+cp -p ../wsclib013_6/rowend_x0.vbe .
+cp -p ../wsclib013_6/tie_x0.vbe .
+cp -p ../wsclib013_6/vddtie.vbe .
+cp -p ../wsclib013_6/vfeed1.vbe .
+cp -p ../wsclib013_6/vfeed2.vbe .
+cp -p ../wsclib013_6/vfeed3.vbe .
+cp -p ../wsclib013_6/vfeed4.vbe .
+cp -p ../wsclib013_6/vfeed5.vbe .
+cp -p ../wsclib013_6/vfeed6.vbe .
+cp -p ../wsclib013_6/vfeed7.vbe .
+cp -p ../wsclib013_6/vfeed8.vbe .
+cp -p ../wsclib013_6/vsstie.vbe .
+cp -p ../wsclib013_6/xaoi21v0x05.vbe .
+cp -p ../wsclib013_6/xaon21v0x05.vbe .
+cp -p ../wsclib013_6/xnai21v2x05.vbe .
+cp -p ../wsclib013_6/xnr2v0x05.vbe .
+cp -p ../wsclib013_6/xnr3v1x05.vbe .
+cp -p ../wsclib013_6/xooi21v0x05.vbe .
+cp -p ../wsclib013_6/xoon21v0x05.vbe .
+cp -p ../wsclib013_6/xor2v0x05.vbe .
+cp -p ../wsclib013_6/xor3v1x05.vbe .
+
+# Bug in BOOG means that the latch and flop sizes have to be the same
+
+sed -i 's/  CONSTANT area          : NATURAL := 6400;/  CONSTANT area          : NATURAL := 11520;/' lant1v0x05.vbe
+
+ls -1 *.vbe | sed 's/\.vbe/ C/' > WSCLIB013_6_MIN
+ls -1 rowend*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> WSCLIB013_6_MIN
+ls -1 tie*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> WSCLIB013_6_MIN
+ls -1 vfeed*.vbe | sed 's/\(.*\)\.vbe/\1 F/' >> WSCLIB013_6_MIN

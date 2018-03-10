@@ -1,0 +1,23 @@
+* Spice description of xooi21v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:39:29
+* wsclib 0.13um values
+.subckt xooi21v0x05 a1 a2 b vdd vss z
+M01 vdd   a1    n2    vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M02 vss   a1    an    vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 n2    a2    an    vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M04 an    a2    vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 an    b     z     vdd p  L=0.12U  W=1.32U  AS=0.3498P   AD=0.3498P   PS=3.17U   PD=3.17U
+M06 bn    b     vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M07 vss   b     bn    vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M08 z     an    10    vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M09 bn    an    z     vss n  L=0.12U  W=0.385U AS=0.102025P AD=0.102025P PS=1.3U    PD=1.3U
+M10 10    bn    vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M11 z     bn    an    vss n  L=0.12U  W=0.77U  AS=0.20405P  AD=0.20405P  PS=2.07U   PD=2.07U
+C7  a1    vss   0.417f
+C6  a2    vss   0.466f
+C3  an    vss   0.776f
+C5  b     vss   0.788f
+C2  bn    vss   0.863f
+C1  z     vss   0.727f
+.ends

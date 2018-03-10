@@ -1,0 +1,55 @@
+entity xaoi21v0x4 is
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end xaoi21v0x4;
+
+architecture structural of xaoi21v0x4 is
+Component nd2v0x4
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component xor2v0x4
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal nd : bit;
+
+begin
+
+nd : nd2v0x4
+   port map (
+      a   => a1,
+      b   => a2,
+      z   => nd,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : xor2v0x4
+   port map (
+      a   => nd,
+      b   => b,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

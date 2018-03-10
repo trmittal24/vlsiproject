@@ -1,0 +1,16 @@
+* Spice description of no3_x1
+* Spice driver version 134999461
+* Date 31/05/2007 at 10:38:36
+* ssxlib 0.13um values
+.subckt no3_x1 i0 i1 i2 nq vdd vss
+Mtr_00001 vss   i0    nq    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00002 nq    i2    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00003 nq    i1    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+Mtr_00004 vdd   i2    sig8  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00005 sig6  i1    nq    vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+Mtr_00006 sig8  i0    sig6  vdd p  L=0.12U  W=2.09U  AS=0.55385P  AD=0.55385P  PS=4.71U   PD=4.71U
+C3  i0    vss   0.769f
+C4  i1    vss   0.761f
+C5  i2    vss   0.884f
+C1  nq    vss   1.042f
+.ends

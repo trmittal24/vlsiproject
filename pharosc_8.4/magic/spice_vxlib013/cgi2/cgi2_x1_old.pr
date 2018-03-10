@@ -1,0 +1,9 @@
+cgi2_x1    Prop   Ramp   Cap1  Logical Effort
+# z timing; characteristic_delay 28.5 ps
+a_z_lh     87.7   2.99  12.39  3.465
+a_z_hl     56.8   2.08  12.26  2.774
+b_z_lh     82.2   3.02  13.83  3.913
+b_z_hl     57.9   2.09  13.74  3.123
+c_z_lh     67.2   3.01   7.48  2.115
+c_z_hl     50.8   2.07   7.48  1.675
+

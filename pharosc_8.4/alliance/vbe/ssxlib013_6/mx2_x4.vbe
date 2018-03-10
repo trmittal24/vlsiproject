@@ -1,0 +1,40 @@
+ENTITY mx2_x4 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 10000;
+  CONSTANT cin_cmd       : NATURAL := 14;     
+  CONSTANT cin_i0        : NATURAL := 10;     
+  CONSTANT cin_i1        : NATURAL := 10;     
+  CONSTANT rdown_cmd_q   : NATURAL := 640;    
+  CONSTANT rdown_i0_q    : NATURAL := 640;    
+  CONSTANT rdown_i1_q    : NATURAL := 640;    
+  CONSTANT rup_cmd_q     : NATURAL := 770;    
+  CONSTANT rup_i0_q      : NATURAL := 780;    
+  CONSTANT rup_i1_q      : NATURAL := 770;    
+  CONSTANT tphh_i0_q     : NATURAL := 176;    
+  CONSTANT tphh_i1_q     : NATURAL := 160;    
+  CONSTANT tphl_cmd_q    : NATURAL := 232;    
+  CONSTANT tpll_i0_q     : NATURAL := 217;    
+  CONSTANT tpll_i1_q     : NATURAL := 221;    
+  CONSTANT tphh_cmd_q    : NATURAL := 147;    
+  CONSTANT tplh_cmd_q    : NATURAL := 209;    
+  CONSTANT tpll_cmd_q    : NATURAL := 194;    
+  CONSTANT transistors	 : NATURAL := 14
+);
+PORT (
+  cmd	 : in  BIT;
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  q	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END mx2_x4;
+
+ARCHITECTURE behaviour_data_flow OF mx2_x4 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on mx2_x4"
+  SEVERITY WARNING;
+  q <= ((i1 and cmd) or (not (cmd) and i0)) after 212 ps;
+END;

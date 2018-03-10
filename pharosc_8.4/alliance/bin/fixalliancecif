@@ -1,0 +1,30 @@
+#!/bin/bash
+# Remove 4N labels from CIF file
+# Convert 4X labels (which are not visualised in Dreal) to 4N labels
+
+if [ "$#" -eq 0 ]
+then
+  echo "# Usage: fixalliancecif cell" 1>&2
+  echo "#" 1>&2
+  echo "#   No file given. Please check." 1>&2
+  exit 1
+fi
+
+if test -f $1.cif
+then
+  cell=$1
+else
+  echo "# Usage: fixalliancecif cell" 1>&2
+  echo "#" 1>&2
+  echo "#   The cell name supplied "$1".cif does not exist. Please check." 1>&2
+  exit 1
+fi
+
+grep -v '^4N ' $cell.cif | \
+sed 's/^4X  *\([^ ][^ ]*\)  *[^ ][^ ]*  *\([^ ][^ ]*  *[^ ][^ ]*\)  *[^ ][^ ]*  *[^ ][^ ]*/4N\ \1\ \2;/g' | \
+sed 's/^L/L\ /g' | \
+sed 's/^B/B\ /g' | \
+sed 's/^C/C\ /g' | \
+sed 's/^DS/DS\ /g' > $$temp
+
+mv -f $$temp $cell.cif

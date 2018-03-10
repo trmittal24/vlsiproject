@@ -1,0 +1,6 @@
+#!/bin/bash
+# usage: makevbe_vsclib013 xor2v0x1 > $$.temp; cat $$.temp > aoi21v0x05.vbe; rm -f $$.temp
+# takes data from directory makevbe/vsclib013
+# GP 14-NOV-03 Copied from makevbe_vsclib200
+
+bash ../../makevbe/vsclib013/$1.bash

@@ -1,0 +1,6 @@
+inputpin_list a b c
+outputpin_list z
+a z positive_unate when 11
+b z positive_unate when 11
+c z positive_unate when 11
+z logic_function (a*b*c)

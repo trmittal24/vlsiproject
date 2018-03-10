@@ -1,0 +1,19 @@
+* Spice description of an3v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  8:57:41
+* wsclib 0.13um values
+.subckt an3v0x05 a b c vdd vss z
+M01 08    a     vdd   vdd p  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M02 n1    a     vss   vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M03 vdd   b     08    vdd p  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M04 sig6  b     n1    vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M05 08    c     vdd   vdd p  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M06 08    c     sig6  vss n  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M07 vdd   08    z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 vss   08    z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C4  08    vss   0.962f
+C5  a     vss   0.336f
+C7  b     vss   0.437f
+C8  c     vss   0.428f
+C3  z     vss   0.639f
+.ends

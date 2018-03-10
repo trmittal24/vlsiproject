@@ -1,0 +1,1 @@
+Single stage 2-I/P NAND gates. 4 drive strengths with a P/N ratio of 2.

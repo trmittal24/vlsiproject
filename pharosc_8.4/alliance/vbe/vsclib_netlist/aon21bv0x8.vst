@@ -1,0 +1,56 @@
+entity aon21bv0x8 is
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end aon21bv0x8;
+
+architecture structural of aon21bv0x8 is
+
+Component nd2v0x6
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component nd2v0x8
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal nd : bit;
+
+begin
+
+nd : nd2v0x6
+   port map (
+      a   => a1,
+      b   => a2,
+      z   => nd,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : nd2v0x8
+   port map (
+      a   => nd,
+      b   => b,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

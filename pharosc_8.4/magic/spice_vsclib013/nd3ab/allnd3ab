@@ -1,0 +1,11 @@
+#!/bin/bash
+# allnd3ab 2007-08-29:12h17 graham
+
+./allnd3ab_delay $1
+./allnd3ab_vbe
+./allnd3ab_lib
+./allnd3ab_html
+if test -x allnd3ab_xtra
+then
+  ./allnd3ab_xtra
+fi

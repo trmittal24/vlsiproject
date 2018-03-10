@@ -1,0 +1,23 @@
+#!/bin/csh -f
+#
+# cifplot:  pplot for standard magic-produced cif files in ostyle=1.0(*) 
+#   JHU version, color, using plotter-like crosshatched patterns
+#
+#       usage: cifplot ciffile
+#	   produces file ciffile.ps.
+
+# add -V PSLM if necessary for large margins (HP-560C)
+
+grep -v '^4A' ${1:r}.cif | grep -v '^4N' | grep -v '^4X' > $$_temp
+
+../../../bin/pplot -p ../../../bin/cpat.vsclib_alliance \
+	-b "" \
+	-h \
+	-I \
+	-R \
+	-s 0.357910 \
+	-k ${1}.ps \
+	$$_temp
+grep -v "^($1)" ${1}.ps > $$_temp
+grep -v 'Scale' $$_temp > ${1}.ps
+rm $$_temp

@@ -1,0 +1,11 @@
+#!/bin/bash
+# allaoi211 2007-08-29:12h05 graham
+
+./allaoi211_delay $1
+./allaoi211_vbe
+./allaoi211_lib
+./allaoi211_html
+if test -x allaoi211_xtra
+then
+  ./allaoi211_xtra
+fi

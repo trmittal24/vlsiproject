@@ -1,0 +1,11 @@
+#!/bin/bash
+# allha2 2007-08-29:12h11 graham
+
+./allha2_delay $1
+./allha2_vbe
+./allha2_lib
+./allha2_html
+if test -x allha2_xtra
+then
+  ./allha2_xtra
+fi

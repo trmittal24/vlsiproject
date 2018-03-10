@@ -1,0 +1,39 @@
+* Spice description of halfadder_x4
+* Spice driver version 134999461
+* Date 21/07/2007 at 19:29:21
+* sxlib 0.13um values
+.subckt halfadder_x4 a b cout sout vdd vss
+Mtr_00001 sig11 b     vss   vss n  L=0.12U  W=0.43U  AS=0.11395P  AD=0.11395P  PS=1.39U   PD=1.39U
+Mtr_00002 vss   a     sig13 vss n  L=0.12U  W=0.43U  AS=0.11395P  AD=0.11395P  PS=1.39U   PD=1.39U
+Mtr_00003 sig8  sig13 sig9  vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00004 sig9  sig11 sig10 vss n  L=0.12U  W=0.65U  AS=0.17225P  AD=0.17225P  PS=1.83U   PD=1.83U
+Mtr_00005 sig10 a     vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00006 vss   b     sig8  vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00007 sig4  b     sig3  vss n  L=0.12U  W=0.76U  AS=0.2014P   AD=0.2014P   PS=2.05U   PD=2.05U
+Mtr_00008 sig3  a     vss   vss n  L=0.12U  W=0.54U  AS=0.1431P   AD=0.1431P   PS=1.61U   PD=1.61U
+Mtr_00009 vss   sig9  sout  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00010 sout  sig9  vss   vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00011 vss   sig4  cout  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00012 vss   sig4  cout  vss n  L=0.12U  W=1.09U  AS=0.28885P  AD=0.28885P  PS=2.71U   PD=2.71U
+Mtr_00013 vdd   b     sig11 vdd p  L=0.12U  W=0.87U  AS=0.23055P  AD=0.23055P  PS=2.27U   PD=2.27U
+Mtr_00014 sig13 a     vdd   vdd p  L=0.12U  W=1.2U   AS=0.318P    AD=0.318P    PS=2.93U   PD=2.93U
+Mtr_00015 sig12 b     vdd   vdd p  L=0.12U  W=1.2U   AS=0.318P    AD=0.318P    PS=2.93U   PD=2.93U
+Mtr_00016 vdd   sig13 sig12 vdd p  L=0.12U  W=1.2U   AS=0.318P    AD=0.318P    PS=2.93U   PD=2.93U
+Mtr_00017 sig12 sig11 sig9  vdd p  L=0.12U  W=1.2U   AS=0.318P    AD=0.318P    PS=2.93U   PD=2.93U
+Mtr_00018 sig9  a     sig12 vdd p  L=0.12U  W=1.2U   AS=0.318P    AD=0.318P    PS=2.93U   PD=2.93U
+Mtr_00019 sig4  b     vdd   vdd p  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00020 vdd   a     sig4  vdd p  L=0.12U  W=0.98U  AS=0.2597P   AD=0.2597P   PS=2.49U   PD=2.49U
+Mtr_00021 sout  sig9  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00022 vdd   sig9  sout  vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00023 cout  sig4  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+Mtr_00024 cout  sig4  vdd   vdd p  L=0.12U  W=2.19U  AS=0.58035P  AD=0.58035P  PS=4.91U   PD=4.91U
+C6  a     vss   2.264f
+C7  b     vss   1.411f
+C1  cout  vss   0.871f
+C11 sig11 vss   0.615f
+C12 sig12 vss   0.329f
+C13 sig13 vss   0.803f
+C4  sig4  vss   0.831f
+C9  sig9  vss   1.206f
+C14 sout  vss   0.871f
+.ends

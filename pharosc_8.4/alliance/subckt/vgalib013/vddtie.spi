@@ -1,0 +1,12 @@
+* Spice description of vddtie
+* Spice driver version 134999461
+* Date 17/06/2007 at 14:03:39
+* vgalib 0.13um values
+.subckt vddtie vdd vss z
+Mtr_00001 sig2  z     vss   vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00002 vss   z     sig2  vss n  L=0.12U  W=0.99U  AS=0.26235P  AD=0.26235P  PS=2.51U   PD=2.51U
+Mtr_00003 vdd   sig2  z     vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+Mtr_00004 z     sig2  vdd   vdd p  L=0.12U  W=1.43U  AS=0.37895P  AD=0.37895P  PS=3.39U   PD=3.39U
+C2  sig2  vss   0.671f
+C3  z     vss   1.113f
+.ends

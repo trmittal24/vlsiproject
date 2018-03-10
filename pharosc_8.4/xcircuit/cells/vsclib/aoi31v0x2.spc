@@ -1,0 +1,11 @@
+*SPICE circuit <aoi31v0x2> from XCircuit v3.20
+
+m1 n1 a1 vss vss n w=36u l=2u ad='36u*5u+12p' as='36u*5u+12p' pd='36u*2+14u' ps='36u*2+14u'
+m2 n3 a1 vdd vdd p w=56u l=2u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+m3 n3 a3 vdd vdd p w=56u l=2u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+m4 n3 a2 vdd vdd p w=56u l=2u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+m5 n2 a2 n1 vss n w=36u l=2u ad='36u*5u+12p' as='36u*5u+12p' pd='36u*2+14u' ps='36u*2+14u'
+m6 z b vss vss n w=16u l=2u ad='16u*5u+12p' as='16u*5u+12p' pd='16u*2+14u' ps='16u*2+14u'
+m7 z a3 n2 vss n w=36u l=2u ad='36u*5u+12p' as='36u*5u+12p' pd='36u*2+14u' ps='36u*2+14u'
+m8 z b n3 vdd p w=56u l=2u ad='56u*5u+12p' as='56u*5u+12p' pd='56u*2+14u' ps='56u*2+14u'
+.end

@@ -1,0 +1,43 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo '# Script which copies all the cells in ../vsclib013 across,'
+  echo '# adding the value in argument 1 to their input pin capacitances.'
+  exit 1
+fi
+
+source_dir=../vsclib013
+catal_name=VSCLIB013
+inccap=$1
+
+allcells=$(cat $source_dir/$catal_name | cut -f1 -d' ')
+
+rm -f *.vbe
+for cell in $allcells
+do
+  ./makecell $cell $inccap
+done
+
+cp $source_dir/$catal_name .
+
+cp -p ../vsclib013_6_macros/an3v0x8.vbe .
+cp -p ../vsclib013_6_macros/an4v0x8.vbe .
+cp -p ../vsclib013_6_macros/aoi21bv0x1.vbe .
+cp -p ../vsclib013_6_macros/aon21bv0x8.vbe .
+cp -p ../vsclib013_6_macros/mxn2v0x2.vbe .
+cp -p ../vsclib013_6_macros/nr3av0x1.vbe .
+cp -p ../vsclib013_6_macros/nr3abv0x1.vbe .
+cp -p ../vsclib013_6_macros/oai21a2v0x2.vbe .
+cp -p ../vsclib013_6_macros/oan21bv0x1.vbe .
+cp -p ../vsclib013_6_macros/oan21v0x1.vbe .
+cp -p ../vsclib013_6_macros/oan21v0x2.vbe .
+cp -p ../vsclib013_6_macros/or4v0x6.vbe .
+cp -p ../vsclib013_6_macros/tempbf1.vbe .
+cp -p ../vsclib013_6_macros/xaoi21v0x4.vbe .
+cp -p ../vsclib013_6_macros/xnr3v1x3.vbe .
+cp -p ../vsclib013_6_macros/xnr3v1x4.vbe .
+cp -p ../vsclib013_6_macros/xoon21v0x4.vbe .
+cp -p ../vsclib013_6_macros/xor3v1x3.vbe .
+cp -p ../vsclib013_6_macros/xor3v1x4.vbe .
+cp -p ../vsclib013_6_macros/xor3v2x2.vbe .

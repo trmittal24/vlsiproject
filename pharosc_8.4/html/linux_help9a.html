@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>thresholds</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="linux_help9.html">
+	<LINK REL=PREV HREF="linux_help9.html">
+	<LINK REL=NEXT HREF="linux_help9.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Linux.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070825;20000000">
+	<META NAME="CHANGED" CONTENT="20070825;20000000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="linux_help9.html">/Linux help/new cell characterisation</A>
+<A HREF="linux_help9a.html">/thresholds</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="linux_help9.html">UP</A></LI>
+<LI><A HREF="linux_help9.html">PREV</A></LI>
+<LI><A HREF="linux_help9.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Transition measurement thresholds</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html" CLASS="current">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+For multi-stage cells, the measurement threshold for
+the output transition time is the 10%-90% points.
+This is also the threshold for one series transistor
+in a single stage inverting cell.
+<P>
+For a single stage inverting cell with series
+connected transistors, the measurement
+threshold depends on the position of the transistor
+in the series stack.
+<TABLE>
+<TR>
+<TH>P-transistor position</TH>
+<TH>lower_lh</TH>
+<TH>upper_lh</TH></TR>
+<TR>
+<TD>A1</TD>
+<TD>10%</TD>
+<TD>90%</TD></TR>
+<TR>
+<TD>B1</TD>
+<TD>&nbsp;8%</TD>
+<TD>92%</TD></TR>
+<TR>
+<TD>C1</TD>
+<TD>&nbsp;7%</TD>
+<TD>93%</TD></TR>
+<TR>
+<TD>D1</TD>
+<TD>&nbsp;6%</TD>
+<TD>94%</TD></TR>
+<TR>
+<TD>E1</TD>
+<TD>&nbsp;5%</TD>
+<TD>95%</TD></TR></TABLE>
+
+<TABLE>
+<TR>
+<TH>N-transistor position</TH>
+<TH>lower_hl</TH>
+<TH>upper_hl</TH></TR>
+<TR>
+<TD>A2</TD>
+<TD>10%</TD>
+<TD>90%</TD></TR>
+<TR>
+<TD>B2</TD>
+<TD>&nbsp;8%</TD>
+<TD>92%</TD></TR>
+<TR>
+<TD>C2</TD>
+<TD>&nbsp;7%</TD>
+<TD>93%</TD></TR>
+<TR>
+<TD>D2</TD>
+<TD>&nbsp;6%</TD>
+<TD>94%</TD></TR>
+<TR>
+<TD>E2</TD>
+<TD>&nbsp;5%</TD>
+<TD>95%</TD></TR></TABLE>
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/threshold.gif" NAME="measurement thresholds" ALIGN=LEFT BORDER=0 ALT="measurement thresholds" TITLE="measurement thresholds">
+</DIV>
+
+</DIV>
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+</BODY>
+</HTML>

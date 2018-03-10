@@ -1,0 +1,125 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo "#" 1>&2
+  echo "# Written by Graham Petley, 2-NOV-04." 1>&2
+  echo "# ------------------------------------"
+  echo "# Please supply critical file name ... (extensions xsc and vst will be used)" 1>&2
+  echo "# e.g" 1>&2
+  echo "# bash$ find_crit_path multi8" 1>&2
+  echo "# will find the critical path using multi8.vst and multi8.xsc" 1>&2
+  echo "# The xsc and vst files should be written by LOON using a command like" 1>&2
+  echo "# bash$ loon -x 0 multi8_o multi8"
+  echo "#" 1>&2
+  exit 1
+fi
+
+xsc=$1.xsc
+vst=$1.vst
+
+critpath=$(grep '^C' $xsc | grep ':32:' | cut -d ':' -f 4 | awk '{print $1}' | sort -rn)
+i=0
+for path in $critpath
+do
+  let i=$i+1
+  if [ "$i" -eq 1 ] 
+  then
+#   this is end point of critical path; use to get end connector name
+    firstpath=$path
+    end=$(grep '^C' $xsc | grep ":32:$path " | cut -d ':' -f 2)
+    endvst=$(grep '^C' $xsc | grep ":32:$path " | cut -d ':' -f 2 | \
+             sed 's/\([^ ][^ ]*\)\ \([^ ][^ ]*\)/\1(\2)/')
+  fi
+  if [ "$i" -eq 2 ] 
+  then
+#   this is start point of critical path; use to get start connector name
+    start=$(grep '^C' $xsc | grep ":32:$path " | cut -d ':' -f 2)
+    startvst=$(grep '^C' $xsc | grep ":32:$path " | cut -d ':' -f 2 | \
+               sed 's/\([^ ][^ ]*\)\ \([^ ][^ ]*\)/\1(\2)/')
+    starttime=$(grep '^C' $xsc | grep ":32:$path " | cut -d ':' -f 2)
+  fi
+done
+
+fanin=$(awk '/^begin/,/^end/ {print}' $vst | grep -c " $startvst")
+echo -n "    "
+echo $start | awk -v FS=: '{printf "%-12s", $1}'
+echo $fanin | awk '{printf "%3d", $1}'
+echo -n "                "
+echo $path | awk '{printf "%5d\n", $1}'
+i=0
+nextinst=$(grep ":$end:" $xsc | grep '^P' | cut -d ':' -f 2 | tr -s ' ' | grep -m 1 '^')
+vstinst=$nextinst
+while [ "$nextinst" != "$start" ]
+do
+  nexttime=$(grep "^B:$nextinst:" $xsc | cut -d ':' -f 4 | tr -s ' ' | awk '{printf "%1d\n", $1}')
+  nextcell=$(grep "^ *$vstinst *:" $vst | cut -d ':' -f 2 | tr -s ' ')
+
+  nextnet=$(grep "^P:$nextinst:" $xsc | cut -d ':' -f 3 | tr -s ' ' | \
+          sed 's/\([^ ][^ ]*\)\ \([^ ][^ ]*\)/\1(\2)/')
+  netout=$(grep "^P:$nextinst:" $xsc | cut -d ':' -f 3 | tr -s ' ' | \
+          sed 's/\([^ ][^ ]*\)\ \([^ ][^ ]*\)/\1\\(\2\\)/')
+  netin=$(grep "^P:[^:][^:]*:[^:][^:]*:$nextinst:" $xsc | cut -d ':' -f 3 | tr -s ' ' | \
+          sed 's/\([^ ][^ ]*\)\ \([^ ][^ ]*\)/\1\\(\2\\)/')
+# the sed command replaces something like 'x 0' with 'x\(0\)'
+  let fanout=$(grep '=>' $vst | grep -c " $nextnet *,")-1
+
+  if [ "$i" -ne 0 ]
+  then
+    let deltatime=$prevtime-$nexttime
+    echo $prevcell | awk '{printf "%-12s", $1}' >>$$_temp
+    echo $prevfanout | awk '{printf "%3d%2s", $1, "  "}' >> $$_temp
+    echo $arc | awk '{printf "%-8s", $1}' >>$$_temp
+    echo $prevtime | awk '{printf "%5d%1s", $1, " "}' >>$$_temp
+    echo $deltatime | awk '{printf "%5d%3s", $1, "   "}' >>$$_temp
+    echo $previnst | sed 's/\ /_/' | awk '{printf "%-24s", $1}' >>$$_temp
+    echo $prevnet | awk '{printf "%-24s\n", $1}' | sed 's/ *$//' >> $$_temp
+  else
+    firstpath=$nexttime
+  fi
+
+  pinin=$(awk '/^ *'$vstinst' *:/,/);/ {print}' $vst | awk '/port map/,/);/ {print}' | \
+          awk '/ '$netin' *,/ {print $1}' | grep -m 1 '^')
+  pinout=$(awk '/^ *'$vstinst' *:/,/);/ {print}' $vst | awk '/port map/,/);/ {print}' | \
+          awk '/ '$netout' *,/ {print $1}')
+  arc=$(echo $pinin"->"$pinout)
+
+  prevcell=$nextcell
+  prevtime=$nexttime
+  prevnet=$nextnet
+  prevfanout=$fanout
+  previnst=$nextinst
+  nextinst=$(grep ":$previnst:" $xsc | grep '^P' | cut -d ':' -f 2 | tr -s ' ' | \
+             grep -m 1 '^' )
+  vstinst=$(grep ":$previnst:" $xsc | grep '^P' | cut -d ':' -f 2 | tr -s ' ' | \
+             grep -m 1 '^' | sed 's/\ /_/' )
+  if [ "$(echo $previnst | awk '{print length($1)}')" -gt 23 ]
+  then
+    let startpos=$(echo $previnst | awk '{print length($1)}')-20
+    previnst=$(echo $previnst | awk '{print ".."substr($1,'$startpos',21)}')
+  fi
+  let i=$i+1
+done
+
+echo $prevcell | awk '{printf "%-12s", $1}' >>$$_temp
+echo $prevfanout | awk '{printf "%3d%2s", $1, "  "}' >> $$_temp
+echo $arc | awk '{printf "%-8s", $1}' >>$$_temp
+echo $prevtime | awk '{printf "%5d%1s", $1, " "}' >>$$_temp
+echo $[$prevtime-$path] | awk '{printf "%5d%3s", $1, "   "}' >>$$_temp
+echo $previnst | sed 's/\ /_/' | awk '{printf "%-24s", $1}' >>$$_temp
+echo $prevnet | awk '{printf "%-24s", $1}' >> $$_temp
+
+cat $$_temp | grep -n '^' | sort -rn | sed 's/^[^:][^:]*://' | \
+grep -n '^' | sed 's/^\([^:][^:]*\):/\1\ \ /' | sed 's/^.\ /\ &/'
+
+echo "    "$end
+
+secondpath=$(grep '^C' $xsc | grep -v ":32:$firstpath" | cut -d ':' -f 4 | \
+  awk '{print $1}' | sort -rn | grep -m 1 '^')
+secondname=$(grep '^C' $xsc | grep ":-1:$secondpath" | cut -d ':' -f 2)
+
+echo
+echo "1st critical path is "$end" at "$firstpath
+echo "2nd critical path is "$secondname" at "$secondpath
+echo
+rm $$_temp

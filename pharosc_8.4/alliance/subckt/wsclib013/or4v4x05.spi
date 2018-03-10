@@ -1,0 +1,22 @@
+* Spice description of or4v4x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:35:16
+* wsclib 0.13um values
+.subckt or4v4x05 a b c d vdd vss z
+M01 vdd   a     n1    vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M02 vss   a     sig2  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M03 n1    b     sig9  vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M04 sig2  b     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M05 sig9  c     07    vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M06 vss   c     sig2  vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M07 07    d     sig2  vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M08 sig2  d     vss   vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+M09 vdd   sig2  z     vdd p  L=0.12U  W=0.66U  AS=0.1749P   AD=0.1749P   PS=1.85U   PD=1.85U
+M10 vss   sig2  z     vss n  L=0.12U  W=0.33U  AS=0.08745P  AD=0.08745P  PS=1.19U   PD=1.19U
+C7  a     vss   0.494f
+C6  b     vss   0.436f
+C5  c     vss   0.350f
+C4  d     vss   0.508f
+C2  sig2  vss   0.700f
+C3  z     vss   0.582f
+.ends

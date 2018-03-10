@@ -1,0 +1,55 @@
+entity xoon21v0x4 is
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end xoon21v0x4;
+
+architecture structural of xoon21v0x4 is
+Component xooi21v0x2
+   port (
+      a1  : in      bit;
+      a2  : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component iv1v0x4
+   port (
+      a   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal zn : bit;
+
+begin
+
+zn : xooi21v0x2
+   port map (
+      a1  => a1,
+      a2  => a2,
+      b   => b,
+      z   => zn,
+      vdd => vdd,
+      vss => vss
+   );
+
+z : iv1v0x4
+   port map (
+      a   => zn,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

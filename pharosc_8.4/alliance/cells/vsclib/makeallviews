@@ -1,0 +1,295 @@
+#!/bin/bash
+#
+# script to create all cell views. Using Alliance version 20060218 and
+# Magic version 7.4.8 with Magic compiled with the TCL option
+#
+if test $# -eq 0
+then
+  echo "# Usage ./makeallviews cell_name (without AP extension). Please supply cell_name."
+  exit 1
+fi
+if test -f "$1.ap"
+then
+dir=$PWD
+
+echo "#"
+echo "# MAKING ALL VIEWS FOR CELL $1" 1>&2
+echo "#"
+echo "# Write vsclib013 CIF from Alliance"
+
+full=0
+
+echo "#"
+echo "# Write vsclib013 CIF from Alliance"
+
+source ../../../alliance/bin/env_vsc013
+../../../alliance/bin/make_al $1
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_any013 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+cp $1.cif ../../../alliance/cif/vsclib013
+../../../alliance/bin/grep_ref_boxes $1 ../../../magic/etc/vsclib/$1_vsc013.ref
+grep '^4A' $1.cif > ../../../magic/etc/vsclib/$1_vsc013.ab
+
+#echo "# Write vsclib013 GDS from Alliance"
+
+#RDS_IN=gds
+#RDS_OUT=gds
+rm -f $1.gds
+#s2r_any013 $1 >/dev/null
+#cp $1.gds ../../../alliance/gds/vsclib013
+
+echo "# Write spice deck using vsc013 values"
+
+../../../alliance/bin/any013_make_spice $1 vsclib
+grep subckt $1.spi > ../../../magic/etc/vsclib/$1.subckt
+cp $1.spi ../../../alliance/subckt/vsclib013
+
+echo "# Write vsclib200 CIF from Alliance for Magic"
+
+source ../../../alliance/bin/env_vsc200
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_any200 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+cp $1.cif ../../../alliance/cif/vsclib200
+../../../alliance/bin/grep_ref_boxes $1 ../../../magic/etc/vsclib/$1_vsc200.ref
+grep '^4A' $1.cif > ../../../magic/etc/vsclib/$1_vsc200.ab
+
+../../../alliance/bin/make_magic_cif $1
+cp $1.cif ../../../magic/cells/vsclib
+
+if [ "$full" -eq 1 ]; then
+echo "# Write vsclib200_uwind CIF from Alliance for Microwind"
+
+source ../../../alliance/bin/env_vsc200_uwind
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_vsc200 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+../../../alliance/bin/make_magic_cif $1
+cp $1.cif ../../../alliance/cif/vsclib200_uwind
+
+echo "# Write vsclibp13_psc CIF from Alliance"
+
+source ../../../alliance/bin/env_vscp13_psc
+RDS_IN=cif
+RDS_OUT=cif
+rm -f $1.cif
+s2r_vscp13 $1 >/dev/null
+s2r -p $1 >/dev/null
+../../../alliance/bin/touch_alliance_cif $1
+cp $1.cif ../../../alliance/cif/vsclibp13_psc
+
+#echo "# Write vsclibp13_psc GDS from Alliance"
+
+#RDS_IN=gds
+#RDS_OUT=gds
+#rm -f $1.gds
+#s2r_vscp13 $1 >/dev/null
+#cp $1.gds ../../../alliance/gds/vsclibp13_psc
+
+#echo "# Write vsclibp13_ll_psc GDS from Alliance"
+
+#source ../../../alliance/bin/env_vscp13_ll_psc
+#RDS_IN=gds
+#RDS_OUT=gds
+#rm -f $1.gds
+#s2r_vscp13 $1 >/dev/null
+#cp $1.gds ../../../alliance/gds/vsclibp13_ll_psc
+
+#echo "# Write vsclibp13_hs_psc GDS from Alliance"
+
+#source ../../../alliance/bin/env_vscp13_hs_psc
+#RDS_IN=gds
+#RDS_OUT=gds
+#rm -f $1.gds
+#s2r_vscp13 $1 >/dev/null
+#cp $1.gds ../../../alliance/gds/vsclibp13_hs_psc
+fi
+
+rm -f $1.al
+rm -f $1.spi
+rm -f $1.cif
+rm -f $1.gds
+
+#
+# Make vtclib, wsclib and wtclib variants
+#
+cd ../vtclib
+./convert_vsc_vtc $1
+cd ../wsclib
+./convert_vsc_wsc $1
+./makeallviews $1
+cd ../wtclib
+./convert_wsc_wtc $1
+
+cd ../../../magic/cells/vsclib
+
+#
+# Script update 23-JUN-06 to run with Magic compiled with TCL. The
+# actual version of Magic being used is the 7.4.8 release.
+#
+# xhost + command needed for -noconsole option to be accepted
+#
+xhost + 1>/dev/null
+
+echo
+echo "# Read vsclib200 CIF into Magic"
+magic -Tvsc200 -dnull -noconsole <<EOF  >/dev/null 2>&1
+;cif read $1.cif
+;load $1
+;drc count total
+;save
+exit
+EOF
+
+echo "# Extract 0.13um SPI file from Magic"
+magic -Tvsc013 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;box 0 0 1 1
+;select more box pwell
+;delete
+;box 0 71 1 72
+;select more box nwell
+;delete
+;select
+;extract do capacitance
+;extract do coupling
+;extract do adjust
+;extract do resistance
+;extract all
+;ext2spice -f spice3 -c 0.001 -r 1 -y 3 -d
+;quit
+EOF
+#THE RC EXTRACTION DOESN'T WORK FOR NOW
+#cp $1.cspice $1.spice
+#../../../alliance/bin/spice2spi_013 $1 vsclib
+#mv -f $1.spi $1.cspi
+#magic -Tvsc013 -noconsole <<EOF
+#;load $1
+#;select
+#;extresis tolerance 1000
+#;extresis
+#;ext2spice extresist on
+#;exttospice -f spice3 -R -C -c 0.001 -r 1 -y 3 -d
+#;quit
+#EOF
+
+echo "# Write vsclib200 CIF file from Magic"
+magic -Tvsc200 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/vsclib200/$1 ../../../magic/etc/vsclib/$1_vsc200.ref
+cp $1.cif ../../../magic/cif/vsclib200
+cp $1.gds ../../../magic/gds/vsclib200
+
+if [ "$full" -eq 1 ]; then
+echo "# Write vsclib200_uwind CIF from Magic for Microwind"
+magic -Tvsc200 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif ostyle lambda=1um(vsclib_uwind)
+;cif write $1
+;quit
+EOF
+
+cp $1.cif ../../../magic/cif/vsclib200_uwind
+sed 's/^94  *\([^ ][^ ]*\)  *\([^ ][^ ]*\)  \([^ ][^ ]*\) .*$/L CM1;\n94 \1 \2 \3;/' $1.cif > ../../../uwind/cif/vsclib200/$1.cif
+fi
+
+if [ "$full" -eq 1 ]; then
+echo "# Write vsclibp13_psc CIF and GDS files from Magic"
+magic -Tvscp13 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/vsclib013/$1 ../../../magic/etc/vsclib/$1_vsc013.ref
+cp $1.cif ../../../magic/cif/vsclibp13_psc
+cp $1.gds ../../../magic/gds/vsclibp13_psc
+
+echo "# Write vsclibp13_ll_psc CIF and GDS files from Magic"
+magic -Tvscp13 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif ostyle lambda=0.055um(vsclib_ll_psc)
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/vsclib013/$1 ../../../magic/etc/vsclib/$1_vsc013.ref
+cp $1.cif ../../../magic/cif/vsclibp13_ll_psc
+cp $1.gds ../../../magic/gds/vsclibp13_ll_psc
+
+echo "# Write vsclibp13_hs_psc CIF and GDS files from Magic"
+magic -Tvscp13 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif ostyle lambda=0.055um(vsclib_hs_psc)
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/vsclib013/$1 ../../../magic/etc/vsclib/$1_vsc013.ref
+cp $1.cif ../../../magic/cif/vsclibp13_hs_psc
+cp $1.gds ../../../magic/gds/vsclibp13_hs_psc
+fi
+
+echo "# Write vsclib013 CIF and GDS files from Magic"
+magic -Tvsc013 -dnull -noconsole <<EOF >/dev/null 2>&1
+;load $1
+;cif ostyle lambda=0.055um(vsclib013)
+;cif write $1
+;gds labels
+;gds write $1
+;quit
+EOF
+
+../../../alliance/bin/make_alliance_cif $1 ../../../alliance/cif/vsclib013/$1 ../../../magic/etc/vsclib/$1_vsc013.ref
+cp $1.cif ../../../magic/cif/vsclib013
+cp $1.gds ../../../magic/gds/vsclib013
+
+echo
+echo "# Convert Magic SPICE output to SPI subckt"
+../../../alliance/bin/spice2spi_013 $1 vsclib
+cp $1.spi ../../../magic/subckt/vsclib013
+cd $dir
+
+echo "# Create wsclib files"
+cd ../wsclib
+./convert_cell $1
+./makeallviews $1
+cd ../../makevbe/wsclib200
+./convert_vsc_wsc $1
+./$1.bash > $1.vbe
+mv -f $1.vbe ../../vbe/wsclib200
+cd $dir
+
+echo "# Create vtclib files"
+cd ../vtclib
+./convert_cell $1
+echo "# Create wtclib files"
+cd ../wtclib
+./convert_cell $1
+
+else
+  echo "# Usage ./makeallviews cell_name (without AP extension). cell_name supplied does not exist."
+  exit 1
+fi

@@ -1,0 +1,535 @@
+#!/bin/bash
+## makenewhtml 2007-07-06:07h23 graham
+
+# Source of library data
+# cell width     cell.vbe file using the original Alliance compatible numbers (in vbesourcedir)
+# leakage power  cell.lib file, the cell_leakage_power parameter
+# dynamic power  cell.lib file, the power taken from the comment in the internal_power line
+
+function=$(basename $PWD)
+# need to calculate these values
+function_up=lib_gif_index
+library=rgalib013
+symbol_dir=../../../xcircuit/gif/rgalib
+layout_dir=../../../alliance/gif/rgalib013
+
+# if no arguments given, then write out header, else cell info
+if [ "$1" = 0 ]
+then
+  function_prev=$2
+  function_next=$3
+  function_home=../../../index
+
+  changed_date=$(date '+%Y%m%d;%H%M0000')
+
+  cat <<!!
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+!!
+
+  echo "<TITLE>"$function" "$library" standard cell family</TITLE>"
+  echo "<LINK REL=HOME HREF=\""$function_home".html\">"
+  echo "<LINK REL=PREVIOUS HREF=\""$function_prev".html\">"
+  echo "<LINK REL=NEXT HREF=\""$function_next".html\">"
+  echo "<LINK REL=UP HREF=\""$function_up".html\">"
+
+  cat <<!!
+<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+<META NAME="DESCRIPTION" CONTENT="standard cell library web page">
+<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+!!
+
+  echo "<META NAME=\"CREATED\" CONTENT=\"20040523;07300000\">"
+  echo "<META NAME=\"CHANGED\" CONTENT=\""$changed_date"\">"
+
+  cat <<!!
+<STYLE TYPE="text/css">
+<!--
+body{
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: red;
+	text-align: left;
+	margin: .2em .8em .5em .8em;
+	padding: 0;
+}
+h3{
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 1.5em;
+	font-weight: bold;
+	color:blue;
+	margin-top: 0.5em;
+}
+p{
+	margin-top: 0;
+	margin-bottom: .4em;
+	font-family: "Andale Sans", arial, helvetica, sans-serif;
+	font-style: normal;
+	font-size: 0.9em;
+	font-weight: normal;
+	color: #3F3F3F;
+}
+.mathsvar{font-style:italic; font-family:serif;}
+.bold{font-weight:bold;}
+.boldred{color:red;font-weight:bold;}
+.small{font-size:0.8em;}
+.smallcaps{font-variant: small-caps;}
+.large{font-size:1em;}
+.mono{font-family:monospace;}
+STRONG{color:white;}
+.boxed{border: .1em solid #000000;}
+.vcentre{vertical-align: middle;}
+.charrowleft{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	font-family:monospace;
+}
+.charrow{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+	background: #FFE7E7;
+}
+.charrow2{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	font-size:0.8em;
+	background: #FFE7E7;
+}
+.attrrowleft{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #000000;
+}
+.attrrow{
+	border: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+	background: #FFE7E7;
+}
+.graphicsbox{
+	padding: 0;
+}
+.cellrowleft{
+	border-right: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #FFE7E7;
+}
+.cellrow{
+	border-right: .1em solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.footer{
+	border-top: .1em solid #000000;
+	vertical-align: middle;
+	text-align: left;
+	background: #FFE7E7;
+}
+table.boxed{
+	border-collapse: collapse;
+	border: .2em solid #000000;
+	width: 100%;
+}
+th, td{
+	margin: 0;
+	padding: 0 .5em 0 .5em;
+	color: black;
+}
+.navholder{border: .1em solid #000000;}
+.navbox{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 1em;
+}
+table.nav{
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.graphicsleft{
+	padding-top: .4em;
+	padding-bottom .4em;
+	border-right: .1em solid #000000;
+}
+.graphics{padding-top: .4em; padding-bottom .4em}
+ul.dir{
+	float: right;
+	margin: .4em 0 0 0;
+	padding-left: 0;
+	padding-right: 0;
+	list-style-type: none;
+	background: white;
+	font-size: 1em;
+}
+ul.dir li{display: inline;}
+ul.dir a{
+	display: block;
+	text-decoration: none;
+	background: black;
+	float: right;
+	width: 3.5em;
+	margin: 0;
+	border-left: .1em solid white;
+	padding: .2em .4em .2em .4em;
+	text-align: center;
+	color: white;
+}
+ul.dir a:hover{background: rgb(0,0,128);color: rgb(255,128,0);}
+table.graphics{
+	border-collapse: collapse;
+	border-top: .1em solid #000000;
+	width: 100%;
+}
+table.eff{
+	border-collapse: collapse;
+	border: 1px solid #000000;
+	background-color: #E7FFE7;
+}
+.efftdu{
+	border-left: 1px solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.efftduleft{vertical-align: middle; text-align: left;}
+.efftduright{vertical-align: middle; text-align: center;}
+.efftdb{
+	padding-bottom: 2px;
+	border-left: 1px solid #000000;
+	vertical-align: middle;
+	text-align: center;
+}
+.efftdbright{
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+.effcellname{padding-bottom: 0.8em;}
+.effth{
+	font-weight: normal;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+.effthleft{
+	font-weight: normal;
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+.efftr{border-top: 1px solid #CCCCCC;}
+-->
+</STYLE>
+</HEAD>
+<BODY>
+<TABLE CLASS="boxed">
+<THEAD>
+<TR CLASS="vcentre">
+	<TD COLSPAN=5 CLASS="boxed">
+!!
+
+  echo "		<H3>"$function" standard cell family</H3></TD>"
+  echo "	<TD COLSPAN=4 CLASS=\"boxed\">"
+  echo "		<SPAN CLASS=\"large\"><B>2-I/P NOR gate with inverted input</B></SPAN></TD>"
+  echo "	<TD COLSPAN=2 CLASS=\"navholder\">"
+  echo "		<TABLE CLASS=\"nav\"><TR><TD CLASS=\"navbox\">"
+  echo "		<UL CLASS=\"dir\">"
+  echo "		<LI><A HREF=\""$function_up".html\">UP</A></LI>"
+  echo "		<LI><A HREF=\""$function_prev".html\">PREV</A></LI>"
+  echo "		<LI><A HREF=\""$function_next".html\">NEXT</A></LI>"
+  echo "		</UL></TD></TR></TABLE></TD>"
+
+  cat <<!!
+</TR>
+</THEAD>
+<TBODY>
+<TR CLASS="vcentre">
+	<TD COLSPAN=2 CLASS="boxed">
+!!
+
+  echo "		<IMG SRC=\""$symbol_dir"/"$function".gif\" NAME=\""$function"\" BORDER=0 ALT=\""$function" symbol\" TITLE=\""$function" symbol\">"
+
+  cat <<!!
+		<BR CLEAR=LEFT>
+	</TD>
+	<TD COLSPAN=9 CLASS="boxed">
+!!
+
+  cat ../../../html/cells/rgalib/"$function".txt
+  cat <<!!
+	</TD>
+</TR>
+</TBODY>
+!!
+
+else
+  cell=$1
+  out_pin=$2
+  logic_function=$(grep "^$out_pin" "$function".pmd | tr -s ' ' | sed "s/^$out_pin\ //g" | \
+    grep '^logic_function' | sed 's/^logic_function\ //g')
+
+  if [ "$3" = 0 ]
+  then  
+    cat <<!!
+<TBODY>
+<TR CLASS="vcentre">
+	<TD ROWSPAN=2 CLASS="charrowleft">
+!!
+
+    echo "		"$out_pin":"$logic_function"</TD>"
+    cat <<!!
+	<TD COLSPAN=3 ROWSPAN=2 CLASS="charrow">
+		cell width</TD>
+	<TD COLSPAN=2 CLASS="charrow">
+		power</TD>
+	<TD COLSPAN=5 CLASS="charrow">
+		Generic 0.13um typical timing (ps & ps/fF),
+		pin&nbsp;<SPAN CLASS="boldred">a</SPAN>.</TD>
+</TR>
+<TR CLASS="vcentre">
+	<TD CLASS="charrow">
+		leakage</TD>
+	<TD CLASS="charrow">
+		dynamic</TD>
+	<TD COLSPAN=5 CLASS="charrow2">
+		tR=PropR+RampR&times;Load(fF), tF=PropF+RampF&times;Load(fF)</TD>
+</TR>
+</TBODY>
+<TBODY>
+<TR>
+	<TD CLASS="attrrowleft">
+  		<STRONG>rgalib013</STRONG></TD>
+	<TD CLASS="attrrow">
+		gates</TD>
+	<TD CLASS="attrrow">
+		lambda</TD>
+	<TD CLASS="attrrow">
+		0.13um</TD>
+	<TD CLASS="attrrow">
+		nW</TD>
+	<TD CLASS="attrrow">
+		<SPAN CLASS="small">nW/MHz</SPAN></TD>
+	<TD CLASS="attrrow">
+		PinCap</TD>
+	<TD CLASS="attrrow">
+		PropR</TD>
+	<TD CLASS="attrrow">
+		RampR</TD>
+	<TD CLASS="attrrow">
+		PropF</TD>
+	<TD CLASS="attrrow">
+		RampF</TD>
+</TR>
+</TBODY>
+<TBODY>
+!!
+
+  elif [ "$3" = 1 ]
+  then
+    cell_width=$(cat ../../../alliance/vbe/rgalib200/$cell.vbe | grep area | sed 's/;//' | awk '{printf"%1d\n", $6/88 }')
+    gate_count=$(cat ../../../alliance/vbe/rgalib200/$cell.vbe | grep area | sed 's/;//' | awk '{printf"%3.1f\n", $6/704/3 }')
+    um_width=$(echo $[ 55*$cell_width ] | awk '{printf"%4.2f\n", $1/1000}')
+    leakage_powerx1000=$(grep '^cell_leakage_power' $cell.lib | awk '{print $3}')
+    leakage_power=$(echo $leakage_powerx1000 | awk '{printf"%4.2f\n", $1/1000}')
+
+    power_values=$(grep '^internal_power' $cell.lib | grep "(a_$out_pin" | awk '{print $5*100}')
+    i=0; power_x100=0
+    for power in $power_values
+    do
+      let i=$i+1
+      let power_x100=$power_x100+$power
+    done
+    dynamic_power=$(echo $power_x100 | awk '{printf"%3.1f\n", $1/'$i'/100}')
+    let power_x100=$power_x100/$i
+
+    cap_values=$(grep '^a_' "$cell".pr | awk '{printf"%1d%1s", $4*100, " " }')
+    i=0; pincapx100=0
+    for cap in $cap_values
+    do
+      let i=$i+1
+      let pincapx100=$pincapx100+$cap
+    done
+    pincap=$(echo $pincapx100 | awk '{printf"%3.1f\n", $1/'$i'/100}')
+    let pincapx100=$pincapx100/$i
+
+    prop_values=$(grep "^a_$2_.h" "$cell".pr | awk '{printf"%1d%1s", $2*10, " " }')
+    i=0; propx10=0
+    for thisprop in $prop_values
+    do
+      let i=$i+1
+      let propx10=$propx10+$thisprop
+    done
+    let proprisex10=$propx10/$i
+    proprise=$(echo $proprisex10 | awk '{printf"%1d\n", ($1+5)/10}')
+    prop_values=$(grep "^a_$2_.l" "$cell".pr | awk '{printf"%1d%1s", $2*10, " " }')
+    i=0; propx10=0
+    for thisprop in $prop_values
+    do
+      let i=$i+1
+      let propx10=$propx10+$thisprop
+    done
+    let propfallx10=$propx10/$i
+    propfall=$(echo $propfallx10 | awk '{printf"%1d\n", ($1+5)/10}')
+
+    ramp_values=$(grep "^a_$2_.h" "$cell".pr | awk '{printf"%1d%1s", $3*100, " " }')
+    i=0; rampx100=0
+    for thisramp in $ramp_values
+    do
+      let i=$i+1
+      let rampx100=$rampx100+$thisramp
+    done
+    let ramprisex100=$rampx100/$i
+    ramprise=$(echo $ramprisex100 | awk '{printf"%4.2f\n", $1/100}')
+    ramp_values=$(grep "^a_$2_.l" "$cell".pr | awk '{printf"%1d%1s", $3*100, " " }')
+    i=0; rampx100=0
+    for thisramp in $ramp_values
+    do
+      let i=$i+1
+      let rampx100=$rampx100+$thisramp
+    done
+    let rampfallx100=$rampx100/$i
+    rampfall=$(echo $rampfallx100 | awk '{printf"%4.2f\n", $1/100}')
+
+    echo "<TR>"
+    echo "	<TD CLASS=\"cellrowleft\"><B>"$cell"</B></TD>"
+ 
+    echo "	<TD CLASS=\"cellrow\">"$gate_count"</TD>"
+ 
+    if [ "$cell_width" -ge 100 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$cell_width"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$cell_width"</TD>"
+    fi
+
+    echo "	<TD CLASS=\"cellrow\">"$um_width"</TD>"
+
+    if [ "$leakage_powerx1000" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$leakage_power"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$leakage_power"</TD>"
+    fi
+
+    if [ "$power_x100" -ge 10000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$dynamic_power"</TD>"
+    elif [ "$power_x100" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$dynamic_power"</TD>"
+    elif [ "$power_x100" -ge 100 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">&nbsp;&nbsp;"$dynamic_power"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;&nbsp;&nbsp;"$dynamic_power"</TD>"
+    fi
+
+    if [ "$pincapx100" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$pincap"f</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$pincap"f</TD>"
+    fi
+
+    if [ "$proprisex10" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$proprise"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$proprise"</TD>"
+    fi
+
+    if [ "$ramprisex100" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$ramprise"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$ramprise"</TD>"
+    fi
+
+    if [ "$propfallx10" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$propfall"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$propfall"</TD>"
+    fi
+
+    if [ "$rampfallx100" -ge 1000 ]
+    then
+      echo "	<TD CLASS=\"cellrow\">"$rampfall"</TD>"
+    else
+      echo "	<TD CLASS=\"cellrow\">&nbsp;"$rampfall"</TD>"
+    fi
+
+    echo "</TR>"
+
+  elif [ "$3" = 2 ]
+  then
+    echo "<TR>"
+    echo "<TD CLASS=\"effcellname\"><B>"$cell"</B><BR>&nbsp;"
+    echo "<TABLE CLASS="eff">"
+    echo "<TR>"
+    echo "<TH ROWSPAN=2 COLSPAN=2></TH>"
+    echo "<TH COLSPAN=2 CLASS=\"effthleft\">Effort</TH>"
+    echo "</TR>"
+    echo "<TR>"
+    echo "<TH CLASS=\"effthleft\">FO4</TH>"
+    echo "<TH CLASS=\"effth\">Log.</TH>"
+    echo "</TR>"
+    pin_list=$(grep 'FO4 effort' $cell.lib | cut -f1 -d' ' | sed 's/^ *pin(\(.*\))/\1/')
+    pin_no=0
+    for pin in $pin_list
+    do
+      let pin_no=$pin_no+1
+      fo4n=$(grep "^ *${pin}_${out_pin}_lh" $cell.pr | awk '{printf "%5.2f\n", $8 }')
+      fo4p=$(grep "^ *${pin}_${out_pin}_hh" $cell.pr | awk '{printf "%5.2f\n", $6 }')
+      le=$(grep "^ *${pin}_${out_pin}_lh" $cell.pr | awk '{printf "%5.2f\n", $6 }')
+      if [ "$pin_no" -eq 1 ]
+      then
+        echo "<TR>"
+      else
+        echo "<TR CLASS=\"efftr\">"
+      fi
+      echo "<TD ROWSPAN=2 CLASS=\"efftduleft\">"$pin"</TD>"
+      echo "<TD CLASS=\"efftduright\"><TT>/\</TT></TD>"
+      echo "<TD CLASS=\"efftdu\">"$fo4n"</TD>"
+      echo "<TD CLASS=\"efftduright\">"$le"</TD>"
+      echo "</TR>"
+      echo "<TR>"
+      echo "<TD CLASS=\"efftdbright\"><TT>&macr;_</TT></TD>"
+      echo "<TD CLASS=\"efftdb\">"$fo4p"</TD>"
+      echo "<TD CLASS=\"efftdbright\"></TD>"
+      echo "</TR>"
+    done
+    echo "</TABLE></TD>"
+    cell_pxheight=250
+    let "cell_pxwidth=$(cat ../../../alliance/vbe/rgalib200/$cell.vbe | \
+      grep area | \
+      sed 's/;//' | \
+      awk '{printf"%1d\n", $6 }' )"
+    if [ "$library" = sxlib013 -o "$library" = vxlib013 ]
+    then
+      let "cell_pxwidth=cell_pxheight*(cell_pxwidth/88+2*4)/(88*4+2*8)"
+    else
+      let "cell_pxwidth=cell_pxheight*(cell_pxwidth/88+2*4)/(88+2*8)"
+    fi
+    echo "	<TD CLASS=\"graphicsleft\">"
+    echo "		<IMG SRC=\""$symbol_dir"/"$cell".gif\" NAME=\""$cell"\" ALIGN=LEFT BORDER=0"
+    echo "              ALT=\""$cell" schematic\" TITLE=\""$cell" standard cell schematic\"></TD>"
+    echo "	<TD CLASS=\"graphics\">"
+    echo "		<A HREF=\""$layout_dir"/"$cell".gif\">"
+    echo "		<IMG SRC=\""$layout_dir"/"$cell".gif\" NAME=\""$cell"\" ALIGN=LEFT HEIGHT="$cell_pxheight" WIDTH="$cell_pxwidth
+    echo "              BORDER=0 ALT=\""$cell" standard cell layout\" TITLE=\""$cell" standard cell layout\">"
+    echo "		</A></TD>"
+    echo "</TR>"
+  fi
+fi

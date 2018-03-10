@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>tar download</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="../index.html">
+	<LINK REL=PREV HREF="win_help1.html">
+	<LINK REL=NEXT HREF="win_help3.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20040429;19300000">
+	<META NAME="CHANGED" CONTENT="20070826;22200000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Windows help</A>
+<A HREF="win_help2.html">/tar download</A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="../index.html">UP</A></LI>
+<LI><A HREF="win_help1.html">PREV</A></LI>
+<LI><A HREF="win_help3.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content">Download the TAR file</H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html" CLASS="current">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2">
+<P CLASS="first">
+The library release is a gzipped tar file.
+Download the<TT> <A HREF="../pharosc_8.4.tar.gz">pharosc_8.4.tar.gz</A> </TT> and
+<TT> <A HREF="../pharosc_examples_8.4.tar.gz">pharosc_examples_8.4.tar.gz</A> </TT> files
+to the folder where you want to install the library (in <TT>C:\home</TT> in the
+screenshot). To use them with a Linux Live CD, move them to a USB stick.
+<H3>Using the library in Windows</H3>
+<P>
+Windows doesn't ship with a utility for uncompressing gzip files,
+nor one for unpacking tar files(!). The <TT>gunzip</TT>
+and <TT>tar</TT> commands in <A HREF="http://www.cygwin.com"><TT>cygwin</TT></A>
+can be used in a Unix style command line
+(see <A HREF="linux_help1.html">Linux help/tar download</A>,
+or a freeware program
+like <A HREF="http://www.7-zip.org">7-Zip</A> can be used as
+shown in the graphic on the right.
+This installs in a conventional way and allows you to uncompress
+<TT>gz</TT> and <TT>tar</TT> files by right clicking on them inside Windows Explorer.
+<P>
+Then unpack it by right clicking in Windows Explorer and using 7-ZIP to expand
+the file. You'll see something like the screen shot.
+The first expansion 'gunzips' the file to a tar file.
+Then use 7-ZIP on the tar file to create the library
+folder. I think there will be error messages about links
+but these do not affect the basic library functionality.
+<P>
+The unpacked library size is about 590Mb.
+<H3><A HREF="livecd_help2.html">Using the library with a Linux Live CD</A></H3>
+<P>
+The Live CD
+pages explain in detail how to open a terminal window and gunzip
+the library release.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/lib_unpacked.gif" NAME="windows unpack" ALIGN=LEFT BORDER=0 ALT="windows unpack" TITLE="windows unpack">
+</DIV>
+
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>

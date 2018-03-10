@@ -1,0 +1,28 @@
+* Spice description of bsi2v2x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:06:55
+* vsclib 0.13um values
+.subckt bsi2v2x1 a0 a1 s vdd vss z0 z1
+M01 a0n   a0    vdd   vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M02 a0n   a0    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M03 a1n   a1    vdd   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M04 a1n   a1    vss   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M05 z0    s     a0n   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M06 vdd   s     13    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M07 z1    s     a1n   vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M08 a1n   s     z0    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M09 vss   s     13    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M10 a0n   s     z1    vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M11 a1n   13    z0    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M12 a0n   13    z1    vdd p  L=0.12U  W=1.21U  AS=0.32065P  AD=0.32065P  PS=2.95U   PD=2.95U
+M13 z0    13    a0n   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+M14 z1    13    a1n   vss n  L=0.12U  W=0.55U  AS=0.14575P  AD=0.14575P  PS=1.63U   PD=1.63U
+C5  13    vss   0.936f
+C4  a0    vss   0.631f
+C1  a0n   vss   1.215f
+C8  a1    vss   0.410f
+C6  a1n   vss   0.903f
+C7  s     vss   1.080f
+C2  z0    vss   0.617f
+C9  z1    vss   0.739f
+.ends

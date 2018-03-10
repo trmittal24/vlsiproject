@@ -1,0 +1,907 @@
+#!/bin/bash
+
+# copied and edited from vxlib013 version
+
+echo
+if test $# -eq 0
+then
+  echo "# Usage ./makefunction function_name. Please supply function_name." 1>&2
+  exit 1
+fi
+
+export function=$1
+if test -d "$function"
+then
+  echo "# Function "$function" directory already exists."
+else
+  echo "# Creating function directory "$function"."
+  mkdir $function
+fi
+date=$(date '+%Y-%m-%d:%Hh%M')
+owner=$(whoami)
+
+technology_pmd='technology.pmd'
+template_func_dir='../../../magic/templates/vsclib'
+template_dir="$template_func_dir"/..
+
+#
+#               ----- Read general technology parameters from technology.pmd -----
+#
+export param_description=$(grep '^param_description' $technology_pmd | sed 's/^param_description[ *]//g')
+export techno=$(grep '^techno' $technology_pmd | awk '{print $2 }')
+export one_track_area=$(grep '^one_track_area' $technology_pmd | awk '{print $2 }')
+export libdir=$(grep '^libdir' $technology_pmd | awk '{print $2 }')
+export pmddir=$(grep '^pmddir' $technology_pmd | awk '{print $2 }')
+export vbesourcedir=$(grep '^vbesourcedir' $technology_pmd | awk '{print $2 }')
+export library=$(grep '^library' $technology_pmd | awk '{print $2 }')
+export inverter_name=$(grep '^inverter_name' $technology_pmd | awk '{print $2 }')
+export separator=$(grep '^separator' $technology_pmd | awk '{print $2 }')
+export ref_inverter=$(grep '^ref_inverter' $technology_pmd | awk '{print $2 }')
+export unitcap=$(grep '^unitcap' $technology_pmd | awk '{print $2 }')
+export std_load=$(grep '^std_load' $technology_pmd | awk '{print $2 }')
+export min_transition=$(grep '^min_transition' $technology_pmd | awk '{print $2 }')
+export input_net_transition=$(grep '^input_net_transition' $technology_pmd | sed 's/^input_net_transition[ *]//g')
+export vdd=$(grep '^vdd' $technology_pmd | awk '{print $2 }')
+export vsupply=$(grep '^vdd' $technology_pmd | awk '{print $2*10 }')
+export temperature=$(grep '^temperature' $technology_pmd | awk '{print $2 }')
+export pleakage=$(grep '^pleakage' $technology_pmd | awk '{print $2 }')
+export nleakage=$(grep '^nleakage' $technology_pmd | awk '{print $2 }')
+export lambda=$(grep '^lambda' $technology_pmd | awk '{print $2*1000 }')
+export transition_9=$(grep '^input_net_transition' $technology_pmd | awk '{print $10}' | sed 's/p/\.0/')
+export transition_10=$(grep '^input_net_transition' $technology_pmd | awk '{print $11}' | sed 's/p/\.0/')
+export htmlsource_dir=$(grep '^htmlsourcedir' $technology_pmd | awk '{print $2 }')
+export html_dir="$htmlsource_dir"/../"$library"
+home_page=$(grep '^home_page' $technology_pmd | awk '{print $2 }')
+symbol_dir=$(grep '^symboldir' $technology_pmd | awk '{print $2 }')
+layout_dir=$(grep '^layoutdir' $technology_pmd | awk '{print $2 }')
+cell_height=$(grep '^cell_height' $technology_pmd | awk '{print $2 }')
+ns_well_overlap=$(grep '^ns_well_overlap' $technology_pmd | awk '{print $2 }')
+ew_well_overlap=$(grep '^ew_well_overlap' $technology_pmd | awk '{print $2 }')
+
+export loadcap0=$(grep '^total_output_net_capacitance' $technology_pmd | awk '{print $2 }')
+export loadcap1=$(grep '^total_output_net_capacitance' $technology_pmd | awk '{print $3 }')
+export loadcap2=$(grep '^total_output_net_capacitance' $technology_pmd | awk '{print $4 }')
+export loadcap3=$(grep '^total_output_net_capacitance' $technology_pmd | awk '{print $5 }')
+export loadcap4=$(grep '^total_output_net_capacitance' $technology_pmd | awk '{print $6 }')
+export loadcap5=$(grep '^total_output_net_capacitance' $technology_pmd | awk '{print $7 }')
+
+export input_threshold_rise=$(grep '^input_threshold_rise' $technology_pmd | awk '{printf"%1s\n", $2 }')
+export output_threshold_rise=$(grep '^output_threshold_rise' $technology_pmd | awk '{printf"%1s\n", $2 }')
+export input_threshold_fall=$(grep '^input_threshold_fall' $technology_pmd | awk '{printf"%1s\n", $2 }')
+export output_threshold_fall=$(grep '^output_threshold_fall' $technology_pmd | awk '{printf"%1s\n", $2 }')
+
+export input_threshold_pct_rise=$(echo $input_threshold_rise | awk '{printf "%4.1f\n", $1*100 }')
+export output_threshold_pct_rise=$(echo $output_threshold_rise | awk '{printf "%4.1f\n", $1*100 }')
+export input_threshold_pct_fall=$(echo $input_threshold_fall | awk '{printf "%4.1f\n", $1*100 }')
+export output_threshold_pct_fall=$(echo $output_threshold_fall | awk '{printf "%4.1f\n", $1*100 }')
+
+export cell_list=cell_list.txt
+
+cd $function
+#
+#     ----- Copy the function.pmd file to local directory and check that it has been copied -----
+#
+if test -f "$cell".pmd
+then
+  if test "$pmddir"/"$library"/"$function".pmd -nt "$function".pmd
+  then
+    cp -p "$pmddir"/"$library"/"$function".pmd . 2>/dev/null
+  fi
+else
+  cp -p "$pmddir"/"$library"/"$function".pmd . 2>/dev/null
+fi
+num_args=$(ls -1 "$function".pmd 2>/dev/null | grep -c '^' )
+if [ "$num_args" -eq 0 ]
+then
+  echo "# Missing file  "$function".pmd  which contains needed info for the characterisation files." 1>&2
+  exit 1
+fi
+export inputpin_list=$(grep '^inputpin_list' "$function".pmd | sed 's/^inputpin_list\ //' | tr -s ' ' )
+export outputpin_list=$(grep '^outputpin_list' "$function".pmd | sed 's/^outputpin_list\ //' | tr -s ' ' )
+export num_inputs=$(echo "$inputpin_list" | wc -w)
+export num_outputs=$(echo "$outputpin_list" | wc -w)
+export isflop=$(grep '^isflop ' "$function".pmd | sed 's/^isflop //' | tr -s ' ')
+if [ "$isflop" = "" ]
+then
+  isflop=0
+fi
+# change logic function from Synopsys format to winspice format
+export logic_function=$(grep logic_function "$function".pmd | \
+  cut -f 3 -d' ' | \
+  sed "s|^\([^ ][^ ]*\)'$|(not \1)|" | \
+  sed "s|\([(*+^][(*+^]*\)\([^(*+^][^(*+^]*\)'|\1not (\2)|g" | \
+  sed 's/\+/ or /g' | \
+  sed 's/\*/ and /g' | \
+  sed 's/\^/ ne /g')
+export timing_arc1=$(grep '^timing_arc1' "$function".pmd | awk '{print $2 }')
+export timing_arc2=$(grep '^timing_arc2' "$function".pmd | awk '{print $2 }')
+export timing_arc3=$(grep '^timing_arc3' "$function".pmd | awk '{print $2 }')
+export timing_arc4=$(grep '^timing_arc4' "$function".pmd | awk '{print $2 }')
+cell_footprint=$(grep '^cell_footprint' "$function".pmd | awk '{print $2 }')
+if [ "$cell_footprint" = "" ]
+then
+  cell_footprint=$function
+fi
+export cell_footprint
+#
+#   -----        Copy across allfunc_delay, _vbe, _lib, _html            -----
+#   -----  makenewpr, makenewvbe, makenewdotlib, makenewhtml and allfunc -----
+#
+if [ "$isflop" -eq 0 ]
+then
+  cp "$template_dir"/allfunc_func all"$function"_func 2>/dev/null
+  cp "$template_dir"/allfunc_delay all"$function"_delay 2>/dev/null
+  num_args=$(ls -1 all"$function"_delay 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  allfunc_delay  that runs the characterisation jobs is missing." 1>&2
+    err=1
+  else
+    echo "# Creating the script  all"$function"_delay  that does the characterisation."
+    timestamp=$(echo "# all"$function"_delay "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" all"$function"_func | \
+      source ../../../bin/cptemplate > $$temp;mv $$temp all"$function"_func;rm -f $$temp
+    sed "s/xxx_timestamp/$timestamp/g" all"$function"_delay | \
+      source ../../../bin/cptemplate > $$temp;mv $$temp all"$function"_delay;rm -f $$temp
+    chmod 755 all"$function"_func
+    chmod 755 all"$function"_delay
+  fi #copy across allfunc_delay
+
+  cp "$template_dir"/allfunc_vbe all"$function"_vbe 2>/dev/null
+  num_args=$(ls -1 all"$function"_vbe 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  allfunc_vbe  that creates Alliance VBE files is missing." 1>&2
+    err=1
+  else
+    echo "#                      all"$function"_vbe    that creates Alliance VBE files."
+    timestamp=$(echo "# all"$function"_vbe "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" all"$function"_vbe | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp all"$function"_vbe;rm -f $$temp
+    chmod 755 all"$function"_vbe
+  fi #copy across allfunc_vbe
+
+  cp "$template_dir"/allfunc_lib all"$function"_lib 2>/dev/null
+  num_args=$(ls -1 all"$function"_lib 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  allfunc_lib  that creates Synopsys LIB files is missing." 1>&2
+    err=1
+  else
+    echo "#                      all"$function"_lib    that creates Synopsys LIB files."
+    timestamp=$(echo "# all"$function"_lib "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" all"$function"_lib | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp all"$function"_lib;rm -f $$temp
+    chmod 755 all"$function"_lib
+  fi #copy across allfunc_lib
+
+  cp "$template_dir"/allfunc_html all"$function"_html 2>/dev/null
+  num_args=$(ls -1 all"$function"_html 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  allfunc_html that creates web data sheets is missing." 1>&2
+    err=1
+  else
+    echo "#                      all"$function"_html   that creates web data sheets."
+    timestamp=$(echo "# all"$function"_html "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" all"$function"_html | \
+    sed "s/xxx_separator/$separator/g" | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp all"$function"_html;rm -f $$temp
+    chmod 755 all"$function"_html
+  fi #copy across allfunc_html
+
+  cp "$template_dir"/allfunc all"$function" 2>/dev/null
+  num_args=$(ls -1 all"$function" 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  allfunc      that runs the characterisation for "$function" is missing." 1>&2
+    err=1
+  else
+    echo "#                      all"$function"        that characterises all the cells in "$function"."
+    timestamp=$(echo "# all"$function" "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" all"$function" | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp all"$function";rm -f $$temp
+    chmod 755 all"$function"
+  fi #copy across allfunc
+
+  cp "$template_dir"/makenewpr . 2>/dev/null
+  num_args=$(ls -1 makenewpr 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  makenewpr  that writes basic Prop-Ramp timing is missing." 1>&2
+    err=1
+  else
+    echo "#                      makenewpr     writes basic Prop-Ramp timing."
+    timestamp=$(echo "# makenewpr "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" makenewpr | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp makenewpr;rm -f $$temp
+    chmod 755 makenewpr
+  fi #copy across makenewpr
+
+  cp "$template_dir"/makenewvbe . 2>/dev/null
+  num_args=$(ls -1 makenewvbe 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  makenewvbe  that stuffs the Alliance VBE files is missing." 1>&2
+    err=1
+  else
+    echo "#                      makenewvbe    that stuffs the Alliance VBE files."
+    timestamp=$(echo "# makenewvbe "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" makenewvbe | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp makenewvbe;rm -f $$temp
+    chmod 755 makenewvbe
+  fi #copy across makenewvbe
+
+  cp "$template_dir"/makenewdotlib . 2>/dev/null
+  num_args=$(ls -1 makenewdotlib 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  makenewdotlib  that stuffs the Synopsys LIB files is missing." 1>&2
+    err=1
+  else
+    echo "#                      makenewdotlib that stuffs the Synopsys LIB files."
+    timestamp=$(echo "# makenewdotlib "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" makenewdotlib | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp makenewdotlib;rm -f $$temp
+    chmod 755 makenewdotlib
+  fi #copy across makenewdotlib
+  cp "$template_dir"/makenewhtml . 2>/dev/null
+elif [ "$isflop" -eq 1 -o "$isflop" -eq 2 ]
+then
+  cp "$template_func_dir"/"$function"/all"$function"_func . 2>/dev/null
+  echo "# Creating the script  all"$function"_delay  that does the characterisation."
+  cp "$template_func_dir"/"$function"/all"$function"_delay . 2>/dev/null
+  echo "#                      all"$function"_vbe    that creates Alliance VBE files."
+  cp "$template_func_dir"/"$function"/all"$function"_vbe . 2>/dev/null
+  echo "#                      all"$function"_lib    that creates Synopsys LIB files."
+  cp "$template_func_dir"/"$function"/all"$function"_lib . 2>/dev/null
+  echo "#                      all"$function"_html   that creates web data sheets."
+  cp "$template_func_dir"/"$function"/all"$function"_html . 2>/dev/null
+  echo "#                      all"$function"        that characterises all the cells in "$function"."
+  cp "$template_func_dir"/"$function"/all"$function" . 2>/dev/null
+  echo "#                      makenewpr     writes basic Prop-Ramp timing."
+  cp "$template_func_dir"/"$function"/makenewpr . 2>/dev/null
+  echo "#                      makenewvbe    that stuffs the Alliance VBE files."
+
+  cp "$template_func_dir"/"$function"/makenewvbe . 2>/dev/null
+  num_args=$(ls -1 makenewvbe 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# The script  makenewvbe  that stuffs the Alliance VBE files is missing." 1>&2
+    err=1
+  else
+    echo "#                      makenewvbe    that stuffs the Alliance VBE files."
+    timestamp=$(echo "# makenewvbe "$date" "$owner)
+    sed "s/xxx_timestamp/$timestamp/g" makenewvbe | \
+    source ../../../bin/cptemplate > $$temp;mv $$temp makenewvbe;rm -f $$temp
+    chmod 755 makenewvbe
+  fi #copy across makenewvbe
+
+#  cp "$template_func_dir"/"$function"/makenewvbe . 2>/dev/null
+#  echo "#                      makenewdotlib that stuffs the Synopsys LIB files."
+
+  cp "$template_func_dir"/"$function"/makenewdotlib . 2>/dev/null
+  cp "$template_func_dir"/"$function"/makenewhtml . 2>/dev/null
+fi
+
+num_args=$(ls -1 makenewhtml 2>/dev/null | grep -c '^' )
+if [ "$num_args" -eq 0 ]
+then
+  echo "# The script  makenewhtml    that creates a data sheet in html format is missing." 1>&2
+  err=1
+else
+  echo "#                      makenewhtml   that makes a web data sheet."
+  for pin2 in $outputpin_list
+  do
+    output_pin=$pin2
+    break
+  done
+
+  function_title=$(grep '^title' "$htmlsource_dir"/"$function".info | sed 's/^title[  *]//g')
+  pin_label=$(grep '^pin_label' "$htmlsource_dir"/"$function".info | awk '{print $2 }')
+  timestamp=$(echo "# makenewhtml "$date" "$owner)
+  cat makenewhtml | \
+  sed "s/xxx_timestamp/$timestamp/g" | \
+  sed "s!xxx_function_title!$function_title!g" | \
+  sed "s/xxx_one_track_area/$one_track_area/g" | \
+  sed "s!xxx_htmlsource_dir!$htmlsource_dir!g" | \
+  sed "s!xxx_vbesourcedir!$vbesourcedir!g" | \
+  sed "s!xxx_ns_well_overlap!$ns_well_overlap!g" | \
+  sed "s!xxx_ew_well_overlap!$ew_well_overlap!g" | \
+  sed "s/xxx_cell_height/$cell_height/g" | \
+  sed "s!xxx_symbol_dir!$symbol_dir!g" | \
+  sed "s!xxx_layout_dir!$layout_dir!g" | \
+  sed "s/xxx_output_pin/$output_pin/g" | \
+  sed "s!xxx_home_page!$home_page!g" | \
+  sed "s/xxx_pin_label/$pin_label/g" | \
+  sed "s/xxx_library/$library/g" | \
+  sed "s/xxx_lambda/$lambda/g" | \
+  sed "s/xxx_techno/$techno/g" > $$temp;mv $$temp makenewhtml;rm -f $$temp
+  chmod 755 makenewhtml
+fi #copy across makenewhtml
+
+#
+#           ----- Copy across appropriate comb_func.cir and all cell_pin.cir files -----
+#
+set $(grep "^$function " "$libdir"/"$cell_list" ) 1>/dev/null
+if test $# -eq 0
+then
+  echo "# There is no function entry "$function" in "$cell_list" from which to make the CIR files." 1>&2
+  exit 1
+fi
+shift
+if test $# -eq 0
+then
+  echo "# There are no cells in "$cell_list" for which to make a CIR file." 1>&2
+  exit 1
+fi
+
+err=0
+while test $# -ne 0
+do
+  export cell="$function"v"$1"
+#
+#               ----- Copy the pmd files to local directory and check they are all there -----
+#
+  if test -f "$cell".pmd
+  then
+    if test "$pmddir"/"$library"/"$cell".pmd -nt "$cell".pmd
+    then
+      cp -p "$pmddir"/"$library"/"$cell".pmd . 2>/dev/null
+    fi
+  else
+    cp -p "$pmddir"/"$library"/"$cell".pmd . 2>/dev/null
+  fi
+  num_args=$(ls -1 "$cell".pmd 2>/dev/null | grep -c '^' )
+  if [ "$num_args" -eq 0 ]
+  then
+    echo "# Missing file  "$cell".pmd  which contains needed info for the characterisation files." 1>&2
+    err=1
+  else
+#
+#   Only make other files if the pmd for this cell exists and has been copied
+#
+#   Assign output thresholds in turn from technology.pmd, function.pmd and cell.pmd
+#
+    threshold_pct[0]=$(grep '^lower_lh_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[1]=$(grep '^upper_lh_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[2]=$(grep '^lower_hl_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[3]=$(grep '^upper_hl_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[4]=$(grep '^lower_hh_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[5]=$(grep '^upper_hh_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[6]=$(grep '^lower_ll_pct' ../"$technology_pmd" | awk '{print $2 }')
+    threshold_pct[7]=$(grep '^upper_ll_pct' ../"$technology_pmd" | awk '{print $2 }')
+
+    i=0
+    for threshold_type in lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct
+    do
+      temp=$(grep "^ *$threshold_type " "$function".pmd | awk '{print $2 }')
+      if [ "$temp" != "" ]
+      then
+        threshold_pct[$i]=$temp
+      fi
+      let i=$i+1
+    done
+
+    export pwidth=$(grep '^pwidth' "$cell".pmd | awk '{print $2 }')
+    export nwidth=$(grep '^nwidth' "$cell".pmd | awk '{print $2 }')
+    export min_capacitance=$(grep '^min_capacitance' "$cell".pmd | awk '{print $2 }')
+    export max_capacitance=$(grep '^max_capacitance' "$cell".pmd | awk '{print $2 }')
+    export max_fanout=$(grep '^max_fanout' "$cell".pmd | awk '{printf"%1s\n", $2 }')
+#
+#   allow unitcap in cell.pmd to override value in $technology_pmd
+#
+    local_unitcap=$(grep '^unitcap' "$cell".pmd | tr -s ' ' | sed  's/^unitcap\ //g')
+    if [ "$local_unitcap" != "" ]
+    then
+      export unitcap=$local_unitcap
+    else
+      export unitcap=$(grep '^unitcap' "$libdir"/$technology_pmd | awk '{print $2 }')
+    fi
+
+    echo "# Creating func sim file  "$cell"_func.cir ."
+    if [ "$isflop" -eq 1 -o "$isflop" -eq 2 ]
+    then
+      cp "$template_func_dir"/"$function"/"$function"_func.cir "$cell"_func.cir 2>/dev/null
+    else
+      if [ "$num_outputs" -eq 1 ]
+      then
+        cp "$template_func_dir"/comb_${num_inputs}_${num_outputs}_func.cir "$cell"_func.cir 2>/dev/null
+      else
+#       for multiple output cells copy specific template cell
+        cp "$template_func_dir"/"$function"_func.cir "$cell"_func.cir 2>/dev/null
+      fi
+    fi
+
+    num_args=$(ls -1 "$cell"_func.cir 2>/dev/null | grep -c '^' )
+    if [ "$num_args" -eq 0 ]
+    then
+      echo "# Function "$function" doesn't seem to have been created yet. No template comb_"${num_inputs}"_"${num_outputs}"_func.cir." 1>&2
+      err=1
+    else
+#
+#     find the cell's drive strength
+#
+      export drive=${cell##*v?x}
+      if [ "${drive:0:1}" -eq 0 ]
+      then
+        export drive=${drive:0:1}"."${drive:1:1}
+      fi
+#
+#     write the timestamp
+#
+      timestamp="$(echo " "$cell"_func.cir "$date" "$owner)"
+      sed "s/xxx_timestamp/\*$timestamp/g" "$cell"_func.cir | \
+        source ../../../bin/cptemplate > $$temp;mv $$temp "$cell"_func.cir;rm -f $$temp
+
+      func_sim_time=$(grep '^func_sim_time' "$libdir"/$technology_pmd | awk '{printf"%1s\n", $2 }')
+#
+#     set the logic function
+#
+      if [ "$num_outputs" -eq 1 ]
+      then
+        sed -i "s/xxx_logic_function/$logic_function/" "$cell"_func.cir
+      fi
+#
+#     write pin names to func CIR file by replacing xxx_labelled_pin#
+#
+      pin_index=0
+      for pin in $inputpin_list
+      do
+        let pin_index=$pin_index+1
+        sed -i "s/xxx_labelled_pin$pin_index/$pin/g" "$cell"_func.cir
+        let func_sim_time=$func_sim_time*2
+      done
+#
+#     adjust the func CIR sim time by the number of input pins
+#
+      let func_sim_time=$func_sim_time/2
+      sed -i "s/xxx_func_sim_time/$func_sim_time/g" "$cell"_func.cir
+
+      sed 's|^*  plot|  plot|' "$cell"_func.cir > "$cell"_fplot.cir
+    fi #copy across function_func.cir
+
+    for out_pin in $outputpin_list
+    do
+      if [ "$isflop" -eq 1 ]
+      then
+        echo "# Creating char sim file  "$cell"_cp_d.cir for hold checks."
+        cp "$template_func_dir"/"$function"/"$cell"_cp_d.cir . 2>/dev/null
+        echo "# Creating char sim file  "$cell"_cp_z.cir for output delays."
+        cp "$template_func_dir"/"$function"/"$cell"_cp_z.cir . 2>/dev/null
+        echo "# Creating char sim file  "$cell"_d_cp.cir for setup checks."
+        cp "$template_func_dir"/"$function"/"$cell"_d_cp.cir . 2>/dev/null
+        echo "# Creating char sim file  "$cell"_d_z.cir for data input power."
+        cp "$template_func_dir"/"$function"/"$cell"_d_z.cir . 2>/dev/null
+      elif [ "$isflop" -eq 2 ]
+      then
+        echo "# Creating char sim file  "$cell"_e_d.cir for hold checks."
+        cp "$template_func_dir"/"$function"/"$cell"_e_d.cir . 2>/dev/null
+        echo "# Creating char sim file  "$cell"_e_z.cir for output delays."
+        cp "$template_func_dir"/"$function"/"$cell"_e_z.cir . 2>/dev/null
+        echo "# Creating char sim file  "$cell"_d_e.cir for setup checks."
+        cp "$template_func_dir"/"$function"/"$cell"_d_e.cir . 2>/dev/null
+        echo "# Creating char sim file  "$cell"_d_z.cir for data input power."
+        cp "$template_func_dir"/"$function"/"$cell"_d_z.cir . 2>/dev/null
+      else
+#
+#       read and set transition thresholds from cell.pmd if defined there
+#
+        i=0
+        for threshold_type in lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct
+        do
+#
+#         first check if defined for all input pins
+#
+          temp=$(grep "^ *$threshold_type" "$cell".pmd | awk '{print $2 }')
+          if [ "$temp" != "" ]
+          then
+#
+#           threshold defined in cell.pmd
+#
+            threshold_pct[$i]=$temp
+          fi
+          let i=$i+1
+        done
+
+        err=0
+#
+#       write out a separate CIR file for each input pin in the cell
+#       get number of pins
+#
+        num_pins=0; num_outpins=0
+        for pin in $inputpin_list
+        do
+          let num_pins=$num_pins+1
+        done
+        for pin in $outputpin_list
+        do
+          let num_outpins=$num_outpins+1
+        done
+        for pin in $inputpin_list
+        do
+#
+#         check if, for this pin, there is a special threshold definition
+#
+          i=0
+          for threshold_type in lower_lh_pct upper_lh_pct lower_hl_pct upper_hl_pct lower_hh_pct upper_hh_pct lower_ll_pct upper_ll_pct
+          do
+            temp=$(grep "^ *$pin " "$cell".pmd | grep "$threshold_type" | awk '{print $3 }')
+            if [ "$temp" != "" ]
+            then
+#
+#             threshold defined for this pin in cell.pmd
+#
+              threshold_pct[$i]=$temp
+            fi
+            let i=$i+1
+          done
+          i=0
+          while [ "$i" -lt 8 ]
+          do
+            threshold[$i]=$(echo ${threshold_pct[$i]} | awk '{printf"%5.3f\n", $1/100}')
+            let i=$i+1
+          done
+          export threshold_pct
+          export threshold
+          echo "# Creating char sim file  "$cell"_"$pin"_"$out_pin".cir ."
+
+          cp ""$template_func_dir"/comb_"$num_pins"_"$num_outpins"_char.cir" "$cell"_"$pin"_"$out_pin".cir 2>/dev/null
+          num_args=$(ls -1 "$cell"_"$pin"_"$out_pin".cir 2>/dev/null | grep -c '^' )
+          if [ "$num_args" -eq 0 ]
+          then
+            echo "# Characterisation sim file "$cell"_"$pin"_"$out_pin".cir cannot be made. No template comb_"$num_pins"_"$num_outpins"_char.cir."
+            err=1
+            break
+          fi
+
+          unate_values=$(grep "^$pin" "$function".pmd | tr -s ' ' | \
+            sed "s/^$pin\ //" | grep "^$out_pin" | cut -f2 -d' ' | \
+            grep 'unate' | grep -v 'non_unate' | awk '{print $1}' |
+          while read line
+          do
+            echo -e $line" \c"
+          done )
+          unate_values=$(echo $unate_values | tr -s ' ')
+
+          pin_power=$(grep "^$pin" "$cell".pmd | tr -s ' ' | cut -f3 -d' ' | \
+            grep '^pin_power' | awk '{print $1}')
+          if [ "$pin_power" != pin_power ]
+          then
+            pin_power=$(grep "^$pin" "$function".pmd | tr -s ' ' | cut -f3 -d' ' | \
+              grep '^pin_power' | awk '{print $1}')
+          fi
+#
+#         This whole section is a kludge to transform the strings entered in the function.pmd file
+#         into a number which can be easily manipulated in winspice. I have not been able to do
+#         string manipulation in winspice, so this transformation has been made necessary.
+#         pmd keyword          string values        transformed to
+#         timing_sense string  negative_unate       -1
+#                              positive_unate       1
+#         when                 0, 00, 000           0
+#                              1. 01. 001           1
+#                              10, 010              2
+#                              11, 011              3
+#                              100, 101, 110, 111   4, 5, 6, 7
+#
+#         need to convert value of $unate_values to -1 or +1 because winspice cannot handle string comparisons well
+#
+          w_unate_values=999
+          if [ "$unate_values" = "negative_unate" ]
+          then
+            w_unate_values=-1
+          elif [ "$unate_values" = "positive_unate" ]
+          then
+            w_unate_values=1
+          elif [ "$unate_values" = "negative_unate positive_unate" ]
+          then
+            w_unate_values='-1 1'
+          elif [ "$unate_values" = "positive_unate negative_unate" ]
+          then
+            w_unate_values='1 -1'
+          else
+            echo "# Wrong timing_sense values given: must be negative_unate and/or positive_unate."
+          fi
+          if [ "$pin_power" = pin_power ]
+          then
+#
+#           add a pin power sim requirement
+#
+            w_unate_values=$w_unate_values' 0'
+          fi
+          sed -i "s/xxx_unate_values/$w_unate_values/g" "$cell"_"$pin"_"$out_pin".cir
+#
+#         the spice sim will be looped once if one timing_sense, twice if two (eg XOR gate) and thrice if input pin has its own power
+#
+          for i in 1 2 3 4 5 6 7 8
+          do
+            neg_pin_state[$i]=-1
+            pos_pin_state[$i]=-1
+            pin_pwr_state[$i]=-1
+          done
+#
+#         use the values of timing_sense that have been read from the function.pmd file; write to CIR file
+#
+          for timing_sense in $unate_values
+          do
+#
+#           get value of other pins when this pin simulated and write to CIR file
+#
+            other_pin_state=$(grep "^$pin " "$function".pmd | \
+              tr -s ' ' | \
+              sed  "s/^$pin //" | \
+              grep "^$out_pin " | \
+              sed "s/^$out_pin //" | \
+              grep "^$timing_sense " | \
+              sed "s/^$timing_sense //" | \
+              grep '^when ' | sed 's/^when\ //')
+            if [ "$other_pin_state" = "" ]
+            then
+              if [ "$num_pins" -eq 1 ]
+              then
+                other_pin_state=0
+              else
+                other_pin_state=-1
+              fi
+            fi
+            if [ "$timing_sense" = negative_unate ]
+            then
+              for i in 1 2 3 4 5 6 7 8
+              do
+                state=$(echo $other_pin_state | awk '{print $'$i'}')
+                if [ "$state" = "0" -o "$state" = "00" -o "$state" = "000" ]
+                then
+                  neg_pin_state[$i]=0
+                elif [ "$state" = "1" -o "$state" = "01" -o "$state" = "001" ]
+                then
+                  neg_pin_state[$i]=1
+                elif [ "$state" = "10" -o "$state" = "010" ]
+                then
+                  neg_pin_state[$i]=2
+                elif [ "$state" = "11" -o "$state" = "011" ]
+                then
+                  neg_pin_state[$i]=3
+                elif [ "$state" = "100" ]
+                then
+                  neg_pin_state[$i]=4
+                elif [ "$state" = "101" ]
+                then
+                  neg_pin_state[$i]=5
+                elif [ "$state" = "110" ]
+                then
+                  neg_pin_state[$i]=6
+                elif [ "$state" = "111" ]
+                then
+                  neg_pin_state[$i]=7
+                else
+                  neg_pin_state[$i]=-1
+                fi
+              done
+            fi
+            if [ "$timing_sense" = positive_unate ]
+            then
+              for i in 1 2 3 4 5 6 7 8
+              do
+                state=$(echo $other_pin_state | awk '{print $'$i'}')
+                if [ "$state" = "0" -o "$state" = "00" -o "$state" = "000" ]
+                then
+                  pos_pin_state[$i]=0
+                elif [ "$state" = "1" -o "$state" = "01" -o "$state" = "001" ]
+                then
+                  pos_pin_state[$i]=1
+                elif [ "$state" = "10" -o "$state" = "010" ]
+                then
+                  pos_pin_state[$i]=2
+                elif [ "$state" = "11" -o "$state" = "011" ]
+                then
+                  pos_pin_state[$i]=3
+                elif [ "$state" = "100" ]
+                then
+                  pos_pin_state[$i]=4
+                elif [ "$state" = "101" ]
+                then
+                  pos_pin_state[$i]=5
+                elif [ "$state" = "110" ]
+                then
+                  pos_pin_state[$i]=6
+                elif [ "$state" = "111" ]
+                then
+                  pos_pin_state[$i]=7
+                else
+                  pos_pin_state[$i]=-1
+                fi
+              done #for i in 1 2 3 4 5 6 7 8
+            fi
+          done #for timing_sense in $unate_values
+#
+#         get value of other pins when this pin simulated for power and write to CIR file
+#
+          other_pin_state=$(grep "^$pin " "$function".pmd | \
+            tr -s ' ' | \
+            sed  "s/^$pin //" | \
+            grep "^$out_pin " | \
+            sed "s/^$out_pin //" | \
+            grep '^pin_power ' | \
+            sed 's/^pin_power //' | \
+            grep '^when ' | sed 's/^when //')
+          if [ "$other_pin_state" = "" ]
+          then
+            if [ "$num_pins" -eq 1 ]
+            then
+              other_pin_state=0
+            else
+              other_pin_state=-1
+            fi
+          fi
+          if [ "$pin_power" = pin_power ]
+          then
+            for i in 1 2 3 4 5 6 7 8
+            do
+              state=$(echo $other_pin_state | awk '{print $'$i'}')
+              if [ "$state" = "0" -o "$state" = "00" -o "$state" = "000" ]
+              then
+                pin_pwr_state[$i]=0
+              elif [ "$state" = "1" -o "$state" = "01" -o "$state" = "001" ]
+              then
+                pin_pwr_state[$i]=1
+              elif [ "$state" = "10" -o "$state" = "010" ]
+              then
+                pin_pwr_state[$i]=2
+              elif [ "$state" = "11" -o "$state" = "011" ]
+              then
+                pin_pwr_state[$i]=3
+              elif [ "$state" = "100" ]
+              then
+                pin_pwr_state[$i]=4
+              elif [ "$state" = "101" ]
+              then
+                pin_pwr_state[$i]=5
+              elif [ "$state" = "110" ]
+              then
+                pin_pwr_state[$i]=6
+              elif [ "$state" = "111" ]
+              then
+                pin_pwr_state[$i]=7
+              else
+                pin_pwr_state[$i]=-1
+              fi
+            done
+          fi
+#
+#         quiet_pin is array holding names of pins not being simulated
+#
+          declare -a quiet_pin
+          i=0; j=0
+          for pin2 in $inputpin_list
+          do
+            let i=$i+1
+#
+#           the quiet_pin array is all the other pins not equal to labelled_pin
+#
+            if [ "$pin" != "$pin2" ]
+            then
+#
+#             this pin is not the active pin, so label it as a quiet one
+#
+              let j=$j+1
+              quiet_pin[$j]=$pin2
+            fi
+#
+#           substitute the pin names and the values of the quiet pins for the template placeholders
+#
+            sed "s/xxx_labelled_pin$i/$pin2/g" "$cell"_"$pin"_"$out_pin".cir | \
+              sed "s/xxx_quiet_pin$j/${quiet_pin[$j]}/g" > $$temp;mv $$temp "$cell"_"$pin"_"$out_pin".cir;rm -f $$temp
+          done
+          j=0
+          for pin2 in $outputpin_list
+          do
+            let i=$i+1
+            if [ "$out_pin" != "$pin2" ]
+            then
+#
+#             this pin is not the active output pin, so will be labelled differently in CIR file
+#
+              let j=$j+1
+              sed -i "s/xxx_labelled_pin$i/$j/g" "$cell"_"$pin"_"$out_pin".cir
+            else
+              sed -i "s/xxx_labelled_pin$i//g" "$cell"_"$pin"_"$out_pin".cir
+            fi
+          done
+#
+#         find the cell's drive strength
+#
+          export drive=${cell##*v?x}
+          if [ "${drive:0:1}" -eq 0 ]
+          then
+#
+#           change 05 drive strength to 0.5
+#
+            export drive=${drive:0:1}"."${drive:1:1}
+          fi
+#
+#         get the characterisation sim time (same for all cells in a technology)
+#
+          char_sim_time=$(grep '^char_sim_time ' "$libdir"/$technology_pmd | awk '{printf"%1s\n", $2 }')
+          char_sim_time2=$(grep '^char_sim_time2 ' "$libdir"/$technology_pmd | awk '{printf"%1s\n", $2 }')
+          char_sim_time3=$(grep '^char_sim_time3 ' "$libdir"/$technology_pmd | awk '{printf"%1s\n", $2 }')
+          char_sim_time4=$(grep '^char_sim_time4 ' "$libdir"/$technology_pmd | awk '{printf"%1s\n", $2 }')
+          timestamp="$(echo " "$cell"_"$pin"_"$out_pin".cir "$date" "$owner)"
+#
+#         write timestamp to CIR file; make other template placeholder substitutions; substitute active pin name
+#
+          sed "s/xxx_timestamp/\*$timestamp/g" "$cell"_"$pin"_"$out_pin".cir | \
+            sed "s/xxx_active_pin1/$pin/g" | \
+            source ../../../bin/cptemplate | \
+            sed "s/xxx_char_sim_time4/$char_sim_time4/g" | \
+            sed "s/xxx_char_sim_time3/$char_sim_time3/g" | \
+            sed "s/xxx_char_sim_time2/$char_sim_time2/g" | \
+            sed "s/xxx_char_sim_time/$char_sim_time/g" | \
+            sed "s/xxx_out_pin/$out_pin/g" | \
+            sed "s/xxx_active_pin$pin_index/$pin/g" > $$temp;mv $$temp "$cell"_"$pin"_"$out_pin".cir
+
+          for i in 1 2 3 4 5 6 7 8
+          do
+            sed "s/xxx_neg_pin_state$i/${neg_pin_state[$i]}/g" "$cell"_"$pin"_"$out_pin".cir | \
+              sed "s/xxx_pos_pin_state$i/${pos_pin_state[$i]}/g" | \
+              sed "s/xxx_pin_pwr_state$i/${pin_pwr_state[$i]}/g" > $$temp;mv $$temp "$cell"_"$pin"_"$out_pin".cir
+          done
+#
+#         put output pin names into CIR file
+#
+          i=0
+          for pin2 in $outputpin_list
+          do
+            let i=$i+1
+            sed -i "s/xxx_output_pin$i/$pin2/g" "$cell"_"$pin"_"$out_pin".cir
+          done
+        done # for pin in $inputpin_list
+      fi # test on value of isflop
+    done # for out_pin in $outputpin_list
+  fi
+  shift
+done
+
+# Add support for an xtra file
+
+cat > all"$function"_xtra <<!!
+#!/bin/bash
+
+# Script to create extra wsclib files
+
+dir=\$PWD
+function=\$(basename \$PWD)
+
+if test ! -f "\$function".pmd
+then
+  echo "# There is no function pmd file "\$function".pmd.  Please check." 1>&2
+  exit 1
+fi
+
+if test -d ../../spice_wsclib013
+then
+  if test -d ../../spice_wsclib013/\$function
+  then
+    cp -p *.lib ../../spice_wsclib013/\$function
+  fi
+fi
+
+# list the pmd files and run the script on the ones actually there
+set \$(ls -1 -x *.pmd ) 1>/dev/null
+shift                             # remove first pmd file \$function.pmd
+pmd_names="\$*"
+
+cd ../../../alliance/vbe/wsclib013
+for pmd in \$pmd_names
+do
+  cell=\${pmd%.pmd}
+  ./convert_vsc_wsc \$cell
+done
+
+cd ../../../html/cells/wsclib013
+./convert_cell \$function
+
+cd \$dir
+!!
+
+chmod 755 all"$function"_xtra
+cd $dir

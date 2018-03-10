@@ -1,0 +1,16 @@
+* Spice description of nr2av0x1
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:24:35
+* wsclib 0.13um values
+.subckt nr2av0x1 a b vdd vss z
+M01 06    a     vdd   vdd p  L=0.12U  W=0.88U  AS=0.2332P   AD=0.2332P   PS=2.29U   PD=2.29U
+M02 06    a     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M03 03    b     z     vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M04 z     b     vss   vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+M05 vdd   06    03    vdd p  L=0.12U  W=1.54U  AS=0.4081P   AD=0.4081P   PS=3.61U   PD=3.61U
+M06 vss   06    z     vss n  L=0.12U  W=0.44U  AS=0.1166P   AD=0.1166P   PS=1.41U   PD=1.41U
+C4  06    vss   0.561f
+C5  a     vss   0.343f
+C3  b     vss   0.424f
+C1  z     vss   0.960f
+.ends

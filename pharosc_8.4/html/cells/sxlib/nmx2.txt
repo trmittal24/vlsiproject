@@ -1,0 +1,1 @@
+The nmx2_x1 is a single stage inverting mux with a P/N ratio of 1.7. The control signal <SPAN CLASS="boldred">cmd</SPAN> can be 1 or 2 delay stages with a stage effort of about 2. The nmx2_x4 is a 3 stage inverting mux with stage efforts of about 1.7 and 3.9.  The control signal <SPAN CLASS="boldred">cmd</SPAN> can have 3 or 4 stages with stage efforts of about 1, 1.7 and 3.9.

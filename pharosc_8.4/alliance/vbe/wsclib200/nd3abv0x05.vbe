@@ -1,0 +1,38 @@
+ENTITY nd3abv0x05 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 3840;   
+  CONSTANT cin_a         : NATURAL := 5;      
+  CONSTANT cin_b         : NATURAL := 5;      
+  CONSTANT cin_c         : NATURAL := 4;      
+  CONSTANT rdown_a_z     : NATURAL := 8140;   
+  CONSTANT rdown_b_z     : NATURAL := 8140;   
+  CONSTANT rdown_c_z     : NATURAL := 8140;   
+  CONSTANT rup_a_z       : NATURAL := 9300;   
+  CONSTANT rup_b_z       : NATURAL := 9300;   
+  CONSTANT rup_c_z       : NATURAL := 9300;   
+  CONSTANT tpll_a_z      : NATURAL := 498;    
+  CONSTANT tpll_b_z      : NATURAL := 456;    
+  CONSTANT tphl_c_z      : NATURAL := 111;    
+  CONSTANT tplh_c_z      : NATURAL := 234;    
+  CONSTANT tphh_b_z      : NATURAL := 325;    
+  CONSTANT tphh_a_z      : NATURAL := 256;    
+  CONSTANT transistors   : NATURAL := 8       
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  c	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END nd3abv0x05;
+
+ARCHITECTURE behaviour_data_flow OF nd3abv0x05 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on nd3abv0x05"
+  SEVERITY WARNING;
+  z <= not ((not a and not b) and c) after 1000 ps;
+END;

@@ -1,0 +1,1 @@
+The no4_x1 is a single stage 4-NOR with P/N ratio of 1.1. The no4_x4 is a 3 stage 4-NOR with stage efforts of about 1.4 and 3.9.

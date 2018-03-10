@@ -1,0 +1,398 @@
+revision 8.4
+date: Sep 16, 2007; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 8.3, 8.2, 8.1, 8.0
+       1. Added missing MBK_SCALE_X definition to layout_loop scripts
+          in the examples directory, plus other small embellishments.
+       2. Added html help pages for use with a Linux Live CD.
+revision 8.3
+date: Jul 30, 2007; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 8.2, 8.1, 8.0
+       1. The vsclib and wsclib has been extended to 322 cells with
+          the inclusion of a latch function.
+       2. The examples directory shows the libraries with looped
+          synthesis to find the fastest netlist.
+       3. Alliance VBE library files have simulation delay set to load
+          capacitance of 25fF.
+revision 8.2
+date: May 31, 2007; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 8.1, 8.0
+       1. The vsclib has been extended to 320 cells. Many of the
+          existing cells have been redrawn.
+       2. Added wsclib, ssxlib, rgalib and vgalib.
+       3. Added vtclib, wtclib, stxlib and vtxlib where ALU2 maps
+          to metal-1. This allows nero to route metal-1.
+       4. The spice function checks use the logic function from
+          the pmd file and automatically check that the cell response
+          matches the logic function.
+       5. First flip-flop added to vsclib and wsclib.
+       6. All libraries have been recharacterised.
+revision 8.1
+date: Aug 31, 2006; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 8.0
+       1. Directory examples updated with adder4 and multi8 layout
+          using all the libraries. Layout flow for vsc/vtc/wsc/wtc
+          libraries shows how to insert asymmetric contacts with
+          no DRC violations.
+revision 8.0
+date: Aug 30, 2006; author: Graham Petley; state: alpha;
+requires: ;
+compatible:
+       1. The vsclib has been extended to 281 cells.
+       2. ssxlib, vsxlib libraries made from sxlib and vxlib using
+          2um rather than 1um rules.
+       3. vtclib, stxlib and vtxlib libraries made which route
+          metal one layer higher. That is, metal-2 is routed by
+          ALU3 etc. ALU1 is used for internal metal-1 cell connections
+          and ALU2 for metal-1 connecting different cells.
+       4. vsclib changed so that the vertical routing tracks start
+          half a track inside the AB instead of 1 track.
+       5. wsclib and wtclib created from vsclib and vtclib. These
+          libraries are 80 lambda tall with substrate and well
+          contacts shared between cell rows.
+       6. More accurate characterisation.
+revision 7.3
+date: May 1, 2005; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 7.2, 7.1, 7.0
+       1. The vsclib has been extended to 209 cells. These support an
+          experiment to find which cells really improve the timing
+          quality of Alliance synthesis.
+       2. The 3 libraries have been recharacterised.
+revision 7.2
+date: Dec 15, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 7.1, 7.0
+       1. Added cells
+          an3v0x05 an4v0x05
+          aoi211v0x05 x1 x2
+          bf1v0x6
+          cgi2v0x2
+          cgi2abv0x05 x1 x2
+          nd2abv0x05
+          nd2av0x05 x1 x2
+          nr2av1x05 nr2av0x1 x2
+          oai31v0x05 x1 x2
+          or2v0x05 or3v3x2 or4v3x2
+          xaoi21v0x05 x1 x2
+          xaon21v0x05 x1 x2
+          xnr2v0x2
+          xnr3v1x05 x1 x2
+          xooi21v0x05 x1 x2
+          xoon21v0x05 x1 x2
+          xor2v0x2
+          xor3v0x05 v1x05 x1 x2
+          to the vsclib, giving a total of 165 cells.
+       2. 0.13um GDS files for the vsclib are now supplied.
+revision 7.1
+date: Nov 21, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 7.0
+       1. The content of the examples directory has been expanded to
+          include the adder4 and multi8 circuits.
+       2. Each example has been synthesised with a number of synthesis
+          flows, each documented with a flow.txt and README file, and
+          the final layout and critical path.
+       3. Many detail changes were made to the vsclib and vxlib cells
+          in order to improve their routability. This should be of
+          benefit to any complex layout using these librarie. 14 vxlib
+          and 69 vsclib cells were changed.
+revision 7.0
+date: Sep 3, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 
+       1. The vsclib drawn AB has been adjusted so that it is a
+          multiple of 8 lambda wide, rather than the cell width.
+       2. The layer used for the drawn AB in the vsclib has changed
+          from CALU7 to TALU7, along with the support files in the etc
+          directory.
+       3. The vsclib contact spacing rule was reduced from 6 to 5
+          lambda, and many cells updated with extra contacts as a
+          result. The new layout has been recharacterised.
+       4. The adder4 example has been moved to the examples directory
+          and extensively reworked in all 3 libraries.
+revision 6.0
+date: Aug 19, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 
+       1. The Alliance sxlib has been characterised with the 0.13um
+          Berkeley spice parameters. There are now 3 libraries using
+          this timing in the release. The sxlib cells which have been
+          characterised are combinatorial functions with up to 4
+          inputs, a total of 61 cells.
+       2. The vsclib characterisation methodology has been revised up
+          to be the same as used for the vxlib and sxlib.
+       3. The web data book has been enhanced with better graphics,
+          and the pages are automatically created with the other files
+          during the characterisation. The layout is actual 0.13um
+          geometry, rather than nominal 2um lambda rules.
+       4. The vxlib cells have been redrawn and many cells added.
+          There are now 96 cells in the release.
+       5. The vsclib cells have also been redrawn, and the halfadder
+          cell added. There are 121 cells in this release.
+       6. Horizontal CALU1 has been removed from the Graal cells for
+          the vsclib and vxlib. The TALU1 layer now marks the extent
+          of ALU1 connected to cell pins.
+       7. The 0.13um Alliance RDS and Magic Tech rules files have been
+          updated to the latest version of the generic 0.13um rule
+          set.
+       8. The adder4 example has been completed in all three
+          libraries.
+revision 5.0
+date: May 25, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 
+       1. Every cell in vxlib redrawn. Cells increased from 43 to 56.
+       2. Characterisation routines improved and used to characterise
+          the vxlib. The vsclib still uses the previous routines.
+       3. Synopsys .LIB files now provided for vsclib013 and vxlib013.
+       4. Xcircuit schematic files drawn for the vxlib.
+       5. The vxlib characterisation routine also writes the html data
+          sheet using the timing numbers produced by the spice runs.
+          The layout graphics come from the Microwind layout.
+revision 4.2
+date: May 3, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 4.1, 4.0
+       1. Fixed problems with an2, mxi2 and nd2ab characterisation
+          scripts.
+       2  Provided true batch script for Windows; can't find one for
+          Linux yet.
+revision 4.1
+date: Apr 30, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 4.0
+       1. Fixed characterisation scripts which were using absolute
+          addresses instead of relative ones.
+revision 4.0
+date: Apr 28, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 3.4, 3.3, 3.2, 3.1, 3.0;
+       1. Added max_transition to all input pins in .LIB file. Set
+          value to 1500ps except for inputs where a slow transition
+          can give a negative delay. Here the max_transition was set
+          to 1000ps.
+       2. Added a Microwind directory with all vsclib layout cells in
+          Microwind .MSK format.
+          /library/alliance/cells/vsclib for Alliance cells
+          /library/magic/cells/vsclib for Magic cells
+          /library/uwind/cells/vsclib for Microwind cells
+revision 3.4
+date: Apr 27, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 3.3, 3.2, 3.1, 3.0;
+       1. Hacked all CIF files coming from Alliance to insert a space
+          after the L, B, C and DS commands.
+       2. Corrected mxi2 and nd2ab input power tables .LIB file.
+revision 3.3
+date: Apr 26, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 3.2, 3.1, 3.0;
+       1. Fixed typos in .LIB file.
+       2. Changed current units in .LIB from uA to mA.
+revision 3.2
+date: Apr 21, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 3.1, 3.0;
+       1. Added power characterisation for all vsclib library cells.
+       2. Added wireload tables to .LIB file.
+       3. Added various default definitions to .LIB file.
+       4. Added nr3v1x05, bf1v5x05,x1,x2,x4 and an3v4x2 cells.
+       5. Improved layout of nr3v0x2, nd2abv0x1, nd2abv0x2 cells.
+revision 3.1
+date: Apr 16, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 3.0;
+       1. Corrected input transition syntax for power LUTs.
+       2. Added power characterisation for nd2 cells.
+revision 3.0
+date: Apr 15, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.9, 2.8, 2.7, 2.6, 2.5, 2.4, 2.3, 2.2, 2.1, 2.0;
+       1. Fixed error in mxi21 .LIB file.
+       2. Added power characterisation for iv1 cells.
+revision 2.9
+date: Apr 14, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.8, 2.7, 2.6, 2.5, 2.4, 2.3, 2.2, 2.1, 2.0;
+       1. Added non_unate fields to .LIB file where needed.
+revision 2.8
+date: Apr 13, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.7, 2.6, 2.5, 2.4, 2.3, 2.2, 2.1, 2.0;
+       1. Commented rise_resistance and fall_resistance in .LIB file.
+       2. Corrected typo related pin to related_pin in .LIB file.
+       3. Corrected lookup table model for dly cells and iv1vv0x12.
+revision 2.7
+date: Apr 13, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.6, 2.5, 2.4, 2.3, 2.2, 2.1, 2.0;
+       1. Corrected } .LIB syntax for aoi31, oai211.
+       2. Corrected typo timing sense to timing_sense for mxi2,
+          xnr2, xor2 in .LIB file.
+       3. Added sdf_cond construct to .LIB file where required.
+revision 2.6
+date: Mar 28, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.5, 2.4, 2.3, 2.2, 2.1, 2.0;
+       1. Improved rounding errors in logical effort calculation.
+       2. Renamed nd4v0x2 nd4v0x3 and added new nd4v0x2.
+       3. Added an2, an3, an4, or2, or3, or4 and bf1 non-inverting
+          cells.
+revision 2.5
+date: Feb 10, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.4, 2.3, 2.2, 2.1, 2.0;
+       1. Changed layout for nd3v0x05,x1,x2,x3,x6, nd4v0x05,x1,x2,
+          nr3v0x05.
+       2. Added iv1v2x2 as reference inverter for logical effort
+          calculations. This has a P:N transistor ratio = mu = 2.25.
+revision 2.4
+date: Jan 30, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.3, 2.2, 2.1, 2.0;
+       1. Latest Excel spreadhseets included.
+       2. Fixed typo in aoi31v0x05, x1 VBE files.
+       3  Added missing piece of CALU1 to iv1v0x2 and iv1v1x2.
+       4. Adjusted AB of tie_x0, rowend_x0, vddtie and vsstie, and
+          corrected CATAL file for rowend_x0 and tie_x0 definitions.
+       5. Changed implant overlap of AB from 0.15um to 0.18um in
+          vsc013.tech27 file.
+       6. adder4 example updated with full 68 cells and more complete
+          description of workaround needed to produce acceptable
+          output CIF file.
+revision 2.3
+date: Jan 29, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.2, 2.1, 2.0;
+       1. New layout for iv1v0x2,x6,x8,x12, aoi22v0x1, cgi2v0x05,x1,
+          nd2v0x05, nd4v0x1,x2, nr2v1x05,x7, xor2v0x05,x1, xor2v1x1,
+          xor2v2x1, xor2x2x2.
+       2. Added mxi2v0x05,x1,x2, iv1v1x05,x1,x2,x4, nr2v1x1,
+          aoi31v0x05,x1, oai211v0x05,x1.
+       3. Added symbol view to xcircuit schematics.
+       4. Added logical effort values for cells in vsclib013.lib.
+revision 2.2
+date: Jan 4, 2004; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.1, 2.0;
+       1. New layouts for iv1v0x05, iv1v0x1 and aoi22v0x05.
+       2. Renamed nd2v0x3->nd2v0x4 nd2v0x5->nd2v0x6 nd2v0x7->nd2v0x8
+          nd3v0x5->nd3v0x6 nr2v0x3->nr2v0x4 nr2v0x4->nr2v0x5.
+       3. Added nd3v0x2 and nr2v0x7 to vsclib.
+revision 2.1
+date: Dec 23, 2003; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 2.0;
+       1. Added rowend_x0, tie_x0, vddtie and vsstie AP cells to the 
+          vsclib. Needed for Alliance P&R.
+       2. Added CATAL and CATAL_MERGE files to vsclib so that loon,
+          ocp and nero will run, and that existing CIF files can be
+          merged into the completed layout.
+       3. Added Alliance adder4 example synthesised and laid out with
+          vsclib.
+       4. Fixed type in xsch.par.
+       5. Corrected some DRC rules in the vsc013 RDS files.
+revision 2.0
+date: Dec 21, 2003; author: Graham Petley; state: alpha;
+requires: ;
+compatible: ;
+       1. Major upgrade, with changes to most of the cells.
+       2. The maximum transistor widths in the cells were extended
+          from P=27 to P=28 lambda, and N=19 to N=20 lambda.
+       3. The routines to write the Alliance CIF cells from the AP 
+          cells was improved. The previous one could give short
+          circuits.
+       4. The abutment box layer (AB) in the Alliance AP cells (layer
+          CALU7) is now written out to the CIF and imported into
+          magic.
+       5. The cifoutput routine from the magic cells was fixed. The
+          old one could output connector labels that were not
+          attached to any geometry.
+       6. The routine to make the N and P-impant layers from magic
+          was improved, using the AB layer to define the maximum
+          extent.
+       7. Two hacks added to the CIF file creation process for the
+          vsclib (not yet for the vxlib):
+          (a) CIF files written from AP hacked to remove node
+          identifers (4N lines) and convert external connectors 
+          (4X lines) to 4N lines. The transistor identifiers (which
+          use 4N labels) are wrongly visualised in Dreal, and the 4X
+          identifiers are not visualised at all.
+          (b) CIF files converted from using the magic CIF extensions
+          (lines starting with 94) to Alliance CIF extensions (lines
+          starting with 4N) now have the AB added back in. The AB
+          (line starting with 4A) is not supported in magic and this
+          information is lost unless hacked back in.
+       8. This release includes full characterisation spice decks for
+          the vsclib in a generic 0.13um technology. At this moment,
+          these are not available for the vxlib because a different
+          conversion is needed to read it into magic, from where the
+          cell spice subcircuits are written. The difference is that
+          magic uses a transistor channel length of 2 lambda, the same
+          as the vsclib, so the conversion is relatively easy. The
+          vxlib uses a 1 lambda channel length.
+       9. The spice decks used for characterisation are in directory
+          magic/spice_vsclib013
+          A README file there explains how to use them.
+       10.The spice decks and associated scripts produce Alliance VBE
+          files with 0.13um timing, and a Synopsys .LIB format file
+          with both Prop-Ramp and Table Lookup (LUT) timing
+          information.
+       11.The schematics for all the vsclib cells have been drawn with
+          xcircuit and are in directory 
+          xcircuit/cells/vsclib
+          One nice feature of xcircuit is that it doesn't use a
+          proprietary file format to store the schematic data, but
+          instead uses a regular Postscript file with extension .ps.
+revision 1.0
+date: Oct 20, 2003; author: Graham Petley; state: alpha;
+requires: ;
+compatible: 0.9;
+       1. The Magic cells have been recreated using the vsc200.tech27
+          technology file for the cif read in. The original Magic
+          cells used generic contacts which caused problems with DRC.
+          The new Magic cells have regular poly and diffusion
+          contacts. The vsc200.tech27 technology file also checks the
+          vsclib DRC rules, though not fully at this time.
+       2. From the Magic cells, a set of 0.13um Spice subcircuits has
+          been produced which can be simulated in the same way as the
+          Alliance ones.
+          The Magic Spice subcircuits are more accurate because (a)
+          the parasitic diffusion capacitance is calculated correctly
+          (Alliance simply sums the transistor source/drain width with
+          no adjustment for shared diffusion or contact are); and (b)
+          the estimation of the fixed capacitance is more accurate.
+       3. 2um and 0.13um CIF files have been written from Magic, and
+          can be viewed in DREAL with the vsc200_mosis.rds and
+          vsc013_mosis.rds technology files.
+       4. On the Alliance side, all the RDS technology files have been
+          updated.
+          sxlib013.rds, vxlib013.rds, vsc013.rds and vsc013_mosis.rds
+          have improved fixed capacitance coefficients correlated to
+          the Magic numbers.
+          Using this, the Alliance Spice subcircuits for the vsclib
+          and vxlib have also been remade.
+       5. Finally, the iv1v0x05 and iv1v0x1 from the vsclib and
+          aoi21_x05 and aoi21_x1 from the vxlib have been updated to
+          fix a metal1 coverage of contact problem (caused by the fact
+          that the assymetric contacts are not checked by the DRC).
+          This means that there are new versions of the vsclib and
+          vxlib in Alliance format, and new vsclib and vxlib CIF files
+          written by s2r.
+revision 0.9
+date: Sep 25, 2003; author: Graham Petley; state: alpha;
+requires: ;
+compatible: ;
+       1. Initial release.
+       2. 50 vsclib and 43 vxlib cells. These are the basic single
+          stage inverting functions with various drive strengths. The
+          vsclib cells are 72 lambda tall and on am 8 lambda pitch.
+          The vxlib cells are 100 lambda tall and on a 10 lambda pitch
+          (the same as the Alliance sxlib).
+       3. The available formats are Alliance (AP), CIF (0.13um generic
+          technology), Magic (MAG), Excel (XLS) and Spice (0.13um
+          feature size).

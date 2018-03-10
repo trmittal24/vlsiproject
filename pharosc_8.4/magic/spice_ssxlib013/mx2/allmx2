@@ -1,0 +1,11 @@
+#!/bin/bash
+# allmx2 2007-07-06:07h32 graham
+
+./allmx2_delay $1
+./allmx2_vbe
+./allmx2_lib
+./allmx2_html
+if test -x allmx2_xtra
+then
+  ./allmx2_xtra
+fi

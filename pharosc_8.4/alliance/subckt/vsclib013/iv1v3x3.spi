@@ -1,0 +1,12 @@
+* Spice description of iv1v3x3
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:11:52
+* vsclib 0.13um values
+.subckt iv1v3x3 a vdd vss z
+M01 z     a     vdd   vdd p  L=0.12U  W=1.155U AS=0.306075P AD=0.306075P PS=2.84U   PD=2.84U
+M02 vdd   a     z     vdd p  L=0.12U  W=1.045U AS=0.276925P AD=0.276925P PS=2.62U   PD=2.62U
+M03 z     a     vss   vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+M04 vss   a     z     vss n  L=0.12U  W=1.1U   AS=0.2915P   AD=0.2915P   PS=2.73U   PD=2.73U
+C3  a     vss   0.358f
+C2  z     vss   0.926f
+.ends

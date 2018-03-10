@@ -1,0 +1,38 @@
+ENTITY an3v4x2 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 4480;   
+  CONSTANT cin_a         : NATURAL := 5;      
+  CONSTANT cin_b         : NATURAL := 5;      
+  CONSTANT cin_c         : NATURAL := 5;      
+  CONSTANT rdown_a_z     : NATURAL := 2310;   
+  CONSTANT rdown_b_z     : NATURAL := 2310;   
+  CONSTANT rdown_c_z     : NATURAL := 2310;   
+  CONSTANT rup_a_z       : NATURAL := 2560;   
+  CONSTANT rup_b_z       : NATURAL := 2560;   
+  CONSTANT rup_c_z       : NATURAL := 2560;   
+  CONSTANT tphh_c_z      : NATURAL := 321;    
+  CONSTANT tphh_b_z      : NATURAL := 384;    
+  CONSTANT tphh_a_z      : NATURAL := 426;    
+  CONSTANT tpll_a_z      : NATURAL := 463;    
+  CONSTANT tpll_b_z      : NATURAL := 507;    
+  CONSTANT tpll_c_z      : NATURAL := 549;    
+  CONSTANT transistors   : NATURAL := 8       
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  c	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END an3v4x2;
+
+ARCHITECTURE behaviour_data_flow OF an3v4x2 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on an3v4x2"
+  SEVERITY WARNING;
+  z <= ((a and b) and c) after 1100 ps;
+END;

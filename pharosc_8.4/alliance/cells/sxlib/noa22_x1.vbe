@@ -1,0 +1,38 @@
+ENTITY noa22_x1 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 1500;
+  CONSTANT cin_i0        : NATURAL := 7;      
+  CONSTANT cin_i1        : NATURAL := 7;      
+  CONSTANT cin_i2        : NATURAL := 8;      
+  CONSTANT rdown_i0_nq   : NATURAL := 1840;   
+  CONSTANT rdown_i1_nq   : NATURAL := 1840;   
+  CONSTANT rdown_i2_nq   : NATURAL := 1160;   
+  CONSTANT rup_i0_nq     : NATURAL := 2900;   
+  CONSTANT rup_i1_nq     : NATURAL := 2910;   
+  CONSTANT rup_i2_nq     : NATURAL := 2700;   
+  CONSTANT tphl_i0_nq    : NATURAL := 44;     
+  CONSTANT tphl_i1_nq    : NATURAL := 45;     
+  CONSTANT tphl_i2_nq    : NATURAL := 48;     
+  CONSTANT tplh_i2_nq    : NATURAL := 75;     
+  CONSTANT tplh_i1_nq    : NATURAL := 54;     
+  CONSTANT tplh_i0_nq    : NATURAL := 62;     
+  CONSTANT transistors	 : NATURAL := 6
+);
+PORT (
+  i0	 : in  BIT;
+  i1	 : in  BIT;
+  i2	 : in  BIT;
+  nq	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END noa22_x1;
+
+ARCHITECTURE behaviour_data_flow OF noa22_x1 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on noa22_x1"
+  SEVERITY WARNING;
+  nq <= not (((i0 and i1) or i2)) after 110 ps;
+END;

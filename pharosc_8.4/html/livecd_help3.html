@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>gawk</TITLE>
+	<LINK REL=HOME HREF="../index.html">
+	<LINK REL=UP HREF="livecd_help2.html">
+	<LINK REL=PREV HREF="livecd_help2.html">
+	<LINK REL=NEXT HREF="livecd_help3a.html">
+	<LINK REL=AUTHOR TITLE="Graham Petley" HREF="mailto:graham.petley@vlsitechnology.org">
+	<META NAME=DESCRIPTION CONTENT="Help on using the vsclib under Windows and Linux Live CD.">
+	<META NAME="GENERATOR" CONTENT="La mano di Petlio">
+	<META NAME="AUTHOR" CONTENT="Graham Petley">
+	<META NAME="CREATED" CONTENT="20070827;15100000">
+	<META NAME="CHANGED" CONTENT="20070917;10000000">
+	<LINK REL="icon" HREF="logo.gif" TYPE="image/x-icon">
+	<LINK REL="STYLESHEET" HREF="moslibraries.css" TYPE="text/css">
+</HEAD>
+<BODY>
+<DIV CLASS="pagebox">
+<TABLE CLASS="nav" BORDER=0>
+<TR>
+<TD>
+<A HREF="../index.html">vlsitechnology.org</A>
+<A HREF="win_help1.html">/Live CD help</A>
+<A HREF="livecd_help3.html">/<TT>gawk</TT> &amp; <TT>awk</TT></A></TD>
+<TD CLASS="nav">
+<UL CLASS="dir">
+<LI><A HREF="livecd_help2.html">UP</A></LI>
+<LI><A HREF="livecd_help2.html">PREV</A></LI>
+<LI><A HREF="livecd_help3a.html">NEXT</A></LI>
+</UL></TD></TR>
+<TR><TD COLSPAN=2>
+<H1 CLASS="content"><TT>gawk</TT> and <TT>awk</TT></H1>
+</TD></TR></TABLE>
+
+<DIV CLASS="col_1">
+<P>&nbsp;<BR>Linux help
+<UL CLASS="links">
+<LI><A HREF="linux_help1.html">tar download</A></LI>
+<LI><A HREF="linux_help2.html">viewing layout</A></LI>
+<LI><A HREF="linux_help3.html">Graal layout</A></LI>
+<LI><A HREF="linux_help4.html">Graal rule sets</A></LI>
+<LI><A HREF="linux_help5.html">Magic layout</A></LI>
+<LI><A HREF="linux_help6.html"><TT>CIF</TT> layout</A></LI>
+<LI><A HREF="linux_help7.html"><TT>GDS</TT> layout</A></LI>
+<LI><A HREF="linux_help8.html">Spice char.</A></LI>
+<LI><A HREF="linux_help9.html">new cell char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Windows help
+<UL CLASS="links">
+<LI><A HREF="win_help1.html">Windows options</A></LI>
+<LI><A HREF="win_help2.html">tar download</A></LI>
+<LI><A HREF="win_help3.html">viewing layout</A></LI>
+<LI><A HREF="win_help4.html">Spice char.</A></LI>
+</UL>
+<P>&nbsp;<BR>Linux Live CD
+<UL CLASS="links">
+<LI><A HREF="livecd_help2.html">system config</A></LI>
+<LI><A HREF="livecd_help3.html" CLASS="current"><TT>gawk</TT> and <TT>awk</TT></A></LI>
+<LI><A HREF="livecd_help3a.html">openmotif</A></LI>
+<LI><A HREF="livecd_help4.html">add to panel</A></LI>
+<LI><A HREF="livecd_help5.html">terminal app</A></LI>
+<LI><A HREF="livecd_help6.html">window prefs</A></LI>
+<LI><A HREF="livecd_help7.html">text editor</A></LI>
+<LI><A HREF="livecd_help8.html">Gedit instances</A></LI>
+<LI><A HREF="livecd_help9.html">startup window</A></LI>
+<LI><A HREF="livecd_help10.html">unpacking library</A></LI>
+<LI><A HREF="livecd_help11.html">running example</A></LI>
+<LI><A HREF="livecd_help12.html">viewing layout</A></LI>
+<LI><A HREF="livecd_help13.html">saving work</A></LI>
+</UL>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+Find out which variant and version of <TT>awk</TT> is being
+used by the command
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ awk -W version</PRE></TD></TR></TABLE>
+<P>
+If, as on the right, it is <TT>mawk</TT> then <TT>gawk</TT>
+must be installed. The installation of <TT>gawk</TT> also
+changes <TT>awk</TT> to be <TT>gawk</TT>.
+</DIV>
+
+<DIV CLASS="col_3">
+<P>
+The commands are entered into a terminal window. See
+the <A HREF="livecd_help5">terminal help page</A> to find how to open a terminal window.
+</DIV>
+<DIV CLASS="col_3pic">
+<IMG SRC="../gif/install_gawk1.gif" NAME="which awk?" ALIGN=LEFT BORDER=0 ALT="which awk?" TITLE="which awk?">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+Software installation is done with the Synaptic package manager.
+This is the equivalent of the Windows <TT>Add Remove Software</TT>
+in the Control Panel.
+<P>
+The software is kept in <I>repositories</I> which can be on the web
+or, in our case where we want a self contained installation, on the
+CDROM.
+</DIV>
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/install_gawk2.gif" NAME="Synaptic package manager" ALIGN=LEFT BORDER=0 ALT="Synaptic package manager" TITLE="Synaptic package manager">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+<TT>gawk</TT> is present on the CDROM used to boot the computer with Ubuntu
+but is not installed. Installed here means loaded into RAM memory and not onto the
+hard disk, which remains untouched by the Live CD.
+<P>
+With the Ubuntu 7.04 Feisty Frolic Live CD, the CDROM repository is on the
+add software search path. However, with the earlier 6.10 Edgy Egg, by default Synaptic
+is set up to find new software from external repositories (collections of
+Ubuntu compatible software) and not from the CDROM.
+<P>
+The screenshot on the right shows how to add the CDROM to the package search path.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/install_gawk3.gif" NAME="add CDROM to search path" ALIGN=LEFT BORDER=0 ALT="add CDROM to search path" TITLE="add CDROM to search path">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+If the CDROM is not on the search path and there is no connection to the
+internet, then trying to install <TT>gawk</TT> will give an error like
+the screenshot on the right.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/install_gawk6.gif" NAME="install gawk error" ALIGN=LEFT BORDER=0 ALT="install gawk error" TITLE="install gawk error">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+Click on <TT>Search</TT> and search for <TT>awk</TT> as
+shown in the screenshot on the right.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/install_gawk4.gif" NAME="add CDROM to search path" ALIGN=LEFT BORDER=0 ALT="add CDROM to search path" TITLE="add CDROM to search path">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The search results for <TT>awk</TT> show all programs with the string
+<TT>awk</TT> in the name or description. <TT>mawk</TT> is marked as already
+installed, while <TT>gawk</TT> not. Select <TT>gawk</TT> and click thru on
+<TT>Apply</TT> and this will install <TT>gawk</TT>.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/install_gawk5.gif" NAME="install gawk" ALIGN=LEFT BORDER=0 ALT="install gawk" TITLE="install gawk">
+</DIV>
+</DIV>
+
+<DIV CLASS="col_2edge">
+<DIV CLASS="col_2">
+<P CLASS="first">
+The installed variant and version of <TT>awk</TT> can be
+checked as before with the command
+<TABLE BGCOLOR="#E7FFE7">
+<TR><TD>
+<PRE>
+$ awk -W version</PRE></TD></TR></TABLE>
+<P>
+After a successful <TT>gawk</TT> installation there will be a screenshot
+similar to the one on the right.
+</DIV>
+
+<DIV CLASS="col_3pic">
+<P>
+<IMG SRC="../gif/install_gawk7.gif" NAME="check gawk installation" ALIGN=LEFT BORDER=0 ALT="check gawk installation" TITLE="check gawk installation">
+</DIV>
+</DIV>
+
+</DIV>
+</DIV>
+<P><BR>
+<P><BR>
+<P><BR>
+</BODY>
+</HTML>

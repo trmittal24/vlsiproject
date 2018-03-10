@@ -1,0 +1,184 @@
+timestamp 1520701609
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_98_17#" 32 0 98 17 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_81_17#" 32 0 81 17 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_44_17#" 32 0 44 17 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "cp" 536 0 126 43 p 0 0 0 0 142 118 0 0 0 0 0 0 104 52 0 0 0 0
+equiv "cp" "cp"
+node "a_98_51#" 155 0 98 51 pdiff 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n55_11#" 101 0 -55 11 ndiff 95 48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_n74_11#" 101 0 -74 11 ndiff 95 48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_81_58#" 71 0 81 58 pdiff 0 0 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_44_52#" 71 0 44 52 pdiff 0 0 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "n4" 761 0 23 37 p 48 28 78 40 132 116 0 0 0 0 0 0 292 154 0 0 0 0
+equiv "n4" "n4"
+equiv "n4" "n4"
+equiv "n4" "n4"
+node "ci" 1607 0 49 42 p 42 26 67 36 344 292 0 0 0 0 0 0 478 246 0 0 0 0
+equiv "ci" "ci"
+equiv "ci" "ci"
+equiv "ci" "ci"
+equiv "ci" "ci"
+equiv "ci" "ci"
+equiv "ci" "ci"
+equiv "ci" "ci"
+equiv "ci" "ci"
+node "n2" 751 0 61 17 ndiff 48 28 96 40 136 124 0 0 0 0 0 0 220 118 0 0 0 0
+equiv "n2" "n2"
+equiv "n2" "n2"
+node "n1" 840 0 69 12 p 48 28 83 42 136 124 0 0 0 0 0 0 328 162 0 0 0 0
+equiv "n1" "n1"
+equiv "n1" "n1"
+equiv "n1" "n1"
+node "cn" 3155 0 49 12 p 49 28 62 34 534 522 0 0 0 0 0 0 212 114 0 0 0 0
+equiv "cn" "cn"
+equiv "cn" "cn"
+node "zn" 1919 0 13 9 p 47 28 82 42 316 304 0 0 0 0 0 0 152 84 0 0 0 0
+equiv "zn" "zn"
+equiv "zn" "zn"
+node "q" 1700 0 -20 12 p 82 42 168 70 296 260 0 0 0 0 0 0 305 156 0 0 0 0
+equiv "q" "q"
+equiv "q" "a"
+equiv "q" "a"
+node "z" 2072 0 -103 16 ndiff 342 148 582 216 136 124 0 0 0 0 0 0 843 414 778 400 0 0
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "d"
+equiv "z" "d"
+node "bn" 2909 0 -124 19 ndiff 118 50 672 216 376 352 0 0 0 0 0 0 586 304 0 0 0 0
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+node "an" 3144 0 -94 16 ndiff 224 88 494 184 402 378 0 0 0 0 0 0 736 350 0 0 0 0
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+node "b" 2711 0 -126 15 p 0 0 0 0 532 496 0 0 0 0 0 0 104 52 0 0 0 0
+equiv "b" "b"
+node "vss" 1975 0 -139 0 pw 923 404 336 148 0 0 0 0 0 0 0 0 2722 784 0 0 0 0
+equiv "vss" "vss"
+node "vdd" 19203 0 -139 36 nw 390 178 1286 442 0 0 0 0 0 0 0 0 2746 784 0 0 12804 670
+equiv "vdd" "vdd"
+cap "a_98_51#" "ci" 705
+cap "an" "vss" 18289
+cap "z" "n1" 2596
+cap "cn" "z" 190
+cap "cn" "cp" 480
+cap "vdd" "bn" 24101
+cap "zn" "z" 754
+cap "b" "vdd" 19309
+cap "an" "vdd" 19091
+cap "vss" "a_n55_11#" 235
+cap "a_44_17#" "n4" 1128
+cap "vss" "a_n74_11#" 235
+cap "an" "q" 360
+cap "vss" "n4" 7279
+cap "z" "bn" 6016
+cap "b" "z" 240
+cap "vss" "ci" 27536
+cap "q" "vss" 11657
+cap "vss" "n2" 7208
+cap "an" "z" 4644
+cap "vdd" "n4" 8901
+cap "n4" "a_44_52#" 1034
+cap "vss" "n1" 9912
+cap "vss" "cn" 17082
+cap "zn" "vss" 20056
+cap "vdd" "ci" 16595
+cap "vdd" "n2" 12380
+cap "q" "vdd" 11009
+cap "a_81_58#" "n1" 235
+cap "a_n55_11#" "z" 940
+cap "vss" "cp" 3098
+cap "vss" "z" 20201
+cap "vdd" "n1" 8436
+cap "vdd" "cn" 46522
+cap "b" "bn" 240
+cap "zn" "vdd" 10244
+cap "z" "a_n74_11#" 940
+cap "an" "bn" 1140
+cap "zn" "n4" 1320
+cap "vdd" "cp" 11576
+cap "vdd" "z" 14720
+cap "an" "b" 450
+cap "ci" "n1" 423
+cap "n4" "z" 758
+cap "n2" "n1" 930
+cap "cn" "ci" 960
+cap "vss" "bn" 12615
+cap "q" "z" 1164
+cap "n2" "z" 720
+cap "z" "ci" 4952
+cap "cn" "n1" 1380
+cap "a_81_17#" "n1" 1081
+cap "b" "vss" 14597
+device mosfet nfet 133 23 134 24 2 7 "vss" "cp" 4 0 "vss" 7 0 "cn" 7 0
+device mosfet nfet 103 17 104 18 2 6 "vss" "z" 4 0 "a_98_17#" 6 0 "vss" 6 0
+device mosfet nfet 96 17 97 18 2 6 "vss" "cn" 4 0 "n1" 6 0 "a_98_17#" 6 0
+device mosfet nfet 86 17 87 18 2 6 "vss" "ci" 4 0 "a_81_17#" 6 0 "n1" 6 0
+device mosfet nfet 79 17 80 18 2 6 "vss" "n2" 4 0 "vss" 6 0 "a_81_17#" 6 0
+device mosfet nfet 69 17 70 18 2 6 "vss" "n1" 4 0 "n2" 6 0 "vss" 6 0
+device mosfet nfet 59 17 60 18 2 6 "vss" "ci" 4 0 "n4" 6 0 "n2" 6 0
+device mosfet nfet 49 17 50 18 2 6 "vss" "cn" 4 0 "a_44_17#" 6 0 "n4" 6 0
+device mosfet nfet 42 17 43 18 2 6 "vss" "zn" 4 0 "vss" 6 0 "a_44_17#" 6 0
+device mosfet nfet 123 24 124 25 2 6 "vss" "cn" 4 0 "ci" 6 0 "vss" 6 0
+device mosfet pfet 133 53 134 54 2 10 "vdd" "cp" 4 0 "vdd" 10 0 "cn" 10 0
+device mosfet pfet 113 51 114 52 2 11 "vdd" "cn" 4 0 "vdd" 11 0 "ci" 11 0
+device mosfet pfet 103 51 104 52 2 13 "vdd" "z" 4 0 "a_98_51#" 13 0 "vdd" 13 0
+device mosfet pfet 96 51 97 52 2 13 "vdd" "ci" 4 0 "n1" 13 0 "a_98_51#" 13 0
+device mosfet nfet 31 23 32 24 2 7 "vss" "n4" 4 0 "zn" 7 0 "vss" 7 0
+device mosfet nfet 13 14 14 15 2 14 "vss" "zn" 4 0 "q" 14 0 "vss" 14 0
+device mosfet nfet -10 16 -9 17 2 14 "vss" "q" 4 0 "an" 14 0 "vss" 14 0
+device mosfet nfet -20 16 -19 17 2 14 "vss" "q" 4 0 "vss" 14 0 "an" 14 0
+device mosfet nfet -50 11 -49 12 2 19 "vss" "an" 4 0 "a_n55_11#" 19 0 "z" 19 0
+device mosfet nfet -57 11 -56 12 2 19 "vss" "bn" 4 0 "vss" 19 0 "a_n55_11#" 19 0
+device mosfet nfet -69 11 -68 12 2 19 "vss" "bn" 4 0 "a_n74_11#" 19 0 "vss" 19 0
+device mosfet nfet -76 11 -75 12 2 19 "vss" "an" 4 0 "z" 19 0 "a_n74_11#" 19 0
+device mosfet nfet -86 16 -85 17 2 14 "vss" "b" 4 0 "an" 14 0 "z" 14 0
+device mosfet nfet -96 16 -95 17 2 14 "vss" "b" 4 0 "z" 14 0 "an" 14 0
+device mosfet nfet -116 13 -115 14 2 17 "vss" "b" 4 0 "bn" 17 0 "vss" 17 0
+device mosfet nfet -126 19 -125 20 2 11 "vss" "b" 4 0 "vss" 11 0 "bn" 11 0
+device mosfet pfet 86 58 87 59 2 6 "vdd" "cn" 4 0 "a_81_58#" 6 0 "n1" 6 0
+device mosfet pfet 79 58 80 59 2 6 "vdd" "n2" 4 0 "vdd" 6 0 "a_81_58#" 6 0
+device mosfet pfet 69 52 70 53 2 12 "vdd" "n1" 4 0 "n2" 12 0 "vdd" 12 0
+device mosfet pfet 59 52 60 53 2 12 "vdd" "cn" 4 0 "n4" 12 0 "n2" 12 0
+device mosfet pfet 49 52 50 53 2 6 "vdd" "ci" 4 0 "a_44_52#" 6 0 "n4" 6 0
+device mosfet pfet 42 52 43 53 2 6 "vdd" "zn" 4 0 "vdd" 6 0 "a_44_52#" 6 0
+device mosfet pfet 23 42 24 43 2 14 "vdd" "n4" 4 0 "vdd" 14 0 "zn" 14 0
+device mosfet pfet 13 42 14 43 2 28 "vdd" "zn" 4 0 "q" 28 0 "vdd" 28 0
+device mosfet pfet -10 42 -9 43 2 28 "vdd" "q" 4 0 "vdd" 28 0 "an" 28 0
+device mosfet pfet -20 42 -19 43 2 28 "vdd" "q" 4 0 "an" 28 0 "vdd" 28 0
+device mosfet pfet -30 42 -29 43 2 28 "vdd" "bn" 4 0 "z" 28 0 "an" 28 0
+device mosfet pfet -40 42 -39 43 2 28 "vdd" "an" 4 0 "bn" 28 0 "z" 28 0
+device mosfet pfet -50 42 -49 43 2 28 "vdd" "an" 4 0 "z" 28 0 "bn" 28 0
+device mosfet pfet -60 42 -59 43 2 13 "vdd" "bn" 4 0 "an" 13 0 "z" 13 0
+device mosfet pfet -70 42 -69 43 2 13 "vdd" "bn" 4 0 "z" 13 0 "an" 13 0
+device mosfet pfet -80 42 -79 43 2 28 "vdd" "an" 4 0 "bn" 28 0 "z" 28 0
+device mosfet pfet -90 42 -89 43 2 28 "vdd" "b" 4 0 "vdd" 28 0 "bn" 28 0
+device mosfet pfet -105 42 -104 43 2 28 "vdd" "b" 4 0 "bn" 28 0 "vdd" 28 0
+device mosfet pfet -115 42 -114 43 2 28 "vdd" "b" 4 0 "vdd" 28 0 "bn" 28 0

@@ -1,0 +1,11 @@
+* Mon Aug 16 14:10:56 CEST 2004
+.subckt an2v4x1 a b vdd vss z 
+*SPICE circuit <an2v4x1> from XCircuit v3.10
+
+m1 z n2 vdd vdd p w=18u l=2u ad='18u*5u+12p' as='18u*5u+12p' pd='18u*2+14u' ps='18u*2+14u'
+m2 z n2 vss vss n w=9u l=2u ad='9u*5u+12p' as='9u*5u+12p' pd='9u*2+14u' ps='9u*2+14u'
+m3 n1 a vss vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m4 n2 a vdd vdd p w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m5 n2 b n1 vss n w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+m6 n2 b vdd vdd p w=6u l=2u ad='6u*5u+12p' as='6u*5u+12p' pd='6u*2+14u' ps='6u*2+14u'
+.ends

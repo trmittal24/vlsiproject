@@ -1,0 +1,6 @@
+#!/bin/bash
+
+libscr -check_mono -lib vsclib013.lib > vsclib013.scr
+libscr -check_minc -lib vsclib013.lib >> vsclib013.scr
+libscr -check_maxc -lib vsclib013.lib >> vsclib013.scr
+libscr -check_maxt -lib vsclib013.lib >> vsclib013.scr

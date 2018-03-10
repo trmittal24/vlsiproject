@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# write out an AB layer from Alliance AB construct and add to CIF file
+sed 's/\,/\ /' $1.cif | \
+sed '1,/^(AB :/ s/^(AB\ :\(.*\)/L\ AB;\1/' > temp
+x1=$(grep '^L AB' temp | awk '{printf "%1d\n", $3*100 }')
+y1=$(grep '^L AB' temp | awk '{printf "%1d\n", $4*100 }')
+x2=$(grep '^L AB' temp | awk '{printf "%1d\n", $5*100 }')
+y2=$(grep '^L AB' temp | awk '{printf "%1d\n", $6*100 }')
+width=$(echo $[ ($x2-$x1)*2 ] | awk '{printf "%1d\n", $1/100 }')
+height=$(echo $[ ($y2-$y1)*2 ] | awk '{printf "%1d\n", $1/100 }')
+centerx=$(echo $[ ($x1+($x2-$x1)/2)*2 ] | awk '{printf "%1d\n", $1/100 }')
+centery=$(echo $[ ($y1+($y2-$y1)/2)*2 ] | awk '{printf "%1d\n", $1/100 }')
+echo "sed 's/L\ AB;.*$/L\ AB;\nB\ "$width"\ "$height"\ "$centerx"\ "$centery";/' temp > \$1" > temp1
+chmod 755 temp1
+./temp1 $1.cif
+rm -f temp temp1

@@ -1,0 +1,11 @@
+inputpin_list a1 a2 b1 b2
+outputpin_list z
+a1 z negative_unate when 111
+a1 z positive_unate when 100 101 110
+a2 z negative_unate when 111
+a2 z positive_unate when 100 101 110
+b1 z negative_unate when 111
+b1 z positive_unate when 001 011 101
+b2 z negative_unate when 111
+b2 z positive_unate when 001 011 101
+z logic_function ((a1*a2)^(b1*b2))

@@ -1,0 +1,56 @@
+entity xor3v1x3 is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      c   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end xor3v1x3;
+
+architecture structural of xor3v1x3 is
+Component xor2v0x2
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component xor2v0x3
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      z   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal xo : bit;
+
+begin
+
+xo : xor2v0x2
+   port map (
+      a   => a,
+      b   => b,
+      z   => xo,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+z : xor2v0x3
+   port map (
+      a   => xo,
+      b   => c,
+      z   => z,
+      vdd => vdd,
+      vss => vss
+   );
+
+end structural;

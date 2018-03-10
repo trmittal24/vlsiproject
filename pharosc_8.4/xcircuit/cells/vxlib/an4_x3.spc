@@ -1,0 +1,13 @@
+*SPICE circuit <an4_x3> from XCircuit v3.10
+
+m1 n1 a vss vss n w=33u l=2u ad='33u*5u+12p' as='33u*5u+12p' pd='33u*2+14u' ps='33u*2+14u'
+m2 n2 b n1 vss n w=33u l=2u ad='33u*5u+12p' as='33u*5u+12p' pd='33u*2+14u' ps='33u*2+14u'
+m3 n3 c n2 vss n w=33u l=2u ad='33u*5u+12p' as='33u*5u+12p' pd='33u*2+14u' ps='33u*2+14u'
+m4 zn d n3 vss n w=33u l=2u ad='33u*5u+12p' as='33u*5u+12p' pd='33u*2+14u' ps='33u*2+14u'
+m5 zn a vdd vdd p w=29u l=2u ad='29u*5u+12p' as='29u*5u+12p' pd='29u*2+14u' ps='29u*2+14u'
+m6 zn b vdd vdd p w=29u l=2u ad='29u*5u+12p' as='29u*5u+12p' pd='29u*2+14u' ps='29u*2+14u'
+m7 zn c vdd vdd p w=29u l=2u ad='29u*5u+12p' as='29u*5u+12p' pd='29u*2+14u' ps='29u*2+14u'
+m8 zn d vdd vdd p w=29u l=2u ad='29u*5u+12p' as='29u*5u+12p' pd='29u*2+14u' ps='29u*2+14u'
+m9 z zn vss vss n w=25u l=2u ad='25u*5u+12p' as='25u*5u+12p' pd='25u*2+14u' ps='25u*2+14u'
+m10 z zn vdd vdd p w=50u l=2u ad='50u*5u+12p' as='50u*5u+12p' pd='50u*2+14u' ps='50u*2+14u'
+.end

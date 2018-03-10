@@ -1,0 +1,44 @@
+ENTITY xor3v1x4 IS
+GENERIC (
+  CONSTANT area          : NATURAL := 15552;  
+  CONSTANT cin_a         : NATURAL := 12;     
+  CONSTANT cin_b         : NATURAL := 14;     
+  CONSTANT cin_c         : NATURAL := 19;     
+  CONSTANT rdown_a_z     : NATURAL := 830;   
+  CONSTANT rdown_b_z     : NATURAL := 830;   
+  CONSTANT rdown_c_z     : NATURAL := 830;   
+  CONSTANT rup_a_z       : NATURAL := 1060;   
+  CONSTANT rup_b_z       : NATURAL := 1060;   
+  CONSTANT rup_c_z       : NATURAL := 1060;   
+  CONSTANT tphh_a_z      : NATURAL := 246;    
+  CONSTANT tpll_a_z      : NATURAL := 237;    
+  CONSTANT tplh_a_z      : NATURAL := 236;    
+  CONSTANT tphl_a_z      : NATURAL := 247;    
+  CONSTANT tphh_b_z      : NATURAL := 249;    
+  CONSTANT tpll_b_z      : NATURAL := 211;    
+  CONSTANT tplh_b_z      : NATURAL := 209;    
+  CONSTANT tphl_b_z      : NATURAL := 250;    
+  CONSTANT tphh_c_z      : NATURAL := 89;     
+  CONSTANT tpll_c_z      : NATURAL := 139;     
+  CONSTANT tplh_c_z      : NATURAL := 142;     
+  CONSTANT tphl_c_z      : NATURAL := 116;     
+  CONSTANT transistors   : NATURAL := 31      
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  c	 : in  BIT;
+  z	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END xor3v1x4;
+
+ARCHITECTURE behaviour_data_flow OF xor3v1x4 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on xor3v1x4"
+  SEVERITY WARNING;
+  z <= ((a xor b) xor c) after 1000 ps;
+END;

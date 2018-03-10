@@ -1,0 +1,4 @@
+#!/bin/bash
+#  7-SEP-03 GP
+# 19-FEB-07 GP
+printenv | egrep 'TECHNO|RDS|MBK|ALLIANCE|XSCH|GRAAL|DREAL|CORIOLIS|CRL' | sort

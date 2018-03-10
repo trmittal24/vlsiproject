@@ -1,0 +1,5 @@
+inputpin_list a b
+outputpin_list z
+a z positive_unate when 1
+b z positive_unate when 1
+z logic_function (a*b)

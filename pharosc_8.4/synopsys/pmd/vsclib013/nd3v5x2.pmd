@@ -1,0 +1,13 @@
+pwidth 84
+nwidth 28
+unitcap 1.0
+min_capacitance 2
+max_capacitance 260
+max_fanout 6
+fanout_load 1
+a lower_hl_pct 6
+a upper_hl_pct 94
+b lower_hl_pct 7
+b upper_hl_pct 93
+c lower_hl_pct 8
+c upper_hl_pct 92

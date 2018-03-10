@@ -1,0 +1,6 @@
+#!/bin/bash
+
+libscr -check_mono -lib rgalib013.lib > rgalib013.scr
+libscr -check_minc -lib rgalib013.lib >> rgalib013.scr
+libscr -check_maxc -lib rgalib013.lib >> rgalib013.scr
+libscr -check_maxt -lib rgalib013.lib >> rgalib013.scr

@@ -1,0 +1,1 @@
+2 I/P AND gate with a stage effort of about 1.8 for the a2_x2 and about 3.6 for the a2_x4.

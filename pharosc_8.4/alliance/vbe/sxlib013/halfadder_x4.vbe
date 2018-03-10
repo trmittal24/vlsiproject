@@ -1,0 +1,46 @@
+ENTITY halfadder_x4 IS
+GENERIC (
+  CONSTANT area 	 : NATURAL := 4500;
+  CONSTANT cin_a         : NATURAL := 14;     
+  CONSTANT cin_b         : NATURAL := 12;     
+  CONSTANT rdown_a_cout  : NATURAL := 580;    
+  CONSTANT rdown_a_sout  : NATURAL := 610;    
+  CONSTANT rdown_b_cout  : NATURAL := 580;    
+  CONSTANT rdown_b_sout  : NATURAL := 610;    
+  CONSTANT rup_a_cout    : NATURAL := 750;    
+  CONSTANT rup_a_sout    : NATURAL := 750;    
+  CONSTANT rup_b_cout    : NATURAL := 750;    
+  CONSTANT rup_b_sout    : NATURAL := 750;    
+  CONSTANT tphh_a_cout   : NATURAL := 126;    
+  CONSTANT tpll_b_cout   : NATURAL := 130;    
+  CONSTANT tpll_a_cout   : NATURAL := 139;    
+  CONSTANT tphh_b_cout   : NATURAL := 120;    
+  CONSTANT tphh_a_sout   : NATURAL := 136;    
+  CONSTANT tpll_b_sout   : NATURAL := 214;    
+  CONSTANT tphl_b_sout   : NATURAL := 213;    
+  CONSTANT tplh_b_sout   : NATURAL := 181;    
+  CONSTANT tphh_b_sout   : NATURAL := 152;    
+  CONSTANT tphl_a_sout   : NATURAL := 246;    
+  CONSTANT tpll_a_sout   : NATURAL := 184;    
+  CONSTANT tplh_a_sout   : NATURAL := 199;    
+  CONSTANT transistors	 : NATURAL := 24
+);
+PORT (
+  a	 : in  BIT;
+  b	 : in  BIT;
+  cout	 : out BIT;
+  sout	 : out BIT;
+  vdd	 : in  BIT;
+  vss	 : in  BIT
+);
+END halfadder_x4;
+
+ARCHITECTURE behaviour_data_flow OF halfadder_x4 IS
+
+BEGIN
+  ASSERT ((vdd and not (vss)) = '1')
+  REPORT "power supply is missing on halfadder_x4"
+  SEVERITY WARNING;
+  sout <= (a xor b) after 208 ps;
+  cout <= (a and b) after 145 ps;
+END;

@@ -1,0 +1,20 @@
+* Spice description of oai31v0x05
+* Spice driver version 134999461
+* Date 17/05/2007 at  9:31:46
+* wsclib 0.13um values
+.subckt oai31v0x05 a1 a2 a3 b vdd vss z
+M01 vdd   a1    03    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M02 vss   a1    n3    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M03 03    a2    05    vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M04 n3    a2    vss   vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M05 05    a3    z     vdd p  L=0.12U  W=1.485U AS=0.393525P AD=0.393525P PS=3.5U    PD=3.5U
+M06 vss   a3    n3    vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+M07 z     b     vdd   vdd p  L=0.12U  W=0.605U AS=0.160325P AD=0.160325P PS=1.74U   PD=1.74U
+M08 n3    b     z     vss n  L=0.12U  W=0.495U AS=0.131175P AD=0.131175P PS=1.52U   PD=1.52U
+C7  a1    vss   0.550f
+C6  a2    vss   0.466f
+C5  a3    vss   0.514f
+C4  b     vss   0.387f
+C1  n3    vss   0.181f
+C3  z     vss   0.715f
+.ends
