@@ -1,0 +1,82 @@
+* SPICE3 file created from t.ext - technology: scmos
+
+.include /home/tarun/ngspice/t14y_tsmc_025_level3.txt
+
+
+M1000 vdd d z vdd cmosp w=28u l=2u
++ ad=502p pd=218u as=168p ps=70u 
+M1001 d n4 vdd vdd cmosp w=14u l=2u
++ ad=82p pd=42u as=0p ps=0u 
+M1002 a_44_52# d vdd vdd cmosp w=6u l=2u
++ ad=30p pd=22u as=0p ps=0u 
+M1003 n4 ci a_44_52# vdd cmosp w=6u l=2u
++ ad=78p pd=40u as=0p ps=0u 
+M1004 n2 cn n4 vdd cmosp w=12u l=2u
++ ad=96p pd=40u as=0p ps=0u 
+M1005 vdd n1 n2 vdd cmosp w=12u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1006 a_81_58# n2 vdd vdd cmosp w=6u l=2u
++ ad=30p pd=22u as=0p ps=0u 
+M1007 n1 cn a_81_58# vdd cmosp w=6u l=2u
++ ad=83p pd=42u as=0p ps=0u 
+M1008 vss d z vss cmosn w=14u l=2u
++ ad=317p pd=170u as=82p ps=42u 
+M1009 vss n4 d vss cmosn w=7u l=2u
++ ad=0p pd=0u as=47p ps=28u 
+M1010 a_98_51# ci n1 vdd cmosp w=13u l=2u
++ ad=65p pd=36u as=0p ps=0u 
+M1011 vdd d a_98_51# vdd cmosp w=13u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1012 ci cn vdd vdd cmosp w=11u l=2u
++ ad=67p pd=36u as=0p ps=0u 
+M1013 cn cp vdd vdd cmosp w=10u l=2u
++ ad=62p pd=34u as=0p ps=0u 
+M1014 vss cn ci vss cmosn w=6u l=2u
++ ad=0p pd=0u as=42p ps=26u 
+M1015 a_44_17# d vss vss cmosn w=6u l=2u
++ ad=30p pd=22u as=0p ps=0u 
+M1016 n4 cn a_44_17# vss cmosn w=6u l=2u
++ ad=48p pd=28u as=0p ps=0u 
+M1017 n2 ci n4 vss cmosn w=6u l=2u
++ ad=48p pd=28u as=0p ps=0u 
+M1018 vss n1 n2 vss cmosn w=6u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1019 a_81_17# n2 vss vss cmosn w=6u l=2u
++ ad=30p pd=22u as=0p ps=0u 
+M1020 n1 ci a_81_17# vss cmosn w=6u l=2u
++ ad=48p pd=28u as=0p ps=0u 
+M1021 a_98_17# cn n1 vss cmosn w=6u l=2u
++ ad=30p pd=22u as=0p ps=0u 
+M1022 vss d a_98_17# vss cmosn w=6u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1023 cn cp vss vss cmosn w=7u l=2u
++ ad=49p pd=28u as=0p ps=0u 
+C0 vss n4 7.3fF
+C1 vss d 28.1fF
+C2 vdd n4 8.9fF
+C3 d vdd 18.2fF
+C4 vss ci 27.5fF
+C5 vss n1 9.9fF
+C6 vdd ci 16.6fF
+C7 vdd n1 8.4fF
+C8 z vdd 2.7fF
+C9 vss cp 3.1fF
+C10 vss n2 7.2fF
+C11 cp vdd 11.6fF
+C12 n2 vdd 12.4fF
+C13 vss cn 17.1fF
+C14 vdd cn 46.5fF
+C15 d ci 4.2fF
+
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_cp cp 0 PULSE(0 5 0 0 0 25n 50n)
+*v_gg_t b 0 PULSE(5 0 25n 0 0 50n 500n)
+
+.control
+ tran 0.01n 500n
+ plot (cp + 5) (z)
+.endc
+
+.end
