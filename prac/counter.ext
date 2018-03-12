@@ -1,4 +1,4 @@
-timestamp 1520854301
+timestamp 1520854956
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -9,62 +9,69 @@ use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3 xor2v0x3_1 1 0 -432 0 1 4
 use t t_1 1 0 -294 0 1 0
 use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3 xor2v0x3_0 1 0 -139 0 1 4
 use t t_0 1 0 0 0 1 0
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x3 an2v0x3_0 1 0 156 0 1 4
+node "m1_149_4#" 0 2256 149 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
 node "m1_n2_4#" 0 1880 -2 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
 node "m1_n145_4#" 0 1880 -145 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
 node "m1_n294_4#" 0 1128 -294 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 24 22 0 0 0 0
 node "m1_n438_4#" 0 2632 -438 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 56 30 0 0 0 0
 node "m1_n9_32#" 0 2538 -9 32 m1 0 0 0 0 0 0 0 0 0 0 0 0 54 42 0 0 0 0
 node "m1_n302_32#" 0 2538 -302 32 m1 0 0 0 0 0 0 0 0 0 0 0 0 54 42 0 0 0 0
+node "m1_114_41#" 1 4808 114 41 v 0 0 0 0 0 0 0 0 0 0 0 0 36 34 196 106 0 0
 node "m1_n430_38#" 2 26432 -430 38 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 1344 680 0 0
 node "m1_n180_41#" 1 7932 -180 41 v 0 0 0 0 0 0 0 0 0 0 0 0 39 36 356 186 0 0
 node "m1_n473_41#" 1 9300 -473 41 v 0 0 0 0 0 0 0 0 0 0 0 0 39 36 428 222 0 0
+node "m1_149_68#" 0 2256 149 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
 node "m1_n2_68#" 0 1880 -2 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
 node "m1_n145_68#" 0 1880 -145 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
 node "m1_n295_68#" 0 1504 -295 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 32 24 0 0 0 0
 node "m1_n439_68#" 0 2632 -439 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 56 30 0 0 0 0
-cap "xor2v0x3_1/bn" "t_2/cp" 2788
-cap "xor2v0x3_1/b" "xor2v0x3_1/an" 176
-cap "xor2v0x3_1/bn" "xor2v0x3_1/b" 506
-cap "t_2/vss" "xor2v0x3_1/b" 4043
-cap "xor2v0x3_1/b" "t_2/cp" 1478
+cap "t_2/cp" "t_2/ci" 1326
+cap "t_2/cp" "xor2v0x3_1/bn" 2788
+cap "xor2v0x3_1/b" "xor2v0x3_1/bn" 506
+cap "xor2v0x3_1/b" "t_2/vss" 4043
+cap "t_2/cp" "t_2/vdd" 4620
 cap "t_2/cn" "t_2/cp" 976
-cap "t_2/ci" "t_2/cp" 1326
-cap "t_2/vdd" "t_2/cp" 4620
-cap "xor2v0x3_1/vss" "xor2v0x3_1/a" 1410
+cap "xor2v0x3_1/b" "xor2v0x3_1/an" 176
+cap "xor2v0x3_1/b" "t_2/cp" 1478
 cap "xor2v0x3_1/a_80_7#" "m1_n430_38#" 220
-cap "xor2v0x3_1/vss" "m1_n430_38#" 5248
-cap "xor2v0x3_1/a_61_7#" "m1_n430_38#" 220
-cap "xor2v0x3_1/an" "m1_n430_38#" 1156
-cap "xor2v0x3_1/z" "m1_n430_38#" 5116
-cap "t_1/ci" "m1_n430_38#" 38
-cap "t_1/n2" "m1_n430_38#" 38
-cap "t_1/d" "m1_n430_38#" 38
-cap "t_1/vss" "m1_n430_38#" 246
-cap "t_1/vss" "m1_n430_38#" 918
-cap "t_1/d" "m1_n430_38#" 38
-cap "t_1/vss" "m1_n430_38#" 2755
+cap "xor2v0x3_1/vss" "xor2v0x3_1/a" 1410
+cap "m1_n430_38#" "xor2v0x3_1/a_61_7#" 220
+cap "m1_n430_38#" "xor2v0x3_1/vss" 5248
+cap "m1_n430_38#" "xor2v0x3_1/an" 1156
+cap "m1_n430_38#" "xor2v0x3_1/z" 5116
+cap "m1_n430_38#" "t_1/cn" 38
+cap "m1_n430_38#" "t_1/vss" 918
 cap "t_1/z" "m1_n430_38#" 440
-cap "t_1/a_81_17#" "m1_n430_38#" 110
-cap "t_1/vss" "m1_n430_38#" 984
-cap "t_1/vss" "m1_n430_38#" 984
-cap "t_1/cn" "m1_n430_38#" 38
 cap "t_1/n1" "m1_n430_38#" 1608
-cap "t_1/a_98_17#" "m1_n430_38#" 330
-cap "t_1/a_44_17#" "m1_n430_38#" 110
-cap "t_1/n2" "m1_n430_38#" 804
-cap "t_1/cn" "m1_n430_38#" 38
+cap "t_1/vss" "m1_n430_38#" 984
 cap "t_1/ci" "m1_n430_38#" 38
-cap "t_1/n4" "m1_n430_38#" 1556
-cap "xor2v0x3_0/b" "t_1/cp" 872
-cap "xor2v0x3_0/bn" "t_1/cp" 1053
-cap "t_1/vdd" "t_1/cp" 3968
-cap "t_1/vss" "xor2v0x3_0/b" 6694
-cap "t_1/cn" "t_1/cp" 758
+cap "m1_n430_38#" "t_1/ci" 38
+cap "m1_n430_38#" "t_1/cn" 38
+cap "m1_n430_38#" "t_1/a_98_17#" 330
+cap "m1_n430_38#" "t_1/a_81_17#" 110
+cap "m1_n430_38#" "t_1/n4" 1556
+cap "m1_n430_38#" "t_1/vss" 246
+cap "m1_n430_38#" "t_1/n2" 804
+cap "m1_n430_38#" "t_1/vss" 2755
+cap "t_1/d" "m1_n430_38#" 38
+cap "m1_n430_38#" "t_1/d" 38
+cap "m1_n430_38#" "t_1/n2" 38
+cap "m1_n430_38#" "t_1/vss" 984
+cap "m1_n430_38#" "t_1/a_44_17#" 110
 cap "t_1/cn" "xor2v0x3_0/b" 38
+cap "t_1/vss" "xor2v0x3_0/b" 6694
+cap "t_1/cp" "t_1/cn" 758
+cap "t_1/cp" "xor2v0x3_0/b" 872
+cap "t_1/cp" "xor2v0x3_0/bn" 1053
+cap "t_1/cp" "t_1/vdd" 3968
+cap "xor2v0x3_0/a" "t_0/vss" 1551
 cap "xor2v0x3_0/vss" "t_0/vss" 1128
 cap "t_0/vdd" "xor2v0x3_0/vdd" 1128
-cap "xor2v0x3_0/a" "t_0/vss" 1551
-merge "t_0/vss" "xor2v0x3_0/vss" -1880 0 0 0 0 0 0 0 0 0 0 0 0 -16 -36 0 0 0 0
+cap "t_0/cp" "t_0/cn" 758
+cap "t_0/cp" "t_0/vdd" 2481
+merge "an2v0x3_0/vss" "t_0/vss" -2256 0 0 0 0 0 0 0 0 0 0 0 0 -16 -36 0 0 0 0
+merge "t_0/vss" "xor2v0x3_0/vss"
 merge "xor2v0x3_0/vss" "t_1/vss"
 merge "t_1/vss" "xor2v0x3_1/vss"
 merge "xor2v0x3_1/vss" "t_2/vss"
@@ -72,7 +79,9 @@ merge "t_2/vss" "m1_n438_4#"
 merge "m1_n438_4#" "m1_n294_4#"
 merge "m1_n294_4#" "m1_n145_4#"
 merge "m1_n145_4#" "m1_n2_4#"
-merge "t_0/vdd" "xor2v0x3_0/vdd" -1880 0 0 0 0 0 0 0 0 0 0 0 0 -16 -36 0 0 0 0
+merge "m1_n2_4#" "m1_149_4#"
+merge "an2v0x3_0/vdd" "t_0/vdd" -2256 0 0 0 0 0 0 0 0 0 0 0 0 -16 -36 0 0 0 -88
+merge "t_0/vdd" "xor2v0x3_0/vdd"
 merge "xor2v0x3_0/vdd" "t_1/vdd"
 merge "t_1/vdd" "xor2v0x3_1/vdd"
 merge "xor2v0x3_1/vdd" "t_2/vdd"
@@ -80,6 +89,9 @@ merge "t_2/vdd" "m1_n439_68#"
 merge "m1_n439_68#" "m1_n295_68#"
 merge "m1_n295_68#" "m1_n145_68#"
 merge "m1_n145_68#" "m1_n2_68#"
+merge "m1_n2_68#" "m1_149_68#"
+merge "an2v0x3_0/z" "t_0/cp" -4808 0 0 0 0 0 0 0 0 0 0 0 0 -20 -26 0 0 0 0
+merge "t_0/cp" "m1_114_41#"
 merge "t_0/z" "xor2v0x3_0/a" -2538 0 0 0 0 0 0 0 0 0 0 0 0 -21 -26 0 0 0 0
 merge "xor2v0x3_0/a" "m1_n9_32#"
 merge "xor2v0x3_0/z" "t_1/cp" -7932 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0

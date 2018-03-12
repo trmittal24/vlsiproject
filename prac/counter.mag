@@ -1,27 +1,32 @@
 magic
 tech scmos
-timestamp 1520854301
+timestamp 1520854956
 << metal1 >>
 rect -439 68 -432 76
 rect -295 68 -291 76
 rect -145 68 -140 76
 rect -2 68 3 76
+rect 149 68 155 76
 rect -472 45 -468 46
 rect -179 45 -175 46
 rect -469 42 -468 45
 rect -176 42 -175 45
+rect 114 45 118 46
 rect -302 32 -284 35
 rect -9 32 9 35
 rect -438 4 -431 12
 rect -294 4 -291 12
 rect -145 4 -140 12
 rect -2 4 3 12
+rect 149 4 155 12
 << metal2 >>
 rect -473 50 -394 54
 rect -473 45 -469 50
 rect -430 20 -426 38
 rect -398 35 -394 50
 rect -176 41 -101 45
+rect 118 44 162 45
+rect 118 41 158 44
 rect -137 20 -133 33
 rect -105 35 -101 41
 rect -430 16 -133 20
@@ -29,6 +34,8 @@ rect -430 16 -133 20
 rect -473 41 -469 45
 rect -430 38 -426 42
 rect -180 41 -176 45
+rect 114 41 118 45
+rect 158 40 162 44
 rect -398 31 -394 35
 rect -137 33 -133 37
 rect -105 31 -101 35
@@ -52,4 +59,8 @@ use t  t_0
 timestamp 1520849491
 transform 1 0 0 0 1 0
 box 0 0 152 80
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x3  an2v0x3_0
+timestamp 1520854956
+transform 1 0 156 0 1 4
+box -4 -4 60 76
 << end >>

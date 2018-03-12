@@ -43,37 +43,37 @@ equiv "d" "zn"
 equiv "d" "zn"
 node "vss" 843 0 0 0 pw 317 170 174 70 0 0 0 0 0 0 0 0 1436 428 0 0 0 0
 node "vdd" 10150 0 0 36 nw 180 84 502 218 0 0 0 0 0 0 0 0 1486 442 0 0 6688 392
-cap "d" "n4" 1898
-cap "vdd" "n2" 12380
-cap "d" "n1" 1947
-cap "d" "cn" 133
-cap "n2" "n1" 930
-cap "vss" "ci" 27536
+cap "n1" "d" 1947
 cap "vdd" "ci" 16595
-cap "n1" "a_81_58#" 235
-cap "ci" "n1" 423
-cap "ci" "cn" 960
-cap "vss" "cp" 3098
-cap "vss" "z" 1504
-cap "vdd" "cp" 11576
-cap "d" "n2" 540
-cap "vdd" "z" 2726
-cap "cp" "cn" 480
-cap "vss" "n4" 7279
-cap "vss" "n1" 9912
-cap "vss" "cn" 17082
-cap "vdd" "n4" 8901
-cap "vdd" "n1" 8436
-cap "vdd" "cn" 46522
-cap "d" "ci" 4194
-cap "a_44_17#" "n4" 1128
-cap "n1" "cn" 1380
-cap "a_44_52#" "n4" 1034
-cap "n1" "a_81_17#" 1081
-cap "d" "vss" 28224
-cap "vss" "n2" 7208
-cap "d" "vdd" 18008
 cap "ci" "a_98_51#" 705
+cap "n1" "a_81_58#" 235
+cap "n4" "a_44_52#" 1034
+cap "n4" "a_44_17#" 1128
+cap "vss" "n2" 7208
+cap "cn" "d" 133
+cap "vss" "n4" 7279
+cap "cp" "cn" 480
+cap "vss" "d" 28224
+cap "vdd" "n2" 12380
+cap "vss" "z" 1504
+cap "vdd" "n4" 8901
+cap "n1" "cn" 1380
+cap "ci" "d" 4194
+cap "vss" "cp" 3098
+cap "vdd" "d" 18008
+cap "vdd" "z" 2726
+cap "n1" "vss" 9912
+cap "vdd" "cp" 11576
+cap "n1" "ci" 423
+cap "n1" "vdd" 8436
+cap "vss" "cn" 17082
+cap "n2" "d" 540
+cap "n4" "d" 1898
+cap "ci" "cn" 960
+cap "n1" "a_81_17#" 1081
+cap "vdd" "cn" 46522
+cap "n1" "n2" 930
+cap "vss" "ci" 27536
 device mosfet nfet 133 23 134 24 2 7 "vss" "cp" 4 0 "vss" 7 0 "cn" 7 0
 device mosfet nfet 103 17 104 18 2 6 "vss" "d" 4 0 "a_98_17#" 6 0 "vss" 6 0
 device mosfet nfet 96 17 97 18 2 6 "vss" "cn" 4 0 "n1" 6 0 "a_98_17#" 6 0
