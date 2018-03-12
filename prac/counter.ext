@@ -1,274 +1,92 @@
-timestamp 1520746549
+timestamp 1520854301
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
 resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
-node "a_241_n14#" 32 0 241 -14 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_224_n14#" 32 0 224 -14 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_187_n14#" 32 0 187 -14 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "cp" 536 0 269 12 p 0 0 0 0 142 118 0 0 0 0 0 0 104 52 0 0 0 0
-equiv "cp" "cp"
-node "a_241_20#" 155 0 241 20 pdiff 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_83_n20#" 101 0 83 -20 ndiff 95 48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_64_n20#" 101 0 64 -20 ndiff 95 48 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_n55_n14#" 32 0 -55 -14 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_n72_n14#" 32 0 -72 -14 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_n109_n14#" 32 0 -109 -14 ndiff 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_224_27#" 71 0 224 27 pdiff 0 0 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_187_21#" 71 0 187 21 pdiff 0 0 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "n4" 761 0 166 6 p 48 28 78 40 132 116 0 0 0 0 0 0 292 154 0 0 0 0
-equiv "n4" "n4"
-equiv "n4" "n4"
-equiv "n4" "n4"
-node "ci" 1607 0 192 11 p 42 26 67 36 344 292 0 0 0 0 0 0 478 246 0 0 0 0
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-node "n2" 751 0 204 -14 ndiff 48 28 96 40 136 124 0 0 0 0 0 0 220 118 0 0 0 0
-equiv "n2" "n2"
-equiv "n2" "n2"
-node "n1" 840 0 212 -19 p 48 28 83 42 136 124 0 0 0 0 0 0 328 162 0 0 0 0
-equiv "n1" "n1"
-equiv "n1" "n1"
-equiv "n1" "n1"
-node "cn" 3155 0 192 -19 p 49 28 62 34 534 522 0 0 0 0 0 0 212 114 0 0 0 0
-equiv "cn" "cn"
-equiv "cn" "cn"
-node "d" 2593 0 156 -22 p 47 28 82 42 452 428 0 0 0 0 0 0 256 136 314 208 0 0
-equiv "d" "d"
-equiv "d" "zn"
-equiv "d" "zn"
-equiv "d" "zn"
-node "q0" 1700 0 118 -19 p 82 42 168 70 296 260 0 0 0 0 0 0 320 166 0 0 0 0
-equiv "q0" "q0"
-equiv "q0" "a"
-equiv "q0" "a"
-node "bn" 2909 0 14 -12 ndiff 118 50 672 216 376 352 0 0 0 0 0 0 586 304 0 0 0 0
-equiv "bn" "bn"
-equiv "bn" "bn"
-equiv "bn" "bn"
-equiv "bn" "bn"
-equiv "bn" "bn"
-equiv "bn" "bn"
-equiv "bn" "bn"
-node "cp1" 536 0 -27 12 p 0 0 0 0 142 118 0 0 0 0 0 0 104 52 0 0 0 0
-equiv "cp1" "cp1"
-node "an" 3144 0 44 -15 ndiff 224 88 494 184 402 378 0 0 0 0 0 0 736 350 0 0 0 0
-equiv "an" "an"
-equiv "an" "an"
-equiv "an" "an"
-equiv "an" "an"
-equiv "an" "an"
-equiv "an" "an"
-equiv "an" "an"
-node "ud" 2711 0 12 -16 p 0 0 0 0 532 496 0 0 0 0 0 0 104 52 0 0 0 0
-equiv "ud" "ud"
-node "a_n55_20#" 155 0 -55 20 pdiff 0 0 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_n72_27#" 71 0 -72 27 pdiff 0 0 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "a_n109_21#" 71 0 -109 21 pdiff 0 0 30 22 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-node "n4" 761 0 -130 6 p 48 28 78 40 132 116 0 0 0 0 0 0 292 154 0 0 0 0
-equiv "n4" "n4"
-equiv "n4" "n4"
-equiv "n4" "n4"
-node "ci" 1607 0 -104 11 p 42 26 67 36 344 292 0 0 0 0 0 0 478 246 0 0 0 0
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-equiv "ci" "ci"
-node "n2" 751 0 -92 -14 ndiff 48 28 96 40 136 124 0 0 0 0 0 0 220 118 0 0 0 0
-equiv "n2" "n2"
-equiv "n2" "n2"
-node "n1" 840 0 -84 -19 p 48 28 83 42 136 124 0 0 0 0 0 0 328 162 0 0 0 0
-equiv "n1" "n1"
-equiv "n1" "n1"
-equiv "n1" "n1"
-node "z" 4795 0 -104 -19 p 391 176 644 250 534 522 0 0 0 0 0 0 951 476 240 128 0 0
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "z"
-equiv "z" "cn"
-equiv "z" "cn"
-equiv "z" "cn"
-node "q1" 385 0 -147 -9 ndiff 82 42 168 70 0 0 0 0 0 0 0 0 183 94 0 0 0 0
-equiv "q1" "q1"
-node "d" 2593 0 -140 -22 p 47 28 82 42 452 428 0 0 0 0 0 0 256 136 314 208 0 0
-equiv "d" "d"
-equiv "d" "zn"
-equiv "d" "zn"
-equiv "d" "zn"
-node "vss" 2987 0 -153 -31 pw 1240 574 510 218 0 0 0 0 0 0 0 0 4230 1214 0 0 0 0
-equiv "vss" "vss"
-equiv "vss" "vss"
-node "vdd" 29774 0 -153 5 nw 570 262 1788 660 0 0 0 0 0 0 0 0 4304 1228 0 0 19712 984
-equiv "vdd" "vdd"
-equiv "vdd" "vdd"
-cap "vdd" "z" 53290
-cap "bn" "z" 6736
-cap "vdd" "n4" 8901
-cap "bn" "vdd" 24101
-cap "ud" "z" 1738
-cap "ud" "vdd" 19309
-cap "bn" "ud" 240
-cap "n1" "vss" 9912
-cap "ci" "n1" 423
-cap "d" "n2" 540
-cap "n4" "a_187_21#" 1034
-cap "a_64_n20#" "vss" 235
-cap "d" "z" 133
-cap "vdd" "d" 18196
-cap "a_n55_20#" "ci" 705
-cap "vdd" "n1" 8436
-cap "q0" "vdd" 11009
-cap "vss" "n2" 7208
-cap "d" "vss" 28112
-cap "ci" "z" 960
-cap "n4" "vss" 7279
-cap "d" "n2" 540
-cap "a_241_20#" "ci" 705
-cap "vdd" "ci" 16595
-cap "a_187_n14#" "n4" 1128
-cap "a_224_n14#" "n1" 1081
-cap "an" "z" 3572
-cap "cn" "vss" 17082
-cap "n4" "a_n109_21#" 1034
-cap "an" "vdd" 19091
-cap "bn" "an" 1140
-cap "d" "ci" 4194
-cap "d" "cn" 133
-cap "ud" "an" 450
-cap "n1" "n2" 930
-cap "n1" "a_224_27#" 235
-cap "q1" "vss" 1504
-cap "a_83_n20#" "vss" 235
-cap "n1" "z" 1380
-cap "n1" "vdd" 8436
-cap "a_n109_n14#" "n4" 1128
-cap "ci" "vss" 27536
-cap "a_64_n20#" "z" 940
-cap "d" "ci" 4194
-cap "n1" "a_n72_27#" 235
-cap "cp" "vss" 3098
-cap "q0" "an" 360
-cap "cp1" "vss" 3098
-cap "n2" "vss" 7208
-cap "vss" "z" 25550
-cap "n1" "d" 1947
-cap "bn" "vss" 12615
-cap "n4" "vss" 7279
-cap "vdd" "n2" 12380
-cap "ud" "vss" 14597
-cap "d" "vdd" 18196
-cap "vdd" "n4" 8901
-cap "d" "n4" 1898
-cap "ci" "cn" 960
-cap "cp" "cn" 480
-cap "n1" "ci" 423
-cap "d" "vss" 28112
-cap "n1" "a_n72_n14#" 1081
-cap "vdd" "cn" 46522
-cap "d" "n4" 1898
-cap "n1" "vss" 9912
-cap "q0" "vss" 12362
-cap "n1" "n2" 930
-cap "d" "n1" 1947
-cap "ci" "vss" 27536
-cap "q1" "vdd" 2726
-cap "a_83_n20#" "z" 940
-cap "vdd" "ci" 16595
-cap "cn" "n1" 1380
-cap "cp" "vdd" 11576
-cap "cp1" "z" 480
-cap "an" "vss" 18289
-cap "vdd" "cp1" 11576
-cap "vdd" "n2" 12380
-device mosfet nfet 276 -8 277 -7 2 7 "vss" "cp" 4 0 "vss" 7 0 "cn" 7 0
-device mosfet nfet 246 -14 247 -13 2 6 "vss" "d" 4 0 "a_241_n14#" 6 0 "vss" 6 0
-device mosfet nfet 239 -14 240 -13 2 6 "vss" "cn" 4 0 "n1" 6 0 "a_241_n14#" 6 0
-device mosfet nfet 229 -14 230 -13 2 6 "vss" "ci" 4 0 "a_224_n14#" 6 0 "n1" 6 0
-device mosfet nfet 222 -14 223 -13 2 6 "vss" "n2" 4 0 "vss" 6 0 "a_224_n14#" 6 0
-device mosfet nfet 212 -14 213 -13 2 6 "vss" "n1" 4 0 "n2" 6 0 "vss" 6 0
-device mosfet nfet 202 -14 203 -13 2 6 "vss" "ci" 4 0 "n4" 6 0 "n2" 6 0
-device mosfet nfet 192 -14 193 -13 2 6 "vss" "cn" 4 0 "a_187_n14#" 6 0 "n4" 6 0
-device mosfet nfet 185 -14 186 -13 2 6 "vss" "d" 4 0 "vss" 6 0 "a_187_n14#" 6 0
-device mosfet nfet 266 -7 267 -6 2 6 "vss" "cn" 4 0 "ci" 6 0 "vss" 6 0
-device mosfet pfet 276 22 277 23 2 10 "vdd" "cp" 4 0 "vdd" 10 0 "cn" 10 0
-device mosfet pfet 256 20 257 21 2 11 "vdd" "cn" 4 0 "vdd" 11 0 "ci" 11 0
-device mosfet pfet 246 20 247 21 2 13 "vdd" "d" 4 0 "a_241_20#" 13 0 "vdd" 13 0
-device mosfet pfet 239 20 240 21 2 13 "vdd" "ci" 4 0 "n1" 13 0 "a_241_20#" 13 0
-device mosfet nfet 174 -8 175 -7 2 7 "vss" "n4" 4 0 "d" 7 0 "vss" 7 0
-device mosfet nfet 156 -17 157 -16 2 14 "vss" "d" 4 0 "q0" 14 0 "vss" 14 0
-device mosfet nfet 128 -15 129 -14 2 14 "vss" "q0" 4 0 "an" 14 0 "vss" 14 0
-device mosfet nfet 118 -15 119 -14 2 14 "vss" "q0" 4 0 "vss" 14 0 "an" 14 0
-device mosfet nfet 88 -20 89 -19 2 19 "vss" "an" 4 0 "a_83_n20#" 19 0 "z" 19 0
-device mosfet nfet 81 -20 82 -19 2 19 "vss" "bn" 4 0 "vss" 19 0 "a_83_n20#" 19 0
-device mosfet nfet 69 -20 70 -19 2 19 "vss" "bn" 4 0 "a_64_n20#" 19 0 "vss" 19 0
-device mosfet nfet 62 -20 63 -19 2 19 "vss" "an" 4 0 "z" 19 0 "a_64_n20#" 19 0
-device mosfet nfet 52 -15 53 -14 2 14 "vss" "ud" 4 0 "an" 14 0 "z" 14 0
-device mosfet nfet 42 -15 43 -14 2 14 "vss" "ud" 4 0 "z" 14 0 "an" 14 0
-device mosfet nfet 22 -18 23 -17 2 17 "vss" "ud" 4 0 "bn" 17 0 "vss" 17 0
-device mosfet nfet 12 -12 13 -11 2 11 "vss" "ud" 4 0 "vss" 11 0 "bn" 11 0
-device mosfet nfet -20 -8 -19 -7 2 7 "vss" "cp1" 4 0 "vss" 7 0 "z" 7 0
-device mosfet nfet -50 -14 -49 -13 2 6 "vss" "d" 4 0 "a_n55_n14#" 6 0 "vss" 6 0
-device mosfet nfet -57 -14 -56 -13 2 6 "vss" "z" 4 0 "n1" 6 0 "a_n55_n14#" 6 0
-device mosfet nfet -67 -14 -66 -13 2 6 "vss" "ci" 4 0 "a_n72_n14#" 6 0 "n1" 6 0
-device mosfet nfet -74 -14 -73 -13 2 6 "vss" "n2" 4 0 "vss" 6 0 "a_n72_n14#" 6 0
-device mosfet nfet -84 -14 -83 -13 2 6 "vss" "n1" 4 0 "n2" 6 0 "vss" 6 0
-device mosfet nfet -94 -14 -93 -13 2 6 "vss" "ci" 4 0 "n4" 6 0 "n2" 6 0
-device mosfet nfet -104 -14 -103 -13 2 6 "vss" "z" 4 0 "a_n109_n14#" 6 0 "n4" 6 0
-device mosfet nfet -111 -14 -110 -13 2 6 "vss" "d" 4 0 "vss" 6 0 "a_n109_n14#" 6 0
-device mosfet nfet -30 -7 -29 -6 2 6 "vss" "z" 4 0 "ci" 6 0 "vss" 6 0
-device mosfet pfet 229 27 230 28 2 6 "vdd" "cn" 4 0 "a_224_27#" 6 0 "n1" 6 0
-device mosfet pfet 222 27 223 28 2 6 "vdd" "n2" 4 0 "vdd" 6 0 "a_224_27#" 6 0
-device mosfet pfet 212 21 213 22 2 12 "vdd" "n1" 4 0 "n2" 12 0 "vdd" 12 0
-device mosfet pfet 202 21 203 22 2 12 "vdd" "cn" 4 0 "n4" 12 0 "n2" 12 0
-device mosfet pfet 192 21 193 22 2 6 "vdd" "ci" 4 0 "a_187_21#" 6 0 "n4" 6 0
-device mosfet pfet 185 21 186 22 2 6 "vdd" "d" 4 0 "vdd" 6 0 "a_187_21#" 6 0
-device mosfet pfet 166 11 167 12 2 14 "vdd" "n4" 4 0 "vdd" 14 0 "d" 14 0
-device mosfet pfet 156 11 157 12 2 28 "vdd" "d" 4 0 "q0" 28 0 "vdd" 28 0
-device mosfet pfet 128 11 129 12 2 28 "vdd" "q0" 4 0 "vdd" 28 0 "an" 28 0
-device mosfet pfet 118 11 119 12 2 28 "vdd" "q0" 4 0 "an" 28 0 "vdd" 28 0
-device mosfet pfet 108 11 109 12 2 28 "vdd" "bn" 4 0 "z" 28 0 "an" 28 0
-device mosfet pfet 98 11 99 12 2 28 "vdd" "an" 4 0 "bn" 28 0 "z" 28 0
-device mosfet pfet 88 11 89 12 2 28 "vdd" "an" 4 0 "z" 28 0 "bn" 28 0
-device mosfet pfet 78 11 79 12 2 13 "vdd" "bn" 4 0 "an" 13 0 "z" 13 0
-device mosfet pfet 68 11 69 12 2 13 "vdd" "bn" 4 0 "z" 13 0 "an" 13 0
-device mosfet pfet 58 11 59 12 2 28 "vdd" "an" 4 0 "bn" 28 0 "z" 28 0
-device mosfet pfet 48 11 49 12 2 28 "vdd" "ud" 4 0 "vdd" 28 0 "bn" 28 0
-device mosfet pfet 33 11 34 12 2 28 "vdd" "ud" 4 0 "bn" 28 0 "vdd" 28 0
-device mosfet pfet 23 11 24 12 2 28 "vdd" "ud" 4 0 "vdd" 28 0 "bn" 28 0
-device mosfet pfet -20 22 -19 23 2 10 "vdd" "cp1" 4 0 "vdd" 10 0 "z" 10 0
-device mosfet pfet -40 20 -39 21 2 11 "vdd" "z" 4 0 "vdd" 11 0 "ci" 11 0
-device mosfet pfet -50 20 -49 21 2 13 "vdd" "d" 4 0 "a_n55_20#" 13 0 "vdd" 13 0
-device mosfet pfet -57 20 -56 21 2 13 "vdd" "ci" 4 0 "n1" 13 0 "a_n55_20#" 13 0
-device mosfet nfet -122 -8 -121 -7 2 7 "vss" "n4" 4 0 "d" 7 0 "vss" 7 0
-device mosfet nfet -140 -17 -139 -16 2 14 "vss" "d" 4 0 "q1" 14 0 "vss" 14 0
-device mosfet pfet -67 27 -66 28 2 6 "vdd" "z" 4 0 "a_n72_27#" 6 0 "n1" 6 0
-device mosfet pfet -74 27 -73 28 2 6 "vdd" "n2" 4 0 "vdd" 6 0 "a_n72_27#" 6 0
-device mosfet pfet -84 21 -83 22 2 12 "vdd" "n1" 4 0 "n2" 12 0 "vdd" 12 0
-device mosfet pfet -94 21 -93 22 2 12 "vdd" "z" 4 0 "n4" 12 0 "n2" 12 0
-device mosfet pfet -104 21 -103 22 2 6 "vdd" "ci" 4 0 "a_n109_21#" 6 0 "n4" 6 0
-device mosfet pfet -111 21 -110 22 2 6 "vdd" "d" 4 0 "vdd" 6 0 "a_n109_21#" 6 0
-device mosfet pfet -130 11 -129 12 2 14 "vdd" "n4" 4 0 "vdd" 14 0 "d" 14 0
-device mosfet pfet -140 11 -139 12 2 28 "vdd" "d" 4 0 "q1" 28 0 "vdd" 28 0
+use t t_2 1 0 -587 0 1 0
+use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3 xor2v0x3_1 1 0 -432 0 1 4
+use t t_1 1 0 -294 0 1 0
+use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3 xor2v0x3_0 1 0 -139 0 1 4
+use t t_0 1 0 0 0 1 0
+node "m1_n2_4#" 0 1880 -2 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
+node "m1_n145_4#" 0 1880 -145 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
+node "m1_n294_4#" 0 1128 -294 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 24 22 0 0 0 0
+node "m1_n438_4#" 0 2632 -438 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 56 30 0 0 0 0
+node "m1_n9_32#" 0 2538 -9 32 m1 0 0 0 0 0 0 0 0 0 0 0 0 54 42 0 0 0 0
+node "m1_n302_32#" 0 2538 -302 32 m1 0 0 0 0 0 0 0 0 0 0 0 0 54 42 0 0 0 0
+node "m1_n430_38#" 2 26432 -430 38 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 1344 680 0 0
+node "m1_n180_41#" 1 7932 -180 41 v 0 0 0 0 0 0 0 0 0 0 0 0 39 36 356 186 0 0
+node "m1_n473_41#" 1 9300 -473 41 v 0 0 0 0 0 0 0 0 0 0 0 0 39 36 428 222 0 0
+node "m1_n2_68#" 0 1880 -2 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
+node "m1_n145_68#" 0 1880 -145 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 26 0 0 0 0
+node "m1_n295_68#" 0 1504 -295 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 32 24 0 0 0 0
+node "m1_n439_68#" 0 2632 -439 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 56 30 0 0 0 0
+cap "xor2v0x3_1/bn" "t_2/cp" 2788
+cap "xor2v0x3_1/b" "xor2v0x3_1/an" 176
+cap "xor2v0x3_1/bn" "xor2v0x3_1/b" 506
+cap "t_2/vss" "xor2v0x3_1/b" 4043
+cap "xor2v0x3_1/b" "t_2/cp" 1478
+cap "t_2/cn" "t_2/cp" 976
+cap "t_2/ci" "t_2/cp" 1326
+cap "t_2/vdd" "t_2/cp" 4620
+cap "xor2v0x3_1/vss" "xor2v0x3_1/a" 1410
+cap "xor2v0x3_1/a_80_7#" "m1_n430_38#" 220
+cap "xor2v0x3_1/vss" "m1_n430_38#" 5248
+cap "xor2v0x3_1/a_61_7#" "m1_n430_38#" 220
+cap "xor2v0x3_1/an" "m1_n430_38#" 1156
+cap "xor2v0x3_1/z" "m1_n430_38#" 5116
+cap "t_1/ci" "m1_n430_38#" 38
+cap "t_1/n2" "m1_n430_38#" 38
+cap "t_1/d" "m1_n430_38#" 38
+cap "t_1/vss" "m1_n430_38#" 246
+cap "t_1/vss" "m1_n430_38#" 918
+cap "t_1/d" "m1_n430_38#" 38
+cap "t_1/vss" "m1_n430_38#" 2755
+cap "t_1/z" "m1_n430_38#" 440
+cap "t_1/a_81_17#" "m1_n430_38#" 110
+cap "t_1/vss" "m1_n430_38#" 984
+cap "t_1/vss" "m1_n430_38#" 984
+cap "t_1/cn" "m1_n430_38#" 38
+cap "t_1/n1" "m1_n430_38#" 1608
+cap "t_1/a_98_17#" "m1_n430_38#" 330
+cap "t_1/a_44_17#" "m1_n430_38#" 110
+cap "t_1/n2" "m1_n430_38#" 804
+cap "t_1/cn" "m1_n430_38#" 38
+cap "t_1/ci" "m1_n430_38#" 38
+cap "t_1/n4" "m1_n430_38#" 1556
+cap "xor2v0x3_0/b" "t_1/cp" 872
+cap "xor2v0x3_0/bn" "t_1/cp" 1053
+cap "t_1/vdd" "t_1/cp" 3968
+cap "t_1/vss" "xor2v0x3_0/b" 6694
+cap "t_1/cn" "t_1/cp" 758
+cap "t_1/cn" "xor2v0x3_0/b" 38
+cap "xor2v0x3_0/vss" "t_0/vss" 1128
+cap "t_0/vdd" "xor2v0x3_0/vdd" 1128
+cap "xor2v0x3_0/a" "t_0/vss" 1551
+merge "t_0/vss" "xor2v0x3_0/vss" -1880 0 0 0 0 0 0 0 0 0 0 0 0 -16 -36 0 0 0 0
+merge "xor2v0x3_0/vss" "t_1/vss"
+merge "t_1/vss" "xor2v0x3_1/vss"
+merge "xor2v0x3_1/vss" "t_2/vss"
+merge "t_2/vss" "m1_n438_4#"
+merge "m1_n438_4#" "m1_n294_4#"
+merge "m1_n294_4#" "m1_n145_4#"
+merge "m1_n145_4#" "m1_n2_4#"
+merge "t_0/vdd" "xor2v0x3_0/vdd" -1880 0 0 0 0 0 0 0 0 0 0 0 0 -16 -36 0 0 0 0
+merge "xor2v0x3_0/vdd" "t_1/vdd"
+merge "t_1/vdd" "xor2v0x3_1/vdd"
+merge "xor2v0x3_1/vdd" "t_2/vdd"
+merge "t_2/vdd" "m1_n439_68#"
+merge "m1_n439_68#" "m1_n295_68#"
+merge "m1_n295_68#" "m1_n145_68#"
+merge "m1_n145_68#" "m1_n2_68#"
+merge "t_0/z" "xor2v0x3_0/a" -2538 0 0 0 0 0 0 0 0 0 0 0 0 -21 -26 0 0 0 0
+merge "xor2v0x3_0/a" "m1_n9_32#"
+merge "xor2v0x3_0/z" "t_1/cp" -7932 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "t_1/cp" "m1_n180_41#"
+merge "t_1/z" "xor2v0x3_1/a" -2538 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "xor2v0x3_1/a" "m1_n302_32#"
+merge "xor2v0x3_1/z" "t_2/cp" -9300 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "t_2/cp" "m1_n473_41#"
+merge "xor2v0x3_0/b" "xor2v0x3_1/b" -26432 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 -800 -400 0 0
+merge "xor2v0x3_1/b" "m1_n430_38#"

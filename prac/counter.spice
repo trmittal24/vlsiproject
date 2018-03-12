@@ -2,186 +2,311 @@
 
 .include /home/tarun/ngspice/t14y_tsmc_025_level3.txt
 
+.option scale=1u
 
-M1000 vdd d q1 vdd cmosp w=28u l=2u
-+ ad=1788p pd=660u as=168p ps=70u 
-M1001 d n4 vdd vdd cmosp w=14u l=2u
-+ ad=164p pd=84u as=0p ps=0u 
-M1002 a_n109_21# d vdd vdd cmosp w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1003 n4 ci a_n109_21# vdd cmosp w=6u l=2u
-+ ad=156p pd=80u as=0p ps=0u 
-M1004 n2 z n4 vdd cmosp w=12u l=2u
-+ ad=192p pd=80u as=0p ps=0u 
-M1005 vdd n1 n2 vdd cmosp w=12u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1006 a_n72_27# n2 vdd vdd cmosp w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1007 n1 z a_n72_27# vdd cmosp w=6u l=2u
-+ ad=166p pd=84u as=0p ps=0u 
-M1008 vss d q1 vss cmosn w=14u l=2u
-+ ad=1240p pd=574u as=82p ps=42u 
-M1009 vss n4 d vss cmosn w=7u l=2u
-+ ad=0p pd=0u as=94p ps=56u 
-M1010 a_n55_20# ci n1 vdd cmosp w=13u l=2u
-+ ad=65p pd=36u as=0p ps=0u 
-M1011 vdd d a_n55_20# vdd cmosp w=13u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1012 ci z vdd vdd cmosp w=11u l=2u
-+ ad=134p pd=72u as=0p ps=0u 
-M1013 z cp1 vdd vdd cmosp w=10u l=2u
-+ ad=706p pd=284u as=0p ps=0u 
-M1014 bn ud vdd vdd cmosp w=28u l=2u
-+ ad=672p pd=216u as=0p ps=0u 
-M1015 vdd ud bn vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1016 bn ud vdd vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1017 z an bn vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1018 an bn z vdd cmosp w=13u l=2u
-+ ad=494p pd=184u as=0p ps=0u 
-M1019 z bn an vdd cmosp w=13u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1020 bn an z vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1021 z an bn vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1022 an bn z vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1023 vdd a an vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1024 an a vdd vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1025 vdd d a vdd cmosp w=28u l=2u
-+ ad=0p pd=0u as=168p ps=70u 
-M1026 d n4 vdd vdd cmosp w=14u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1027 a_187_21# d vdd vdd cmosp w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1028 n4 ci a_187_21# vdd cmosp w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1029 n2 z n4 vdd cmosp w=12u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1030 vdd n1 n2 vdd cmosp w=12u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1031 a_224_27# n2 vdd vdd cmosp w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1032 n1 z a_224_27# vdd cmosp w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1033 vss z ci vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=84p ps=52u 
-M1034 a_n109_n14# d vss vss cmosn w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1035 n4 z a_n109_n14# vss cmosn w=6u l=2u
-+ ad=96p pd=56u as=0p ps=0u 
-M1036 n2 ci n4 vss cmosn w=6u l=2u
-+ ad=96p pd=56u as=0p ps=0u 
-M1037 vss n1 n2 vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1038 a_n72_n14# n2 vss vss cmosn w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1039 n1 ci a_n72_n14# vss cmosn w=6u l=2u
-+ ad=96p pd=56u as=0p ps=0u 
-M1040 a_n55_n14# z n1 vss cmosn w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1041 vss d a_n55_n14# vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1042 z cp1 vss vss cmosn w=7u l=2u
-+ ad=440p pd=204u as=0p ps=0u 
-M1043 bn ud vss vss cmosn w=11u l=2u
-+ ad=118p pd=50u as=0p ps=0u 
-M1044 vss ud bn vss cmosn w=17u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1045 an ud z vss cmosn w=14u l=2u
-+ ad=224p pd=88u as=0p ps=0u 
-M1046 z ud an vss cmosn w=14u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1047 a_64_n20# an z vss cmosn w=19u l=2u
-+ ad=95p pd=48u as=0p ps=0u 
-M1048 vss bn a_64_n20# vss cmosn w=19u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1049 a_83_n20# bn vss vss cmosn w=19u l=2u
-+ ad=95p pd=48u as=0p ps=0u 
-M1050 z an a_83_n20# vss cmosn w=19u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1051 an a vss vss cmosn w=14u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1052 vss a an vss cmosn w=14u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1053 vss d a vss cmosn w=14u l=2u
-+ ad=0p pd=0u as=82p ps=42u 
-M1054 vss n4 d vss cmosn w=7u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1055 a_241_20# ci n1 vdd cmosp w=13u l=2u
-+ ad=65p pd=36u as=0p ps=0u 
-M1056 vdd d a_241_20# vdd cmosp w=13u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1057 ci z vdd vdd cmosp w=11u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1058 z cp vdd vdd cmosp w=10u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1059 vss z ci vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1060 a_187_n14# d vss vss cmosn w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1061 n4 z a_187_n14# vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1062 n2 ci n4 vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1063 vss n1 n2 vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1064 a_224_n14# n2 vss vss cmosn w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1065 n1 ci a_224_n14# vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1066 a_241_n14# z n1 vss cmosn w=6u l=2u
-+ ad=30p pd=22u as=0p ps=0u 
-M1067 vss d a_241_n14# vss cmosn w=6u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-M1068 z cp vss vss cmosn w=7u l=2u
-+ ad=0p pd=0u as=0p ps=0u 
-C0 vdd an 19.1fF
-C1 n4 vss 14.6fF
-C2 vdd ci 33.2fF
-C3 d vdd 36.4fF
-C4 a vss 12.4fF
-C5 vdd n2 24.8fF
-C6 vdd z 99.8fF
-C7 vdd n1 16.9fF
-C8 bn vdd 24.1fF
-C9 vdd cp1 11.6fF
-C10 ud vss 14.6fF
-C11 vdd q1 2.7fF
-C12 vdd cp 11.6fF
-C13 d ci 8.4fF
-C14 an vss 18.3fF
-C15 vss ci 55.1fF
-C16 n4 vdd 17.8fF
-C17 d vss 56.2fF
-C18 an z 3.6fF
-C19 n2 vss 14.4fF
-C20 a vdd 11.0fF
-C21 d n1 3.9fF
-C22 vss z 42.6fF
-C23 n1 vss 19.8fF
-C24 bn vss 12.6fF
-C25 cp1 vss 3.1fF
-C26 n1 z 2.8fF
-C27 bn z 6.7fF
-C28 ud vdd 19.3fF
-C29 cp vss 3.1fF
-C30 d n4 3.8fF
+M1000 t_2_vdd t_0_d t_0_z t_2_vdd cmosp w=28 l=2
++ ad=3074 pd=1102 as=168 ps=70 
+M1001 t_0_d t_0_n4 t_2_vdd t_2_vdd cmosp w=14 l=2
++ ad=82 pd=42 as=0 ps=0 
+M1002 t_0_a_44_52# t_0_d t_2_vdd t_2_vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1003 t_0_n4 t_0_ci t_0_a_44_52# t_2_vdd cmosp w=6 l=2
++ ad=78 pd=40 as=0 ps=0 
+M1004 t_0_n2 t_0_cn t_0_n4 t_2_vdd cmosp w=12 l=2
++ ad=96 pd=40 as=0 ps=0 
+M1005 t_2_vdd t_0_n1 t_0_n2 t_2_vdd cmosp w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1006 t_0_a_81_58# t_0_n2 t_2_vdd t_2_vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1007 t_0_n1 t_0_cn t_0_a_81_58# t_2_vdd cmosp w=6 l=2
++ ad=83 pd=42 as=0 ps=0 
+M1008 t_2_vss t_0_d t_0_z t_2_vss cmosn w=14 l=2
++ ad=2163 pd=978 as=82 ps=42 
+M1009 t_2_vss t_0_n4 t_0_d t_2_vss cmosn w=7 l=2
++ ad=0 pd=0 as=47 ps=28 
+M1010 t_0_a_98_51# t_0_ci t_0_n1 t_2_vdd cmosp w=13 l=2
++ ad=65 pd=36 as=0 ps=0 
+M1011 t_2_vdd t_0_d t_0_a_98_51# t_2_vdd cmosp w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1012 t_0_ci t_0_cn t_2_vdd t_2_vdd cmosp w=11 l=2
++ ad=67 pd=36 as=0 ps=0 
+M1013 t_0_cn t_0_cp t_2_vdd t_2_vdd cmosp w=10 l=2
++ ad=62 pd=34 as=0 ps=0 
+M1014 t_2_vss t_0_cn t_0_ci t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=42 ps=26 
+M1015 t_0_a_44_17# t_0_d t_2_vss t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1016 t_0_n4 t_0_cn t_0_a_44_17# t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1017 t_0_n2 t_0_ci t_0_n4 t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1018 t_2_vss t_0_n1 t_0_n2 t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1019 t_0_a_81_17# t_0_n2 t_2_vss t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1020 t_0_n1 t_0_ci t_0_a_81_17# t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1021 t_0_a_98_17# t_0_cn t_0_n1 t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1022 t_2_vss t_0_d t_0_a_98_17# t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1023 t_0_cn t_0_cp t_2_vss t_2_vss cmosn w=7 l=2
++ ad=49 pd=28 as=0 ps=0 
+M1024 xor2v0x3_0_bn xor2v0x3_1_b t_2_vdd t_2_vdd cmosp w=28 l=2
++ ad=672 pd=216 as=0 ps=0 
+M1025 t_2_vdd xor2v0x3_1_b xor2v0x3_0_bn t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1026 xor2v0x3_0_bn xor2v0x3_1_b t_2_vdd t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1027 t_1_cp xor2v0x3_0_an xor2v0x3_0_bn t_2_vdd cmosp w=28 l=2
++ ad=582 pd=216 as=0 ps=0 
+M1028 xor2v0x3_0_an xor2v0x3_0_bn t_1_cp t_2_vdd cmosp w=13 l=2
++ ad=494 pd=184 as=0 ps=0 
+M1029 t_1_cp xor2v0x3_0_bn xor2v0x3_0_an t_2_vdd cmosp w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1030 xor2v0x3_0_bn xor2v0x3_0_an t_1_cp t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1031 t_1_cp xor2v0x3_0_an xor2v0x3_0_bn t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1032 xor2v0x3_0_an xor2v0x3_0_bn t_1_cp t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1033 t_2_vdd t_0_z xor2v0x3_0_an t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1034 xor2v0x3_0_an t_0_z t_2_vdd t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1035 xor2v0x3_0_bn xor2v0x3_1_b t_2_vss t_2_vss cmosn w=11 l=2
++ ad=118 pd=50 as=0 ps=0 
+M1036 t_2_vss xor2v0x3_1_b xor2v0x3_0_bn t_2_vss cmosn w=17 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1037 xor2v0x3_0_an xor2v0x3_1_b t_1_cp t_2_vss cmosn w=14 l=2
++ ad=224 pd=88 as=342 ps=148 
+M1038 t_1_cp xor2v0x3_1_b xor2v0x3_0_an t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1039 xor2v0x3_0_a_61_7# xor2v0x3_0_an t_1_cp t_2_vss cmosn w=19 l=2
++ ad=95 pd=48 as=0 ps=0 
+M1040 t_2_vss xor2v0x3_0_bn xor2v0x3_0_a_61_7# t_2_vss cmosn w=19 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1041 xor2v0x3_0_a_80_7# xor2v0x3_0_bn t_2_vss t_2_vss cmosn w=19 l=2
++ ad=95 pd=48 as=0 ps=0 
+M1042 t_1_cp xor2v0x3_0_an xor2v0x3_0_a_80_7# t_2_vss cmosn w=19 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1043 xor2v0x3_0_an t_0_z t_2_vss t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1044 t_2_vss t_0_z xor2v0x3_0_an t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1045 t_2_vdd t_1_d t_1_z t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=168 ps=70 
+M1046 t_1_d t_1_n4 t_2_vdd t_2_vdd cmosp w=14 l=2
++ ad=82 pd=42 as=0 ps=0 
+M1047 t_1_a_44_52# t_1_d t_2_vdd t_2_vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1048 t_1_n4 t_1_ci t_1_a_44_52# t_2_vdd cmosp w=6 l=2
++ ad=78 pd=40 as=0 ps=0 
+M1049 t_1_n2 t_1_cn t_1_n4 t_2_vdd cmosp w=12 l=2
++ ad=96 pd=40 as=0 ps=0 
+M1050 t_2_vdd t_1_n1 t_1_n2 t_2_vdd cmosp w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1051 t_1_a_81_58# t_1_n2 t_2_vdd t_2_vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1052 t_1_n1 t_1_cn t_1_a_81_58# t_2_vdd cmosp w=6 l=2
++ ad=83 pd=42 as=0 ps=0 
+M1053 t_2_vss t_1_d t_1_z t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=82 ps=42 
+M1054 t_2_vss t_1_n4 t_1_d t_2_vss cmosn w=7 l=2
++ ad=0 pd=0 as=47 ps=28 
+M1055 t_1_a_98_51# t_1_ci t_1_n1 t_2_vdd cmosp w=13 l=2
++ ad=65 pd=36 as=0 ps=0 
+M1056 t_2_vdd t_1_d t_1_a_98_51# t_2_vdd cmosp w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1057 t_1_ci t_1_cn t_2_vdd t_2_vdd cmosp w=11 l=2
++ ad=67 pd=36 as=0 ps=0 
+M1058 t_1_cn t_1_cp t_2_vdd t_2_vdd cmosp w=10 l=2
++ ad=62 pd=34 as=0 ps=0 
+M1059 t_2_vss t_1_cn t_1_ci t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=42 ps=26 
+M1060 t_1_a_44_17# t_1_d t_2_vss t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1061 t_1_n4 t_1_cn t_1_a_44_17# t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1062 t_1_n2 t_1_ci t_1_n4 t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1063 t_2_vss t_1_n1 t_1_n2 t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1064 t_1_a_81_17# t_1_n2 t_2_vss t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1065 t_1_n1 t_1_ci t_1_a_81_17# t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1066 t_1_a_98_17# t_1_cn t_1_n1 t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1067 t_2_vss t_1_d t_1_a_98_17# t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1068 t_1_cn t_1_cp t_2_vss t_2_vss cmosn w=7 l=2
++ ad=49 pd=28 as=0 ps=0 
+M1069 xor2v0x3_1_bn xor2v0x3_1_b t_2_vdd t_2_vdd cmosp w=28 l=2
++ ad=672 pd=216 as=0 ps=0 
+M1070 t_2_vdd xor2v0x3_1_b xor2v0x3_1_bn t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1071 xor2v0x3_1_bn xor2v0x3_1_b t_2_vdd t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1072 t_2_cp xor2v0x3_1_an xor2v0x3_1_bn t_2_vdd cmosp w=28 l=2
++ ad=582 pd=216 as=0 ps=0 
+M1073 xor2v0x3_1_an xor2v0x3_1_bn t_2_cp t_2_vdd cmosp w=13 l=2
++ ad=494 pd=184 as=0 ps=0 
+M1074 t_2_cp xor2v0x3_1_bn xor2v0x3_1_an t_2_vdd cmosp w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1075 xor2v0x3_1_bn xor2v0x3_1_an t_2_cp t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1076 t_2_cp xor2v0x3_1_an xor2v0x3_1_bn t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1077 xor2v0x3_1_an xor2v0x3_1_bn t_2_cp t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1078 t_2_vdd t_1_z xor2v0x3_1_an t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1079 xor2v0x3_1_an t_1_z t_2_vdd t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1080 xor2v0x3_1_bn xor2v0x3_1_b t_2_vss t_2_vss cmosn w=11 l=2
++ ad=118 pd=50 as=0 ps=0 
+M1081 t_2_vss xor2v0x3_1_b xor2v0x3_1_bn t_2_vss cmosn w=17 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1082 xor2v0x3_1_an xor2v0x3_1_b t_2_cp t_2_vss cmosn w=14 l=2
++ ad=224 pd=88 as=342 ps=148 
+M1083 t_2_cp xor2v0x3_1_b xor2v0x3_1_an t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1084 xor2v0x3_1_a_61_7# xor2v0x3_1_an t_2_cp t_2_vss cmosn w=19 l=2
++ ad=95 pd=48 as=0 ps=0 
+M1085 t_2_vss xor2v0x3_1_bn xor2v0x3_1_a_61_7# t_2_vss cmosn w=19 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1086 xor2v0x3_1_a_80_7# xor2v0x3_1_bn t_2_vss t_2_vss cmosn w=19 l=2
++ ad=95 pd=48 as=0 ps=0 
+M1087 t_2_cp xor2v0x3_1_an xor2v0x3_1_a_80_7# t_2_vss cmosn w=19 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1088 xor2v0x3_1_an t_1_z t_2_vss t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1089 t_2_vss t_1_z xor2v0x3_1_an t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1090 t_2_vdd t_2_d t_2_z t_2_vdd cmosp w=28 l=2
++ ad=0 pd=0 as=168 ps=70 
+M1091 t_2_d t_2_n4 t_2_vdd t_2_vdd cmosp w=14 l=2
++ ad=82 pd=42 as=0 ps=0 
+M1092 t_2_a_44_52# t_2_d t_2_vdd t_2_vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1093 t_2_n4 t_2_ci t_2_a_44_52# t_2_vdd cmosp w=6 l=2
++ ad=78 pd=40 as=0 ps=0 
+M1094 t_2_n2 t_2_cn t_2_n4 t_2_vdd cmosp w=12 l=2
++ ad=96 pd=40 as=0 ps=0 
+M1095 t_2_vdd t_2_n1 t_2_n2 t_2_vdd cmosp w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1096 t_2_a_81_58# t_2_n2 t_2_vdd t_2_vdd cmosp w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1097 t_2_n1 t_2_cn t_2_a_81_58# t_2_vdd cmosp w=6 l=2
++ ad=83 pd=42 as=0 ps=0 
+M1098 t_2_vss t_2_d t_2_z t_2_vss cmosn w=14 l=2
++ ad=0 pd=0 as=82 ps=42 
+M1099 t_2_vss t_2_n4 t_2_d t_2_vss cmosn w=7 l=2
++ ad=0 pd=0 as=47 ps=28 
+M1100 t_2_a_98_51# t_2_ci t_2_n1 t_2_vdd cmosp w=13 l=2
++ ad=65 pd=36 as=0 ps=0 
+M1101 t_2_vdd t_2_d t_2_a_98_51# t_2_vdd cmosp w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1102 t_2_ci t_2_cn t_2_vdd t_2_vdd cmosp w=11 l=2
++ ad=67 pd=36 as=0 ps=0 
+M1103 t_2_cn t_2_cp t_2_vdd t_2_vdd cmosp w=10 l=2
++ ad=62 pd=34 as=0 ps=0 
+M1104 t_2_vss t_2_cn t_2_ci t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=42 ps=26 
+M1105 t_2_a_44_17# t_2_d t_2_vss t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1106 t_2_n4 t_2_cn t_2_a_44_17# t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1107 t_2_n2 t_2_ci t_2_n4 t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1108 t_2_vss t_2_n1 t_2_n2 t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1109 t_2_a_81_17# t_2_n2 t_2_vss t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1110 t_2_n1 t_2_ci t_2_a_81_17# t_2_vss cmosn w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1111 t_2_a_98_17# t_2_cn t_2_n1 t_2_vss cmosn w=6 l=2
++ ad=30 pd=22 as=0 ps=0 
+M1112 t_2_vss t_2_d t_2_a_98_17# t_2_vss cmosn w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1113 t_2_cn t_2_cp t_2_vss t_2_vss cmosn w=7 l=2
++ ad=49 pd=28 as=0 ps=0 
+C0 t_2_vdd t_2_cp 23.0fF
+C1 t_1_ci t_2_vdd 16.6fF
+C2 t_1_cp xor2v0x3_0_an 3.6fF
+C3 t_2_d t_2_vss 28.2fF
+C4 t_1_n4 t_2_vdd 8.9fF
+C5 t_1_cn t_2_vdd 46.5fF
+C6 t_2_vdd t_0_ci 16.6fF
+C7 t_1_n2 t_2_vss 7.2fF
+C8 t_0_d t_2_vss 28.2fF
+C9 t_2_vdd t_2_z 2.7fF
+C10 t_2_n1 t_2_vss 9.9fF
+C11 t_2_d t_2_vdd 18.0fF
+C12 t_0_cp t_2_vss 3.1fF
+C13 t_2_cn t_2_vss 17.1fF
+C14 t_1_n2 t_2_vdd 12.4fF
+C15 xor2v0x3_0_bn t_2_vss 12.6fF
+C16 t_2_vdd t_0_d 18.0fF
+C17 t_2_n1 t_2_vdd 8.4fF
+C18 t_1_n1 t_2_vss 9.9fF
+C19 t_2_vss t_1_d 28.2fF
+C20 xor2v0x3_1_b t_2_cp 6.8fF
+C21 t_0_cn t_2_vss 17.1fF
+C22 t_0_cp t_2_vdd 11.6fF
+C23 xor2v0x3_1_bn t_2_cp 8.8fF
+C24 t_2_cn t_2_vdd 46.5fF
+C25 xor2v0x3_0_bn t_2_vdd 24.1fF
+C26 t_2_vss t_1_z 12.1fF
+C27 t_1_n1 t_2_vdd 8.4fF
+C28 t_2_vdd t_1_d 18.0fF
+C29 t_2_cp xor2v0x3_1_an 3.6fF
+C30 t_2_vdd t_0_cn 46.5fF
+C31 t_2_vss t_2_n4 7.3fF
+C32 t_0_n1 t_2_vss 9.9fF
+C33 t_2_n2 t_2_vss 7.2fF
+C34 t_2_vss t_0_n4 7.3fF
+C35 t_1_cp t_2_vss 9.0fF
+C36 t_2_vdd t_1_z 11.0fF
+C37 xor2v0x3_0_bn t_1_cp 7.1fF
+C38 t_2_vdd t_2_n4 8.9fF
+C39 t_2_vdd t_0_n1 8.4fF
+C40 t_2_n2 t_2_vdd 12.4fF
+C41 t_2_vdd t_0_n4 8.9fF
+C42 t_2_d t_2_ci 4.2fF
+C43 t_2_vdd t_1_cp 22.3fF
+C44 t_2_vss xor2v0x3_0_an 18.3fF
+C45 xor2v0x3_1_b t_2_vss 51.1fF
+C46 xor2v0x3_1_bn t_2_vss 12.6fF
+C47 t_2_vss t_0_n2 7.2fF
+C48 t_0_z t_2_vss 12.2fF
+C49 t_2_vss xor2v0x3_1_an 18.3fF
+C50 t_2_vdd xor2v0x3_0_an 19.1fF
+C51 t_2_vdd xor2v0x3_1_b 38.6fF
+C52 t_2_ci t_2_vss 27.5fF
+C53 t_2_vdd xor2v0x3_1_bn 24.1fF
+C54 t_2_vss t_2_cp 9.0fF
+C55 t_1_ci t_2_vss 27.5fF
+C56 t_0_d t_0_ci 4.2fF
+C57 t_2_vdd t_0_n2 12.4fF
+C58 t_1_n4 t_2_vss 7.3fF
+C59 t_1_cn t_2_vss 17.1fF
+C60 t_2_vdd t_0_z 11.0fF
+C61 t_2_vdd xor2v0x3_1_an 19.1fF
+C62 t_1_ci t_1_d 4.2fF
+C63 t_2_vss t_0_ci 27.5fF
+C64 t_2_vdd t_2_ci 16.6fF
+C65 t_2_vss 0 5.6fF
+C66 t_2_vdd 0 6.0fF
 
-v_dd vdd 0 5
-v_ss vss 0 0
-v_ud ud 0 5
-v_gg_cp cp 0 PULSE(0 5 0 0 0 25n 50n)
-*v_gg_t b 0 PULSE(5 0 25n 0 0 50n 500n)
-
+v_dd t_2_vdd 0 5
+v_ss t_2_vss 0 0
+v_gg_cp t_0_cp 0 PULSE(0 5 0 0 0 25n 50n)
+v_gg_ud xor2v0x3_1_b 0 5
 .control
  tran 0.01n 500n
- plot (cp + 5) (q0) (q1 - 5)
+ plot (t_0_cp + 5)(t_0_z ) (t_1_z - 5) (t_2_z - 10)
 .endc
 
 .end
