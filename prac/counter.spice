@@ -324,7 +324,6 @@ C72 t_2_vdd 0 7.9fF
 v_dd t_2_vdd 0 5
 v_ss t_2_vss 0 0
 v_gg_cp an2v0x3_0_a 0 PULSE(0 5 0 0.1n 0.1n 15n 30n)
-*v_gg_t b 0 PULSE(5 0 10n 0 0 20n 500n)
 v_dd_en an2v0x3_0_b 0 5
 v_dd_ud xor2v0x3_1_b 0 5
 
