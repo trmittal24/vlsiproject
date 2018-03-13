@@ -1,0 +1,97 @@
+magic
+tech scmos
+timestamp 1520939621
+<< pwell >>
+rect 86 34 103 35
+rect 74 32 103 34
+rect 71 31 90 32
+rect 150 31 154 35
+rect 124 26 129 30
+rect 197 26 201 30
+rect 141 4 152 12
+<< nwell >>
+rect 142 68 153 76
+rect 147 63 209 67
+rect 65 43 70 47
+rect 100 46 137 50
+rect 205 46 209 63
+rect 78 38 82 42
+<< pdiffusion >>
+rect 205 46 209 50
+<< metal1 >>
+rect -4 68 4 76
+rect 70 68 78 76
+rect 142 68 153 76
+rect 65 43 67 47
+rect -30 34 -27 38
+rect -30 24 -27 28
+rect -30 14 -27 18
+rect -30 4 -27 8
+rect -6 4 2 12
+rect 70 4 78 12
+rect 141 4 152 12
+rect -30 -7 -27 -3
+rect -30 -17 -27 -13
+rect -30 -27 -27 -23
+<< metal2 >>
+rect 78 63 209 67
+rect -26 43 67 46
+rect -26 38 -23 43
+rect 78 42 82 63
+rect 205 50 209 63
+rect 100 46 133 50
+rect 100 35 103 46
+rect 10 34 74 35
+rect 86 34 103 35
+rect 10 32 103 34
+rect 150 35 222 38
+rect 71 31 90 32
+rect 154 34 222 35
+rect -4 24 54 27
+rect -4 17 -1 24
+rect -23 14 -1 17
+rect 124 -3 129 26
+rect -23 -7 129 -3
+rect 197 -23 201 26
+rect -23 -27 201 -23
+<< m2contact >>
+rect 67 43 71 47
+rect 133 46 137 50
+rect 205 46 209 50
+rect 78 38 82 42
+rect -27 34 -23 38
+rect 6 31 10 35
+rect 150 31 154 35
+rect -27 24 -23 28
+rect 54 23 58 27
+rect 124 26 129 30
+rect 197 26 201 30
+rect -27 14 -23 18
+rect -27 4 -23 8
+rect -27 -7 -23 -3
+rect -27 -17 -23 -13
+rect -27 -27 -23 -23
+use /home/vlsilab/Downloads/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_0 /home/vlsilab/Downloads/pharosc_8.4/magic/cells/vsclib
+timestamp 1520939621
+transform 1 0 4 0 1 4
+box -4 -4 68 76
+use /home/vlsilab/Downloads/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_1
+timestamp 1520939621
+transform 1 0 76 0 1 4
+box -4 -4 68 76
+use /home/vlsilab/Downloads/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_2
+timestamp 1520939621
+transform 1 0 148 0 1 4
+box -4 -4 68 76
+<< labels >>
+rlabel metal1 75 72 75 72 1 vdd
+rlabel metal1 75 7 75 7 1 gnd
+rlabel metal1 -28 36 -28 36 3 d0
+rlabel metal1 -29 16 -29 16 3 d2
+rlabel metal1 -29 26 -29 26 3 d1
+rlabel metal1 -29 6 -29 6 3 d3
+rlabel metal1 -29 -5 -29 -5 3 d4
+rlabel metal1 -29 -15 -29 -15 3 d5
+rlabel metal1 -29 -25 -29 -25 3 d6
+rlabel metal2 220 36 220 36 7 o
+<< end >>
