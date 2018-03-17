@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1521278075
+timestamp 1521279520
 << pwell >>
 rect 35 7 78 12
 rect 2 -7 78 7
@@ -9,21 +9,49 @@ rect 35 -12 78 -7
 rect -15 71 7 76
 rect -15 -73 -11 71
 rect 34 68 46 76
-rect 35 7 78 12
-rect 2 -7 78 7
+rect 77 68 83 76
+rect 35 7 88 12
+rect 2 -5 134 7
+rect 2 -7 78 -5
 rect 35 -12 78 -7
+rect 84 -12 134 -5
 rect 50 -38 55 -34
+rect 79 -38 103 -34
 rect 31 -54 48 -50
+rect 93 -51 98 -47
 rect -15 -76 18 -73
 rect 34 -76 46 -68
+rect 84 -76 93 -68
 << metal2 >>
 rect 7 16 10 32
+rect 46 21 49 32
+rect 85 32 86 35
+rect 46 18 141 21
 rect 7 13 40 16
 rect 37 -35 40 13
 rect 37 -38 46 -35
+rect 89 -47 92 -29
+<< metal3 >>
+rect 77 35 86 36
+rect 77 29 79 35
+rect 85 29 86 35
+rect 77 1 86 29
+rect 77 -7 92 1
+rect 86 -22 92 -7
+rect 84 -23 94 -22
+rect 84 -29 86 -23
+rect 92 -29 94 -23
+rect 84 -31 94 -29
 << m2contact >>
 rect 6 32 10 36
+rect 46 32 50 36
+rect 86 32 90 36
+rect 141 18 145 22
 rect 46 -38 50 -34
+rect 89 -51 93 -47
+<< m3contact >>
+rect 79 29 85 35
+rect 86 -29 92 -23
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_0
 timestamp 1521278075
 transform 1 0 4 0 1 4
@@ -32,6 +60,10 @@ use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_1
 timestamp 1521278075
 transform 1 0 44 0 1 4
 box -4 -4 36 76
+use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_0
+timestamp 1521279520
+transform 1 0 84 0 1 4
+box -4 -4 76 76
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_2
 timestamp 1521278075
 transform -1 0 36 0 -1 -4
@@ -39,5 +71,9 @@ box -4 -4 36 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_0
 timestamp 1521278075
 transform -1 0 84 0 -1 -4
+box -4 -4 44 76
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_1
+timestamp 1521278075
+transform -1 0 132 0 -1 -4
 box -4 -4 44 76
 << end >>

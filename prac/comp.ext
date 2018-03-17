@@ -1,4 +1,4 @@
-timestamp 1521278075
+timestamp 1521279520
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -6,40 +6,88 @@ scale 1000 1 100
 resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4 iv1v0x4_0 1 0 4 0 1 4
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4 iv1v0x4_1 1 0 44 0 1 4
+use ../pharosc_8.4/magic/cells/vsclib/or3v0x2 or3v0x2_0 1 0 84 0 1 4
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4 iv1v0x4_2 -1 0 36 0 -1 -4
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2 an2v0x2_0 -1 0 84 0 -1 -4
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2 an2v0x2_1 -1 0 132 0 -1 -4
+node "m1_84_n76#" 0 3384 84 -76 m1 0 0 0 0 0 0 0 0 0 0 0 0 72 34 0 0 0 0
 node "m1_34_n76#" 0 4512 34 -76 m1 0 0 0 0 0 0 0 0 0 0 0 0 96 40 0 0 0 0
 node "m1_31_n54#" 0 3196 31 -54 m1 0 0 0 0 0 0 0 0 0 0 0 0 68 42 0 0 0 0
-node "m1_2_n7#" 0 0 2 -7 m1 0 0 0 0 0 0 0 0 0 0 0 0 1494 200 0 0 0 0
+node "m1_79_n38#" 0 4512 79 -38 m1 0 0 0 0 0 0 0 0 0 0 0 0 96 56 0 0 0 0
+node "m1_2_n7#" 0 50384 2 -7 m1 0 0 0 0 0 0 0 0 0 0 0 0 2566 326 0 0 0 0
+node "m1_86_32#" 1 4667 86 32 v 0 0 0 0 0 0 0 0 0 0 0 0 52 42 161 106 0 0
+node "m1_46_32#" 1 7546 46 32 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 350 238 0 0
 node "m1_6_32#" 1 7118 6 32 v 0 0 0 0 0 0 0 0 0 0 0 0 52 42 350 238 0 0
+node "m1_77_68#" 0 2256 77 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 48 28 0 0 0 0
 node "m1_34_68#" 0 4512 34 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 96 40 0 0 0 0
 node "m1_n15_n76#" 2 36895 -15 -76 m1 0 0 0 0 0 0 0 0 0 0 0 0 785 406 0 0 0 0
 node "w_2_n7#" 0 0 2 -7 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "m1_6_32#" "m1_2_n7#" 3240
 cap "w_2_n7#" "m1_2_n7#" 70218
-cap "iv1v0x4_2/w_n4_32#" "iv1v0x4_2/vdd" 1786
-cap "iv1v0x4_0/vss" "an2v0x2_0/a" 4830
-cap "iv1v0x4_0/a" "an2v0x2_0/a" 76
-cap "iv1v0x4_2/w_n4_32#" "an2v0x2_0/a" 1000
-cap "iv1v0x4_0/z" "an2v0x2_0/a" 330
+cap "m1_79_n38#" "m1_86_32#" 540
+cap "m1_6_32#" "m1_2_n7#" 3240
+cap "m1_46_32#" "iv1v0x4_1/z" 286
+cap "m1_46_32#" "iv1v0x4_1/vss" 88
+cap "iv1v0x4_0/vss" "an2v0x2_0/z" 282
+cap "an2v0x2_0/a" "iv1v0x4_0/z" 330
+cap "iv1v0x4_0/vss" "m1_46_32#" 1463
 cap "iv1v0x4_2/w_n4_32#" "iv1v0x4_2/z" 2256
-cap "iv1v0x4_0/z" "iv1v0x4_0/vss" 330
-cap "iv1v0x4_0/vdd" "iv1v0x4_0/w_n4_32#" 1974
+cap "iv1v0x4_2/w_n4_32#" "an2v0x2_0/a" 1000
+cap "m1_46_32#" "iv1v0x4_1/a" 38
+cap "iv1v0x4_2/w_n4_32#" "iv1v0x4_2/vdd" 1786
+cap "iv1v0x4_0/a" "an2v0x2_0/a" 76
+cap "iv1v0x4_0/vss" "an2v0x2_0/a" 4830
+cap "iv1v0x4_2/w_n4_32#" "an2v0x2_0/z" 282
+cap "an2v0x2_0/w_n4_n4#" "or3v0x2_0/vss" 19928
+cap "an2v0x2_0/w_n4_n4#" "an2v0x2_1/a" 1504
+cap "an2v0x2_0/w_n4_32#" "an2v0x2_1/b" 1453
+cap "an2v0x2_0/w_n4_32#" "an2v0x2_1/vdd" 1504
+cap "m1_46_32#" "or3v0x2_0/z" 538
+cap "an2v0x2_0/w_n4_n4#" "an2v0x2_1/b" 969
+cap "or3v0x2_0/zn" "m1_46_32#" 2744
+cap "an2v0x2_0/w_n4_32#" "an2v0x2_1/a" 1504
+cap "m1_46_32#" "an2v0x2_0/w_n4_n4#" 342
+cap "m1_46_32#" "or3v0x2_0/vss" 672
+cap "iv1v0x4_0/vss" "iv1v0x4_0/z" 330
+cap "iv1v0x4_0/w_n4_32#" "iv1v0x4_0/vdd" 3478
+cap "iv1v0x4_1/z" "iv1v0x4_1/vss" 268
+cap "m1_86_32#" "or3v0x2_0/vss" 684
+cap "iv1v0x4_1/z" "iv1v0x4_1/vss" 418
+cap "iv1v0x4_1/z" "or3v0x2_0/vss" 304
+cap "or3v0x2_0/c" "or3v0x2_0/z" 269
+cap "or3v0x2_0/vss" "or3v0x2_0/c" 198
+cap "or3v0x2_0/vss" "or3v0x2_0/z" 57
+cap "or3v0x2_0/c" "or3v0x2_0/zn" 1372
+cap "or3v0x2_0/c" "or3v0x2_0/vss" 171
+merge "or3v0x2_0/vdd" "iv1v0x4_1/w_n4_32#" -8413 0 0 0 0 0 0 0 0 0 0 0 0 -105 -104 0 0 0 -176
+merge "iv1v0x4_1/w_n4_32#" "iv1v0x4_0/w_n4_32#"
+merge "iv1v0x4_0/w_n4_32#" "iv1v0x4_1/vdd"
+merge "iv1v0x4_1/vdd" "iv1v0x4_0/vdd"
+merge "iv1v0x4_0/vdd" "an2v0x2_1/vdd"
+merge "an2v0x2_1/vdd" "an2v0x2_0/vdd"
+merge "an2v0x2_0/vdd" "iv1v0x4_2/vdd"
+merge "iv1v0x4_2/vdd" "m1_34_n76#"
+merge "m1_34_n76#" "m1_n15_n76#"
+merge "m1_n15_n76#" "m1_84_n76#"
+merge "m1_84_n76#" "m1_34_68#"
+merge "m1_34_68#" "m1_77_68#"
+merge "iv1v0x4_1/z" "or3v0x2_0/c" -6064 0 0 0 0 0 0 0 0 0 0 0 0 -42 -41 -120 -62 0 0
+merge "or3v0x2_0/c" "m1_46_32#"
+merge "an2v0x2_1/a" "an2v0x2_0/z" -4512 0 0 0 0 0 0 0 0 0 0 0 0 -20 -26 0 0 0 0
+merge "an2v0x2_0/z" "m1_79_n38#"
 merge "an2v0x2_0/b" "iv1v0x4_2/z" -3196 0 0 0 0 0 0 0 0 0 0 0 0 -20 -26 0 0 0 0
 merge "iv1v0x4_2/z" "m1_31_n54#"
 merge "iv1v0x4_0/z" "an2v0x2_0/a" -7118 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
 merge "an2v0x2_0/a" "m1_6_32#"
-merge "an2v0x2_0/vss" "an2v0x2_0/w_n4_n4#" 0 0 0 0 0 0 0 0 0 0 0 0 0 -822 -352 0 0 0 0
+merge "an2v0x2_1/vss" "an2v0x2_1/w_n4_n4#" -50384 0 0 0 0 0 0 0 0 0 0 0 0 -1382 -606 0 0 0 0
+merge "an2v0x2_1/w_n4_n4#" "an2v0x2_0/vss"
+merge "an2v0x2_0/vss" "an2v0x2_0/w_n4_n4#"
 merge "an2v0x2_0/w_n4_n4#" "iv1v0x4_2/vss"
-merge "iv1v0x4_2/vss" "iv1v0x4_1/vss"
+merge "iv1v0x4_2/vss" "or3v0x2_0/vss"
+merge "or3v0x2_0/vss" "iv1v0x4_1/vss"
 merge "iv1v0x4_1/vss" "iv1v0x4_0/vss"
 merge "iv1v0x4_0/vss" "w_2_n7#"
 merge "w_2_n7#" "m1_2_n7#"
-merge "iv1v0x4_1/w_n4_32#" "iv1v0x4_0/w_n4_32#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -88
-merge "iv1v0x4_1/vdd" "iv1v0x4_0/vdd" -6157 0 0 0 0 0 0 0 0 0 0 0 0 -89 -68 0 0 0 0
-merge "iv1v0x4_0/vdd" "an2v0x2_0/vdd"
-merge "an2v0x2_0/vdd" "iv1v0x4_2/vdd"
-merge "iv1v0x4_2/vdd" "m1_34_n76#"
-merge "m1_34_n76#" "m1_n15_n76#"
-merge "m1_n15_n76#" "m1_34_68#"
-merge "an2v0x2_0/w_n4_32#" "iv1v0x4_2/w_n4_32#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -88
+merge "or3v0x2_0/z" "an2v0x2_1/b" -4667 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 -36 -21 0 0
+merge "an2v0x2_1/b" "m1_86_32#"
+merge "an2v0x2_1/w_n4_32#" "an2v0x2_0/w_n4_32#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -176
+merge "an2v0x2_0/w_n4_32#" "iv1v0x4_2/w_n4_32#"
