@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1521279520
+timestamp 1521306089
 << pwell >>
 rect 35 7 78 12
 rect 2 -7 78 7
@@ -10,48 +10,116 @@ rect -15 71 7 76
 rect -15 -73 -11 71
 rect 34 68 46 76
 rect 77 68 83 76
+rect 155 68 165 76
+rect 205 68 215 76
+rect 150 34 152 38
+rect 242 34 244 38
 rect 35 7 88 12
-rect 2 -5 134 7
+rect 133 7 214 12
+rect 2 -5 254 7
 rect 2 -7 78 -5
 rect 35 -12 78 -7
-rect 84 -12 134 -5
+rect 84 -12 254 -5
+rect 228 -30 237 -26
 rect 50 -38 55 -34
 rect 79 -38 103 -34
-rect 31 -54 48 -50
+rect 142 -38 152 -34
+rect 127 -46 137 -43
+rect 31 -54 37 -50
+rect 41 -54 48 -50
 rect 93 -51 98 -47
 rect -15 -76 18 -73
 rect 34 -76 46 -68
 rect 84 -76 93 -68
+rect 131 -76 141 -68
+rect 213 -76 220 -68
 << metal2 >>
+rect 157 47 200 50
+rect 157 38 160 47
+rect 252 42 256 45
 rect 7 16 10 32
 rect 46 21 49 32
 rect 85 32 86 35
+rect 125 32 139 35
+rect 156 35 160 38
+rect 136 30 139 32
+rect 211 32 214 36
+rect 136 27 159 30
 rect 46 18 141 21
 rect 7 13 40 16
 rect 37 -35 40 13
+rect 142 0 145 18
+rect 142 -3 149 0
 rect 37 -38 46 -35
 rect 89 -47 92 -29
+rect 146 -34 149 -3
+rect 156 -26 159 27
+rect 166 26 169 31
+rect 245 26 248 34
+rect 166 23 248 26
+rect 253 7 256 42
+rect 206 4 256 7
+rect 130 -37 138 -34
+rect 38 -60 41 -54
+rect 130 -60 133 -37
+rect 146 -36 174 -34
+rect 146 -37 178 -36
+rect 206 -35 209 4
+rect 222 -30 224 -26
+rect 220 -42 228 -39
+rect 38 -63 133 -60
+rect 138 -62 141 -46
+rect 220 -62 223 -42
+rect 138 -65 223 -62
 << metal3 >>
+rect 203 37 212 39
 rect 77 35 86 36
 rect 77 29 79 35
 rect 85 29 86 35
+rect 203 31 205 37
+rect 211 31 212 37
+rect 203 29 213 31
 rect 77 1 86 29
+rect 204 16 213 29
+rect 204 10 220 16
 rect 77 -7 92 1
 rect 86 -22 92 -7
 rect 84 -23 94 -22
 rect 84 -29 86 -23
 rect 92 -29 94 -23
 rect 84 -31 94 -29
+rect 214 -24 220 10
+rect 214 -26 223 -24
+rect 214 -32 216 -26
+rect 222 -32 223 -26
+rect 214 -34 223 -32
 << m2contact >>
+rect 200 46 204 50
+rect 248 42 252 46
 rect 6 32 10 36
 rect 46 32 50 36
 rect 86 32 90 36
+rect 121 32 125 36
+rect 152 34 156 38
+rect 166 31 170 35
+rect 214 32 218 36
+rect 244 34 248 38
 rect 141 18 145 22
+rect 156 -30 160 -26
+rect 224 -30 228 -26
 rect 46 -38 50 -34
+rect 138 -38 142 -34
+rect 174 -36 178 -32
+rect 206 -39 210 -35
+rect 228 -42 232 -38
+rect 137 -46 141 -42
+rect 37 -54 41 -50
 rect 89 -51 93 -47
 << m3contact >>
 rect 79 29 85 35
+rect 205 31 211 37
 rect 86 -29 92 -23
+rect 216 -32 222 -26
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_0
 timestamp 1521278075
 transform 1 0 4 0 1 4
@@ -64,6 +132,14 @@ use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_0
 timestamp 1521279520
 transform 1 0 84 0 1 4
 box -4 -4 76 76
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_2
+timestamp 1521278075
+transform 1 0 164 0 1 4
+box -4 -4 44 76
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_3
+timestamp 1521278075
+transform 1 0 212 0 1 4
+box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_2
 timestamp 1521278075
 transform -1 0 36 0 -1 -4
@@ -76,4 +152,12 @@ use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_1
 timestamp 1521278075
 transform -1 0 132 0 -1 -4
 box -4 -4 44 76
+use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_1
+timestamp 1521279520
+transform -1 0 212 0 -1 -4
+box -4 -4 76 76
+use ../pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_0
+timestamp 1521306089
+transform -1 0 268 0 -1 -4
+box -4 -4 52 76
 << end >>
