@@ -1,6 +1,6 @@
 * SPICE3 file created from t.ext - technology: scmos
 
-.include /home/tarun/ngspice/t14y_tsmc_025_level3.txt
+.include t14y_tsmc_025_level3.txt
 
 
 M1000 vdd d z vdd cmosp w=28u l=2u

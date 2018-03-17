@@ -1,0 +1,43 @@
+magic
+tech scmos
+timestamp 1521278075
+<< pwell >>
+rect 35 7 78 12
+rect 2 -7 78 7
+rect 35 -12 78 -7
+<< metal1 >>
+rect -15 71 7 76
+rect -15 -73 -11 71
+rect 34 68 46 76
+rect 35 7 78 12
+rect 2 -7 78 7
+rect 35 -12 78 -7
+rect 50 -38 55 -34
+rect 31 -54 48 -50
+rect -15 -76 18 -73
+rect 34 -76 46 -68
+<< metal2 >>
+rect 7 16 10 32
+rect 7 13 40 16
+rect 37 -35 40 13
+rect 37 -38 46 -35
+<< m2contact >>
+rect 6 32 10 36
+rect 46 -38 50 -34
+use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_0
+timestamp 1521278075
+transform 1 0 4 0 1 4
+box -4 -4 36 76
+use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_1
+timestamp 1521278075
+transform 1 0 44 0 1 4
+box -4 -4 36 76
+use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_2
+timestamp 1521278075
+transform -1 0 36 0 -1 -4
+box -4 -4 36 76
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_0
+timestamp 1521278075
+transform -1 0 84 0 -1 -4
+box -4 -4 44 76
+<< end >>

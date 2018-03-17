@@ -1,66 +1,103 @@
 magic
 tech scmos
-timestamp 1520854956
+timestamp 1521047482
+<< nwell >>
+rect -585 73 -517 84
+rect -293 73 -222 84
 << metal1 >>
+rect -608 145 -284 153
+rect -229 145 17 153
+rect -608 12 -602 145
+rect -585 73 -517 84
+rect -293 76 -222 84
+rect 2 76 73 83
 rect -439 68 -432 76
-rect -295 68 -291 76
+rect -295 73 -222 76
+rect -295 68 -291 73
 rect -145 68 -140 76
-rect -2 68 3 76
+rect -2 73 73 76
+rect -2 68 3 73
 rect 149 68 155 76
 rect -472 45 -468 46
 rect -179 45 -175 46
 rect -469 42 -468 45
 rect -176 42 -175 45
 rect 114 45 118 46
-rect -302 32 -284 35
-rect -9 32 9 35
-rect -438 4 -431 12
+rect -302 32 -288 35
+rect -9 32 2 35
+rect 6 32 9 35
+rect -608 4 -372 12
 rect -294 4 -291 12
 rect -145 4 -140 12
 rect -2 4 3 12
 rect 149 4 155 12
 << metal2 >>
+rect -586 119 -576 122
+rect -292 119 -280 123
+rect -586 35 -583 119
 rect -473 50 -394 54
 rect -473 45 -469 50
+rect -586 31 -581 35
 rect -430 20 -426 38
 rect -398 35 -394 50
+rect -292 32 -288 119
+rect 2 118 13 122
 rect -176 41 -101 45
-rect 118 44 162 45
-rect 118 41 158 44
 rect -137 20 -133 33
 rect -105 35 -101 41
+rect 2 35 6 118
+rect 118 44 162 45
+rect 118 41 158 44
 rect -430 16 -133 20
 << m2contact >>
+rect -576 119 -572 123
+rect -280 119 -276 123
+rect 13 118 17 122
 rect -473 41 -469 45
 rect -430 38 -426 42
 rect -180 41 -176 45
 rect 114 41 118 45
 rect 158 40 162 44
+rect -581 31 -577 35
 rect -398 31 -394 35
+rect -288 32 -284 36
 rect -137 33 -133 37
 rect -105 31 -101 35
+rect 2 31 6 35
+use ../pharosc_8.4/magic/cells/vsclib/bf1v0x6  bf1v0x6_0
+timestamp 1521045599
+transform -1 0 -519 0 -1 153
+box -4 -4 68 76
 use t  t_2
 timestamp 1520849491
 transform 1 0 -587 0 1 0
 box 0 0 152 80
 use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3  xor2v0x3_1
-timestamp 1520849649
+timestamp 1521045599
 transform 1 0 -432 0 1 4
 box -4 -4 140 76
+use ../pharosc_8.4/magic/cells/vsclib/bf1v0x6  bf1v0x6_1
+timestamp 1521045599
+transform -1 0 -224 0 -1 153
+box -4 -4 68 76
 use t  t_1
 timestamp 1520849491
 transform 1 0 -294 0 1 0
 box 0 0 152 80
 use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3  xor2v0x3_0
-timestamp 1520849649
+timestamp 1521045599
 transform 1 0 -139 0 1 4
 box -4 -4 140 76
+use ../pharosc_8.4/magic/cells/vsclib/bf1v0x6  bf1v0x6_2
+timestamp 1521045599
+transform -1 0 69 0 -1 152
+box -4 -4 68 76
 use t  t_0
 timestamp 1520849491
 transform 1 0 0 0 1 0
 box 0 0 152 80
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x3  an2v0x3_0
-timestamp 1520854956
+timestamp 1521045599
 transform 1 0 156 0 1 4
 box -4 -4 60 76
 << end >>
