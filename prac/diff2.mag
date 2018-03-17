@@ -1,0 +1,77 @@
+magic
+tech scmos
+timestamp 1521295200
+<< metal1 >>
+rect -8 70 10 75
+rect -8 -58 -3 70
+rect 176 55 179 56
+rect 164 30 169 31
+rect 168 26 169 30
+rect 169 4 176 12
+rect 106 -44 126 -41
+rect -8 -63 4 -58
+<< metal2 >>
+rect 163 60 199 63
+rect 163 54 166 60
+rect 176 52 218 55
+rect 172 51 218 52
+rect 33 44 64 47
+rect 33 20 36 44
+rect 68 46 143 47
+rect 68 43 210 46
+rect 207 39 210 43
+rect 56 34 175 38
+rect 33 17 53 20
+rect 50 -14 53 17
+rect 164 11 167 26
+rect 43 -17 53 -14
+rect 57 8 167 11
+rect 43 -25 46 -17
+rect 57 -40 60 8
+rect 172 4 175 34
+rect 215 7 218 51
+rect 112 1 175 4
+rect 189 4 218 7
+rect 112 -22 115 1
+rect 189 -3 192 4
+rect 77 -26 115 -22
+rect 152 -7 192 -3
+rect 152 -30 156 -7
+rect 118 -34 156 -30
+rect 52 -43 60 -40
+rect 14 -52 81 -48
+<< m2contact >>
+rect 199 59 203 63
+rect 163 50 167 54
+rect 172 52 176 56
+rect 64 43 68 47
+rect 52 34 56 38
+rect 207 35 211 39
+rect 164 26 168 30
+rect 43 -29 47 -25
+rect 73 -26 77 -22
+rect 114 -34 118 -30
+rect 48 -44 52 -40
+rect 10 -52 14 -48
+rect 81 -52 85 -48
+use xor3v0x05  xor3v0x05_0
+timestamp 1521294596
+transform 1 0 3 0 1 4
+box -4 -4 172 76
+use an2v0x05  an2v0x05_1
+timestamp 1521294596
+transform 1 0 173 0 1 4
+box -4 -4 44 76
+use xnr2v0x05  xnr2v0x05_0
+timestamp 1521294596
+transform -1 0 67 0 -1 6
+box -4 -4 68 76
+use an2v0x05  an2v0x05_0
+timestamp 1521294596
+transform -1 0 111 0 -1 6
+box -4 -4 44 76
+use or2v0x05  or2v0x05_0
+timestamp 1521295200
+transform -1 0 152 0 -1 6
+box -4 -4 44 76
+<< end >>
