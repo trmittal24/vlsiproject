@@ -1,0 +1,51 @@
+timestamp 1521311720
+version 8.0
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use diff2 diff2_0 1 0 8 0 1 70
+use diff2 diff2_1 1 0 263 0 1 65
+use diff2 diff2_2 1 0 527 0 1 62
+node "m1_412_21#" 2 21937 412 21 v 0 0 0 0 0 0 0 0 0 0 0 0 16 16 1187 636 0 0
+node "m1_219_n11#" 9 135125 219 -11 m1 0 0 0 0 0 0 0 0 0 0 0 0 2875 1478 0 0 0 0
+node "m1_157_26#" 2 22507 157 26 v 0 0 0 0 0 0 0 0 0 0 0 0 16 16 1177 612 0 0
+node "m1_474_133#" 1 6909 474 133 m1 0 0 0 0 0 0 0 0 0 0 0 0 147 104 0 0 0 0
+node "m1_221_138#" 1 8319 221 138 m1 0 0 0 0 0 0 0 0 0 0 0 0 177 124 0 0 0 0
+cap "m1_157_26#" "m1_219_n11#" 720
+cap "m1_412_21#" "m1_219_n11#" 2520
+cap "diff2_0/or2v0x05_0/vdd" "diff2_0/or2v0x05_0/z" 792
+cap "diff2_0/an2v0x05_1/vss" "diff2_0/an2v0x05_1/vss" 752
+cap "diff2_1/xnr2v0x05_0/vdd" "m1_157_26#" 8100
+cap "diff2_1/an2v0x05_0/zn" "diff2_1/an2v0x05_0/b" 804
+cap "diff2_1/an2v0x05_0/vdd" "diff2_1/an2v0x05_0/b" 15846
+cap "diff2_1/an2v0x05_0/z" "diff2_1/an2v0x05_0/b" 1299
+cap "diff2_1/or2v0x05_0/vss" "diff2_1/m1_52_34#" 540
+cap "diff2_1/or2v0x05_0/vss" "diff2_1/m1_114_n34#" 720
+cap "diff2_1/or2v0x05_0/vss" "diff2_1/or2v0x05_0/vss" 752
+cap "diff2_1/or2v0x05_0/vss" "diff2_1/m1_52_34#" -228
+cap "diff2_1/or2v0x05_0/z" "diff2_1/or2v0x05_0/vdd" 735
+cap "diff2_2/xnr2v0x05_0/vdd" "m1_412_21#" 14580
+cap "diff2_2/xnr2v0x05_0/vdd" "m1_219_n11#" 3478
+cap "diff2_2/an2v0x05_0/vdd" "m1_219_n11#" 3901
+cap "diff2_2/an2v0x05_0/z" "diff2_2/an2v0x05_0/b" 1278
+cap "diff2_2/an2v0x05_0/zn" "diff2_2/an2v0x05_0/b" 440
+cap "diff2_2/an2v0x05_0/vdd" "diff2_2/an2v0x05_0/b" 10214
+cap "diff2_2/an2v0x05_0/a" "diff2_2/an2v0x05_0/b" 540
+cap "diff2_2/xor3v0x05_0/vss" "m1_219_n11#" 1128
+cap "diff2_2/xor3v0x05_0/vss" "diff2_2/m1_114_n34#" -76
+cap "m1_219_n11#" "diff2_2/m1_114_n34#" 1395
+cap "diff2_1/xor3v0x05_0/vdd" "diff2_0/an2v0x05_1/vdd" 94
+cap "diff2_0/an2v0x05_1/vdd" "diff2_0/an2v0x05_1/vdd" 282
+cap "diff2_1/an2v0x05_1/vdd" "diff2_1/an2v0x05_1/vdd" 282
+merge "diff2_1/xor3v0x05_0/vdd" "diff2_0/an2v0x05_1/vdd" -3760 0 0 0 0 0 0 0 0 0 0 0 0 -72 -66 0 0 0 0
+merge "diff2_0/an2v0x05_1/vdd" "m1_221_138#"
+merge "diff2_1/an2v0x05_0/b" "diff2_0/or2v0x05_0/z" -22507 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 -699 -350 0 0
+merge "diff2_0/or2v0x05_0/z" "m1_157_26#"
+merge "diff2_2/m1_n8_n63#" "diff2_1/an2v0x05_1/vdd" -1410 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+merge "diff2_1/an2v0x05_1/vdd" "m1_474_133#"
+merge "diff2_2/xor3v0x05_0/vss" "diff2_1/or2v0x05_0/vss" -68620 0 0 0 0 0 0 0 0 0 0 0 0 -1520 -919 0 0 0 0
+merge "diff2_1/or2v0x05_0/vss" "diff2_0/an2v0x05_1/vss"
+merge "diff2_0/an2v0x05_1/vss" "m1_219_n11#"
+merge "diff2_2/an2v0x05_0/b" "diff2_1/or2v0x05_0/z" -14204 0 0 0 0 0 0 0 0 0 0 0 0 -4 -10 -340 -182 0 0
+merge "diff2_1/or2v0x05_0/z" "m1_412_21#"
