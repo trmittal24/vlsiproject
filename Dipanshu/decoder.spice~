@@ -1,0 +1,257 @@
+* SPICE3 file created from decoder.ext - technology: scmos
+
+.include /home/dipanshu/Desktop/vlsiproject/prac/t14y_tsmc_025_level3.txt
+
+M1000 b2 or2v0x3_8_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=3708p ps=1404u 
+M1001 vdd or2v0x3_8_zn b2 vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1002 or2v0x3_8_a_31_39# d6 vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1003 or2v0x3_8_zn or2v0x3_7_z or2v0x3_8_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1004 or2v0x3_8_a_48_39# or2v0x3_7_z or2v0x3_8_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1005 vdd d6 or2v0x3_8_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1006 gnd or2v0x3_8_zn b2 gnd nfet w=20u l=2u
++ ad=3600p pd=990u as=126p ps=54u 
+M1007 or2v0x3_8_zn d6 gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1008 gnd or2v0x3_7_z or2v0x3_8_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1009 or2v0x3_7_z or2v0x3_7_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1010 vdd or2v0x3_7_zn or2v0x3_7_z vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1011 or2v0x3_7_a_31_39# or2v0x3_6_z vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1012 or2v0x3_7_zn d4 or2v0x3_7_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1013 or2v0x3_7_a_48_39# d4 or2v0x3_7_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1014 vdd or2v0x3_6_z or2v0x3_7_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1015 gnd or2v0x3_7_zn or2v0x3_7_z gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1016 or2v0x3_7_zn or2v0x3_6_z gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1017 gnd d4 or2v0x3_7_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1018 or2v0x3_6_z or2v0x3_6_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1019 vdd or2v0x3_6_zn or2v0x3_6_z vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1020 or2v0x3_6_a_31_39# d3 vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1021 or2v0x3_6_zn d5 or2v0x3_6_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1022 or2v0x3_6_a_48_39# d5 or2v0x3_6_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1023 vdd d3 or2v0x3_6_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1024 gnd or2v0x3_6_zn or2v0x3_6_z gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1025 or2v0x3_6_zn d3 gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1026 gnd d5 or2v0x3_6_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1027 b1 or2v0x3_5_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1028 vdd or2v0x3_5_zn b1 vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1029 or2v0x3_5_a_31_39# or2v0x3_4_z vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1030 or2v0x3_5_zn d6 or2v0x3_5_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1031 or2v0x3_5_a_48_39# d6 or2v0x3_5_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1032 vdd or2v0x3_4_z or2v0x3_5_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1033 gnd or2v0x3_5_zn b1 gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1034 or2v0x3_5_zn or2v0x3_4_z gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1035 gnd d6 or2v0x3_5_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1036 or2v0x3_4_z or2v0x3_4_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1037 vdd or2v0x3_4_zn or2v0x3_4_z vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1038 or2v0x3_4_a_31_39# d1 vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1039 or2v0x3_4_zn or2v0x3_3_z or2v0x3_4_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1040 or2v0x3_4_a_48_39# or2v0x3_3_z or2v0x3_4_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1041 vdd d1 or2v0x3_4_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1042 gnd or2v0x3_4_zn or2v0x3_4_z gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1043 or2v0x3_4_zn d1 gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1044 gnd or2v0x3_3_z or2v0x3_4_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1045 or2v0x3_3_z or2v0x3_3_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1046 vdd or2v0x3_3_zn or2v0x3_3_z vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1047 or2v0x3_3_a_31_39# d5 vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1048 or2v0x3_3_zn d2 or2v0x3_3_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1049 or2v0x3_3_a_48_39# d2 or2v0x3_3_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1050 vdd d5 or2v0x3_3_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1051 gnd or2v0x3_3_zn or2v0x3_3_z gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1052 or2v0x3_3_zn d5 gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1053 gnd d2 or2v0x3_3_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1054 b0 or2v0x3_2_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1055 vdd or2v0x3_2_zn b0 vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1056 or2v0x3_2_a_31_39# or2v0x3_1_z vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1057 or2v0x3_2_zn d6 or2v0x3_2_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1058 or2v0x3_2_a_48_39# d6 or2v0x3_2_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1059 vdd or2v0x3_1_z or2v0x3_2_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1060 gnd or2v0x3_2_zn b0 gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1061 or2v0x3_2_zn or2v0x3_1_z gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1062 gnd d6 or2v0x3_2_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1063 or2v0x3_1_z or2v0x3_1_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1064 vdd or2v0x3_1_zn or2v0x3_1_z vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1065 or2v0x3_1_a_31_39# or2v0x3_0_z vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1066 or2v0x3_1_zn d4 or2v0x3_1_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1067 or2v0x3_1_a_48_39# d4 or2v0x3_1_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1068 vdd or2v0x3_0_z or2v0x3_1_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1069 gnd or2v0x3_1_zn or2v0x3_1_z gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1070 or2v0x3_1_zn or2v0x3_0_z gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1071 gnd d4 or2v0x3_1_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1072 or2v0x3_0_z or2v0x3_0_zn vdd vdd pfet w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1073 vdd or2v0x3_0_zn or2v0x3_0_z vdd pfet w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1074 or2v0x3_0_a_31_39# d0 vdd vdd pfet w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1075 or2v0x3_0_zn d2 or2v0x3_0_a_31_39# vdd pfet w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1076 or2v0x3_0_a_48_39# d2 or2v0x3_0_zn vdd pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1077 vdd d0 or2v0x3_0_a_48_39# vdd pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1078 gnd or2v0x3_0_zn or2v0x3_0_z gnd nfet w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1079 or2v0x3_0_zn d0 gnd gnd nfet w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1080 gnd d2 or2v0x3_0_zn gnd nfet w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+C0 d1 or2v0x3_3_zn 3.7fF
+C1 d3 vdd 28.2fF
+C2 or2v0x3_1_z or2v0x3_1_zn 2.3fF
+C3 d6 or2v0x3_3_zn 2.2fF
+C4 or2v0x3_6_z or2v0x3_7_zn 2.0fF
+C5 or2v0x3_5_zn vdd 12.7fF
+C6 gnd d4 68.9fF
+C7 gnd or2v0x3_0_z 10.3fF
+C8 or2v0x3_6_zn vdd 12.7fF
+C9 vdd or2v0x3_3_zn 12.7fF
+C10 gnd or2v0x3_2_zn 9.0fF
+C11 or2v0x3_1_z b0 4.7fF
+C12 gnd or2v0x3_4_z 9.2fF
+C13 d0 or2v0x3_0_z 3.9fF
+C14 gnd d1 7.6fF
+C15 vdd d4 15.8fF
+C16 vdd or2v0x3_0_z 19.2fF
+C17 gnd d6 48.5fF
+C18 or2v0x3_7_z gnd 15.6fF
+C19 gnd or2v0x3_3_z 12.6fF
+C20 or2v0x3_2_zn vdd 12.7fF
+C21 gnd d5 20.2fF
+C22 gnd d0 7.6fF
+C23 vdd or2v0x3_4_z 18.3fF
+C24 or2v0x3_1_zn or2v0x3_0_z 2.0fF
+C25 gnd or2v0x3_4_zn 9.0fF
+C26 d1 or2v0x3_3_z 2.2fF
+C27 b2 vdd 5.1fF
+C28 d1 vdd 17.9fF
+C29 d6 b1 2.7fF
+C30 vdd d6 35.0fF
+C31 gnd or2v0x3_1_zn 9.0fF
+C32 or2v0x3_1_z or2v0x3_0_z 4.6fF
+C33 or2v0x3_8_zn gnd 9.0fF
+C34 or2v0x3_4_zn d6 2.1fF
+C35 or2v0x3_7_z vdd 11.4fF
+C36 or2v0x3_3_z vdd 12.1fF
+C37 gnd or2v0x3_6_z 9.2fF
+C38 d5 vdd 21.8fF
+C39 d0 vdd 14.1fF
+C40 vdd b1 3.9fF
+C41 or2v0x3_2_zn or2v0x3_1_z 2.0fF
+C42 d2 or2v0x3_0_z 2.2fF
+C43 or2v0x3_0_zn or2v0x3_0_z 2.3fF
+C44 or2v0x3_4_zn vdd 12.7fF
+C45 gnd or2v0x3_1_z 10.3fF
+C46 gnd or2v0x3_7_zn 9.0fF
+C47 or2v0x3_2_zn b0 2.2fF
+C48 gnd b0 2.1fF
+C49 gnd or2v0x3_0_zn 9.0fF
+C50 gnd d2 23.3fF
+C51 vdd or2v0x3_1_zn 12.7fF
+C52 or2v0x3_8_zn vdd 12.7fF
+C53 or2v0x3_6_z vdd 20.6fF
+C54 gnd d3 7.6fF
+C55 gnd or2v0x3_5_zn 9.0fF
+C56 or2v0x3_1_z vdd 19.4fF
+C57 or2v0x3_7_zn vdd 12.7fF
+C58 gnd or2v0x3_6_zn 9.0fF
+C59 gnd or2v0x3_3_zn 9.0fF
+C60 vdd b0 4.8fF
+C61 or2v0x3_0_zn vdd 12.7fF
+C62 d2 vdd 16.1fF
+C63 d2 gnd 12.7fF
+C64 d0 gnd 5.5fF
+C65 d4 gnd 25.7fF
+C66 vdd gnd 179.4fF
+C67 d5 gnd 18.7fF
+C68 d1 gnd 15.2fF
+C69 d6 gnd 2.7fF
+C70 gnd gnd 5.3fF
+C71 d3 gnd 17.6fF
+
+V_in1 d0 0 dc 2.5 pulse(0 5 0ns 0.1ns 0.1ns 25ns 400ns)
+V_in2 d1 0 dc 2.5 pulse(0 5 50ns 0.1ns 0.1ns 25ns 400ns)
+V_in3 d2 0 dc 2.5 pulse(0 5 100ns 0.1ns 0.1ns 25ns 400ns)
+V_in4 d3 0 dc 2.5 pulse(0 5 150ns 0.1ns 0.1ns 25ns 400ns)
+V_in5 d4 0 dc 2.5 pulse(0 5 200ns 0.1ns 0.1ns 25ns 400ns)
+V_in6 d5 0 dc 2.5 pulse(0 5 250ns 0.1ns 0.1ns 25ns 400ns)
+V_in7 d6 0 dc 2.5 pulse(0 5 300ns 0.1ns 0.1ns 25ns 400ns)
+vdd vdd 0 dc 5
+
+.tran 0.01ns 400ns
+
+.control
+run
+setplot tran1
+plot (b0-5) (b1-5) (b2-10) d0 d1 d2 d3 d4 d5 d6
+.endc
+
+.end
