@@ -1,324 +1,324 @@
 * SPICE3 file created from totdiff.ext - technology: scmos
 
-.include /home/barun/vlsi/t14y_tsmc_025_level3.txt
+.include t14y_tsmc_025_level3.txt
 
-M1000 diff2_0_an2v0x05_0_vdd diff2_2_or2v0x05_0_zn diff2_2_or2v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1000 diff2_0_an2v0x05_0_vdd diff2_2_or2v0x05_0_zn diff2_2_or2v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=6096p pd=1908u as=72p ps=38u
-M1001 diff2_2_or2v0x05_0_a_24_48# diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1001 diff2_2_or2v0x05_0_a_24_48# diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=90p pd=46u as=0p ps=0u
-M1002 diff2_2_or2v0x05_0_zn diff2_2_or2v0x05_0_b diff2_2_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1002 diff2_2_or2v0x05_0_zn diff2_2_or2v0x05_0_b diff2_2_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=102p pd=50u as=0p ps=0u
-M1003 diff2_0_an2v0x05_0_vss diff2_2_or2v0x05_0_zn diff2_2_or2v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1003 diff2_0_an2v0x05_0_vss diff2_2_or2v0x05_0_zn diff2_2_or2v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=3042p pd=1254u as=42p ps=26u
-M1004 diff2_2_or2v0x05_0_zn diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1004 diff2_2_or2v0x05_0_zn diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1005 diff2_0_an2v0x05_0_vss diff2_2_or2v0x05_0_b diff2_2_or2v0x05_0_zn diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1005 diff2_0_an2v0x05_0_vss diff2_2_or2v0x05_0_b diff2_2_or2v0x05_0_zn diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1006 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_0_zn diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1006 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_0_zn diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1007 diff2_2_an2v0x05_0_zn diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1007 diff2_2_an2v0x05_0_zn diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=80p pd=36u as=0p ps=0u
-M1008 diff2_0_an2v0x05_0_vdd diff2_1_or2v0x05_0_z diff2_2_an2v0x05_0_zn diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1008 diff2_0_an2v0x05_0_vdd diff2_1_or2v0x05_0_z diff2_2_an2v0x05_0_zn diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1009 diff2_0_an2v0x05_0_vss diff2_2_an2v0x05_0_zn diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1009 diff2_0_an2v0x05_0_vss diff2_2_an2v0x05_0_zn diff2_2_an2v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1010 diff2_2_an2v0x05_0_a_23_9# diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1010 diff2_2_an2v0x05_0_a_23_9# diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=45p pd=28u as=0p ps=0u
-M1011 diff2_2_an2v0x05_0_zn diff2_1_or2v0x05_0_z diff2_2_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1011 diff2_2_an2v0x05_0_zn diff2_1_or2v0x05_0_z diff2_2_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=57p pd=32u as=0p ps=0u
-M1012 diff2_0_an2v0x05_0_vdd diff2_2_xnr2v0x05_0_b diff2_2_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1012 diff2_0_an2v0x05_0_vdd diff2_2_xnr2v0x05_0_b diff2_2_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1013 diff2_2_xnr2v0x05_0_an diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1013 diff2_2_xnr2v0x05_0_an diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=96p pd=40u as=0p ps=0u
-M1014 diff2_2_an2v0x05_0_a diff2_2_xnr2v0x05_0_b diff2_2_xnr2v0x05_0_an diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1014 diff2_2_an2v0x05_0_a diff2_2_xnr2v0x05_0_b diff2_2_xnr2v0x05_0_an diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=126p pd=52u as=0p ps=0u
-M1015 diff2_2_xnr2v0x05_0_a_44_47# diff2_2_xnr2v0x05_0_bn diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1015 diff2_2_xnr2v0x05_0_a_44_47# diff2_2_xnr2v0x05_0_bn diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=90p pd=46u as=0p ps=0u
-M1016 diff2_0_an2v0x05_0_vdd diff2_2_xnr2v0x05_0_an diff2_2_xnr2v0x05_0_a_44_47# diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1016 diff2_0_an2v0x05_0_vdd diff2_2_xnr2v0x05_0_an diff2_2_xnr2v0x05_0_a_44_47# diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1017 diff2_0_an2v0x05_0_vss diff2_2_xnr2v0x05_0_b diff2_2_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1017 diff2_0_an2v0x05_0_vss diff2_2_xnr2v0x05_0_b diff2_2_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=90p ps=54u
-M1018 diff2_2_xnr2v0x05_0_an diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1018 diff2_2_xnr2v0x05_0_an diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1019 diff2_2_an2v0x05_0_a diff2_2_xnr2v0x05_0_bn diff2_2_xnr2v0x05_0_an diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1019 diff2_2_an2v0x05_0_a diff2_2_xnr2v0x05_0_bn diff2_2_xnr2v0x05_0_an diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1020 diff2_2_xnr2v0x05_0_bn diff2_2_xnr2v0x05_0_an diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1020 diff2_2_xnr2v0x05_0_bn diff2_2_xnr2v0x05_0_an diff2_2_an2v0x05_0_a diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1021 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_1_zn diff2_2_or2v0x05_0_b diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1021 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_1_zn diff2_2_or2v0x05_0_b diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1022 diff2_2_an2v0x05_1_zn diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1022 diff2_2_an2v0x05_1_zn diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=80p pd=36u as=0p ps=0u
-M1023 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_1_b diff2_2_an2v0x05_1_zn diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1023 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_1_b diff2_2_an2v0x05_1_zn diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1024 diff2_0_an2v0x05_0_vss diff2_2_an2v0x05_1_zn diff2_2_or2v0x05_0_b diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1024 diff2_0_an2v0x05_0_vss diff2_2_an2v0x05_1_zn diff2_2_or2v0x05_0_b diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1025 diff2_2_an2v0x05_1_a_23_9# diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1025 diff2_2_an2v0x05_1_a_23_9# diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=45p pd=28u as=0p ps=0u
-M1026 diff2_2_an2v0x05_1_zn diff2_2_an2v0x05_1_b diff2_2_an2v0x05_1_a_23_9# diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1026 diff2_2_an2v0x05_1_zn diff2_2_an2v0x05_1_b diff2_2_an2v0x05_1_a_23_9# diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=57p pd=32u as=0p ps=0u
-M1027 diff2_2_xor3v0x05_0_a_13_38# diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1027 diff2_2_xor3v0x05_0_a_13_38# diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1028 diff2_2_xor3v0x05_0_a_21_38# diff2_2_an2v0x05_1_b diff2_2_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1028 diff2_2_xor3v0x05_0_a_21_38# diff2_2_an2v0x05_1_b diff2_2_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1029 diff2_2_xor3v0x05_0_z diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1029 diff2_2_xor3v0x05_0_z diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=448p pd=144u as=0p ps=0u
-M1030 diff2_2_xor3v0x05_0_a_39_38# diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1030 diff2_2_xor3v0x05_0_a_39_38# diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=140p pd=66u as=0p ps=0u
-M1031 diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1031 diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=224p pd=72u as=0p ps=0u
-M1032 diff2_0_an2v0x05_0_vdd diff2_2_xnr2v0x05_0_b diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1032 diff2_0_an2v0x05_0_vdd diff2_2_xnr2v0x05_0_b diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1033 diff2_2_xor3v0x05_0_cn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1033 diff2_2_xor3v0x05_0_cn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=152p pd=70u as=0p ps=0u
-M1034 diff2_2_xor3v0x05_0_bn diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1034 diff2_2_xor3v0x05_0_bn diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=224p pd=72u as=0p ps=0u
-M1035 diff2_2_xor3v0x05_0_a_116_38# diff2_2_xnr2v0x05_0_b diff2_2_xor3v0x05_0_bn diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1035 diff2_2_xor3v0x05_0_a_116_38# diff2_2_xnr2v0x05_0_b diff2_2_xor3v0x05_0_bn diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=140p pd=66u as=0p ps=0u
-M1036 diff2_2_xor3v0x05_0_z diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_a_116_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1036 diff2_2_xor3v0x05_0_z diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_a_116_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1037 diff2_2_xor3v0x05_0_a_133_38# diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1037 diff2_2_xor3v0x05_0_a_133_38# diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1038 diff2_2_xor3v0x05_0_a_141_38# diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_133_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1038 diff2_2_xor3v0x05_0_a_141_38# diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_133_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1039 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_a_141_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1039 diff2_0_an2v0x05_0_vdd diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_a_141_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1040 diff2_2_xor3v0x05_0_a_13_12# diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1040 diff2_2_xor3v0x05_0_a_13_12# diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=84p pd=40u as=0p ps=0u
-M1041 diff2_2_xor3v0x05_0_a_21_12# diff2_2_an2v0x05_1_b diff2_2_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1041 diff2_2_xor3v0x05_0_a_21_12# diff2_2_an2v0x05_1_b diff2_2_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=84p pd=40u as=0p ps=0u
-M1042 diff2_2_xor3v0x05_0_z diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1042 diff2_2_xor3v0x05_0_z diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=216p pd=86u as=0p ps=0u
-M1043 diff2_2_xor3v0x05_0_a_39_12# diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1043 diff2_2_xor3v0x05_0_a_39_12# diff2_1_or2v0x05_0_z diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=109p pd=52u as=0p ps=0u
-M1044 diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_vss cmosn w=12u l=2u
+M1044 diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_vss nfet w=12u l=2u
 +  ad=96p pd=40u as=0p ps=0u
-M1045 diff2_0_an2v0x05_0_vss diff2_2_xnr2v0x05_0_b diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vss cmosn w=12u l=2u
+M1045 diff2_0_an2v0x05_0_vss diff2_2_xnr2v0x05_0_b diff2_2_an2v0x05_1_a diff2_0_an2v0x05_0_vss nfet w=12u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1046 diff2_2_xor3v0x05_0_cn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1046 diff2_2_xor3v0x05_0_cn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=82p pd=42u as=0p ps=0u
-M1047 diff2_2_xor3v0x05_0_bn diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1047 diff2_2_xor3v0x05_0_bn diff2_2_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=104p pd=42u as=0p ps=0u
-M1048 diff2_2_xor3v0x05_0_a_116_12# diff2_2_xnr2v0x05_0_b diff2_2_xor3v0x05_0_bn diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1048 diff2_2_xor3v0x05_0_a_116_12# diff2_2_xnr2v0x05_0_b diff2_2_xor3v0x05_0_bn diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=65p pd=36u as=0p ps=0u
-M1049 diff2_2_xor3v0x05_0_z diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_a_116_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1049 diff2_2_xor3v0x05_0_z diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_a_116_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1050 diff2_2_xor3v0x05_0_a_133_12# diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1050 diff2_2_xor3v0x05_0_a_133_12# diff2_2_xor3v0x05_0_cn diff2_2_xor3v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=78p pd=38u as=0p ps=0u
-M1051 diff2_2_xor3v0x05_0_a_141_12# diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_133_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1051 diff2_2_xor3v0x05_0_a_141_12# diff2_2_xor3v0x05_0_bn diff2_2_xor3v0x05_0_a_133_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=78p pd=38u as=0p ps=0u
-M1052 diff2_0_an2v0x05_0_vss diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_a_141_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1052 diff2_0_an2v0x05_0_vss diff2_2_an2v0x05_1_a diff2_2_xor3v0x05_0_a_141_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1053 diff2_0_an2v0x05_0_vdd diff2_1_or2v0x05_0_zn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1053 diff2_0_an2v0x05_0_vdd diff2_1_or2v0x05_0_zn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1054 diff2_1_or2v0x05_0_a_24_48# diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1054 diff2_1_or2v0x05_0_a_24_48# diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=90p pd=46u as=0p ps=0u
-M1055 diff2_1_or2v0x05_0_zn diff2_1_or2v0x05_0_b diff2_1_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1055 diff2_1_or2v0x05_0_zn diff2_1_or2v0x05_0_b diff2_1_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=102p pd=50u as=0p ps=0u
-M1056 diff2_0_an2v0x05_0_vss diff2_1_or2v0x05_0_zn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1056 diff2_0_an2v0x05_0_vss diff2_1_or2v0x05_0_zn diff2_1_or2v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1057 diff2_1_or2v0x05_0_zn diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1057 diff2_1_or2v0x05_0_zn diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1058 diff2_0_an2v0x05_0_vss diff2_1_or2v0x05_0_b diff2_1_or2v0x05_0_zn diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1058 diff2_0_an2v0x05_0_vss diff2_1_or2v0x05_0_b diff2_1_or2v0x05_0_zn diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1059 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_0_zn diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1059 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_0_zn diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1060 diff2_1_an2v0x05_0_zn diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1060 diff2_1_an2v0x05_0_zn diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=80p pd=36u as=0p ps=0u
-M1061 diff2_0_an2v0x05_0_vdd diff2_0_or2v0x05_0_z diff2_1_an2v0x05_0_zn diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1061 diff2_0_an2v0x05_0_vdd diff2_0_or2v0x05_0_z diff2_1_an2v0x05_0_zn diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1062 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_0_zn diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1062 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_0_zn diff2_1_an2v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1063 diff2_1_an2v0x05_0_a_23_9# diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1063 diff2_1_an2v0x05_0_a_23_9# diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=45p pd=28u as=0p ps=0u
-M1064 diff2_1_an2v0x05_0_zn diff2_0_or2v0x05_0_z diff2_1_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1064 diff2_1_an2v0x05_0_zn diff2_0_or2v0x05_0_z diff2_1_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=57p pd=32u as=0p ps=0u
-M1065 diff2_0_an2v0x05_0_vdd diff2_1_xnr2v0x05_0_b diff2_1_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1065 diff2_0_an2v0x05_0_vdd diff2_1_xnr2v0x05_0_b diff2_1_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1066 diff2_1_xnr2v0x05_0_an diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1066 diff2_1_xnr2v0x05_0_an diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=96p pd=40u as=0p ps=0u
-M1067 diff2_1_an2v0x05_0_a diff2_1_xnr2v0x05_0_b diff2_1_xnr2v0x05_0_an diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1067 diff2_1_an2v0x05_0_a diff2_1_xnr2v0x05_0_b diff2_1_xnr2v0x05_0_an diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=126p pd=52u as=0p ps=0u
-M1068 diff2_1_xnr2v0x05_0_a_44_47# diff2_1_xnr2v0x05_0_bn diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1068 diff2_1_xnr2v0x05_0_a_44_47# diff2_1_xnr2v0x05_0_bn diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=90p pd=46u as=0p ps=0u
-M1069 diff2_0_an2v0x05_0_vdd diff2_1_xnr2v0x05_0_an diff2_1_xnr2v0x05_0_a_44_47# diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1069 diff2_0_an2v0x05_0_vdd diff2_1_xnr2v0x05_0_an diff2_1_xnr2v0x05_0_a_44_47# diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1070 diff2_0_an2v0x05_0_vss diff2_1_xnr2v0x05_0_b diff2_1_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1070 diff2_0_an2v0x05_0_vss diff2_1_xnr2v0x05_0_b diff2_1_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=90p ps=54u
-M1071 diff2_1_xnr2v0x05_0_an diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1071 diff2_1_xnr2v0x05_0_an diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1072 diff2_1_an2v0x05_0_a diff2_1_xnr2v0x05_0_bn diff2_1_xnr2v0x05_0_an diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1072 diff2_1_an2v0x05_0_a diff2_1_xnr2v0x05_0_bn diff2_1_xnr2v0x05_0_an diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1073 diff2_1_xnr2v0x05_0_bn diff2_1_xnr2v0x05_0_an diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1073 diff2_1_xnr2v0x05_0_bn diff2_1_xnr2v0x05_0_an diff2_1_an2v0x05_0_a diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1074 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_1_zn diff2_1_or2v0x05_0_b diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1074 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_1_zn diff2_1_or2v0x05_0_b diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1075 diff2_1_an2v0x05_1_zn diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1075 diff2_1_an2v0x05_1_zn diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=80p pd=36u as=0p ps=0u
-M1076 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_1_b diff2_1_an2v0x05_1_zn diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1076 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_1_b diff2_1_an2v0x05_1_zn diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1077 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_1_zn diff2_1_or2v0x05_0_b diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1077 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_1_zn diff2_1_or2v0x05_0_b diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1078 diff2_1_an2v0x05_1_a_23_9# diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1078 diff2_1_an2v0x05_1_a_23_9# diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=45p pd=28u as=0p ps=0u
-M1079 diff2_1_an2v0x05_1_zn diff2_1_an2v0x05_1_b diff2_1_an2v0x05_1_a_23_9# diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1079 diff2_1_an2v0x05_1_zn diff2_1_an2v0x05_1_b diff2_1_an2v0x05_1_a_23_9# diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=57p pd=32u as=0p ps=0u
-M1080 diff2_1_xor3v0x05_0_a_13_38# diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1080 diff2_1_xor3v0x05_0_a_13_38# diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1081 diff2_1_xor3v0x05_0_a_21_38# diff2_1_an2v0x05_1_b diff2_1_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1081 diff2_1_xor3v0x05_0_a_21_38# diff2_1_an2v0x05_1_b diff2_1_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1082 diff2_1_xor3v0x05_0_z diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1082 diff2_1_xor3v0x05_0_z diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=448p pd=144u as=0p ps=0u
-M1083 diff2_1_xor3v0x05_0_a_39_38# diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1083 diff2_1_xor3v0x05_0_a_39_38# diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=140p pd=66u as=0p ps=0u
-M1084 diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1084 diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=224p pd=72u as=0p ps=0u
-M1085 diff2_0_an2v0x05_0_vdd diff2_1_xnr2v0x05_0_b diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1085 diff2_0_an2v0x05_0_vdd diff2_1_xnr2v0x05_0_b diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1086 diff2_1_xor3v0x05_0_cn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1086 diff2_1_xor3v0x05_0_cn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=152p pd=70u as=0p ps=0u
-M1087 diff2_1_xor3v0x05_0_bn diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1087 diff2_1_xor3v0x05_0_bn diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=224p pd=72u as=0p ps=0u
-M1088 diff2_1_xor3v0x05_0_a_116_38# diff2_1_xnr2v0x05_0_b diff2_1_xor3v0x05_0_bn diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1088 diff2_1_xor3v0x05_0_a_116_38# diff2_1_xnr2v0x05_0_b diff2_1_xor3v0x05_0_bn diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=140p pd=66u as=0p ps=0u
-M1089 diff2_1_xor3v0x05_0_z diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_a_116_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1089 diff2_1_xor3v0x05_0_z diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_a_116_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1090 diff2_1_xor3v0x05_0_a_133_38# diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1090 diff2_1_xor3v0x05_0_a_133_38# diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1091 diff2_1_xor3v0x05_0_a_141_38# diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_133_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1091 diff2_1_xor3v0x05_0_a_141_38# diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_133_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1092 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_a_141_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1092 diff2_0_an2v0x05_0_vdd diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_a_141_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1093 diff2_1_xor3v0x05_0_a_13_12# diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1093 diff2_1_xor3v0x05_0_a_13_12# diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=84p pd=40u as=0p ps=0u
-M1094 diff2_1_xor3v0x05_0_a_21_12# diff2_1_an2v0x05_1_b diff2_1_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1094 diff2_1_xor3v0x05_0_a_21_12# diff2_1_an2v0x05_1_b diff2_1_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=84p pd=40u as=0p ps=0u
-M1095 diff2_1_xor3v0x05_0_z diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1095 diff2_1_xor3v0x05_0_z diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=216p pd=86u as=0p ps=0u
-M1096 diff2_1_xor3v0x05_0_a_39_12# diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1096 diff2_1_xor3v0x05_0_a_39_12# diff2_0_or2v0x05_0_z diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=109p pd=52u as=0p ps=0u
-M1097 diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_vss cmosn w=12u l=2u
+M1097 diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_vss nfet w=12u l=2u
 +  ad=96p pd=40u as=0p ps=0u
-M1098 diff2_0_an2v0x05_0_vss diff2_1_xnr2v0x05_0_b diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vss cmosn w=12u l=2u
+M1098 diff2_0_an2v0x05_0_vss diff2_1_xnr2v0x05_0_b diff2_1_an2v0x05_1_a diff2_0_an2v0x05_0_vss nfet w=12u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1099 diff2_1_xor3v0x05_0_cn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1099 diff2_1_xor3v0x05_0_cn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=82p pd=42u as=0p ps=0u
-M1100 diff2_1_xor3v0x05_0_bn diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1100 diff2_1_xor3v0x05_0_bn diff2_1_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=104p pd=42u as=0p ps=0u
-M1101 diff2_1_xor3v0x05_0_a_116_12# diff2_1_xnr2v0x05_0_b diff2_1_xor3v0x05_0_bn diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1101 diff2_1_xor3v0x05_0_a_116_12# diff2_1_xnr2v0x05_0_b diff2_1_xor3v0x05_0_bn diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=65p pd=36u as=0p ps=0u
-M1102 diff2_1_xor3v0x05_0_z diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_a_116_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1102 diff2_1_xor3v0x05_0_z diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_a_116_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1103 diff2_1_xor3v0x05_0_a_133_12# diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1103 diff2_1_xor3v0x05_0_a_133_12# diff2_1_xor3v0x05_0_cn diff2_1_xor3v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=78p pd=38u as=0p ps=0u
-M1104 diff2_1_xor3v0x05_0_a_141_12# diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_133_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1104 diff2_1_xor3v0x05_0_a_141_12# diff2_1_xor3v0x05_0_bn diff2_1_xor3v0x05_0_a_133_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=78p pd=38u as=0p ps=0u
-M1105 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_a_141_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1105 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_1_a diff2_1_xor3v0x05_0_a_141_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1106 diff2_0_an2v0x05_0_vdd diff2_0_or2v0x05_0_zn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1106 diff2_0_an2v0x05_0_vdd diff2_0_or2v0x05_0_zn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1107 diff2_0_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1107 diff2_0_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=90p pd=46u as=0p ps=0u
-M1108 diff2_0_or2v0x05_0_zn diff2_0_or2v0x05_0_b diff2_0_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1108 diff2_0_or2v0x05_0_zn diff2_0_or2v0x05_0_b diff2_0_or2v0x05_0_a_24_48# diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=102p pd=50u as=0p ps=0u
-M1109 diff2_0_an2v0x05_0_vss diff2_0_or2v0x05_0_zn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1109 diff2_0_an2v0x05_0_vss diff2_0_or2v0x05_0_zn diff2_0_or2v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1110 diff2_0_or2v0x05_0_zn diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1110 diff2_0_or2v0x05_0_zn diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1111 diff2_0_an2v0x05_0_vss diff2_0_or2v0x05_0_b diff2_0_or2v0x05_0_zn diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1111 diff2_0_an2v0x05_0_vss diff2_0_or2v0x05_0_b diff2_0_or2v0x05_0_zn diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1112 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1112 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1113 diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1113 diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=80p pd=36u as=0p ps=0u
-M1114 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1114 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1115 diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1115 diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1116 diff2_0_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1116 diff2_0_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=45p pd=28u as=0p ps=0u
-M1117 diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1117 diff2_0_an2v0x05_0_zn diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_a_23_9# diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=57p pd=32u as=0p ps=0u
-M1118 diff2_0_an2v0x05_0_vdd diff2_0_xnr2v0x05_0_b diff2_0_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1118 diff2_0_an2v0x05_0_vdd diff2_0_xnr2v0x05_0_b diff2_0_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1119 diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1119 diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=96p pd=40u as=0p ps=0u
-M1120 diff2_0_an2v0x05_0_a diff2_0_xnr2v0x05_0_b diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1120 diff2_0_an2v0x05_0_a diff2_0_xnr2v0x05_0_b diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=126p pd=52u as=0p ps=0u
-M1121 diff2_0_xnr2v0x05_0_a_44_47# diff2_0_xnr2v0x05_0_bn diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1121 diff2_0_xnr2v0x05_0_a_44_47# diff2_0_xnr2v0x05_0_bn diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=90p pd=46u as=0p ps=0u
-M1122 diff2_0_an2v0x05_0_vdd diff2_0_xnr2v0x05_0_an diff2_0_xnr2v0x05_0_a_44_47# diff2_0_an2v0x05_0_vdd cmosp w=18u l=2u
+M1122 diff2_0_an2v0x05_0_vdd diff2_0_xnr2v0x05_0_an diff2_0_xnr2v0x05_0_a_44_47# diff2_0_an2v0x05_0_vdd pfet w=18u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1123 diff2_0_an2v0x05_0_vss diff2_0_xnr2v0x05_0_b diff2_0_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1123 diff2_0_an2v0x05_0_vss diff2_0_xnr2v0x05_0_b diff2_0_xnr2v0x05_0_bn diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=90p ps=54u
-M1124 diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1124 diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1125 diff2_0_an2v0x05_0_a diff2_0_xnr2v0x05_0_bn diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1125 diff2_0_an2v0x05_0_a diff2_0_xnr2v0x05_0_bn diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=48p pd=28u as=0p ps=0u
-M1126 diff2_0_xnr2v0x05_0_bn diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1126 diff2_0_xnr2v0x05_0_bn diff2_0_xnr2v0x05_0_an diff2_0_an2v0x05_0_a diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1127 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_1_zn diff2_0_or2v0x05_0_b diff2_0_an2v0x05_0_vdd cmosp w=12u l=2u
+M1127 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_1_zn diff2_0_or2v0x05_0_b diff2_0_an2v0x05_0_vdd pfet w=12u l=2u
 +  ad=0p pd=0u as=72p ps=38u
-M1128 diff2_0_an2v0x05_1_zn diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1128 diff2_0_an2v0x05_1_zn diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=80p pd=36u as=0p ps=0u
-M1129 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_1_b diff2_0_an2v0x05_1_zn diff2_0_an2v0x05_0_vdd cmosp w=10u l=2u
+M1129 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_1_b diff2_0_an2v0x05_1_zn diff2_0_an2v0x05_0_vdd pfet w=10u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1130 diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_1_zn diff2_0_or2v0x05_0_b diff2_0_an2v0x05_0_vss cmosn w=6u l=2u
+M1130 diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_1_zn diff2_0_or2v0x05_0_b diff2_0_an2v0x05_0_vss nfet w=6u l=2u
 +  ad=0p pd=0u as=42p ps=26u
-M1131 diff2_0_an2v0x05_1_a_23_9# diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1131 diff2_0_an2v0x05_1_a_23_9# diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=45p pd=28u as=0p ps=0u
-M1132 diff2_0_an2v0x05_1_zn diff2_0_an2v0x05_1_b diff2_0_an2v0x05_1_a_23_9# diff2_0_an2v0x05_0_vss cmosn w=9u l=2u
+M1132 diff2_0_an2v0x05_1_zn diff2_0_an2v0x05_1_b diff2_0_an2v0x05_1_a_23_9# diff2_0_an2v0x05_0_vss nfet w=9u l=2u
 +  ad=57p pd=32u as=0p ps=0u
-M1133 diff2_0_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1133 diff2_0_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1134 diff2_0_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_1_b diff2_0_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1134 diff2_0_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_1_b diff2_0_xor3v0x05_0_a_13_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1135 diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1135 diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_a_21_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=448p pd=144u as=0p ps=0u
-M1136 diff2_0_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1136 diff2_0_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=140p pd=66u as=0p ps=0u
-M1137 diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1137 diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_39_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=224p pd=72u as=0p ps=0u
-M1138 diff2_0_an2v0x05_0_vdd diff2_0_xnr2v0x05_0_b diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1138 diff2_0_an2v0x05_0_vdd diff2_0_xnr2v0x05_0_b diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1139 diff2_0_xor3v0x05_0_cn diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1139 diff2_0_xor3v0x05_0_cn diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=152p pd=70u as=0p ps=0u
-M1140 diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1140 diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=224p pd=72u as=0p ps=0u
-M1141 diff2_0_xor3v0x05_0_a_116_38# diff2_0_xnr2v0x05_0_b diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1141 diff2_0_xor3v0x05_0_a_116_38# diff2_0_xnr2v0x05_0_b diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=140p pd=66u as=0p ps=0u
-M1142 diff2_0_xor3v0x05_0_z diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_a_116_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1142 diff2_0_xor3v0x05_0_z diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_a_116_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1143 diff2_0_xor3v0x05_0_a_133_38# diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1143 diff2_0_xor3v0x05_0_a_133_38# diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1144 diff2_0_xor3v0x05_0_a_141_38# diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_133_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1144 diff2_0_xor3v0x05_0_a_141_38# diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_133_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=168p pd=68u as=0p ps=0u
-M1145 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_a_141_38# diff2_0_an2v0x05_0_vdd cmosp w=28u l=2u
+M1145 diff2_0_an2v0x05_0_vdd diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_a_141_38# diff2_0_an2v0x05_0_vdd pfet w=28u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1146 diff2_0_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1146 diff2_0_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=84p pd=40u as=0p ps=0u
-M1147 diff2_0_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_1_b diff2_0_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1147 diff2_0_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_1_b diff2_0_xor3v0x05_0_a_13_12# diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=84p pd=40u as=0p ps=0u
-M1148 diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1148 diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_a_21_12# diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=216p pd=86u as=0p ps=0u
-M1149 diff2_0_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1149 diff2_0_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_b diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=109p pd=52u as=0p ps=0u
-M1150 diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_vss cmosn w=12u l=2u
+M1150 diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_39_12# diff2_0_an2v0x05_0_vss nfet w=12u l=2u
 +  ad=96p pd=40u as=0p ps=0u
-M1151 diff2_0_an2v0x05_0_vss diff2_0_xnr2v0x05_0_b diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vss cmosn w=12u l=2u
+M1151 diff2_0_an2v0x05_0_vss diff2_0_xnr2v0x05_0_b diff2_0_an2v0x05_1_a diff2_0_an2v0x05_0_vss nfet w=12u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1152 diff2_0_xor3v0x05_0_cn diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=14u l=2u
+M1152 diff2_0_xor3v0x05_0_cn diff2_0_an2v0x05_0_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=14u l=2u
 +  ad=82p pd=42u as=0p ps=0u
-M1153 diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1153 diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_1_b diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=104p pd=42u as=0p ps=0u
-M1154 diff2_0_xor3v0x05_0_a_116_12# diff2_0_xnr2v0x05_0_b diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1154 diff2_0_xor3v0x05_0_a_116_12# diff2_0_xnr2v0x05_0_b diff2_0_xor3v0x05_0_bn diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=65p pd=36u as=0p ps=0u
-M1155 diff2_0_xor3v0x05_0_z diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_a_116_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1155 diff2_0_xor3v0x05_0_z diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_a_116_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=0p pd=0u as=0p ps=0u
-M1156 diff2_0_xor3v0x05_0_a_133_12# diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1156 diff2_0_xor3v0x05_0_a_133_12# diff2_0_xor3v0x05_0_cn diff2_0_xor3v0x05_0_z diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=78p pd=38u as=0p ps=0u
-M1157 diff2_0_xor3v0x05_0_a_141_12# diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_133_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1157 diff2_0_xor3v0x05_0_a_141_12# diff2_0_xor3v0x05_0_bn diff2_0_xor3v0x05_0_a_133_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=78p pd=38u as=0p ps=0u
-M1158 diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_a_141_12# diff2_0_an2v0x05_0_vss cmosn w=13u l=2u
+M1158 diff2_0_an2v0x05_0_vss diff2_0_an2v0x05_1_a diff2_0_xor3v0x05_0_a_141_12# diff2_0_an2v0x05_0_vss nfet w=13u l=2u
 +  ad=0p pd=0u as=0p ps=0u
 C0 diff2_2_xor3v0x05_0_a_141_38# diff2_2_an2v0x05_1_a 2.3fF
 C1 diff2_0_an2v0x05_0_vss diff2_1_an2v0x05_1_b 30.5fF
@@ -465,15 +465,15 @@ C141 diff2_0_an2v0x05_0_vss 0 66.5fF
 
 v_dd diff2_0_an2v0x05_0_vdd 0 5
 v_ss diff2_0_an2v0x05_0_vss 0 0
-v_c1 diff2_0_an2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
-v_a1 diff2_0_xnr2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
-v_b1 diff2_0_an2v0x05_1_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
-v_a2 diff2_1_xnr2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
-v_b2 diff2_1_an2v0x05_1_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
-v_a3 diff2_2_xnr2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
-v_b3 diff2_2_an2v0x05_1_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 2ns 4ns )
+v_c1 diff2_0_an2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
+v_a1 diff2_0_xnr2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
+v_b1 diff2_0_an2v0x05_1_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
+v_a2 diff2_1_xnr2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
+v_b2 diff2_1_an2v0x05_1_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
+v_a3 diff2_2_xnr2v0x05_0_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
+v_b3 diff2_2_an2v0x05_1_b 0 DC 1 PULSE(0 5 1ns 0.1ns 0.1ns 30ns 60ns )
 
-.tran 0.01ns 50ns
+.tran 0.01ns 60ns
 
 .control
 run
