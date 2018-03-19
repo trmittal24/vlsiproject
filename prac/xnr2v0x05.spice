@@ -1,0 +1,49 @@
+* SPICE3 file created from xnr2v0x05.ext - technology: scmos
+.include t14y_tsmc_025_level3.txt
+
+.option scale=1u
+
+M1000 vdd b bn vdd pfet w=12 l=2
++ ad=342 pd=116 as=72 ps=38 
+M1001 an a vdd vdd pfet w=12 l=2
++ ad=96 pd=40 as=0 ps=0 
+M1002 z b an vdd pfet w=12 l=2
++ ad=126 pd=52 as=0 ps=0 
+M1003 a_44_47# bn z vdd pfet w=18 l=2
++ ad=90 pd=46 as=0 ps=0 
+M1004 vdd an a_44_47# vdd pfet w=18 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1005 vss b bn vss nfet w=6 l=2
++ ad=108 pd=48 as=90 ps=54 
+M1006 an a vss vss nfet w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1007 z bn an vss nfet w=6 l=2
++ ad=48 pd=28 as=0 ps=0 
+M1008 bn an z vss nfet w=6 l=2
++ ad=0 pd=0 as=0 ps=0 
+C0 vdd an 11.7fF
+C1 vdd z 8.5fF
+C2 vdd b 22.9fF
+C3 vss bn 26.6fF
+C4 vss a 6.0fF
+C5 vss an 4.2fF
+C6 vss z 2.6fF
+C7 vss b 4.0fF
+C8 vdd bn 8.3fF
+C9 vdd a 7.2fF
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_f a 0 PULSE(5 0 0 0.1n 0.1n 15n 30n)
+v_gg_e b 0 PULSE(5 0 0 0.1n 0.1n 30n 60n)
+/v_gg_d c 0 PULSE(5 0 0 0.1n 0.1n 60n 120n)
+
+.tran 0.01ns 200ns 
+
+.control
+run
+setplot tran1 
+plot (a+15) (b+10) (z + 5)
+.endc
+
+.end
