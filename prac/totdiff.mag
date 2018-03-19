@@ -1,40 +1,44 @@
 magic
 tech scmos
-timestamp 1521311720
+timestamp 1521490762
+<< pwell >>
+rect 230 85 278 88
+rect 227 83 278 85
+rect 498 87 508 115
+rect 227 82 275 83
+rect 225 80 275 82
+rect 225 77 273 80
+rect 498 43 509 87
+<< nwell >>
+rect 498 115 508 159
+rect 498 -1 509 43
 << metal1 >>
-rect 221 138 280 141
-rect 474 133 523 136
-rect 219 -8 223 74
-rect 434 -7 438 71
-rect 711 -7 717 68
-rect 434 -8 719 -7
-rect 219 -11 719 -8
+rect 244 86 254 91
+rect 244 75 255 86
+rect 245 70 255 75
+rect 248 6 327 10
 << metal2 >>
-rect 336 30 340 42
-rect 161 26 177 30
-rect 336 27 370 30
-rect 172 7 177 26
-rect 367 7 370 27
-rect 416 21 436 24
-rect 172 3 370 7
-rect 432 4 436 21
-rect 601 23 604 40
-rect 601 20 637 23
-rect 633 4 637 20
-rect 432 0 637 4
+rect 242 159 403 162
+rect 242 44 245 159
+rect 400 157 403 159
+rect 257 3 260 115
+rect 497 78 509 81
+rect 257 0 562 3
 << m2contact >>
-rect 157 26 161 30
-rect 412 21 416 25
+rect 257 115 261 119
+rect 493 78 497 82
+rect 509 78 513 82
+rect 241 40 245 44
 use diff2  diff2_0
-timestamp 1521310090
-transform 1 0 8 0 1 70
-box -8 -70 218 80
+timestamp 1521490762
+transform 1 0 3 0 1 79
+box -4 -80 248 80
 use diff2  diff2_1
-timestamp 1521310090
-transform 1 0 263 0 1 65
-box -8 -70 218 80
+timestamp 1521490762
+transform -1 0 499 0 -1 79
+box -4 -80 248 80
 use diff2  diff2_2
-timestamp 1521310090
-transform 1 0 527 0 1 62
-box -8 -70 218 80
+timestamp 1521490762
+transform 1 0 507 0 1 79
+box -4 -80 248 80
 << end >>
