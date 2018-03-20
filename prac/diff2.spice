@@ -184,7 +184,7 @@ v_c  an2v0x2_0_a  0 0 DC 1 PULSE(0 5 30ns 0ns 0ns 50ns 100ns )
 .control
 run
 setplot tran1 
-plot xor3v1x2_0_z or2v0x3_0_z
+plot (xor3v1x2_0_a + 20) (an2v0x2_1_b + 15) (an2v0x2_0_a + 10) (xor3v1x2_0_z + 5) (or2v0x3_0_z)
 .endc
 
 .end

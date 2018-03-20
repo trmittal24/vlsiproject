@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1521461618
+timestamp 1521558905
 << pwell >>
 rect 35 7 78 12
 rect 2 -7 78 7
@@ -32,6 +32,7 @@ rect 50 -38 55 -34
 rect 79 -38 103 -34
 rect 142 -38 152 -34
 rect 127 -46 137 -43
+rect 12 -54 15 -50
 rect 31 -54 37 -50
 rect 41 -54 48 -50
 rect 93 -51 98 -47
@@ -39,27 +40,67 @@ rect 34 -72 46 -68
 rect 84 -72 93 -68
 rect 131 -72 141 -68
 rect 213 -72 220 -68
-rect 2 -73 270 -72
-rect -15 -76 270 -73
+rect 2 -73 21 -72
+rect -15 -75 21 -73
+rect 24 -75 270 -72
+rect -15 -76 270 -75
 rect -15 -230 -11 -76
-rect 2 -91 270 -76
+rect 2 -88 270 -76
+rect 2 -91 178 -88
+rect 181 -91 270 -88
 rect 2 -92 58 -91
-rect 238 -92 270 -91
+rect 230 -92 270 -91
+rect 161 -109 165 -105
 rect 73 -117 74 -113
-rect 31 -126 36 -122
+rect 137 -114 142 -113
+rect 137 -118 138 -114
+rect 31 -125 37 -122
+rect 31 -126 36 -125
+rect -3 -129 10 -126
+rect 34 -129 36 -126
+rect 161 -134 168 -131
+rect 165 -141 168 -134
+rect 174 -136 177 -114
 rect 1 -150 58 -148
+rect 99 -150 104 -148
+rect 107 -150 115 -148
+rect 172 -150 180 -148
+rect -7 -169 -4 -157
 rect 1 -160 227 -150
 rect 5 -164 227 -160
 rect 1 -172 227 -164
+rect 74 -190 78 -186
+rect 37 -203 42 -202
+rect 38 -207 42 -203
+rect 56 -206 102 -202
+rect 198 -205 200 -202
+rect 194 -207 200 -205
 rect -15 -236 7 -230
 rect 55 -236 177 -228
+rect 221 -236 228 -228
 << metal2 >>
 rect -6 79 178 82
-rect -6 14 -3 79
+rect -6 67 -3 79
+rect -10 64 -3 67
+rect -10 14 -7 64
+rect -3 50 124 54
+rect -3 21 0 50
+rect 121 36 124 50
 rect 163 47 200 50
 rect 157 38 160 44
 rect 252 42 256 45
-rect 7 16 10 32
+rect 10 32 21 35
+rect 18 26 21 32
+rect 18 23 40 26
+rect -3 18 12 21
+rect 9 15 12 18
+rect -10 10 -6 14
+rect 9 12 18 15
+rect -22 -1 2 2
+rect -22 -161 -19 -1
+rect -6 -111 -3 -11
+rect 15 -40 18 12
+rect 37 -35 40 23
 rect 46 21 49 32
 rect 85 32 86 35
 rect 125 32 139 35
@@ -68,15 +109,15 @@ rect 136 30 139 32
 rect 211 32 214 36
 rect 136 27 159 30
 rect 46 18 141 21
-rect 7 13 40 16
-rect -22 -1 2 2
-rect -22 -161 -19 -1
-rect -6 -111 -3 -11
-rect 37 -35 40 13
+rect 23 -38 46 -35
+rect 15 -43 19 -40
+rect 16 -104 19 -43
+rect 23 -84 26 -38
+rect 64 -43 67 18
 rect 142 0 145 18
 rect 142 -3 149 0
-rect 21 -38 46 -35
-rect 21 -73 24 -38
+rect 30 -46 67 -43
+rect 30 -74 33 -46
 rect 89 -47 92 -29
 rect 146 -34 149 -3
 rect 156 -26 159 27
@@ -96,19 +137,76 @@ rect 220 -42 228 -39
 rect 38 -63 133 -60
 rect 138 -62 141 -46
 rect 220 -62 223 -42
+rect 262 -58 265 -39
 rect 138 -65 223 -62
-rect 21 -76 43 -73
-rect 40 -101 43 -76
-rect 40 -104 77 -101
-rect 40 -110 43 -104
+rect 235 -61 265 -58
+rect 30 -77 78 -74
+rect 23 -88 43 -84
+rect 16 -107 36 -104
 rect -6 -114 24 -111
-rect 74 -113 77 -104
-rect 104 -105 106 -101
-rect 104 -111 107 -105
-rect 21 -122 24 -114
-rect 100 -114 107 -111
-rect 21 -125 36 -122
+rect -7 -153 -4 -129
 rect -22 -164 1 -161
+rect -7 -217 -4 -173
+rect 10 -186 13 -114
+rect 21 -126 24 -114
+rect 33 -118 36 -107
+rect 40 -110 43 -88
+rect 74 -88 78 -77
+rect 74 -92 178 -88
+rect 44 -114 70 -111
+rect 33 -121 48 -118
+rect 21 -129 36 -126
+rect 45 -133 48 -121
+rect 67 -122 70 -114
+rect 74 -113 78 -92
+rect 104 -105 106 -101
+rect 112 -105 113 -103
+rect 104 -106 113 -105
+rect 104 -109 165 -106
+rect 104 -111 107 -109
+rect 175 -110 178 -92
+rect 100 -114 107 -111
+rect 111 -117 138 -114
+rect 111 -118 114 -117
+rect 104 -121 114 -118
+rect 148 -121 217 -118
+rect 67 -125 91 -122
+rect 88 -131 91 -125
+rect 97 -124 107 -121
+rect 97 -130 100 -124
+rect 148 -126 151 -121
+rect 122 -129 151 -126
+rect 45 -136 77 -133
+rect 88 -134 96 -131
+rect 186 -134 229 -131
+rect 45 -150 48 -136
+rect 74 -139 77 -136
+rect 34 -153 48 -150
+rect 74 -142 98 -139
+rect 7 -206 11 -202
+rect 34 -203 37 -153
+rect 65 -159 68 -144
+rect 95 -146 98 -142
+rect 165 -146 169 -145
+rect 95 -149 169 -146
+rect 65 -162 102 -159
+rect 99 -178 102 -162
+rect 166 -186 169 -149
+rect 175 -160 178 -140
+rect 175 -163 197 -160
+rect 166 -190 171 -186
+rect 70 -217 73 -190
+rect -7 -220 73 -217
+rect 194 -201 197 -163
+rect 215 -195 218 -144
+rect 150 -225 153 -201
+rect 226 -204 229 -134
+rect 235 -185 238 -61
+rect 166 -209 172 -206
+rect 226 -207 245 -204
+rect 166 -215 169 -209
+rect 260 -225 263 -207
+rect 150 -228 263 -225
 << metal3 >>
 rect 156 50 164 51
 rect 156 44 157 50
@@ -132,6 +230,11 @@ rect 84 -23 94 -22
 rect 84 -29 86 -23
 rect 92 -29 94 -23
 rect 84 -31 94 -29
+rect 1 -50 9 -49
+rect 1 -56 2 -50
+rect 8 -56 9 -50
+rect 1 -57 9 -56
+rect 1 -201 7 -57
 rect 130 -73 137 -11
 rect 214 -24 220 10
 rect 214 -26 223 -24
@@ -143,6 +246,16 @@ rect 105 -99 113 -80
 rect 105 -105 106 -99
 rect 112 -105 113 -99
 rect 105 -106 113 -105
+rect 0 -202 8 -201
+rect 0 -208 1 -202
+rect 7 -203 8 -202
+rect 7 -208 118 -203
+rect 0 -209 118 -208
+rect 112 -215 118 -209
+rect 162 -215 170 -214
+rect 112 -221 163 -215
+rect 169 -221 172 -215
+rect 162 -222 170 -221
 << polycontact >>
 rect 183 79 187 83
 << m2contact >>
@@ -168,87 +281,123 @@ rect 138 -38 142 -34
 rect 174 -36 178 -32
 rect 206 -39 210 -35
 rect 228 -42 232 -38
+rect 262 -39 266 -35
 rect 137 -46 141 -42
+rect 8 -54 12 -50
 rect 37 -54 41 -50
 rect 89 -51 93 -47
+rect 165 -109 169 -105
 rect 40 -114 44 -110
 rect 74 -117 78 -113
 rect 96 -115 100 -111
-rect 36 -126 40 -122
+rect 138 -118 142 -114
+rect 174 -114 178 -110
+rect -7 -129 -3 -125
+rect 36 -129 40 -125
+rect 118 -130 122 -126
+rect 96 -134 100 -130
+rect 65 -144 69 -140
+rect 217 -122 221 -118
+rect 182 -134 186 -130
+rect 174 -140 178 -136
+rect 165 -145 169 -141
+rect 214 -144 218 -140
+rect -7 -157 -3 -153
 rect 1 -164 5 -160
+rect -7 -173 -3 -169
+rect 98 -182 102 -178
+rect 10 -190 14 -186
+rect 70 -190 74 -186
+rect 171 -190 175 -186
+rect 235 -189 239 -185
+rect 150 -201 154 -197
+rect 215 -199 219 -195
+rect 11 -206 15 -202
+rect 34 -207 38 -203
+rect 194 -205 198 -201
+rect 172 -209 176 -205
+rect 245 -207 249 -203
+rect 260 -207 264 -203
 << m3contact >>
 rect 157 44 163 50
 rect 79 29 85 35
 rect 205 31 211 37
+rect 2 -56 8 -50
 rect 86 -29 92 -23
 rect 216 -32 222 -26
 rect 106 -105 112 -99
+rect 1 -208 7 -202
+rect 163 -221 169 -215
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_0
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 4 0 1 4
 box -4 -4 36 76
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_1
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 44 0 1 4
 box -4 -4 36 76
 use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_0
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 84 0 1 4
 box -4 -4 76 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_2
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 164 0 1 4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_3
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 212 0 1 4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_2
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 36 0 -1 -4
 box -4 -4 36 76
-use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_0
-timestamp 1521461618
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_4
+timestamp 1521558905
 transform -1 0 84 0 -1 -4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_1
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 132 0 -1 -4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_1
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 212 0 -1 -4
 box -4 -4 76 76
 use ../pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_0
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 268 0 -1 -4
 box -4 -4 52 76
-use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_4
-timestamp 1521461618
+use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_0
+timestamp 1521558905
 transform 1 0 4 0 1 -156
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_0
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 52 0 1 -156
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_3
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 116 0 1 -156
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_1
-timestamp 1521461618
+timestamp 1521558905
 transform 1 0 180 0 1 -156
 box -4 -4 52 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_2
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 60 0 -1 -164
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/nr3v0x2  nr3v0x2_0
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 156 0 -1 -164
 box -4 -4 92 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_1
-timestamp 1521461618
+timestamp 1521558905
 transform -1 0 220 0 -1 -164
 box -4 -4 60 76
+use ../pharosc_8.4/magic/cells/vsclib/nd3v0x2  nd3v0x2_0
+timestamp 1521558905
+transform -1 0 292 0 -1 -164
+box -4 -4 68 76
 << end >>
