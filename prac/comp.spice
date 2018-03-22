@@ -2,7 +2,6 @@
 
 .include t14y_tsmc_025_level3.txt
 
-
 M1000 nd3v0x2_0_z nr3v0x2_0_z an3v0x2_2_vdd an3v0x2_2_w_n4_32# pfet w=14u l=2u
 + ad=392p pd=120u as=7344p ps=2472u 
 M1001 an3v0x2_2_vdd nr3v0x2_0_z nd3v0x2_0_z an3v0x2_2_w_n4_32# pfet w=14u l=2u
@@ -29,7 +28,7 @@ M1011 an3v0x2_1_zn an3v0x2_1_a an3v0x2_2_vdd an3v0x2_2_w_n4_32# pfet w=17u l=2u
 + ad=233p pd=98u as=0p ps=0u 
 M1012 an3v0x2_2_vdd an3v0x2_2_b an3v0x2_1_zn an3v0x2_2_w_n4_32# pfet w=17u l=2u
 + ad=0p pd=0u as=0p ps=0u 
-M1013 an3v0x2_1_zn an3v0x2_2_a an3v0x2_2_vdd an3v0x2_2_w_n4_32# pfet w=17u l=2u
+M1013 an3v0x2_1_zn an3v0x2_2_c an3v0x2_2_vdd an3v0x2_2_w_n4_32# pfet w=17u l=2u
 + ad=0p pd=0u as=0p ps=0u 
 M1014 an2v0x2_0_vss an3v0x2_1_zn nr2v0x2_1_a an2v0x2_0_vss nfet w=14u l=2u
 + ad=0p pd=0u as=82p ps=42u 
@@ -37,7 +36,7 @@ M1015 an3v0x2_1_a_24_8# an3v0x2_1_a an2v0x2_0_vss an2v0x2_0_vss nfet w=17u l=2u
 + ad=85p pd=44u as=0p ps=0u 
 M1016 an3v0x2_1_a_31_8# an3v0x2_2_b an3v0x2_1_a_24_8# an2v0x2_0_vss nfet w=17u l=2u
 + ad=85p pd=44u as=0p ps=0u 
-M1017 an3v0x2_1_zn an3v0x2_2_a an3v0x2_1_a_31_8# an2v0x2_0_vss nfet w=17u l=2u
+M1017 an3v0x2_1_zn an3v0x2_2_c an3v0x2_1_a_31_8# an2v0x2_0_vss nfet w=17u l=2u
 + ad=97p pd=48u as=0p ps=0u 
 M1018 nr3v0x2_0_a_13_39# an3v0x2_2_z nr3v0x2_0_z an3v0x2_2_w_n4_32# pfet w=27u l=2u
 + ad=135p pd=64u as=377p ps=138u 
@@ -263,122 +262,121 @@ M1128 an2v0x2_0_b iv1v0x4_0_a an2v0x2_0_vss an2v0x2_0_vss nfet w=17u l=2u
 + ad=118p pd=50u as=0p ps=0u 
 M1129 an2v0x2_0_vss iv1v0x4_0_a an2v0x2_0_b an2v0x2_0_vss nfet w=11u l=2u
 + ad=0p pd=0u as=0p ps=0u 
-C0 an2v0x2_0_vss iv1v0x4_2_a 8.9fF
-C1 an3v0x2_2_vdd iv1v0x4_2_a 9.9fF
-C2 an3v0x2_2_a an2v0x2_0_vss 74.5fF
-C3 an2v0x2_0_vss an3v0x2_1_a 57.3fF
-C4 an3v0x2_2_w_n4_32# nd3v0x2_0_a 6.2fF
-C5 an3v0x2_0_zn an2v0x2_0_vss 8.8fF
-C6 an3v0x2_2_vdd an3v0x2_1_a 72.4fF
-C7 an3v0x2_2_a an3v0x2_2_vdd 41.5fF
-C8 an2v0x2_4_z an2v0x2_0_vss 9.8fF
-C9 an3v0x2_0_zn an3v0x2_2_vdd 10.7fF
-C10 an2v0x2_4_z an3v0x2_2_vdd 10.7fF
-C11 an3v0x2_2_a an3v0x2_2_b 2.2fF
-C12 an3v0x2_2_b an3v0x2_1_a 5.2fF
-C13 an3v0x2_2_w_n4_32# an3v0x2_2_z 21.1fF
-C14 nr2v0x2_1_a nd3v0x2_0_c 3.8fF
-C15 an2v0x2_0_vss nd3v0x2_0_a 21.1fF
-C16 an2v0x2_0_vss or3v0x2_0_zn 10.9fF
-C17 nr2v0x2_1_a an2v0x2_0_vss 22.9fF
-C18 an2v0x2_0_vss an2v0x2_3_b 15.0fF
-C19 an3v0x2_2_a iv1v0x4_2_a 2.2fF
-C20 an3v0x2_2_w_n4_32# an3v0x2_1_zn 5.8fF
-C21 an3v0x2_2_vdd nd3v0x2_0_a 9.6fF
-C22 or3v0x2_0_zn an3v0x2_2_vdd 9.0fF
-C23 nr2v0x2_1_a an3v0x2_2_vdd 7.1fF
-C24 an2v0x2_3_b an3v0x2_2_vdd 13.7fF
-C25 an3v0x2_2_a an3v0x2_1_a 6.8fF
-C26 an3v0x2_2_a an3v0x2_0_zn 4.6fF
-C27 an3v0x2_0_zn an3v0x2_1_a 2.5fF
-C28 an2v0x2_0_vss an2v0x2_2_zn 8.9fF
-C29 an3v0x2_2_w_n4_32# nd3v0x2_0_z 5.2fF
-C30 an2v0x2_2_zn an3v0x2_2_vdd 8.8fF
-C31 an3v0x2_0_b an3v0x2_3_zn 3.6fF
-C32 an2v0x2_0_vss an3v0x2_2_z 10.7fF
-C33 nr3v0x2_0_a an3v0x2_2_zn 2.1fF
-C34 an2v0x2_0_vss an3v0x2_1_zn 8.8fF
-C35 an3v0x2_2_w_n4_32# an3v0x2_0_z 9.5fF
-C36 an3v0x2_2_z an3v0x2_2_vdd 3.3fF
-C37 an3v0x2_1_zn an3v0x2_2_vdd 4.9fF
-C38 an2v0x2_0_b an2v0x2_0_vss 32.8fF
-C39 an2v0x2_3_z an2v0x2_0_vss 20.8fF
-C40 an3v0x2_2_a or3v0x2_0_zn 3.3fF
-C41 or3v0x2_0_zn an3v0x2_1_a 4.1fF
-C42 an2v0x2_0_b an3v0x2_2_vdd 49.9fF
-C43 an2v0x2_3_z an3v0x2_2_vdd 9.1fF
-C44 an2v0x2_1_z an2v0x2_0_vss 8.7fF
-C45 an3v0x2_2_w_n4_32# an3v0x2_2_zn 5.8fF
-C46 nr3v0x2_0_a an3v0x2_2_w_n4_32# 15.0fF
-C47 an2v0x2_0_b an3v0x2_2_b 2.5fF
-C48 an2v0x2_1_z an3v0x2_2_vdd 22.0fF
-C49 iv1v0x4_1_a an2v0x2_0_vss 8.9fF
-C50 an2v0x2_0_vss nd3v0x2_0_z 5.3fF
-C51 iv1v0x4_1_a an3v0x2_2_vdd 9.9fF
-C52 nd3v0x2_0_z an3v0x2_2_vdd 6.1fF
-C53 an2v0x2_0_vss an3v0x2_0_b 19.6fF
-C54 an2v0x2_0_vss an3v0x2_0_z 36.9fF
-C55 an2v0x2_0_vss an2v0x2_1_b 5.9fF
-C56 an3v0x2_0_b an3v0x2_2_vdd 47.7fF
-C57 an3v0x2_0_z an3v0x2_2_vdd 2.3fF
-C58 an2v0x2_0_vss an2v0x2_3_zn 8.9fF
-C59 an2v0x2_1_b an3v0x2_2_vdd 14.2fF
-C60 an2v0x2_0_vss or3v0x2_1_zn 10.9fF
-C61 an2v0x2_0_vss iv1v0x4_0_a 8.9fF
-C62 an2v0x2_0_vss an3v0x2_2_zn 8.8fF
-C63 nr3v0x2_0_a an2v0x2_0_vss 19.9fF
-C64 an3v0x2_2_a an2v0x2_0_b 4.9fF
-C65 an2v0x2_3_zn an3v0x2_2_vdd 8.8fF
-C66 an2v0x2_0_b an3v0x2_1_a 2.5fF
-C67 an2v0x2_0_vss an2v0x2_1_zn 8.9fF
-C68 an3v0x2_2_vdd or3v0x2_1_zn 9.0fF
-C69 iv1v0x4_0_a an3v0x2_2_vdd 9.9fF
-C70 an3v0x2_2_vdd an3v0x2_2_zn 4.9fF
-C71 nr3v0x2_0_a an3v0x2_2_vdd 4.0fF
-C72 an2v0x2_0_vss an3v0x2_3_zn 8.8fF
-C73 an2v0x2_1_zn an3v0x2_2_vdd 8.8fF
-C74 an3v0x2_2_vdd an3v0x2_3_zn 10.7fF
-C75 an3v0x2_2_w_n4_32# nd3v0x2_0_c 5.7fF
-C76 nr3v0x2_0_a an3v0x2_2_c 2.5fF
-C77 an3v0x2_2_w_n4_32# an3v0x2_2_vdd 87.6fF
-C78 an3v0x2_2_w_n4_32# an3v0x2_2_b 21.4fF
-C79 an3v0x2_2_w_n4_32# an3v0x2_2_c 5.8fF
-C80 an3v0x2_2_a an2v0x2_1_b 2.2fF
-C81 nr3v0x2_0_z an3v0x2_2_w_n4_32# 21.8fF
-C82 an2v0x2_0_vss an2v0x2_2_z 11.1fF
-C83 an3v0x2_2_vdd an2v0x2_2_z 9.4fF
-C84 an2v0x2_0_vss nd3v0x2_0_c 18.9fF
-C85 an3v0x2_2_vdd nd3v0x2_0_c 5.0fF
-C86 an3v0x2_2_a an3v0x2_2_w_n4_32# 13.9fF
-C87 an3v0x2_2_w_n4_32# an3v0x2_1_a 8.3fF
-C88 an2v0x2_0_vss an3v0x2_2_b 23.0fF
-C89 an2v0x2_4_zn an2v0x2_0_vss 8.9fF
-C90 an2v0x2_0_vss an2v0x2_0_zn 8.9fF
-C91 an3v0x2_2_b an3v0x2_2_vdd 39.7fF
-C92 an2v0x2_0_vss an3v0x2_2_c 26.6fF
-C93 an2v0x2_0_vss an3v0x2_3_z 10.6fF
-C94 an2v0x2_0_vss nr3v0x2_0_z 21.2fF
-C95 an2v0x2_4_zn an3v0x2_2_vdd 8.8fF
-C96 an2v0x2_0_zn an3v0x2_2_vdd 8.8fF
-C97 an3v0x2_2_c an3v0x2_2_vdd 23.5fF
-C98 an3v0x2_2_vdd an3v0x2_3_z 15.4fF
-C99 nr3v0x2_0_z an3v0x2_2_vdd 8.7fF
-C100 an3v0x2_2_c 0 18.7fF
-C101 an3v0x2_2_vdd 0 379.0fF
-C102 an2v0x2_0_vss 0 10.8fF
-C103 nr3v0x2_0_a 0 8.6fF
+C0 an2v0x2_1_z an2v0x2_0_vss 8.7fF
+C1 an3v0x2_1_a or3v0x2_0_zn 4.1fF
+C2 an2v0x2_0_vss or3v0x2_0_zn 10.9fF
+C3 an3v0x2_2_zn an2v0x2_0_vss 8.8fF
+C4 an2v0x2_3_zn an2v0x2_0_vss 8.9fF
+C5 an3v0x2_2_vdd an3v0x2_1_zn 4.9fF
+C6 an2v0x2_0_vss iv1v0x4_0_a 8.9fF
+C7 an2v0x2_0_vss an3v0x2_2_z 10.7fF
+C8 an3v0x2_2_a an3v0x2_2_vdd 41.3fF
+C9 an3v0x2_2_vdd an2v0x2_4_zn 8.8fF
+C10 an3v0x2_0_z an2v0x2_0_vss 36.9fF
+C11 an3v0x2_2_zn an3v0x2_2_w_n4_32# 5.8fF
+C12 an3v0x2_2_vdd an3v0x2_2_b 39.7fF
+C13 an2v0x2_0_vss nr3v0x2_0_z 21.2fF
+C14 an3v0x2_1_a an3v0x2_0_zn 2.5fF
+C15 an2v0x2_0_vss an2v0x2_2_zn 8.9fF
+C16 an3v0x2_1_a an2v0x2_0_b 2.5fF
+C17 an2v0x2_0_vss an3v0x2_0_zn 8.8fF
+C18 an2v0x2_0_vss an2v0x2_0_b 32.8fF
+C19 an3v0x2_2_z an3v0x2_2_w_n4_32# 21.1fF
+C20 an3v0x2_0_z an3v0x2_2_w_n4_32# 9.5fF
+C21 an3v0x2_2_vdd iv1v0x4_1_a 9.9fF
+C22 an2v0x2_0_vss nd3v0x2_0_c 18.9fF
+C23 an3v0x2_2_vdd an2v0x2_2_z 9.4fF
+C24 nr3v0x2_0_z an3v0x2_2_w_n4_32# 21.8fF
+C25 an2v0x2_0_vss or3v0x2_1_zn 10.9fF
+C26 an2v0x2_0_vss nd3v0x2_0_z 5.3fF
+C27 an3v0x2_2_zn nr3v0x2_0_a 2.1fF
+C28 an2v0x2_4_z an2v0x2_0_vss 9.8fF
+C29 nd3v0x2_0_c an3v0x2_2_w_n4_32# 5.7fF
+C30 an3v0x2_1_a an2v0x2_0_vss 57.3fF
+C31 an3v0x2_0_b an2v0x2_0_vss 19.6fF
+C32 an3v0x2_2_vdd an2v0x2_1_zn 8.8fF
+C33 iv1v0x4_2_a an2v0x2_0_vss 8.9fF
+C34 nd3v0x2_0_z an3v0x2_2_w_n4_32# 5.2fF
+C35 an3v0x2_0_b an3v0x2_3_zn 3.6fF
+C36 an2v0x2_1_z an3v0x2_2_vdd 22.0fF
+C37 an2v0x2_0_vss an3v0x2_3_zn 8.8fF
+C38 an3v0x2_1_a an3v0x2_2_w_n4_32# 8.3fF
+C39 an2v0x2_0_vss nd3v0x2_0_a 21.1fF
+C40 nr2v0x2_1_a nd3v0x2_0_c 3.8fF
+C41 an2v0x2_0_vss an3v0x2_3_z 10.6fF
+C42 an3v0x2_2_vdd or3v0x2_0_zn 9.0fF
+C43 an2v0x2_0_vss an3v0x2_2_c 35.6fF
+C44 an2v0x2_0_vss an2v0x2_1_b 5.9fF
+C45 an3v0x2_2_vdd an3v0x2_2_zn 4.9fF
+C46 an3v0x2_2_a or3v0x2_0_zn 3.3fF
+C47 an3v0x2_2_vdd an2v0x2_3_zn 8.8fF
+C48 nd3v0x2_0_a an3v0x2_2_w_n4_32# 6.2fF
+C49 an3v0x2_2_vdd iv1v0x4_0_a 9.9fF
+C50 an2v0x2_0_vss an2v0x2_0_zn 8.9fF
+C51 an3v0x2_2_vdd an3v0x2_2_z 3.3fF
+C52 an2v0x2_3_b an2v0x2_0_vss 15.0fF
+C53 an3v0x2_0_z an3v0x2_2_vdd 2.3fF
+C54 an2v0x2_0_vss nr2v0x2_1_a 22.9fF
+C55 an3v0x2_2_c an3v0x2_2_w_n4_32# 11.6fF
+C56 an3v0x2_2_vdd nr3v0x2_0_z 8.7fF
+C57 an3v0x2_2_vdd an2v0x2_2_zn 8.8fF
+C58 an2v0x2_0_vss nr3v0x2_0_a 19.9fF
+C59 an2v0x2_3_z an2v0x2_0_vss 20.8fF
+C60 an3v0x2_2_vdd an3v0x2_0_zn 10.7fF
+C61 an3v0x2_2_vdd an2v0x2_0_b 49.9fF
+C62 an3v0x2_2_a an3v0x2_0_zn 4.6fF
+C63 an3v0x2_2_a an2v0x2_0_b 4.9fF
+C64 an3v0x2_2_vdd nd3v0x2_0_c 5.0fF
+C65 an3v0x2_2_b an2v0x2_0_b 2.5fF
+C66 an3v0x2_2_vdd or3v0x2_1_zn 9.0fF
+C67 nr3v0x2_0_a an3v0x2_2_w_n4_32# 15.0fF
+C68 an3v0x2_2_vdd nd3v0x2_0_z 6.1fF
+C69 an3v0x2_2_c nr3v0x2_0_a 2.5fF
+C70 an2v0x2_4_z an3v0x2_2_vdd 10.7fF
+C71 an3v0x2_1_a an3v0x2_2_vdd 72.4fF
+C72 an3v0x2_1_zn an2v0x2_0_vss 8.8fF
+C73 an3v0x2_0_b an3v0x2_2_vdd 47.7fF
+C74 an3v0x2_2_a an3v0x2_1_a 6.8fF
+C75 iv1v0x4_2_a an3v0x2_2_vdd 9.9fF
+C76 an3v0x2_2_a an2v0x2_0_vss 61.9fF
+C77 an3v0x2_1_a an3v0x2_2_b 5.2fF
+C78 an2v0x2_4_zn an2v0x2_0_vss 8.9fF
+C79 an3v0x2_2_a iv1v0x4_2_a 2.2fF
+C80 an3v0x2_2_b an2v0x2_0_vss 23.0fF
+C81 an3v0x2_2_vdd an3v0x2_3_zn 10.7fF
+C82 an3v0x2_1_zn an3v0x2_2_w_n4_32# 5.8fF
+C83 an3v0x2_2_vdd nd3v0x2_0_a 9.6fF
+C84 an3v0x2_2_vdd an3v0x2_2_w_n4_32# 87.6fF
+C85 an3v0x2_2_vdd an3v0x2_3_z 15.4fF
+C86 an3v0x2_2_a an3v0x2_2_w_n4_32# 8.1fF
+C87 an2v0x2_0_vss iv1v0x4_1_a 8.9fF
+C88 an3v0x2_2_vdd an2v0x2_1_b 14.2fF
+C89 an3v0x2_2_vdd an3v0x2_2_c 23.8fF
+C90 an2v0x2_0_vss an2v0x2_2_z 11.1fF
+C91 an3v0x2_2_b an3v0x2_2_w_n4_32# 21.4fF
+C92 an3v0x2_2_a an2v0x2_1_b 2.2fF
+C93 an3v0x2_2_vdd an2v0x2_0_zn 8.8fF
+C94 an3v0x2_2_vdd an2v0x2_3_b 13.7fF
+C95 an3v0x2_2_vdd nr2v0x2_1_a 7.1fF
+C96 an2v0x2_1_zn an2v0x2_0_vss 8.9fF
+C97 an3v0x2_2_vdd nr3v0x2_0_a 4.0fF
+C98 an2v0x2_3_z an3v0x2_2_vdd 9.1fF
+C99 an3v0x2_2_c 0 18.7fF
+C100 an3v0x2_2_vdd 0 379.0fF
+C101 an2v0x2_0_vss 0 10.8fF
+C102 nr3v0x2_0_a 0 8.6fF
 
 v_dd an3v0x2_2_vdd 0 5
-v_ss an3v0x2_2_vss 0 0
-v_gg_f iv1v0x4_1_a 0 PULSE(5 0 0 0.1n 0.1n 15n 30n)
-v_gg_e iv1v0x4_2_a 0 PULSE(5 0 0 0.1n 0.1n 30n 60n)
-v_gg_d iv1v0x4_0_a 0 PULSE(5 0 0 0.1n 0.1n 60n 120n)
-v_gg_c an3v0x2_2_a 0 PULSE(5 0 0 0.1n 0.1n 120n 240n)
-v_gg_b an3v0x2_0_b 0 PULSE(5 0 0 0.1n 0.1n 240n 480n)
-v_gg_a an3v0x2_2_c 0 PULSE(5 0 0 0.1n 0.1n 480n 960n)
+v_ss an2v0x2_0_vss 0 0
+v_gg_f iv1v0x4_1_a 0 PULSE(5 0 0 0.1n 0.1n 150n 300n)
+v_gg_e iv1v0x4_2_a 0 PULSE(5 0 0 0.1n 0.1n 300n 600n)
+v_gg_d iv1v0x4_0_a 0 PULSE(5 0 0 0.1n 0.1n 600n 1200n)
+v_gg_c an3v0x2_2_a 0 PULSE(5 0 0 0.1n 0.1n 1200n 2400n)
+v_gg_b an3v0x2_0_b 0 PULSE(5 0 0 0.1n 0.1n 2400n 4800n)
+v_gg_a an3v0x2_2_c 0 PULSE(5 0 0 0.1n 0.1n 4800n 9600n)
 
 .control
- tran 1n 960n
+ tran 1n 9600n
  plot (an3v0x2_2_c + 5) (an3v0x2_0_b) (an3v0x2_2_a - 5) (iv1v0x4_0_a - 10) (iv1v0x4_2_a - 15) (iv1v0x4_1_a - 20) ( nd3v0x2_0_z - 25)
 .endc
 

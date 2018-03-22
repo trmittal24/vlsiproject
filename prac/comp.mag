@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1521564368
+timestamp 1521745303
 << pwell >>
 rect 35 7 78 12
 rect 2 -7 78 7
@@ -63,10 +63,14 @@ rect 1 -150 58 -148
 rect 99 -150 104 -148
 rect 107 -150 115 -148
 rect 172 -150 180 -148
+rect 1 -156 166 -150
+rect 169 -156 227 -150
 rect -7 -169 -4 -157
-rect 1 -160 227 -150
+rect 1 -160 227 -156
 rect 5 -164 227 -160
-rect 1 -172 227 -164
+rect 1 -165 227 -164
+rect 1 -172 166 -165
+rect 169 -172 227 -165
 rect 74 -190 78 -186
 rect 37 -203 42 -202
 rect 38 -207 42 -203
@@ -156,7 +160,7 @@ rect 74 -88 78 -77
 rect 74 -92 178 -88
 rect 44 -114 70 -111
 rect 33 -121 48 -118
-rect 21 -129 36 -126
+rect 21 -129 30 -126
 rect 45 -133 48 -121
 rect 67 -122 70 -114
 rect 74 -113 78 -92
@@ -192,11 +196,10 @@ rect 165 -146 169 -145
 rect 95 -149 169 -146
 rect 65 -162 102 -159
 rect 99 -178 102 -162
-rect 166 -186 169 -149
 rect 175 -160 178 -140
 rect 175 -163 197 -160
-rect 166 -190 171 -186
 rect 70 -217 73 -190
+rect 170 -190 171 -186
 rect -7 -220 73 -217
 rect 194 -201 197 -163
 rect 215 -195 218 -144
@@ -247,6 +250,16 @@ rect 105 -99 113 -80
 rect 105 -105 106 -99
 rect 112 -105 113 -99
 rect 105 -106 113 -105
+rect 29 -125 37 -124
+rect 29 -131 30 -125
+rect 36 -126 37 -125
+rect 36 -131 169 -126
+rect 29 -132 169 -131
+rect 163 -185 169 -132
+rect 163 -186 171 -185
+rect 163 -192 164 -186
+rect 170 -192 171 -186
+rect 163 -193 171 -192
 rect 0 -202 8 -201
 rect 0 -208 1 -202
 rect 7 -203 8 -202
@@ -324,79 +337,81 @@ rect 205 31 211 37
 rect 2 -56 8 -50
 rect 86 -29 92 -23
 rect 216 -32 222 -26
+rect 30 -131 36 -125
 rect 106 -105 112 -99
 rect 1 -208 7 -202
+rect 164 -192 170 -186
 rect 163 -221 169 -215
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_0
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 4 0 1 4
 box -4 -4 36 76
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_1
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 44 0 1 4
 box -4 -4 36 76
 use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_0
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 84 0 1 4
 box -4 -4 76 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_2
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 164 0 1 4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_3
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 212 0 1 4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_2
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 36 0 -1 -4
 box -4 -4 36 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_4
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 84 0 -1 -4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_1
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 132 0 -1 -4
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_1
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 212 0 -1 -4
 box -4 -4 76 76
 use ../pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_0
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 268 0 -1 -4
 box -4 -4 52 76
 use ../pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_0
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 4 0 1 -156
 box -4 -4 44 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_0
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 52 0 1 -156
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_3
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 116 0 1 -156
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_1
-timestamp 1521558905
+timestamp 1521745303
 transform 1 0 180 0 1 -156
 box -4 -4 52 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_2
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 60 0 -1 -164
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/nr3v0x2  nr3v0x2_0
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 156 0 -1 -164
 box -4 -4 92 76
 use ../pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_1
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 220 0 -1 -164
 box -4 -4 60 76
 use ../pharosc_8.4/magic/cells/vsclib/nd3v0x2  nd3v0x2_0
-timestamp 1521558905
+timestamp 1521745303
 transform -1 0 292 0 -1 -164
 box -4 -4 68 76
 << end >>
