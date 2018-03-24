@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1521488846
+timestamp 1521897975
 << metal1 >>
 rect -4 72 9 75
 rect -4 -71 -1 72
@@ -15,6 +15,8 @@ rect 76 -10 83 -7
 rect 78 -12 82 -10
 rect 125 -12 131 -4
 rect 174 -12 178 -4
+rect 246 -7 252 -4
+rect 245 -10 252 -7
 rect 69 -23 72 -20
 rect 89 -31 93 -30
 rect 92 -35 93 -31
@@ -25,22 +27,44 @@ rect 169 -44 184 -40
 rect 169 -54 171 -50
 rect 65 -60 68 -58
 rect -4 -75 3 -71
+rect -4 -88 -1 -75
 rect 78 -76 82 -68
 rect 125 -76 131 -68
 rect 174 -76 178 -68
+rect 249 -82 252 -10
+rect 110 -87 114 -84
+rect 165 -85 252 -82
+rect -4 -91 6 -88
+rect 109 -90 117 -87
+rect 110 -92 114 -90
+rect 89 -109 90 -106
+rect 89 -110 93 -109
+rect 80 -118 82 -114
+rect 147 -128 150 -124
+rect 165 -148 168 -85
+rect 110 -149 114 -148
+rect 107 -152 114 -149
+rect 110 -156 114 -152
+rect 158 -153 168 -148
+rect 157 -156 168 -153
 << metal2 >>
 rect 171 43 174 58
 rect 28 40 174 43
 rect 28 12 32 40
 rect 113 35 155 36
 rect 113 33 152 35
-rect 73 15 76 32
-rect 39 12 76 15
 rect 28 -18 31 12
-rect 39 -76 42 12
+rect 42 -26 45 32
+rect 73 15 76 32
+rect 31 -29 45 -26
+rect 61 12 76 15
+rect 31 -107 34 -29
+rect 61 -42 64 12
 rect 113 8 116 33
 rect 133 25 139 29
 rect 76 5 116 8
+rect 42 -45 64 -42
+rect 42 -76 45 -45
 rect 68 -49 71 -20
 rect 49 -52 71 -49
 rect 49 -69 52 -52
@@ -59,9 +83,16 @@ rect 170 -42 173 -23
 rect 148 -45 173 -42
 rect 199 -73 202 -30
 rect 125 -76 202 -73
-rect 39 -79 99 -76
+rect 42 -79 99 -76
+rect 31 -110 77 -107
+rect 94 -108 156 -105
+rect 74 -122 77 -110
+rect 152 -110 156 -108
+rect 78 -124 153 -123
+rect 78 -126 150 -124
 << m2contact >>
 rect 171 58 175 62
+rect 42 32 46 36
 rect 73 32 77 36
 rect 152 31 156 35
 rect 129 25 133 29
@@ -74,24 +105,36 @@ rect 118 -40 122 -36
 rect 144 -46 148 -42
 rect 83 -50 87 -46
 rect 65 -64 69 -60
+rect 90 -109 94 -105
+rect 152 -114 156 -110
+rect 74 -126 78 -122
+rect 150 -128 154 -124
 use xor3v1x2  xor3v1x2_0
-timestamp 1521485269
+timestamp 1521896503
 transform 1 0 4 0 1 4
 box -4 -4 172 76
 use xnr2v8x05  xnr2v8x05_0
-timestamp 1521485269
+timestamp 1521896503
 transform -1 0 76 0 -1 -4
 box -4 -4 76 76
 use an2v0x2  an2v0x2_0
-timestamp 1521486230
+timestamp 1521896503
 transform -1 0 124 0 -1 -4
 box -4 -4 44 76
 use an2v0x2  an2v0x2_1
-timestamp 1521486230
+timestamp 1521896503
 transform -1 0 172 0 -1 -4
 box -4 -4 44 76
 use or2v0x3  or2v0x3_0
-timestamp 1521488846
+timestamp 1521896503
 transform -1 0 244 0 -1 -4
 box -4 -4 68 76
+use xor2v2x2  xor2v2x2_0
+timestamp 1521896503
+transform 1 0 4 0 1 -156
+box -4 -4 108 76
+use an2v0x2  an2v0x2_2
+timestamp 1521896503
+transform 1 0 116 0 1 -156
+box -4 -4 44 76
 << end >>
