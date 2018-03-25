@@ -1,0 +1,33 @@
+timestamp 1521045599
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a" 987 0 37 2 p 0 0 0 0 226 198 0 0 0 0 0 0 104 52 0 0 0 0
+equiv "a" "a"
+node "z" 695 0 2 38 pdiff 160 56 377 138 0 0 0 0 0 0 0 0 349 162 0 0 0 0
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+node "an" 2115 0 9 33 p 121 52 144 52 430 374 0 0 0 0 0 0 256 136 0 0 0 0
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+node "vss" 397 0 -4 -4 pw 378 118 126 54 0 0 0 0 0 0 0 0 664 192 0 0 0 0
+node "vdd" 5036 0 -4 32 nw 84 40 540 190 0 0 0 0 0 0 0 0 744 252 0 0 3168 232
+cap "an" "z" 480
+cap "vdd" "a" 8414
+cap "an" "vdd" 15411
+cap "vdd" "z" 3854
+cap "vss" "a" 7982
+cap "an" "vss" 10960
+cap "vss" "z" 3478
+device mosfet nfet 37 7 38 8 2 19 "vss" "a" 4 0 "vss" 19 0 "an" 19 0
+device mosfet nfet 24 6 25 7 2 20 "vss" "an" 4 0 "z" 20 0 "vss" 20 0
+device mosfet nfet 14 6 15 7 2 20 "vss" "an" 4 0 "vss" 20 0 "z" 20 0
+device mosfet pfet 49 38 50 39 2 18 "vdd" "a" 4 0 "an" 18 0 "vdd" 18 0
+device mosfet pfet 39 38 40 39 2 18 "vdd" "a" 4 0 "vdd" 18 0 "an" 18 0
+device mosfet pfet 29 38 30 39 2 27 "vdd" "an" 4 0 "z" 27 0 "vdd" 27 0
+device mosfet pfet 19 38 20 39 2 27 "vdd" "an" 4 0 "vdd" 27 0 "z" 27 0
+device mosfet pfet 9 38 10 39 2 27 "vdd" "an" 4 0 "z" 27 0 "vdd" 27 0

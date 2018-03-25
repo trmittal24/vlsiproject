@@ -1,10 +1,6 @@
 magic
 tech scmos
-timestamp 1179387485
-<< checkpaint >>
-rect -22 -22 86 94
-<< ab >>
-rect 0 0 64 72
+timestamp 1521478092
 << pwell >>
 rect -4 -4 68 32
 << nwell >>
