@@ -1,0 +1,57 @@
+* SPICE3 file created from xnr2v6x1.ext - technology: scmos
+.include t14y_tsmc_025_level3.txt
+
+.option scale=1u
+
+M1000 vdd a an vdd pfet w=11 l=2
++ ad=422 pd=144 as=67 ps=36 
+M1001 n1 a vdd vdd pfet w=27 l=2
++ ad=432 pd=140 as=0 ps=0 
+M1002 z an n1 vdd pfet w=27 l=2
++ ad=216 pd=70 as=0 ps=0 
+M1003 n1 b z vdd pfet w=27 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1004 vdd bn n1 vdd pfet w=27 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1005 bn b vdd vdd pfet w=11 l=2
++ ad=67 pd=36 as=0 ps=0 
+M1006 vss a an w_n4_n4# nfet w=6 l=2
++ ad=180 pd=82 as=42 ps=26 
+M1007 n2 an vss w_n4_n4# nfet w=12 l=2
++ ad=202 pd=90 as=0 ps=0 
+M1008 z a n2 w_n4_n4# nfet w=12 l=2
++ ad=129 pd=56 as=0 ps=0 
+M1009 n2 b z w_n4_n4# nfet w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1010 vss bn n2 w_n4_n4# nfet w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1011 bn b vss w_n4_n4# nfet w=6 l=2
++ ad=42 pd=26 as=0 ps=0 
+C0 vdd bn 8.4fF
+C1 an w_n4_n4# 9.7fF
+C2 vdd a 13.8fF
+C3 w_n4_n4# vss 25.3fF
+C4 b vdd 10.8fF
+C5 an vdd 6.1fF
+C6 vdd z 2.3fF
+C7 n1 z 2.4fF
+C8 w_n4_n4# bn 4.7fF
+C9 w_n4_n4# a 12.9fF
+C10 b w_n4_n4# 15.6fF
+
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_f a 0 PULSE(5 0 0 0.1n 0.1n 15n 30n)
+v_gg_e b 0 PULSE(5 0 0 0.1n 0.1n 30n 60n)
+/v_gg_d c 0 PULSE(5 0 0 0.1n 0.1n 60n 120n)
+
+.tran 0.01ns 200ns 
+
+.control
+run
+setplot tran1 
+plot (a+15) (b+10) (z + 5)
+.endc
+
+.end

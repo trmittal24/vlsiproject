@@ -1,0 +1,108 @@
+* SPICE3 file created from decoder.ext - technology: scmos
+
+.include /home/dipanshu/Desktop/vlsiproject/prac/t14y_tsmc_025_level3.txt
+
+M1000 o or2v0x3_2_zn vdd vdd PFET w=20u l=2u
++ ad=160p pd=56u as=1236p ps=468u 
+M1001 vdd or2v0x3_2_zn o vdd PFET w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1002 or2v0x3_2_a_31_39# or2v0x3_1_z vdd vdd PFET w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1003 or2v0x3_2_zn d6 or2v0x3_2_a_31_39# vdd PFET w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1004 or2v0x3_2_a_48_39# d6 or2v0x3_2_zn vdd PFET w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1005 vdd or2v0x3_1_z or2v0x3_2_a_48_39# vdd PFET w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1006 gnd or2v0x3_2_zn o gnd NFET w=20u l=2u
++ ad=1200p pd=330u as=126p ps=54u 
+M1007 or2v0x3_2_zn or2v0x3_1_z gnd gnd NFET w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1008 gnd d6 or2v0x3_2_zn gnd NFET w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1009 or2v0x3_1_z or2v0x3_1_zn vdd vdd PFET w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1010 vdd or2v0x3_1_zn or2v0x3_1_z vdd PFET w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1011 or2v0x3_1_a_31_39# or2v0x3_0_z vdd vdd PFET w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1012 or2v0x3_1_zn d4 or2v0x3_1_a_31_39# vdd PFET w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1013 or2v0x3_1_a_48_39# d4 or2v0x3_1_zn vdd PFET w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1014 vdd or2v0x3_0_z or2v0x3_1_a_48_39# vdd PFET w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1015 gnd or2v0x3_1_zn or2v0x3_1_z gnd NFET w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1016 or2v0x3_1_zn or2v0x3_0_z gnd gnd NFET w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1017 gnd d4 or2v0x3_1_zn gnd NFET w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1018 or2v0x3_0_z or2v0x3_0_zn vdd vdd PFET w=20u l=2u
++ ad=160p pd=56u as=0p ps=0u 
+M1019 vdd or2v0x3_0_zn or2v0x3_0_z vdd PFET w=20u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1020 or2v0x3_0_a_31_39# d0 vdd vdd PFET w=20u l=2u
++ ad=100p pd=50u as=0p ps=0u 
+M1021 or2v0x3_0_zn d2 or2v0x3_0_a_31_39# vdd PFET w=20u l=2u
++ ad=148p pd=56u as=0p ps=0u 
+M1022 or2v0x3_0_a_48_39# d2 or2v0x3_0_zn vdd PFET w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1023 vdd d0 or2v0x3_0_a_48_39# vdd PFET w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1024 gnd or2v0x3_0_zn or2v0x3_0_z gnd NFET w=20u l=2u
++ ad=0p pd=0u as=126p ps=54u 
+M1025 or2v0x3_0_zn d0 gnd gnd NFET w=10u l=2u
++ ad=80p pd=36u as=0p ps=0u 
+M1026 gnd d2 or2v0x3_0_zn gnd NFET w=10u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+C0 or2v0x3_2_zn vdd 12.7fF
+C1 or2v0x3_0_z or2v0x3_1_z 4.6fF
+C2 or2v0x3_1_z vdd 19.4fF
+C3 gnd or2v0x3_2_zn 9.0fF
+C4 d4 vdd 7.9fF
+C5 gnd or2v0x3_1_z 10.3fF
+C6 o or2v0x3_2_zn 2.2fF
+C7 or2v0x3_0_z vdd 19.2fF
+C8 o or2v0x3_1_z 4.7fF
+C9 d4 gnd 13.0fF
+C10 d2 or2v0x3_0_z 2.2fF
+C11 or2v0x3_1_zn or2v0x3_1_z 2.3fF
+C12 or2v0x3_0_z gnd 10.3fF
+C13 d2 vdd 7.9fF
+C14 d0 or2v0x3_0_z 3.9fF
+C15 d6 vdd 7.9fF
+C16 d0 vdd 14.1fF
+C17 or2v0x3_0_zn or2v0x3_0_z 2.3fF
+C18 d2 gnd 12.2fF
+C19 o vdd 4.8fF
+C20 or2v0x3_0_zn vdd 12.7fF
+C21 or2v0x3_0_z or2v0x3_1_zn 2.0fF
+C22 d6 gnd 13.0fF
+C23 d0 gnd 7.6fF
+C24 or2v0x3_1_zn vdd 12.7fF
+C25 or2v0x3_2_zn or2v0x3_1_z 2.0fF
+C26 o gnd 2.1fF
+C27 or2v0x3_0_zn gnd 9.0fF
+C28 gnd or2v0x3_1_zn 9.0fF
+C29 d2 gnd 3.2fF
+C30 d0 gnd 3.1fF
+C31 d4 gnd 13.0fF
+C32 d6 gnd 20.1fF
+C33 gnd gnd 2.3fF
+
+V_in1 d0 0 dc 2.5 pulse(0 5 1ns 0.1ns 0.1ns 1ns 20ns)
+V_in2 d2 0 dc 2.5 pulse(0 5 3ns 0.1ns 0.1ns 1ns 20ns)
+V_in3 d4 0 dc 2.5 pulse(0 5 5ns 0.1ns 0.1ns 1ns 20ns)
+V_in4 d6 0 dc 2.5 pulse(0 5 7ns 0.1ns 0.1ns 1ns 20ns)
+vdd vdd 0 dc 5
+
+.tran 0.01ns 20ns
+
+.control
+run
+setplot tran1
+plot o d0 d2 d4 d6
+.endc
+
+.end

@@ -1,0 +1,152 @@
+* SPICE3 file created from 3_bitmux.ext - technology: scmos
+
+.include /home/dipanshu/Desktop/vlsiproject/prac/t14y_tsmc_025_level3.txt
+
+M1000 vdd mxn2v0x1_2_zn o2 mxn2v0x1_1_w_n4_32# pfet w=18u l=2u
++ ad=930p pd=378u as=102p ps=50u 
+M1001 mxn2v0x1_2_a_21_50# a2 vdd mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1002 mxn2v0x1_2_zn s mxn2v0x1_2_a_21_50# mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=128p pd=48u as=0p ps=0u 
+M1003 mxn2v0x1_2_a_38_50# mxn2v0x1_2_sn mxn2v0x1_2_zn mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1004 vdd b2 mxn2v0x1_2_a_38_50# mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1005 mxn2v0x1_2_sn s vdd mxn2v0x1_1_w_n4_32# pfet w=8u l=2u
++ ad=52p pd=30u as=0p ps=0u 
+M1006 gnd mxn2v0x1_2_zn o2 mxn2v0x1_2_w_n4_n4# nfet w=9u l=2u
++ ad=387p pd=198u as=57p ps=32u 
+M1007 mxn2v0x1_2_a_21_12# a2 gnd mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
++ ad=40p pd=26u as=0p ps=0u 
+M1008 mxn2v0x1_2_zn mxn2v0x1_2_sn mxn2v0x1_2_a_21_12# mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
++ ad=64p pd=32u as=0p ps=0u 
+M1009 mxn2v0x1_2_a_38_12# s mxn2v0x1_2_zn mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
++ ad=40p pd=26u as=0p ps=0u 
+M1010 gnd b2 mxn2v0x1_2_a_38_12# mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1011 mxn2v0x1_2_sn s gnd mxn2v0x1_2_w_n4_n4# nfet w=6u l=2u
++ ad=42p pd=26u as=0p ps=0u 
+M1012 vdd mxn2v0x1_1_zn o1 mxn2v0x1_1_w_n4_32# pfet w=18u l=2u
++ ad=0p pd=0u as=102p ps=50u 
+M1013 mxn2v0x1_1_a_21_50# a1 vdd mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1014 mxn2v0x1_1_zn s mxn2v0x1_1_a_21_50# mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=128p pd=48u as=0p ps=0u 
+M1015 mxn2v0x1_1_a_38_50# mxn2v0x1_1_sn mxn2v0x1_1_zn mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1016 vdd b1 mxn2v0x1_1_a_38_50# mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1017 mxn2v0x1_1_sn s vdd mxn2v0x1_1_w_n4_32# pfet w=8u l=2u
++ ad=52p pd=30u as=0p ps=0u 
+M1018 gnd mxn2v0x1_1_zn o1 mxn2v0x1_0_w_n4_n4# nfet w=9u l=2u
++ ad=0p pd=0u as=57p ps=32u 
+M1019 mxn2v0x1_1_a_21_12# a1 gnd mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=40p pd=26u as=0p ps=0u 
+M1020 mxn2v0x1_1_zn mxn2v0x1_1_sn mxn2v0x1_1_a_21_12# mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=64p pd=32u as=0p ps=0u 
+M1021 mxn2v0x1_1_a_38_12# s mxn2v0x1_1_zn mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=40p pd=26u as=0p ps=0u 
+M1022 gnd b1 mxn2v0x1_1_a_38_12# mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1023 mxn2v0x1_1_sn s gnd mxn2v0x1_0_w_n4_n4# nfet w=6u l=2u
++ ad=42p pd=26u as=0p ps=0u 
+M1024 vdd mxn2v0x1_0_zn o0 mxn2v0x1_0_w_n4_32# pfet w=18u l=2u
++ ad=0p pd=0u as=102p ps=50u 
+M1025 mxn2v0x1_0_a_21_50# a0 vdd mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1026 mxn2v0x1_0_zn s mxn2v0x1_0_a_21_50# mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
++ ad=128p pd=48u as=0p ps=0u 
+M1027 mxn2v0x1_0_a_38_50# mxn2v0x1_0_sn mxn2v0x1_0_zn mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
++ ad=80p pd=42u as=0p ps=0u 
+M1028 vdd b0 mxn2v0x1_0_a_38_50# mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1029 mxn2v0x1_0_sn s vdd mxn2v0x1_0_w_n4_32# pfet w=8u l=2u
++ ad=52p pd=30u as=0p ps=0u 
+M1030 gnd mxn2v0x1_0_zn o0 mxn2v0x1_0_w_n4_n4# nfet w=9u l=2u
++ ad=0p pd=0u as=57p ps=32u 
+M1031 mxn2v0x1_0_a_21_12# a0 gnd mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=40p pd=26u as=0p ps=0u 
+M1032 mxn2v0x1_0_zn mxn2v0x1_0_sn mxn2v0x1_0_a_21_12# mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=64p pd=32u as=0p ps=0u 
+M1033 mxn2v0x1_0_a_38_12# s mxn2v0x1_0_zn mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=40p pd=26u as=0p ps=0u 
+M1034 gnd b0 mxn2v0x1_0_a_38_12# mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
++ ad=0p pd=0u as=0p ps=0u 
+M1035 mxn2v0x1_0_sn s gnd mxn2v0x1_0_w_n4_n4# nfet w=6u l=2u
++ ad=42p pd=26u as=0p ps=0u 
+C0 a1 vdd 3.7fF
+C1 b0 mxn2v0x1_0_zn 2.7fF
+C2 mxn2v0x1_2_w_n4_n4# gnd 25.5fF
+C3 mxn2v0x1_2_w_n4_n4# a2 4.8fF
+C4 mxn2v0x1_0_w_n4_n4# gnd 76.0fF
+C5 mxn2v0x1_1_w_n4_32# a2 11.6fF
+C6 b1 gnd 3.7fF
+C7 a0 o0 2.3fF
+C8 s gnd 4.9fF
+C9 mxn2v0x1_2_w_n4_n4# o2 2.3fF
+C10 a2 vdd 2.2fF
+C11 o1 mxn2v0x1_0_w_n4_n4# 2.3fF
+C12 mxn2v0x1_1_w_n4_32# o1 5.0fF
+C13 mxn2v0x1_1_w_n4_32# o2 6.3fF
+C14 mxn2v0x1_2_sn mxn2v0x1_2_w_n4_n4# 9.2fF
+C15 s mxn2v0x1_0_w_n4_32# 18.7fF
+C16 mxn2v0x1_0_sn mxn2v0x1_0_w_n4_32# 9.3fF
+C17 mxn2v0x1_0_w_n4_32# mxn2v0x1_0_zn 9.3fF
+C18 mxn2v0x1_2_sn mxn2v0x1_1_w_n4_32# 9.3fF
+C19 mxn2v0x1_2_w_n4_n4# mxn2v0x1_2_zn 8.9fF
+C20 o0 mxn2v0x1_0_w_n4_32# 5.2fF
+C21 mxn2v0x1_1_zn mxn2v0x1_0_w_n4_n4# 8.9fF
+C22 mxn2v0x1_2_w_n4_n4# s 15.2fF
+C23 b1 mxn2v0x1_0_w_n4_n4# 10.2fF
+C24 mxn2v0x1_1_w_n4_32# mxn2v0x1_1_zn 9.3fF
+C25 b1 mxn2v0x1_1_w_n4_32# 6.6fF
+C26 mxn2v0x1_0_w_n4_32# vdd 20.7fF
+C27 mxn2v0x1_1_w_n4_32# mxn2v0x1_2_zn 9.3fF
+C28 s mxn2v0x1_0_w_n4_n4# 30.3fF
+C29 b0 mxn2v0x1_0_w_n4_32# 6.6fF
+C30 mxn2v0x1_0_sn mxn2v0x1_0_w_n4_n4# 9.2fF
+C31 a1 mxn2v0x1_0_w_n4_n4# 4.8fF
+C32 mxn2v0x1_1_w_n4_32# s 36.4fF
+C33 mxn2v0x1_0_w_n4_n4# mxn2v0x1_0_zn 8.9fF
+C34 a0 mxn2v0x1_0_w_n4_32# 11.6fF
+C35 mxn2v0x1_1_w_n4_32# a1 13.4fF
+C36 o0 mxn2v0x1_0_w_n4_n4# 2.3fF
+C37 mxn2v0x1_2_w_n4_n4# b2 8.7fF
+C38 b0 mxn2v0x1_0_w_n4_n4# 8.7fF
+C39 mxn2v0x1_1_w_n4_32# vdd 59.4fF
+C40 mxn2v0x1_0_sn o0 4.3fF
+C41 mxn2v0x1_1_sn mxn2v0x1_0_w_n4_n4# 9.2fF
+C42 a0 mxn2v0x1_0_w_n4_n4# 4.8fF
+C43 mxn2v0x1_1_w_n4_32# b2 6.6fF
+C44 mxn2v0x1_1_w_n4_32# mxn2v0x1_1_sn 9.3fF
+C45 s vdd 4.5fF
+C46 b2 mxn2v0x1_2_zn 2.7fF
+C47 vdd gnd 3.6fF
+C48 b0 gnd 2.3fF
+C49 s gnd 18.7fF
+C50 a0 gnd 39.1fF
+C51 gnd gnd 3.8fF
+C52 o1 gnd 2.3fF
+C53 b1 gnd 2.3fF
+C54 a1 gnd 15.6fF
+C55 b2 gnd 10.5fF
+C56 a2 gnd 11.8fF
+
+V_in1 a0 0 dc 2.5 pulse(0 5 0ns 0.1ns 0.1ns 25ns 400ns)
+V_in2 a1 0 dc 2.5 pulse(0 5 50ns 0.1ns 0.1ns 25ns 400ns)
+V_in3 a2 0 dc 2.5 pulse(0 5 100ns 0.1ns 0.1ns 25ns 400ns)
+V_in4 b0 0 dc 2.5 pulse(0 5 150ns 0.1ns 0.1ns 25ns 400ns)
+V_in5 b1 0 dc 2.5 pulse(0 5 200ns 0.1ns 0.1ns 25ns 400ns)
+V_in6 b2 0 dc 2.5 pulse(0 5 250ns 0.1ns 0.1ns 25ns 400ns)
+V_in7 s 0 dc 2.5 pulse(0 5 200ns 0.1ns 0.1ns 200ns 400ns)
+vdd vdd 0 dc 5
+
+.tran 0.01ns 400ns
+
+.control
+run
+setplot tran1
+plot (o0) (o1) (o2) (b0-10) (b1-10) (b2-10) (s-15) (a0-5) (a1-5) (a2-5)
+.endc
+
+.end

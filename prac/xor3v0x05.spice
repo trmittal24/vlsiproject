@@ -1,0 +1,92 @@
+* SPICE3 file created from xor3v0x05.ext - technology: scmos
+
+.include t14y_tsmc_025_level3.txt
+
+.option scale=1u
+
+M1000 a_13_38# an vdd vdd pfet w=28 l=2
++ ad=168 pd=68 as=1162 ps=308 
+M1001 a_21_38# b a_13_38# vdd pfet w=28 l=2
++ ad=168 pd=68 as=0 ps=0 
+M1002 z c a_21_38# vdd pfet w=28 l=2
++ ad=448 pd=144 as=0 ps=0 
+M1003 a_39_38# c z vdd pfet w=28 l=2
++ ad=140 pd=66 as=0 ps=0 
+M1004 an bn a_39_38# vdd pfet w=28 l=2
++ ad=224 pd=72 as=0 ps=0 
+M1005 vdd a an vdd pfet w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1006 cn c vdd vdd pfet w=28 l=2
++ ad=152 pd=70 as=0 ps=0 
+M1007 bn b vdd vdd pfet w=28 l=2
++ ad=224 pd=72 as=0 ps=0 
+M1008 a_116_38# a bn vdd pfet w=28 l=2
++ ad=140 pd=66 as=0 ps=0 
+M1009 z cn a_116_38# vdd pfet w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1010 a_133_38# cn z vdd pfet w=28 l=2
++ ad=168 pd=68 as=0 ps=0 
+M1011 a_141_38# bn a_133_38# vdd pfet w=28 l=2
++ ad=168 pd=68 as=0 ps=0 
+M1012 vdd an a_141_38# vdd pfet w=28 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1013 a_13_12# an vss vss nfet w=14 l=2
++ ad=84 pd=40 as=540 ps=204 
+M1014 a_21_12# b a_13_12# vss nfet w=14 l=2
++ ad=84 pd=40 as=0 ps=0 
+M1015 z c a_21_12# vss nfet w=14 l=2
++ ad=216 pd=86 as=0 ps=0 
+M1016 a_39_12# c z vss nfet w=14 l=2
++ ad=109 pd=52 as=0 ps=0 
+M1017 an bn a_39_12# vss nfet w=12 l=2
++ ad=96 pd=40 as=0 ps=0 
+M1018 vss a an vss nfet w=12 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1019 cn c vss vss nfet w=14 l=2
++ ad=82 pd=42 as=0 ps=0 
+M1020 bn b vss vss nfet w=13 l=2
++ ad=104 pd=42 as=0 ps=0 
+M1021 a_116_12# a bn vss nfet w=13 l=2
++ ad=65 pd=36 as=0 ps=0 
+M1022 z cn a_116_12# vss nfet w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+M1023 a_133_12# cn z vss nfet w=13 l=2
++ ad=78 pd=38 as=0 ps=0 
+M1024 a_141_12# bn a_133_12# vss nfet w=13 l=2
++ ad=78 pd=38 as=0 ps=0 
+M1025 vss an a_141_12# vss nfet w=13 l=2
++ ad=0 pd=0 as=0 ps=0 
+C0 z an 7.8fF
+C1 cn vdd 17.9fF
+C2 z vss 4.8fF
+C3 z vdd 17.2fF
+C4 a vss 49.6fF
+C5 a vdd 7.6fF
+C6 bn vss 21.9fF
+C7 a_141_38# an 2.3fF
+C8 cn bn 2.2fF
+C9 bn vdd 10.0fF
+C10 c vss 14.7fF
+C11 b vss 11.7fF
+C12 c vdd 14.5fF
+C13 z bn 4.1fF
+C14 an vss 14.0fF
+C15 b vdd 16.6fF
+C16 an vdd 36.6fF
+C17 cn vss 15.4fF
+
+v_dd vdd 0 5
+v_ss vss 0 0
+v_gg_f a 0 PULSE(5 0 0 0.1n 0.1n 15n 30n)
+v_gg_e b 0 PULSE(5 0 0 0.1n 0.1n 30n 60n)
+v_gg_d c 0 PULSE(5 0 0 0.1n 0.1n 60n 120n)
+
+.tran 0.01ns 200ns 
+
+.control
+run
+setplot tran1 
+plot (a+15) (b+10) (c+5) (z)
+.endc
+
+.end

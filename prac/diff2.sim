@@ -1,0 +1,198 @@
+| units: 100 tech: scmos format: MIT
+p an2v0x2_2/zn an2v0x2_2/z an2v0x2_0/vdd 2 28 125 -118
+p an2v0x2_2/a an2v0x2_0/vdd an2v0x2_2/zn 2 19 135 -109
+p in_2c an2v0x2_2/zn an2v0x2_0/vdd 2 19 145 -109
+n an2v0x2_2/zn an2v0x2_2/z an2v0x2_2/vss 2 14 125 -144
+n an2v0x2_2/a an2v0x2_2/vss an2v0x2_2/a_24_13# 2 13 138 -143
+n in_2c an2v0x2_2/a_24_13# an2v0x2_2/zn 2 13 145 -143
+p xor2v2x2_0/bn xor2v2x2_0/z xor2v2x2_0/an 2 20 13 -118
+p xor2v2x2_0/bn xor2v2x2_0/an xor2v2x2_0/z 2 20 23 -118
+p xor2v2x2_0/an xor2v2x2_0/z xor2v2x2_0/bn 2 20 33 -118
+p xor2v2x2_0/an xor2v2x2_0/bn xor2v2x2_0/z 2 20 43 -118
+p in_2c an2v0x2_0/vdd xor2v2x2_0/bn 2 20 67 -110
+p in_2c xor2v2x2_0/bn an2v0x2_0/vdd 2 20 77 -110
+p an2v0x2_2/a an2v0x2_0/vdd xor2v2x2_0/an 2 20 87 -110
+p an2v0x2_2/a xor2v2x2_0/an an2v0x2_0/vdd 2 20 97 -110
+n xor2v2x2_0/an an2v0x2_2/vss xor2v2x2_0/a_13_13# 2 13 15 -143
+n xor2v2x2_0/bn xor2v2x2_0/a_13_13# xor2v2x2_0/z 2 13 22 -143
+n xor2v2x2_0/bn xor2v2x2_0/z xor2v2x2_0/a_30_13# 2 13 32 -143
+n xor2v2x2_0/an xor2v2x2_0/a_30_13# an2v0x2_2/vss 2 13 39 -143
+n in_2c an2v0x2_2/vss xor2v2x2_0/bn 2 10 59 -140
+n an2v0x2_2/a xor2v2x2_0/bn xor2v2x2_0/z 2 20 69 -150
+n in_2c xor2v2x2_0/z xor2v2x2_0/an 2 20 79 -150
+n an2v0x2_2/a xor2v2x2_0/an an2v0x2_2/vss 2 10 89 -140
+p or2v0x3_0/zn an2v0x2_0/vdd or2v0x3_0/z 2 20 234 -44
+p or2v0x3_0/zn or2v0x3_0/z an2v0x2_0/vdd 2 20 224 -44
+p an2v0x2_1/z an2v0x2_0/vdd or2v0x3_0/a_31_39# 2 20 214 -44
+p an2v0x2_0/z or2v0x3_0/a_31_39# or2v0x3_0/zn 2 20 207 -44
+p an2v0x2_0/z or2v0x3_0/zn or2v0x3_0/a_48_39# 2 16 197 -44
+p an2v0x2_1/z or2v0x3_0/a_48_39# an2v0x2_0/vdd 2 16 190 -44
+n or2v0x3_0/zn or2v0x3_0/z an2v0x2_2/vss 2 20 234 -11
+n an2v0x2_1/z an2v0x2_2/vss or2v0x3_0/zn 2 10 215 -16
+n an2v0x2_0/z or2v0x3_0/zn an2v0x2_2/vss 2 10 205 -16
+p an2v0x2_1/zn an2v0x2_1/z an2v0x2_0/vdd 2 28 162 -43
+p an2v0x2_1/a an2v0x2_0/vdd an2v0x2_1/zn 2 19 152 -52
+p an2v0x2_1/b an2v0x2_1/zn an2v0x2_0/vdd 2 19 142 -52
+n an2v0x2_1/zn an2v0x2_1/z an2v0x2_2/vss 2 14 162 -17
+n an2v0x2_1/a an2v0x2_2/vss an2v0x2_1/a_24_13# 2 13 149 -18
+n an2v0x2_1/b an2v0x2_1/a_24_13# an2v0x2_1/zn 2 13 142 -18
+p an2v0x2_0/zn an2v0x2_0/z an2v0x2_0/vdd 2 28 114 -43
+p in_c an2v0x2_0/vdd an2v0x2_0/zn 2 19 104 -52
+p an2v0x2_0/b an2v0x2_0/zn an2v0x2_0/vdd 2 19 94 -52
+n an2v0x2_0/zn an2v0x2_0/z an2v0x2_2/vss 2 14 114 -17
+n in_c an2v0x2_2/vss an2v0x2_0/a_24_13# 2 13 101 -18
+n an2v0x2_0/b an2v0x2_0/a_24_13# an2v0x2_0/zn 2 13 94 -18
+p xnr2v8x05_0/zn an2v0x2_0/b an2v0x2_0/vdd 2 12 66 -43
+p in_a an2v0x2_0/vdd xnr2v8x05_0/an 2 12 54 -43
+p xnr2v8x05_0/bn xnr2v8x05_0/an xnr2v8x05_0/zn 2 12 44 -43
+p an2v0x2_1/b xnr2v8x05_0/zn xnr2v8x05_0/ai 2 12 34 -43
+p xnr2v8x05_0/an xnr2v8x05_0/ai an2v0x2_0/vdd 2 12 24 -43
+p an2v0x2_1/b an2v0x2_0/vdd xnr2v8x05_0/bn 2 12 14 -52
+n xnr2v8x05_0/zn an2v0x2_0/b an2v0x2_2/vss 2 6 66 -24
+n in_a an2v0x2_2/vss xnr2v8x05_0/an 2 6 56 -24
+n an2v0x2_1/b xnr2v8x05_0/an xnr2v8x05_0/zn 2 6 46 -24
+n xnr2v8x05_0/bn xnr2v8x05_0/zn xnr2v8x05_0/ai 2 6 36 -24
+n xnr2v8x05_0/an xnr2v8x05_0/ai an2v0x2_2/vss 2 6 25 -25
+n an2v0x2_1/b an2v0x2_2/vss xnr2v8x05_0/bn 2 6 14 -18
+p iv1v0x3_0/a an2v0x2_0/vdd an2v0x2_2/a 2 24 190 45
+p iv1v0x3_0/a an2v0x2_2/a an2v0x2_0/vdd 2 16 200 45
+n iv1v0x3_0/a an2v0x2_2/vss an2v0x2_2/a 2 10 190 20
+n iv1v0x3_0/a an2v0x2_2/a an2v0x2_2/vss 2 10 200 20
+p xor3v1x2_0/zn iv1v0x3_0/a xor3v1x2_0/cn 2 27 13 42
+p xor3v1x2_0/zn xor3v1x2_0/cn iv1v0x3_0/a 2 27 23 42
+p xor3v1x2_0/cn iv1v0x3_0/a xor3v1x2_0/zn 2 27 33 42
+p xor3v1x2_0/cn xor3v1x2_0/zn iv1v0x3_0/a 2 27 43 42
+p in_c an2v0x2_0/vdd xor3v1x2_0/cn 2 26 66 44
+p in_c xor3v1x2_0/cn an2v0x2_0/vdd 2 26 76 44
+p xor3v1x2_0/iz an2v0x2_0/vdd xor3v1x2_0/zn 2 28 86 42
+p xor3v1x2_0/iz xor3v1x2_0/zn an2v0x2_0/vdd 2 28 96 42
+p an2v0x2_1/a xor3v1x2_0/bn xor3v1x2_0/iz 2 28 116 42
+p xor3v1x2_0/bn xor3v1x2_0/iz an2v0x2_1/a 2 28 126 42
+p in_a an2v0x2_1/a an2v0x2_0/vdd 2 28 136 42
+p an2v0x2_1/b an2v0x2_0/vdd xor3v1x2_0/bn 2 14 147 46
+p an2v0x2_1/b xor3v1x2_0/bn an2v0x2_0/vdd 2 14 157 42
+n xor3v1x2_0/cn an2v0x2_2/vss xor3v1x2_0/a_11_12# 2 12 13 16
+n xor3v1x2_0/zn xor3v1x2_0/a_11_12# iv1v0x3_0/a 2 12 20 16
+n xor3v1x2_0/zn iv1v0x3_0/a xor3v1x2_0/a_28_12# 2 12 30 16
+n xor3v1x2_0/cn xor3v1x2_0/a_28_12# an2v0x2_2/vss 2 12 37 16
+n xor3v1x2_0/iz an2v0x2_2/vss xor3v1x2_0/zn 2 14 49 16
+n in_c xor3v1x2_0/zn iv1v0x3_0/a 2 14 59 16
+n in_c iv1v0x3_0/a xor3v1x2_0/zn 2 14 69 16
+n xor3v1x2_0/iz xor3v1x2_0/zn an2v0x2_2/vss 2 14 79 16
+n in_c an2v0x2_2/vss xor3v1x2_0/cn 2 12 89 12
+n in_c xor3v1x2_0/cn an2v0x2_2/vss 2 12 99 12
+n an2v0x2_1/a an2v0x2_2/vss xor3v1x2_0/a_115_7# 2 13 117 11
+n xor3v1x2_0/bn xor3v1x2_0/a_115_7# xor3v1x2_0/iz 2 13 124 11
+n an2v0x2_1/b xor3v1x2_0/iz an2v0x2_1/a 2 13 134 11
+n in_a an2v0x2_1/a an2v0x2_2/vss 2 13 144 16
+n an2v0x2_1/b an2v0x2_2/vss xor3v1x2_0/bn 2 11 157 19
+C an2v0x2_0/z an2v0x2_0/vdd 24.6
+C xnr2v8x05_0/bn an2v0x2_0/vdd 14.4
+C an2v0x2_2/vss xnr2v8x05_0/zn 11.9
+C xor2v2x2_0/bn xor2v2x2_0/z 2.7
+C xor3v1x2_0/cn an2v0x2_0/vdd 31.6
+C an2v0x2_0/zn an2v0x2_0/vdd 8.8
+C in_a an2v0x2_0/zn 2.2
+C or2v0x3_0/z an2v0x2_0/vdd 3.4
+C xnr2v8x05_0/an an2v0x2_0/vdd 9.9
+C an2v0x2_2/vss or2v0x3_0/zn 9.0
+C xor2v2x2_0/bn an2v0x2_0/vdd 17.7
+C xor2v2x2_0/an xor2v2x2_0/z 3.9
+C in_2c an2v0x2_0/vdd 30.8
+C in_c an2v0x2_0/vdd 33.4
+C xor3v1x2_0/zn xor3v1x2_0/cn 4.5
+C an2v0x2_2/vss an2v0x2_1/z 10.2
+C xor2v2x2_0/an an2v0x2_0/vdd 25.5
+C xor3v1x2_0/cn iv1v0x3_0/a 4.1
+C an2v0x2_2/z an2v0x2_0/vdd 2.4
+C an2v0x2_0/b an2v0x2_0/vdd 20.5
+C an2v0x2_2/zn an2v0x2_2/vss 8.9
+C an2v0x2_2/a an2v0x2_0/vdd 59.6
+C xor3v1x2_0/iz xor3v1x2_0/bn 2.4
+C an2v0x2_2/vss an2v0x2_0/z 12.8
+C an2v0x2_2/vss xnr2v8x05_0/bn 6.7
+C xor2v2x2_0/z an2v0x2_0/vdd 2.9
+C xor3v1x2_0/iz an2v0x2_0/vdd 15.8
+C xor3v1x2_0/bn an2v0x2_0/vdd 15.4
+C xor3v1x2_0/cn an2v0x2_2/vss 18.8
+C an2v0x2_2/vss an2v0x2_0/zn 8.9
+C an2v0x2_1/zn an2v0x2_0/vdd 8.8
+C an2v0x2_2/vss xnr2v8x05_0/an 5.5
+C xor2v2x2_0/bn an2v0x2_2/vss 11.2
+C in_a an2v0x2_0/vdd 24.6
+C in_2c an2v0x2_2/vss 11.5
+C an2v0x2_2/vss in_c 31.4
+C in_c xnr2v8x05_0/zn 3.1
+C xor3v1x2_0/bn an2v0x2_1/b 2.6
+C an2v0x2_1/a an2v0x2_0/vdd 12.4
+C xor2v2x2_0/an an2v0x2_2/vss 21.6
+C an2v0x2_1/b an2v0x2_0/vdd 50.3
+C an2v0x2_2/z an2v0x2_2/vss 2.5
+C xor3v1x2_0/zn an2v0x2_0/vdd 18.9
+C an2v0x2_2/vss an2v0x2_0/b 5.9
+C an2v0x2_2/a an2v0x2_2/vss 25.3
+C an2v0x2_1/b an2v0x2_1/a 2.0
+C an2v0x2_0/vdd iv1v0x3_0/a 34.4
+C xor2v2x2_0/z an2v0x2_2/vss 10.9
+C xor3v1x2_0/iz an2v0x2_2/vss 24.9
+C xor3v1x2_0/bn an2v0x2_2/vss 9.1
+C xor3v1x2_0/zn an2v0x2_1/b 4.3
+C an2v0x2_2/vss an2v0x2_1/zn 8.9
+C xnr2v8x05_0/zn an2v0x2_0/vdd 4.4
+C in_a an2v0x2_2/vss 26.6
+C xor3v1x2_0/zn iv1v0x3_0/a 4.6
+C an2v0x2_2/vss an2v0x2_1/a 19.1
+C or2v0x3_0/zn an2v0x2_0/vdd 12.7
+C an2v0x2_1/b an2v0x2_2/vss 53.3
+C xor3v1x2_0/zn an2v0x2_2/vss 11.9
+C an2v0x2_2/a xor3v1x2_0/cn 2.3
+C an2v0x2_2/vss iv1v0x3_0/a 14.9
+C an2v0x2_1/z an2v0x2_0/vdd 17.7
+C xor2v2x2_0/bn xor2v2x2_0/an 3.3
+C an2v0x2_2/zn an2v0x2_0/vdd 8.8
+R xor3v1x2_0/a_115_7# 69
+R xor3v1x2_0/a_28_12# 64
+R xor3v1x2_0/a_11_12# 64
+R an2v0x2_1/b 4427
+C in_a GND 4.4
+R in_a 1354
+R xor3v1x2_0/bn 1548
+R xor3v1x2_0/iz 2485
+R xor3v1x2_0/cn 2938
+R xor3v1x2_0/zn 2183
+R an2v0x2_2/a 2352
+R iv1v0x3_0/a 2570
+C an2v0x2_0/vdd GND 33.9
+R an2v0x2_0/vdd 82414
+R xnr2v8x05_0/ai 143
+R xnr2v8x05_0/an 562
+R xnr2v8x05_0/bn 779
+R xnr2v8x05_0/zn 574
+R an2v0x2_0/a_24_13# 69
+C an2v0x2_0/b GND 2.9
+R an2v0x2_0/b 887
+C in_c GND 14.4
+R in_c 2828
+R an2v0x2_0/zn 927
+R an2v0x2_1/a_24_13# 69
+R an2v0x2_1/a 1822
+R an2v0x2_1/zn 927
+R or2v0x3_0/a_48_39# 191
+R or2v0x3_0/a_31_39# 238
+R or2v0x3_0/z 243
+C an2v0x2_0/z GND 5.0
+R an2v0x2_0/z 1225
+R an2v0x2_1/z 1416
+R or2v0x3_0/zn 1208
+C an2v0x2_2/vss GND 45.0
+R an2v0x2_2/vss 3469
+R xor2v2x2_0/a_30_13# 69
+R xor2v2x2_0/a_13_13# 69
+R xor2v2x2_0/z 1070
+R xor2v2x2_0/an 2529
+R xor2v2x2_0/bn 1969
+R an2v0x2_2/a_24_13# 69
+R an2v0x2_2/z 363
+C in_2c GND 5.0
+R in_2c 2407
+R an2v0x2_2/zn 927

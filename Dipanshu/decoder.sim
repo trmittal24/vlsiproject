@@ -1,0 +1,80 @@
+| units: 100 tech: scmos format: MIT
+p or2v0x3_2/zn vdd o 2 20 157 43
+p or2v0x3_2/zn o vdd 2 20 167 43
+p or2v0x3_1/z vdd or2v0x3_2/a_31_39# 2 20 177 43
+p d6 or2v0x3_2/a_31_39# or2v0x3_2/zn 2 20 184 43
+p d6 or2v0x3_2/zn or2v0x3_2/a_48_39# 2 16 194 43
+p or2v0x3_1/z or2v0x3_2/a_48_39# vdd 2 16 201 43
+n or2v0x3_2/zn o gnd 2 20 157 10
+n or2v0x3_1/z gnd or2v0x3_2/zn 2 10 176 15
+n d6 or2v0x3_2/zn gnd 2 10 186 15
+p or2v0x3_1/zn vdd or2v0x3_1/z 2 20 85 43
+p or2v0x3_1/zn or2v0x3_1/z vdd 2 20 95 43
+p or2v0x3_0/z vdd or2v0x3_1/a_31_39# 2 20 105 43
+p d4 or2v0x3_1/a_31_39# or2v0x3_1/zn 2 20 112 43
+p d4 or2v0x3_1/zn or2v0x3_1/a_48_39# 2 16 122 43
+p or2v0x3_0/z or2v0x3_1/a_48_39# vdd 2 16 129 43
+n or2v0x3_1/zn or2v0x3_1/z gnd 2 20 85 10
+n or2v0x3_0/z gnd or2v0x3_1/zn 2 10 104 15
+n d4 or2v0x3_1/zn gnd 2 10 114 15
+p or2v0x3_0/zn vdd or2v0x3_0/z 2 20 13 43
+p or2v0x3_0/zn or2v0x3_0/z vdd 2 20 23 43
+p d0 vdd or2v0x3_0/a_31_39# 2 20 33 43
+p d2 or2v0x3_0/a_31_39# or2v0x3_0/zn 2 20 40 43
+p d2 or2v0x3_0/zn or2v0x3_0/a_48_39# 2 16 50 43
+p d0 or2v0x3_0/a_48_39# vdd 2 16 57 43
+n or2v0x3_0/zn or2v0x3_0/z gnd 2 20 13 10
+n d0 gnd or2v0x3_0/zn 2 10 32 15
+n d2 or2v0x3_0/zn gnd 2 10 42 15
+C gnd o 2.1
+C or2v0x3_2/zn vdd 12.7
+C or2v0x3_1/z or2v0x3_2/zn 2.0
+C or2v0x3_0/z d2 2.2
+C d6 gnd 13.0
+C d2 gnd 12.2
+C gnd d4 13.0
+C or2v0x3_0/z d0 3.9
+C d0 gnd 7.6
+C vdd or2v0x3_0/zn 12.7
+C or2v0x3_0/z vdd 19.2
+C or2v0x3_0/z or2v0x3_1/z 4.6
+C or2v0x3_1/z gnd 10.3
+C or2v0x3_1/zn vdd 12.7
+C or2v0x3_1/zn or2v0x3_1/z 2.3
+C vdd o 4.8
+C or2v0x3_1/z o 4.7
+C or2v0x3_2/zn gnd 9.0
+C or2v0x3_2/zn o 2.2
+C d6 vdd 7.9
+C d2 vdd 7.9
+C vdd d4 7.9
+C or2v0x3_0/z or2v0x3_0/zn 2.3
+C gnd or2v0x3_0/zn 9.0
+C d0 vdd 14.1
+C or2v0x3_0/z gnd 10.3
+C or2v0x3_0/z or2v0x3_1/zn 2.0
+C or2v0x3_1/z vdd 19.4
+C or2v0x3_1/zn gnd 9.0
+R or2v0x3_0/a_48_39# 191
+R or2v0x3_0/a_31_39# 238
+C d2 GND 3.2
+R d2 862
+C d0 GND 3.1
+R d0 1054
+R or2v0x3_0/zn 1208
+R or2v0x3_1/a_48_39# 191
+R or2v0x3_1/a_31_39# 238
+C d4 GND 13.0
+R d4 862
+R or2v0x3_0/z 1297
+R or2v0x3_1/zn 1208
+R or2v0x3_2/a_48_39# 191
+R or2v0x3_2/a_31_39# 238
+R o 243
+C d6 GND 20.1
+R d6 863
+R or2v0x3_1/z 1297
+R or2v0x3_2/zn 1208
+C gnd GND 2.3
+R gnd 1518
+R vdd 17191

@@ -1,6 +1,6 @@
 * SPICE3 file created from tff.ext - technology: scmos
 
-.include /home/dipanshu/Desktop/ngspice/t14y_tsmc_025_level3.txt
+.include /home/dipanshu/Deskstop/ngspice/t14y_tsmc_025_level3.txt
 
 .option scale=1u
 
