@@ -1,0 +1,96 @@
+* SPICE3 file created from temp.ext - technology: scmos
+.include t14y_tsmc_025_level3.txt
+M1000 xor3v1x2_0_cn xor3v1x2_0_zn xor3v1x2_0_z xor3v1x2_0_vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1001 xor3v1x2_0_z xor3v1x2_0_zn xor3v1x2_0_cn xor3v1x2_0_vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1002 xor3v1x2_0_zn xor3v1x2_0_cn xor3v1x2_0_z xor3v1x2_0_vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1003 xor3v1x2_0_z xor3v1x2_0_cn xor3v1x2_0_zn xor3v1x2_0_vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1004 xor3v1x2_0_cn xor3v1x2_0_c xor3v1x2_0_vdd xor3v1x2_0_vdd pfet w=26u l=2u
++  ad=0p pd=0u as=1063p ps=366u
+M1005 xor3v1x2_0_vdd xor3v1x2_0_c xor3v1x2_0_cn xor3v1x2_0_vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 xor3v1x2_0_zn xor3v1x2_0_iz xor3v1x2_0_vdd xor3v1x2_0_vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1007 xor3v1x2_0_vdd xor3v1x2_0_iz xor3v1x2_0_zn xor3v1x2_0_vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1008 xor3v1x2_0_iz xor3v1x2_0_an xor3v1x2_0_bn xor3v1x2_0_vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1009 xor3v1x2_0_an xor3v1x2_0_bn xor3v1x2_0_iz xor3v1x2_0_vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1010 xor3v1x2_0_vdd xor3v1x2_0_a xor3v1x2_0_an xor3v1x2_0_vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1011 xor3v1x2_0_bn xor3v1x2_0_b xor3v1x2_0_vdd xor3v1x2_0_vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1012 xor3v1x2_0_vdd xor3v1x2_0_b xor3v1x2_0_bn xor3v1x2_0_vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1013 xor3v1x2_0_a_11_12# xor3v1x2_0_cn xor3v1x2_0_vss xor3v1x2_0_vss nfet w=12u l=2u
++  ad=60p pd=34u as=760p ps=268u
+M1014 xor3v1x2_0_z xor3v1x2_0_zn xor3v1x2_0_a_11_12# xor3v1x2_0_vss nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1015 xor3v1x2_0_a_28_12# xor3v1x2_0_zn xor3v1x2_0_z xor3v1x2_0_vss nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1016 xor3v1x2_0_vss xor3v1x2_0_cn xor3v1x2_0_a_28_12# xor3v1x2_0_vss nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1017 xor3v1x2_0_zn xor3v1x2_0_iz xor3v1x2_0_vss xor3v1x2_0_vss nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1018 xor3v1x2_0_z xor3v1x2_0_c xor3v1x2_0_zn xor3v1x2_0_vss nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1019 xor3v1x2_0_zn xor3v1x2_0_c xor3v1x2_0_z xor3v1x2_0_vss nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1020 xor3v1x2_0_vss xor3v1x2_0_iz xor3v1x2_0_zn xor3v1x2_0_vss nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1021 xor3v1x2_0_cn xor3v1x2_0_c xor3v1x2_0_vss xor3v1x2_0_vss nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1022 xor3v1x2_0_vss xor3v1x2_0_c xor3v1x2_0_cn xor3v1x2_0_vss nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1023 xor3v1x2_0_a_115_7# xor3v1x2_0_an xor3v1x2_0_vss xor3v1x2_0_vss nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1024 xor3v1x2_0_iz xor3v1x2_0_bn xor3v1x2_0_a_115_7# xor3v1x2_0_vss nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1025 xor3v1x2_0_an xor3v1x2_0_b xor3v1x2_0_iz xor3v1x2_0_vss nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1026 xor3v1x2_0_vss xor3v1x2_0_a xor3v1x2_0_an xor3v1x2_0_vss nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1027 xor3v1x2_0_bn xor3v1x2_0_b xor3v1x2_0_vss xor3v1x2_0_vss nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+C0 xor3v1x2_0_vdd xor3v1x2_0_zn 18.9fF
+C1 xor3v1x2_0_vdd xor3v1x2_0_bn 15.4fF
+C2 xor3v1x2_0_vdd xor3v1x2_0_cn 31.6fF
+C3 xor3v1x2_0_vss xor3v1x2_0_zn 11.9fF
+C4 xor3v1x2_0_vss xor3v1x2_0_bn 9.1fF
+C5 xor3v1x2_0_vdd xor3v1x2_0_an 5.6fF
+C6 xor3v1x2_0_vdd xor3v1x2_0_z 4.1fF
+C7 xor3v1x2_0_vss xor3v1x2_0_cn 18.8fF
+C8 xor3v1x2_0_vss xor3v1x2_0_an 9.3fF
+C9 xor3v1x2_0_zn xor3v1x2_0_cn 4.5fF
+C10 xor3v1x2_0_vss xor3v1x2_0_z 7.2fF
+C11 xor3v1x2_0_vdd xor3v1x2_0_c 10.4fF
+C12 xor3v1x2_0_zn xor3v1x2_0_z 4.6fF
+C13 xor3v1x2_0_vss xor3v1x2_0_c 20.2fF
+C14 xor3v1x2_0_vdd xor3v1x2_0_iz 15.8fF
+C15 xor3v1x2_0_cn xor3v1x2_0_z 4.1fF
+C16 xor3v1x2_0_vss xor3v1x2_0_iz 24.9fF
+C17 xor3v1x2_0_vdd xor3v1x2_0_a 6.5fF
+C18 xor3v1x2_0_b xor3v1x2_0_vdd 13.9fF
+C19 xor3v1x2_0_iz xor3v1x2_0_bn 2.4fF
+C20 xor3v1x2_0_vss xor3v1x2_0_a 8.0fF
+C21 xor3v1x2_0_b xor3v1x2_0_vss 14.6fF
+
+v_dd xor3v1x2_0_vdd 0 5
+v_ss xor3v1x2_0_vss 0 0 
+v_a xor3v1x2_0_a 0 DC 1 PULSE(0 5 0 0 0 20ns 40ns )
+v_b xor3v1x2_0_b 0 DC 1 PULSE(0 5 0 0 0 40ns 80ns )
+v_c xor3v1x2_0_c 0  DC 1 PULSE(0 5 0 0 0 80ns 160ns )
+
+.tran 0.01ns 200ns 
+
+.control
+run
+setplot tran1
+plot (xor3v1x2_0_z) (xor3v1x2_0_zn + 5)
+.endc
+
+.end

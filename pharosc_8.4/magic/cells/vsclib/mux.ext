@@ -1,0 +1,107 @@
+timestamp 1521978916
+version 8.0
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1 mxn2v0x1_0 1 0 4 0 1 4
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1 mxn2v0x1_1 -1 0 68 0 -1 -4
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1 mxn2v0x1_2 1 0 4 0 1 -156
+node "gnd" 0 3384 -5 -156 m1 0 0 0 0 0 0 0 0 0 0 0 0 72 34 0 0 0 0
+node "o2" 1 7236 6 -121 v 0 0 0 0 0 0 0 0 0 0 0 0 44 38 304 160 0 0
+node "vdd" 0 26790 -6 -85 m1 0 0 0 0 0 0 0 0 0 0 0 0 744 174 0 0 0 0
+node "o1" 0 3572 66 -43 m1 0 0 0 0 0 0 0 0 0 0 0 0 76 46 0 0 0 0
+node "gnd" 0 34780 -4 -5 m1 0 0 0 0 0 0 0 0 0 0 0 0 740 168 0 0 0 0
+node "o0" 1 7348 6 42 v 0 0 0 0 0 0 0 0 0 0 0 0 48 40 300 158 0 0
+node "b2" 2 15218 -29 8 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 36 758 458 0 0
+node "b1" 1 7124 -29 17 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 36 380 198 0 0
+node "b0" 1 6896 -29 26 m1 0 0 0 0 0 0 0 0 0 0 0 0 40 36 328 172 0 0
+node "s" 3 30876 -29 61 m1 0 0 0 0 0 0 0 0 0 0 0 0 188 134 1288 660 0 0
+node "vdd" 0 3337 -5 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 71 36 0 0 0 0
+node "a2" 655 14418 -27 -86 pc 0 0 0 0 118 118 0 0 0 0 0 0 24 20 0 0 0 0
+node "a1" 942 20130 -27 -79 pc 0 0 0 0 166 166 0 0 0 0 0 0 24 20 0 0 0 0
+node "a0" 681 42718 -18 68 pc 0 0 0 0 122 122 0 0 0 0 0 0 616 316 0 0 0 0
+cap "a0" "b1" 720
+cap "a0" "s" 720
+cap "a1" "b2" 114
+cap "a1" "vdd" 3360
+cap "a2" "s" 152
+cap "a0" "b2" 540
+cap "a2" "b2" 114
+cap "a2" "vdd" 1860
+cap "gnd" "b1" 1800
+cap "b0" "s" 720
+cap "a0" "b0" 720
+cap "a1" "s" 152
+cap "b1" "s" 720
+cap "mxn2v0x1_2/z" "a2" 1696
+cap "mxn2v0x1_2/sn" "mxn2v0x1_2/a1" 1580
+cap "mxn2v0x1_2/z" "mxn2v0x1_2/zn" 796
+cap "mxn2v0x1_1/w_n4_32#" "mxn2v0x1_2/z" 2375
+cap "mxn2v0x1_1/w_n4_32#" "a1" 3978
+cap "mxn2v0x1_2/a_21_50#" "mxn2v0x1_1/s" 440
+cap "mxn2v0x1_2/z" "mxn2v0x1_1/s" 1149
+cap "mxn2v0x1_2/w_n4_n4#" "gnd" 752
+cap "vdd" "a1" 60
+cap "mxn2v0x1_2/a_38_50#" "mxn2v0x1_1/s" 440
+cap "vdd" "mxn2v0x1_2/z" 132
+cap "mxn2v0x1_2/sn" "mxn2v0x1_2/z" 1506
+cap "mxn2v0x1_1/w_n4_32#" "a2" 2106
+cap "mxn2v0x1_2/a1" "mxn2v0x1_2/z" 872
+cap "mxn2v0x1_2/zn" "mxn2v0x1_1/s" 704
+cap "vdd" "a2" 120
+cap "mxn2v0x1_1/w_n4_32#" "mxn2v0x1_1/s" 2918
+cap "mxn2v0x1_1/w_n4_32#" "vdd" 19176
+cap "vdd" "mxn2v0x1_1/s" 1324
+cap "mxn2v0x1_2/a1" "mxn2v0x1_2/zn" 2686
+cap "mxn2v0x1_2/a1" "mxn2v0x1_1/s" 38
+cap "mxn2v0x1_2/w_n4_n4#" "mxn2v0x1_2/a1" 1254
+cap "mxn2v0x1_1/w_n4_32#" "o2" 76
+cap "b0" "mxn2v0x1_0/s" 38
+cap "mxn2v0x1_0/w_n4_n4#" "b0" 1254
+cap "b1" "mxn2v0x1_1/sn" 720
+cap "mxn2v0x1_0/zn" "b0" 2686
+cap "mxn2v0x1_1/w_n4_32#" "mxn2v0x1_1/z" 940
+cap "gnd" "mxn2v0x1_0/w_n4_n4#" 26508
+cap "mxn2v0x1_0/z" "b0" 720
+cap "b1" "mxn2v0x1_0/w_n4_n4#" 2698
+cap "b0" "mxn2v0x1_0/sn" 1580
+cap "gnd" "b1" 1890
+cap "mxn2v0x1_1/w_n4_32#" "o1" 188
+cap "mxn2v0x1_0/z" "mxn2v0x1_0/w_n4_32#" 1254
+cap "s" "mxn2v0x1_0/a_21_50#" 440
+cap "mxn2v0x1_0/z" "mxn2v0x1_0/a0" 2288
+cap "mxn2v0x1_0/z" "mxn2v0x1_0/zn" 76
+cap "s" "mxn2v0x1_0/zn" 704
+cap "s" "vdd" 1324
+cap "s" "mxn2v0x1_0/w_n4_32#" 2010
+cap "s" "mxn2v0x1_0/z" 959
+cap "vdd" "mxn2v0x1_0/w_n4_32#" 564
+cap "vdd" "mxn2v0x1_0/a0" 120
+cap "mxn2v0x1_0/z" "mxn2v0x1_0/zn" 720
+cap "vdd" "mxn2v0x1_0/z" 132
+cap "mxn2v0x1_0/a_38_50#" "s" 440
+cap "mxn2v0x1_0/z" "mxn2v0x1_0/sn" 4263
+cap "mxn2v0x1_0/a1" "mxn2v0x1_0/z" 38
+cap "mxn2v0x1_0/w_n4_32#" "mxn2v0x1_0/a0" 2106
+cap "mxn2v0x1_0/w_n4_32#" "o0" 76
+merge "mxn2v0x1_0/vdd" "mxn2v0x1_2/vdd" -26555 0 0 0 0 0 0 0 0 0 0 0 0 -135 -300 0 0 0 0
+merge "mxn2v0x1_2/vdd" "mxn2v0x1_1/vdd"
+merge "mxn2v0x1_1/vdd" "vdd"
+merge "mxn2v0x1_0/s" "mxn2v0x1_2/s" -21516 0 0 0 0 0 0 0 0 0 0 0 0 -112 -88 -292 -150 0 0
+merge "mxn2v0x1_2/s" "mxn2v0x1_1/s"
+merge "mxn2v0x1_1/s" "s"
+merge "mxn2v0x1_1/vss" "mxn2v0x1_0/vss" -34404 0 0 0 0 0 0 0 0 0 0 0 0 -152 -296 0 0 0 0
+merge "mxn2v0x1_0/vss" "mxn2v0x1_2/vss"
+merge "mxn2v0x1_2/vss" "gnd"
+merge "mxn2v0x1_2/a0" "a2" -2664 0 0 0 0 -2 -6 0 0 0 0 0 0 0 0 0 0 0 0
+merge "mxn2v0x1_2/a1" "b2" -4704 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "mxn2v0x1_2/z" "o2" -5464 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "mxn2v0x1_1/a0" "a1" -4536 0 0 0 0 -2 -6 0 0 0 0 0 0 0 0 0 0 0 0
+merge "mxn2v0x1_1/a1" "b1" -4856 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "mxn2v0x1_0/z" "o0" -5464 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "mxn2v0x1_1/z" "o1" -1128 0 0 0 0 0 0 0 0 0 0 0 0 0 -8 0 0 0 0
+merge "mxn2v0x1_2/w_n4_32#" "mxn2v0x1_1/w_n4_32#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -144
+merge "mxn2v0x1_1/w_n4_n4#" "mxn2v0x1_0/w_n4_n4#" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+merge "mxn2v0x1_0/a0" "a0" -3616 0 0 0 0 -10 -14 0 0 0 0 0 0 0 0 0 0 0 0
+merge "mxn2v0x1_0/a1" "b0" -4628 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0

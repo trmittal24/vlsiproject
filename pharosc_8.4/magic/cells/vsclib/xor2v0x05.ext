@@ -1,0 +1,53 @@
+timestamp 1521193696
+version 8.0
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_48_11#" 48 0 48 11 ndiff 45 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "z" 262 0 38 13 ndiff 66 34 144 58 0 0 0 0 0 0 0 0 268 142 0 0 0 0
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+node "a" 567 0 25 29 p 0 0 0 0 126 114 0 0 0 0 0 0 104 52 0 0 0 0
+equiv "a" "a"
+node "an" 777 0 28 13 ndiff 56 30 104 42 140 128 0 0 0 0 0 0 222 110 0 0 0 0
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+node "bn" 1294 0 6 19 ndiff 49 28 248 112 138 126 0 0 0 0 0 0 392 204 0 0 0 0
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+node "b" 1470 0 6 54 p 0 0 0 0 278 266 0 0 0 0 0 0 101 54 0 0 0 0
+equiv "b" "b"
+node "vss" 237 0 -4 -4 pw 182 80 36 24 0 0 0 0 0 0 0 0 640 190 0 0 0 0
+node "vdd" 4291 0 -4 32 nw 84 40 236 66 0 0 0 0 0 0 0 0 604 172 0 0 3168 232
+cap "b" "bn" 235
+cap "z" "an" 240
+cap "b" "vss" 16464
+cap "an" "vdd" 6048
+cap "z" "vdd" 1880
+cap "a" "vdd" 5402
+cap "bn" "an" 475
+cap "an" "vss" 9194
+cap "a_48_11#" "z" 1316
+cap "z" "bn" 1880
+cap "z" "vss" 3948
+cap "a" "bn" 300
+cap "b" "an" 180
+cap "a" "vss" 8084
+cap "a" "b" 120
+cap "bn" "vdd" 13663
+cap "b" "vdd" 13250
+cap "bn" "vss" 6488
+device mosfet nfet 53 11 54 12 2 9 "vss" "an" 4 0 "a_48_11#" 9 0 "vss" 9 0
+device mosfet nfet 46 11 47 12 2 9 "vss" "bn" 4 0 "z" 9 0 "a_48_11#" 9 0
+device mosfet nfet 36 13 37 14 2 7 "vss" "b" 4 0 "an" 7 0 "z" 7 0
+device mosfet nfet 26 13 27 14 2 7 "vss" "a" 4 0 "vss" 7 0 "an" 7 0
+device mosfet nfet 13 19 14 20 2 7 "vss" "b" 4 0 "bn" 7 0 "vss" 7 0
+device mosfet pfet 53 38 54 39 2 21 "vdd" "an" 4 0 "z" 21 0 "bn" 21 0
+device mosfet pfet 43 38 44 39 2 13 "vdd" "bn" 4 0 "an" 13 0 "z" 13 0
+device mosfet pfet 33 38 34 39 2 13 "vdd" "a" 4 0 "vdd" 13 0 "an" 13 0
+device mosfet pfet 19 38 20 39 2 21 "vdd" "b" 4 0 "bn" 21 0 "vdd" 21 0
