@@ -1,15 +1,18 @@
 magic
 tech scmos
-timestamp 1521910017
+timestamp 1521975881
 << metal1 >>
 rect -4 72 9 75
 rect -4 -71 -1 72
+rect 174 68 179 76
 rect 169 62 172 63
 rect 169 58 171 62
-rect 175 58 185 62
+rect 184 58 185 59
 rect 169 56 172 58
+rect 210 40 211 45
 rect 2 -4 6 5
 rect 121 4 124 5
+rect 173 4 178 12
 rect 78 -7 82 -4
 rect 121 -5 124 -4
 rect 76 -10 83 -7
@@ -65,17 +68,18 @@ rect 110 -156 114 -152
 rect 158 -153 168 -148
 rect 157 -156 168 -153
 << metal2 >>
+rect 6 77 216 80
+rect 6 40 9 77
+rect 17 70 185 73
+rect 17 -94 20 70
 rect 171 43 174 58
 rect 28 40 174 43
 rect 28 12 32 40
 rect 113 35 155 36
 rect 113 33 152 35
-rect 28 -18 31 12
-rect 42 -26 45 32
 rect 73 15 76 32
-rect 31 -29 45 -26
 rect 61 12 76 15
-rect 31 -107 34 -29
+rect 28 -18 31 12
 rect 61 -42 64 12
 rect 113 8 116 33
 rect 133 25 139 29
@@ -95,7 +99,12 @@ rect 42 -79 99 -76
 rect 96 -87 99 -79
 rect 106 -80 109 5
 rect 136 -32 139 25
-rect 171 -14 174 40
+rect 171 -1 174 40
+rect 182 40 185 70
+rect 213 45 216 77
+rect 219 -1 222 1
+rect 171 -4 222 -1
+rect 171 -14 174 -4
 rect 170 -23 174 -14
 rect 122 -40 128 -36
 rect 125 -73 128 -40
@@ -105,10 +114,10 @@ rect 199 -73 202 -30
 rect 125 -76 202 -73
 rect 106 -83 180 -80
 rect 96 -90 164 -87
-rect 31 -110 77 -107
-rect 94 -108 156 -105
+rect 17 -97 77 -94
 rect -4 -125 6 -122
-rect 74 -122 77 -110
+rect 74 -122 77 -97
+rect 94 -108 156 -105
 rect 152 -110 156 -108
 rect 161 -111 164 -90
 rect 177 -97 180 -83
@@ -119,10 +128,13 @@ rect 161 -133 175 -132
 rect 161 -136 172 -133
 << m2contact >>
 rect 171 58 175 62
-rect 42 32 46 36
+rect 211 40 216 45
+rect 6 36 10 40
+rect 182 36 186 40
 rect 73 32 77 36
 rect 152 31 156 35
 rect 129 25 133 29
+rect 219 1 223 5
 rect 27 -22 31 -18
 rect 68 -20 72 -16
 rect 88 -35 92 -31
@@ -142,35 +154,40 @@ rect 176 -102 181 -97
 rect 175 -115 180 -110
 rect 172 -137 176 -133
 use xor3v1x2  xor3v1x2_0
-timestamp 1521910017
+timestamp 1521975730
 transform 1 0 4 0 1 4
 box -4 -4 172 76
+use iv1v0x3  iv1v0x3_0
+timestamp 1521975730
+transform 1 0 180 0 1 4
+box -4 -4 36 76
 use xnr2v8x05  xnr2v8x05_0
-timestamp 1521910017
+timestamp 1521975730
 transform -1 0 76 0 -1 -4
 box -4 -4 76 76
 use an2v0x2  an2v0x2_0
-timestamp 1521910017
+timestamp 1521975730
 transform -1 0 124 0 -1 -4
 box -4 -4 44 76
 use an2v0x2  an2v0x2_1
-timestamp 1521910017
+timestamp 1521975730
 transform -1 0 172 0 -1 -4
 box -4 -4 44 76
 use or2v0x3  or2v0x3_0
-timestamp 1521910017
+timestamp 1521975730
 transform -1 0 244 0 -1 -4
 box -4 -4 68 76
 use xor2v2x2  xor2v2x2_0
-timestamp 1521910017
+timestamp 1521975730
 transform 1 0 4 0 1 -156
 box -4 -4 108 76
 use an2v0x2  an2v0x2_2
-timestamp 1521910017
+timestamp 1521975730
 transform 1 0 116 0 1 -156
 box -4 -4 44 76
 << labels >>
 rlabel m2contact 178 -100 178 -100 1 in_a
 rlabel m2contact 178 -113 178 -113 1 in_c
 rlabel m2contact 174 -135 174 -135 1 in_2c
+rlabel m2contact 220 3 220 3 1 in_b
 << end >>
