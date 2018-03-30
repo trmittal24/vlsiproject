@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1521978916
+timestamp 1522414328
 << metal1 >>
 rect 706 -318 785 -314
 rect 706 -400 710 -318
@@ -21,8 +21,11 @@ rect 723 -401 769 -398
 rect 984 -401 1030 -398
 rect 1263 -482 1266 -327
 rect 665 -587 668 -564
+rect 688 -588 701 -585
 rect 627 -613 631 -608
+rect 698 -623 701 -588
 rect 888 -612 892 -608
+rect 674 -627 701 -623
 rect 940 -656 1019 -653
 rect 752 -663 763 -660
 << metal2 >>
@@ -94,19 +97,19 @@ rect 1019 -656 1023 -652
 rect 748 -663 752 -659
 rect 763 -663 767 -659
 use mux  mux_0
-timestamp 1521978916
+timestamp 1522414328
 transform 0 -1 857 1 0 -323
 box -29 -160 85 80
 use diff2  diff2_0
-timestamp 1521977136
+timestamp 1522414328
 transform 1 0 511 0 1 -473
 box -4 -160 252 80
 use diff2  diff2_1
-timestamp 1521977136
+timestamp 1522414328
 transform 1 0 771 0 1 -473
 box -4 -160 252 80
 use diff2  diff2_2
-timestamp 1521977136
+timestamp 1522414328
 transform 1 0 1031 0 1 -473
 box -4 -160 252 80
 << end >>

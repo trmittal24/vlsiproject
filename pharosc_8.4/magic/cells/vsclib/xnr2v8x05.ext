@@ -1,4 +1,4 @@
-timestamp 1521977136
+timestamp 1522414328
 version 8.0
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -23,30 +23,30 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "vss" 408 0 -4 -4 pw 254 124 36 24 0 0 0 0 0 0 0 0 626 174 0 0 0 0
 node "vdd" 5490 0 -4 32 nw 72 48 412 158 0 0 0 0 0 0 0 0 626 174 0 0 3520 248
-cap "bn" "an" 120
-cap "zn" "z" 60
-cap "vdd" "a" 9292
-cap "vss" "zn" 11894
-cap "zn" "a" 240
-cap "vss" "bn" 6732
-cap "b" "an" 240
-cap "ai" "b" 120
-cap "vdd" "zn" 4435
 cap "vss" "b" 25718
-cap "vdd" "bn" 14380
-cap "zn" "bn" 540
-cap "ai" "an" 1128
-cap "vdd" "b" 19572
-cap "zn" "b" 240
-cap "vss" "an" 5484
-cap "bn" "b" 240
-cap "vss" "ai" 1175
-cap "vss" "z" 1316
-cap "vss" "a" 3890
-cap "vdd" "an" 9855
 cap "zn" "an" 1128
+cap "zn" "b" 240
+cap "vdd" "bn" 14380
 cap "vdd" "ai" 1222
+cap "vss" "zn" 11894
+cap "vss" "z" 1316
+cap "zn" "z" 60
+cap "bn" "an" 120
+cap "an" "ai" 1128
+cap "vdd" "a" 9292
+cap "bn" "b" 240
+cap "b" "ai" 120
+cap "vss" "bn" 6732
+cap "vss" "ai" 1175
+cap "zn" "bn" 540
+cap "vdd" "an" 9855
+cap "vdd" "b" 19572
+cap "vdd" "zn" 4435
 cap "vdd" "z" 2585
+cap "vss" "a" 3890
+cap "zn" "a" 240
+cap "an" "b" 240
+cap "vss" "an" 5484
 device mosfet nfet 61 13 62 14 2 6 "vss" "b" 4 0 "vss" 6 0 "bn" 6 0
 device mosfet nfet 50 20 51 21 2 6 "vss" "an" 4 0 "ai" 6 0 "vss" 6 0
 device mosfet nfet 39 19 40 20 2 6 "vss" "bn" 4 0 "zn" 6 0 "ai" 6 0
