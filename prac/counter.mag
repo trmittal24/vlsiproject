@@ -71,7 +71,7 @@ rect -105 31 -101 35
 rect 2 31 6 35
 rect -200 -6 -196 -2
 rect -150 -6 -146 -2
-use ../pharosc_8.4/magic/cells/vsclib/bf1v0x6  bf1v0x6_0
+use bf1v0x6  bf1v0x6_0
 timestamp 1522932350
 transform -1 0 -519 0 -1 153
 box -4 -4 68 76
@@ -79,23 +79,23 @@ use t  t_2
 timestamp 1522932350
 transform 1 0 -587 0 1 0
 box 0 -76 152 80
-use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3  xor2v0x3_1
+use xor2v0x3  xor2v0x3_1
 timestamp 1522932350
 transform 1 0 -432 0 1 4
 box -4 -4 140 76
-use ../pharosc_8.4/magic/cells/vsclib/bf1v0x6  bf1v0x6_1
+use bf1v0x6  bf1v0x6_1
 timestamp 1522932350
 transform -1 0 -224 0 -1 153
 box -4 -4 68 76
-use ../pharosc_8.4/magic/cells/vsclib/xor2v0x3  xor2v0x3_0
+use xor2v0x3  xor2v0x3_0
 timestamp 1522932350
 transform 1 0 -139 0 1 4
 box -4 -4 140 76
-use ../pharosc_8.4/magic/cells/vsclib/bf1v0x6  bf1v0x6_2
+use bf1v0x6  bf1v0x6_2
 timestamp 1522932350
 transform -1 0 69 0 -1 152
 box -4 -4 68 76
-use ../pharosc_8.4/magic/cells/vsclib/an2v0x3  an2v0x3_0
+use an2v0x3  an2v0x3_0
 timestamp 1522932350
 transform 1 0 156 0 1 4
 box -4 -4 60 76
