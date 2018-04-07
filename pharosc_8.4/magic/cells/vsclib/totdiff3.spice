@@ -855,7 +855,7 @@ v_b1 diff2_0_in_b 0 DC 1 PULSE(0 5 0 0 0 40ns 80ns )
 v_b2 diff2_1_in_b 0 DC 1 PULSE(0 5 0 0 0 40ns 80ns )
 v_b3 diff2_2_in_b 0 DC 1 PULSE(0 5 0 0 0 40ns 80ns )
 
-.tran 0.01ns 200ns 
+.tran 0.1ns 200ns 
 
 .control
 run 
