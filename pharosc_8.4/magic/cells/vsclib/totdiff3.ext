@@ -1,5 +1,5 @@
 timestamp 1522793791
-version 8.0
+version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -28,67 +28,67 @@ node "m1_984_n401#" 1 6486 984 -401 m1 0 0 0 0 0 0 0 0 0 0 0 0 138 98 0 0 0 0
 node "m1_722_n401#" 1 6627 722 -401 m1 0 0 0 0 0 0 0 0 0 0 0 0 141 100 0 0 0 0
 node "m1_724_n394#" 10 84365 724 -394 v 0 0 0 0 0 0 0 0 0 0 0 0 1795 1202 16 16 0 0
 node "m1_752_n387#" 12 96402 752 -387 v 0 0 0 0 0 0 0 0 0 0 0 0 1737 1162 870 590 0 0
-cap "m1_752_n387#" "m1_1263_n411#" 405
+cap "m1_1195_n628#" "m1_1009_n514#" 945
 cap "m1_752_n387#" "m2_507_n598#" 18405
-cap "m1_752_n387#" "m1_724_n394#" 810
-cap "m1_1263_n411#" "m2_507_n598#" 405
-cap "m1_1263_n411#" "m1_1245_n432#" 3960
-cap "m1_752_n387#" "m1_722_n401#" 405
-cap "m1_1009_n514#" "m1_884_n612#" 405
-cap "m1_1292_n552#" "m1_752_n387#" 39420
-cap "m1_724_n394#" "m2_507_n598#" 405
-cap "m1_1292_n552#" "m1_1263_n411#" 540
-cap "m1_1009_n514#" "m1_1195_n628#" 945
-cap "m1_752_n387#" "m1_1242_n400#" 405
-cap "m1_1292_n552#" "m1_1245_n432#" 1260
-cap "m1_1292_n552#" "m1_724_n394#" 945
-cap "m1_1009_n514#" "m1_1195_n636#" 405
-cap "m1_1242_n400#" "m2_507_n598#" 405
-cap "m1_724_n394#" "m1_1242_n400#" 405
-cap "m1_622_n613#" "m1_884_n612#" 405
-cap "m1_1292_n552#" "m1_1242_n400#" 540
-cap "m1_884_n612#" "m1_1195_n628#" 945
-cap "m1_749_n514#" "m1_622_n613#" 405
-cap "m1_884_n612#" "m1_1195_n636#" 405
 cap "m1_749_n514#" "m1_884_n612#" 405
-cap "m1_1263_n482#" "m1_1263_n411#" 90
-cap "m1_1195_n628#" "m1_1195_n636#" 945
-cap "diff2_0/in_2c" "diff2_0/xor2v2x2_0/w_n4_32#" 1549
+cap "m1_884_n612#" "m1_1009_n514#" 405
+cap "m2_507_n598#" "m1_1242_n400#" 405
+cap "m1_752_n387#" "m1_1242_n400#" 405
+cap "m1_749_n514#" "m1_622_n613#" 405
+cap "m1_1292_n552#" "m1_1245_n432#" 1260
+cap "m1_1263_n411#" "m1_1245_n432#" 3960
+cap "m1_1195_n636#" "m1_1195_n628#" 945
+cap "m1_1195_n636#" "m1_884_n612#" 405
+cap "m1_1263_n411#" "m1_1292_n552#" 540
+cap "m1_1195_n628#" "m1_884_n612#" 945
+cap "m1_1292_n552#" "m1_724_n394#" 945
+cap "m1_1263_n411#" "m1_1263_n482#" 90
+cap "m1_884_n612#" "m1_622_n613#" 405
+cap "m1_752_n387#" "m1_1292_n552#" 39420
+cap "m1_752_n387#" "m1_722_n401#" 405
+cap "m1_1263_n411#" "m2_507_n598#" 405
+cap "m1_1263_n411#" "m1_752_n387#" 405
+cap "m1_1292_n552#" "m1_1242_n400#" 540
+cap "m2_507_n598#" "m1_724_n394#" 405
+cap "m1_752_n387#" "m1_724_n394#" 810
+cap "m1_1195_n636#" "m1_1009_n514#" 405
+cap "m1_724_n394#" "m1_1242_n400#" 405
+cap "diff2_0/xor2v2x2_0/w_n4_32#" "diff2_0/in_2c" 1549
 cap "diff2_0/in_c" "diff2_0/an2v0x2_2/z" 1080
 cap "diff2_0/xor2v2x2_0/vss" "diff2_0/an2v0x2_2/z" 2329
-cap "diff2_1/an2v0x2_2/w_n4_n4#" "diff2_1/an2v0x2_2/z" 1681
-cap "diff2_1/an2v0x2_2/vss" "diff2_1/an2v0x2_2/z" 1080
+cap "diff2_1/an2v0x2_2/z" "diff2_1/an2v0x2_2/w_n4_n4#" 1681
+cap "diff2_1/an2v0x2_2/z" "diff2_1/an2v0x2_2/vss" 1080
 cap "diff2_0/m1_n4_n91#" "m2_507_n598#" 12420
-cap "m1_665_n587#" "diff2_0/an2v0x2_2/w_n4_32#" 987
-cap "diff2_0/or2v0x3_0/z" "diff2_0/or2v0x3_0/vdd" 2413
-cap "diff2_0/or2v0x3_0/z" "diff2_0/or2v0x3_0/vdd" 360
-cap "diff2_1/xnr2v8x05_0/vss" "diff2_1/xor3v1x2_0/vss" 114
-cap "diff2_0/or2v0x3_0/z" "m1_752_n387#" 405
-cap "diff2_1/xnr2v8x05_0/vss" "diff2_1/xor2v2x2_0/vdd" 405
-cap "diff2_1/xnr2v8x05_0/vss" "m1_752_n387#" 1485
-cap "m1_752_n387#" "diff2_0/or2v0x3_0/vss" 1083
-cap "diff2_0/or2v0x3_0/z" "diff2_1/xnr2v8x05_0/vss" 405
+cap "diff2_0/an2v0x2_2/w_n4_32#" "m1_665_n587#" 987
 cap "diff2_1/xor2v2x2_0/vdd" "m1_752_n387#" 9180
-cap "diff2_1/or2v0x3_0/z" "diff2_2/xnr2v8x05_0/vss" 405
+cap "diff2_1/xnr2v8x05_0/vss" "m1_752_n387#" 1485
+cap "diff2_0/or2v0x3_0/vss" "m1_752_n387#" 1083
+cap "diff2_1/xor2v2x2_0/vdd" "diff2_1/xnr2v8x05_0/vss" 405
+cap "diff2_1/xnr2v8x05_0/vss" "diff2_1/xor3v1x2_0/vss" 114
+cap "diff2_0/or2v0x3_0/z" "diff2_0/or2v0x3_0/vdd" 2413
+cap "diff2_0/or2v0x3_0/vdd" "diff2_0/or2v0x3_0/z" 360
+cap "m1_752_n387#" "diff2_0/or2v0x3_0/z" 405
+cap "diff2_1/xnr2v8x05_0/vss" "diff2_0/or2v0x3_0/z" 405
 cap "diff2_1/or2v0x3_0/z" "diff2_1/or2v0x3_0/vdd" 3639
 cap "diff2_2/xnr2v8x05_0/vss" "diff2_2/xnr2v8x05_0/vss" 114
-cap "diff2_1/or2v0x3_0/z" "diff2_1/or2v0x3_0/vdd" 228
 cap "diff2_2/xnr2v8x05_0/vss" "diff2_2/xor2v2x2_0/vdd" 405
+cap "diff2_1/or2v0x3_0/vdd" "diff2_1/or2v0x3_0/z" 228
+cap "diff2_1/or2v0x3_0/z" "diff2_2/xnr2v8x05_0/vss" 405
+cap "diff2_2/m1_157_n156#" "diff2_2/or2v0x3_0/z" 1260
 cap "diff2_2/or2v0x3_0/z" "diff2_2/or2v0x3_0/vss" 44
-cap "diff2_2/or2v0x3_0/z" "diff2_2/m1_157_n156#" 1260
 cap "mux_0/a1" "diff2_2/or2v0x3_0/vss" 399
 cap "diff2_2/or2v0x3_0/z" "diff2_2/or2v0x3_0/vss" 399
 cap "m2_507_n598#" "diff2_0/m1_n4_n91#" 9990
-cap "diff2_0/m1_6_36#" "diff2_0/iv1v0x3_0/vdd" 270
-cap "diff2_0/iv1v0x3_0/vdd" "diff2_0/m1_6_36#" -30
 cap "diff2_0/iv1v0x3_0/vdd" "diff2_0/iv1v0x3_0/vdd" 282
+cap "diff2_0/iv1v0x3_0/vdd" "diff2_0/m1_6_36#" 270
+cap "diff2_0/m1_6_36#" "diff2_0/iv1v0x3_0/vdd" -30
 cap "diff2_1/m1_6_36#" "diff2_1/iv1v0x3_0/vdd" 156
-cap "diff2_2/iv1v0x3_0/a" "diff2_2/iv1v0x3_0/vdd" 156
+cap "diff2_2/iv1v0x3_0/vdd" "diff2_2/iv1v0x3_0/a" 156
 merge "diff2_2/xor3v1x2_0/vdd" "diff2_1/iv1v0x3_0/vdd" -3666 0 0 0 0 0 0 0 0 0 0 0 0 -72 -57 0 0 0 0
 merge "diff2_1/iv1v0x3_0/vdd" "m1_984_n401#"
 merge "mux_0/a0" "diff2_0/m1_6_36#" -24346 0 0 0 0 0 0 0 0 0 0 0 0 -503 -1008 -3 -8 0 0
 merge "diff2_0/m1_6_36#" "m1_724_n394#"
-merge "mux_0/gnd" "diff2_2/an2v0x2_2/vss" -37506 0 0 0 0 0 0 0 0 0 0 0 0 -798 -256 0 0 0 0
+merge "mux_0/gnd" "diff2_2/an2v0x2_2/vss" -37177 0 0 0 0 0 0 0 0 0 0 0 0 -791 -254 0 0 0 0
 merge "diff2_2/an2v0x2_2/vss" "m1_1195_n628#"
 merge "diff2_1/in_2c" "diff2_0/an2v0x2_2/z" -3597 0 0 0 0 0 0 0 0 0 0 0 0 -10 -14 -12 -14 0 0
 merge "diff2_0/an2v0x2_2/z" "m1_622_n613#"
@@ -104,7 +104,7 @@ merge "diff2_2/iv1v0x3_0/a" "mux_0/a2" -799 0 0 0 0 0 0 0 0 0 0 0 0 -17 -24 0 0 
 merge "mux_0/a2" "m1_1245_n432#"
 merge "diff2_1/xnr2v8x05_0/vss" "diff2_0/or2v0x3_0/vss" -1789 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
 merge "diff2_0/or2v0x3_0/vss" "m1_759_n482#"
-merge "mux_0/b2" "diff2_2/xor2v2x2_0/z" -9116 0 0 0 0 0 0 0 0 0 0 0 0 -46 -82 -427 -503 0 0
+merge "mux_0/b2" "diff2_2/xor2v2x2_0/z" -9572 0 0 0 0 0 0 0 0 0 0 0 0 -46 -82 -427 -503 0 0
 merge "diff2_2/xor2v2x2_0/z" "m1_1195_n636#"
 merge "diff2_2/xnr2v8x05_0/vss" "diff2_1/or2v0x3_0/vss" -1789 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
 merge "diff2_1/or2v0x3_0/vss" "m1_1019_n482#"

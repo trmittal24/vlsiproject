@@ -1,0 +1,42 @@
+timestamp 1523081934
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_28_39#" 322 0 28 39 pdiff 0 0 135 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "z" 252 0 13 6 ndiff 120 46 216 70 0 0 0 0 0 0 0 0 300 148 0 0 0 0
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+node "a_11_39#" 322 0 11 39 pdiff 0 0 135 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "vdd" 604 0 2 39 pdiff 0 0 378 136 0 0 0 0 0 0 0 0 536 160 0 0 0 0
+node "b" 1197 0 16 34 p 0 0 0 0 249 228 0 0 0 0 0 0 113 60 0 0 0 0
+equiv "b" "b"
+node "a" 1374 0 9 27 p 0 0 0 0 288 262 0 0 0 0 0 0 169 88 0 0 0 0
+equiv "a" "a"
+equiv "a" "a"
+node "vss" 327 0 -4 -4 pw 240 92 90 42 0 0 0 0 0 0 0 0 494 146 0 0 0 0
+node "w_n4_32#" 3189 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2464 200
+cap "w_n4_32#" "b" 9428
+cap "z" "a_11_39#" 705
+cap "vss" "b" 6121
+cap "w_n4_32#" "a" 6196
+cap "vdd" "b" 1232
+cap "vss" "a" 15662
+cap "vdd" "a" 480
+cap "w_n4_32#" "z" 2538
+cap "vss" "z" 5452
+cap "vdd" "a_11_39#" 470
+cap "b" "a" 630
+cap "vdd" "z" 1739
+cap "vdd" "a_28_39#" 470
+cap "b" "z" 60
+cap "w_n4_32#" "vdd" 15040
+cap "a" "z" 60
+device mosfet nfet 21 6 22 7 2 15 "vss" "b" 4 0 "z" 15 0 "vss" 15 0
+device mosfet nfet 11 6 12 7 2 15 "vss" "a" 4 0 "vss" 15 0 "z" 15 0
+device mosfet pfet 33 39 34 40 2 27 "w_n4_32#" "a" 4 0 "a_28_39#" 27 0 "vdd" 27 0
+device mosfet pfet 26 39 27 40 2 27 "w_n4_32#" "b" 4 0 "z" 27 0 "a_28_39#" 27 0
+device mosfet pfet 16 39 17 40 2 27 "w_n4_32#" "b" 4 0 "a_11_39#" 27 0 "z" 27 0
+device mosfet pfet 9 39 10 40 2 27 "w_n4_32#" "a" 4 0 "vdd" 27 0 "a_11_39#" 27 0
