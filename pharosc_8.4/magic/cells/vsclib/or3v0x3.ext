@@ -1,0 +1,65 @@
+timestamp 1179387237
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_64_38#" 333 0 64 38 pdiff 0 0 140 66 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_57_38#" 333 0 57 38 pdiff 0 0 140 66 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_40_38#" 333 0 40 38 pdiff 0 0 140 66 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_33_38#" 333 0 33 38 pdiff 0 0 140 66 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "z" 263 0 2 13 ndiff 126 54 162 58 0 0 0 0 0 0 0 0 209 108 0 0 0 0
+equiv "z" "z"
+node "zn" 1345 0 9 2 p 142 70 224 72 236 200 0 0 0 0 0 0 464 240 0 0 0 0
+equiv "zn" "zn"
+equiv "zn" "zn"
+equiv "zn" "zn"
+node "c" 1244 0 45 33 p 0 0 0 0 240 228 0 0 0 0 0 0 56 36 0 0 0 0
+equiv "c" "c"
+node "b" 1326 0 38 21 p 0 0 0 0 298 262 0 0 0 0 0 0 152 84 0 0 0 0
+equiv "b" "b"
+equiv "b" "b"
+equiv "b" "b"
+node "a" 1290 0 28 29 p 0 0 0 0 270 246 0 0 0 0 0 0 336 160 0 0 0 0
+equiv "a" "a"
+equiv "a" "a"
+equiv "a" "a"
+equiv "a" "a"
+equiv "a" "a"
+node "vss" 377 0 -4 -4 pw 485 128 126 54 0 0 0 0 0 0 0 0 744 220 0 0 0 0
+node "vdd" 5915 0 -4 32 nw 60 32 595 198 0 0 0 0 0 0 0 0 894 266 0 0 3872 264
+cap "zn" "a_40_38#" 940
+cap "b" "vdd" 6200
+cap "a" "b" 240
+cap "z" "vdd" 2820
+cap "vss" "b" 16832
+cap "a" "vdd" 13801
+cap "a_57_38#" "vdd" 470
+cap "c" "b" 360
+cap "c" "vdd" 8106
+cap "zn" "vdd" 13446
+cap "vss" "z" 1598
+cap "a_33_38#" "vdd" 470
+cap "a_57_38#" "a" 2632
+cap "vss" "a" 8128
+cap "vdd" "a_40_38#" 470
+cap "vss" "c" 6748
+cap "a" "zn" 1744
+cap "a_64_38#" "vdd" 470
+cap "vss" "zn" 12214
+cap "a_33_38#" "a" 940
+cap "a" "a_40_38#" 940
+cap "a_33_38#" "zn" 940
+cap "a_64_38#" "a" 940
+device mosfet nfet 52 8 53 9 2 10 "vss" "c" 4 0 "vss" 10 0 "zn" 10 0
+device mosfet nfet 39 8 40 9 2 10 "vss" "b" 4 0 "zn" 10 0 "vss" 10 0
+device mosfet nfet 29 8 30 9 2 10 "vss" "a" 4 0 "vss" 10 0 "zn" 10 0
+device mosfet nfet 9 6 10 7 2 20 "vss" "zn" 4 0 "z" 20 0 "vss" 20 0
+device mosfet pfet 69 38 70 39 2 28 "vdd" "a" 4 0 "a_64_38#" 28 0 "vdd" 28 0
+device mosfet pfet 62 38 63 39 2 28 "vdd" "b" 4 0 "a_57_38#" 28 0 "a_64_38#" 28 0
+device mosfet pfet 55 38 56 39 2 28 "vdd" "c" 4 0 "zn" 28 0 "a_57_38#" 28 0
+device mosfet pfet 45 38 46 39 2 28 "vdd" "c" 4 0 "a_40_38#" 28 0 "zn" 28 0
+device mosfet pfet 38 38 39 39 2 28 "vdd" "b" 4 0 "a_33_38#" 28 0 "a_40_38#" 28 0
+device mosfet pfet 31 38 32 39 2 28 "vdd" "a" 4 0 "vdd" 28 0 "a_33_38#" 28 0
+device mosfet pfet 19 38 20 39 2 21 "vdd" "zn" 4 0 "z" 21 0 "vdd" 21 0
+device mosfet pfet 9 38 10 39 2 19 "vdd" "zn" 4 0 "vdd" 19 0 "z" 19 0
