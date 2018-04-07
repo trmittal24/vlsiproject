@@ -1,4 +1,40 @@
 | units: 100 tech: scmos format: MIT
+p mux_0/mxn2v0x1_2/zn mux_0/o2 mux_0/vdd 2 18 1340 -581
+p mux_0/a2 mux_0/vdd mux_0/mxn2v0x1_2/a_21_50# 2 16 1350 -579
+p mux_0/s mux_0/mxn2v0x1_2/a_21_50# mux_0/mxn2v0x1_2/zn 2 16 1357 -579
+p mux_0/mxn2v0x1_2/sn mux_0/mxn2v0x1_2/zn mux_0/mxn2v0x1_2/a_38_50# 2 16 1367 -579
+p mux_0/b2 mux_0/mxn2v0x1_2/a_38_50# mux_0/vdd 2 16 1374 -579
+p mux_0/s mux_0/vdd mux_0/mxn2v0x1_2/sn 2 8 1384 -591
+n mux_0/mxn2v0x1_2/zn mux_0/o2 mux_0/gnd 2 9 1340 -617
+n mux_0/a2 mux_0/gnd mux_0/mxn2v0x1_2/a_21_12# 2 8 1350 -617
+n mux_0/mxn2v0x1_2/sn mux_0/mxn2v0x1_2/a_21_12# mux_0/mxn2v0x1_2/zn 2 8 1357 -617
+n mux_0/s mux_0/mxn2v0x1_2/zn mux_0/mxn2v0x1_2/a_38_12# 2 8 1367 -617
+n mux_0/b2 mux_0/mxn2v0x1_2/a_38_12# mux_0/gnd 2 8 1374 -617
+n mux_0/s mux_0/gnd mux_0/mxn2v0x1_2/sn 2 6 1384 -615
+p mux_0/mxn2v0x1_1/zn mux_0/o1 mux_0/vdd 2 18 1385 -526
+p mux_0/a1 mux_0/vdd mux_0/mxn2v0x1_1/a_21_50# 2 16 1375 -528
+p mux_0/s mux_0/mxn2v0x1_1/a_21_50# mux_0/mxn2v0x1_1/zn 2 16 1368 -528
+p mux_0/mxn2v0x1_1/sn mux_0/mxn2v0x1_1/zn mux_0/mxn2v0x1_1/a_38_50# 2 16 1358 -528
+p mux_0/b1 mux_0/mxn2v0x1_1/a_38_50# mux_0/vdd 2 16 1351 -528
+p mux_0/s mux_0/vdd mux_0/mxn2v0x1_1/sn 2 8 1341 -516
+n mux_0/mxn2v0x1_1/zn mux_0/o1 mux_0/gnd 2 9 1385 -490
+n mux_0/a1 mux_0/gnd mux_0/mxn2v0x1_1/a_21_12# 2 8 1375 -490
+n mux_0/mxn2v0x1_1/sn mux_0/mxn2v0x1_1/a_21_12# mux_0/mxn2v0x1_1/zn 2 8 1368 -490
+n mux_0/s mux_0/mxn2v0x1_1/zn mux_0/mxn2v0x1_1/a_38_12# 2 8 1358 -490
+n mux_0/b1 mux_0/mxn2v0x1_1/a_38_12# mux_0/gnd 2 8 1351 -490
+n mux_0/s mux_0/gnd mux_0/mxn2v0x1_1/sn 2 6 1341 -492
+p mux_0/mxn2v0x1_0/zn mux_0/o0 mux_0/vdd 2 18 1340 -421
+p mux_0/a0 mux_0/vdd mux_0/mxn2v0x1_0/a_21_50# 2 16 1350 -419
+p mux_0/s mux_0/mxn2v0x1_0/a_21_50# mux_0/mxn2v0x1_0/zn 2 16 1357 -419
+p mux_0/mxn2v0x1_0/sn mux_0/mxn2v0x1_0/zn mux_0/mxn2v0x1_0/a_38_50# 2 16 1367 -419
+p mux_0/b0 mux_0/mxn2v0x1_0/a_38_50# mux_0/vdd 2 16 1374 -419
+p mux_0/s mux_0/vdd mux_0/mxn2v0x1_0/sn 2 8 1384 -431
+n mux_0/mxn2v0x1_0/zn mux_0/o0 mux_0/gnd 2 9 1340 -457
+n mux_0/a0 mux_0/gnd mux_0/mxn2v0x1_0/a_21_12# 2 8 1350 -457
+n mux_0/mxn2v0x1_0/sn mux_0/mxn2v0x1_0/a_21_12# mux_0/mxn2v0x1_0/zn 2 8 1357 -457
+n mux_0/s mux_0/mxn2v0x1_0/zn mux_0/mxn2v0x1_0/a_38_12# 2 8 1367 -457
+n mux_0/b0 mux_0/mxn2v0x1_0/a_38_12# mux_0/gnd 2 8 1374 -457
+n mux_0/s mux_0/gnd mux_0/mxn2v0x1_0/sn 2 6 1384 -455
 p diff2_2/an2v0x2_2/zn diff2_2/an2v0x2_2/z mux_0/vdd 2 28 1156 -591
 p diff2_2/an2v0x2_2/a mux_0/vdd diff2_2/an2v0x2_2/zn 2 19 1166 -582
 p diff2_2/in_2c diff2_2/an2v0x2_2/zn mux_0/vdd 2 19 1176 -582
@@ -260,307 +296,234 @@ n diff2_0/xor3v1x2_0/bn diff2_0/xor3v1x2_0/a_115_7# diff2_0/xor3v1x2_0/iz 2 13 6
 n diff2_0/in_b diff2_0/xor3v1x2_0/iz diff2_0/an2v0x2_1/a 2 13 645 -462
 n diff2_0/in_a diff2_0/an2v0x2_1/a mux_0/gnd 2 13 655 -457
 n diff2_0/in_b mux_0/gnd diff2_0/xor3v1x2_0/bn 2 11 668 -454
-p mux_0/mxn2v0x1_2/zn mux_0/o2 mux_0/vdd 2 18 964 -310
-p mux_0/a2 mux_0/vdd mux_0/mxn2v0x1_2/a_21_50# 2 16 962 -300
-p mux_0/s mux_0/mxn2v0x1_2/a_21_50# mux_0/mxn2v0x1_2/zn 2 16 962 -293
-p mux_0/mxn2v0x1_2/sn mux_0/mxn2v0x1_2/zn mux_0/mxn2v0x1_2/a_38_50# 2 16 962 -283
-p mux_0/b2 mux_0/mxn2v0x1_2/a_38_50# mux_0/vdd 2 16 962 -276
-p mux_0/s mux_0/vdd mux_0/mxn2v0x1_2/sn 2 8 974 -266
-n mux_0/mxn2v0x1_2/zn mux_0/o2 mux_0/gnd 2 9 1000 -310
-n mux_0/a2 mux_0/gnd mux_0/mxn2v0x1_2/a_21_12# 2 8 1000 -300
-n mux_0/mxn2v0x1_2/sn mux_0/mxn2v0x1_2/a_21_12# mux_0/mxn2v0x1_2/zn 2 8 1000 -293
-n mux_0/s mux_0/mxn2v0x1_2/zn mux_0/mxn2v0x1_2/a_38_12# 2 8 1000 -283
-n mux_0/b2 mux_0/mxn2v0x1_2/a_38_12# mux_0/gnd 2 8 1000 -276
-n mux_0/s mux_0/gnd mux_0/mxn2v0x1_2/sn 2 6 998 -266
-p mux_0/mxn2v0x1_1/zn mux_0/o1 mux_0/vdd 2 18 909 -265
-p mux_0/a1 mux_0/vdd mux_0/mxn2v0x1_1/a_21_50# 2 16 911 -275
-p mux_0/s mux_0/mxn2v0x1_1/a_21_50# mux_0/mxn2v0x1_1/zn 2 16 911 -282
-p mux_0/mxn2v0x1_1/sn mux_0/mxn2v0x1_1/zn mux_0/mxn2v0x1_1/a_38_50# 2 16 911 -292
-p mux_0/b1 mux_0/mxn2v0x1_1/a_38_50# mux_0/vdd 2 16 911 -299
-p mux_0/s mux_0/vdd mux_0/mxn2v0x1_1/sn 2 8 899 -309
-n mux_0/mxn2v0x1_1/zn mux_0/o1 mux_0/gnd 2 9 873 -265
-n mux_0/a1 mux_0/gnd mux_0/mxn2v0x1_1/a_21_12# 2 8 873 -275
-n mux_0/mxn2v0x1_1/sn mux_0/mxn2v0x1_1/a_21_12# mux_0/mxn2v0x1_1/zn 2 8 873 -282
-n mux_0/s mux_0/mxn2v0x1_1/zn mux_0/mxn2v0x1_1/a_38_12# 2 8 873 -292
-n mux_0/b1 mux_0/mxn2v0x1_1/a_38_12# mux_0/gnd 2 8 873 -299
-n mux_0/s mux_0/gnd mux_0/mxn2v0x1_1/sn 2 6 875 -309
-p mux_0/mxn2v0x1_0/zn mux_0/o0 mux_0/vdd 2 18 804 -310
-p mux_0/a0 mux_0/vdd mux_0/mxn2v0x1_0/a_21_50# 2 16 802 -300
-p mux_0/s mux_0/mxn2v0x1_0/a_21_50# mux_0/mxn2v0x1_0/zn 2 16 802 -293
-p mux_0/mxn2v0x1_0/sn mux_0/mxn2v0x1_0/zn mux_0/mxn2v0x1_0/a_38_50# 2 16 802 -283
-p mux_0/b0 mux_0/mxn2v0x1_0/a_38_50# mux_0/vdd 2 16 802 -276
-p mux_0/s mux_0/vdd mux_0/mxn2v0x1_0/sn 2 8 814 -266
-n mux_0/mxn2v0x1_0/zn mux_0/o0 mux_0/gnd 2 9 840 -310
-n mux_0/a0 mux_0/gnd mux_0/mxn2v0x1_0/a_21_12# 2 8 840 -300
-n mux_0/mxn2v0x1_0/sn mux_0/mxn2v0x1_0/a_21_12# mux_0/mxn2v0x1_0/zn 2 8 840 -293
-n mux_0/s mux_0/mxn2v0x1_0/zn mux_0/mxn2v0x1_0/a_38_12# 2 8 840 -283
-n mux_0/b0 mux_0/mxn2v0x1_0/a_38_12# mux_0/gnd 2 8 840 -276
-n mux_0/s mux_0/gnd mux_0/mxn2v0x1_0/sn 2 6 838 -266
-C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/s 30.3
-C mux_0/gnd diff2_0/in_a 26.8
-C diff2_2/an2v0x2_2/zn mux_0/gnd 8.9
-C mux_0/gnd diff2_1/an2v0x2_1/a 19.1
-C diff2_2/xor2v2x2_0/bn mux_0/b2 2.7
-C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_1/zn 8.9
-C mux_0/gnd diff2_0/xor2v2x2_0/an 21.6
-C mux_0/mxn2v0x1_0/w_n4_32# mux_0/a0 11.6
-C diff2_1/in_2c mux_0/vdd 34.0
-C diff2_2/in_c mux_0/gnd 33.4
-C mux_0/a0 mux_0/mxn2v0x1_0/w_n4_n4# 4.8
-C mux_0/vdd diff2_0/an2v0x2_2/zn 10.3
-C mux_0/gnd diff2_1/xor3v1x2_0/cn 18.8
-C mux_0/vdd mux_0/gnd 45.8
-C diff2_1/xor3v1x2_0/bn mux_0/vdd 15.4
-C mux_0/a0 mux_0/o0 2.3
-C diff2_2/xor3v1x2_0/cn mux_0/gnd 18.8
-C diff2_2/xnr2v8x05_0/an mux_0/gnd 5.5
-C diff2_2/an2v0x2_2/z mux_0/vdd 2.4
-C mux_0/gnd diff2_1/in_a 26.6
-C mux_0/vdd diff2_0/an2v0x2_0/b 20.5
-C diff2_1/an2v0x2_0/zn mux_0/vdd 8.8
-C mux_0/gnd diff2_0/in_b 56.4
-C diff2_1/an2v0x2_0/zn diff2_1/in_a 2.2
-C diff2_2/an2v0x2_1/a mux_0/vdd 12.4
-C mux_0/vdd diff2_1/xnr2v8x05_0/an 9.9
-C diff2_1/an2v0x2_2/zn mux_0/gnd 8.9
-C mux_0/mxn2v0x1_0/w_n4_32# mux_0/b0 6.6
-C mux_0/vdd diff2_0/xor3v1x2_0/zn 18.9
-C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/s 15.2
-C mux_0/gnd diff2_1/xor2v2x2_0/bn 11.2
-C mux_0/b0 mux_0/mxn2v0x1_0/w_n4_n4# 8.7
-C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_1/sn 9.2
-C diff2_1/an2v0x2_2/a diff2_1/xor3v1x2_0/cn 2.3
-C mux_0/o1 mux_0/mxn2v0x1_1/w_n4_32# 5.0
-C diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/cn 4.5
-C diff2_1/an2v0x2_2/a mux_0/vdd 59.6
-C diff2_2/in_b diff2_2/xor3v1x2_0/zn 4.3
-C diff2_1/xor3v1x2_0/zn mux_0/vdd 18.9
-C diff2_2/xor2v2x2_0/an mux_0/gnd 21.6
-C diff2_0/xor3v1x2_0/zn diff2_0/in_b 4.3
-C mux_0/vdd diff2_0/xnr2v8x05_0/an 9.9
-C mux_0/gnd diff2_0/xor3v1x2_0/cn 19.1
-C mux_0/gnd diff2_0/an2v0x2_1/z 10.2
-C mux_0/vdd diff2_2/an2v0x2_2/a 59.6
-C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/a1 4.8
-C diff2_2/an2v0x2_2/a diff2_2/xor3v1x2_0/cn 2.3
-C mux_0/mxn2v0x1_0/w_n4_32# mux_0/o0 5.2
-C mux_0/vdd diff2_2/xor3v1x2_0/iz 15.8
-C diff2_0/xor3v1x2_0/iz diff2_0/xor3v1x2_0/bn 2.4
-C mux_0/gnd diff2_1/xor2v2x2_0/an 21.6
-C diff2_2/an2v0x2_1/zn mux_0/gnd 8.9
-C mux_0/o0 mux_0/mxn2v0x1_0/w_n4_n4# 2.3
-C diff2_2/xor2v2x2_0/bn mux_0/vdd 17.7
-C diff2_2/in_b mux_0/vdd 50.3
-C mux_0/vdd mux_0/s 7.9
-C mux_0/b0 diff2_0/xor2v2x2_0/bn 2.7
-C diff2_0/or2v0x3_0/zn mux_0/gnd 9.0
-C diff2_1/an2v0x2_0/b mux_0/gnd 5.9
-C mux_0/gnd diff2_0/an2v0x2_1/a 19.1
-C diff2_2/an2v0x2_1/z mux_0/gnd 10.2
-C diff2_2/an2v0x2_0/zn mux_0/vdd 8.8
-C diff2_0/xor3v1x2_0/cn diff2_0/xor3v1x2_0/zn 4.5
-C diff2_1/xor3v1x2_0/bn diff2_1/in_b 2.6
-C diff2_1/in_b mux_0/gnd 56.1
-C diff2_2/an2v0x2_0/b mux_0/vdd 20.5
-C mux_0/a2 mux_0/mxn2v0x1_2/w_n4_n4# 4.8
-C mux_0/vdd mux_0/a0 35.5
-C diff2_2/in_a mux_0/vdd 24.6
-C mux_0/vdd diff2_0/xnr2v8x05_0/bn 14.4
-C diff2_2/in_2c mux_0/gnd 16.8
-C diff2_1/an2v0x2_0/z mux_0/gnd 12.8
-C diff2_0/an2v0x2_0/zn diff2_0/in_a 2.2
-C mux_0/vdd diff2_1/xnr2v8x05_0/bn 14.4
-C diff2_1/in_c mux_0/vdd 39.6
-C diff2_2/xor3v1x2_0/zn mux_0/a2 4.6
-C mux_0/vdd diff2_1/an2v0x2_1/z 17.7
-C diff2_1/or2v0x3_0/zn mux_0/vdd 12.7
-C mux_0/mxn2v0x1_2/sn mux_0/mxn2v0x1_2/w_n4_n4# 9.2
-C diff2_2/xnr2v8x05_0/bn mux_0/vdd 14.4
-C diff2_2/xor2v2x2_0/bn diff2_2/xor2v2x2_0/an 3.3
-C mux_0/b0 diff2_0/xor2v2x2_0/an 3.9
-C diff2_1/in_2c mux_0/gnd 17.5
-C diff2_1/xnr2v8x05_0/zn mux_0/vdd 4.4
-C diff2_0/an2v0x2_0/zn mux_0/vdd 8.8
-C mux_0/vdd diff2_2/xor3v1x2_0/bn 15.4
-C diff2_0/an2v0x2_2/zn mux_0/gnd 8.9
-C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/b2 8.7
-C mux_0/vdd diff2_0/xor3v1x2_0/iz 15.8
-C diff2_1/xor3v1x2_0/bn mux_0/gnd 9.1
-C diff2_1/xor3v1x2_0/zn diff2_1/in_b 4.3
-C mux_0/vdd diff2_1/xor3v1x2_0/iz 15.8
-C mux_0/vdd mux_0/b0 26.2
-C diff2_2/an2v0x2_2/z mux_0/gnd 2.5
-C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/b1 10.2
-C mux_0/vdd diff2_0/xnr2v8x05_0/zn 4.4
-C mux_0/mxn2v0x1_1/w_n4_32# mux_0/s 36.4
-C mux_0/gnd diff2_0/an2v0x2_0/b 7.3
-C diff2_1/an2v0x2_0/zn mux_0/gnd 8.9
-C mux_0/vdd mux_0/a2 36.6
-C diff2_2/xor3v1x2_0/cn mux_0/a2 4.1
-C mux_0/o2 mux_0/mxn2v0x1_2/w_n4_n4# 2.3
-C mux_0/vdd diff2_0/an2v0x2_1/zn 8.8
-C mux_0/mxn2v0x1_1/w_n4_32# mux_0/mxn2v0x1_1/zn 9.3
-C diff2_2/an2v0x2_0/z mux_0/vdd 24.6
-C diff2_2/an2v0x2_1/a mux_0/gnd 19.1
-C mux_0/vdd diff2_1/an2v0x2_1/zn 8.8
-C mux_0/gnd diff2_1/xnr2v8x05_0/an 5.5
-C diff2_0/xor3v1x2_0/cn mux_0/a0 4.1
-C mux_0/mxn2v0x1_2/zn mux_0/b2 2.7
-C mux_0/vdd mux_0/mxn2v0x1_0/w_n4_32# 21.1
-C mux_0/gnd diff2_0/xor3v1x2_0/zn 13.9
-C diff2_1/xor3v1x2_0/cn mux_0/a1 4.1
-C mux_0/vdd mux_0/a1 38.3
-C diff2_0/an2v0x2_2/a mux_0/vdd 61.1
-C diff2_1/an2v0x2_2/a mux_0/gnd 25.3
-C diff2_1/xor3v1x2_0/zn mux_0/gnd 11.9
-C mux_0/vdd mux_0/b2 13.6
-C mux_0/gnd diff2_0/xnr2v8x05_0/an 6.8
-C diff2_2/an2v0x2_2/a mux_0/gnd 25.3
-C diff2_2/in_c diff2_2/xnr2v8x05_0/zn 3.1
-C diff2_2/or2v0x3_0/zn mux_0/vdd 12.7
-C mux_0/vdd diff2_0/an2v0x2_0/z 24.6
-C diff2_2/xor3v1x2_0/iz mux_0/gnd 24.9
-C mux_0/mxn2v0x1_1/sn mux_0/mxn2v0x1_1/w_n4_32# 9.3
-C diff2_0/xor2v2x2_0/bn diff2_0/xor2v2x2_0/an 3.3
-C diff2_2/xnr2v8x05_0/zn mux_0/vdd 4.4
-C mux_0/mxn2v0x1_2/zn mux_0/mxn2v0x1_2/w_n4_n4# 8.9
-C mux_0/a2 mux_0/mxn2v0x1_1/w_n4_32# 11.6
-C diff2_2/xor2v2x2_0/bn mux_0/gnd 11.2
-C mux_0/vdd diff2_0/xor3v1x2_0/bn 15.4
-C diff2_2/in_b mux_0/gnd 56.1
-C mux_0/gnd mux_0/s 8.3
-C mux_0/vdd diff2_0/xor2v2x2_0/bn 18.7
-C diff2_2/xor2v2x2_0/an mux_0/b2 3.9
-C diff2_2/an2v0x2_0/zn mux_0/gnd 8.9
-C diff2_2/an2v0x2_0/b mux_0/gnd 5.9
-C mux_0/gnd mux_0/a0 14.9
-C diff2_2/in_a mux_0/gnd 26.6
-C mux_0/mxn2v0x1_2/sn mux_0/mxn2v0x1_1/w_n4_32# 9.3
-C mux_0/gnd diff2_0/xnr2v8x05_0/bn 7.5
-C mux_0/mxn2v0x1_1/w_n4_32# mux_0/a1 13.4
-C diff2_0/xor3v1x2_0/bn diff2_0/in_b 2.6
-C diff2_0/an2v0x2_2/a diff2_0/xor3v1x2_0/cn 2.3
-C diff2_2/an2v0x2_1/a diff2_2/in_b 2.0
-C mux_0/vdd diff2_2/xor3v1x2_0/zn 18.9
-C mux_0/gnd diff2_1/xnr2v8x05_0/bn 6.7
-C diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/cn 4.5
-C diff2_1/in_c mux_0/gnd 33.4
-C mux_0/b2 mux_0/mxn2v0x1_1/w_n4_32# 6.6
-C mux_0/gnd diff2_1/an2v0x2_1/z 10.2
-C diff2_1/or2v0x3_0/zn mux_0/gnd 9.0
-C mux_0/vdd mux_0/b1 13.2
-C diff2_2/an2v0x2_2/zn mux_0/vdd 8.8
-C mux_0/vdd diff2_0/in_a 24.6
-C diff2_2/xnr2v8x05_0/bn mux_0/gnd 6.7
-C mux_0/vdd diff2_1/an2v0x2_1/a 12.4
-C mux_0/vdd diff2_0/xor2v2x2_0/an 27.4
-C diff2_1/xnr2v8x05_0/zn mux_0/gnd 11.9
-C diff2_0/an2v0x2_0/zn mux_0/gnd 10.8
-C diff2_2/xor3v1x2_0/bn mux_0/gnd 9.1
-C diff2_0/xor3v1x2_0/zn mux_0/a0 4.6
-C mux_0/o2 mux_0/mxn2v0x1_1/w_n4_32# 6.3
-C mux_0/gnd diff2_0/xor3v1x2_0/iz 25.5
-C diff2_2/in_c mux_0/vdd 40.7
-C diff2_1/xor3v1x2_0/bn diff2_1/xor3v1x2_0/iz 2.4
-C mux_0/gnd diff2_1/xor3v1x2_0/iz 24.9
-C mux_0/b0 mux_0/mxn2v0x1_0/zn 2.7
-C mux_0/gnd mux_0/b0 10.9
-C mux_0/vdd diff2_1/xor3v1x2_0/cn 31.6
-C mux_0/vdd diff2_2/xor3v1x2_0/cn 31.6
-C diff2_0/xnr2v8x05_0/zn mux_0/gnd 15.0
-C diff2_1/xor2v2x2_0/bn mux_0/b1 2.7
-C mux_0/gnd mux_0/a2 14.9
-C mux_0/o1 mux_0/mxn2v0x1_0/w_n4_n4# 2.3
-C diff2_2/xnr2v8x05_0/an mux_0/vdd 9.9
-C diff2_0/an2v0x2_1/zn mux_0/gnd 8.9
-C mux_0/vdd diff2_1/in_a 24.6
-C diff2_2/an2v0x2_0/z mux_0/gnd 12.8
-C diff2_1/an2v0x2_1/zn mux_0/gnd 8.9
-C mux_0/vdd diff2_0/in_b 50.3
-C mux_0/mxn2v0x1_0/w_n4_32# mux_0/mxn2v0x1_0/zn 9.3
-C diff2_1/an2v0x2_2/zn mux_0/vdd 8.8
-C mux_0/gnd mux_0/a1 14.9
-C mux_0/gnd mux_0/mxn2v0x1_0/w_n4_n4# 76.0
-C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_0/zn 8.9
-C diff2_0/an2v0x2_2/a mux_0/gnd 25.3
-C mux_0/vdd diff2_1/xor2v2x2_0/bn 17.7
-C mux_0/mxn2v0x1_1/w_n4_32# mux_0/b1 6.6
-C mux_0/gnd mux_0/b2 15.7
-C diff2_2/xor2v2x2_0/an mux_0/vdd 25.5
-C diff2_1/xor2v2x2_0/an mux_0/b1 3.9
-C diff2_2/an2v0x2_0/zn diff2_2/in_a 2.2
-C mux_0/mxn2v0x1_2/zn mux_0/mxn2v0x1_1/w_n4_32# 9.3
-C diff2_2/xor3v1x2_0/iz diff2_2/xor3v1x2_0/bn 2.4
-C diff2_2/or2v0x3_0/zn mux_0/gnd 9.0
-C mux_0/vdd diff2_0/xor3v1x2_0/cn 31.6
-C mux_0/mxn2v0x1_0/w_n4_32# mux_0/mxn2v0x1_0/sn 9.3
-C mux_0/vdd diff2_0/an2v0x2_1/z 17.7
 C mux_0/gnd diff2_0/an2v0x2_0/z 12.8
-C diff2_2/xnr2v8x05_0/zn mux_0/gnd 11.9
-C mux_0/vdd mux_0/mxn2v0x1_1/w_n4_32# 59.4
-C diff2_2/in_b diff2_2/xor3v1x2_0/bn 2.6
-C diff2_1/xor3v1x2_0/zn mux_0/a1 4.6
+C mux_0/vdd diff2_2/xor2v2x2_0/an 25.5
+C mux_0/gnd diff2_1/in_a 26.6
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/a0 4.8
+C mux_0/vdd diff2_0/an2v0x2_1/zn 8.8
+C mux_0/gnd diff2_1/xor3v1x2_0/cn 18.8
+C diff2_2/in_2c mux_0/gnd 17.8
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/o1 2.3
+C mux_0/gnd diff2_0/in_a 26.8
+C mux_0/vdd diff2_1/an2v0x2_1/z 17.7
+C mux_0/gnd mux_0/a1 15.3
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/gnd 25.5
+C mux_0/gnd diff2_1/xnr2v8x05_0/bn 6.7
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/mxn2v0x1_1/zn 9.3
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/a1 4.8
+C mux_0/gnd diff2_0/an2v0x2_0/b 7.3
+C mux_0/b2 mux_0/vdd 3.1
+C mux_0/vdd diff2_0/xor3v1x2_0/iz 15.8
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/mxn2v0x1_2/sn 9.2
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/b2 6.6
+C mux_0/vdd diff2_1/xnr2v8x05_0/zn 4.4
+C mux_0/vdd diff2_2/or2v0x3_0/zn 12.7
+C mux_0/gnd mux_0/s 8.3
+C diff2_0/an2v0x2_2/a diff2_0/xor3v1x2_0/cn 2.3
+C mux_0/gnd diff2_2/in_c 34.4
+C mux_0/gnd diff2_1/in_b 56.1
+C diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/cn 4.5
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/s 30.3
+C mux_0/gnd diff2_2/an2v0x2_2/a 25.3
+C mux_0/gnd diff2_2/xnr2v8x05_0/an 5.5
+C diff2_2/xnr2v8x05_0/zn diff2_2/in_c 3.1
+C mux_0/gnd diff2_2/an2v0x2_1/a 19.1
+C mux_0/gnd diff2_0/xor3v1x2_0/cn 19.1
+C mux_0/gnd diff2_2/an2v0x2_0/b 5.9
+C mux_0/vdd diff2_1/an2v0x2_0/zn 8.8
+C diff2_1/xor2v2x2_0/an diff2_1/xor2v2x2_0/bn 3.3
+C diff2_2/an2v0x2_1/a diff2_2/in_b 2.0
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/b2 8.7
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/o2 6.3
+C mux_0/gnd diff2_0/xnr2v8x05_0/bn 7.5
+C mux_0/mxn2v0x1_0/sn mux_0/o0 4.3
+C mux_0/mxn2v0x1_0/w_n4_32# mux_0/mxn2v0x1_0/zn 9.3
 C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_0/sn 9.2
-C mux_0/gnd diff2_0/xor3v1x2_0/bn 9.1
+C mux_0/vdd diff2_0/xnr2v8x05_0/zn 4.4
+C mux_0/gnd diff2_2/an2v0x2_2/z 2.5
+C mux_0/vdd diff2_2/xor3v1x2_0/bn 15.4
+C mux_0/a2 diff2_2/xor3v1x2_0/zn 4.6
+C mux_0/mxn2v0x1_0/w_n4_32# mux_0/vdd 20.7
+C mux_0/gnd diff2_0/in_b 56.4
+C mux_0/vdd diff2_1/or2v0x3_0/zn 12.7
+C mux_0/vdd diff2_2/xor3v1x2_0/zn 18.9
+C mux_0/gnd diff2_1/an2v0x2_2/a 25.3
+C mux_0/vdd diff2_1/xor3v1x2_0/bn 15.4
+C diff2_2/an2v0x2_2/zn mux_0/vdd 8.8
+C diff2_1/an2v0x2_0/zn diff2_1/in_a 2.2
+C mux_0/gnd diff2_1/xnr2v8x05_0/an 5.5
+C diff2_2/an2v0x2_0/zn diff2_2/in_a 2.2
+C mux_0/b1 diff2_1/xor2v2x2_0/an 3.9
+C mux_0/mxn2v0x1_2/zn mux_0/b2 2.7
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/o2 2.3
+C mux_0/gnd diff2_0/or2v0x3_0/zn 9.0
+C mux_0/gnd diff2_0/xnr2v8x05_0/an 6.8
 C mux_0/vdd diff2_1/xor2v2x2_0/an 25.5
-C diff2_1/in_b diff2_1/an2v0x2_1/a 2.0
-C diff2_2/an2v0x2_1/zn mux_0/vdd 8.8
-C mux_0/o0 mux_0/mxn2v0x1_0/sn 4.3
-C mux_0/gnd diff2_0/xor2v2x2_0/bn 11.2
-C mux_0/vdd diff2_0/or2v0x3_0/zn 12.7
-C diff2_1/an2v0x2_0/b mux_0/vdd 20.5
-C mux_0/gnd mux_0/mxn2v0x1_2/w_n4_n4# 25.5
-C mux_0/vdd diff2_0/an2v0x2_1/a 12.4
-C diff2_2/an2v0x2_1/z mux_0/vdd 17.7
-C diff2_1/in_c diff2_1/xnr2v8x05_0/zn 3.1
-C diff2_1/in_b mux_0/vdd 50.3
-C diff2_2/xor3v1x2_0/zn mux_0/gnd 11.9
-C diff2_2/in_2c mux_0/vdd 33.2
+C mux_0/gnd diff2_2/xor2v2x2_0/bn 11.2
+C mux_0/vdd diff2_0/an2v0x2_0/zn 8.8
+C mux_0/vdd diff2_2/an2v0x2_1/z 17.7
+C mux_0/gnd mux_0/b0 10.9
+C mux_0/mxn2v0x1_0/w_n4_32# mux_0/a0 11.6
+C mux_0/gnd diff2_2/xor3v1x2_0/iz 24.9
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/b0 8.7
+C mux_0/vdd diff2_2/in_a 24.6
+C mux_0/gnd diff2_1/in_c 33.4
+C mux_0/a2 diff2_2/xor3v1x2_0/cn 4.1
+C diff2_1/in_2c mux_0/vdd 34.0
+C mux_0/b1 diff2_1/xor2v2x2_0/bn 2.7
+C mux_0/vdd diff2_2/xor3v1x2_0/cn 31.6
+C mux_0/vdd diff2_1/an2v0x2_1/a 12.4
+C mux_0/vdd diff2_1/xor2v2x2_0/bn 17.7
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/mxn2v0x1_1/sn 9.3
+C mux_0/vdd diff2_1/xor3v1x2_0/zn 18.9
+C mux_0/gnd diff2_0/an2v0x2_2/a 25.3
+C diff2_2/xor2v2x2_0/bn diff2_2/xor2v2x2_0/an 3.3
+C mux_0/vdd diff2_0/xor3v1x2_0/bn 15.4
+C mux_0/gnd diff2_1/an2v0x2_1/zn 8.9
+C mux_0/gnd diff2_1/an2v0x2_0/b 5.9
+C mux_0/vdd diff2_2/an2v0x2_0/z 24.6
+C diff2_0/an2v0x2_0/zn diff2_0/in_a 2.2
 C mux_0/mxn2v0x1_0/w_n4_32# mux_0/s 18.7
-C diff2_1/xor2v2x2_0/bn diff2_1/xor2v2x2_0/an 3.3
-C diff2_1/an2v0x2_0/z mux_0/vdd 24.6
+C mux_0/vdd diff2_2/an2v0x2_0/zn 8.8
+C mux_0/vdd diff2_0/xor2v2x2_0/an 27.4
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/o0 2.3
+C diff2_0/xor2v2x2_0/an diff2_0/xor2v2x2_0/bn 3.3
+C mux_0/b2 diff2_2/xor2v2x2_0/bn 2.7
+C mux_0/gnd diff2_0/an2v0x2_2/zn 8.9
+C diff2_1/xor3v1x2_0/bn diff2_1/in_b 2.6
+C mux_0/gnd diff2_1/xor3v1x2_0/iz 24.9
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/gnd 76.0
+C mux_0/gnd diff2_2/in_b 56.1
+C mux_0/b1 mux_0/vdd 13.1
+C mux_0/gnd diff2_2/xnr2v8x05_0/zn 11.9
+C mux_0/vdd mux_0/a2 36.7
+C diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/cn 4.5
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/b1 6.6
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/a2 11.6
+C mux_0/vdd diff2_0/an2v0x2_1/a 12.4
+C mux_0/vdd diff2_2/xnr2v8x05_0/bn 14.4
+C mux_0/a1 diff2_1/xor3v1x2_0/zn 4.6
+C mux_0/vdd diff2_0/xor2v2x2_0/bn 18.7
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/vdd 59.4
+C mux_0/vdd diff2_2/an2v0x2_1/zn 8.8
+C mux_0/vdd diff2_0/xor3v1x2_0/zn 18.9
+C diff2_1/xnr2v8x05_0/zn diff2_1/in_c 3.1
+C mux_0/vdd diff2_1/an2v0x2_0/z 24.6
+C mux_0/gnd diff2_2/xor2v2x2_0/an 21.6
+C mux_0/mxn2v0x1_0/w_n4_32# mux_0/mxn2v0x1_0/sn 9.3
+C mux_0/gnd diff2_0/an2v0x2_1/zn 8.9
+C mux_0/vdd diff2_1/an2v0x2_2/zn 8.8
+C mux_0/gnd diff2_1/an2v0x2_1/z 10.2
+C mux_0/vdd diff2_0/an2v0x2_1/z 17.7
+C diff2_1/an2v0x2_1/a diff2_1/in_b 2.0
+C diff2_2/an2v0x2_2/a diff2_2/xor3v1x2_0/cn 2.3
+C mux_0/a0 mux_0/vdd 35.4
+C mux_0/vdd diff2_0/an2v0x2_0/z 24.6
+C diff2_1/xor3v1x2_0/zn diff2_1/in_b 4.3
+C mux_0/b2 mux_0/gnd 11.9
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_1/zn 8.9
+C mux_0/vdd diff2_1/in_a 24.6
+C mux_0/gnd diff2_0/xor3v1x2_0/iz 25.5
+C mux_0/a0 diff2_0/xor3v1x2_0/zn 4.6
+C mux_0/b1 mux_0/a1 39.4
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/o1 5.0
+C mux_0/vdd diff2_1/xor3v1x2_0/cn 31.6
+C diff2_2/in_2c mux_0/vdd 33.2
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/a2 4.8
+C mux_0/vdd diff2_0/in_a 24.6
+C mux_0/gnd diff2_1/xnr2v8x05_0/zn 11.9
+C mux_0/gnd diff2_2/or2v0x3_0/zn 9.0
+C mux_0/vdd mux_0/a1 38.7
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/a1 13.4
+C mux_0/vdd diff2_1/xnr2v8x05_0/bn 14.4
+C mux_0/vdd diff2_0/an2v0x2_0/b 20.5
+C diff2_2/xor3v1x2_0/iz diff2_2/xor3v1x2_0/bn 2.4
+C mux_0/mxn2v0x1_0/w_n4_32# mux_0/b0 6.6
+C mux_0/b2 diff2_2/xor2v2x2_0/an 3.9
+C mux_0/s mux_0/a2 4.5
+C mux_0/s mux_0/vdd 7.9
+C mux_0/vdd diff2_2/in_c 40.7
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/s 36.4
+C mux_0/vdd diff2_1/in_b 50.3
+C mux_0/gnd diff2_1/an2v0x2_0/zn 8.9
+C mux_0/vdd diff2_2/an2v0x2_2/a 59.6
+C mux_0/vdd diff2_2/xnr2v8x05_0/an 9.9
+C diff2_0/xor3v1x2_0/bn diff2_0/in_b 2.6
+C mux_0/a1 diff2_1/xor3v1x2_0/cn 4.1
+C mux_0/vdd diff2_2/an2v0x2_1/a 12.4
+C mux_0/vdd diff2_0/xor3v1x2_0/cn 31.6
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/mxn2v0x1_2/zn 9.3
+C mux_0/gnd diff2_0/xnr2v8x05_0/zn 15.0
+C mux_0/mxn2v0x1_0/w_n4_32# mux_0/o0 5.2
+C mux_0/vdd diff2_2/an2v0x2_0/b 20.5
+C diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/cn 4.5
+C mux_0/gnd diff2_2/xor3v1x2_0/bn 9.1
+C mux_0/vdd diff2_0/xnr2v8x05_0/bn 14.4
+C mux_0/gnd diff2_1/or2v0x3_0/zn 9.0
+C mux_0/gnd diff2_2/xor3v1x2_0/zn 11.9
+C mux_0/gnd diff2_1/xor3v1x2_0/bn 9.1
+C diff2_2/an2v0x2_2/zn mux_0/gnd 8.9
+C diff2_2/xor3v1x2_0/bn diff2_2/in_b 2.6
+C diff2_1/xor3v1x2_0/iz diff2_1/xor3v1x2_0/bn 2.4
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/s 15.2
+C diff2_2/xor3v1x2_0/zn diff2_2/in_b 4.3
+C mux_0/a0 diff2_0/xor3v1x2_0/cn 4.1
+C mux_0/vdd diff2_2/an2v0x2_2/z 2.4
+C mux_0/gnd diff2_1/xor2v2x2_0/an 21.6
 C diff2_0/an2v0x2_1/a diff2_0/in_b 2.0
-C mux_0/gnd mux_0/b1 19.6
-R mux_0/mxn2v0x1_0/a_38_12# 43
-R mux_0/mxn2v0x1_0/a_21_12# 43
-R mux_0/mxn2v0x1_0/a_38_50# 191
-R mux_0/mxn2v0x1_0/a_21_50# 191
-R mux_0/o0 285
-C mux_0/b0 GND 29.8
-R mux_0/b0 1772
-R mux_0/mxn2v0x1_0/sn 743
-C mux_0/s GND 40.5
-R mux_0/s 5544
-C mux_0/a0 GND 54.7
-R mux_0/a0 3951
-R mux_0/mxn2v0x1_0/zn 856
-R mux_0/mxn2v0x1_0/w_n4_32# 4100
-R mux_0/mxn2v0x1_1/a_38_12# 43
-R mux_0/mxn2v0x1_1/a_21_12# 43
-C mux_0/gnd GND 220.8
-R mux_0/gnd 14202
-R mux_0/mxn2v0x1_1/a_38_50# 191
-R mux_0/mxn2v0x1_1/a_21_50# 191
-C mux_0/o1 GND 2.4
-R mux_0/o1 284
-C mux_0/b1 GND 25.4
-R mux_0/b1 1771
-R mux_0/mxn2v0x1_1/sn 743
-C mux_0/a1 GND 21.5
-R mux_0/a1 4256
-R mux_0/mxn2v0x1_1/zn 856
-R mux_0/mxn2v0x1_2/a_38_12# 43
-R mux_0/mxn2v0x1_2/a_21_12# 43
-R mux_0/mxn2v0x1_2/a_38_50# 191
-R mux_0/mxn2v0x1_2/a_21_50# 191
-R mux_0/o2 285
-C mux_0/b2 GND 30.1
-R mux_0/b2 1773
-R mux_0/mxn2v0x1_2/sn 743
-C mux_0/a2 GND 20.1
-R mux_0/a2 3972
-R mux_0/mxn2v0x1_2/zn 856
-R mux_0/mxn2v0x1_1/w_n4_32# 3063
+C mux_0/vdd diff2_0/in_b 50.3
+C mux_0/b0 diff2_0/xor2v2x2_0/an 3.9
+C mux_0/gnd diff2_0/an2v0x2_0/zn 10.8
+C mux_0/gnd diff2_2/an2v0x2_1/z 10.2
+C mux_0/vdd diff2_1/an2v0x2_2/a 59.6
+C diff2_0/xor3v1x2_0/zn diff2_0/in_b 4.3
+C mux_0/mxn2v0x1_2/w_n4_n4# mux_0/mxn2v0x1_2/zn 8.9
+C mux_0/vdd diff2_1/xnr2v8x05_0/an 9.9
+C mux_0/mxn2v0x1_0/zn mux_0/b0 2.7
+C mux_0/gnd diff2_2/in_a 26.6
+C mux_0/vdd diff2_0/or2v0x3_0/zn 12.7
+C mux_0/b1 mux_0/b0 18.4
+C mux_0/gnd diff2_1/in_2c 17.5
+C mux_0/vdd diff2_0/xnr2v8x05_0/an 9.9
+C mux_0/gnd diff2_2/xor3v1x2_0/cn 18.8
+C mux_0/vdd diff2_2/xor2v2x2_0/bn 17.7
+C mux_0/gnd diff2_1/an2v0x2_1/a 19.1
+C mux_0/b0 mux_0/vdd 26.0
+C mux_0/gnd diff2_1/xor2v2x2_0/bn 11.2
+C mux_0/vdd diff2_2/xor3v1x2_0/iz 15.8
+C mux_0/b0 diff2_0/xor2v2x2_0/bn 2.7
+C mux_0/gnd diff2_1/xor3v1x2_0/zn 11.9
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_1/sn 9.2
+C mux_0/gnd diff2_0/xor3v1x2_0/bn 9.1
+C mux_0/vdd diff2_1/in_c 39.6
+C diff2_1/an2v0x2_2/a diff2_1/xor3v1x2_0/cn 2.3
+C mux_0/gnd diff2_2/an2v0x2_0/z 12.8
+C mux_0/gnd diff2_2/an2v0x2_0/zn 8.9
+C mux_0/gnd diff2_0/xor2v2x2_0/an 21.6
+C mux_0/vdd diff2_0/an2v0x2_2/a 61.1
+C mux_0/vdd diff2_1/an2v0x2_1/zn 8.8
+C mux_0/vdd diff2_1/an2v0x2_0/b 20.5
+C mux_0/b1 mux_0/gnd 17.2
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/mxn2v0x1_0/zn 8.9
+C mux_0/gnd mux_0/a2 14.9
+C mux_0/mxn2v0x1_0/w_n4_n4# mux_0/b1 10.2
+C mux_0/gnd diff2_0/an2v0x2_1/a 19.1
+C mux_0/gnd mux_0/vdd 45.8
+C mux_0/gnd diff2_2/xnr2v8x05_0/bn 6.7
+C mux_0/gnd diff2_0/xor2v2x2_0/bn 11.2
+C mux_0/gnd diff2_2/an2v0x2_1/zn 8.9
+C mux_0/vdd diff2_0/an2v0x2_2/zn 10.3
+C mux_0/vdd diff2_1/xor3v1x2_0/iz 15.8
+C mux_0/gnd diff2_0/xor3v1x2_0/zn 13.9
+C mux_0/gnd diff2_1/an2v0x2_0/z 12.8
+C mux_0/vdd diff2_2/in_b 50.3
+C mux_0/vdd diff2_2/xnr2v8x05_0/zn 4.4
+C mux_0/mxn2v0x1_1/w_n4_32# mux_0/mxn2v0x1_2/sn 9.3
+C diff2_0/xor3v1x2_0/iz diff2_0/xor3v1x2_0/bn 2.4
+C mux_0/gnd diff2_1/an2v0x2_2/zn 8.9
+C mux_0/a0 mux_0/o0 2.3
+C mux_0/gnd diff2_0/an2v0x2_1/z 10.2
+C mux_0/gnd mux_0/a0 14.9
 R diff2_0/xor3v1x2_0/a_115_7# 69
 R diff2_0/xor3v1x2_0/a_28_12# 64
 R diff2_0/xor3v1x2_0/a_11_12# 64
@@ -608,6 +571,8 @@ R diff2_1/xor3v1x2_0/iz 2485
 R diff2_1/xor3v1x2_0/cn 2938
 R diff2_1/xor3v1x2_0/zn 2183
 R diff2_1/an2v0x2_2/a 2352
+C mux_0/a1 GND 28.9
+R mux_0/a1 4259
 R diff2_1/xnr2v8x05_0/ai 143
 R diff2_1/xnr2v8x05_0/an 562
 R diff2_1/xnr2v8x05_0/bn 779
@@ -621,7 +586,7 @@ R diff2_1/an2v0x2_1/a 1822
 R diff2_1/an2v0x2_1/zn 927
 R diff2_1/or2v0x3_0/a_48_39# 191
 R diff2_1/or2v0x3_0/a_31_39# 238
-C diff2_2/in_c GND 37.4
+C diff2_2/in_c GND 36.8
 R diff2_2/in_c 3075
 C diff2_1/an2v0x2_0/z GND 5.0
 R diff2_1/an2v0x2_0/z 1225
@@ -646,8 +611,8 @@ R diff2_2/xor3v1x2_0/iz 2485
 R diff2_2/xor3v1x2_0/cn 2938
 R diff2_2/xor3v1x2_0/zn 2183
 R diff2_2/an2v0x2_2/a 2352
-C mux_0/vdd GND 146.5
-R mux_0/vdd 262512
+C mux_0/a2 GND 38.7
+R mux_0/a2 3973
 R diff2_2/xnr2v8x05_0/ai 143
 R diff2_2/xnr2v8x05_0/an 562
 R diff2_2/xnr2v8x05_0/bn 779
@@ -671,6 +636,44 @@ R diff2_2/xor2v2x2_0/an 2529
 R diff2_2/xor2v2x2_0/bn 1969
 R diff2_2/an2v0x2_2/a_24_13# 69
 R diff2_2/an2v0x2_2/z 363
-C diff2_2/in_2c GND 35.3
+C diff2_2/in_2c GND 34.8
 R diff2_2/in_2c 2775
 R diff2_2/an2v0x2_2/zn 927
+R mux_0/mxn2v0x1_0/a_38_12# 43
+R mux_0/mxn2v0x1_0/a_21_12# 43
+R mux_0/mxn2v0x1_0/a_38_50# 191
+R mux_0/mxn2v0x1_0/a_21_50# 191
+C mux_0/vdd GND 129.0
+R mux_0/vdd 262512
+R mux_0/o0 285
+C mux_0/b0 GND 47.5
+R mux_0/b0 1776
+R mux_0/mxn2v0x1_0/sn 743
+C mux_0/s GND 16.3
+R mux_0/s 5540
+C mux_0/a0 GND 99.1
+R mux_0/a0 3948
+R mux_0/mxn2v0x1_0/zn 856
+R mux_0/mxn2v0x1_0/w_n4_32# 4100
+R mux_0/mxn2v0x1_1/a_38_12# 43
+R mux_0/mxn2v0x1_1/a_21_12# 43
+C mux_0/gnd GND 171.6
+R mux_0/gnd 14199
+R mux_0/mxn2v0x1_1/a_38_50# 191
+R mux_0/mxn2v0x1_1/a_21_50# 191
+C mux_0/o1 GND 2.4
+R mux_0/o1 284
+C mux_0/b1 GND 87.1
+R mux_0/b1 1779
+R mux_0/mxn2v0x1_1/sn 743
+R mux_0/mxn2v0x1_1/zn 856
+R mux_0/mxn2v0x1_2/a_38_12# 43
+R mux_0/mxn2v0x1_2/a_21_12# 43
+R mux_0/mxn2v0x1_2/a_38_50# 191
+R mux_0/mxn2v0x1_2/a_21_50# 191
+R mux_0/o2 285
+C mux_0/b2 GND 24.6
+R mux_0/b2 1770
+R mux_0/mxn2v0x1_2/sn 743
+R mux_0/mxn2v0x1_2/zn 856
+R mux_0/mxn2v0x1_1/w_n4_32# 3063

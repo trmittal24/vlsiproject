@@ -1,11 +1,65 @@
 | units: 100 tech: scmos format: MIT
-p or2v0x3_2/zn vdd o 2 20 157 43
-p or2v0x3_2/zn o vdd 2 20 167 43
+p or2v0x3_8/zn vdd b2 2 20 157 -117
+p or2v0x3_8/zn b2 vdd 2 20 167 -117
+p d6 vdd or2v0x3_8/a_31_39# 2 20 177 -117
+p or2v0x3_7/z or2v0x3_8/a_31_39# or2v0x3_8/zn 2 20 184 -117
+p or2v0x3_7/z or2v0x3_8/zn or2v0x3_8/a_48_39# 2 16 194 -117
+p d6 or2v0x3_8/a_48_39# vdd 2 16 201 -117
+n or2v0x3_8/zn b2 gnd 2 20 157 -150
+n d6 gnd or2v0x3_8/zn 2 10 176 -145
+n or2v0x3_7/z or2v0x3_8/zn gnd 2 10 186 -145
+p or2v0x3_7/zn vdd or2v0x3_7/z 2 20 85 -117
+p or2v0x3_7/zn or2v0x3_7/z vdd 2 20 95 -117
+p or2v0x3_6/z vdd or2v0x3_7/a_31_39# 2 20 105 -117
+p d4 or2v0x3_7/a_31_39# or2v0x3_7/zn 2 20 112 -117
+p d4 or2v0x3_7/zn or2v0x3_7/a_48_39# 2 16 122 -117
+p or2v0x3_6/z or2v0x3_7/a_48_39# vdd 2 16 129 -117
+n or2v0x3_7/zn or2v0x3_7/z gnd 2 20 85 -150
+n or2v0x3_6/z gnd or2v0x3_7/zn 2 10 104 -145
+n d4 or2v0x3_7/zn gnd 2 10 114 -145
+p or2v0x3_6/zn vdd or2v0x3_6/z 2 20 13 -117
+p or2v0x3_6/zn or2v0x3_6/z vdd 2 20 23 -117
+p d3 vdd or2v0x3_6/a_31_39# 2 20 33 -117
+p d5 or2v0x3_6/a_31_39# or2v0x3_6/zn 2 20 40 -117
+p d5 or2v0x3_6/zn or2v0x3_6/a_48_39# 2 16 50 -117
+p d3 or2v0x3_6/a_48_39# vdd 2 16 57 -117
+n or2v0x3_6/zn or2v0x3_6/z gnd 2 20 13 -150
+n d3 gnd or2v0x3_6/zn 2 10 32 -145
+n d5 or2v0x3_6/zn gnd 2 10 42 -145
+p or2v0x3_5/zn vdd b1 2 20 202 -44
+p or2v0x3_5/zn b1 vdd 2 20 192 -44
+p or2v0x3_4/z vdd or2v0x3_5/a_31_39# 2 20 182 -44
+p d6 or2v0x3_5/a_31_39# or2v0x3_5/zn 2 20 175 -44
+p d6 or2v0x3_5/zn or2v0x3_5/a_48_39# 2 16 165 -44
+p or2v0x3_4/z or2v0x3_5/a_48_39# vdd 2 16 158 -44
+n or2v0x3_5/zn b1 gnd 2 20 202 -11
+n or2v0x3_4/z gnd or2v0x3_5/zn 2 10 183 -16
+n d6 or2v0x3_5/zn gnd 2 10 173 -16
+p or2v0x3_4/zn vdd or2v0x3_4/z 2 20 130 -44
+p or2v0x3_4/zn or2v0x3_4/z vdd 2 20 120 -44
+p d1 vdd or2v0x3_4/a_31_39# 2 20 110 -44
+p or2v0x3_3/z or2v0x3_4/a_31_39# or2v0x3_4/zn 2 20 103 -44
+p or2v0x3_3/z or2v0x3_4/zn or2v0x3_4/a_48_39# 2 16 93 -44
+p d1 or2v0x3_4/a_48_39# vdd 2 16 86 -44
+n or2v0x3_4/zn or2v0x3_4/z gnd 2 20 130 -11
+n d1 gnd or2v0x3_4/zn 2 10 111 -16
+n or2v0x3_3/z or2v0x3_4/zn gnd 2 10 101 -16
+p or2v0x3_3/zn vdd or2v0x3_3/z 2 20 58 -44
+p or2v0x3_3/zn or2v0x3_3/z vdd 2 20 48 -44
+p d5 vdd or2v0x3_3/a_31_39# 2 20 38 -44
+p d2 or2v0x3_3/a_31_39# or2v0x3_3/zn 2 20 31 -44
+p d2 or2v0x3_3/zn or2v0x3_3/a_48_39# 2 16 21 -44
+p d5 or2v0x3_3/a_48_39# vdd 2 16 14 -44
+n or2v0x3_3/zn or2v0x3_3/z gnd 2 20 58 -11
+n d5 gnd or2v0x3_3/zn 2 10 39 -16
+n d2 or2v0x3_3/zn gnd 2 10 29 -16
+p or2v0x3_2/zn vdd b0 2 20 157 43
+p or2v0x3_2/zn b0 vdd 2 20 167 43
 p or2v0x3_1/z vdd or2v0x3_2/a_31_39# 2 20 177 43
 p d6 or2v0x3_2/a_31_39# or2v0x3_2/zn 2 20 184 43
 p d6 or2v0x3_2/zn or2v0x3_2/a_48_39# 2 16 194 43
 p or2v0x3_1/z or2v0x3_2/a_48_39# vdd 2 16 201 43
-n or2v0x3_2/zn o gnd 2 20 157 10
+n or2v0x3_2/zn b0 gnd 2 20 157 10
 n or2v0x3_1/z gnd or2v0x3_2/zn 2 10 176 15
 n d6 or2v0x3_2/zn gnd 2 10 186 15
 p or2v0x3_1/zn vdd or2v0x3_1/z 2 20 85 43
@@ -26,55 +80,120 @@ p d0 or2v0x3_0/a_48_39# vdd 2 16 57 43
 n or2v0x3_0/zn or2v0x3_0/z gnd 2 20 13 10
 n d0 gnd or2v0x3_0/zn 2 10 32 15
 n d2 or2v0x3_0/zn gnd 2 10 42 15
-C gnd o 2.1
-C or2v0x3_2/zn vdd 12.7
-C or2v0x3_1/z or2v0x3_2/zn 2.0
-C or2v0x3_0/z d2 2.2
-C d6 gnd 13.0
-C d2 gnd 12.2
-C gnd d4 13.0
-C or2v0x3_0/z d0 3.9
-C d0 gnd 7.6
+C or2v0x3_5/zn gnd 9.0
+C gnd or2v0x3_4/zn 9.0
+C gnd b0 2.1
+C d2 or2v0x3_0/z 2.2
+C b2 vdd 5.1
+C or2v0x3_3/z d1 2.2
+C or2v0x3_6/z or2v0x3_7/zn 2.0
+C or2v0x3_7/z vdd 11.4
+C vdd or2v0x3_1/zn 12.7
+C d5 vdd 21.8
+C or2v0x3_2/zn or2v0x3_1/z 2.0
+C or2v0x3_7/z gnd 15.6
 C vdd or2v0x3_0/zn 12.7
-C or2v0x3_0/z vdd 19.2
 C or2v0x3_0/z or2v0x3_1/z 4.6
-C or2v0x3_1/z gnd 10.3
-C or2v0x3_1/zn vdd 12.7
-C or2v0x3_1/zn or2v0x3_1/z 2.3
-C vdd o 4.8
-C or2v0x3_1/z o 4.7
-C or2v0x3_2/zn gnd 9.0
-C or2v0x3_2/zn o 2.2
-C d6 vdd 7.9
-C d2 vdd 7.9
-C vdd d4 7.9
-C or2v0x3_0/z or2v0x3_0/zn 2.3
+C d6 or2v0x3_3/zn 2.2
+C vdd d1 17.9
+C gnd or2v0x3_1/zn 9.0
+C d0 or2v0x3_0/z 3.9
+C gnd d5 20.2
 C gnd or2v0x3_0/zn 9.0
+C or2v0x3_8/zn vdd 12.7
+C vdd d2 16.1
+C b1 d6 2.7
+C gnd d1 7.6
+C or2v0x3_8/zn gnd 9.0
+C or2v0x3_6/z vdd 20.6
+C vdd or2v0x3_3/zn 12.7
+C gnd d2 23.3
+C vdd or2v0x3_2/zn 12.7
+C vdd or2v0x3_0/z 19.2
+C or2v0x3_6/z gnd 9.2
+C gnd or2v0x3_3/zn 9.0
+C or2v0x3_7/zn vdd 12.7
+C or2v0x3_2/zn b0 2.2
+C d3 vdd 28.2
+C b1 vdd 3.9
+C vdd or2v0x3_1/z 19.4
+C or2v0x3_1/z b0 4.7
+C gnd or2v0x3_2/zn 9.0
+C gnd or2v0x3_0/z 10.3
+C vdd or2v0x3_3/z 12.1
+C or2v0x3_7/zn gnd 9.0
 C d0 vdd 14.1
-C or2v0x3_0/z gnd 10.3
+C gnd d3 7.6
+C or2v0x3_6/zn vdd 12.7
+C d6 vdd 35.0
+C gnd or2v0x3_1/z 10.3
+C d6 or2v0x3_4/zn 2.1
+C gnd or2v0x3_3/z 12.6
+C gnd d0 7.6
+C gnd or2v0x3_6/zn 9.0
+C d6 gnd 48.5
+C or2v0x3_4/z vdd 18.3
+C vdd d4 15.8
+C or2v0x3_3/zn d1 3.7
+C or2v0x3_4/z gnd 9.2
 C or2v0x3_0/z or2v0x3_1/zn 2.0
-C or2v0x3_1/z vdd 19.4
-C or2v0x3_1/zn gnd 9.0
+C or2v0x3_5/zn vdd 12.7
+C or2v0x3_0/zn or2v0x3_0/z 2.3
+C vdd or2v0x3_4/zn 12.7
+C vdd b0 4.8
+C gnd d4 68.9
+C or2v0x3_1/z or2v0x3_1/zn 2.3
 R or2v0x3_0/a_48_39# 191
 R or2v0x3_0/a_31_39# 238
-C d2 GND 3.2
-R d2 862
-C d0 GND 3.1
+C d2 GND 12.7
+R d2 1772
+C d0 GND 5.5
 R d0 1054
 R or2v0x3_0/zn 1208
 R or2v0x3_1/a_48_39# 191
 R or2v0x3_1/a_31_39# 238
-C d4 GND 13.0
-R d4 862
+C d4 GND 25.7
+R d4 1774
 R or2v0x3_0/z 1297
 R or2v0x3_1/zn 1208
 R or2v0x3_2/a_48_39# 191
 R or2v0x3_2/a_31_39# 238
-R o 243
-C d6 GND 20.1
-R d6 863
+R b0 243
 R or2v0x3_1/z 1297
 R or2v0x3_2/zn 1208
-C gnd GND 2.3
-R gnd 1518
-R vdd 17191
+C vdd GND 179.4
+R vdd 85471
+R or2v0x3_3/a_48_39# 191
+R or2v0x3_3/a_31_39# 238
+C d5 GND 18.7
+R d5 1960
+R or2v0x3_3/zn 1208
+R or2v0x3_4/a_48_39# 191
+R or2v0x3_4/a_31_39# 238
+R or2v0x3_3/z 1104
+C d1 GND 15.2
+R d1 1055
+R or2v0x3_4/zn 1208
+R or2v0x3_5/a_48_39# 191
+R or2v0x3_5/a_31_39# 238
+R b1 243
+C d6 GND 2.7
+R d6 2866
+R or2v0x3_4/z 1296
+R or2v0x3_5/zn 1208
+C gnd GND 5.3
+R gnd 4910
+R or2v0x3_6/a_48_39# 191
+R or2v0x3_6/a_31_39# 238
+C d3 GND 17.6
+R d3 1055
+R or2v0x3_6/zn 1208
+R or2v0x3_7/a_48_39# 191
+R or2v0x3_7/a_31_39# 238
+R or2v0x3_6/z 1297
+R or2v0x3_7/zn 1208
+R or2v0x3_8/a_48_39# 191
+R or2v0x3_8/a_31_39# 238
+R b2 244
+R or2v0x3_7/z 1105
+R or2v0x3_8/zn 1208

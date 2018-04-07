@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 timestamp 1179386147
+=======
+timestamp 1523081934
+>>>>>>> 6f8a8a1b7bfd6f852c56dedc98359a594e1c40ef
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -30,6 +34,7 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "w_n4_n4#" 0 0 -4 -4 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n4_32#" 4100 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3168 232
+<<<<<<< HEAD
 cap "sn" "s" 840
 cap "vdd" "a0" 240
 cap "w_n4_n4#" "zn" 8919
@@ -63,6 +68,41 @@ cap "vss" "w_n4_n4#" 24722
 cap "a_21_12#" "zn" 1363
 cap "vdd" "s" 616
 cap "vss" "zn" 60
+=======
+cap "w_n4_n4#" "sn" 9214
+cap "w_n4_32#" "s" 16739
+cap "w_n4_n4#" "vss" 24722
+cap "a0" "vdd" 240
+cap "w_n4_n4#" "s" 15158
+cap "w_n4_32#" "a0" 9454
+cap "sn" "vss" 60
+cap "zn" "vdd" 1838
+cap "sn" "s" 840
+cap "w_n4_n4#" "a0" 4808
+cap "w_n4_32#" "zn" 9329
+cap "s" "vss" 1620
+cap "zn" "a_21_50#" 987
+cap "w_n4_n4#" "zn" 8919
+cap "a0" "vss" 60
+cap "a1" "vdd" 240
+cap "s" "a0" 360
+cap "w_n4_32#" "a1" 6645
+cap "zn" "vss" 60
+cap "w_n4_n4#" "a1" 7473
+cap "z" "vdd" 1222
+cap "zn" "a_21_12#" 1363
+cap "w_n4_32#" "z" 3854
+cap "sn" "a1" 240
+cap "a0" "zn" 480
+cap "w_n4_n4#" "z" 2256
+cap "w_n4_32#" "vdd" 20116
+cap "s" "a1" 240
+cap "vdd" "a_21_50#" 470
+cap "vdd" "a_38_50#" 470
+cap "sn" "vdd" 1368
+cap "w_n4_32#" "sn" 9264
+cap "s" "vdd" 616
+>>>>>>> 6f8a8a1b7bfd6f852c56dedc98359a594e1c40ef
 device mosfet nfet 53 14 54 15 2 6 "w_n4_n4#" "s" 4 0 "vss" 6 0 "sn" 6 0
 device mosfet nfet 43 12 44 13 2 8 "w_n4_n4#" "a1" 4 0 "a_38_12#" 8 0 "vss" 8 0
 device mosfet nfet 36 12 37 13 2 8 "w_n4_n4#" "s" 4 0 "zn" 8 0 "a_38_12#" 8 0

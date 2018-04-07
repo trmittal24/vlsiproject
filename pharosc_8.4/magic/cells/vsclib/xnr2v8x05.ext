@@ -23,6 +23,7 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "vss" 408 0 -4 -4 pw 254 124 36 24 0 0 0 0 0 0 0 0 626 174 0 0 0 0
 node "vdd" 5490 0 -4 32 nw 72 48 412 158 0 0 0 0 0 0 0 0 626 174 0 0 3520 248
+<<<<<<< HEAD
 cap "ai" "b" 120
 cap "vss" "zn" 11894
 cap "vdd" "zn" 4435
@@ -47,6 +48,32 @@ cap "vss" "b" 25718
 cap "vdd" "b" 19572
 cap "zn" "b" 240
 cap "an" "b" 240
+=======
+cap "vdd" "z" 2585
+cap "ai" "b" 120
+cap "vdd" "an" 9855
+cap "bn" "zn" 540
+cap "vdd" "b" 19572
+cap "an" "b" 240
+cap "bn" "vss" 6732
+cap "a" "zn" 240
+cap "vss" "zn" 11894
+cap "vdd" "bn" 14380
+cap "an" "bn" 120
+cap "z" "zn" 60
+cap "a" "vss" 3890
+cap "bn" "b" 240
+cap "vdd" "zn" 4435
+cap "an" "zn" 1128
+cap "ai" "vss" 1175
+cap "b" "zn" 240
+cap "z" "vss" 1316
+cap "a" "vdd" 9292
+cap "vdd" "ai" 1222
+cap "an" "vss" 5484
+cap "ai" "an" 1128
+cap "vss" "b" 25718
+>>>>>>> 6f8a8a1b7bfd6f852c56dedc98359a594e1c40ef
 device mosfet nfet 61 13 62 14 2 6 "vss" "b" 4 0 "vss" 6 0 "bn" 6 0
 device mosfet nfet 50 20 51 21 2 6 "vss" "an" 4 0 "ai" 6 0 "vss" 6 0
 device mosfet nfet 39 19 40 20 2 6 "vss" "bn" 4 0 "zn" 6 0 "ai" 6 0
