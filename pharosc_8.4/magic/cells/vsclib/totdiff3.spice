@@ -1,850 +1,849 @@
 * SPICE3 file created from totdiff3.ext - technology: scmos
+
 .include t14y_tsmc_025_level3.txt
+
 M1000 mux_0_vdd mux_0_mxn2v0x1_2_zn mux_0_o2 mux_0_mxn2v0x1_1_w_n4_32# pfet w=18u l=2u
-+  ad=11922p pd=4362u as=102p ps=50u
++ ad=11922p pd=4362u as=102p ps=50u 
 M1001 mux_0_mxn2v0x1_2_a_21_50# mux_0_a2 mux_0_vdd mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1002 mux_0_mxn2v0x1_2_zn mux_0_s mux_0_mxn2v0x1_2_a_21_50# mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=128p pd=48u as=0p ps=0u
++ ad=128p pd=48u as=0p ps=0u 
 M1003 mux_0_mxn2v0x1_2_a_38_50# mux_0_mxn2v0x1_2_sn mux_0_mxn2v0x1_2_zn mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1004 mux_0_vdd mux_0_b2 mux_0_mxn2v0x1_2_a_38_50# mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1005 mux_0_mxn2v0x1_2_sn mux_0_s mux_0_vdd mux_0_mxn2v0x1_1_w_n4_32# pfet w=8u l=2u
-+  ad=52p pd=30u as=0p ps=0u
++ ad=52p pd=30u as=0p ps=0u 
 M1006 mux_0_gnd mux_0_mxn2v0x1_2_zn mux_0_o2 mux_0_mxn2v0x1_2_w_n4_n4# nfet w=9u l=2u
-+  ad=8469p pd=3006u as=57p ps=32u
++ ad=8469p pd=3006u as=57p ps=32u 
 M1007 mux_0_mxn2v0x1_2_a_21_12# mux_0_a2 mux_0_gnd mux_0_mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
-+  ad=40p pd=26u as=0p ps=0u
++ ad=40p pd=26u as=0p ps=0u 
 M1008 mux_0_mxn2v0x1_2_zn mux_0_mxn2v0x1_2_sn mux_0_mxn2v0x1_2_a_21_12# mux_0_mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
-+  ad=64p pd=32u as=0p ps=0u
++ ad=64p pd=32u as=0p ps=0u 
 M1009 mux_0_mxn2v0x1_2_a_38_12# mux_0_s mux_0_mxn2v0x1_2_zn mux_0_mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
-+  ad=40p pd=26u as=0p ps=0u
++ ad=40p pd=26u as=0p ps=0u 
 M1010 mux_0_gnd mux_0_b2 mux_0_mxn2v0x1_2_a_38_12# mux_0_mxn2v0x1_2_w_n4_n4# nfet w=8u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1011 mux_0_mxn2v0x1_2_sn mux_0_s mux_0_gnd mux_0_mxn2v0x1_2_w_n4_n4# nfet w=6u l=2u
-+  ad=42p pd=26u as=0p ps=0u
++ ad=42p pd=26u as=0p ps=0u 
 M1012 mux_0_vdd mux_0_mxn2v0x1_1_zn mux_0_o1 mux_0_mxn2v0x1_1_w_n4_32# pfet w=18u l=2u
-+  ad=0p pd=0u as=102p ps=50u
++ ad=0p pd=0u as=102p ps=50u 
 M1013 mux_0_mxn2v0x1_1_a_21_50# mux_0_a1 mux_0_vdd mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1014 mux_0_mxn2v0x1_1_zn mux_0_s mux_0_mxn2v0x1_1_a_21_50# mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=128p pd=48u as=0p ps=0u
++ ad=128p pd=48u as=0p ps=0u 
 M1015 mux_0_mxn2v0x1_1_a_38_50# mux_0_mxn2v0x1_1_sn mux_0_mxn2v0x1_1_zn mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1016 mux_0_vdd mux_0_b1 mux_0_mxn2v0x1_1_a_38_50# mux_0_mxn2v0x1_1_w_n4_32# pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1017 mux_0_mxn2v0x1_1_sn mux_0_s mux_0_vdd mux_0_mxn2v0x1_1_w_n4_32# pfet w=8u l=2u
-+  ad=52p pd=30u as=0p ps=0u
++ ad=52p pd=30u as=0p ps=0u 
 M1018 mux_0_gnd mux_0_mxn2v0x1_1_zn mux_0_o1 mux_0_mxn2v0x1_0_w_n4_n4# nfet w=9u l=2u
-+  ad=0p pd=0u as=57p ps=32u
++ ad=0p pd=0u as=57p ps=32u 
 M1019 mux_0_mxn2v0x1_1_a_21_12# mux_0_a1 mux_0_gnd mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=40p pd=26u as=0p ps=0u
++ ad=40p pd=26u as=0p ps=0u 
 M1020 mux_0_mxn2v0x1_1_zn mux_0_mxn2v0x1_1_sn mux_0_mxn2v0x1_1_a_21_12# mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=64p pd=32u as=0p ps=0u
++ ad=64p pd=32u as=0p ps=0u 
 M1021 mux_0_mxn2v0x1_1_a_38_12# mux_0_s mux_0_mxn2v0x1_1_zn mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=40p pd=26u as=0p ps=0u
++ ad=40p pd=26u as=0p ps=0u 
 M1022 mux_0_gnd mux_0_b1 mux_0_mxn2v0x1_1_a_38_12# mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1023 mux_0_mxn2v0x1_1_sn mux_0_s mux_0_gnd mux_0_mxn2v0x1_0_w_n4_n4# nfet w=6u l=2u
-+  ad=42p pd=26u as=0p ps=0u
++ ad=42p pd=26u as=0p ps=0u 
 M1024 mux_0_vdd mux_0_mxn2v0x1_0_zn mux_0_o0 mux_0_mxn2v0x1_0_w_n4_32# pfet w=18u l=2u
-+  ad=0p pd=0u as=102p ps=50u
++ ad=0p pd=0u as=102p ps=50u 
 M1025 mux_0_mxn2v0x1_0_a_21_50# mux_0_a0 mux_0_vdd mux_0_mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1026 mux_0_mxn2v0x1_0_zn mux_0_s mux_0_mxn2v0x1_0_a_21_50# mux_0_mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
-+  ad=128p pd=48u as=0p ps=0u
++ ad=128p pd=48u as=0p ps=0u 
 M1027 mux_0_mxn2v0x1_0_a_38_50# mux_0_mxn2v0x1_0_sn mux_0_mxn2v0x1_0_zn mux_0_mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1028 mux_0_vdd mux_0_b0 mux_0_mxn2v0x1_0_a_38_50# mux_0_mxn2v0x1_0_w_n4_32# pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1029 mux_0_mxn2v0x1_0_sn mux_0_s mux_0_vdd mux_0_mxn2v0x1_0_w_n4_32# pfet w=8u l=2u
-+  ad=52p pd=30u as=0p ps=0u
++ ad=52p pd=30u as=0p ps=0u 
 M1030 mux_0_gnd mux_0_mxn2v0x1_0_zn mux_0_o0 mux_0_mxn2v0x1_0_w_n4_n4# nfet w=9u l=2u
-+  ad=0p pd=0u as=57p ps=32u
++ ad=0p pd=0u as=57p ps=32u 
 M1031 mux_0_mxn2v0x1_0_a_21_12# mux_0_a0 mux_0_gnd mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=40p pd=26u as=0p ps=0u
++ ad=40p pd=26u as=0p ps=0u 
 M1032 mux_0_mxn2v0x1_0_zn mux_0_mxn2v0x1_0_sn mux_0_mxn2v0x1_0_a_21_12# mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=64p pd=32u as=0p ps=0u
++ ad=64p pd=32u as=0p ps=0u 
 M1033 mux_0_mxn2v0x1_0_a_38_12# mux_0_s mux_0_mxn2v0x1_0_zn mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=40p pd=26u as=0p ps=0u
++ ad=40p pd=26u as=0p ps=0u 
 M1034 mux_0_gnd mux_0_b0 mux_0_mxn2v0x1_0_a_38_12# mux_0_mxn2v0x1_0_w_n4_n4# nfet w=8u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1035 mux_0_mxn2v0x1_0_sn mux_0_s mux_0_gnd mux_0_mxn2v0x1_0_w_n4_n4# nfet w=6u l=2u
-+  ad=42p pd=26u as=0p ps=0u
++ ad=42p pd=26u as=0p ps=0u 
 M1036 mux_0_vdd diff2_2_an2v0x2_2_zn diff2_2_an2v0x2_2_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1037 diff2_2_an2v0x2_2_zn diff2_2_an2v0x2_2_a mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1038 mux_0_vdd diff2_2_in_2c diff2_2_an2v0x2_2_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1039 mux_0_gnd diff2_2_an2v0x2_2_zn diff2_2_an2v0x2_2_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1040 diff2_2_an2v0x2_2_a_24_13# diff2_2_an2v0x2_2_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1041 diff2_2_an2v0x2_2_zn diff2_2_in_2c diff2_2_an2v0x2_2_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1042 diff2_2_xor2v2x2_0_an diff2_2_xor2v2x2_0_bn mux_0_b2 mux_0_vdd pfet w=20u l=2u
-+  ad=320p pd=112u as=398p ps=164u
++ ad=320p pd=112u as=398p ps=164u 
 M1043 mux_0_b2 diff2_2_xor2v2x2_0_bn diff2_2_xor2v2x2_0_an mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1044 diff2_2_xor2v2x2_0_bn diff2_2_xor2v2x2_0_an mux_0_b2 mux_0_vdd pfet w=20u l=2u
-+  ad=320p pd=112u as=0p ps=0u
++ ad=320p pd=112u as=0p ps=0u 
 M1045 mux_0_b2 diff2_2_xor2v2x2_0_an diff2_2_xor2v2x2_0_bn mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1046 diff2_2_xor2v2x2_0_bn diff2_2_in_2c mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1047 mux_0_vdd diff2_2_in_2c diff2_2_xor2v2x2_0_bn mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1048 diff2_2_xor2v2x2_0_an diff2_2_an2v0x2_2_a mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1049 mux_0_vdd diff2_2_an2v0x2_2_a diff2_2_xor2v2x2_0_an mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1050 diff2_2_xor2v2x2_0_a_13_13# diff2_2_xor2v2x2_0_an mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1051 mux_0_b2 diff2_2_xor2v2x2_0_bn diff2_2_xor2v2x2_0_a_13_13# mux_0_gnd nfet w=13u l=2u
-+  ad=264p pd=98u as=0p ps=0u
++ ad=264p pd=98u as=0p ps=0u 
 M1052 diff2_2_xor2v2x2_0_a_30_13# diff2_2_xor2v2x2_0_bn mux_0_b2 mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1053 mux_0_gnd diff2_2_xor2v2x2_0_an diff2_2_xor2v2x2_0_a_30_13# mux_0_gnd nfet w=13u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1054 diff2_2_xor2v2x2_0_bn diff2_2_in_2c mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=130p pd=56u as=0p ps=0u
++ ad=130p pd=56u as=0p ps=0u 
 M1055 mux_0_b2 diff2_2_an2v0x2_2_a diff2_2_xor2v2x2_0_bn mux_0_gnd nfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1056 diff2_2_xor2v2x2_0_an diff2_2_in_2c mux_0_b2 mux_0_gnd nfet w=20u l=2u
-+  ad=130p pd=56u as=0p ps=0u
++ ad=130p pd=56u as=0p ps=0u 
 M1057 mux_0_gnd diff2_2_an2v0x2_2_a diff2_2_xor2v2x2_0_an mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1058 mux_0_s diff2_2_or2v0x3_0_zn mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=160p pd=56u as=0p ps=0u
++ ad=160p pd=56u as=0p ps=0u 
 M1059 mux_0_vdd diff2_2_or2v0x3_0_zn mux_0_s mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1060 diff2_2_or2v0x3_0_a_31_39# diff2_2_an2v0x2_1_z mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=100p pd=50u as=0p ps=0u
++ ad=100p pd=50u as=0p ps=0u 
 M1061 diff2_2_or2v0x3_0_zn diff2_2_an2v0x2_0_z diff2_2_or2v0x3_0_a_31_39# mux_0_vdd pfet w=20u l=2u
-+  ad=148p pd=56u as=0p ps=0u
++ ad=148p pd=56u as=0p ps=0u 
 M1062 diff2_2_or2v0x3_0_a_48_39# diff2_2_an2v0x2_0_z diff2_2_or2v0x3_0_zn mux_0_vdd pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1063 mux_0_vdd diff2_2_an2v0x2_1_z diff2_2_or2v0x3_0_a_48_39# mux_0_vdd pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1064 mux_0_gnd diff2_2_or2v0x3_0_zn mux_0_s mux_0_gnd nfet w=20u l=2u
-+  ad=0p pd=0u as=126p ps=54u
++ ad=0p pd=0u as=126p ps=54u 
 M1065 diff2_2_or2v0x3_0_zn diff2_2_an2v0x2_1_z mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=80p pd=36u as=0p ps=0u
++ ad=80p pd=36u as=0p ps=0u 
 M1066 mux_0_gnd diff2_2_an2v0x2_0_z diff2_2_or2v0x3_0_zn mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1067 mux_0_vdd diff2_2_an2v0x2_1_zn diff2_2_an2v0x2_1_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1068 diff2_2_an2v0x2_1_zn diff2_2_an2v0x2_1_a mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1069 mux_0_vdd diff2_2_in_b diff2_2_an2v0x2_1_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1070 mux_0_gnd diff2_2_an2v0x2_1_zn diff2_2_an2v0x2_1_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1071 diff2_2_an2v0x2_1_a_24_13# diff2_2_an2v0x2_1_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1072 diff2_2_an2v0x2_1_zn diff2_2_in_b diff2_2_an2v0x2_1_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1073 mux_0_vdd diff2_2_an2v0x2_0_zn diff2_2_an2v0x2_0_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1074 diff2_2_an2v0x2_0_zn diff2_2_in_c mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1075 mux_0_vdd diff2_2_an2v0x2_0_b diff2_2_an2v0x2_0_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1076 mux_0_gnd diff2_2_an2v0x2_0_zn diff2_2_an2v0x2_0_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1077 diff2_2_an2v0x2_0_a_24_13# diff2_2_in_c mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1078 diff2_2_an2v0x2_0_zn diff2_2_an2v0x2_0_b diff2_2_an2v0x2_0_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1079 mux_0_vdd diff2_2_xnr2v8x05_0_zn diff2_2_an2v0x2_0_b mux_0_vdd pfet w=12u l=2u
-+  ad=0p pd=0u as=72p ps=38u
++ ad=0p pd=0u as=72p ps=38u 
 M1080 diff2_2_xnr2v8x05_0_an diff2_2_in_a mux_0_vdd mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1081 diff2_2_xnr2v8x05_0_zn diff2_2_xnr2v8x05_0_bn diff2_2_xnr2v8x05_0_an mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1082 diff2_2_xnr2v8x05_0_ai diff2_2_in_b diff2_2_xnr2v8x05_0_zn mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1083 mux_0_vdd diff2_2_xnr2v8x05_0_an diff2_2_xnr2v8x05_0_ai mux_0_vdd pfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1084 diff2_2_xnr2v8x05_0_bn diff2_2_in_b mux_0_vdd mux_0_vdd pfet w=12u l=2u
-+  ad=72p pd=38u as=0p ps=0u
++ ad=72p pd=38u as=0p ps=0u 
 M1085 mux_0_gnd diff2_2_xnr2v8x05_0_zn diff2_2_an2v0x2_0_b mux_0_gnd nfet w=6u l=2u
-+  ad=0p pd=0u as=42p ps=26u
++ ad=0p pd=0u as=42p ps=26u 
 M1086 diff2_2_xnr2v8x05_0_an diff2_2_in_a mux_0_gnd mux_0_gnd nfet w=6u l=2u
-+  ad=48p pd=28u as=0p ps=0u
++ ad=48p pd=28u as=0p ps=0u 
 M1087 diff2_2_xnr2v8x05_0_zn diff2_2_in_b diff2_2_xnr2v8x05_0_an mux_0_gnd nfet w=6u l=2u
-+  ad=48p pd=28u as=0p ps=0u
++ ad=48p pd=28u as=0p ps=0u 
 M1088 diff2_2_xnr2v8x05_0_ai diff2_2_xnr2v8x05_0_bn diff2_2_xnr2v8x05_0_zn mux_0_gnd nfet w=6u l=2u
-+  ad=57p pd=32u as=0p ps=0u
++ ad=57p pd=32u as=0p ps=0u 
 M1089 mux_0_gnd diff2_2_xnr2v8x05_0_an diff2_2_xnr2v8x05_0_ai mux_0_gnd nfet w=6u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1090 diff2_2_xnr2v8x05_0_bn diff2_2_in_b mux_0_gnd mux_0_gnd nfet w=6u l=2u
-+  ad=42p pd=26u as=0p ps=0u
++ ad=42p pd=26u as=0p ps=0u 
 M1091 diff2_2_an2v0x2_2_a mux_0_a2 mux_0_vdd mux_0_vdd pfet w=24u l=2u
-+  ad=168p pd=64u as=0p ps=0u
++ ad=168p pd=64u as=0p ps=0u 
 M1092 mux_0_vdd mux_0_a2 diff2_2_an2v0x2_2_a mux_0_vdd pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1093 diff2_2_an2v0x2_2_a mux_0_a2 mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=80p pd=36u as=0p ps=0u
++ ad=80p pd=36u as=0p ps=0u 
 M1094 mux_0_gnd mux_0_a2 diff2_2_an2v0x2_2_a mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1095 diff2_2_xor3v1x2_0_cn diff2_2_xor3v1x2_0_zn mux_0_a2 mux_0_vdd pfet w=27u l=2u
-+  ad=424p pd=138u as=530p ps=208u
++ ad=424p pd=138u as=530p ps=208u 
 M1096 mux_0_a2 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_cn mux_0_vdd pfet w=27u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1097 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_cn mux_0_a2 mux_0_vdd pfet w=27u l=2u
-+  ad=440p pd=142u as=0p ps=0u
++ ad=440p pd=142u as=0p ps=0u 
 M1098 mux_0_a2 diff2_2_xor3v1x2_0_cn diff2_2_xor3v1x2_0_zn mux_0_vdd pfet w=27u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1099 diff2_2_xor3v1x2_0_cn diff2_2_in_c mux_0_vdd mux_0_vdd pfet w=26u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1100 mux_0_vdd diff2_2_in_c diff2_2_xor3v1x2_0_cn mux_0_vdd pfet w=26u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1101 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_iz mux_0_vdd mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1102 mux_0_vdd diff2_2_xor3v1x2_0_iz diff2_2_xor3v1x2_0_zn mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1103 diff2_2_xor3v1x2_0_iz diff2_2_an2v0x2_1_a diff2_2_xor3v1x2_0_bn mux_0_vdd pfet w=28u l=2u
-+  ad=224p pd=72u as=272p ps=122u
++ ad=224p pd=72u as=272p ps=122u 
 M1104 diff2_2_an2v0x2_1_a diff2_2_xor3v1x2_0_bn diff2_2_xor3v1x2_0_iz mux_0_vdd pfet w=28u l=2u
-+  ad=224p pd=72u as=0p ps=0u
++ ad=224p pd=72u as=0p ps=0u 
 M1105 mux_0_vdd diff2_2_in_a diff2_2_an2v0x2_1_a mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1106 diff2_2_xor3v1x2_0_bn diff2_2_in_b mux_0_vdd mux_0_vdd pfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1107 mux_0_vdd diff2_2_in_b diff2_2_xor3v1x2_0_bn mux_0_vdd pfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1108 diff2_2_xor3v1x2_0_a_11_12# diff2_2_xor3v1x2_0_cn mux_0_gnd mux_0_gnd nfet w=12u l=2u
-+  ad=60p pd=34u as=0p ps=0u
++ ad=60p pd=34u as=0p ps=0u 
 M1109 mux_0_a2 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_a_11_12# mux_0_gnd nfet w=12u l=2u
-+  ad=208p pd=84u as=0p ps=0u
++ ad=208p pd=84u as=0p ps=0u 
 M1110 diff2_2_xor3v1x2_0_a_28_12# diff2_2_xor3v1x2_0_zn mux_0_a2 mux_0_gnd nfet w=12u l=2u
-+  ad=60p pd=34u as=0p ps=0u
++ ad=60p pd=34u as=0p ps=0u 
 M1111 mux_0_gnd diff2_2_xor3v1x2_0_cn diff2_2_xor3v1x2_0_a_28_12# mux_0_gnd nfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1112 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_iz mux_0_gnd mux_0_gnd nfet w=14u l=2u
-+  ad=224p pd=88u as=0p ps=0u
++ ad=224p pd=88u as=0p ps=0u 
 M1113 mux_0_a2 diff2_2_in_c diff2_2_xor3v1x2_0_zn mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1114 diff2_2_xor3v1x2_0_zn diff2_2_in_c mux_0_a2 mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1115 mux_0_gnd diff2_2_xor3v1x2_0_iz diff2_2_xor3v1x2_0_zn mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1116 diff2_2_xor3v1x2_0_cn diff2_2_in_c mux_0_gnd mux_0_gnd nfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1117 mux_0_gnd diff2_2_in_c diff2_2_xor3v1x2_0_cn mux_0_gnd nfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1118 diff2_2_xor3v1x2_0_a_115_7# diff2_2_an2v0x2_1_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1119 diff2_2_xor3v1x2_0_iz diff2_2_xor3v1x2_0_bn diff2_2_xor3v1x2_0_a_115_7# mux_0_gnd nfet w=13u l=2u
-+  ad=104p pd=42u as=0p ps=0u
++ ad=104p pd=42u as=0p ps=0u 
 M1120 diff2_2_an2v0x2_1_a diff2_2_in_b diff2_2_xor3v1x2_0_iz mux_0_gnd nfet w=13u l=2u
-+  ad=114p pd=52u as=0p ps=0u
++ ad=114p pd=52u as=0p ps=0u 
 M1121 mux_0_gnd diff2_2_in_a diff2_2_an2v0x2_1_a mux_0_gnd nfet w=13u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1122 diff2_2_xor3v1x2_0_bn diff2_2_in_b mux_0_gnd mux_0_gnd nfet w=11u l=2u
-+  ad=67p pd=36u as=0p ps=0u
++ ad=67p pd=36u as=0p ps=0u 
 M1123 mux_0_vdd diff2_1_an2v0x2_2_zn diff2_2_in_2c mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1124 diff2_1_an2v0x2_2_zn diff2_1_an2v0x2_2_a mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1125 mux_0_vdd diff2_1_in_2c diff2_1_an2v0x2_2_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1126 mux_0_gnd diff2_1_an2v0x2_2_zn diff2_2_in_2c mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1127 diff2_1_an2v0x2_2_a_24_13# diff2_1_an2v0x2_2_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1128 diff2_1_an2v0x2_2_zn diff2_1_in_2c diff2_1_an2v0x2_2_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1129 diff2_1_xor2v2x2_0_an diff2_1_xor2v2x2_0_bn mux_0_b1 mux_0_vdd pfet w=20u l=2u
-+  ad=320p pd=112u as=398p ps=164u
++ ad=320p pd=112u as=398p ps=164u 
 M1130 mux_0_b1 diff2_1_xor2v2x2_0_bn diff2_1_xor2v2x2_0_an mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1131 diff2_1_xor2v2x2_0_bn diff2_1_xor2v2x2_0_an mux_0_b1 mux_0_vdd pfet w=20u l=2u
-+  ad=320p pd=112u as=0p ps=0u
++ ad=320p pd=112u as=0p ps=0u 
 M1132 mux_0_b1 diff2_1_xor2v2x2_0_an diff2_1_xor2v2x2_0_bn mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1133 diff2_1_xor2v2x2_0_bn diff2_1_in_2c mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1134 mux_0_vdd diff2_1_in_2c diff2_1_xor2v2x2_0_bn mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1135 diff2_1_xor2v2x2_0_an diff2_1_an2v0x2_2_a mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1136 mux_0_vdd diff2_1_an2v0x2_2_a diff2_1_xor2v2x2_0_an mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1137 diff2_1_xor2v2x2_0_a_13_13# diff2_1_xor2v2x2_0_an mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1138 mux_0_b1 diff2_1_xor2v2x2_0_bn diff2_1_xor2v2x2_0_a_13_13# mux_0_gnd nfet w=13u l=2u
-+  ad=264p pd=98u as=0p ps=0u
++ ad=264p pd=98u as=0p ps=0u 
 M1139 diff2_1_xor2v2x2_0_a_30_13# diff2_1_xor2v2x2_0_bn mux_0_b1 mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1140 mux_0_gnd diff2_1_xor2v2x2_0_an diff2_1_xor2v2x2_0_a_30_13# mux_0_gnd nfet w=13u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1141 diff2_1_xor2v2x2_0_bn diff2_1_in_2c mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=130p pd=56u as=0p ps=0u
++ ad=130p pd=56u as=0p ps=0u 
 M1142 mux_0_b1 diff2_1_an2v0x2_2_a diff2_1_xor2v2x2_0_bn mux_0_gnd nfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1143 diff2_1_xor2v2x2_0_an diff2_1_in_2c mux_0_b1 mux_0_gnd nfet w=20u l=2u
-+  ad=130p pd=56u as=0p ps=0u
++ ad=130p pd=56u as=0p ps=0u 
 M1144 mux_0_gnd diff2_1_an2v0x2_2_a diff2_1_xor2v2x2_0_an mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1145 diff2_2_in_c diff2_1_or2v0x3_0_zn mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=160p pd=56u as=0p ps=0u
++ ad=160p pd=56u as=0p ps=0u 
 M1146 mux_0_vdd diff2_1_or2v0x3_0_zn diff2_2_in_c mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1147 diff2_1_or2v0x3_0_a_31_39# diff2_1_an2v0x2_1_z mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=100p pd=50u as=0p ps=0u
++ ad=100p pd=50u as=0p ps=0u 
 M1148 diff2_1_or2v0x3_0_zn diff2_1_an2v0x2_0_z diff2_1_or2v0x3_0_a_31_39# mux_0_vdd pfet w=20u l=2u
-+  ad=148p pd=56u as=0p ps=0u
++ ad=148p pd=56u as=0p ps=0u 
 M1149 diff2_1_or2v0x3_0_a_48_39# diff2_1_an2v0x2_0_z diff2_1_or2v0x3_0_zn mux_0_vdd pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1150 mux_0_vdd diff2_1_an2v0x2_1_z diff2_1_or2v0x3_0_a_48_39# mux_0_vdd pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1151 mux_0_gnd diff2_1_or2v0x3_0_zn diff2_2_in_c mux_0_gnd nfet w=20u l=2u
-+  ad=0p pd=0u as=126p ps=54u
++ ad=0p pd=0u as=126p ps=54u 
 M1152 diff2_1_or2v0x3_0_zn diff2_1_an2v0x2_1_z mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=80p pd=36u as=0p ps=0u
++ ad=80p pd=36u as=0p ps=0u 
 M1153 mux_0_gnd diff2_1_an2v0x2_0_z diff2_1_or2v0x3_0_zn mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1154 mux_0_vdd diff2_1_an2v0x2_1_zn diff2_1_an2v0x2_1_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1155 diff2_1_an2v0x2_1_zn diff2_1_an2v0x2_1_a mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1156 mux_0_vdd diff2_1_in_b diff2_1_an2v0x2_1_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1157 mux_0_gnd diff2_1_an2v0x2_1_zn diff2_1_an2v0x2_1_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1158 diff2_1_an2v0x2_1_a_24_13# diff2_1_an2v0x2_1_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1159 diff2_1_an2v0x2_1_zn diff2_1_in_b diff2_1_an2v0x2_1_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1160 mux_0_vdd diff2_1_an2v0x2_0_zn diff2_1_an2v0x2_0_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1161 diff2_1_an2v0x2_0_zn diff2_1_in_c mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1162 mux_0_vdd diff2_1_an2v0x2_0_b diff2_1_an2v0x2_0_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1163 mux_0_gnd diff2_1_an2v0x2_0_zn diff2_1_an2v0x2_0_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1164 diff2_1_an2v0x2_0_a_24_13# diff2_1_in_c mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1165 diff2_1_an2v0x2_0_zn diff2_1_an2v0x2_0_b diff2_1_an2v0x2_0_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1166 mux_0_vdd diff2_1_xnr2v8x05_0_zn diff2_1_an2v0x2_0_b mux_0_vdd pfet w=12u l=2u
-+  ad=0p pd=0u as=72p ps=38u
++ ad=0p pd=0u as=72p ps=38u 
 M1167 diff2_1_xnr2v8x05_0_an diff2_1_in_a mux_0_vdd mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1168 diff2_1_xnr2v8x05_0_zn diff2_1_xnr2v8x05_0_bn diff2_1_xnr2v8x05_0_an mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1169 diff2_1_xnr2v8x05_0_ai diff2_1_in_b diff2_1_xnr2v8x05_0_zn mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1170 mux_0_vdd diff2_1_xnr2v8x05_0_an diff2_1_xnr2v8x05_0_ai mux_0_vdd pfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1171 diff2_1_xnr2v8x05_0_bn diff2_1_in_b mux_0_vdd mux_0_vdd pfet w=12u l=2u
-+  ad=72p pd=38u as=0p ps=0u
++ ad=72p pd=38u as=0p ps=0u 
 M1172 mux_0_gnd diff2_1_xnr2v8x05_0_zn diff2_1_an2v0x2_0_b mux_0_gnd nfet w=6u l=2u
-+  ad=0p pd=0u as=42p ps=26u
++ ad=0p pd=0u as=42p ps=26u 
 M1173 diff2_1_xnr2v8x05_0_an diff2_1_in_a mux_0_gnd mux_0_gnd nfet w=6u l=2u
-+  ad=48p pd=28u as=0p ps=0u
++ ad=48p pd=28u as=0p ps=0u 
 M1174 diff2_1_xnr2v8x05_0_zn diff2_1_in_b diff2_1_xnr2v8x05_0_an mux_0_gnd nfet w=6u l=2u
-+  ad=48p pd=28u as=0p ps=0u
++ ad=48p pd=28u as=0p ps=0u 
 M1175 diff2_1_xnr2v8x05_0_ai diff2_1_xnr2v8x05_0_bn diff2_1_xnr2v8x05_0_zn mux_0_gnd nfet w=6u l=2u
-+  ad=57p pd=32u as=0p ps=0u
++ ad=57p pd=32u as=0p ps=0u 
 M1176 mux_0_gnd diff2_1_xnr2v8x05_0_an diff2_1_xnr2v8x05_0_ai mux_0_gnd nfet w=6u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1177 diff2_1_xnr2v8x05_0_bn diff2_1_in_b mux_0_gnd mux_0_gnd nfet w=6u l=2u
-+  ad=42p pd=26u as=0p ps=0u
++ ad=42p pd=26u as=0p ps=0u 
 M1178 diff2_1_an2v0x2_2_a mux_0_a1 mux_0_vdd mux_0_vdd pfet w=24u l=2u
-+  ad=168p pd=64u as=0p ps=0u
++ ad=168p pd=64u as=0p ps=0u 
 M1179 mux_0_vdd mux_0_a1 diff2_1_an2v0x2_2_a mux_0_vdd pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1180 diff2_1_an2v0x2_2_a mux_0_a1 mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=80p pd=36u as=0p ps=0u
++ ad=80p pd=36u as=0p ps=0u 
 M1181 mux_0_gnd mux_0_a1 diff2_1_an2v0x2_2_a mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1182 diff2_1_xor3v1x2_0_cn diff2_1_xor3v1x2_0_zn mux_0_a1 mux_0_vdd pfet w=27u l=2u
-+  ad=424p pd=138u as=530p ps=208u
++ ad=424p pd=138u as=530p ps=208u 
 M1183 mux_0_a1 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_cn mux_0_vdd pfet w=27u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1184 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_cn mux_0_a1 mux_0_vdd pfet w=27u l=2u
-+  ad=440p pd=142u as=0p ps=0u
++ ad=440p pd=142u as=0p ps=0u 
 M1185 mux_0_a1 diff2_1_xor3v1x2_0_cn diff2_1_xor3v1x2_0_zn mux_0_vdd pfet w=27u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1186 diff2_1_xor3v1x2_0_cn diff2_1_in_c mux_0_vdd mux_0_vdd pfet w=26u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1187 mux_0_vdd diff2_1_in_c diff2_1_xor3v1x2_0_cn mux_0_vdd pfet w=26u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1188 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_iz mux_0_vdd mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1189 mux_0_vdd diff2_1_xor3v1x2_0_iz diff2_1_xor3v1x2_0_zn mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1190 diff2_1_xor3v1x2_0_iz diff2_1_an2v0x2_1_a diff2_1_xor3v1x2_0_bn mux_0_vdd pfet w=28u l=2u
-+  ad=224p pd=72u as=272p ps=122u
++ ad=224p pd=72u as=272p ps=122u 
 M1191 diff2_1_an2v0x2_1_a diff2_1_xor3v1x2_0_bn diff2_1_xor3v1x2_0_iz mux_0_vdd pfet w=28u l=2u
-+  ad=224p pd=72u as=0p ps=0u
++ ad=224p pd=72u as=0p ps=0u 
 M1192 mux_0_vdd diff2_1_in_a diff2_1_an2v0x2_1_a mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1193 diff2_1_xor3v1x2_0_bn diff2_1_in_b mux_0_vdd mux_0_vdd pfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1194 mux_0_vdd diff2_1_in_b diff2_1_xor3v1x2_0_bn mux_0_vdd pfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1195 diff2_1_xor3v1x2_0_a_11_12# diff2_1_xor3v1x2_0_cn mux_0_gnd mux_0_gnd nfet w=12u l=2u
-+  ad=60p pd=34u as=0p ps=0u
++ ad=60p pd=34u as=0p ps=0u 
 M1196 mux_0_a1 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_a_11_12# mux_0_gnd nfet w=12u l=2u
-+  ad=208p pd=84u as=0p ps=0u
++ ad=208p pd=84u as=0p ps=0u 
 M1197 diff2_1_xor3v1x2_0_a_28_12# diff2_1_xor3v1x2_0_zn mux_0_a1 mux_0_gnd nfet w=12u l=2u
-+  ad=60p pd=34u as=0p ps=0u
++ ad=60p pd=34u as=0p ps=0u 
 M1198 mux_0_gnd diff2_1_xor3v1x2_0_cn diff2_1_xor3v1x2_0_a_28_12# mux_0_gnd nfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1199 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_iz mux_0_gnd mux_0_gnd nfet w=14u l=2u
-+  ad=224p pd=88u as=0p ps=0u
++ ad=224p pd=88u as=0p ps=0u 
 M1200 mux_0_a1 diff2_1_in_c diff2_1_xor3v1x2_0_zn mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1201 diff2_1_xor3v1x2_0_zn diff2_1_in_c mux_0_a1 mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1202 mux_0_gnd diff2_1_xor3v1x2_0_iz diff2_1_xor3v1x2_0_zn mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1203 diff2_1_xor3v1x2_0_cn diff2_1_in_c mux_0_gnd mux_0_gnd nfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1204 mux_0_gnd diff2_1_in_c diff2_1_xor3v1x2_0_cn mux_0_gnd nfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1205 diff2_1_xor3v1x2_0_a_115_7# diff2_1_an2v0x2_1_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1206 diff2_1_xor3v1x2_0_iz diff2_1_xor3v1x2_0_bn diff2_1_xor3v1x2_0_a_115_7# mux_0_gnd nfet w=13u l=2u
-+  ad=104p pd=42u as=0p ps=0u
++ ad=104p pd=42u as=0p ps=0u 
 M1207 diff2_1_an2v0x2_1_a diff2_1_in_b diff2_1_xor3v1x2_0_iz mux_0_gnd nfet w=13u l=2u
-+  ad=114p pd=52u as=0p ps=0u
++ ad=114p pd=52u as=0p ps=0u 
 M1208 mux_0_gnd diff2_1_in_a diff2_1_an2v0x2_1_a mux_0_gnd nfet w=13u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1209 diff2_1_xor3v1x2_0_bn diff2_1_in_b mux_0_gnd mux_0_gnd nfet w=11u l=2u
-+  ad=67p pd=36u as=0p ps=0u
++ ad=67p pd=36u as=0p ps=0u 
 M1210 mux_0_vdd diff2_0_an2v0x2_2_zn diff2_1_in_2c mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1211 diff2_0_an2v0x2_2_zn diff2_0_an2v0x2_2_a mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1212 mux_0_vdd mux_0_vdd diff2_0_an2v0x2_2_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1213 mux_0_gnd diff2_0_an2v0x2_2_zn diff2_1_in_2c mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1214 diff2_0_an2v0x2_2_a_24_13# diff2_0_an2v0x2_2_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1215 diff2_0_an2v0x2_2_zn mux_0_vdd diff2_0_an2v0x2_2_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1216 diff2_0_xor2v2x2_0_an diff2_0_xor2v2x2_0_bn mux_0_b0 mux_0_vdd pfet w=20u l=2u
-+  ad=320p pd=112u as=398p ps=164u
++ ad=320p pd=112u as=398p ps=164u 
 M1217 mux_0_b0 diff2_0_xor2v2x2_0_bn diff2_0_xor2v2x2_0_an mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1218 diff2_0_xor2v2x2_0_bn diff2_0_xor2v2x2_0_an mux_0_b0 mux_0_vdd pfet w=20u l=2u
-+  ad=320p pd=112u as=0p ps=0u
++ ad=320p pd=112u as=0p ps=0u 
 M1219 mux_0_b0 diff2_0_xor2v2x2_0_an diff2_0_xor2v2x2_0_bn mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1220 diff2_0_xor2v2x2_0_bn mux_0_vdd mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1221 mux_0_vdd mux_0_vdd diff2_0_xor2v2x2_0_bn mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1222 diff2_0_xor2v2x2_0_an diff2_0_an2v0x2_2_a mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1223 mux_0_vdd diff2_0_an2v0x2_2_a diff2_0_xor2v2x2_0_an mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1224 diff2_0_xor2v2x2_0_a_13_13# diff2_0_xor2v2x2_0_an mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1225 mux_0_b0 diff2_0_xor2v2x2_0_bn diff2_0_xor2v2x2_0_a_13_13# mux_0_gnd nfet w=13u l=2u
-+  ad=264p pd=98u as=0p ps=0u
++ ad=264p pd=98u as=0p ps=0u 
 M1226 diff2_0_xor2v2x2_0_a_30_13# diff2_0_xor2v2x2_0_bn mux_0_b0 mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1227 mux_0_gnd diff2_0_xor2v2x2_0_an diff2_0_xor2v2x2_0_a_30_13# mux_0_gnd nfet w=13u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1228 diff2_0_xor2v2x2_0_bn mux_0_vdd mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=130p pd=56u as=0p ps=0u
++ ad=130p pd=56u as=0p ps=0u 
 M1229 mux_0_b0 diff2_0_an2v0x2_2_a diff2_0_xor2v2x2_0_bn mux_0_gnd nfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1230 diff2_0_xor2v2x2_0_an mux_0_vdd mux_0_b0 mux_0_gnd nfet w=20u l=2u
-+  ad=130p pd=56u as=0p ps=0u
++ ad=130p pd=56u as=0p ps=0u 
 M1231 mux_0_gnd diff2_0_an2v0x2_2_a diff2_0_xor2v2x2_0_an mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1232 diff2_1_in_c diff2_0_or2v0x3_0_zn mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=160p pd=56u as=0p ps=0u
++ ad=160p pd=56u as=0p ps=0u 
 M1233 mux_0_vdd diff2_0_or2v0x3_0_zn diff2_1_in_c mux_0_vdd pfet w=20u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1234 diff2_0_or2v0x3_0_a_31_39# diff2_0_an2v0x2_1_z mux_0_vdd mux_0_vdd pfet w=20u l=2u
-+  ad=100p pd=50u as=0p ps=0u
++ ad=100p pd=50u as=0p ps=0u 
 M1235 diff2_0_or2v0x3_0_zn diff2_0_an2v0x2_0_z diff2_0_or2v0x3_0_a_31_39# mux_0_vdd pfet w=20u l=2u
-+  ad=148p pd=56u as=0p ps=0u
++ ad=148p pd=56u as=0p ps=0u 
 M1236 diff2_0_or2v0x3_0_a_48_39# diff2_0_an2v0x2_0_z diff2_0_or2v0x3_0_zn mux_0_vdd pfet w=16u l=2u
-+  ad=80p pd=42u as=0p ps=0u
++ ad=80p pd=42u as=0p ps=0u 
 M1237 mux_0_vdd diff2_0_an2v0x2_1_z diff2_0_or2v0x3_0_a_48_39# mux_0_vdd pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1238 mux_0_gnd diff2_0_or2v0x3_0_zn diff2_1_in_c mux_0_gnd nfet w=20u l=2u
-+  ad=0p pd=0u as=126p ps=54u
++ ad=0p pd=0u as=126p ps=54u 
 M1239 diff2_0_or2v0x3_0_zn diff2_0_an2v0x2_1_z mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=80p pd=36u as=0p ps=0u
++ ad=80p pd=36u as=0p ps=0u 
 M1240 mux_0_gnd diff2_0_an2v0x2_0_z diff2_0_or2v0x3_0_zn mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1241 mux_0_vdd diff2_0_an2v0x2_1_zn diff2_0_an2v0x2_1_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1242 diff2_0_an2v0x2_1_zn diff2_0_an2v0x2_1_a mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1243 mux_0_vdd diff2_0_in_b diff2_0_an2v0x2_1_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1244 mux_0_gnd diff2_0_an2v0x2_1_zn diff2_0_an2v0x2_1_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1245 diff2_0_an2v0x2_1_a_24_13# diff2_0_an2v0x2_1_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1246 diff2_0_an2v0x2_1_zn diff2_0_in_b diff2_0_an2v0x2_1_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1247 mux_0_vdd diff2_0_an2v0x2_0_zn diff2_0_an2v0x2_0_z mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=166p ps=70u
++ ad=0p pd=0u as=166p ps=70u 
 M1248 diff2_0_an2v0x2_0_zn mux_0_gnd mux_0_vdd mux_0_vdd pfet w=19u l=2u
-+  ad=152p pd=54u as=0p ps=0u
++ ad=152p pd=54u as=0p ps=0u 
 M1249 mux_0_vdd diff2_0_an2v0x2_0_b diff2_0_an2v0x2_0_zn mux_0_vdd pfet w=19u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1250 mux_0_gnd diff2_0_an2v0x2_0_zn diff2_0_an2v0x2_0_z mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=98p ps=42u
++ ad=0p pd=0u as=98p ps=42u 
 M1251 diff2_0_an2v0x2_0_a_24_13# mux_0_gnd mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1252 diff2_0_an2v0x2_0_zn diff2_0_an2v0x2_0_b diff2_0_an2v0x2_0_a_24_13# mux_0_gnd nfet w=13u l=2u
-+  ad=77p pd=40u as=0p ps=0u
++ ad=77p pd=40u as=0p ps=0u 
 M1253 mux_0_vdd diff2_0_xnr2v8x05_0_zn diff2_0_an2v0x2_0_b mux_0_vdd pfet w=12u l=2u
-+  ad=0p pd=0u as=72p ps=38u
++ ad=0p pd=0u as=72p ps=38u 
 M1254 diff2_0_xnr2v8x05_0_an diff2_0_in_a mux_0_vdd mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1255 diff2_0_xnr2v8x05_0_zn diff2_0_xnr2v8x05_0_bn diff2_0_xnr2v8x05_0_an mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1256 diff2_0_xnr2v8x05_0_ai diff2_0_in_b diff2_0_xnr2v8x05_0_zn mux_0_vdd pfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1257 mux_0_vdd diff2_0_xnr2v8x05_0_an diff2_0_xnr2v8x05_0_ai mux_0_vdd pfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1258 diff2_0_xnr2v8x05_0_bn diff2_0_in_b mux_0_vdd mux_0_vdd pfet w=12u l=2u
-+  ad=72p pd=38u as=0p ps=0u
++ ad=72p pd=38u as=0p ps=0u 
 M1259 mux_0_gnd diff2_0_xnr2v8x05_0_zn diff2_0_an2v0x2_0_b mux_0_gnd nfet w=6u l=2u
-+  ad=0p pd=0u as=42p ps=26u
++ ad=0p pd=0u as=42p ps=26u 
 M1260 diff2_0_xnr2v8x05_0_an diff2_0_in_a mux_0_gnd mux_0_gnd nfet w=6u l=2u
-+  ad=48p pd=28u as=0p ps=0u
++ ad=48p pd=28u as=0p ps=0u 
 M1261 diff2_0_xnr2v8x05_0_zn diff2_0_in_b diff2_0_xnr2v8x05_0_an mux_0_gnd nfet w=6u l=2u
-+  ad=48p pd=28u as=0p ps=0u
++ ad=48p pd=28u as=0p ps=0u 
 M1262 diff2_0_xnr2v8x05_0_ai diff2_0_xnr2v8x05_0_bn diff2_0_xnr2v8x05_0_zn mux_0_gnd nfet w=6u l=2u
-+  ad=57p pd=32u as=0p ps=0u
++ ad=57p pd=32u as=0p ps=0u 
 M1263 mux_0_gnd diff2_0_xnr2v8x05_0_an diff2_0_xnr2v8x05_0_ai mux_0_gnd nfet w=6u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1264 diff2_0_xnr2v8x05_0_bn diff2_0_in_b mux_0_gnd mux_0_gnd nfet w=6u l=2u
-+  ad=42p pd=26u as=0p ps=0u
++ ad=42p pd=26u as=0p ps=0u 
 M1265 diff2_0_an2v0x2_2_a mux_0_a0 mux_0_vdd mux_0_vdd pfet w=24u l=2u
-+  ad=168p pd=64u as=0p ps=0u
++ ad=168p pd=64u as=0p ps=0u 
 M1266 mux_0_vdd mux_0_a0 diff2_0_an2v0x2_2_a mux_0_vdd pfet w=16u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1267 diff2_0_an2v0x2_2_a mux_0_a0 mux_0_gnd mux_0_gnd nfet w=10u l=2u
-+  ad=80p pd=36u as=0p ps=0u
++ ad=80p pd=36u as=0p ps=0u 
 M1268 mux_0_gnd mux_0_a0 diff2_0_an2v0x2_2_a mux_0_gnd nfet w=10u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1269 diff2_0_xor3v1x2_0_cn diff2_0_xor3v1x2_0_zn mux_0_a0 mux_0_vdd pfet w=27u l=2u
-+  ad=424p pd=138u as=530p ps=208u
++ ad=424p pd=138u as=530p ps=208u 
 M1270 mux_0_a0 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_cn mux_0_vdd pfet w=27u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1271 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_cn mux_0_a0 mux_0_vdd pfet w=27u l=2u
-+  ad=440p pd=142u as=0p ps=0u
++ ad=440p pd=142u as=0p ps=0u 
 M1272 mux_0_a0 diff2_0_xor3v1x2_0_cn diff2_0_xor3v1x2_0_zn mux_0_vdd pfet w=27u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1273 diff2_0_xor3v1x2_0_cn mux_0_gnd mux_0_vdd mux_0_vdd pfet w=26u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1274 mux_0_vdd mux_0_gnd diff2_0_xor3v1x2_0_cn mux_0_vdd pfet w=26u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1275 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_iz mux_0_vdd mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1276 mux_0_vdd diff2_0_xor3v1x2_0_iz diff2_0_xor3v1x2_0_zn mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1277 diff2_0_xor3v1x2_0_iz diff2_0_an2v0x2_1_a diff2_0_xor3v1x2_0_bn mux_0_vdd pfet w=28u l=2u
-+  ad=224p pd=72u as=272p ps=122u
++ ad=224p pd=72u as=272p ps=122u 
 M1278 diff2_0_an2v0x2_1_a diff2_0_xor3v1x2_0_bn diff2_0_xor3v1x2_0_iz mux_0_vdd pfet w=28u l=2u
-+  ad=224p pd=72u as=0p ps=0u
++ ad=224p pd=72u as=0p ps=0u 
 M1279 mux_0_vdd diff2_0_in_a diff2_0_an2v0x2_1_a mux_0_vdd pfet w=28u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1280 diff2_0_xor3v1x2_0_bn diff2_0_in_b mux_0_vdd mux_0_vdd pfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1281 mux_0_vdd diff2_0_in_b diff2_0_xor3v1x2_0_bn mux_0_vdd pfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1282 diff2_0_xor3v1x2_0_a_11_12# diff2_0_xor3v1x2_0_cn mux_0_gnd mux_0_gnd nfet w=12u l=2u
-+  ad=60p pd=34u as=0p ps=0u
++ ad=60p pd=34u as=0p ps=0u 
 M1283 mux_0_a0 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_a_11_12# mux_0_gnd nfet w=12u l=2u
-+  ad=208p pd=84u as=0p ps=0u
++ ad=208p pd=84u as=0p ps=0u 
 M1284 diff2_0_xor3v1x2_0_a_28_12# diff2_0_xor3v1x2_0_zn mux_0_a0 mux_0_gnd nfet w=12u l=2u
-+  ad=60p pd=34u as=0p ps=0u
++ ad=60p pd=34u as=0p ps=0u 
 M1285 mux_0_gnd diff2_0_xor3v1x2_0_cn diff2_0_xor3v1x2_0_a_28_12# mux_0_gnd nfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1286 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_iz mux_0_gnd mux_0_gnd nfet w=14u l=2u
-+  ad=224p pd=88u as=0p ps=0u
++ ad=224p pd=88u as=0p ps=0u 
 M1287 mux_0_a0 mux_0_gnd diff2_0_xor3v1x2_0_zn mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1288 diff2_0_xor3v1x2_0_zn mux_0_gnd mux_0_a0 mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1289 mux_0_gnd diff2_0_xor3v1x2_0_iz diff2_0_xor3v1x2_0_zn mux_0_gnd nfet w=14u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1290 diff2_0_xor3v1x2_0_cn mux_0_gnd mux_0_gnd mux_0_gnd nfet w=12u l=2u
-+  ad=96p pd=40u as=0p ps=0u
++ ad=96p pd=40u as=0p ps=0u 
 M1291 mux_0_gnd mux_0_gnd diff2_0_xor3v1x2_0_cn mux_0_gnd nfet w=12u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1292 diff2_0_xor3v1x2_0_a_115_7# diff2_0_an2v0x2_1_a mux_0_gnd mux_0_gnd nfet w=13u l=2u
-+  ad=65p pd=36u as=0p ps=0u
++ ad=65p pd=36u as=0p ps=0u 
 M1293 diff2_0_xor3v1x2_0_iz diff2_0_xor3v1x2_0_bn diff2_0_xor3v1x2_0_a_115_7# mux_0_gnd nfet w=13u l=2u
-+  ad=104p pd=42u as=0p ps=0u
++ ad=104p pd=42u as=0p ps=0u 
 M1294 diff2_0_an2v0x2_1_a diff2_0_in_b diff2_0_xor3v1x2_0_iz mux_0_gnd nfet w=13u l=2u
-+  ad=114p pd=52u as=0p ps=0u
++ ad=114p pd=52u as=0p ps=0u 
 M1295 mux_0_gnd diff2_0_in_a diff2_0_an2v0x2_1_a mux_0_gnd nfet w=13u l=2u
-+  ad=0p pd=0u as=0p ps=0u
++ ad=0p pd=0u as=0p ps=0u 
 M1296 diff2_0_xor3v1x2_0_bn diff2_0_in_b mux_0_gnd mux_0_gnd nfet w=11u l=2u
-+  ad=67p pd=36u as=0p ps=0u
-C0 mux_0_b1 mux_0_a1 39.4fF
-C1 mux_0_b2 mux_0_vdd 3.1fF
-C2 mux_0_vdd diff2_2_an2v0x2_2_zn 8.8fF
-C3 mux_0_gnd diff2_2_an2v0x2_2_a 25.3fF
-C4 mux_0_s mux_0_gnd 8.3fF
-C5 mux_0_vdd diff2_2_in_a 24.6fF
-C6 mux_0_gnd diff2_1_xnr2v8x05_0_bn 6.7fF
-C7 mux_0_vdd diff2_0_xor3v1x2_0_zn 18.9fF
-C8 mux_0_vdd diff2_2_an2v0x2_0_b 20.5fF
-C9 mux_0_mxn2v0x1_0_w_n4_32# mux_0_mxn2v0x1_0_sn 9.3fF
-C10 mux_0_gnd diff2_2_xnr2v8x05_0_an 5.5fF
-C11 mux_0_mxn2v0x1_1_w_n4_32# mux_0_mxn2v0x1_1_zn 9.3fF
-C12 mux_0_gnd diff2_1_an2v0x2_1_a 19.1fF
-C13 mux_0_gnd diff2_0_xor3v1x2_0_bn 9.1fF
-C14 mux_0_gnd diff2_1_in_2c 17.5fF
-C15 diff2_0_an2v0x2_2_a mux_0_vdd 61.1fF
-C16 mux_0_gnd diff2_0_xor2v2x2_0_bn 11.2fF
-C17 mux_0_mxn2v0x1_1_w_n4_32# mux_0_mxn2v0x1_2_zn 9.3fF
-C18 diff2_1_xor3v1x2_0_iz diff2_1_xor3v1x2_0_bn 2.4fF
-C19 mux_0_b0 mux_0_vdd 26.0fF
-C20 diff2_1_an2v0x2_0_zn mux_0_gnd 8.9fF
-C21 mux_0_vdd diff2_2_xor3v1x2_0_zn 18.9fF
-C22 mux_0_gnd diff2_1_xor3v1x2_0_zn 11.9fF
-C23 mux_0_mxn2v0x1_0_sn mux_0_o0 4.3fF
-C24 diff2_1_an2v0x2_1_a diff2_1_in_b 2.0fF
-C25 mux_0_gnd diff2_2_xor3v1x2_0_cn 18.8fF
-C26 mux_0_vdd diff2_2_an2v0x2_2_a 59.6fF
-C27 mux_0_s mux_0_vdd 7.9fF
-C28 mux_0_gnd diff2_2_or2v0x3_0_zn 9.0fF
-C29 mux_0_mxn2v0x1_0_w_n4_32# mux_0_o0 5.2fF
-C30 mux_0_gnd diff2_1_in_a 26.6fF
-C31 mux_0_vdd diff2_1_xnr2v8x05_0_bn 14.4fF
-C32 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_mxn2v0x1_0_sn 9.2fF
-C33 mux_0_mxn2v0x1_1_w_n4_32# mux_0_vdd 59.4fF
-C34 mux_0_b1 diff2_1_xor2v2x2_0_bn 2.7fF
-C35 mux_0_gnd diff2_1_an2v0x2_2_a 25.3fF
-C36 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_gnd 25.5fF
-C37 mux_0_gnd diff2_2_an2v0x2_2_z 2.5fF
-C38 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_cn 4.5fF
-C39 mux_0_vdd diff2_2_xnr2v8x05_0_an 9.9fF
-C40 mux_0_vdd diff2_1_an2v0x2_1_a 12.4fF
-C41 mux_0_gnd diff2_1_an2v0x2_1_z 10.2fF
-C42 mux_0_vdd diff2_0_xor3v1x2_0_bn 15.4fF
-C43 diff2_1_xor3v1x2_0_zn diff2_1_in_b 4.3fF
-C44 mux_0_vdd diff2_1_in_2c 34.0fF
-C45 mux_0_mxn2v0x1_1_w_n4_32# mux_0_a1 13.4fF
-C46 mux_0_gnd diff2_0_in_a 26.8fF
-C47 diff2_1_in_c diff2_1_xnr2v8x05_0_zn 3.1fF
-C48 mux_0_vdd diff2_0_xor2v2x2_0_bn 18.7fF
-C49 diff2_0_an2v0x2_1_a diff2_0_in_b 2.0fF
-C50 mux_0_gnd diff2_0_xor2v2x2_0_an 21.6fF
-C51 mux_0_gnd diff2_1_in_c 33.4fF
-C52 diff2_0_an2v0x2_2_a diff2_0_xor3v1x2_0_cn 2.3fF
-C53 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_mxn2v0x1_2_zn 8.9fF
-C54 diff2_1_an2v0x2_0_zn mux_0_vdd 8.8fF
-C55 mux_0_vdd diff2_1_xor3v1x2_0_zn 18.9fF
-C56 mux_0_gnd diff2_1_xor3v1x2_0_bn 9.1fF
-C57 mux_0_gnd diff2_0_an2v0x2_1_zn 8.9fF
-C58 mux_0_vdd diff2_2_xor3v1x2_0_cn 31.6fF
-C59 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_o0 2.3fF
-C60 mux_0_vdd diff2_2_or2v0x3_0_zn 12.7fF
-C61 mux_0_vdd diff2_1_in_a 24.6fF
-C62 diff2_1_xor3v1x2_0_zn mux_0_a1 4.6fF
-C63 mux_0_vdd diff2_1_an2v0x2_2_a 59.6fF
-C64 diff2_1_an2v0x2_2_zn mux_0_gnd 8.9fF
-C65 mux_0_b1 diff2_1_xor2v2x2_0_an 3.9fF
-C66 mux_0_vdd diff2_2_an2v0x2_2_z 2.4fF
-C67 mux_0_vdd diff2_1_an2v0x2_1_z 17.7fF
-C68 diff2_1_in_b diff2_1_xor3v1x2_0_bn 2.6fF
-C69 mux_0_vdd diff2_0_in_a 24.6fF
-C70 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_cn 4.5fF
-C71 mux_0_gnd diff2_1_or2v0x3_0_zn 9.0fF
-C72 diff2_2_an2v0x2_0_zn diff2_2_in_a 2.2fF
-C73 mux_0_gnd diff2_0_in_b 56.4fF
-C74 mux_0_vdd diff2_0_xor2v2x2_0_an 27.4fF
-C75 mux_0_vdd diff2_1_in_c 39.6fF
-C76 mux_0_a0 diff2_0_xor3v1x2_0_zn 4.6fF
-C77 mux_0_gnd diff2_0_an2v0x2_0_z 12.8fF
-C78 diff2_1_an2v0x2_2_a diff2_1_xor3v1x2_0_cn 2.3fF
-C79 mux_0_vdd diff2_1_xor3v1x2_0_bn 15.4fF
-C80 mux_0_vdd diff2_0_an2v0x2_1_zn 8.8fF
-C81 mux_0_gnd diff2_1_xor3v1x2_0_iz 24.9fF
-C82 mux_0_gnd diff2_0_an2v0x2_1_a 19.1fF
-C83 mux_0_gnd diff2_0_or2v0x3_0_zn 9.0fF
-C84 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_gnd 76.0fF
-C85 diff2_1_an2v0x2_2_zn mux_0_vdd 8.8fF
-C86 mux_0_mxn2v0x1_0_w_n4_32# mux_0_vdd 20.7fF
-C87 mux_0_gnd diff2_0_xnr2v8x05_0_zn 15.0fF
-C88 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_mxn2v0x1_1_zn 8.9fF
-C89 mux_0_mxn2v0x1_0_zn mux_0_b0 2.7fF
-C90 diff2_0_an2v0x2_0_zn diff2_0_in_a 2.2fF
-C91 mux_0_vdd diff2_1_or2v0x3_0_zn 12.7fF
-C92 mux_0_vdd diff2_0_in_b 50.3fF
-C93 mux_0_mxn2v0x1_1_w_n4_32# mux_0_mxn2v0x1_1_sn 9.3fF
-C94 mux_0_vdd diff2_0_an2v0x2_0_z 24.6fF
-C95 mux_0_vdd diff2_1_xor3v1x2_0_iz 15.8fF
-C96 mux_0_gnd diff2_1_xnr2v8x05_0_zn 11.9fF
-C97 mux_0_gnd diff2_2_xor3v1x2_0_bn 9.1fF
-C98 mux_0_b2 diff2_2_xor2v2x2_0_bn 2.7fF
-C99 mux_0_vdd diff2_0_an2v0x2_1_a 12.4fF
-C100 mux_0_vdd diff2_0_or2v0x3_0_zn 12.7fF
-C101 diff2_2_an2v0x2_1_a diff2_2_in_b 2.0fF
-C102 mux_0_vdd diff2_0_xnr2v8x05_0_zn 4.4fF
-C103 mux_0_gnd diff2_0_an2v0x2_2_zn 8.9fF
-C104 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_a1 4.8fF
-C105 mux_0_gnd diff2_1_in_b 56.1fF
-C106 mux_0_gnd diff2_2_xor2v2x2_0_an 21.6fF
-C107 mux_0_a2 diff2_2_xor3v1x2_0_zn 4.6fF
-C108 mux_0_s mux_0_a2 4.5fF
-C109 mux_0_vdd diff2_1_xnr2v8x05_0_zn 4.4fF
-C110 mux_0_vdd diff2_2_xor3v1x2_0_bn 15.4fF
-C111 mux_0_mxn2v0x1_1_w_n4_32# mux_0_a2 11.6fF
-C112 mux_0_mxn2v0x1_1_w_n4_32# mux_0_mxn2v0x1_2_sn 9.3fF
-C113 mux_0_gnd mux_0_vdd 45.8fF
-C114 mux_0_gnd diff2_0_an2v0x2_1_z 10.2fF
-C115 diff2_2_in_b diff2_2_xor3v1x2_0_zn 4.3fF
-C116 mux_0_b1 mux_0_b0 18.4fF
-C117 mux_0_vdd diff2_0_an2v0x2_2_zn 10.3fF
-C118 mux_0_gnd mux_0_a1 15.3fF
-C119 mux_0_vdd diff2_1_in_b 50.3fF
-C120 mux_0_gnd diff2_2_in_c 34.4fF
-C121 mux_0_vdd diff2_2_xor2v2x2_0_an 25.5fF
-C122 mux_0_gnd diff2_1_xor3v1x2_0_cn 18.8fF
-C123 diff2_0_xor3v1x2_0_iz diff2_0_xor3v1x2_0_bn 2.4fF
-C124 mux_0_a2 diff2_2_xor3v1x2_0_cn 4.1fF
-C125 mux_0_mxn2v0x1_1_w_n4_32# mux_0_b1 6.6fF
-C126 mux_0_a0 mux_0_mxn2v0x1_0_w_n4_32# 11.6fF
-C127 mux_0_mxn2v0x1_0_w_n4_32# mux_0_mxn2v0x1_0_zn 9.3fF
-C128 mux_0_gnd diff2_2_xnr2v8x05_0_bn 6.7fF
-C129 mux_0_gnd diff2_0_an2v0x2_0_zn 10.8fF
-C130 mux_0_gnd diff2_0_an2v0x2_0_b 7.3fF
-C131 mux_0_vdd diff2_0_an2v0x2_1_z 17.7fF
-C132 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_mxn2v0x1_2_sn 9.2fF
-C133 mux_0_mxn2v0x1_1_w_n4_32# mux_0_b2 6.6fF
-C134 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_a2 4.8fF
-C135 mux_0_gnd diff2_0_xor3v1x2_0_cn 19.1fF
-C136 diff2_2_xor3v1x2_0_iz diff2_2_xor3v1x2_0_bn 2.4fF
-C137 mux_0_vdd mux_0_a1 38.7fF
-C138 mux_0_gnd diff2_2_xor3v1x2_0_iz 24.9fF
-C139 diff2_2_in_2c mux_0_gnd 17.8fF
-C140 mux_0_a0 mux_0_o0 2.3fF
-C141 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_mxn2v0x1_1_sn 9.2fF
-C142 mux_0_vdd diff2_2_in_c 40.7fF
-C143 mux_0_gnd diff2_1_xor2v2x2_0_bn 11.2fF
-C144 mux_0_vdd diff2_1_xor3v1x2_0_cn 31.6fF
-C145 mux_0_a0 mux_0_mxn2v0x1_0_w_n4_n4# 4.8fF
-C146 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_mxn2v0x1_0_zn 8.9fF
-C147 mux_0_gnd diff2_2_xnr2v8x05_0_zn 11.9fF
-C148 mux_0_mxn2v0x1_1_w_n4_32# mux_0_o1 5.0fF
-C149 mux_0_vdd diff2_2_xnr2v8x05_0_bn 14.4fF
-C150 mux_0_vdd diff2_0_an2v0x2_0_zn 8.8fF
-C151 mux_0_a1 diff2_1_xor3v1x2_0_cn 4.1fF
-C152 mux_0_vdd diff2_0_an2v0x2_0_b 20.5fF
-C153 mux_0_vdd diff2_0_xor3v1x2_0_cn 31.6fF
-C154 mux_0_mxn2v0x1_1_w_n4_32# mux_0_s 36.4fF
-C155 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_b2 8.7fF
-C156 mux_0_gnd diff2_0_xnr2v8x05_0_an 6.8fF
-C157 mux_0_b0 diff2_0_xor2v2x2_0_bn 2.7fF
-C158 diff2_2_in_2c mux_0_vdd 33.2fF
-C159 mux_0_vdd diff2_2_xor3v1x2_0_iz 15.8fF
-C160 mux_0_gnd diff2_2_an2v0x2_0_zn 8.9fF
-C161 mux_0_gnd diff2_2_an2v0x2_1_z 10.2fF
-C162 mux_0_vdd diff2_1_xor2v2x2_0_bn 17.7fF
-C163 mux_0_gnd diff2_1_an2v0x2_1_zn 8.9fF
-C164 mux_0_a0 mux_0_gnd 14.9fF
-C165 mux_0_gnd diff2_1_xor2v2x2_0_an 21.6fF
-C166 mux_0_gnd diff2_2_an2v0x2_1_zn 8.9fF
-C167 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_cn 4.5fF
-C168 mux_0_vdd diff2_2_xnr2v8x05_0_zn 4.4fF
++ ad=67p pd=36u as=0p ps=0u 
+C0 mux_0_a0 mux_0_mxn2v0x1_0_w_n4_n4# 4.8fF
+C1 mux_0_a2 mux_0_mxn2v0x1_2_w_n4_n4# 4.8fF
+C2 diff2_2_an2v0x2_1_zn mux_0_vdd 8.8fF
+C3 diff2_2_an2v0x2_0_zn mux_0_gnd 8.9fF
+C4 mux_0_mxn2v0x1_1_sn mux_0_mxn2v0x1_0_w_n4_n4# 9.2fF
+C5 mux_0_gnd diff2_1_or2v0x3_0_zn 9.0fF
+C6 mux_0_gnd diff2_1_in_a 27.8fF
+C7 diff2_2_xnr2v8x05_0_an mux_0_vdd 9.9fF
+C8 mux_0_gnd diff2_2_an2v0x2_0_b 5.9fF
+C9 mux_0_gnd mux_0_mxn2v0x1_2_w_n4_n4# 25.5fF
+C10 diff2_2_an2v0x2_0_z mux_0_vdd 24.6fF
+C11 mux_0_b0 mux_0_vdd 26.0fF
+C12 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_s 30.3fF
+C13 mux_0_vdd diff2_2_or2v0x3_0_zn 12.7fF
+C14 mux_0_mxn2v0x1_1_w_n4_32# mux_0_b2 6.6fF
+C15 diff2_0_an2v0x2_0_b mux_0_vdd 20.5fF
+C16 mux_0_gnd diff2_2_an2v0x2_1_zn 8.9fF
+C17 diff2_0_xor3v1x2_0_bn diff2_0_xor3v1x2_0_iz 2.4fF
+C18 mux_0_vdd diff2_2_in_b 50.3fF
+C19 diff2_2_xor3v1x2_0_bn mux_0_vdd 15.4fF
+C20 mux_0_b2 diff2_2_xor2v2x2_0_bn 2.7fF
+C21 mux_0_o0 mux_0_mxn2v0x1_0_w_n4_n4# 2.3fF
+C22 mux_0_a1 mux_0_vdd 38.7fF
+C23 mux_0_gnd diff2_2_xnr2v8x05_0_an 5.5fF
+C24 mux_0_vdd diff2_0_an2v0x2_1_zn 8.8fF
+C25 diff2_2_an2v0x2_1_a mux_0_vdd 12.4fF
+C26 mux_0_a0 diff2_0_xor3v1x2_0_cn 4.1fF
+C27 mux_0_vdd diff2_0_or2v0x3_0_zn 12.7fF
+C28 diff2_0_an2v0x2_2_a diff2_0_xor3v1x2_0_cn 2.3fF
+C29 mux_0_mxn2v0x1_1_sn mux_0_mxn2v0x1_1_w_n4_32# 9.3fF
+C30 mux_0_b0 diff2_0_xor2v2x2_0_bn 2.7fF
+C31 mux_0_gnd diff2_2_an2v0x2_0_z 12.8fF
+C32 mux_0_mxn2v0x1_0_zn mux_0_mxn2v0x1_0_w_n4_32# 9.3fF
+C33 mux_0_mxn2v0x1_1_w_n4_32# mux_0_mxn2v0x1_2_zn 9.3fF
+C34 mux_0_gnd mux_0_b0 10.9fF
+C35 diff2_2_xor2v2x2_0_an diff2_2_xor2v2x2_0_bn 3.3fF
+C36 mux_0_gnd diff2_2_or2v0x3_0_zn 9.0fF
+C37 mux_0_gnd diff2_0_an2v0x2_0_b 7.3fF
+C38 mux_0_gnd diff2_2_in_b 60.5fF
+C39 mux_0_o1 mux_0_mxn2v0x1_0_w_n4_n4# 2.3fF
+C40 mux_0_gnd diff2_2_xor3v1x2_0_bn 9.1fF
+C41 diff2_1_xor2v2x2_0_bn mux_0_vdd 17.7fF
+C42 mux_0_gnd mux_0_a1 15.3fF
+C43 mux_0_mxn2v0x1_1_w_n4_32# mux_0_s 36.4fF
+C44 mux_0_gnd diff2_0_an2v0x2_1_zn 8.9fF
+C45 mux_0_vdd diff2_1_an2v0x2_2_a 59.6fF
+C46 mux_0_gnd diff2_2_an2v0x2_1_a 20.0fF
+C47 mux_0_gnd diff2_0_or2v0x3_0_zn 9.0fF
+C48 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_mxn2v0x1_1_zn 8.9fF
+C49 mux_0_b2 diff2_2_xor2v2x2_0_an 3.9fF
+C50 mux_0_a1 diff2_1_xor3v1x2_0_zn 4.6fF
+C51 diff2_2_in_a mux_0_vdd 24.6fF
+C52 mux_0_b2 mux_0_mxn2v0x1_2_zn 2.7fF
+C53 diff2_2_xor3v1x2_0_bn diff2_2_xor3v1x2_0_iz 2.4fF
+C54 mux_0_b0 mux_0_mxn2v0x1_0_w_n4_n4# 8.7fF
+C55 mux_0_mxn2v0x1_0_w_n4_32# mux_0_a0 11.6fF
+C56 diff2_1_in_2c mux_0_vdd 34.0fF
+C57 mux_0_gnd diff2_1_xor2v2x2_0_bn 11.2fF
+C58 diff2_2_in_2c mux_0_vdd 33.2fF
+C59 mux_0_gnd diff2_1_an2v0x2_2_a 25.9fF
+C60 diff2_0_an2v0x2_0_z mux_0_vdd 24.6fF
+C61 mux_0_vdd diff2_1_xnr2v8x05_0_zn 4.4fF
+C62 mux_0_a1 mux_0_mxn2v0x1_0_w_n4_n4# 4.8fF
+C63 mux_0_b1 mux_0_b0 18.4fF
+C64 mux_0_gnd diff2_2_in_a 27.8fF
+C65 mux_0_o1 mux_0_mxn2v0x1_1_w_n4_32# 5.0fF
+C66 mux_0_a2 mux_0_vdd 36.7fF
+C67 diff2_1_an2v0x2_0_zn diff2_1_in_a 2.2fF
+C68 diff2_2_xor3v1x2_0_zn diff2_2_in_b 4.3fF
+C69 diff2_0_xnr2v8x05_0_bn mux_0_vdd 14.4fF
+C70 diff2_1_an2v0x2_1_zn mux_0_vdd 8.8fF
+C71 mux_0_mxn2v0x1_0_w_n4_32# mux_0_s 18.7fF
+C72 mux_0_a1 diff2_1_xor3v1x2_0_cn 4.1fF
+C73 mux_0_vdd diff2_0_xor2v2x2_0_bn 18.7fF
+C74 mux_0_mxn2v0x1_1_w_n4_32# mux_0_mxn2v0x1_1_zn 9.3fF
+C75 mux_0_b1 mux_0_a1 39.4fF
+C76 mux_0_gnd diff2_1_in_2c 17.5fF
+C77 mux_0_a0 mux_0_o0 2.3fF
+C78 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_b2 8.7fF
+C79 diff2_1_xor2v2x2_0_an diff2_1_xor2v2x2_0_bn 3.3fF
+C80 mux_0_gnd mux_0_vdd 45.8fF
+C81 mux_0_mxn2v0x1_0_w_n4_32# mux_0_o0 5.2fF
+C82 mux_0_vdd diff2_0_in_a 24.6fF
+C83 mux_0_vdd diff2_0_in_b 50.3fF
+C84 mux_0_gnd diff2_2_in_2c 17.8fF
+C85 mux_0_mxn2v0x1_1_w_n4_32# mux_0_o2 6.3fF
+C86 mux_0_gnd diff2_0_an2v0x2_0_z 12.8fF
+C87 mux_0_gnd diff2_1_xnr2v8x05_0_zn 11.9fF
+C88 mux_0_vdd diff2_1_in_c 39.6fF
+C89 mux_0_vdd diff2_1_xor3v1x2_0_zn 18.9fF
+C90 mux_0_mxn2v0x1_0_zn mux_0_b0 2.7fF
+C91 mux_0_gnd mux_0_a2 14.9fF
+C92 diff2_1_xnr2v8x05_0_zn diff2_1_in_c 3.1fF
+C93 mux_0_vdd diff2_2_in_c 40.7fF
+C94 mux_0_vdd diff2_0_xor3v1x2_0_zn 18.9fF
+C95 mux_0_gnd diff2_0_xnr2v8x05_0_bn 7.5fF
+C96 mux_0_gnd diff2_1_an2v0x2_1_zn 8.9fF
+C97 diff2_2_xor3v1x2_0_iz mux_0_vdd 15.8fF
+C98 mux_0_mxn2v0x1_1_w_n4_32# mux_0_a1 13.4fF
+C99 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_mxn2v0x1_2_zn 8.9fF
+C100 mux_0_gnd diff2_0_xor2v2x2_0_bn 11.2fF
+C101 diff2_1_xor3v1x2_0_cn diff2_1_an2v0x2_2_a 2.3fF
+C102 mux_0_b1 diff2_1_xor2v2x2_0_bn 2.7fF
+C103 diff2_1_an2v0x2_2_zn mux_0_vdd 8.8fF
+C104 diff2_1_xor2v2x2_0_an mux_0_vdd 25.5fF
+C105 mux_0_gnd diff2_0_in_a 28.0fF
+C106 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_mxn2v0x1_0_sn 9.2fF
+C107 mux_0_gnd diff2_0_in_b 60.8fF
+C108 diff2_2_an2v0x2_2_a mux_0_vdd 59.6fF
+C109 mux_0_vdd diff2_1_an2v0x2_0_b 20.5fF
+C110 mux_0_gnd diff2_1_in_c 34.1fF
+C111 diff2_0_an2v0x2_1_z mux_0_vdd 17.9fF
+C112 mux_0_vdd diff2_1_in_b 50.3fF
+C113 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_s 15.2fF
+C114 mux_0_gnd diff2_1_xor3v1x2_0_zn 11.9fF
+C115 mux_0_vdd diff2_0_an2v0x2_0_zn 8.8fF
+C116 mux_0_vdd diff2_2_xor3v1x2_0_cn 31.6fF
+C117 mux_0_gnd diff2_0_xor3v1x2_0_zn 13.9fF
+C118 mux_0_gnd diff2_2_in_c 35.0fF
+C119 mux_0_vdd diff2_1_xor3v1x2_0_iz 15.8fF
+C120 mux_0_b0 diff2_0_xor2v2x2_0_an 3.9fF
+C121 diff2_2_an2v0x2_2_zn mux_0_vdd 8.8fF
+C122 mux_0_vdd diff2_1_xor3v1x2_0_cn 31.6fF
+C123 diff2_0_an2v0x2_2_zn mux_0_vdd 10.3fF
+C124 diff2_2_xor3v1x2_0_zn mux_0_vdd 18.9fF
+C125 diff2_0_in_b diff2_0_xor3v1x2_0_zn 4.3fF
+C126 mux_0_gnd diff2_2_xor3v1x2_0_iz 24.9fF
+C127 mux_0_mxn2v0x1_2_sn mux_0_mxn2v0x1_1_w_n4_32# 9.3fF
+C128 mux_0_mxn2v0x1_0_w_n4_32# mux_0_b0 6.6fF
+C129 diff2_2_an2v0x2_2_z mux_0_vdd 2.4fF
+C130 mux_0_b1 mux_0_vdd 13.1fF
+C131 mux_0_vdd diff2_0_an2v0x2_1_a 12.4fF
+C132 mux_0_gnd diff2_1_an2v0x2_2_zn 8.9fF
+C133 mux_0_a2 diff2_2_xor3v1x2_0_cn 4.1fF
+C134 diff2_1_xor2v2x2_0_an mux_0_gnd 21.6fF
+C135 mux_0_vdd diff2_2_xnr2v8x05_0_bn 14.4fF
+C136 mux_0_a2 diff2_2_xor3v1x2_0_zn 4.6fF
+C137 mux_0_gnd diff2_2_an2v0x2_2_a 25.9fF
+C138 mux_0_gnd mux_0_mxn2v0x1_0_w_n4_n4# 76.0fF
+C139 mux_0_gnd diff2_1_an2v0x2_0_b 5.9fF
+C140 diff2_1_an2v0x2_0_z mux_0_vdd 24.6fF
+C141 mux_0_gnd diff2_0_an2v0x2_1_z 10.2fF
+C142 mux_0_gnd diff2_1_in_b 60.5fF
+C143 mux_0_gnd diff2_2_xor3v1x2_0_cn 18.8fF
+C144 mux_0_gnd diff2_0_an2v0x2_0_zn 10.8fF
+C145 diff2_0_an2v0x2_0_zn diff2_0_in_a 2.2fF
+C146 mux_0_gnd diff2_1_xor3v1x2_0_iz 24.9fF
+C147 mux_0_gnd diff2_2_an2v0x2_2_zn 8.9fF
+C148 diff2_1_xor3v1x2_0_zn diff2_1_in_b 4.3fF
+C149 mux_0_gnd diff2_1_xor3v1x2_0_cn 18.8fF
+C150 mux_0_gnd diff2_0_an2v0x2_2_zn 8.9fF
+C151 mux_0_gnd diff2_2_xor3v1x2_0_zn 11.9fF
+C152 diff2_1_an2v0x2_1_a mux_0_vdd 12.4fF
+C153 mux_0_mxn2v0x1_1_w_n4_32# mux_0_vdd 59.4fF
+C154 mux_0_vdd diff2_0_xor3v1x2_0_bn 15.4fF
+C155 mux_0_vdd diff2_0_xor3v1x2_0_cn 31.6fF
+C156 mux_0_gnd diff2_2_an2v0x2_2_z 2.5fF
+C157 diff2_0_xnr2v8x05_0_zn mux_0_vdd 4.4fF
+C158 mux_0_gnd mux_0_b1 17.2fF
+C159 mux_0_gnd diff2_0_an2v0x2_1_a 20.0fF
+C160 mux_0_vdd diff2_2_xor2v2x2_0_bn 17.7fF
+C161 diff2_1_xor3v1x2_0_zn diff2_1_xor3v1x2_0_cn 4.5fF
+C162 diff2_0_in_b diff2_0_an2v0x2_1_a 2.0fF
+C163 mux_0_vdd diff2_1_xor3v1x2_0_bn 15.4fF
+C164 mux_0_gnd diff2_2_xnr2v8x05_0_bn 6.7fF
+C165 mux_0_a2 mux_0_mxn2v0x1_1_w_n4_32# 11.6fF
+C166 diff2_1_an2v0x2_0_z mux_0_gnd 12.8fF
+C167 diff2_1_an2v0x2_0_zn mux_0_vdd 8.8fF
+C168 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_o2 2.3fF
 C169 diff2_2_an2v0x2_2_a diff2_2_xor3v1x2_0_cn 2.3fF
-C170 mux_0_vdd diff2_0_xnr2v8x05_0_an 9.9fF
-C171 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_s 15.2fF
-C172 mux_0_mxn2v0x1_1_w_n4_32# mux_0_o2 6.3fF
-C173 diff2_2_in_c diff2_2_xnr2v8x05_0_zn 3.1fF
-C174 mux_0_gnd diff2_0_xnr2v8x05_0_bn 7.5fF
-C175 mux_0_b0 diff2_0_xor2v2x2_0_an 3.9fF
-C176 diff2_2_an2v0x2_0_zn mux_0_vdd 8.8fF
-C177 mux_0_vdd diff2_2_an2v0x2_1_z 17.7fF
-C178 mux_0_vdd diff2_1_an2v0x2_1_zn 8.8fF
-C179 mux_0_a0 mux_0_vdd 35.4fF
-C180 mux_0_gnd diff2_2_an2v0x2_0_z 12.8fF
-C181 mux_0_vdd diff2_1_xor2v2x2_0_an 25.5fF
-C182 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_b1 10.2fF
-C183 mux_0_vdd diff2_2_an2v0x2_1_zn 8.8fF
-C184 diff2_0_xor3v1x2_0_zn diff2_0_in_b 4.3fF
-C185 mux_0_gnd diff2_1_an2v0x2_0_z 12.8fF
-C186 diff2_1_an2v0x2_0_zn diff2_1_in_a 2.2fF
-C187 mux_0_gnd diff2_1_an2v0x2_0_b 5.9fF
-C188 mux_0_gnd mux_0_a2 14.9fF
-C189 mux_0_gnd diff2_1_xnr2v8x05_0_an 5.5fF
-C190 mux_0_mxn2v0x1_0_w_n4_32# mux_0_b0 6.6fF
-C191 mux_0_gnd diff2_2_xor2v2x2_0_bn 11.2fF
-C192 diff2_2_in_b diff2_2_xor3v1x2_0_bn 2.6fF
-C193 mux_0_s mux_0_mxn2v0x1_0_w_n4_32# 18.7fF
-C194 diff2_0_xor2v2x2_0_bn diff2_0_xor2v2x2_0_an 3.3fF
-C195 mux_0_gnd diff2_0_xor3v1x2_0_iz 25.5fF
-C196 mux_0_vdd diff2_0_xnr2v8x05_0_bn 14.4fF
-C197 mux_0_gnd diff2_2_in_b 56.1fF
-C198 mux_0_mxn2v0x1_2_w_n4_n4# mux_0_o2 2.3fF
-C199 mux_0_vdd diff2_2_an2v0x2_0_z 24.6fF
-C200 mux_0_b1 mux_0_gnd 17.2fF
-C201 diff2_2_xor2v2x2_0_bn diff2_2_xor2v2x2_0_an 3.3fF
-C202 mux_0_a0 diff2_0_xor3v1x2_0_cn 4.1fF
-C203 mux_0_vdd diff2_1_an2v0x2_0_z 24.6fF
-C204 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_o1 2.3fF
-C205 mux_0_vdd diff2_1_an2v0x2_0_b 20.5fF
-C206 mux_0_mxn2v0x1_0_w_n4_n4# mux_0_b0 8.7fF
-C207 mux_0_vdd mux_0_a2 36.7fF
-C208 mux_0_vdd diff2_1_xnr2v8x05_0_an 9.9fF
-C209 mux_0_gnd diff2_2_an2v0x2_1_a 19.1fF
-C210 mux_0_b2 mux_0_gnd 11.9fF
-C211 diff2_0_xor3v1x2_0_bn diff2_0_in_b 2.6fF
-C212 mux_0_gnd diff2_2_an2v0x2_2_zn 8.9fF
-C213 mux_0_vdd diff2_2_xor2v2x2_0_bn 17.7fF
-C214 mux_0_s mux_0_mxn2v0x1_0_w_n4_n4# 30.3fF
-C215 mux_0_gnd diff2_2_in_a 26.6fF
-C216 mux_0_gnd diff2_0_xor3v1x2_0_zn 13.9fF
-C217 mux_0_gnd diff2_2_an2v0x2_0_b 5.9fF
-C218 mux_0_vdd diff2_0_xor3v1x2_0_iz 15.8fF
-C219 diff2_1_xor2v2x2_0_bn diff2_1_xor2v2x2_0_an 3.3fF
-C220 mux_0_vdd diff2_2_in_b 50.3fF
-C221 mux_0_mxn2v0x1_2_zn mux_0_b2 2.7fF
-C222 mux_0_b2 diff2_2_xor2v2x2_0_an 3.9fF
-C223 mux_0_gnd diff2_0_an2v0x2_2_a 25.3fF
-C224 mux_0_b1 mux_0_vdd 13.1fF
-C225 mux_0_gnd mux_0_b0 10.9fF
-C226 mux_0_gnd diff2_2_xor3v1x2_0_zn 11.9fF
-C227 mux_0_vdd diff2_2_an2v0x2_1_a 12.4fF
-C228 diff2_0_in_a 0 4.4fF
-C229 diff2_0_an2v0x2_0_b 0 2.9fF
-C230 diff2_1_in_c 0 37.1fF
-C231 diff2_0_an2v0x2_0_z 0 5.0fF
-C232 diff2_1_in_a 0 4.4fF
-C233 mux_0_a1 0 28.9fF
-C234 diff2_1_an2v0x2_0_b 0 2.9fF
-C235 diff2_2_in_c 0 36.8fF
-C236 diff2_1_an2v0x2_0_z 0 5.0fF
-C237 diff2_1_in_2c 0 29.6fF
-C238 diff2_2_in_a 0 4.4fF
-C239 mux_0_a2 0 38.7fF
-C240 diff2_2_an2v0x2_0_b 0 2.9fF
-C241 diff2_2_an2v0x2_0_z 0 5.0fF
-C242 diff2_2_in_2c 0 34.8fF
-C243 mux_0_vdd 0 129.0fF
-C244 mux_0_b0 0 47.5fF
-C245 mux_0_s 0 16.3fF
-C246 mux_0_a0 0 99.1fF
-C247 mux_0_gnd 0 171.6fF
-C248 mux_0_o1 0 2.4fF
-C249 mux_0_b1 0 87.1fF
-C250 mux_0_b2 0 24.6fF
+C170 diff2_1_an2v0x2_1_z mux_0_vdd 17.9fF
+C171 mux_0_b2 mux_0_vdd 3.1fF
+C172 mux_0_gnd diff2_1_an2v0x2_1_a 20.0fF
+C173 mux_0_gnd diff2_0_xor3v1x2_0_bn 9.1fF
+C174 mux_0_gnd diff2_0_xor3v1x2_0_cn 19.1fF
+C175 mux_0_vdd diff2_0_xor3v1x2_0_iz 15.8fF
+C176 mux_0_vdd diff2_1_xnr2v8x05_0_an 9.9fF
+C177 mux_0_vdd diff2_1_xnr2v8x05_0_bn 14.4fF
+C178 diff2_0_in_b diff2_0_xor3v1x2_0_bn 2.6fF
+C179 mux_0_gnd diff2_0_xnr2v8x05_0_zn 15.0fF
+C180 diff2_1_xor2v2x2_0_an mux_0_b1 3.9fF
+C181 mux_0_gnd diff2_2_xor2v2x2_0_bn 11.2fF
+C182 mux_0_b1 mux_0_mxn2v0x1_0_w_n4_n4# 10.2fF
+C183 mux_0_gnd diff2_1_xor3v1x2_0_bn 9.1fF
+C184 diff2_2_an2v0x2_1_z mux_0_vdd 17.9fF
+C185 mux_0_vdd diff2_0_xor2v2x2_0_an 27.4fF
+C186 mux_0_a0 mux_0_vdd 35.4fF
+C187 mux_0_mxn2v0x1_0_w_n4_32# mux_0_mxn2v0x1_0_sn 9.3fF
+C188 diff2_2_xor3v1x2_0_zn diff2_2_xor3v1x2_0_cn 4.5fF
+C189 mux_0_mxn2v0x1_0_w_n4_32# mux_0_vdd 20.7fF
+C190 diff2_0_xor3v1x2_0_zn diff2_0_xor3v1x2_0_cn 4.5fF
+C191 mux_0_vdd diff2_0_an2v0x2_2_a 61.1fF
+C192 diff2_2_xor2v2x2_0_an mux_0_vdd 25.5fF
+C193 diff2_0_xnr2v8x05_0_an mux_0_vdd 9.9fF
+C194 mux_0_gnd diff2_1_an2v0x2_0_zn 8.9fF
+C195 mux_0_gnd diff2_1_an2v0x2_1_z 10.2fF
+C196 diff2_2_xnr2v8x05_0_zn mux_0_vdd 4.4fF
+C197 mux_0_gnd mux_0_b2 11.9fF
+C198 mux_0_gnd diff2_1_xnr2v8x05_0_an 5.5fF
+C199 mux_0_gnd diff2_0_xor3v1x2_0_iz 25.5fF
+C200 mux_0_gnd diff2_1_xnr2v8x05_0_bn 6.7fF
+C201 diff2_2_an2v0x2_0_zn diff2_2_in_a 2.2fF
+C202 diff2_0_xor2v2x2_0_bn diff2_0_xor2v2x2_0_an 3.3fF
+C203 diff2_1_an2v0x2_1_a diff2_1_in_b 2.0fF
+C204 mux_0_mxn2v0x1_2_sn mux_0_mxn2v0x1_2_w_n4_n4# 9.2fF
+C205 mux_0_mxn2v0x1_0_zn mux_0_mxn2v0x1_0_w_n4_n4# 8.9fF
+C206 mux_0_vdd mux_0_s 7.9fF
+C207 mux_0_gnd diff2_2_an2v0x2_1_z 10.2fF
+C208 mux_0_gnd diff2_0_xor2v2x2_0_an 21.6fF
+C209 mux_0_gnd mux_0_a0 14.9fF
+C210 mux_0_gnd diff2_0_an2v0x2_2_a 25.9fF
+C211 mux_0_gnd diff2_2_xor2v2x2_0_an 21.6fF
+C212 diff2_1_in_b diff2_1_xor3v1x2_0_bn 2.6fF
+C213 mux_0_o0 mux_0_mxn2v0x1_0_sn 4.3fF
+C214 mux_0_gnd diff2_0_xnr2v8x05_0_an 6.8fF
+C215 diff2_2_an2v0x2_0_zn mux_0_vdd 8.8fF
+C216 diff2_2_xor3v1x2_0_bn diff2_2_in_b 2.6fF
+C217 mux_0_a2 mux_0_s 4.5fF
+C218 diff2_1_or2v0x3_0_zn mux_0_vdd 12.7fF
+C219 mux_0_b1 mux_0_mxn2v0x1_1_w_n4_32# 6.6fF
+C220 diff2_1_xor3v1x2_0_iz diff2_1_xor3v1x2_0_bn 2.4fF
+C221 diff2_2_an2v0x2_1_a diff2_2_in_b 2.0fF
+C222 mux_0_a0 diff2_0_xor3v1x2_0_zn 4.6fF
+C223 mux_0_vdd diff2_1_in_a 24.6fF
+C224 diff2_2_xnr2v8x05_0_zn mux_0_gnd 11.9fF
+C225 diff2_2_an2v0x2_0_b mux_0_vdd 20.5fF
+C226 mux_0_gnd mux_0_s 8.3fF
+C227 diff2_2_xnr2v8x05_0_zn diff2_2_in_c 3.1fF
+C228 diff2_0_an2v0x2_0_b 0 2.9fF
+C229 diff2_1_in_c 0 37.1fF
+C230 diff2_0_an2v0x2_0_z 0 5.0fF
+C231 mux_0_a1 0 28.9fF
+C232 diff2_1_an2v0x2_0_b 0 2.9fF
+C233 diff2_2_in_c 0 36.8fF
+C234 diff2_1_an2v0x2_0_z 0 5.0fF
+C235 diff2_1_in_2c 0 29.6fF
+C236 mux_0_a2 0 38.7fF
+C237 diff2_2_an2v0x2_0_b 0 2.9fF
+C238 diff2_2_an2v0x2_0_z 0 5.0fF
+C239 diff2_2_in_2c 0 34.8fF
+C240 mux_0_vdd 0 129.0fF
+C241 mux_0_b0 0 47.5fF
+C242 mux_0_s 0 25.7fF
+C243 mux_0_a0 0 99.1fF
+C244 mux_0_gnd 0 383.9fF
+C245 mux_0_o1 0 2.3fF
+C246 mux_0_b1 0 87.1fF
+C247 mux_0_b2 0 24.6fF
 
 v_ss mux_0_gnd 0 0
 v_dd mux_0_vdd 0 5
