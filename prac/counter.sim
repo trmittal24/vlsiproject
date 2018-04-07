@@ -1,0 +1,391 @@
+| units: 100 tech: scmos format: MIT
+p t_0/mxn2v0x05_0/zn t_0/d t_1/mxn2v0x05_0/vdd 2 12 58 -47
+p t_0/zn t_1/mxn2v0x05_0/vdd t_0/mxn2v0x05_0/a_21_46# 2 12 48 -47
+p t_0/mxn2v0x05_0/s t_0/mxn2v0x05_0/a_21_46# t_0/mxn2v0x05_0/zn 2 12 41 -47
+p t_0/mxn2v0x05_0/sn t_0/mxn2v0x05_0/zn t_0/mxn2v0x05_0/a_38_46# 2 12 31 -47
+p t_2/vss t_0/mxn2v0x05_0/a_38_46# t_1/mxn2v0x05_0/vdd 2 12 24 -47
+p t_0/mxn2v0x05_0/s t_1/mxn2v0x05_0/vdd t_0/mxn2v0x05_0/sn 2 6 14 -39
+n t_0/mxn2v0x05_0/zn t_0/d t_2/vss 2 6 58 -13
+n t_0/zn t_2/vss t_0/mxn2v0x05_0/a_21_12# 2 6 48 -13
+n t_0/mxn2v0x05_0/sn t_0/mxn2v0x05_0/a_21_12# t_0/mxn2v0x05_0/zn 2 6 41 -13
+n t_0/mxn2v0x05_0/s t_0/mxn2v0x05_0/zn t_0/mxn2v0x05_0/a_38_12# 2 6 31 -13
+n t_2/vss t_0/mxn2v0x05_0/a_38_12# t_2/vss 2 6 24 -13
+n t_0/mxn2v0x05_0/s t_2/vss t_0/mxn2v0x05_0/sn 2 6 14 -13
+p t_0/zn t_0/z t_2/vdd 2 28 13 42
+p t_0/n4 t_2/vdd t_0/zn 2 14 23 42
+p t_0/zn t_2/vdd t_0/a_44_52# 2 6 42 52
+p t_0/ci t_0/a_44_52# t_0/n4 2 6 49 52
+p t_0/cn t_0/n4 t_0/n2 2 12 59 52
+p t_0/n1 t_0/n2 t_2/vdd 2 12 69 52
+p t_0/n2 t_2/vdd t_0/a_81_58# 2 6 79 58
+p t_0/cn t_0/a_81_58# t_0/n1 2 6 86 58
+n t_0/zn t_0/z t_2/vss 2 14 13 14
+n t_0/n4 t_0/zn t_2/vss 2 7 31 23
+p t_0/ci t_0/n1 t_0/a_98_51# 2 13 96 51
+p t_0/d t_0/a_98_51# t_2/vdd 2 13 103 51
+p t_0/cn t_2/vdd t_0/ci 2 11 113 51
+p t_0/cp t_2/vdd t_0/cn 2 10 133 53
+n t_0/cn t_0/ci t_2/vss 2 6 123 24
+n t_0/zn t_2/vss t_0/a_44_17# 2 6 42 17
+n t_0/cn t_0/a_44_17# t_0/n4 2 6 49 17
+n t_0/ci t_0/n4 t_0/n2 2 6 59 17
+n t_0/n1 t_0/n2 t_2/vss 2 6 69 17
+n t_0/n2 t_2/vss t_0/a_81_17# 2 6 79 17
+n t_0/ci t_0/a_81_17# t_0/n1 2 6 86 17
+n t_0/cn t_0/n1 t_0/a_98_17# 2 6 96 17
+n t_0/d t_0/a_98_17# t_2/vss 2 6 103 17
+n t_0/cp t_2/vss t_0/cn 2 7 133 23
+p t_1/mxn2v0x05_0/zn t_1/d t_1/mxn2v0x05_0/vdd 2 12 -236 -47
+p t_1/zn t_1/mxn2v0x05_0/vdd t_1/mxn2v0x05_0/a_21_46# 2 12 -246 -47
+p t_1/mxn2v0x05_0/s t_1/mxn2v0x05_0/a_21_46# t_1/mxn2v0x05_0/zn 2 12 -253 -47
+p t_1/mxn2v0x05_0/sn t_1/mxn2v0x05_0/zn t_1/mxn2v0x05_0/a_38_46# 2 12 -263 -47
+p t_2/vss t_1/mxn2v0x05_0/a_38_46# t_1/mxn2v0x05_0/vdd 2 12 -270 -47
+p t_1/mxn2v0x05_0/s t_1/mxn2v0x05_0/vdd t_1/mxn2v0x05_0/sn 2 6 -280 -39
+n t_1/mxn2v0x05_0/zn t_1/d t_2/vss 2 6 -236 -13
+n t_1/zn t_2/vss t_1/mxn2v0x05_0/a_21_12# 2 6 -246 -13
+n t_1/mxn2v0x05_0/sn t_1/mxn2v0x05_0/a_21_12# t_1/mxn2v0x05_0/zn 2 6 -253 -13
+n t_1/mxn2v0x05_0/s t_1/mxn2v0x05_0/zn t_1/mxn2v0x05_0/a_38_12# 2 6 -263 -13
+n t_2/vss t_1/mxn2v0x05_0/a_38_12# t_2/vss 2 6 -270 -13
+n t_1/mxn2v0x05_0/s t_2/vss t_1/mxn2v0x05_0/sn 2 6 -280 -13
+p t_1/zn t_1/z t_2/vdd 2 28 -281 42
+p t_1/n4 t_2/vdd t_1/zn 2 14 -271 42
+p t_1/zn t_2/vdd t_1/a_44_52# 2 6 -252 52
+p t_1/ci t_1/a_44_52# t_1/n4 2 6 -245 52
+p t_1/cn t_1/n4 t_1/n2 2 12 -235 52
+p t_1/n1 t_1/n2 t_2/vdd 2 12 -225 52
+p t_1/n2 t_2/vdd t_1/a_81_58# 2 6 -215 58
+p t_1/cn t_1/a_81_58# t_1/n1 2 6 -208 58
+n t_1/zn t_1/z t_2/vss 2 14 -281 14
+n t_1/n4 t_1/zn t_2/vss 2 7 -263 23
+p t_1/ci t_1/n1 t_1/a_98_51# 2 13 -198 51
+p t_1/d t_1/a_98_51# t_2/vdd 2 13 -191 51
+p t_1/cn t_2/vdd t_1/ci 2 11 -181 51
+p t_1/cp t_2/vdd t_1/cn 2 10 -161 53
+n t_1/cn t_1/ci t_2/vss 2 6 -171 24
+n t_1/zn t_2/vss t_1/a_44_17# 2 6 -252 17
+n t_1/cn t_1/a_44_17# t_1/n4 2 6 -245 17
+n t_1/ci t_1/n4 t_1/n2 2 6 -235 17
+n t_1/n1 t_1/n2 t_2/vss 2 6 -225 17
+n t_1/n2 t_2/vss t_1/a_81_17# 2 6 -215 17
+n t_1/ci t_1/a_81_17# t_1/n1 2 6 -208 17
+n t_1/cn t_1/n1 t_1/a_98_17# 2 6 -198 17
+n t_1/d t_1/a_98_17# t_2/vss 2 6 -191 17
+n t_1/cp t_2/vss t_1/cn 2 7 -161 23
+p an2v0x3_0/zn t_2/vdd t_0/cp 2 20 165 45
+p an2v0x3_0/zn t_0/cp t_2/vdd 2 20 175 45
+p an2v0x3_0/a t_2/vdd an2v0x3_0/zn 2 20 185 45
+p an2v0x3_0/b an2v0x3_0/zn t_2/vdd 2 20 195 42
+n an2v0x3_0/zn t_0/cp t_2/vss 2 20 165 10
+n an2v0x3_0/a t_2/vss an2v0x3_0/a_30_9# 2 17 184 13
+n an2v0x3_0/b an2v0x3_0/a_30_9# an2v0x3_0/zn 2 17 191 13
+p bf1v0x6_2/an bf1v0x6_2/z t_2/vdd 2 27 59 113
+p bf1v0x6_2/an t_2/vdd bf1v0x6_2/z 2 27 49 113
+p bf1v0x6_2/an bf1v0x6_2/z t_2/vdd 2 27 39 113
+p t_0/z t_2/vdd bf1v0x6_2/an 2 18 29 113
+p t_0/z bf1v0x6_2/an t_2/vdd 2 18 19 113
+n bf1v0x6_2/an t_2/vss bf1v0x6_2/z 2 20 54 145
+n bf1v0x6_2/an bf1v0x6_2/z t_2/vss 2 20 44 145
+n t_0/z t_2/vss bf1v0x6_2/an 2 19 31 144
+p xor2v0x3_1/b t_2/vdd xor2v0x3_0/bn 2 28 -119 42
+p xor2v0x3_1/b xor2v0x3_0/bn t_2/vdd 2 28 -109 42
+p xor2v0x3_1/b t_2/vdd xor2v0x3_0/bn 2 28 -94 42
+p xor2v0x3_0/an xor2v0x3_0/bn t_1/cp 2 28 -84 42
+p xor2v0x3_0/bn t_1/cp xor2v0x3_0/an 2 13 -74 42
+p xor2v0x3_0/bn xor2v0x3_0/an t_1/cp 2 13 -64 42
+p xor2v0x3_0/an t_1/cp xor2v0x3_0/bn 2 28 -54 42
+p xor2v0x3_0/an xor2v0x3_0/bn t_1/cp 2 28 -44 42
+p xor2v0x3_0/bn t_1/cp xor2v0x3_0/an 2 28 -34 42
+p t_0/z xor2v0x3_0/an t_2/vdd 2 28 -24 42
+p t_0/z t_2/vdd xor2v0x3_0/an 2 28 -14 42
+n xor2v0x3_1/b t_2/vss xor2v0x3_0/bn 2 11 -130 19
+n xor2v0x3_1/b xor2v0x3_0/bn t_2/vss 2 17 -120 13
+n xor2v0x3_1/b t_1/cp xor2v0x3_0/an 2 14 -100 16
+n xor2v0x3_1/b xor2v0x3_0/an t_1/cp 2 14 -90 16
+n xor2v0x3_0/an t_1/cp xor2v0x3_0/a_61_7# 2 19 -80 11
+n xor2v0x3_0/bn xor2v0x3_0/a_61_7# t_2/vss 2 19 -73 11
+n xor2v0x3_0/bn t_2/vss xor2v0x3_0/a_80_7# 2 19 -61 11
+n xor2v0x3_0/an xor2v0x3_0/a_80_7# t_1/cp 2 19 -54 11
+n t_0/z t_2/vss xor2v0x3_0/an 2 14 -24 16
+n t_0/z xor2v0x3_0/an t_2/vss 2 14 -14 16
+p bf1v0x6_1/an bf1v0x6_1/z t_2/vdd 2 27 -234 114
+p bf1v0x6_1/an t_2/vdd bf1v0x6_1/z 2 27 -244 114
+p bf1v0x6_1/an bf1v0x6_1/z t_2/vdd 2 27 -254 114
+p t_1/z t_2/vdd bf1v0x6_1/an 2 18 -264 114
+p t_1/z bf1v0x6_1/an t_2/vdd 2 18 -274 114
+n bf1v0x6_1/an t_2/vss bf1v0x6_1/z 2 20 -239 146
+n bf1v0x6_1/an bf1v0x6_1/z t_2/vss 2 20 -249 146
+n t_1/z t_2/vss bf1v0x6_1/an 2 19 -262 145
+p xor2v0x3_1/b t_2/vdd xor2v0x3_1/bn 2 28 -412 42
+p xor2v0x3_1/b xor2v0x3_1/bn t_2/vdd 2 28 -402 42
+p xor2v0x3_1/b t_2/vdd xor2v0x3_1/bn 2 28 -387 42
+p xor2v0x3_1/an xor2v0x3_1/bn t_2/cp 2 28 -377 42
+p xor2v0x3_1/bn t_2/cp xor2v0x3_1/an 2 13 -367 42
+p xor2v0x3_1/bn xor2v0x3_1/an t_2/cp 2 13 -357 42
+p xor2v0x3_1/an t_2/cp xor2v0x3_1/bn 2 28 -347 42
+p xor2v0x3_1/an xor2v0x3_1/bn t_2/cp 2 28 -337 42
+p xor2v0x3_1/bn t_2/cp xor2v0x3_1/an 2 28 -327 42
+p t_1/z xor2v0x3_1/an t_2/vdd 2 28 -317 42
+p t_1/z t_2/vdd xor2v0x3_1/an 2 28 -307 42
+n xor2v0x3_1/b t_2/vss xor2v0x3_1/bn 2 11 -423 19
+n xor2v0x3_1/b xor2v0x3_1/bn t_2/vss 2 17 -413 13
+n xor2v0x3_1/b t_2/cp xor2v0x3_1/an 2 14 -393 16
+n xor2v0x3_1/b xor2v0x3_1/an t_2/cp 2 14 -383 16
+n xor2v0x3_1/an t_2/cp xor2v0x3_1/a_61_7# 2 19 -373 11
+n xor2v0x3_1/bn xor2v0x3_1/a_61_7# t_2/vss 2 19 -366 11
+n xor2v0x3_1/bn t_2/vss xor2v0x3_1/a_80_7# 2 19 -354 11
+n xor2v0x3_1/an xor2v0x3_1/a_80_7# t_2/cp 2 19 -347 11
+n t_1/z t_2/vss xor2v0x3_1/an 2 14 -317 16
+n t_1/z xor2v0x3_1/an t_2/vss 2 14 -307 16
+p t_2/mxn2v0x05_0/zn t_2/d t_2/mxn2v0x05_0/vdd 2 12 -529 -47
+p t_2/zn t_2/mxn2v0x05_0/vdd t_2/mxn2v0x05_0/a_21_46# 2 12 -539 -47
+p t_2/mxn2v0x05_0/s t_2/mxn2v0x05_0/a_21_46# t_2/mxn2v0x05_0/zn 2 12 -546 -47
+p t_2/mxn2v0x05_0/sn t_2/mxn2v0x05_0/zn t_2/mxn2v0x05_0/a_38_46# 2 12 -556 -47
+p t_2/vss t_2/mxn2v0x05_0/a_38_46# t_2/mxn2v0x05_0/vdd 2 12 -563 -47
+p t_2/mxn2v0x05_0/s t_2/mxn2v0x05_0/vdd t_2/mxn2v0x05_0/sn 2 6 -573 -39
+n t_2/mxn2v0x05_0/zn t_2/d t_2/vss 2 6 -529 -13
+n t_2/zn t_2/vss t_2/mxn2v0x05_0/a_21_12# 2 6 -539 -13
+n t_2/mxn2v0x05_0/sn t_2/mxn2v0x05_0/a_21_12# t_2/mxn2v0x05_0/zn 2 6 -546 -13
+n t_2/mxn2v0x05_0/s t_2/mxn2v0x05_0/zn t_2/mxn2v0x05_0/a_38_12# 2 6 -556 -13
+n t_2/vss t_2/mxn2v0x05_0/a_38_12# t_2/vss 2 6 -563 -13
+n t_2/mxn2v0x05_0/s t_2/vss t_2/mxn2v0x05_0/sn 2 6 -573 -13
+p t_2/zn t_2/z t_2/vdd 2 28 -574 42
+p t_2/n4 t_2/vdd t_2/zn 2 14 -564 42
+p t_2/zn t_2/vdd t_2/a_44_52# 2 6 -545 52
+p t_2/ci t_2/a_44_52# t_2/n4 2 6 -538 52
+p t_2/cn t_2/n4 t_2/n2 2 12 -528 52
+p t_2/n1 t_2/n2 t_2/vdd 2 12 -518 52
+p t_2/n2 t_2/vdd t_2/a_81_58# 2 6 -508 58
+p t_2/cn t_2/a_81_58# t_2/n1 2 6 -501 58
+n t_2/zn t_2/z t_2/vss 2 14 -574 14
+n t_2/n4 t_2/zn t_2/vss 2 7 -556 23
+p t_2/ci t_2/n1 t_2/a_98_51# 2 13 -491 51
+p t_2/d t_2/a_98_51# t_2/vdd 2 13 -484 51
+p t_2/cn t_2/vdd t_2/ci 2 11 -474 51
+p t_2/cp t_2/vdd t_2/cn 2 10 -454 53
+n t_2/cn t_2/ci t_2/vss 2 6 -464 24
+n t_2/zn t_2/vss t_2/a_44_17# 2 6 -545 17
+n t_2/cn t_2/a_44_17# t_2/n4 2 6 -538 17
+n t_2/ci t_2/n4 t_2/n2 2 6 -528 17
+n t_2/n1 t_2/n2 t_2/vss 2 6 -518 17
+n t_2/n2 t_2/vss t_2/a_81_17# 2 6 -508 17
+n t_2/ci t_2/a_81_17# t_2/n1 2 6 -501 17
+n t_2/cn t_2/n1 t_2/a_98_17# 2 6 -491 17
+n t_2/d t_2/a_98_17# t_2/vss 2 6 -484 17
+n t_2/cp t_2/vss t_2/cn 2 7 -454 23
+p bf1v0x6_0/an bf1v0x6_0/z t_2/vdd 2 27 -529 114
+p bf1v0x6_0/an t_2/vdd bf1v0x6_0/z 2 27 -539 114
+p bf1v0x6_0/an bf1v0x6_0/z t_2/vdd 2 27 -549 114
+p t_2/z t_2/vdd bf1v0x6_0/an 2 18 -559 114
+p t_2/z bf1v0x6_0/an t_2/vdd 2 18 -569 114
+n bf1v0x6_0/an t_2/vss bf1v0x6_0/z 2 20 -534 146
+n bf1v0x6_0/an bf1v0x6_0/z t_2/vss 2 20 -544 146
+n t_2/z t_2/vss bf1v0x6_0/an 2 19 -557 145
+C t_1/mxn2v0x05_0/s t_1/mxn2v0x05_0/vdd 15.2
+C t_2/ci t_2/vss 27.5
+C t_2/vdd t_2/ci 16.6
+C xor2v0x3_1/b t_2/vss 50.9
+C t_2/vss t_0/cp 4.7
+C t_2/vdd xor2v0x3_1/b 38.6
+C t_2/vdd t_0/cp 18.8
+C t_2/vss t_2/cp 9.0
+C t_2/vdd t_2/cp 23.0
+C t_0/zn t_2/vss 33.0
+C t_0/zn t_2/vdd 10.2
+C t_2/vss t_1/zn 33.0
+C t_2/vdd t_1/zn 10.2
+C xor2v0x3_0/an t_2/vss 18.3
+C xor2v0x3_1/bn t_2/vss 12.6
+C t_2/vdd xor2v0x3_0/an 19.1
+C t_2/vdd xor2v0x3_1/bn 24.1
+C t_2/mxn2v0x05_0/vdd t_2/vss 5.9
+C t_0/zn t_1/mxn2v0x05_0/vdd 8.4
+C t_1/mxn2v0x05_0/sn t_2/vss 10.0
+C t_1/mxn2v0x05_0/vdd t_1/zn 8.4
+C t_1/mxn2v0x05_0/sn t_1/mxn2v0x05_0/vdd 10.1
+C t_2/cn t_2/vss 17.1
+C xor2v0x3_1/an t_2/vss 18.3
+C xor2v0x3_1/an t_2/vdd 19.1
+C t_2/vdd t_2/cn 46.5
+C t_2/n2 t_2/vss 7.2
+C t_2/vdd t_2/n2 12.4
+C t_2/mxn2v0x05_0/vdd t_2/mxn2v0x05_0/zn 8.6
+C t_2/n4 t_2/vss 7.3
+C t_2/vdd t_2/n4 8.9
+C t_2/vss t_0/d 12.0
+C t_2/vdd t_0/d 7.8
+C t_0/n1 t_2/vss 9.9
+C t_2/vdd t_0/n1 8.4
+C t_1/mxn2v0x05_0/vdd t_2/vss 11.9
+C t_1/ci t_2/vss 27.5
+C t_2/vss bf1v0x6_1/z 3.5
+C t_1/mxn2v0x05_0/vdd t_0/d 3.8
+C t_2/vdd t_1/ci 16.6
+C t_2/vdd bf1v0x6_1/z 3.9
+C t_2/zn t_2/mxn2v0x05_0/vdd 8.4
+C an2v0x3_0/b t_2/vss 5.5
+C an2v0x3_0/b t_2/vdd 6.5
+C xor2v0x3_0/bn t_1/cp 7.1
+C t_1/mxn2v0x05_0/zn t_2/vss 9.6
+C t_2/mxn2v0x05_0/vdd t_2/d 3.8
+C t_0/mxn2v0x05_0/sn t_2/vss 10.0
+C t_2/mxn2v0x05_0/sn t_2/mxn2v0x05_0/vdd 10.1
+C t_2/vss t_1/n1 9.9
+C t_2/mxn2v0x05_0/s t_2/mxn2v0x05_0/vdd 15.2
+C bf1v0x6_0/z t_2/vss 3.5
+C t_2/vdd t_1/n1 8.4
+C t_2/vdd bf1v0x6_0/z 3.9
+C t_2/mxn2v0x05_0/zn t_2/vss 9.6
+C t_1/mxn2v0x05_0/vdd t_1/mxn2v0x05_0/zn 8.6
+C t_2/vss t_2/n1 9.9
+C t_0/mxn2v0x05_0/sn t_1/mxn2v0x05_0/vdd 10.1
+C t_0/n2 t_2/vss 7.2
+C t_2/vdd t_2/n1 8.4
+C bf1v0x6_0/an t_2/vss 11.0
+C t_2/vdd t_0/n2 12.4
+C bf1v0x6_0/an t_2/vdd 15.4
+C t_2/vss an2v0x3_0/zn 9.5
+C t_1/n4 t_2/vss 7.3
+C t_1/n2 t_2/vss 7.2
+C t_0/cn t_2/vss 17.1
+C t_2/vdd an2v0x3_0/zn 13.3
+C t_1/n4 t_2/vdd 8.9
+C t_2/vdd t_1/n2 12.4
+C t_0/cn t_2/vdd 46.5
+C xor2v0x3_1/b t_2/cp 6.8
+C xor2v0x3_0/an t_1/cp 3.6
+C bf1v0x6_1/an t_2/vss 11.0
+C bf1v0x6_1/an t_2/vdd 15.4
+C t_0/mxn2v0x05_0/s t_2/vss 18.6
+C t_2/z t_2/vss 10.3
+C t_2/vss t_1/d 12.0
+C t_2/vdd t_2/z 17.5
+C t_2/zn t_2/vss 33.0
+C t_2/vdd t_1/d 7.8
+C xor2v0x3_1/bn t_2/cp 8.8
+C t_0/ci t_2/vss 27.5
+C t_2/zn t_2/vdd 10.2
+C t_0/ci t_2/vdd 16.6
+C t_1/z t_2/vss 20.7
+C t_1/cn t_2/vss 17.1
+C t_2/vss t_2/d 12.0
+C t_2/vdd t_1/z 28.2
+C t_0/mxn2v0x05_0/s t_1/mxn2v0x05_0/vdd 15.2
+C t_1/mxn2v0x05_0/vdd t_1/d 3.8
+C t_2/vdd t_1/cn 46.5
+C t_2/vdd t_2/d 7.8
+C t_2/mxn2v0x05_0/sn t_2/vss 10.0
+C t_2/mxn2v0x05_0/s t_2/vss 18.6
+C an2v0x3_0/a t_2/vss 6.3
+C t_2/vss t_0/mxn2v0x05_0/zn 9.6
+C t_2/vdd an2v0x3_0/a 5.3
+C t_0/z t_2/vss 21.0
+C t_0/z t_2/vdd 28.1
+C bf1v0x6_2/an t_2/vss 11.0
+C t_2/vdd bf1v0x6_2/an 15.4
+C bf1v0x6_2/z t_2/vss 3.5
+C bf1v0x6_2/z t_2/vdd 3.9
+C t_1/mxn2v0x05_0/vdd t_0/mxn2v0x05_0/zn 8.6
+C t_0/n4 t_2/vss 7.3
+C xor2v0x3_1/an t_2/cp 3.6
+C t_1/mxn2v0x05_0/s t_2/vss 18.6
+C t_2/vdd t_0/n4 8.9
+C xor2v0x3_0/bn t_2/vss 12.6
+C t_2/vss t_1/cp 9.0
+C t_2/vdd xor2v0x3_0/bn 24.1
+C t_2/vdd t_1/cp 22.3
+R bf1v0x6_0/z 695
+R bf1v0x6_0/an 2115
+R t_2/a_98_17# 32
+R t_2/a_81_17# 32
+R t_2/a_44_17# 32
+R t_2/a_98_51# 155
+R t_2/a_81_58# 71
+R t_2/a_44_52# 71
+R t_2/n4 761
+R t_2/ci 1607
+R t_2/n2 751
+R t_2/n1 840
+R t_2/cn 3155
+R t_2/z 1373
+R t_2/mxn2v0x05_0/a_38_12# 32
+R t_2/mxn2v0x05_0/a_21_12# 32
+R t_2/mxn2v0x05_0/a_38_46# 143
+R t_2/mxn2v0x05_0/a_21_46# 143
+C t_2/d GND 3.5
+R t_2/d 815
+R t_2/mxn2v0x05_0/sn 626
+R t_2/mxn2v0x05_0/s 1625
+R t_2/zn 2548
+R t_2/mxn2v0x05_0/zn 752
+R t_2/mxn2v0x05_0/vdd 4658
+R xor2v0x3_1/a_80_7# 101
+R xor2v0x3_1/a_61_7# 101
+R t_2/cp 1982
+R xor2v0x3_1/bn 2909
+R xor2v0x3_1/an 3144
+R bf1v0x6_1/z 695
+R bf1v0x6_1/an 2115
+R xor2v0x3_0/a_80_7# 101
+R xor2v0x3_0/a_61_7# 101
+R t_1/cp 1982
+R xor2v0x3_0/bn 2909
+R xor2v0x3_0/an 3144
+C xor2v0x3_1/b GND 32.6
+R xor2v0x3_1/b 5473
+R bf1v0x6_2/z 695
+R bf1v0x6_2/an 2115
+C t_2/vss GND 335.3
+R t_2/vss 9597
+R an2v0x3_0/a_30_9# 91
+R an2v0x3_0/b 682
+R t_0/cp 780
+R an2v0x3_0/a 697
+R an2v0x3_0/zn 1317
+C t_2/vdd GND 40.8
+R t_2/vdd 133446
+R t_1/a_98_17# 32
+R t_1/a_81_17# 32
+R t_1/a_44_17# 32
+R t_1/a_98_51# 155
+R t_1/a_81_58# 71
+R t_1/a_44_52# 71
+R t_1/n4 761
+R t_1/ci 1607
+R t_1/n2 751
+R t_1/n1 840
+R t_1/cn 3155
+R t_1/z 2736
+R t_1/mxn2v0x05_0/a_38_12# 32
+R t_1/mxn2v0x05_0/a_21_12# 32
+R t_1/mxn2v0x05_0/a_38_46# 143
+R t_1/mxn2v0x05_0/a_21_46# 143
+C t_1/d GND 3.5
+R t_1/d 815
+R t_1/mxn2v0x05_0/sn 626
+R t_1/mxn2v0x05_0/s 1625
+R t_1/zn 2548
+R t_1/mxn2v0x05_0/zn 752
+R t_0/a_98_17# 32
+R t_0/a_81_17# 32
+R t_0/a_44_17# 32
+R t_0/a_98_51# 155
+R t_0/a_81_58# 71
+R t_0/a_44_52# 71
+R t_0/n4 761
+R t_0/ci 1607
+R t_0/n2 751
+R t_0/n1 840
+R t_0/cn 3155
+R t_0/z 2736
+R t_0/mxn2v0x05_0/a_38_12# 32
+R t_0/mxn2v0x05_0/a_21_12# 32
+R t_0/mxn2v0x05_0/a_38_46# 143
+R t_0/mxn2v0x05_0/a_21_46# 143
+C t_0/d GND 3.5
+R t_0/d 815
+R t_0/mxn2v0x05_0/sn 626
+R t_0/mxn2v0x05_0/s 1625
+R t_0/zn 2548
+R t_0/mxn2v0x05_0/zn 752
+C t_1/mxn2v0x05_0/vdd GND 93.1
+R t_1/mxn2v0x05_0/vdd 17230

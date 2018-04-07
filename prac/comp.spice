@@ -368,15 +368,15 @@ C102 nr3v0x2_0_a 0 8.6fF
 
 v_dd an3v0x2_2_vdd 0 5
 v_ss an2v0x2_0_vss 0 0
-v_gg_f iv1v0x4_1_a 0 PULSE(5 0 0 0.1n 0.1n 150n 300n)
-v_gg_e iv1v0x4_2_a 0 PULSE(5 0 0 0.1n 0.1n 300n 600n)
-v_gg_d iv1v0x4_0_a 0 PULSE(5 0 0 0.1n 0.1n 600n 1200n)
-v_gg_c an3v0x2_2_a 0 PULSE(5 0 0 0.1n 0.1n 1200n 2400n)
-v_gg_b an3v0x2_0_b 0 PULSE(5 0 0 0.1n 0.1n 2400n 4800n)
-v_gg_a an3v0x2_2_c 0 PULSE(5 0 0 0.1n 0.1n 4800n 9600n)
+v_gg_f iv1v0x4_1_a 0 PULSE(5 0 0 0.1n 0.1n 15n 30n)
+v_gg_e iv1v0x4_2_a 0 PULSE(5 0 0 0.1n 0.1n 30n 60n)
+v_gg_d iv1v0x4_0_a 0 PULSE(5 0 0 0.1n 0.1n 60n 120n)
+v_gg_c an3v0x2_2_a 0 PULSE(5 0 0 0.1n 0.1n 120n 240n)
+v_gg_b an3v0x2_0_b 0 PULSE(5 0 0 0.1n 0.1n 240n 480n)
+v_gg_a an3v0x2_2_c 0 PULSE(5 0 0 0.1n 0.1n 480n 960n)
 
 .control
- tran 1n 9600n
+ tran 1n 960n
  plot (an3v0x2_2_c + 5) (an3v0x2_0_b) (an3v0x2_2_a - 5) (iv1v0x4_0_a - 10) (iv1v0x4_2_a - 15) (iv1v0x4_1_a - 20) ( nd3v0x2_0_z - 25)
 .endc
 

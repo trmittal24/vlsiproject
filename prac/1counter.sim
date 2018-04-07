@@ -1,0 +1,365 @@
+| units: 100 tech: scmos format: MIT
+p iv1v0x3_0/a an2v0x3_2/vdd an2v0x3_1/b 2 24 137 -45
+p iv1v0x3_0/a an2v0x3_1/b an2v0x3_2/vdd 2 16 127 -45
+n iv1v0x3_0/a or2v0x3_1/vss an2v0x3_1/b 2 10 137 -20
+n iv1v0x3_0/a an2v0x3_1/b or2v0x3_1/vss 2 10 127 -20
+p an2v0x3_1/zn an2v0x3_2/vdd an2v0x3_1/z 2 20 98 -45
+p an2v0x3_1/zn an2v0x3_1/z an2v0x3_2/vdd 2 20 88 -45
+p an2v0x3_1/a an2v0x3_2/vdd an2v0x3_1/zn 2 20 78 -45
+p an2v0x3_1/b an2v0x3_1/zn an2v0x3_2/vdd 2 20 68 -42
+n an2v0x3_1/zn an2v0x3_1/z or2v0x3_1/vss 2 20 98 -10
+n an2v0x3_1/a or2v0x3_1/vss an2v0x3_1/a_30_9# 2 17 79 -13
+n an2v0x3_1/b an2v0x3_1/a_30_9# an2v0x3_1/zn 2 17 72 -13
+p an2v0x3_2/zn an2v0x3_2/vdd an2v0x3_2/z 2 20 -223 -45
+p an2v0x3_2/zn an2v0x3_2/z an2v0x3_2/vdd 2 20 -233 -45
+p an2v0x3_2/a an2v0x3_2/vdd an2v0x3_2/zn 2 20 -243 -45
+p an2v0x3_2/b an2v0x3_2/zn an2v0x3_2/vdd 2 20 -253 -42
+n an2v0x3_2/zn an2v0x3_2/z or2v0x3_1/vss 2 20 -223 -10
+n an2v0x3_2/a or2v0x3_1/vss an2v0x3_2/a_30_9# 2 17 -242 -13
+n an2v0x3_2/b an2v0x3_2/a_30_9# an2v0x3_2/zn 2 17 -249 -13
+p an2v0x3_0/b tf_0/xor2v0x05_0/bn or2v0x3_1/vdd 2 21 178 43
+p tf_0/xor2v0x05_0/a or2v0x3_1/vdd tf_0/xor2v0x05_0/an 2 13 192 43
+p tf_0/xor2v0x05_0/bn tf_0/xor2v0x05_0/an tf_0/dfnt1v0x2_0/d 2 13 202 43
+p tf_0/xor2v0x05_0/an tf_0/dfnt1v0x2_0/d tf_0/xor2v0x05_0/bn 2 21 212 43
+n an2v0x3_0/b tf_0/xor2v0x05_0/bn or2v0x3_1/vss 2 7 172 24
+n tf_0/xor2v0x05_0/a or2v0x3_1/vss tf_0/xor2v0x05_0/an 2 7 185 18
+n an2v0x3_0/b tf_0/xor2v0x05_0/an tf_0/dfnt1v0x2_0/d 2 7 195 18
+n tf_0/xor2v0x05_0/bn tf_0/dfnt1v0x2_0/d tf_0/xor2v0x05_0/a_48_11# 2 9 205 16
+n tf_0/xor2v0x05_0/an tf_0/xor2v0x05_0/a_48_11# or2v0x3_1/vss 2 9 212 16
+p an2v0x3_1/a an2v0x3_0/b or2v0x3_1/vdd 2 28 16 43
+p tf_0/dfnt1v0x2_0/n4 or2v0x3_1/vdd an2v0x3_1/a 2 14 26 43
+p an2v0x3_1/a or2v0x3_1/vdd tf_0/dfnt1v0x2_0/a_40_48# 2 6 45 53
+p tf_0/dfnt1v0x2_0/ci tf_0/dfnt1v0x2_0/a_40_48# tf_0/dfnt1v0x2_0/n4 2 6 52 53
+p tf_0/dfnt1v0x2_0/cn tf_0/dfnt1v0x2_0/n4 tf_0/dfnt1v0x2_0/n2 2 12 62 53
+p tf_0/dfnt1v0x2_0/n1 tf_0/dfnt1v0x2_0/n2 or2v0x3_1/vdd 2 12 72 53
+p tf_0/dfnt1v0x2_0/n2 or2v0x3_1/vdd tf_0/dfnt1v0x2_0/a_77_54# 2 6 82 59
+p tf_0/dfnt1v0x2_0/cn tf_0/dfnt1v0x2_0/a_77_54# tf_0/dfnt1v0x2_0/n1 2 6 89 59
+n an2v0x3_1/a an2v0x3_0/b or2v0x3_1/vss 2 14 16 15
+n tf_0/dfnt1v0x2_0/n4 an2v0x3_1/a or2v0x3_1/vss 2 7 34 24
+p tf_0/dfnt1v0x2_0/ci tf_0/dfnt1v0x2_0/n1 tf_0/dfnt1v0x2_0/a_94_47# 2 13 99 52
+p tf_0/dfnt1v0x2_0/d tf_0/dfnt1v0x2_0/a_94_47# or2v0x3_1/vdd 2 13 106 52
+p tf_0/dfnt1v0x2_0/cn or2v0x3_1/vdd tf_0/dfnt1v0x2_0/ci 2 11 116 52
+p tf_2/dfnt1v0x2_0/cp or2v0x3_1/vdd tf_0/dfnt1v0x2_0/cn 2 10 136 54
+n tf_0/dfnt1v0x2_0/cn tf_0/dfnt1v0x2_0/ci or2v0x3_1/vss 2 6 126 25
+n an2v0x3_1/a or2v0x3_1/vss tf_0/dfnt1v0x2_0/a_40_13# 2 6 45 18
+n tf_0/dfnt1v0x2_0/cn tf_0/dfnt1v0x2_0/a_40_13# tf_0/dfnt1v0x2_0/n4 2 6 52 18
+n tf_0/dfnt1v0x2_0/ci tf_0/dfnt1v0x2_0/n4 tf_0/dfnt1v0x2_0/n2 2 6 62 18
+n tf_0/dfnt1v0x2_0/n1 tf_0/dfnt1v0x2_0/n2 or2v0x3_1/vss 2 6 72 18
+n tf_0/dfnt1v0x2_0/n2 or2v0x3_1/vss tf_0/dfnt1v0x2_0/a_77_13# 2 6 82 18
+n tf_0/dfnt1v0x2_0/ci tf_0/dfnt1v0x2_0/a_77_13# tf_0/dfnt1v0x2_0/n1 2 6 89 18
+n tf_0/dfnt1v0x2_0/cn tf_0/dfnt1v0x2_0/n1 tf_0/dfnt1v0x2_0/a_94_13# 2 6 99 18
+n tf_0/dfnt1v0x2_0/d tf_0/dfnt1v0x2_0/a_94_13# or2v0x3_1/vss 2 6 106 18
+n tf_2/dfnt1v0x2_0/cp or2v0x3_1/vss tf_0/dfnt1v0x2_0/cn 2 7 136 24
+p or2v0x3_0/zn or2v0x3_1/vdd or2v0x3_0/z 2 20 -56 44
+p or2v0x3_0/zn or2v0x3_0/z or2v0x3_1/vdd 2 20 -46 44
+p or2v0x3_0/a or2v0x3_1/vdd or2v0x3_0/a_31_39# 2 20 -36 44
+p an2v0x3_1/z or2v0x3_0/a_31_39# or2v0x3_0/zn 2 20 -29 44
+p an2v0x3_1/z or2v0x3_0/zn or2v0x3_0/a_48_39# 2 16 -19 44
+p or2v0x3_0/a or2v0x3_0/a_48_39# or2v0x3_1/vdd 2 16 -12 44
+n or2v0x3_0/zn or2v0x3_0/z or2v0x3_1/vss 2 20 -56 11
+n or2v0x3_0/a or2v0x3_1/vss or2v0x3_0/zn 2 10 -37 16
+n an2v0x3_1/z or2v0x3_0/zn or2v0x3_1/vss 2 10 -27 16
+p an2v0x3_3/a tf_1/xor2v0x05_0/bn or2v0x3_1/vdd 2 21 -118 43
+p or2v0x3_0/z or2v0x3_1/vdd tf_1/xor2v0x05_0/an 2 13 -104 43
+p tf_1/xor2v0x05_0/bn tf_1/xor2v0x05_0/an tf_1/dfnt1v0x2_0/d 2 13 -94 43
+p tf_1/xor2v0x05_0/an tf_1/dfnt1v0x2_0/d tf_1/xor2v0x05_0/bn 2 21 -84 43
+n an2v0x3_3/a tf_1/xor2v0x05_0/bn or2v0x3_1/vss 2 7 -124 24
+n or2v0x3_0/z or2v0x3_1/vss tf_1/xor2v0x05_0/an 2 7 -111 18
+n an2v0x3_3/a tf_1/xor2v0x05_0/an tf_1/dfnt1v0x2_0/d 2 7 -101 18
+n tf_1/xor2v0x05_0/bn tf_1/dfnt1v0x2_0/d tf_1/xor2v0x05_0/a_48_11# 2 9 -91 16
+n tf_1/xor2v0x05_0/an tf_1/xor2v0x05_0/a_48_11# or2v0x3_1/vss 2 9 -84 16
+p an2v0x3_2/a an2v0x3_3/a or2v0x3_1/vdd 2 28 -280 43
+p tf_1/dfnt1v0x2_0/n4 or2v0x3_1/vdd an2v0x3_2/a 2 14 -270 43
+p an2v0x3_2/a or2v0x3_1/vdd tf_1/dfnt1v0x2_0/a_40_48# 2 6 -251 53
+p tf_1/dfnt1v0x2_0/ci tf_1/dfnt1v0x2_0/a_40_48# tf_1/dfnt1v0x2_0/n4 2 6 -244 53
+p tf_1/dfnt1v0x2_0/cn tf_1/dfnt1v0x2_0/n4 tf_1/dfnt1v0x2_0/n2 2 12 -234 53
+p tf_1/dfnt1v0x2_0/n1 tf_1/dfnt1v0x2_0/n2 or2v0x3_1/vdd 2 12 -224 53
+p tf_1/dfnt1v0x2_0/n2 or2v0x3_1/vdd tf_1/dfnt1v0x2_0/a_77_54# 2 6 -214 59
+p tf_1/dfnt1v0x2_0/cn tf_1/dfnt1v0x2_0/a_77_54# tf_1/dfnt1v0x2_0/n1 2 6 -207 59
+n an2v0x3_2/a an2v0x3_3/a or2v0x3_1/vss 2 14 -280 15
+n tf_1/dfnt1v0x2_0/n4 an2v0x3_2/a or2v0x3_1/vss 2 7 -262 24
+p tf_1/dfnt1v0x2_0/ci tf_1/dfnt1v0x2_0/n1 tf_1/dfnt1v0x2_0/a_94_47# 2 13 -197 52
+p tf_1/dfnt1v0x2_0/d tf_1/dfnt1v0x2_0/a_94_47# or2v0x3_1/vdd 2 13 -190 52
+p tf_1/dfnt1v0x2_0/cn or2v0x3_1/vdd tf_1/dfnt1v0x2_0/ci 2 11 -180 52
+p tf_2/dfnt1v0x2_0/cp or2v0x3_1/vdd tf_1/dfnt1v0x2_0/cn 2 10 -160 54
+n tf_1/dfnt1v0x2_0/cn tf_1/dfnt1v0x2_0/ci or2v0x3_1/vss 2 6 -170 25
+n an2v0x3_2/a or2v0x3_1/vss tf_1/dfnt1v0x2_0/a_40_13# 2 6 -251 18
+n tf_1/dfnt1v0x2_0/cn tf_1/dfnt1v0x2_0/a_40_13# tf_1/dfnt1v0x2_0/n4 2 6 -244 18
+n tf_1/dfnt1v0x2_0/ci tf_1/dfnt1v0x2_0/n4 tf_1/dfnt1v0x2_0/n2 2 6 -234 18
+n tf_1/dfnt1v0x2_0/n1 tf_1/dfnt1v0x2_0/n2 or2v0x3_1/vss 2 6 -224 18
+n tf_1/dfnt1v0x2_0/n2 or2v0x3_1/vss tf_1/dfnt1v0x2_0/a_77_13# 2 6 -214 18
+n tf_1/dfnt1v0x2_0/ci tf_1/dfnt1v0x2_0/a_77_13# tf_1/dfnt1v0x2_0/n1 2 6 -207 18
+n tf_1/dfnt1v0x2_0/cn tf_1/dfnt1v0x2_0/n1 tf_1/dfnt1v0x2_0/a_94_13# 2 6 -197 18
+n tf_1/dfnt1v0x2_0/d tf_1/dfnt1v0x2_0/a_94_13# or2v0x3_1/vss 2 6 -190 18
+n tf_2/dfnt1v0x2_0/cp or2v0x3_1/vss tf_1/dfnt1v0x2_0/cn 2 7 -160 24
+p or2v0x3_1/zn or2v0x3_1/vdd or2v0x3_1/z 2 20 -352 44
+p or2v0x3_1/zn or2v0x3_1/z or2v0x3_1/vdd 2 20 -342 44
+p or2v0x3_1/a or2v0x3_1/vdd or2v0x3_1/a_31_39# 2 20 -332 44
+p an2v0x3_2/z or2v0x3_1/a_31_39# or2v0x3_1/zn 2 20 -325 44
+p an2v0x3_2/z or2v0x3_1/zn or2v0x3_1/a_48_39# 2 16 -315 44
+p or2v0x3_1/a or2v0x3_1/a_48_39# or2v0x3_1/vdd 2 16 -308 44
+n or2v0x3_1/zn or2v0x3_1/z or2v0x3_1/vss 2 20 -352 11
+n or2v0x3_1/a or2v0x3_1/vss or2v0x3_1/zn 2 10 -333 16
+n an2v0x3_2/z or2v0x3_1/zn or2v0x3_1/vss 2 10 -323 16
+p tf_2/dfnt1v0x2_0/z tf_2/xor2v0x05_0/bn or2v0x3_1/vdd 2 21 -414 43
+p or2v0x3_1/z or2v0x3_1/vdd tf_2/xor2v0x05_0/an 2 13 -400 43
+p tf_2/xor2v0x05_0/bn tf_2/xor2v0x05_0/an tf_2/dfnt1v0x2_0/d 2 13 -390 43
+p tf_2/xor2v0x05_0/an tf_2/dfnt1v0x2_0/d tf_2/xor2v0x05_0/bn 2 21 -380 43
+n tf_2/dfnt1v0x2_0/z tf_2/xor2v0x05_0/bn or2v0x3_1/vss 2 7 -420 24
+n or2v0x3_1/z or2v0x3_1/vss tf_2/xor2v0x05_0/an 2 7 -407 18
+n tf_2/dfnt1v0x2_0/z tf_2/xor2v0x05_0/an tf_2/dfnt1v0x2_0/d 2 7 -397 18
+n tf_2/xor2v0x05_0/bn tf_2/dfnt1v0x2_0/d tf_2/xor2v0x05_0/a_48_11# 2 9 -387 16
+n tf_2/xor2v0x05_0/an tf_2/xor2v0x05_0/a_48_11# or2v0x3_1/vss 2 9 -380 16
+p tf_2/dfnt1v0x2_0/zn tf_2/dfnt1v0x2_0/z or2v0x3_1/vdd 2 28 -576 43
+p tf_2/dfnt1v0x2_0/n4 or2v0x3_1/vdd tf_2/dfnt1v0x2_0/zn 2 14 -566 43
+p tf_2/dfnt1v0x2_0/zn or2v0x3_1/vdd tf_2/dfnt1v0x2_0/a_40_48# 2 6 -547 53
+p tf_2/dfnt1v0x2_0/ci tf_2/dfnt1v0x2_0/a_40_48# tf_2/dfnt1v0x2_0/n4 2 6 -540 53
+p tf_2/dfnt1v0x2_0/cn tf_2/dfnt1v0x2_0/n4 tf_2/dfnt1v0x2_0/n2 2 12 -530 53
+p tf_2/dfnt1v0x2_0/n1 tf_2/dfnt1v0x2_0/n2 or2v0x3_1/vdd 2 12 -520 53
+p tf_2/dfnt1v0x2_0/n2 or2v0x3_1/vdd tf_2/dfnt1v0x2_0/a_77_54# 2 6 -510 59
+p tf_2/dfnt1v0x2_0/cn tf_2/dfnt1v0x2_0/a_77_54# tf_2/dfnt1v0x2_0/n1 2 6 -503 59
+n tf_2/dfnt1v0x2_0/zn tf_2/dfnt1v0x2_0/z or2v0x3_1/vss 2 14 -576 15
+n tf_2/dfnt1v0x2_0/n4 tf_2/dfnt1v0x2_0/zn or2v0x3_1/vss 2 7 -558 24
+p tf_2/dfnt1v0x2_0/ci tf_2/dfnt1v0x2_0/n1 tf_2/dfnt1v0x2_0/a_94_47# 2 13 -493 52
+p tf_2/dfnt1v0x2_0/d tf_2/dfnt1v0x2_0/a_94_47# or2v0x3_1/vdd 2 13 -486 52
+p tf_2/dfnt1v0x2_0/cn or2v0x3_1/vdd tf_2/dfnt1v0x2_0/ci 2 11 -476 52
+p tf_2/dfnt1v0x2_0/cp or2v0x3_1/vdd tf_2/dfnt1v0x2_0/cn 2 10 -456 54
+n tf_2/dfnt1v0x2_0/cn tf_2/dfnt1v0x2_0/ci or2v0x3_1/vss 2 6 -466 25
+n tf_2/dfnt1v0x2_0/zn or2v0x3_1/vss tf_2/dfnt1v0x2_0/a_40_13# 2 6 -547 18
+n tf_2/dfnt1v0x2_0/cn tf_2/dfnt1v0x2_0/a_40_13# tf_2/dfnt1v0x2_0/n4 2 6 -540 18
+n tf_2/dfnt1v0x2_0/ci tf_2/dfnt1v0x2_0/n4 tf_2/dfnt1v0x2_0/n2 2 6 -530 18
+n tf_2/dfnt1v0x2_0/n1 tf_2/dfnt1v0x2_0/n2 or2v0x3_1/vss 2 6 -520 18
+n tf_2/dfnt1v0x2_0/n2 or2v0x3_1/vss tf_2/dfnt1v0x2_0/a_77_13# 2 6 -510 18
+n tf_2/dfnt1v0x2_0/ci tf_2/dfnt1v0x2_0/a_77_13# tf_2/dfnt1v0x2_0/n1 2 6 -503 18
+n tf_2/dfnt1v0x2_0/cn tf_2/dfnt1v0x2_0/n1 tf_2/dfnt1v0x2_0/a_94_13# 2 6 -493 18
+n tf_2/dfnt1v0x2_0/d tf_2/dfnt1v0x2_0/a_94_13# or2v0x3_1/vss 2 6 -486 18
+n tf_2/dfnt1v0x2_0/cp or2v0x3_1/vss tf_2/dfnt1v0x2_0/cn 2 7 -456 24
+p an2v0x3_0/zn or2v0x3_1/vdd or2v0x3_0/a 2 20 95 115
+p an2v0x3_0/zn or2v0x3_0/a or2v0x3_1/vdd 2 20 85 115
+p an2v0x3_0/a or2v0x3_1/vdd an2v0x3_0/zn 2 20 75 115
+p an2v0x3_0/b an2v0x3_0/zn or2v0x3_1/vdd 2 20 65 118
+n an2v0x3_0/zn or2v0x3_0/a an2v0x3_3/vss 2 20 95 150
+n an2v0x3_0/a an2v0x3_3/vss an2v0x3_0/a_30_9# 2 17 76 147
+n an2v0x3_0/b an2v0x3_0/a_30_9# an2v0x3_0/zn 2 17 69 147
+p an2v0x3_3/zn or2v0x3_1/vdd or2v0x3_1/a 2 20 -227 115
+p an2v0x3_3/zn or2v0x3_1/a or2v0x3_1/vdd 2 20 -237 115
+p an2v0x3_3/a or2v0x3_1/vdd an2v0x3_3/zn 2 20 -247 115
+p an2v0x3_3/b an2v0x3_3/zn or2v0x3_1/vdd 2 20 -257 118
+n an2v0x3_3/zn or2v0x3_1/a an2v0x3_3/vss 2 20 -227 150
+n an2v0x3_3/a an2v0x3_3/vss an2v0x3_3/a_30_9# 2 17 -246 147
+n an2v0x3_3/b an2v0x3_3/a_30_9# an2v0x3_3/zn 2 17 -253 147
+C or2v0x3_1/vss an2v0x3_1/zn 9.5
+C tf_2/dfnt1v0x2_0/zn or2v0x3_1/vdd 10.2
+C or2v0x3_1/vdd an2v0x3_0/a 5.3
+C or2v0x3_1/vss an2v0x3_1/b 10.0
+C tf_2/dfnt1v0x2_0/cp tf_1/xor2v0x05_0/an 2.6
+C or2v0x3_1/vss or2v0x3_0/a 7.6
+C an2v0x3_3/a or2v0x3_1/vss 18.0
+C tf_0/xor2v0x05_0/bn or2v0x3_1/vdd 13.7
+C or2v0x3_1/vss tf_1/dfnt1v0x2_0/d 13.6
+C tf_2/dfnt1v0x2_0/cn or2v0x3_1/vss 17.1
+C or2v0x3_1/vss tf_1/dfnt1v0x2_0/n4 7.3
+C or2v0x3_1/vss or2v0x3_1/a 7.7
+C tf_2/dfnt1v0x2_0/cp or2v0x3_0/z 2.7
+C tf_0/dfnt1v0x2_0/d or2v0x3_1/vss 13.6
+C or2v0x3_1/vss tf_1/dfnt1v0x2_0/n2 7.2
+C an2v0x3_3/vss an2v0x3_0/b 5.5
+C or2v0x3_1/vss or2v0x3_0/zn 9.0
+C an2v0x3_2/vdd an2v0x3_2/a 5.3
+C tf_2/dfnt1v0x2_0/n1 or2v0x3_1/vss 9.9
+C or2v0x3_1/vss tf_1/dfnt1v0x2_0/ci 27.5
+C tf_1/dfnt1v0x2_0/n1 or2v0x3_1/vss 9.9
+C or2v0x3_1/vdd an2v0x3_2/a 10.2
+C or2v0x3_1/vss tf_1/xor2v0x05_0/an 9.2
+C or2v0x3_1/vss or2v0x3_1/z 10.5
+C tf_0/dfnt1v0x2_0/d tf_0/xor2v0x05_0/bn 2.8
+C or2v0x3_1/vdd tf_2/dfnt1v0x2_0/z 24.3
+C tf_0/dfnt1v0x2_0/cn or2v0x3_1/vdd 46.5
+C tf_2/dfnt1v0x2_0/n4 or2v0x3_1/vdd 8.9
+C or2v0x3_1/vss tf_0/dfnt1v0x2_0/n4 7.3
+C or2v0x3_1/vdd tf_0/xor2v0x05_0/a 5.4
+C or2v0x3_1/vss an2v0x3_2/z 16.1
+C or2v0x3_1/vss or2v0x3_0/z 9.7
+C or2v0x3_1/vdd tf_2/dfnt1v0x2_0/d 9.8
+C tf_2/dfnt1v0x2_0/ci tf_2/dfnt1v0x2_0/z 2.1
+C or2v0x3_1/vss iv1v0x3_0/a 7.6
+C an2v0x3_2/vdd an2v0x3_1/zn 13.3
+C an2v0x3_3/vss an2v0x3_3/zn 9.5
+C or2v0x3_1/vss tf_1/xor2v0x05_0/bn 6.5
+C an2v0x3_2/vdd an2v0x3_1/b 20.2
+C tf_2/xor2v0x05_0/an or2v0x3_1/vss 9.2
+C tf_0/xor2v0x05_0/an or2v0x3_1/vss 9.2
+C an2v0x3_0/b tf_0/dfnt1v0x2_0/ci 2.1
+C tf_2/dfnt1v0x2_0/ci or2v0x3_1/vdd 16.6
+C tf_1/dfnt1v0x2_0/cn or2v0x3_1/vss 17.1
+C an2v0x3_2/zn or2v0x3_1/vss 9.5
+C or2v0x3_1/vss an2v0x3_2/b 5.5
+C an2v0x3_1/a or2v0x3_1/vss 31.8
+C or2v0x3_1/vss an2v0x3_0/b 18.0
+C or2v0x3_1/vdd or2v0x3_0/a 22.1
+C tf_2/dfnt1v0x2_0/cp tf_2/xor2v0x05_0/bn 4.7
+C an2v0x3_3/a or2v0x3_1/vdd 40.5
+C or2v0x3_1/zn or2v0x3_1/vss 9.0
+C or2v0x3_1/vdd tf_1/dfnt1v0x2_0/d 9.8
+C tf_2/dfnt1v0x2_0/cn or2v0x3_1/vdd 46.5
+C an2v0x3_3/vss an2v0x3_0/zn 9.5
+C or2v0x3_1/vdd tf_1/dfnt1v0x2_0/n4 8.9
+C or2v0x3_1/vdd or2v0x3_1/a 23.4
+C an2v0x3_3/vss an2v0x3_3/b 5.5
+C tf_0/dfnt1v0x2_0/d or2v0x3_1/vdd 9.8
+C tf_0/dfnt1v0x2_0/n2 or2v0x3_1/vss 7.2
+C tf_1/dfnt1v0x2_0/n2 or2v0x3_1/vdd 12.4
+C tf_2/dfnt1v0x2_0/cp tf_0/dfnt1v0x2_0/ci 2.2
+C or2v0x3_1/vdd or2v0x3_0/zn 12.7
+C tf_2/dfnt1v0x2_0/n1 or2v0x3_1/vdd 8.4
+C or2v0x3_1/vdd tf_1/dfnt1v0x2_0/ci 16.6
+C tf_1/dfnt1v0x2_0/n1 or2v0x3_1/vdd 8.4
+C tf_2/dfnt1v0x2_0/cp or2v0x3_1/vss 17.6
+C an2v0x3_3/vss an2v0x3_0/a 6.3
+C tf_1/xor2v0x05_0/an or2v0x3_1/vdd 6.0
+C or2v0x3_1/vdd or2v0x3_1/z 11.7
+C an2v0x3_3/b an2v0x3_3/zn 2.4
+C an2v0x3_2/vdd an2v0x3_2/z 4.7
+C or2v0x3_1/vss tf_2/xor2v0x05_0/bn 6.5
+C an2v0x3_2/vdd iv1v0x3_0/a 13.4
+C or2v0x3_1/vdd tf_0/dfnt1v0x2_0/n4 8.9
+C an2v0x3_3/a tf_1/dfnt1v0x2_0/ci 2.1
+C or2v0x3_1/vdd an2v0x3_2/z 7.9
+C or2v0x3_1/vdd or2v0x3_0/z 11.4
+C or2v0x3_1/vss tf_0/dfnt1v0x2_0/n1 9.9
+C or2v0x3_1/vss tf_0/dfnt1v0x2_0/ci 27.5
+C an2v0x3_2/vdd an2v0x3_2/b 10.8
+C an2v0x3_2/zn an2v0x3_2/vdd 13.3
+C an2v0x3_1/a an2v0x3_2/vdd 5.3
+C tf_2/dfnt1v0x2_0/n2 or2v0x3_1/vss 7.2
+C or2v0x3_1/vdd tf_1/xor2v0x05_0/bn 13.7
+C tf_2/xor2v0x05_0/an or2v0x3_1/vdd 6.0
+C tf_0/xor2v0x05_0/an or2v0x3_1/vdd 6.0
+C tf_1/dfnt1v0x2_0/cn or2v0x3_1/vdd 46.5
+C or2v0x3_1/vss an2v0x3_1/z 16.3
+C an2v0x3_1/a or2v0x3_1/vdd 10.2
+C or2v0x3_1/vdd an2v0x3_0/b 36.1
+C or2v0x3_1/vss tf_2/dfnt1v0x2_0/zn 20.1
+C or2v0x3_1/zn or2v0x3_1/vdd 12.7
+C tf_1/dfnt1v0x2_0/d or2v0x3_0/z 3.1
+C tf_1/xor2v0x05_0/bn tf_1/dfnt1v0x2_0/d 2.8
+C tf_0/xor2v0x05_0/bn or2v0x3_1/vss 6.5
+C tf_0/dfnt1v0x2_0/n2 or2v0x3_1/vdd 12.4
+C tf_2/dfnt1v0x2_0/cp or2v0x3_1/vdd 50.7
+C or2v0x3_1/vdd an2v0x3_3/zn 13.3
+C an2v0x3_3/vss or2v0x3_0/a 2.1
+C an2v0x3_3/vss an2v0x3_3/a 9.9
+C tf_2/dfnt1v0x2_0/d tf_2/xor2v0x05_0/bn 2.8
+C or2v0x3_1/vdd tf_2/xor2v0x05_0/bn 13.7
+C or2v0x3_1/vss an2v0x3_2/a 34.4
+C tf_2/xor2v0x05_0/an or2v0x3_1/z 3.7
+C or2v0x3_1/vss tf_2/dfnt1v0x2_0/z 18.0
+C tf_0/dfnt1v0x2_0/cn or2v0x3_1/vss 17.1
+C or2v0x3_1/vss tf_2/dfnt1v0x2_0/n4 7.3
+C or2v0x3_1/vss tf_0/xor2v0x05_0/a 8.1
+C or2v0x3_1/vdd tf_0/dfnt1v0x2_0/n1 8.4
+C or2v0x3_1/vdd tf_0/dfnt1v0x2_0/ci 16.6
+C an2v0x3_2/vdd an2v0x3_1/z 4.7
+C tf_2/dfnt1v0x2_0/n2 or2v0x3_1/vdd 12.4
+C tf_2/dfnt1v0x2_0/cp tf_1/dfnt1v0x2_0/n4 2.3
+C or2v0x3_1/vss tf_2/dfnt1v0x2_0/d 13.6
+C tf_2/dfnt1v0x2_0/cp or2v0x3_1/a 2.1
+C an2v0x3_0/zn or2v0x3_1/vdd 13.3
+C or2v0x3_1/vdd an2v0x3_3/b 7.8
+C or2v0x3_1/vdd an2v0x3_1/z 7.9
+C tf_2/dfnt1v0x2_0/ci or2v0x3_1/vss 27.5
+R an2v0x3_3/a_30_9# 91
+C an2v0x3_3/b GND 8.8
+R an2v0x3_3/b 684
+C or2v0x3_1/a GND 3.0
+R or2v0x3_1/a 1297
+C an2v0x3_3/a GND 2.6
+R an2v0x3_3/a 2603
+R an2v0x3_3/zn 1317
+C or2v0x3_1/vdd GND 110.5
+R or2v0x3_1/vdd 77768
+R an2v0x3_0/a_30_9# 91
+C an2v0x3_0/b GND 8.0
+R an2v0x3_0/b 2585
+C or2v0x3_0/a GND 7.1
+R or2v0x3_0/a 1298
+R an2v0x3_0/a 697
+R an2v0x3_0/zn 1317
+C an2v0x3_3/vss GND 86.5
+R an2v0x3_3/vss 511
+R tf_2/dfnt1v0x2_0/a_94_13# 32
+R tf_2/dfnt1v0x2_0/a_77_13# 32
+R tf_2/dfnt1v0x2_0/a_40_13# 32
+R tf_2/dfnt1v0x2_0/a_94_47# 155
+R tf_2/dfnt1v0x2_0/a_77_54# 71
+R tf_2/dfnt1v0x2_0/a_40_48# 71
+R tf_2/dfnt1v0x2_0/n4 761
+R tf_2/dfnt1v0x2_0/ci 1607
+R tf_2/dfnt1v0x2_0/n2 751
+R tf_2/dfnt1v0x2_0/n1 840
+R tf_2/dfnt1v0x2_0/cn 3155
+R tf_2/dfnt1v0x2_0/zn 1919
+R tf_2/xor2v0x05_0/a_48_11# 48
+R tf_2/dfnt1v0x2_0/d 889
+R tf_2/xor2v0x05_0/an 777
+R tf_2/xor2v0x05_0/bn 1294
+R tf_2/dfnt1v0x2_0/z 1857
+R or2v0x3_1/a_48_39# 191
+R or2v0x3_1/a_31_39# 238
+R or2v0x3_1/z 810
+C an2v0x3_2/z GND 4.6
+R an2v0x3_2/z 1105
+R or2v0x3_1/zn 1208
+R tf_1/dfnt1v0x2_0/a_94_13# 32
+R tf_1/dfnt1v0x2_0/a_77_13# 32
+R tf_1/dfnt1v0x2_0/a_40_13# 32
+R tf_1/dfnt1v0x2_0/a_94_47# 155
+R tf_1/dfnt1v0x2_0/a_77_54# 71
+R tf_1/dfnt1v0x2_0/a_40_48# 71
+R tf_1/dfnt1v0x2_0/n4 761
+R tf_1/dfnt1v0x2_0/ci 1607
+R tf_1/dfnt1v0x2_0/n2 751
+R tf_1/dfnt1v0x2_0/n1 840
+R tf_1/dfnt1v0x2_0/cn 3155
+R an2v0x3_2/a 2664
+R tf_1/xor2v0x05_0/a_48_11# 48
+R tf_1/dfnt1v0x2_0/d 889
+R tf_1/xor2v0x05_0/an 777
+R tf_1/xor2v0x05_0/bn 1294
+R or2v0x3_0/a_48_39# 191
+R or2v0x3_0/a_31_39# 238
+R or2v0x3_0/z 810
+C an2v0x3_1/z GND 9.3
+R an2v0x3_1/z 1106
+R or2v0x3_0/zn 1208
+R tf_0/dfnt1v0x2_0/a_94_13# 32
+R tf_0/dfnt1v0x2_0/a_77_13# 32
+R tf_0/dfnt1v0x2_0/a_40_13# 32
+R tf_2/dfnt1v0x2_0/cp 1710
+R tf_0/dfnt1v0x2_0/a_94_47# 155
+R tf_0/dfnt1v0x2_0/a_77_54# 71
+R tf_0/dfnt1v0x2_0/a_40_48# 71
+R tf_0/dfnt1v0x2_0/n4 761
+R tf_0/dfnt1v0x2_0/ci 1607
+R tf_0/dfnt1v0x2_0/n2 751
+R tf_0/dfnt1v0x2_0/n1 840
+R tf_0/dfnt1v0x2_0/cn 3155
+C an2v0x3_1/a GND 5.9
+R an2v0x3_1/a 2665
+R tf_0/xor2v0x05_0/a_48_11# 48
+R tf_0/dfnt1v0x2_0/d 889
+R tf_0/xor2v0x05_0/a 567
+R tf_0/xor2v0x05_0/an 777
+R tf_0/xor2v0x05_0/bn 1294
+R an2v0x3_2/a_30_9# 91
+C an2v0x3_2/b GND 11.7
+R an2v0x3_2/b 685
+R an2v0x3_2/zn 1317
+C or2v0x3_1/vss GND 35.5
+R or2v0x3_1/vss 6282
+R an2v0x3_1/a_30_9# 91
+R an2v0x3_1/zn 1317
+R an2v0x3_1/b 946
+R iv1v0x3_0/a 1305
+C an2v0x3_2/vdd GND 84.6
+R an2v0x3_2/vdd 19380

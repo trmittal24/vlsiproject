@@ -1,0 +1,27 @@
+magic
+tech scmos
+timestamp 1522989823
+<< metal1 >>
+rect 147 68 158 76
+rect 146 4 157 12
+<< metal2 >>
+rect 67 57 162 61
+rect 67 47 71 57
+rect 158 53 162 57
+rect 20 43 71 47
+rect 111 29 114 33
+rect 111 26 212 29
+<< m2contact >>
+rect 158 49 162 53
+rect 16 43 20 47
+rect 111 33 115 37
+rect 212 26 216 30
+use ../pharosc_8.4/magic/cells/vsclib/dfnt1v0x2  dfnt1v0x2_0
+timestamp 1522989823
+transform 1 0 4 0 1 4
+box -4 -4 148 76
+use ../pharosc_8.4/magic/cells/vsclib/xor2v0x05  xor2v0x05_0
+timestamp 1522989823
+transform 1 0 156 0 1 4
+box -4 -4 68 76
+<< end >>

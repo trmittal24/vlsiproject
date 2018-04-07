@@ -1,0 +1,403 @@
+| units: 100 tech: scmos format: MIT
+p diff2_2/or2v0x3_0/zn diff2_1/an2v0x2_0/vdd diff2_2/or2v0x3_0/z 2 20 741 35
+p diff2_2/or2v0x3_0/zn diff2_2/or2v0x3_0/z diff2_1/an2v0x2_0/vdd 2 20 731 35
+p diff2_2/an2v0x2_1/z diff2_1/an2v0x2_0/vdd diff2_2/or2v0x3_0/a_31_39# 2 20 721 35
+p diff2_2/an2v0x2_0/z diff2_2/or2v0x3_0/a_31_39# diff2_2/or2v0x3_0/zn 2 20 714 35
+p diff2_2/an2v0x2_0/z diff2_2/or2v0x3_0/zn diff2_2/or2v0x3_0/a_48_39# 2 16 704 35
+p diff2_2/an2v0x2_1/z diff2_2/or2v0x3_0/a_48_39# diff2_1/an2v0x2_0/vdd 2 16 697 35
+n diff2_2/or2v0x3_0/zn diff2_2/or2v0x3_0/z diff2_0/an2v0x2_0/vss 2 20 741 68
+n diff2_2/an2v0x2_1/z diff2_0/an2v0x2_0/vss diff2_2/or2v0x3_0/zn 2 10 722 63
+n diff2_2/an2v0x2_0/z diff2_2/or2v0x3_0/zn diff2_0/an2v0x2_0/vss 2 10 712 63
+p diff2_2/an2v0x2_1/zn diff2_2/an2v0x2_1/z diff2_1/an2v0x2_0/vdd 2 28 669 36
+p diff2_2/an2v0x2_1/a diff2_1/an2v0x2_0/vdd diff2_2/an2v0x2_1/zn 2 19 659 27
+p diff2_2/an2v0x2_1/b diff2_2/an2v0x2_1/zn diff2_1/an2v0x2_0/vdd 2 19 649 27
+n diff2_2/an2v0x2_1/zn diff2_2/an2v0x2_1/z diff2_0/an2v0x2_0/vss 2 14 669 62
+n diff2_2/an2v0x2_1/a diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_1/a_24_13# 2 13 656 61
+n diff2_2/an2v0x2_1/b diff2_2/an2v0x2_1/a_24_13# diff2_2/an2v0x2_1/zn 2 13 649 61
+p diff2_2/an2v0x2_0/zn diff2_2/an2v0x2_0/z diff2_1/an2v0x2_0/vdd 2 28 621 36
+p diff2_2/an2v0x2_0/a diff2_1/an2v0x2_0/vdd diff2_2/an2v0x2_0/zn 2 19 611 27
+p diff2_2/an2v0x2_0/b diff2_2/an2v0x2_0/zn diff2_1/an2v0x2_0/vdd 2 19 601 27
+n diff2_2/an2v0x2_0/zn diff2_2/an2v0x2_0/z diff2_0/an2v0x2_0/vss 2 14 621 62
+n diff2_2/an2v0x2_0/a diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_0/a_24_13# 2 13 608 61
+n diff2_2/an2v0x2_0/b diff2_2/an2v0x2_0/a_24_13# diff2_2/an2v0x2_0/zn 2 13 601 61
+p diff2_2/xnr2v8x05_0/zn diff2_2/an2v0x2_0/b diff2_1/an2v0x2_0/vdd 2 12 573 36
+p diff2_2/xor3v1x2_0/a diff2_1/an2v0x2_0/vdd diff2_2/xnr2v8x05_0/an 2 12 561 36
+p diff2_2/xnr2v8x05_0/bn diff2_2/xnr2v8x05_0/an diff2_2/xnr2v8x05_0/zn 2 12 551 36
+p diff2_2/an2v0x2_1/b diff2_2/xnr2v8x05_0/zn diff2_2/xnr2v8x05_0/ai 2 12 541 36
+p diff2_2/xnr2v8x05_0/an diff2_2/xnr2v8x05_0/ai diff2_1/an2v0x2_0/vdd 2 12 531 36
+p diff2_2/an2v0x2_1/b diff2_1/an2v0x2_0/vdd diff2_2/xnr2v8x05_0/bn 2 12 521 27
+n diff2_2/xnr2v8x05_0/zn diff2_2/an2v0x2_0/b diff2_0/an2v0x2_0/vss 2 6 573 55
+n diff2_2/xor3v1x2_0/a diff2_0/an2v0x2_0/vss diff2_2/xnr2v8x05_0/an 2 6 563 55
+n diff2_2/an2v0x2_1/b diff2_2/xnr2v8x05_0/an diff2_2/xnr2v8x05_0/zn 2 6 553 55
+n diff2_2/xnr2v8x05_0/bn diff2_2/xnr2v8x05_0/zn diff2_2/xnr2v8x05_0/ai 2 6 543 55
+n diff2_2/xnr2v8x05_0/an diff2_2/xnr2v8x05_0/ai diff2_0/an2v0x2_0/vss 2 6 532 54
+n diff2_2/an2v0x2_1/b diff2_0/an2v0x2_0/vss diff2_2/xnr2v8x05_0/bn 2 6 521 61
+p diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/z diff2_2/xor3v1x2_0/cn 2 27 520 121
+p diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/cn diff2_2/xor3v1x2_0/z 2 27 530 121
+p diff2_2/xor3v1x2_0/cn diff2_2/xor3v1x2_0/z diff2_2/xor3v1x2_0/zn 2 27 540 121
+p diff2_2/xor3v1x2_0/cn diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/z 2 27 550 121
+p diff2_2/an2v0x2_0/a diff2_1/an2v0x2_0/vdd diff2_2/xor3v1x2_0/cn 2 26 573 123
+p diff2_2/an2v0x2_0/a diff2_2/xor3v1x2_0/cn diff2_1/an2v0x2_0/vdd 2 26 583 123
+p diff2_2/xor3v1x2_0/iz diff2_1/an2v0x2_0/vdd diff2_2/xor3v1x2_0/zn 2 28 593 121
+p diff2_2/xor3v1x2_0/iz diff2_2/xor3v1x2_0/zn diff2_1/an2v0x2_0/vdd 2 28 603 121
+p diff2_2/an2v0x2_1/a diff2_2/xor3v1x2_0/bn diff2_2/xor3v1x2_0/iz 2 28 623 121
+p diff2_2/xor3v1x2_0/bn diff2_2/xor3v1x2_0/iz diff2_2/an2v0x2_1/a 2 28 633 121
+p diff2_2/xor3v1x2_0/a diff2_2/an2v0x2_1/a diff2_1/an2v0x2_0/vdd 2 28 643 121
+p diff2_2/an2v0x2_1/b diff2_1/an2v0x2_0/vdd diff2_2/xor3v1x2_0/bn 2 14 654 125
+p diff2_2/an2v0x2_1/b diff2_2/xor3v1x2_0/bn diff2_1/an2v0x2_0/vdd 2 14 664 121
+n diff2_2/xor3v1x2_0/cn diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/a_11_12# 2 12 520 95
+n diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/a_11_12# diff2_2/xor3v1x2_0/z 2 12 527 95
+n diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/z diff2_2/xor3v1x2_0/a_28_12# 2 12 537 95
+n diff2_2/xor3v1x2_0/cn diff2_2/xor3v1x2_0/a_28_12# diff2_0/an2v0x2_0/vss 2 12 544 95
+n diff2_2/xor3v1x2_0/iz diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/zn 2 14 556 95
+n diff2_2/an2v0x2_0/a diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/z 2 14 566 95
+n diff2_2/an2v0x2_0/a diff2_2/xor3v1x2_0/z diff2_2/xor3v1x2_0/zn 2 14 576 95
+n diff2_2/xor3v1x2_0/iz diff2_2/xor3v1x2_0/zn diff2_0/an2v0x2_0/vss 2 14 586 95
+n diff2_2/an2v0x2_0/a diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/cn 2 12 596 91
+n diff2_2/an2v0x2_0/a diff2_2/xor3v1x2_0/cn diff2_0/an2v0x2_0/vss 2 12 606 91
+n diff2_2/an2v0x2_1/a diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/a_115_7# 2 13 624 90
+n diff2_2/xor3v1x2_0/bn diff2_2/xor3v1x2_0/a_115_7# diff2_2/xor3v1x2_0/iz 2 13 631 90
+n diff2_2/an2v0x2_1/b diff2_2/xor3v1x2_0/iz diff2_2/an2v0x2_1/a 2 13 641 90
+n diff2_2/xor3v1x2_0/a diff2_2/an2v0x2_1/a diff2_0/an2v0x2_0/vss 2 13 651 95
+n diff2_2/an2v0x2_1/b diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/bn 2 11 664 98
+p diff2_1/or2v0x3_0/zn diff2_1/an2v0x2_0/vdd diff2_2/an2v0x2_0/a 2 20 264 122
+p diff2_1/or2v0x3_0/zn diff2_2/an2v0x2_0/a diff2_1/an2v0x2_0/vdd 2 20 274 122
+p diff2_1/an2v0x2_1/z diff2_1/an2v0x2_0/vdd diff2_1/or2v0x3_0/a_31_39# 2 20 284 122
+p diff2_1/an2v0x2_0/z diff2_1/or2v0x3_0/a_31_39# diff2_1/or2v0x3_0/zn 2 20 291 122
+p diff2_1/an2v0x2_0/z diff2_1/or2v0x3_0/zn diff2_1/or2v0x3_0/a_48_39# 2 16 301 122
+p diff2_1/an2v0x2_1/z diff2_1/or2v0x3_0/a_48_39# diff2_1/an2v0x2_0/vdd 2 16 308 122
+n diff2_1/or2v0x3_0/zn diff2_2/an2v0x2_0/a diff2_0/an2v0x2_0/vss 2 20 264 89
+n diff2_1/an2v0x2_1/z diff2_0/an2v0x2_0/vss diff2_1/or2v0x3_0/zn 2 10 283 94
+n diff2_1/an2v0x2_0/z diff2_1/or2v0x3_0/zn diff2_0/an2v0x2_0/vss 2 10 293 94
+p diff2_1/an2v0x2_1/zn diff2_1/an2v0x2_1/z diff2_1/an2v0x2_0/vdd 2 28 336 121
+p diff2_1/an2v0x2_1/a diff2_1/an2v0x2_0/vdd diff2_1/an2v0x2_1/zn 2 19 346 130
+p diff2_1/an2v0x2_1/b diff2_1/an2v0x2_1/zn diff2_1/an2v0x2_0/vdd 2 19 356 130
+n diff2_1/an2v0x2_1/zn diff2_1/an2v0x2_1/z diff2_0/an2v0x2_0/vss 2 14 336 95
+n diff2_1/an2v0x2_1/a diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_1/a_24_13# 2 13 349 96
+n diff2_1/an2v0x2_1/b diff2_1/an2v0x2_1/a_24_13# diff2_1/an2v0x2_1/zn 2 13 356 96
+p diff2_1/an2v0x2_0/zn diff2_1/an2v0x2_0/z diff2_1/an2v0x2_0/vdd 2 28 384 121
+p diff2_0/or2v0x3_0/z diff2_1/an2v0x2_0/vdd diff2_1/an2v0x2_0/zn 2 19 394 130
+p diff2_1/an2v0x2_0/b diff2_1/an2v0x2_0/zn diff2_1/an2v0x2_0/vdd 2 19 404 130
+n diff2_1/an2v0x2_0/zn diff2_1/an2v0x2_0/z diff2_0/an2v0x2_0/vss 2 14 384 95
+n diff2_0/or2v0x3_0/z diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_0/a_24_13# 2 13 397 96
+n diff2_1/an2v0x2_0/b diff2_1/an2v0x2_0/a_24_13# diff2_1/an2v0x2_0/zn 2 13 404 96
+p diff2_1/xnr2v8x05_0/zn diff2_1/an2v0x2_0/b diff2_1/an2v0x2_0/vdd 2 12 432 121
+p diff2_1/xor3v1x2_0/a diff2_1/an2v0x2_0/vdd diff2_1/xnr2v8x05_0/an 2 12 444 121
+p diff2_1/xnr2v8x05_0/bn diff2_1/xnr2v8x05_0/an diff2_1/xnr2v8x05_0/zn 2 12 454 121
+p diff2_1/an2v0x2_1/b diff2_1/xnr2v8x05_0/zn diff2_1/xnr2v8x05_0/ai 2 12 464 121
+p diff2_1/xnr2v8x05_0/an diff2_1/xnr2v8x05_0/ai diff2_1/an2v0x2_0/vdd 2 12 474 121
+p diff2_1/an2v0x2_1/b diff2_1/an2v0x2_0/vdd diff2_1/xnr2v8x05_0/bn 2 12 484 130
+n diff2_1/xnr2v8x05_0/zn diff2_1/an2v0x2_0/b diff2_0/an2v0x2_0/vss 2 6 432 102
+n diff2_1/xor3v1x2_0/a diff2_0/an2v0x2_0/vss diff2_1/xnr2v8x05_0/an 2 6 442 102
+n diff2_1/an2v0x2_1/b diff2_1/xnr2v8x05_0/an diff2_1/xnr2v8x05_0/zn 2 6 452 102
+n diff2_1/xnr2v8x05_0/bn diff2_1/xnr2v8x05_0/zn diff2_1/xnr2v8x05_0/ai 2 6 462 102
+n diff2_1/xnr2v8x05_0/an diff2_1/xnr2v8x05_0/ai diff2_0/an2v0x2_0/vss 2 6 473 103
+n diff2_1/an2v0x2_1/b diff2_0/an2v0x2_0/vss diff2_1/xnr2v8x05_0/bn 2 6 484 96
+p diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/z diff2_1/xor3v1x2_0/cn 2 27 485 36
+p diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/cn diff2_1/xor3v1x2_0/z 2 27 475 36
+p diff2_1/xor3v1x2_0/cn diff2_1/xor3v1x2_0/z diff2_1/xor3v1x2_0/zn 2 27 465 36
+p diff2_1/xor3v1x2_0/cn diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/z 2 27 455 36
+p diff2_0/or2v0x3_0/z diff2_1/an2v0x2_0/vdd diff2_1/xor3v1x2_0/cn 2 26 432 34
+p diff2_0/or2v0x3_0/z diff2_1/xor3v1x2_0/cn diff2_1/an2v0x2_0/vdd 2 26 422 34
+p diff2_1/xor3v1x2_0/iz diff2_1/an2v0x2_0/vdd diff2_1/xor3v1x2_0/zn 2 28 412 36
+p diff2_1/xor3v1x2_0/iz diff2_1/xor3v1x2_0/zn diff2_1/an2v0x2_0/vdd 2 28 402 36
+p diff2_1/an2v0x2_1/a diff2_1/xor3v1x2_0/bn diff2_1/xor3v1x2_0/iz 2 28 382 36
+p diff2_1/xor3v1x2_0/bn diff2_1/xor3v1x2_0/iz diff2_1/an2v0x2_1/a 2 28 372 36
+p diff2_1/xor3v1x2_0/a diff2_1/an2v0x2_1/a diff2_1/an2v0x2_0/vdd 2 28 362 36
+p diff2_1/an2v0x2_1/b diff2_1/an2v0x2_0/vdd diff2_1/xor3v1x2_0/bn 2 14 351 32
+p diff2_1/an2v0x2_1/b diff2_1/xor3v1x2_0/bn diff2_1/an2v0x2_0/vdd 2 14 341 36
+n diff2_1/xor3v1x2_0/cn diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/a_11_12# 2 12 485 62
+n diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/a_11_12# diff2_1/xor3v1x2_0/z 2 12 478 62
+n diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/z diff2_1/xor3v1x2_0/a_28_12# 2 12 468 62
+n diff2_1/xor3v1x2_0/cn diff2_1/xor3v1x2_0/a_28_12# diff2_0/an2v0x2_0/vss 2 12 461 62
+n diff2_1/xor3v1x2_0/iz diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/zn 2 14 449 62
+n diff2_0/or2v0x3_0/z diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/z 2 14 439 62
+n diff2_0/or2v0x3_0/z diff2_1/xor3v1x2_0/z diff2_1/xor3v1x2_0/zn 2 14 429 62
+n diff2_1/xor3v1x2_0/iz diff2_1/xor3v1x2_0/zn diff2_0/an2v0x2_0/vss 2 14 419 62
+n diff2_0/or2v0x3_0/z diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/cn 2 12 409 66
+n diff2_0/or2v0x3_0/z diff2_1/xor3v1x2_0/cn diff2_0/an2v0x2_0/vss 2 12 399 66
+n diff2_1/an2v0x2_1/a diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/a_115_7# 2 13 381 67
+n diff2_1/xor3v1x2_0/bn diff2_1/xor3v1x2_0/a_115_7# diff2_1/xor3v1x2_0/iz 2 13 374 67
+n diff2_1/an2v0x2_1/b diff2_1/xor3v1x2_0/iz diff2_1/an2v0x2_1/a 2 13 364 67
+n diff2_1/xor3v1x2_0/a diff2_1/an2v0x2_1/a diff2_0/an2v0x2_0/vss 2 13 354 62
+n diff2_1/an2v0x2_1/b diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/bn 2 11 341 59
+p diff2_0/or2v0x3_0/zn diff2_1/an2v0x2_0/vdd diff2_0/or2v0x3_0/z 2 20 237 35
+p diff2_0/or2v0x3_0/zn diff2_0/or2v0x3_0/z diff2_1/an2v0x2_0/vdd 2 20 227 35
+p diff2_0/an2v0x2_1/z diff2_1/an2v0x2_0/vdd diff2_0/or2v0x3_0/a_31_39# 2 20 217 35
+p diff2_0/an2v0x2_0/z diff2_0/or2v0x3_0/a_31_39# diff2_0/or2v0x3_0/zn 2 20 210 35
+p diff2_0/an2v0x2_0/z diff2_0/or2v0x3_0/zn diff2_0/or2v0x3_0/a_48_39# 2 16 200 35
+p diff2_0/an2v0x2_1/z diff2_0/or2v0x3_0/a_48_39# diff2_1/an2v0x2_0/vdd 2 16 193 35
+n diff2_0/or2v0x3_0/zn diff2_0/or2v0x3_0/z diff2_0/an2v0x2_0/vss 2 20 237 68
+n diff2_0/an2v0x2_1/z diff2_0/an2v0x2_0/vss diff2_0/or2v0x3_0/zn 2 10 218 63
+n diff2_0/an2v0x2_0/z diff2_0/or2v0x3_0/zn diff2_0/an2v0x2_0/vss 2 10 208 63
+p diff2_0/an2v0x2_1/zn diff2_0/an2v0x2_1/z diff2_1/an2v0x2_0/vdd 2 28 165 36
+p diff2_0/an2v0x2_1/a diff2_1/an2v0x2_0/vdd diff2_0/an2v0x2_1/zn 2 19 155 27
+p diff2_0/an2v0x2_1/b diff2_0/an2v0x2_1/zn diff2_1/an2v0x2_0/vdd 2 19 145 27
+n diff2_0/an2v0x2_1/zn diff2_0/an2v0x2_1/z diff2_0/an2v0x2_0/vss 2 14 165 62
+n diff2_0/an2v0x2_1/a diff2_0/an2v0x2_0/vss diff2_0/an2v0x2_1/a_24_13# 2 13 152 61
+n diff2_0/an2v0x2_1/b diff2_0/an2v0x2_1/a_24_13# diff2_0/an2v0x2_1/zn 2 13 145 61
+p diff2_0/an2v0x2_0/zn diff2_0/an2v0x2_0/z diff2_1/an2v0x2_0/vdd 2 28 117 36
+p diff2_0/an2v0x2_0/a diff2_1/an2v0x2_0/vdd diff2_0/an2v0x2_0/zn 2 19 107 27
+p diff2_0/an2v0x2_0/b diff2_0/an2v0x2_0/zn diff2_1/an2v0x2_0/vdd 2 19 97 27
+n diff2_0/an2v0x2_0/zn diff2_0/an2v0x2_0/z diff2_0/an2v0x2_0/vss 2 14 117 62
+n diff2_0/an2v0x2_0/a diff2_0/an2v0x2_0/vss diff2_0/an2v0x2_0/a_24_13# 2 13 104 61
+n diff2_0/an2v0x2_0/b diff2_0/an2v0x2_0/a_24_13# diff2_0/an2v0x2_0/zn 2 13 97 61
+p diff2_0/xnr2v8x05_0/zn diff2_0/an2v0x2_0/b diff2_1/an2v0x2_0/vdd 2 12 69 36
+p diff2_0/xor3v1x2_0/a diff2_1/an2v0x2_0/vdd diff2_0/xnr2v8x05_0/an 2 12 57 36
+p diff2_0/xnr2v8x05_0/bn diff2_0/xnr2v8x05_0/an diff2_0/xnr2v8x05_0/zn 2 12 47 36
+p diff2_0/an2v0x2_1/b diff2_0/xnr2v8x05_0/zn diff2_0/xnr2v8x05_0/ai 2 12 37 36
+p diff2_0/xnr2v8x05_0/an diff2_0/xnr2v8x05_0/ai diff2_1/an2v0x2_0/vdd 2 12 27 36
+p diff2_0/an2v0x2_1/b diff2_1/an2v0x2_0/vdd diff2_0/xnr2v8x05_0/bn 2 12 17 27
+n diff2_0/xnr2v8x05_0/zn diff2_0/an2v0x2_0/b diff2_0/an2v0x2_0/vss 2 6 69 55
+n diff2_0/xor3v1x2_0/a diff2_0/an2v0x2_0/vss diff2_0/xnr2v8x05_0/an 2 6 59 55
+n diff2_0/an2v0x2_1/b diff2_0/xnr2v8x05_0/an diff2_0/xnr2v8x05_0/zn 2 6 49 55
+n diff2_0/xnr2v8x05_0/bn diff2_0/xnr2v8x05_0/zn diff2_0/xnr2v8x05_0/ai 2 6 39 55
+n diff2_0/xnr2v8x05_0/an diff2_0/xnr2v8x05_0/ai diff2_0/an2v0x2_0/vss 2 6 28 54
+n diff2_0/an2v0x2_1/b diff2_0/an2v0x2_0/vss diff2_0/xnr2v8x05_0/bn 2 6 17 61
+p diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/z diff2_0/xor3v1x2_0/cn 2 27 16 121
+p diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/cn diff2_0/xor3v1x2_0/z 2 27 26 121
+p diff2_0/xor3v1x2_0/cn diff2_0/xor3v1x2_0/z diff2_0/xor3v1x2_0/zn 2 27 36 121
+p diff2_0/xor3v1x2_0/cn diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/z 2 27 46 121
+p diff2_0/an2v0x2_0/a diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/cn 2 26 69 123
+p diff2_0/an2v0x2_0/a diff2_0/xor3v1x2_0/cn diff2_1/an2v0x2_0/vdd 2 26 79 123
+p diff2_0/xor3v1x2_0/iz diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/zn 2 28 89 121
+p diff2_0/xor3v1x2_0/iz diff2_0/xor3v1x2_0/zn diff2_1/an2v0x2_0/vdd 2 28 99 121
+p diff2_0/an2v0x2_1/a diff2_0/xor3v1x2_0/bn diff2_0/xor3v1x2_0/iz 2 28 119 121
+p diff2_0/xor3v1x2_0/bn diff2_0/xor3v1x2_0/iz diff2_0/an2v0x2_1/a 2 28 129 121
+p diff2_0/xor3v1x2_0/a diff2_0/an2v0x2_1/a diff2_1/an2v0x2_0/vdd 2 28 139 121
+p diff2_0/an2v0x2_1/b diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/bn 2 14 150 125
+p diff2_0/an2v0x2_1/b diff2_0/xor3v1x2_0/bn diff2_1/an2v0x2_0/vdd 2 14 160 121
+n diff2_0/xor3v1x2_0/cn diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/a_11_12# 2 12 16 95
+n diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/a_11_12# diff2_0/xor3v1x2_0/z 2 12 23 95
+n diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/z diff2_0/xor3v1x2_0/a_28_12# 2 12 33 95
+n diff2_0/xor3v1x2_0/cn diff2_0/xor3v1x2_0/a_28_12# diff2_0/an2v0x2_0/vss 2 12 40 95
+n diff2_0/xor3v1x2_0/iz diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/zn 2 14 52 95
+n diff2_0/an2v0x2_0/a diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/z 2 14 62 95
+n diff2_0/an2v0x2_0/a diff2_0/xor3v1x2_0/z diff2_0/xor3v1x2_0/zn 2 14 72 95
+n diff2_0/xor3v1x2_0/iz diff2_0/xor3v1x2_0/zn diff2_0/an2v0x2_0/vss 2 14 82 95
+n diff2_0/an2v0x2_0/a diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/cn 2 12 92 91
+n diff2_0/an2v0x2_0/a diff2_0/xor3v1x2_0/cn diff2_0/an2v0x2_0/vss 2 12 102 91
+n diff2_0/an2v0x2_1/a diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/a_115_7# 2 13 120 90
+n diff2_0/xor3v1x2_0/bn diff2_0/xor3v1x2_0/a_115_7# diff2_0/xor3v1x2_0/iz 2 13 127 90
+n diff2_0/an2v0x2_1/b diff2_0/xor3v1x2_0/iz diff2_0/an2v0x2_1/a 2 13 137 90
+n diff2_0/xor3v1x2_0/a diff2_0/an2v0x2_1/a diff2_0/an2v0x2_0/vss 2 13 147 95
+n diff2_0/an2v0x2_1/b diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/bn 2 11 160 98
+C diff2_2/an2v0x2_1/a diff2_2/an2v0x2_1/b 2.0
+C diff2_2/xor3v1x2_0/a diff2_1/an2v0x2_0/vdd 18.3
+C diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/a 22.7
+C diff2_1/an2v0x2_0/b diff2_1/an2v0x2_0/vdd 20.5
+C diff2_2/or2v0x3_0/zn diff2_1/an2v0x2_0/vdd 12.7
+C diff2_1/xor3v1x2_0/cn diff2_1/an2v0x2_0/vdd 31.6
+C diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_0/b 5.9
+C diff2_0/an2v0x2_0/vss diff2_2/or2v0x3_0/zn 9.0
+C diff2_0/an2v0x2_1/a diff2_0/an2v0x2_1/b 2.0
+C diff2_1/xnr2v8x05_0/an diff2_1/an2v0x2_0/vdd 9.9
+C diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/cn 18.8
+C diff2_1/xor3v1x2_0/zn diff2_1/an2v0x2_0/vdd 18.9
+C diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/cn 4.5
+C diff2_0/xnr2v8x05_0/bn diff2_1/an2v0x2_0/vdd 14.4
+C diff2_0/an2v0x2_0/vss diff2_1/xnr2v8x05_0/an 5.5
+C diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/zn 11.9
+C diff2_0/an2v0x2_0/vss diff2_0/xnr2v8x05_0/bn 6.7
+C diff2_0/xor3v1x2_0/bn diff2_0/xor3v1x2_0/iz 2.4
+C diff2_2/an2v0x2_1/z diff2_1/an2v0x2_0/vdd 17.7
+C diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_1/z 10.2
+C diff2_0/xor3v1x2_0/bn diff2_0/an2v0x2_1/b 2.6
+C diff2_0/xor3v1x2_0/zn diff2_0/xor3v1x2_0/z 4.6
+C diff2_2/xor3v1x2_0/bn diff2_2/an2v0x2_1/b 2.6
+C diff2_2/an2v0x2_1/b diff2_1/an2v0x2_0/vdd 50.3
+C diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/cn 4.5
+C diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_1/b 53.3
+C diff2_2/an2v0x2_0/z diff2_1/an2v0x2_0/vdd 24.6
+C diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/cn 4.5
+C diff2_1/xor3v1x2_0/z diff2_1/an2v0x2_0/vdd 4.1
+C diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_0/z 12.8
+C diff2_1/an2v0x2_1/zn diff2_1/an2v0x2_0/vdd 8.8
+C diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/z 7.2
+C diff2_1/xnr2v8x05_0/zn diff2_1/an2v0x2_0/vdd 4.4
+C diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_1/zn 8.9
+C diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/cn 31.6
+C diff2_0/an2v0x2_0/vss diff2_1/xnr2v8x05_0/zn 11.9
+C diff2_1/an2v0x2_1/a diff2_1/an2v0x2_1/b 2.0
+C diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/cn 18.8
+C diff2_0/an2v0x2_1/a diff2_1/an2v0x2_0/vdd 12.4
+C diff2_0/or2v0x3_0/z diff2_1/an2v0x2_0/vdd 26.9
+C diff2_0/xnr2v8x05_0/zn diff2_1/an2v0x2_0/vdd 4.4
+C diff2_0/an2v0x2_1/a diff2_0/an2v0x2_0/vss 19.1
+C diff2_0/an2v0x2_0/vss diff2_0/or2v0x3_0/z 36.2
+C diff2_0/xnr2v8x05_0/zn diff2_0/an2v0x2_0/vss 11.9
+C diff2_1/xor3v1x2_0/a diff2_1/an2v0x2_0/vdd 18.3
+C diff2_1/xor3v1x2_0/cn diff2_1/xor3v1x2_0/z 4.1
+C diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/z 4.1
+C diff2_1/or2v0x3_0/zn diff2_1/an2v0x2_0/vdd 12.7
+C diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/a 22.7
+C diff2_1/xor3v1x2_0/zn diff2_1/xor3v1x2_0/z 4.6
+C diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/z 7.2
+C diff2_0/an2v0x2_1/b diff2_0/xor3v1x2_0/zn 4.3
+C diff2_0/an2v0x2_0/vss diff2_1/or2v0x3_0/zn 9.0
+C diff2_0/xor3v1x2_0/bn diff2_1/an2v0x2_0/vdd 15.4
+C diff2_2/an2v0x2_0/b diff2_1/an2v0x2_0/vdd 20.5
+C diff2_0/xor3v1x2_0/bn diff2_0/an2v0x2_0/vss 9.1
+C diff2_1/xor3v1x2_0/iz diff2_1/xor3v1x2_0/bn 2.4
+C diff2_1/xnr2v8x05_0/bn diff2_1/an2v0x2_0/vdd 14.4
+C diff2_2/an2v0x2_0/b diff2_0/an2v0x2_0/vss 5.9
+C diff2_1/an2v0x2_0/vdd diff2_0/an2v0x2_0/a 23.4
+C diff2_0/an2v0x2_0/vss diff2_1/xnr2v8x05_0/bn 6.7
+C diff2_1/xor3v1x2_0/bn diff2_1/an2v0x2_1/b 2.6
+C diff2_0/an2v0x2_0/vss diff2_0/an2v0x2_0/a 32.1
+C diff2_2/xor3v1x2_0/zn diff2_1/an2v0x2_0/vdd 18.9
+C diff2_2/or2v0x3_0/z diff2_1/an2v0x2_0/vdd 3.4
+C diff2_2/xor3v1x2_0/zn diff2_2/xor3v1x2_0/z 4.6
+C diff2_0/xor3v1x2_0/a diff2_1/an2v0x2_0/vdd 18.3
+C diff2_1/xor3v1x2_0/iz diff2_1/an2v0x2_0/vdd 15.8
+C diff2_0/an2v0x2_0/b diff2_1/an2v0x2_0/vdd 20.5
+C diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/zn 11.9
+C diff2_0/or2v0x3_0/zn diff2_1/an2v0x2_0/vdd 12.7
+C diff2_0/xor3v1x2_0/a diff2_0/an2v0x2_0/vss 22.7
+C diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/iz 24.9
+C diff2_0/an2v0x2_0/b diff2_0/an2v0x2_0/vss 5.9
+C diff2_1/an2v0x2_1/b diff2_1/an2v0x2_0/vdd 50.3
+C diff2_0/an2v0x2_0/vss diff2_0/or2v0x3_0/zn 9.0
+C diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/iz 15.8
+C diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_1/b 53.3
+C diff2_2/xor3v1x2_0/iz diff2_2/xor3v1x2_0/bn 2.4
+C diff2_2/xor3v1x2_0/iz diff2_1/an2v0x2_0/vdd 15.8
+C diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/iz 24.9
+C diff2_2/xor3v1x2_0/cn diff2_1/an2v0x2_0/vdd 31.6
+C diff2_0/an2v0x2_1/z diff2_1/an2v0x2_0/vdd 17.7
+C diff2_2/xor3v1x2_0/cn diff2_2/xor3v1x2_0/z 4.1
+C diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/iz 24.9
+C diff2_0/an2v0x2_1/b diff2_1/an2v0x2_0/vdd 50.3
+C diff2_1/an2v0x2_1/a diff2_1/an2v0x2_0/vdd 12.4
+C diff2_1/an2v0x2_1/z diff2_1/an2v0x2_0/vdd 17.7
+C diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/cn 18.8
+C diff2_0/an2v0x2_0/vss diff2_0/an2v0x2_1/z 10.2
+C diff2_0/an2v0x2_1/b diff2_0/an2v0x2_0/vss 53.3
+C diff2_1/an2v0x2_0/z diff2_1/an2v0x2_0/vdd 24.6
+C diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_1/a 19.1
+C diff2_1/an2v0x2_1/z diff2_0/an2v0x2_0/vss 10.2
+C diff2_2/xnr2v8x05_0/an diff2_1/an2v0x2_0/vdd 9.9
+C diff2_0/an2v0x2_1/zn diff2_1/an2v0x2_0/vdd 8.8
+C diff2_1/an2v0x2_0/z diff2_0/an2v0x2_0/vss 12.8
+C diff2_0/an2v0x2_0/vss diff2_2/xnr2v8x05_0/an 5.5
+C diff2_0/an2v0x2_0/vss diff2_0/an2v0x2_1/zn 8.9
+C diff2_2/xnr2v8x05_0/bn diff2_1/an2v0x2_0/vdd 14.4
+C diff2_1/an2v0x2_0/vdd diff2_0/xor3v1x2_0/zn 18.9
+C diff2_1/xnr2v8x05_0/zn diff2_0/or2v0x3_0/z 4.4
+C diff2_2/an2v0x2_1/a diff2_1/an2v0x2_0/vdd 12.4
+C diff2_0/an2v0x2_0/vss diff2_2/xnr2v8x05_0/bn 6.7
+C diff2_0/an2v0x2_0/vss diff2_0/xor3v1x2_0/zn 11.9
+C diff2_2/an2v0x2_0/a diff2_2/xnr2v8x05_0/zn 4.4
+C diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_1/a 19.1
+C diff2_1/xor3v1x2_0/zn diff2_1/an2v0x2_1/b 4.3
+C diff2_0/an2v0x2_0/zn diff2_1/an2v0x2_0/vdd 8.8
+C diff2_2/xnr2v8x05_0/zn diff2_1/an2v0x2_0/vdd 4.4
+C diff2_1/an2v0x2_0/zn diff2_1/an2v0x2_0/vdd 8.8
+C diff2_0/an2v0x2_0/zn diff2_0/an2v0x2_0/vss 8.9
+C diff2_0/xor3v1x2_0/cn diff2_0/xor3v1x2_0/z 4.1
+C diff2_0/an2v0x2_0/vss diff2_2/xnr2v8x05_0/zn 11.9
+C diff2_1/an2v0x2_0/zn diff2_0/an2v0x2_0/vss 8.9
+C diff2_0/an2v0x2_0/z diff2_1/an2v0x2_0/vdd 24.6
+C diff2_2/xor3v1x2_0/zn diff2_2/an2v0x2_1/b 4.3
+C diff2_0/an2v0x2_0/vss diff2_0/an2v0x2_0/z 12.8
+C diff2_1/xor3v1x2_0/bn diff2_1/an2v0x2_0/vdd 15.4
+C diff2_2/an2v0x2_0/zn diff2_1/an2v0x2_0/vdd 8.8
+C diff2_0/an2v0x2_0/vss diff2_1/xor3v1x2_0/bn 9.1
+C diff2_2/an2v0x2_1/zn diff2_1/an2v0x2_0/vdd 8.8
+C diff2_2/an2v0x2_0/zn diff2_0/an2v0x2_0/vss 8.9
+C diff2_2/an2v0x2_0/a diff2_1/an2v0x2_0/vdd 40.1
+C diff2_1/an2v0x2_0/vdd diff2_0/xnr2v8x05_0/an 9.9
+C diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_1/zn 8.9
+C diff2_2/xor3v1x2_0/bn diff2_1/an2v0x2_0/vdd 15.4
+C diff2_0/an2v0x2_0/vss diff2_2/an2v0x2_0/a 35.3
+C diff2_2/xor3v1x2_0/z diff2_1/an2v0x2_0/vdd 4.1
+C diff2_0/an2v0x2_0/vss diff2_0/xnr2v8x05_0/an 5.5
+C diff2_0/xnr2v8x05_0/zn diff2_0/an2v0x2_0/a 4.4
+C diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/bn 9.1
+C diff2_0/an2v0x2_0/vss diff2_1/an2v0x2_0/vdd 21.1
+C diff2_0/an2v0x2_0/vss diff2_2/xor3v1x2_0/z 7.2
+R diff2_0/xor3v1x2_0/a_115_7# 69
+R diff2_0/xor3v1x2_0/a_28_12# 64
+R diff2_0/xor3v1x2_0/a_11_12# 64
+R diff2_0/an2v0x2_1/b 4427
+R diff2_0/xor3v1x2_0/a 1352
+R diff2_0/xor3v1x2_0/bn 1548
+R diff2_0/an2v0x2_1/a 1822
+R diff2_0/xor3v1x2_0/iz 2485
+R diff2_0/an2v0x2_0/a 2826
+R diff2_0/xor3v1x2_0/z 1263
+R diff2_0/xor3v1x2_0/cn 2938
+R diff2_0/xor3v1x2_0/zn 2183
+C diff2_1/an2v0x2_0/vdd GND 42.5
+R diff2_1/an2v0x2_0/vdd 123791
+R diff2_0/xnr2v8x05_0/ai 143
+R diff2_0/xnr2v8x05_0/an 562
+R diff2_0/xnr2v8x05_0/bn 779
+R diff2_0/xnr2v8x05_0/zn 574
+R diff2_0/an2v0x2_0/a_24_13# 69
+R diff2_0/an2v0x2_0/b 887
+R diff2_0/an2v0x2_0/zn 927
+R diff2_0/an2v0x2_1/a_24_13# 69
+R diff2_0/an2v0x2_1/zn 927
+R diff2_0/or2v0x3_0/a_48_39# 191
+R diff2_0/or2v0x3_0/a_31_39# 238
+R diff2_0/an2v0x2_0/z 1225
+R diff2_0/an2v0x2_1/z 1416
+R diff2_0/or2v0x3_0/zn 1208
+R diff2_1/xor3v1x2_0/a_115_7# 69
+R diff2_1/xor3v1x2_0/a_28_12# 64
+R diff2_1/xor3v1x2_0/a_11_12# 64
+R diff2_1/an2v0x2_1/b 4427
+R diff2_1/xor3v1x2_0/a 1352
+R diff2_1/xor3v1x2_0/bn 1548
+R diff2_1/an2v0x2_1/a 1822
+R diff2_1/xor3v1x2_0/iz 2485
+C diff2_0/or2v0x3_0/z GND 6.8
+R diff2_0/or2v0x3_0/z 3069
+R diff2_1/xor3v1x2_0/z 1263
+R diff2_1/xor3v1x2_0/cn 2938
+R diff2_1/xor3v1x2_0/zn 2183
+R diff2_1/xnr2v8x05_0/ai 143
+R diff2_1/xnr2v8x05_0/an 562
+R diff2_1/xnr2v8x05_0/bn 779
+R diff2_1/xnr2v8x05_0/zn 574
+R diff2_1/an2v0x2_0/a_24_13# 69
+R diff2_1/an2v0x2_0/b 887
+R diff2_1/an2v0x2_0/zn 927
+R diff2_1/an2v0x2_1/a_24_13# 69
+R diff2_1/an2v0x2_1/zn 927
+R diff2_1/or2v0x3_0/a_48_39# 191
+R diff2_1/or2v0x3_0/a_31_39# 238
+C diff2_2/an2v0x2_0/a GND 18.4
+R diff2_2/an2v0x2_0/a 3073
+R diff2_1/an2v0x2_0/z 1225
+R diff2_1/an2v0x2_1/z 1416
+R diff2_1/or2v0x3_0/zn 1208
+R diff2_2/xor3v1x2_0/a_115_7# 69
+R diff2_2/xor3v1x2_0/a_28_12# 64
+R diff2_2/xor3v1x2_0/a_11_12# 64
+R diff2_2/an2v0x2_1/b 4427
+R diff2_2/xor3v1x2_0/a 1352
+R diff2_2/xor3v1x2_0/bn 1548
+R diff2_2/an2v0x2_1/a 1822
+R diff2_2/xor3v1x2_0/iz 2485
+R diff2_2/xor3v1x2_0/z 1263
+R diff2_2/xor3v1x2_0/cn 2938
+R diff2_2/xor3v1x2_0/zn 2183
+R diff2_2/xnr2v8x05_0/ai 143
+R diff2_2/xnr2v8x05_0/an 562
+R diff2_2/xnr2v8x05_0/bn 779
+R diff2_2/xnr2v8x05_0/zn 574
+R diff2_2/an2v0x2_0/a_24_13# 69
+R diff2_2/an2v0x2_0/b 887
+R diff2_2/an2v0x2_0/zn 927
+R diff2_2/an2v0x2_1/a_24_13# 69
+R diff2_2/an2v0x2_1/zn 927
+R diff2_2/or2v0x3_0/a_48_39# 191
+R diff2_2/or2v0x3_0/a_31_39# 238
+R diff2_2/or2v0x3_0/z 243
+R diff2_2/an2v0x2_0/z 1225
+R diff2_2/an2v0x2_1/z 1416
+R diff2_2/or2v0x3_0/zn 1208
+C diff2_0/an2v0x2_0/vss GND 13.2
+R diff2_0/an2v0x2_0/vss 6687

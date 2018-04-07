@@ -1,0 +1,61 @@
+timestamp 1179387535
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "ai" 143 0 41 19 ndiff 57 32 96 40 0 0 0 0 0 0 0 0 122 66 0 0 0 0
+equiv "ai" "ai"
+node "z" 188 0 2 19 ndiff 42 26 72 38 0 0 0 0 0 0 0 0 150 74 0 0 0 0
+equiv "z" "z"
+node "an" 562 0 21 19 ndiff 48 28 96 40 104 92 0 0 0 0 0 0 334 172 0 0 0 0
+equiv "an" "an"
+equiv "an" "an"
+node "bn" 779 0 31 33 p 42 26 72 38 130 118 0 0 0 0 0 0 326 170 0 0 0 0
+equiv "bn" "bn"
+equiv "bn" "bn"
+node "a" 510 0 19 14 p 0 0 0 0 120 106 0 0 0 0 0 0 108 62 0 0 0 0
+equiv "a" "a"
+node "b" 2090 0 29 2 p 0 0 0 0 382 370 0 0 0 0 0 0 124 70 0 0 0 0
+equiv "b" "b"
+node "zn" 574 0 9 14 p 48 28 96 40 106 94 0 0 0 0 0 0 296 154 0 0 0 0
+equiv "zn" "zn"
+equiv "zn" "zn"
+node "vss" 408 0 -4 -4 pw 254 124 36 24 0 0 0 0 0 0 0 0 626 174 0 0 0 0
+node "vdd" 5490 0 -4 32 nw 72 48 412 158 0 0 0 0 0 0 0 0 626 174 0 0 3520 248
+cap "ai" "b" 120
+cap "vss" "zn" 11894
+cap "vdd" "zn" 4435
+cap "bn" "b" 240
+cap "vss" "an" 5484
+cap "vdd" "an" 9855
+cap "vss" "z" 1316
+cap "zn" "an" 1128
+cap "vdd" "z" 2585
+cap "vss" "ai" 1175
+cap "zn" "z" 60
+cap "vdd" "ai" 1222
+cap "vss" "bn" 6732
+cap "vdd" "bn" 14380
+cap "zn" "bn" 540
+cap "an" "ai" 1128
+cap "vss" "a" 3890
+cap "vdd" "a" 9292
+cap "an" "bn" 120
+cap "zn" "a" 240
+cap "vss" "b" 25718
+cap "vdd" "b" 19572
+cap "zn" "b" 240
+cap "an" "b" 240
+device mosfet nfet 61 13 62 14 2 6 "vss" "b" 4 0 "vss" 6 0 "bn" 6 0
+device mosfet nfet 50 20 51 21 2 6 "vss" "an" 4 0 "ai" 6 0 "vss" 6 0
+device mosfet nfet 39 19 40 20 2 6 "vss" "bn" 4 0 "zn" 6 0 "ai" 6 0
+device mosfet nfet 29 19 30 20 2 6 "vss" "b" 4 0 "an" 6 0 "zn" 6 0
+device mosfet nfet 19 19 20 20 2 6 "vss" "a" 4 0 "vss" 6 0 "an" 6 0
+device mosfet nfet 9 19 10 20 2 6 "vss" "zn" 4 0 "z" 6 0 "vss" 6 0
+device mosfet pfet 61 47 62 48 2 12 "vdd" "b" 4 0 "vdd" 12 0 "bn" 12 0
+device mosfet pfet 51 38 52 39 2 12 "vdd" "an" 4 0 "ai" 12 0 "vdd" 12 0
+device mosfet pfet 41 38 42 39 2 12 "vdd" "b" 4 0 "zn" 12 0 "ai" 12 0
+device mosfet pfet 31 38 32 39 2 12 "vdd" "bn" 4 0 "an" 12 0 "zn" 12 0
+device mosfet pfet 21 38 22 39 2 12 "vdd" "a" 4 0 "vdd" 12 0 "an" 12 0
+device mosfet pfet 9 38 10 39 2 12 "vdd" "zn" 4 0 "z" 12 0 "vdd" 12 0

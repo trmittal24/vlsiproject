@@ -1,0 +1,83 @@
+| units: 100 tech: scmos format: MIT
+p dfnt1v0x2_0/z xor2v0x05_0/bn dfnt1v0x2_0/vdd 2 21 175 42
+p xor2v0x05_0/a dfnt1v0x2_0/vdd xor2v0x05_0/an 2 13 189 42
+p xor2v0x05_0/bn xor2v0x05_0/an dfnt1v0x2_0/d 2 13 199 42
+p xor2v0x05_0/an dfnt1v0x2_0/d xor2v0x05_0/bn 2 21 209 42
+n dfnt1v0x2_0/z xor2v0x05_0/bn dfnt1v0x2_0/vss 2 7 169 23
+n xor2v0x05_0/a dfnt1v0x2_0/vss xor2v0x05_0/an 2 7 182 17
+n dfnt1v0x2_0/z xor2v0x05_0/an dfnt1v0x2_0/d 2 7 192 17
+n xor2v0x05_0/bn dfnt1v0x2_0/d xor2v0x05_0/a_48_11# 2 9 202 15
+n xor2v0x05_0/an xor2v0x05_0/a_48_11# dfnt1v0x2_0/vss 2 9 209 15
+p dfnt1v0x2_0/zn dfnt1v0x2_0/z dfnt1v0x2_0/vdd 2 28 13 42
+p dfnt1v0x2_0/n4 dfnt1v0x2_0/vdd dfnt1v0x2_0/zn 2 14 23 42
+p dfnt1v0x2_0/zn dfnt1v0x2_0/vdd dfnt1v0x2_0/a_40_48# 2 6 42 52
+p dfnt1v0x2_0/ci dfnt1v0x2_0/a_40_48# dfnt1v0x2_0/n4 2 6 49 52
+p dfnt1v0x2_0/cn dfnt1v0x2_0/n4 dfnt1v0x2_0/n2 2 12 59 52
+p dfnt1v0x2_0/n1 dfnt1v0x2_0/n2 dfnt1v0x2_0/vdd 2 12 69 52
+p dfnt1v0x2_0/n2 dfnt1v0x2_0/vdd dfnt1v0x2_0/a_77_54# 2 6 79 58
+p dfnt1v0x2_0/cn dfnt1v0x2_0/a_77_54# dfnt1v0x2_0/n1 2 6 86 58
+n dfnt1v0x2_0/zn dfnt1v0x2_0/z dfnt1v0x2_0/vss 2 14 13 14
+n dfnt1v0x2_0/n4 dfnt1v0x2_0/zn dfnt1v0x2_0/vss 2 7 31 23
+p dfnt1v0x2_0/ci dfnt1v0x2_0/n1 dfnt1v0x2_0/a_94_47# 2 13 96 51
+p dfnt1v0x2_0/d dfnt1v0x2_0/a_94_47# dfnt1v0x2_0/vdd 2 13 103 51
+p dfnt1v0x2_0/cn dfnt1v0x2_0/vdd dfnt1v0x2_0/ci 2 11 113 51
+p dfnt1v0x2_0/cp dfnt1v0x2_0/vdd dfnt1v0x2_0/cn 2 10 133 53
+n dfnt1v0x2_0/cn dfnt1v0x2_0/ci dfnt1v0x2_0/vss 2 6 123 24
+n dfnt1v0x2_0/zn dfnt1v0x2_0/vss dfnt1v0x2_0/a_40_13# 2 6 42 17
+n dfnt1v0x2_0/cn dfnt1v0x2_0/a_40_13# dfnt1v0x2_0/n4 2 6 49 17
+n dfnt1v0x2_0/ci dfnt1v0x2_0/n4 dfnt1v0x2_0/n2 2 6 59 17
+n dfnt1v0x2_0/n1 dfnt1v0x2_0/n2 dfnt1v0x2_0/vss 2 6 69 17
+n dfnt1v0x2_0/n2 dfnt1v0x2_0/vss dfnt1v0x2_0/a_77_13# 2 6 79 17
+n dfnt1v0x2_0/ci dfnt1v0x2_0/a_77_13# dfnt1v0x2_0/n1 2 6 86 17
+n dfnt1v0x2_0/cn dfnt1v0x2_0/n1 dfnt1v0x2_0/a_94_13# 2 6 96 17
+n dfnt1v0x2_0/d dfnt1v0x2_0/a_94_13# dfnt1v0x2_0/vss 2 6 103 17
+n dfnt1v0x2_0/cp dfnt1v0x2_0/vss dfnt1v0x2_0/cn 2 7 133 23
+C dfnt1v0x2_0/ci dfnt1v0x2_0/vss 27.5
+C dfnt1v0x2_0/ci dfnt1v0x2_0/vdd 16.6
+C dfnt1v0x2_0/vss dfnt1v0x2_0/z 18.0
+C dfnt1v0x2_0/vdd dfnt1v0x2_0/z 21.4
+C dfnt1v0x2_0/n2 dfnt1v0x2_0/z 3.2
+C dfnt1v0x2_0/vss dfnt1v0x2_0/zn 20.1
+C dfnt1v0x2_0/cp dfnt1v0x2_0/z 2.5
+C dfnt1v0x2_0/vss xor2v0x05_0/an 9.2
+C dfnt1v0x2_0/vdd dfnt1v0x2_0/zn 10.2
+C dfnt1v0x2_0/vdd xor2v0x05_0/an 6.0
+C dfnt1v0x2_0/vss dfnt1v0x2_0/d 13.5
+C dfnt1v0x2_0/n2 dfnt1v0x2_0/vss 7.2
+C dfnt1v0x2_0/n1 dfnt1v0x2_0/vss 9.9
+C dfnt1v0x2_0/vss dfnt1v0x2_0/cp 3.1
+C dfnt1v0x2_0/cn dfnt1v0x2_0/vss 17.1
+C dfnt1v0x2_0/vdd dfnt1v0x2_0/d 9.8
+C dfnt1v0x2_0/n4 dfnt1v0x2_0/vss 7.3
+C dfnt1v0x2_0/n2 dfnt1v0x2_0/vdd 12.4
+C dfnt1v0x2_0/n1 dfnt1v0x2_0/vdd 8.4
+C dfnt1v0x2_0/cp dfnt1v0x2_0/vdd 11.6
+C dfnt1v0x2_0/cn dfnt1v0x2_0/vdd 46.5
+C dfnt1v0x2_0/n4 dfnt1v0x2_0/vdd 8.9
+C dfnt1v0x2_0/vss xor2v0x05_0/a 8.1
+C dfnt1v0x2_0/vdd xor2v0x05_0/a 5.4
+C dfnt1v0x2_0/vss xor2v0x05_0/bn 6.5
+C dfnt1v0x2_0/ci dfnt1v0x2_0/z 2.5
+C dfnt1v0x2_0/d xor2v0x05_0/bn 2.8
+C dfnt1v0x2_0/vdd xor2v0x05_0/bn 13.7
+R dfnt1v0x2_0/a_94_13# 32
+R dfnt1v0x2_0/a_77_13# 32
+R dfnt1v0x2_0/a_40_13# 32
+R dfnt1v0x2_0/cp 536
+R dfnt1v0x2_0/a_94_47# 155
+R dfnt1v0x2_0/a_77_54# 71
+R dfnt1v0x2_0/a_40_48# 71
+R dfnt1v0x2_0/n4 761
+R dfnt1v0x2_0/ci 1607
+R dfnt1v0x2_0/n2 751
+R dfnt1v0x2_0/n1 840
+R dfnt1v0x2_0/cn 3155
+R dfnt1v0x2_0/zn 1919
+R xor2v0x05_0/a_48_11# 48
+R dfnt1v0x2_0/d 889
+R xor2v0x05_0/a 567
+R xor2v0x05_0/an 777
+R xor2v0x05_0/bn 1294
+R dfnt1v0x2_0/z 1857
+R dfnt1v0x2_0/vss 1283
+R dfnt1v0x2_0/vdd 14597

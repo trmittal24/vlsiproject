@@ -1,0 +1,44 @@
+timestamp 1522990558
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use ../pharosc_8.4/magic/cells/vsclib/dfnt1v0x2 dfnt1v0x2_0 1 0 4 0 1 4
+use ../pharosc_8.4/magic/cells/vsclib/xor2v0x05 xor2v0x05_0 1 0 156 0 1 4
+node "m1_146_4#" 0 4136 146 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 88 38 0 0 0 0
+node "m1_111_33#" 1 7489 111 33 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 347 236 0 0
+node "m1_16_43#" 1 13664 16 43 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 672 344 0 0
+node "m1_147_68#" 0 4136 147 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 88 38 0 0 0 0
+cap "dfnt1v0x2_0/n2" "dfnt1v0x2_0/z" 1874
+cap "dfnt1v0x2_0/n4" "dfnt1v0x2_0/z" 720
+cap "dfnt1v0x2_0/vdd" "dfnt1v0x2_0/z" 2318
+cap "dfnt1v0x2_0/vdd" "dfnt1v0x2_0/z" 593
+cap "dfnt1v0x2_0/ci" "dfnt1v0x2_0/z" 1620
+cap "dfnt1v0x2_0/cn" "dfnt1v0x2_0/z" 152
+cap "dfnt1v0x2_0/vdd" "dfnt1v0x2_0/z" 936
+cap "dfnt1v0x2_0/a_77_54#" "dfnt1v0x2_0/z" 264
+cap "dfnt1v0x2_0/zn" "dfnt1v0x2_0/z" 1260
+cap "dfnt1v0x2_0/z" "dfnt1v0x2_0/n1" 190
+cap "dfnt1v0x2_0/a_94_47#" "dfnt1v0x2_0/z" 176
+cap "dfnt1v0x2_0/n1" "dfnt1v0x2_0/z" 1568
+cap "dfnt1v0x2_0/vss" "dfnt1v0x2_0/d" 3261
+cap "dfnt1v0x2_0/d" "dfnt1v0x2_0/cn" 738
+cap "dfnt1v0x2_0/vdd" "xor2v0x05_0/b" 4490
+cap "xor2v0x05_0/b" "dfnt1v0x2_0/a_94_47#" 264
+cap "dfnt1v0x2_0/d" "xor2v0x05_0/an" 1350
+cap "dfnt1v0x2_0/ci" "xor2v0x05_0/b" 440
+cap "dfnt1v0x2_0/d" "dfnt1v0x2_0/ci" 1686
+cap "dfnt1v0x2_0/d" "xor2v0x05_0/bn" 776
+cap "xor2v0x05_0/a" "dfnt1v0x2_0/d" 924
+cap "xor2v0x05_0/b" "dfnt1v0x2_0/cn" 712
+cap "xor2v0x05_0/z" "xor2v0x05_0/vss" 95
+cap "xor2v0x05_0/z" "xor2v0x05_0/bn" 190
+merge "xor2v0x05_0/vss" "dfnt1v0x2_0/vss" -4136 0 0 0 0 0 0 0 0 0 0 0 0 -56 -46 0 0 0 0
+merge "dfnt1v0x2_0/vss" "m1_146_4#"
+merge "xor2v0x05_0/b" "dfnt1v0x2_0/z" -13664 0 0 0 0 0 0 0 0 0 0 0 0 -25 -28 0 0 0 0
+merge "dfnt1v0x2_0/z" "m1_16_43#"
+merge "xor2v0x05_0/z" "dfnt1v0x2_0/d" -7489 0 0 0 0 0 0 0 0 0 0 0 0 -28 -30 0 0 0 0
+merge "dfnt1v0x2_0/d" "m1_111_33#"
+merge "xor2v0x05_0/vdd" "dfnt1v0x2_0/vdd" -4136 0 0 0 0 0 0 0 0 0 0 0 0 -56 -46 0 0 0 -88
+merge "dfnt1v0x2_0/vdd" "m1_147_68#"

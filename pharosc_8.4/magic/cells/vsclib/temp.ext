@@ -1,0 +1,7 @@
+timestamp 1521974529
+version 8.0
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use xor3v1x2 xor3v1x2_0 1 0 4 0 1 4

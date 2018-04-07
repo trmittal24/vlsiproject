@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 timestamp 1521477306
 version 7.5
+=======
+timestamp 1521474737
+version 8.0
+>>>>>>> 9f2eb0de0a7c1024cae9f63593b1c1f0ffe0c074
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -71,6 +76,7 @@ equiv "an" "an"
 equiv "an" "an"
 node "vss" 639 0 -4 -4 pw 540 204 108 48 0 0 0 0 0 0 0 0 1580 442 0 0 0 0
 node "vdd" 11311 0 -4 32 nw 162 78 1162 308 0 0 0 0 0 0 0 0 1504 400 0 0 7744 440
+<<<<<<< HEAD
 cap "cn" "a" 240
 cap "a_39_12#" "vss" 235
 cap "a" "an" 420
@@ -132,6 +138,69 @@ cap "a_39_12#" "an" 1316
 cap "a_116_38#" "bn" 940
 cap "vss" "bn" 21872
 cap "vdd" "c" 14470
+=======
+cap "bn" "a_133_12#" 141
+cap "z" "a_133_38#" 1880
+cap "an" "a_13_12#" 1128
+cap "vss" "z" 4841
+cap "vdd" "a_116_38#" 470
+cap "an" "bn" 1504
+cap "z" "a_141_38#" 1128
+cap "an" "a_21_12#" 1128
+cap "bn" "cn" 2200
+cap "vdd" "a_133_38#" 564
+cap "an" "a" 420
+cap "b" "a_21_38#" 376
+cap "z" "a_13_12#" 1175
+cap "an" "a_39_12#" 1316
+cap "a" "cn" 240
+cap "bn" "z" 4136
+cap "vdd" "a_141_38#" 564
+cap "b" "a_39_38#" 940
+cap "an" "a_13_38#" 1128
+cap "vdd" "c" 14470
+cap "b" "an" 1504
+cap "z" "a_21_12#" 1128
+cap "bn" "a_116_38#" 940
+cap "b" "cn" 1050
+cap "an" "a_21_38#" 1128
+cap "vss" "c" 14722
+cap "vdd" "bn" 9967
+cap "bn" "a_133_38#" 188
+cap "a_13_38#" "z" 1504
+cap "b" "z" 1504
+cap "an" "a_39_38#" 940
+cap "vss" "bn" 21872
+cap "vdd" "a" 7628
+cap "a_21_38#" "z" 1128
+cap "c" "bn" 360
+cap "an" "cn" 940
+cap "vdd" "a_13_38#" 564
+cap "vss" "a" 49614
+cap "b" "vdd" 16592
+cap "z" "a_133_12#" 1128
+cap "vss" "a_39_12#" 235
+cap "a_39_38#" "z" 940
+cap "c" "a" 360
+cap "an" "z" 7756
+cap "vdd" "a_21_38#" 564
+cap "b" "vss" 11662
+cap "z" "a_141_12#" 1457
+cap "cn" "z" 940
+cap "bn" "a" 300
+cap "an" "a_116_38#" 940
+cap "vdd" "a_39_38#" 470
+cap "b" "c" 1560
+cap "an" "vdd" 36593
+cap "an" "a_133_38#" 1128
+cap "vdd" "cn" 17866
+cap "an" "vss" 14045
+cap "bn" "a_116_12#" 705
+cap "z" "a_116_38#" 940
+cap "an" "a_141_38#" 2256
+cap "vdd" "z" 17249
+cap "vss" "cn" 15386
+>>>>>>> 9f2eb0de0a7c1024cae9f63593b1c1f0ffe0c074
 device mosfet nfet 147 12 148 13 2 13 "vss" "an" 4 0 "a_141_12#" 13 0 "vss" 13 0
 device mosfet nfet 139 12 140 13 2 13 "vss" "bn" 4 0 "a_133_12#" 13 0 "a_141_12#" 13 0
 device mosfet nfet 131 12 132 13 2 13 "vss" "cn" 4 0 "z" 13 0 "a_133_12#" 13 0

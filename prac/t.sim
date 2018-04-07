@@ -1,0 +1,89 @@
+| units: 100 tech: scmos format: MIT
+p mxn2v0x05_0/zn d mxn2v0x05_0/vdd 2 12 58 -47
+p zn mxn2v0x05_0/vdd mxn2v0x05_0/a_21_46# 2 12 48 -47
+p mxn2v0x05_0/s mxn2v0x05_0/a_21_46# mxn2v0x05_0/zn 2 12 41 -47
+p mxn2v0x05_0/sn mxn2v0x05_0/zn mxn2v0x05_0/a_38_46# 2 12 31 -47
+p vss mxn2v0x05_0/a_38_46# mxn2v0x05_0/vdd 2 12 24 -47
+p mxn2v0x05_0/s mxn2v0x05_0/vdd mxn2v0x05_0/sn 2 6 14 -39
+n mxn2v0x05_0/zn d vss 2 6 58 -13
+n zn vss mxn2v0x05_0/a_21_12# 2 6 48 -13
+n mxn2v0x05_0/sn mxn2v0x05_0/a_21_12# mxn2v0x05_0/zn 2 6 41 -13
+n mxn2v0x05_0/s mxn2v0x05_0/zn mxn2v0x05_0/a_38_12# 2 6 31 -13
+n vss mxn2v0x05_0/a_38_12# vss 2 6 24 -13
+n mxn2v0x05_0/s vss mxn2v0x05_0/sn 2 6 14 -13
+p zn z vdd 2 28 13 42
+p n4 vdd zn 2 14 23 42
+p zn vdd a_44_52# 2 6 42 52
+p ci a_44_52# n4 2 6 49 52
+p cn n4 n2 2 12 59 52
+p n1 n2 vdd 2 12 69 52
+p n2 vdd a_81_58# 2 6 79 58
+p cn a_81_58# n1 2 6 86 58
+n zn z vss 2 14 13 14
+n n4 zn vss 2 7 31 23
+p ci n1 a_98_51# 2 13 96 51
+p d a_98_51# vdd 2 13 103 51
+p cn vdd ci 2 11 113 51
+p cp vdd cn 2 10 133 53
+n cn ci vss 2 6 123 24
+n zn vss a_44_17# 2 6 42 17
+n cn a_44_17# n4 2 6 49 17
+n ci n4 n2 2 6 59 17
+n n1 n2 vss 2 6 69 17
+n n2 vss a_81_17# 2 6 79 17
+n ci a_81_17# n1 2 6 86 17
+n cn n1 a_98_17# 2 6 96 17
+n d a_98_17# vss 2 6 103 17
+n cp vss cn 2 7 133 23
+C z vdd 2.7
+C ci vss 27.5
+C n2 vdd 12.4
+C cn vss 17.1
+C n4 vdd 8.9
+C d vss 12.0
+C vss mxn2v0x05_0/s 18.6
+C mxn2v0x05_0/zn mxn2v0x05_0/vdd 8.6
+C n2 vss 7.2
+C n4 vss 7.3
+C mxn2v0x05_0/sn mxn2v0x05_0/vdd 10.1
+C n1 vdd 8.4
+C zn mxn2v0x05_0/vdd 8.4
+C cp vdd 11.6
+C n1 vss 9.9
+C mxn2v0x05_0/zn vss 9.6
+C cp vss 3.1
+C vss mxn2v0x05_0/vdd 5.9
+C d mxn2v0x05_0/vdd 3.8
+C mxn2v0x05_0/vdd mxn2v0x05_0/s 15.2
+C zn vdd 10.2
+C mxn2v0x05_0/sn vss 10.0
+C ci vdd 16.6
+C cn vdd 46.5
+C zn vss 33.0
+C d vdd 7.8
+R a_98_17# 32
+R a_81_17# 32
+R a_44_17# 32
+R cp 536
+R a_98_51# 155
+R a_81_58# 71
+R a_44_52# 71
+R n4 761
+R ci 1607
+R n2 751
+R n1 840
+R cn 3155
+R z 385
+R vdd 10150
+R mxn2v0x05_0/a_38_12# 32
+R mxn2v0x05_0/a_21_12# 32
+R mxn2v0x05_0/a_38_46# 143
+R mxn2v0x05_0/a_21_46# 143
+C d GND 3.5
+R d 815
+R vss 1673
+R mxn2v0x05_0/sn 626
+R mxn2v0x05_0/s 1625
+R zn 2548
+R mxn2v0x05_0/zn 752
+R mxn2v0x05_0/vdd 4658

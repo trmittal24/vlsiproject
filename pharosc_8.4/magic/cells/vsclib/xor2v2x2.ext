@@ -1,0 +1,80 @@
+timestamp 1179387711
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "a_30_13#" 69 0 30 13 ndiff 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "a_13_13#" 69 0 13 13 ndiff 65 36 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "z" 1070 0 2 38 pdiff 264 98 398 164 0 0 0 0 0 0 0 0 713 352 0 0 0 0
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+equiv "z" "z"
+node "an" 2529 0 11 2 p 130 56 320 112 362 350 0 0 0 0 0 0 620 310 0 0 0 0
+equiv "an" "an"
+equiv "an" "an"
+equiv "an" "an"
+node "bn" 1969 0 9 34 p 130 56 320 112 268 256 0 0 0 0 0 0 400 198 0 0 0 0
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+equiv "bn" "bn"
+node "vdd" 787 0 56 46 pdiff 0 0 440 164 0 0 0 0 0 0 0 0 918 250 0 0 0 0
+node "a" 1343 0 63 29 p 0 0 0 0 322 274 0 0 0 0 0 0 160 88 0 0 0 0
+equiv "a" "a"
+equiv "a" "a"
+equiv "a" "a"
+node "b" 1661 0 55 11 p 0 0 0 0 310 298 0 0 0 0 0 0 88 52 0 0 0 0
+equiv "b" "b"
+node "vss" 411 0 -4 -4 pw 457 152 78 38 0 0 0 0 0 0 0 0 1004 292 0 0 0 0
+node "w_n4_32#" 6378 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4928 312
+cap "bn" "vdd" 2068
+cap "vss" "b" 6198
+cap "w_n4_32#" "b" 16143
+cap "vss" "an" 21626
+cap "w_n4_32#" "an" 19102
+cap "vdd" "a" 480
+cap "vss" "z" 10810
+cap "b" "an" 235
+cap "w_n4_32#" "z" 2632
+cap "b" "z" 120
+cap "an" "z" 3948
+cap "vss" "bn" 11166
+cap "w_n4_32#" "bn" 15584
+cap "b" "bn" 1080
+cap "w_n4_32#" "vdd" 35532
+cap "z" "a_13_13#" 940
+cap "an" "bn" 3338
+cap "b" "vdd" 715
+cap "vss" "a" 8960
+cap "z" "a_30_13#" 940
+cap "w_n4_32#" "a" 14890
+cap "b" "a" 870
+cap "z" "bn" 2726
+cap "an" "vdd" 6392
+device mosfet nfet 85 16 86 17 2 10 "vss" "a" 4 0 "an" 10 0 "vss" 10 0
+device mosfet nfet 75 6 76 7 2 20 "vss" "b" 4 0 "z" 20 0 "an" 20 0
+device mosfet nfet 65 6 66 7 2 20 "vss" "a" 4 0 "bn" 20 0 "z" 20 0
+device mosfet nfet 55 16 56 17 2 10 "vss" "b" 4 0 "vss" 10 0 "bn" 10 0
+device mosfet nfet 35 13 36 14 2 13 "vss" "an" 4 0 "a_30_13#" 13 0 "vss" 13 0
+device mosfet nfet 28 13 29 14 2 13 "vss" "bn" 4 0 "z" 13 0 "a_30_13#" 13 0
+device mosfet nfet 18 13 19 14 2 13 "vss" "bn" 4 0 "a_13_13#" 13 0 "z" 13 0
+device mosfet nfet 11 13 12 14 2 13 "vss" "an" 4 0 "vss" 13 0 "a_13_13#" 13 0
+device mosfet pfet 93 46 94 47 2 20 "w_n4_32#" "a" 4 0 "an" 20 0 "vdd" 20 0
+device mosfet pfet 83 46 84 47 2 20 "w_n4_32#" "a" 4 0 "vdd" 20 0 "an" 20 0
+device mosfet pfet 73 46 74 47 2 20 "w_n4_32#" "b" 4 0 "bn" 20 0 "vdd" 20 0
+device mosfet pfet 63 46 64 47 2 20 "w_n4_32#" "b" 4 0 "vdd" 20 0 "bn" 20 0
+device mosfet pfet 39 38 40 39 2 20 "w_n4_32#" "an" 4 0 "bn" 20 0 "z" 20 0
+device mosfet pfet 29 38 30 39 2 20 "w_n4_32#" "an" 4 0 "z" 20 0 "bn" 20 0
+device mosfet pfet 19 38 20 39 2 20 "w_n4_32#" "bn" 4 0 "an" 20 0 "z" 20 0
+device mosfet pfet 9 38 10 39 2 20 "w_n4_32#" "bn" 4 0 "z" 20 0 "an" 20 0

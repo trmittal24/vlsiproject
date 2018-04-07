@@ -52,43 +52,43 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "vss" 656 0 -4 -4 pw 760 268 48 28 0 0 0 0 0 0 0 0 1534 426 0 0 0 0
 node "vdd" 11828 0 -4 32 nw 66 34 1063 366 0 0 0 0 0 0 0 0 1574 426 0 0 7744 440
-cap "bn" "vdd" 15450
-cap "iz" "an" 1504
-cap "a" "vdd" 6453
-cap "zn" "vdd" 18904
-cap "bn" "vss" 9098
-cap "b" "vdd" 13890
-cap "z" "vdd" 4136
-cap "bn" "a" 360
-cap "cn" "vdd" 31572
-cap "a" "vss" 8019
-cap "c" "vdd" 10354
-cap "bn" "b" 240
 cap "vss" "zn" 11892
-cap "b" "vss" 14620
-cap "z" "vss" 7238
-cap "iz" "vdd" 15802
-cap "a" "b" 360
-cap "vss" "cn" 18844
-cap "z" "zn" 4632
-cap "c" "vss" 20152
-cap "an" "vdd" 5627
-cap "zn" "cn" 4480
-cap "iz" "bn" 2444
-cap "c" "zn" 240
-cap "z" "cn" 4068
-cap "iz" "vss" 24932
-cap "a_115_7#" "vss" 235
-cap "z" "a_11_12#" 470
-cap "an" "bn" 1864
-cap "a_28_12#" "z" 940
+cap "vss" "b" 14620
+cap "vdd" "zn" 18904
 cap "c" "cn" 300
-cap "iz" "zn" 60
-cap "an" "vss" 9280
-cap "iz" "cn" 240
+cap "vss" "iz" 24932
+cap "vdd" "b" 13890
+cap "vss" "a_115_7#" 235
+cap "vdd" "iz" 15802
+cap "z" "cn" 4068
+cap "zn" "iz" 60
+cap "vss" "an" 9280
+cap "vdd" "an" 5627
+cap "vss" "bn" 9098
+cap "iz" "a_115_7#" 940
 cap "an" "b" 180
-cap "c" "iz" 540
-cap "a_115_7#" "iz" 940
+cap "vss" "a" 8019
+cap "a_28_12#" "z" 940
+cap "vdd" "bn" 15450
+cap "iz" "an" 1504
+cap "vss" "c" 20152
+cap "vdd" "a" 6453
+cap "bn" "b" 240
+cap "a_11_12#" "z" 470
+cap "b" "a" 360
+cap "vdd" "c" 10354
+cap "zn" "c" 240
+cap "vss" "z" 7238
+cap "iz" "bn" 2444
+cap "vdd" "z" 4136
+cap "iz" "c" 540
+cap "an" "bn" 1864
+cap "zn" "z" 4632
+cap "vss" "cn" 18844
+cap "vdd" "cn" 31572
+cap "zn" "cn" 4480
+cap "bn" "a" 360
+cap "iz" "cn" 240
 device mosfet nfet 153 15 154 16 2 11 "vss" "b" 4 0 "vss" 11 0 "bn" 11 0
 device mosfet nfet 140 12 141 13 2 13 "vss" "a" 4 0 "an" 13 0 "vss" 13 0
 device mosfet nfet 130 7 131 8 2 13 "vss" "b" 4 0 "iz" 13 0 "an" 13 0

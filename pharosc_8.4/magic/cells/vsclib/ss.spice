@@ -1,0 +1,55 @@
+* SPICE3 file created from ss.ext - technology: scmos
+
+.option scale=1u
+.include t14y_tsmc_025_level3.txt
+M1000 xnr2v8x05_0_vdd xnr2v8x05_0_zn xnr2v8x05_0_z xnr2v8x05_0_vdd pfet w=12 l=2
++  ad=412 pd=158 as=72 ps=38
+M1001 xnr2v8x05_0_an xnr2v8x05_0_a xnr2v8x05_0_vdd xnr2v8x05_0_vdd pfet w=12 l=2
++  ad=96 pd=40 as=0 ps=0
+M1002 xnr2v8x05_0_zn xnr2v8x05_0_bn xnr2v8x05_0_an xnr2v8x05_0_vdd pfet w=12 l=2
++  ad=96 pd=40 as=0 ps=0
+M1003 xnr2v8x05_0_ai xnr2v8x05_0_b xnr2v8x05_0_zn xnr2v8x05_0_vdd pfet w=12 l=2
++  ad=96 pd=40 as=0 ps=0
+M1004 xnr2v8x05_0_vdd xnr2v8x05_0_an xnr2v8x05_0_ai xnr2v8x05_0_vdd pfet w=12 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 xnr2v8x05_0_bn xnr2v8x05_0_b xnr2v8x05_0_vdd xnr2v8x05_0_vdd pfet w=12 l=2
++  ad=72 pd=38 as=0 ps=0
+M1006 xnr2v8x05_0_vss xnr2v8x05_0_zn xnr2v8x05_0_z xnr2v8x05_0_vss nfet w=6 l=2
++  ad=254 pd=124 as=42 ps=26
+M1007 xnr2v8x05_0_an xnr2v8x05_0_a xnr2v8x05_0_vss xnr2v8x05_0_vss nfet w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1008 xnr2v8x05_0_zn xnr2v8x05_0_b xnr2v8x05_0_an xnr2v8x05_0_vss nfet w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1009 xnr2v8x05_0_ai xnr2v8x05_0_bn xnr2v8x05_0_zn xnr2v8x05_0_vss nfet w=6 l=2
++  ad=57 pd=32 as=0 ps=0
+M1010 xnr2v8x05_0_vss xnr2v8x05_0_an xnr2v8x05_0_ai xnr2v8x05_0_vss nfet w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 xnr2v8x05_0_bn xnr2v8x05_0_b xnr2v8x05_0_vss xnr2v8x05_0_vss nfet w=6 l=2
++  ad=42 pd=26 as=0 ps=0
+C0 xnr2v8x05_0_b xnr2v8x05_0_vss 25.7fF
+C1 xnr2v8x05_0_a xnr2v8x05_0_vdd 9.3fF
+C2 xnr2v8x05_0_a xnr2v8x05_0_vss 3.9fF
+C3 xnr2v8x05_0_bn xnr2v8x05_0_vdd 14.4fF
+C4 xnr2v8x05_0_bn xnr2v8x05_0_vss 6.7fF
+C5 xnr2v8x05_0_an xnr2v8x05_0_vdd 9.9fF
+C6 xnr2v8x05_0_vdd xnr2v8x05_0_zn 4.4fF
+C7 xnr2v8x05_0_z xnr2v8x05_0_vdd 2.6fF
+C8 xnr2v8x05_0_an xnr2v8x05_0_vss 5.5fF
+C9 xnr2v8x05_0_vss xnr2v8x05_0_zn 11.9fF
+C10 xnr2v8x05_0_b xnr2v8x05_0_vdd 19.6fF
+
+v_ss xnr2v8x05_0_vss 0 0 
+v_dd xnr2v8x05_0_vdd 0 5
+v_a xnr2v8x05_0_a 0 0 DC 1 PULSE(0 5 0ns 0ns 0ns 20ns 40ns )
+v_b xnr2v8x05_0_b 0 0 DC 1 PULSE(0 5 30ns 0ns 0ns 30ns 60ns )
+
+.tran 0.01ns 200ns 
+
+.control
+run
+setplot tran1 
+plot xnr2v8x05_0_a xnr2v8x05_0_b xnr2v8x05_0_z
+.endc
+
+.end
+
