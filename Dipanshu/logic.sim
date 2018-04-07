@@ -1,0 +1,58 @@
+| units: 100 tech: scmos format: MIT
+p or2v0x3_0/zn vdd out 2 20 109 43
+p or2v0x3_0/zn out vdd 2 20 119 43
+p an2v0x3_0/z vdd or2v0x3_0/a_31_39# 2 20 129 43
+p a or2v0x3_0/a_31_39# or2v0x3_0/zn 2 20 136 43
+p a or2v0x3_0/zn or2v0x3_0/a_48_39# 2 16 146 43
+p an2v0x3_0/z or2v0x3_0/a_48_39# vdd 2 16 153 43
+n or2v0x3_0/zn out gnd 2 20 109 10
+n an2v0x3_0/z gnd or2v0x3_0/zn 2 10 128 15
+n a or2v0x3_0/zn gnd 2 10 138 15
+p an2v0x3_0/zn vdd an2v0x3_0/z 2 20 45 45
+p an2v0x3_0/zn an2v0x3_0/z vdd 2 20 55 45
+p iv1v0x2_0/z vdd an2v0x3_0/zn 2 20 65 45
+p c an2v0x3_0/zn vdd 2 20 75 42
+n an2v0x3_0/zn an2v0x3_0/z gnd 2 20 45 10
+n iv1v0x2_0/z gnd an2v0x3_0/a_30_9# 2 17 64 13
+n c an2v0x3_0/a_30_9# an2v0x3_0/zn 2 17 71 13
+p b iv1v0x2_0/z vdd 2 28 13 42
+n b iv1v0x2_0/z gnd 2 14 13 16
+C gnd a 20.2
+C iv1v0x2_0/z an2v0x3_0/zn 3.1
+C vdd a 7.9
+C gnd c 5.5
+C an2v0x3_0/z a 2.5
+C gnd an2v0x3_0/zn 9.5
+C vdd out 6.2
+C vdd c 22.5
+C an2v0x3_0/z out 2.8
+C iv1v0x2_0/z gnd 10.4
+C vdd an2v0x3_0/zn 13.3
+C iv1v0x2_0/z vdd 8.3
+C gnd or2v0x3_0/zn 9.0
+C iv1v0x2_0/z an2v0x3_0/z 2.8
+C vdd or2v0x3_0/zn 12.7
+C an2v0x3_0/z or2v0x3_0/zn 3.2
+C iv1v0x2_0/z b 2.2
+C an2v0x3_0/z gnd 10.3
+C an2v0x3_0/z vdd 21.0
+C an2v0x3_0/zn a 3.6
+C gnd b 5.0
+C vdd b 9.1
+R b 702
+R an2v0x3_0/a_30_9# 91
+R c 684
+R iv1v0x2_0/z 1055
+R an2v0x3_0/zn 1317
+R or2v0x3_0/a_48_39# 191
+R or2v0x3_0/a_31_39# 238
+C out GND 2.3
+R out 244
+C a GND 9.0
+R a 862
+R an2v0x3_0/z 1297
+R or2v0x3_0/zn 1208
+C gnd GND 6.4
+R gnd 805
+C vdd GND 6.4
+R vdd 19009

@@ -1,0 +1,25 @@
+timestamp 1523087564
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+node "vss" 47 0 11 12 ndiff 112 44 0 0 0 0 0 0 0 0 0 0 292 106 0 0 0 0
+node "vdd" 209 0 11 38 pdiff 0 0 224 72 0 0 0 0 0 0 0 0 284 92 0 0 0 0
+node "z" 357 0 2 12 ndiff 98 42 168 70 0 0 0 0 0 0 0 0 219 102 0 0 0 0
+equiv "z" "z"
+node "a" 701 0 9 7 p 0 0 0 0 156 140 0 0 0 0 0 0 136 68 0 0 0 0
+equiv "a" "a"
+node "w_n4_n4#" 0 0 -4 -4 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_n4_32#" 3446 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1408 152
+cap "w_n4_n4#" "z" 1128
+cap "vdd" "w_n4_32#" 8930
+cap "vss" "w_n4_n4#" 11186
+cap "vss" "a" 60
+cap "a" "w_n4_32#" 7088
+cap "a" "vdd" 851
+cap "z" "w_n4_32#" 1692
+cap "vdd" "z" 1316
+cap "a" "w_n4_n4#" 4929
+device mosfet nfet 9 12 10 13 2 14 "w_n4_n4#" "a" 4 0 "z" 14 0 "vss" 14 0
+device mosfet pfet 9 38 10 39 2 28 "w_n4_32#" "a" 4 0 "z" 28 0 "vdd" 28 0
