@@ -1,0 +1,98 @@
+magic
+tech scmos
+timestamp 1523179446
+<< polysilicon >>
+rect 877 39 879 51
+rect 936 -168 938 -152
+rect 953 -167 955 -152
+rect 960 -167 962 -141
+<< metal1 >>
+rect 903 241 965 244
+rect 950 160 954 163
+rect 902 156 954 160
+rect 185 97 225 101
+rect 221 -64 225 97
+rect 904 78 937 82
+rect 879 33 884 39
+rect 456 -73 460 -41
+rect 709 -90 752 -83
+rect 881 -102 884 33
+rect 624 -124 628 -104
+rect 880 -105 884 -102
+rect 732 -121 739 -120
+rect 733 -125 739 -121
+rect 760 -133 839 -129
+rect 933 -147 937 78
+rect 950 -147 954 156
+rect 962 -136 965 241
+rect 703 -163 766 -148
+rect 819 -171 894 -163
+rect 781 -204 785 -197
+rect 871 -213 898 -209
+rect 818 -235 893 -227
+rect 713 -283 718 -279
+<< metal2 >>
+rect 441 97 460 102
+rect 703 98 716 101
+rect 455 -35 460 97
+rect 713 -57 716 98
+rect 180 -60 716 -57
+rect 180 -115 183 -60
+rect 226 -65 626 -64
+rect 226 -68 627 -65
+rect 293 -79 456 -74
+rect 293 -111 298 -79
+rect 624 -100 627 -68
+rect 760 -106 871 -105
+rect 657 -109 880 -106
+rect 759 -111 871 -109
+rect 74 -118 183 -115
+rect 862 -120 869 -111
+rect 859 -122 869 -120
+rect 733 -125 827 -122
+rect 854 -125 869 -122
+rect 859 -148 864 -125
+rect 843 -151 864 -148
+rect 713 -198 829 -195
+rect 843 -280 846 -151
+rect 713 -283 846 -280
+<< polycontact >>
+rect 873 33 879 39
+rect 960 -141 965 -136
+rect 933 -152 938 -147
+rect 950 -152 955 -147
+<< m2contact >>
+rect 455 -41 461 -35
+rect 221 -69 226 -64
+rect 456 -79 462 -73
+rect 624 -104 628 -100
+rect 70 -118 74 -114
+rect 293 -115 298 -111
+rect 653 -109 657 -105
+rect 880 -109 884 -105
+rect 729 -125 733 -121
+rect 829 -199 833 -195
+rect 709 -283 713 -279
+use totdiff3  totdiff3_0
+timestamp 1523179251
+transform 1 0 -507 0 1 672
+box 507 -672 1412 -374
+use iv1v0x3  iv1v0x3_0
+timestamp 1523179251
+transform -1 0 764 0 -1 -83
+box -4 -4 36 76
+use 1counter  1counter_0
+timestamp 1523179251
+transform 1 0 596 0 1 -240
+box -589 -79 227 161
+use an2v0x3  an2v0x3_0
+timestamp 1523179251
+transform 1 0 827 0 1 -235
+box -4 -4 60 76
+use or3v0x3  or3v0x3_0
+timestamp 1523179251
+transform 1 0 891 0 1 -235
+box -4 -4 84 76
+<< labels >>
+rlabel m2contact 881 -107 881 -107 1 ud
+<< end >>
