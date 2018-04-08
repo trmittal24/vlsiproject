@@ -1,0 +1,89 @@
+timestamp 1523172170
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use decoder decoder_0 1 0 58 0 1 160
+use 3_bitmux 3_bitmux_0 1 0 347 0 1 159
+use decoder decoder_1 1 0 58 0 1 -117
+use 3_bitmux 3_bitmux_1 1 0 347 0 1 -117
+node "m2_282_n239#" 2 24092 282 -239 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1316 666 0 0
+node "m2_282_n157#" 3 13490 282 -157 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1526 778 0 0
+node "m2_284_n82#" 2 24282 284 -82 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1310 670 0 0
+node "m1_272_n273#" 1 16685 272 -273 m1 0 0 0 0 0 0 0 0 0 0 0 0 355 152 0 0 0 0
+node "gnd" 1 39762 -35 -274 m1 0 0 0 0 0 0 0 0 0 0 0 0 846 206 0 0 0 0
+node "m1_329_n49#" 2 26508 329 -49 m1 0 0 0 0 0 0 0 0 0 0 0 0 564 290 0 0 0 0
+node "m1_220_n118#" 1 10488 220 -118 v 0 0 0 0 0 0 0 0 0 0 0 0 57 52 468 268 0 0
+node "m1_285_38#" 3 74119 285 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 1577 676 0 0 0 0
+node "m1_317_88#" 0 1316 317 88 m1 0 0 0 0 0 0 0 0 0 0 0 0 28 22 0 0 0 0
+node "m1_279_80#" 4 65816 279 80 m1 0 0 0 0 0 0 0 0 0 0 0 0 1368 700 128 72 0 0
+node "m1_379_n272#" 2 9145 379 -272 v 0 0 0 0 0 0 0 0 0 0 0 0 64 64 387 248 0 0
+node "m1_286_195#" 1 8272 286 195 m1 0 0 0 0 0 0 0 0 0 0 0 0 176 96 0 0 0 0
+node "m1_349_n47#" 2 11596 349 -47 v 0 0 0 0 0 0 0 0 0 0 0 0 64 64 516 274 0 0
+node "m1_270_228#" 1 18330 270 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 390 166 0 0 0 0
+node "m1_65_n47#" 1 11376 65 -47 v 0 0 0 0 0 0 0 0 0 0 0 0 124 88 416 206 0 0
+node "vdd" 1 33840 -34 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 720 196 0 0 0 0
+cap "m1_285_38#" "m2_284_n82#" 720
+cap "m1_279_80#" "m1_285_38#" 720
+cap "m1_279_80#" "m2_282_n239#" 720
+cap "m2_282_n239#" "m1_329_n49#" 720
+cap "m1_285_38#" "m2_282_n239#" 720
+cap "m1_279_80#" "m2_282_n157#" 720
+cap "m1_279_80#" "m2_284_n82#" 720
+cap "m1_285_38#" "m2_282_n157#" 36000
+cap "decoder_1/gnd" "decoder_1/or2v0x3_6/vss" 47
+cap "decoder_1/d4" "decoder_1/gnd" 7425
+cap "decoder_1/or2v0x3_8/vss" "decoder_1/or2v0x3_8/vss" 470
+cap "m1_349_n47#" "3_bitmux_1/vdd" 1800
+cap "decoder_1/b1" "3_bitmux_1/s" 180
+cap "decoder_0/b1" "3_bitmux_0/a0" 240
+cap "m1_349_n47#" "3_bitmux_0/vdd" 1800
+cap "3_bitmux_0/a0" "m2_282_n239#" 720
+cap "decoder_0/b2" "3_bitmux_0/a0" 240
+cap "decoder_0/gnd" "m1_220_n118#" 1620
+cap "m1_349_n47#" "decoder_0/or2v0x3_2/vdd" 1440
+cap "decoder_0/or2v0x3_2/vdd" "decoder_0/or2v0x3_2/vdd" 470
+merge "3_bitmux_0/b2" "3_bitmux_1/b2" -16910 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -978 -557 0 0
+merge "3_bitmux_1/b2" "decoder_1/b2"
+merge "decoder_1/b2" "m2_282_n239#"
+merge "3_bitmux_0/vdd" "3_bitmux_0/a0" -3102 0 0 0 0 0 0 0 0 0 0 0 0 -52 -50 0 0 0 0
+merge "3_bitmux_0/a0" "3_bitmux_1/a0"
+merge "3_bitmux_1/a0" "m1_329_n49#"
+merge "m1_329_n49#" "m1_317_88#"
+merge "m1_317_88#" "decoder_0/b0"
+merge "decoder_0/b0" "m1_286_195#"
+merge "m1_286_195#" "decoder_0/or2v0x3_2/vdd"
+merge "decoder_0/or2v0x3_2/vdd" "m1_270_228#"
+merge "3_bitmux_0/gnd" "3_bitmux_0/mxn2v0x1_2/vss" -9145 0 0 0 0 0 0 0 0 0 0 0 0 -64 -64 0 0 0 0
+merge "3_bitmux_0/mxn2v0x1_2/vss" "3_bitmux_1/gnd"
+merge "3_bitmux_1/gnd" "decoder_1/or2v0x3_8/vss"
+merge "decoder_1/or2v0x3_8/vss" "m1_272_n273#"
+merge "m1_272_n273#" "3_bitmux_1/mxn2v0x1_2/vss"
+merge "3_bitmux_1/mxn2v0x1_2/vss" "m1_379_n272#"
+merge "decoder_0/or2v0x3_8/vss" "decoder_1/gnd" -10488 0 0 0 0 0 0 0 0 0 0 0 0 -57 -52 -36 -24 0 0
+merge "decoder_1/gnd" "gnd"
+merge "gnd" "decoder_1/or2v0x3_7/vss"
+merge "decoder_1/or2v0x3_7/vss" "m1_220_n118#"
+merge "3_bitmux_0/b1" "3_bitmux_1/b1" -7068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -836 -442 0 0
+merge "3_bitmux_1/b1" "decoder_1/b1"
+merge "decoder_1/b1" "m2_282_n157#"
+merge "3_bitmux_0/b0" "3_bitmux_1/b0" -16074 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -858 -456 0 0
+merge "3_bitmux_1/b0" "decoder_1/b0"
+merge "decoder_1/b0" "m2_284_n82#"
+merge "3_bitmux_0/a1" "decoder_0/b1" -38540 0 0 0 0 0 0 0 0 0 0 0 0 -820 -434 -8 -8 0 0
+merge "decoder_0/b1" "3_bitmux_1/a1"
+merge "3_bitmux_1/a1" "m1_279_80#"
+merge "decoder_0/or2v0x3_0/vdd" "decoder_0/or2v0x3_3/vdd" -11376 0 0 0 0 0 0 0 0 0 0 0 0 -124 -93 -168 -95 0 0
+merge "decoder_0/or2v0x3_3/vdd" "decoder_1/or2v0x3_0/vdd"
+merge "decoder_1/or2v0x3_0/vdd" "decoder_1/or2v0x3_4/vdd"
+merge "decoder_1/or2v0x3_4/vdd" "decoder_1/or2v0x3_3/vdd"
+merge "decoder_1/or2v0x3_3/vdd" "m1_65_n47#"
+merge "3_bitmux_0/mxn2v0x1_0/vdd" "3_bitmux_0/mxn2v0x1_1/vdd" -10836 0 0 0 0 0 0 0 0 0 0 0 0 -64 -64 -72 -41 0 0
+merge "3_bitmux_0/mxn2v0x1_1/vdd" "3_bitmux_1/vdd"
+merge "3_bitmux_1/vdd" "3_bitmux_1/mxn2v0x1_1/vdd"
+merge "3_bitmux_1/mxn2v0x1_1/vdd" "m1_349_n47#"
+merge "3_bitmux_0/a2" "decoder_0/b2" -48504 0 0 0 0 0 0 0 0 0 0 0 0 -1032 -440 0 0 0 0
+merge "decoder_0/b2" "3_bitmux_1/a2"
+merge "3_bitmux_1/a2" "m1_285_38#"
+merge "decoder_0/vdd" "vdd" -752 0 0 0 0 0 0 0 0 0 0 0 0 -16 -20 0 0 0 0

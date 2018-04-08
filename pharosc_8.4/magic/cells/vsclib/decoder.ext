@@ -1,0 +1,226 @@
+timestamp 1523172170
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_0 1 0 4 0 1 4
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_1 1 0 76 0 1 4
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_2 1 0 148 0 1 4
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_3 -1 0 68 0 -1 -4
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_4 -1 0 140 0 -1 -4
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_5 -1 0 212 0 -1 -4
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_6 1 0 4 0 1 -156
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_7 1 0 76 0 1 -156
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3 or2v0x3_8 1 0 148 0 1 -156
+node "m1_68_n156#" 1 43992 68 -156 m1 0 0 0 0 0 0 0 0 0 0 0 0 936 250 0 0 0 0
+node "gnd" 0 3008 -3 -156 m1 0 0 0 0 0 0 0 0 0 0 0 0 64 32 0 0 0 0
+node "m1_78_n129#" 1 8439 78 -129 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 397 266 0 0
+node "b2" 1 6075 150 -122 v 0 0 0 0 0 0 0 0 0 0 0 0 48 40 233 160 0 0
+node "m1_6_n123#" 1 9142 6 -123 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 434 290 0 0
+node "vdd" 1 176344 -4 -76 m1 0 0 0 0 0 0 0 0 0 0 0 0 3752 512 0 0 0 0
+node "b1" 0 3092 206 -40 v 0 0 0 0 0 0 0 0 0 0 0 0 48 40 76 46 0 0
+node "m1_134_n42#" 0 3233 134 -42 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 123 64 0 0
+node "m1_62_n38#" 1 4240 62 -38 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 176 96 0 0
+node "d5" 3 22087 -30 -17 m1 0 0 0 0 0 0 0 0 0 0 0 0 153 108 909 504 0 0
+node "d3" 2 19467 -30 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 320 184 573 318 0 0
+node "gnd" 1 156369 -6 4 m1 0 0 0 0 0 0 0 0 0 0 0 0 3327 516 0 0 0 0
+node "d6" 3 29279 -30 -27 m1 0 0 0 0 0 0 0 0 0 0 0 0 76 70 1569 816 0 0
+node "d4" 4 35558 -58 -7 v 0 0 0 0 0 0 0 0 0 0 0 0 172 110 2136 1084 0 0
+node "d2" 2 19464 -42 -37 v 0 0 0 0 0 0 0 0 0 0 0 0 136 100 812 458 0 0
+node "d1" 2 19244 -30 24 m1 0 0 0 0 0 0 0 0 0 0 0 0 44 38 996 506 0 0
+node "b0" 1 7236 150 35 v 0 0 0 0 0 0 0 0 0 0 0 0 44 38 304 160 0 0
+node "m1_78_34#" 1 11612 78 34 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 564 290 0 0
+node "m1_6_34#" 1 11441 6 34 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 555 290 0 0
+node "d0" 1 7464 -30 34 m1 0 0 0 0 0 0 0 0 0 0 0 0 44 38 316 214 0 0
+node "m1_141_68#" 0 3384 141 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 72 34 0 0 0 0
+node "m1_70_68#" 0 2632 70 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 56 30 0 0 0 0
+node "vdd" 0 3008 -4 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 64 32 0 0 0 0
+cap "d3" "d4" 720
+cap "d1" "d4" 720
+cap "m1_68_n156#" "d4" 8370
+cap "d2" "d4" 720
+cap "gnd" "d4" 1080
+cap "gnd" "d4" 18000
+cap "d6" "vdd" 3060
+cap "d5" "d3" 540
+cap "d1" "d5" 720
+cap "d1" "d3" 720
+cap "d2" "d5" 540
+cap "d2" "d3" 720
+cap "d6" "d3" 720
+cap "gnd" "d6" 3060
+cap "vdd" "d3" 12420
+cap "d4" "or2v0x3_6/z" 110
+cap "d5" "or2v0x3_6/vss" 968
+cap "d5" "or2v0x3_6/z" 1076
+cap "or2v0x3_6/zn" "or2v0x3_6/z" 920
+cap "d4" "or2v0x3_6/a" 38
+cap "d5" "or2v0x3_6/a" 332
+cap "or2v0x3_6/vss" "d4" 380
+cap "or2v0x3_6/vss" "d5" 1292
+cap "or2v0x3_3/vdd" "d3" 152
+cap "or2v0x3_6/z" "or2v0x3_6/a" 540
+cap "or2v0x3_3/vdd" "or2v0x3_6/z" 874
+cap "or2v0x3_6/vss" "or2v0x3_6/vss" 752
+cap "or2v0x3_6/z" "or2v0x3_6/b" 114
+cap "d5" "or2v0x3_6/zn" 720
+cap "d4" "or2v0x3_6/vss" 5509
+cap "or2v0x3_7/b" "or2v0x3_7/a" 570
+cap "or2v0x3_6/vss" "or2v0x3_6/b" 76
+cap "or2v0x3_7/a" "or2v0x3_7/zn" 882
+cap "or2v0x3_7/a" "or2v0x3_6/a" 962
+cap "or2v0x3_7/b" "or2v0x3_6/b" 38
+cap "or2v0x3_6/vss" "or2v0x3_7/z" 1938
+cap "or2v0x3_4/vdd" "or2v0x3_7/a" 3310
+cap "or2v0x3_7/a" "or2v0x3_6/b" 418
+cap "or2v0x3_6/vss" "or2v0x3_7/b" 6564
+cap "or2v0x3_4/vdd" "or2v0x3_6/a" 2712
+cap "or2v0x3_7/z" "or2v0x3_7/b" 1110
+cap "or2v0x3_7/z" "or2v0x3_7/a" 1374
+cap "or2v0x3_7/a_48_39#" "or2v0x3_7/a" 132
+cap "or2v0x3_7/z" "or2v0x3_7/zn" 844
+cap "or2v0x3_8/b" "or2v0x3_8/zn" 844
+cap "or2v0x3_8/b" "or2v0x3_7/vss" 1843
+cap "or2v0x3_8/a" "or2v0x3_5/z" 264
+cap "or2v0x3_5/vdd" "or2v0x3_8/z" 1672
+cap "or2v0x3_8/a_48_39#" "or2v0x3_8/a" 1144
+cap "or2v0x3_5/vdd" "or2v0x3_8/a" 2923
+cap "or2v0x3_8/z" "or2v0x3_8/b" 1072
+cap "or2v0x3_8/z" "or2v0x3_8/a" 1502
+cap "or2v0x3_8/b" "or2v0x3_8/a" 654
+cap "or2v0x3_8/z" "or2v0x3_8/zn" 920
+cap "or2v0x3_3/a" "d6" 76
+cap "d2" "or2v0x3_0/vss" 1644
+cap "or2v0x3_3/zn" "d6" 1453
+cap "or2v0x3_3/a_48_39#" "d1" 770
+cap "d2" "or2v0x3_0/a" 76
+cap "or2v0x3_3/vdd" "d1" 984
+cap "or2v0x3_3/vss" "d6" 44
+cap "d1" "or2v0x3_3/vdd" 931
+cap "or2v0x3_3/b" "or2v0x3_3/vdd" 266
+cap "d2" "or2v0x3_0/zn" 716
+cap "or2v0x3_3/a" "or2v0x3_3/vdd" 564
+cap "or2v0x3_3/a" "or2v0x3_3/vdd" 342
+cap "or2v0x3_3/b" "or2v0x3_0/vss" 836
+cap "d6" "or2v0x3_0/vss" 3237
+cap "d4" "or2v0x3_0/vss" 3752
+cap "or2v0x3_3/vdd" "d1" 66
+cap "d1" "or2v0x3_3/a_31_39#" 110
+cap "d1" "or2v0x3_3/zn" 2807
+cap "or2v0x3_0/vss" "or2v0x3_0/z" 456
+cap "or2v0x3_0/z" "or2v0x3_0/vdd" 456
+cap "or2v0x3_3/b" "d6" 360
+cap "or2v0x3_0/z" "or2v0x3_0/a" 720
+cap "or2v0x3_3/b" "or2v0x3_3/a" 938
+cap "d2" "or2v0x3_0/z" 807
+cap "or2v0x3_0/z" "or2v0x3_0/zn" 2256
+cap "or2v0x3_4/a" "or2v0x3_3/zn" 855
+cap "or2v0x3_3/zn" "d6" 765
+cap "or2v0x3_4/vdd" "or2v0x3_4/z" 304
+cap "or2v0x3_1/vdd" "or2v0x3_1/z" 950
+cap "or2v0x3_0/b" "m1_6_34#" 1384
+cap "or2v0x3_4/vdd" "or2v0x3_4/a" 1216
+cap "or2v0x3_0/vss" "or2v0x3_3/z" 760
+cap "or2v0x3_0/vss" "or2v0x3_1/b" 4768
+cap "or2v0x3_1/a" "or2v0x3_1/z" 1028
+cap "or2v0x3_1/b" "or2v0x3_1/z" 1384
+cap "or2v0x3_1/vdd" "m1_6_34#" 722
+cap "or2v0x3_0/vss" "or2v0x3_1/z" 912
+cap "or2v0x3_4/vdd" "or2v0x3_3/z" 760
+cap "or2v0x3_1/z" "or2v0x3_1/zn" 2256
+cap "or2v0x3_1/z" "or2v0x3_1/a" 720
+cap "m1_6_34#" "or2v0x3_0/a" 1028
+cap "or2v0x3_3/vdd" "or2v0x3_4/a" 22
+cap "or2v0x3_0/vss" "m1_6_34#" 608
+cap "or2v0x3_4/vdd" "or2v0x3_4/a" 898
+cap "or2v0x3_4/z" "d6" 1076
+cap "or2v0x3_3/vdd" "or2v0x3_4/a" 892
+cap "or2v0x3_0/b" "or2v0x3_0/vss" 309
+cap "or2v0x3_4/a" "d6" 76
+cap "or2v0x3_4/zn" "d6" 2083
+cap "or2v0x3_4/a" "or2v0x3_3/z" 2100
+cap "or2v0x3_3/z" "d6" 1076
+cap "or2v0x3_0/vss" "d6" 6337
+cap "or2v0x3_5/vdd" "or2v0x3_2/b" 228
+cap "or2v0x3_2/z" "or2v0x3_2/a" 1137
+cap "or2v0x3_2/z" "or2v0x3_2/zn" 2100
+cap "or2v0x3_2/z" "or2v0x3_1/vss" 494
+cap "or2v0x3_2/z" "or2v0x3_2/a" 720
+cap "or2v0x3_5/a" "or2v0x3_5/vdd" 1159
+cap "or2v0x3_5/a" "or2v0x3_2/b" 76
+cap "or2v0x3_2/vdd" "m1_78_34#" 228
+cap "or2v0x3_5/zn" "or2v0x3_2/b" 1914
+cap "or2v0x3_2/z" "or2v0x3_2/b" 1266
+cap "or2v0x3_5/z" "or2v0x3_5/vdd" 456
+cap "or2v0x3_5/z" "or2v0x3_2/b" 2458
+cap "or2v0x3_1/vss" "m1_78_34#" 114
+cap "or2v0x3_1/vss" "or2v0x3_2/b" 7696
+cap "or2v0x3_5/a" "or2v0x3_5/vdd" 467
+cap "or2v0x3_2/z" "or2v0x3_2/vdd" 1387
+cap "d0" "or2v0x3_0/zn" 540
+cap "or2v0x3_0/vdd" "d0" 264
+cap "d0" "or2v0x3_0/a" 1215
+cap "or2v0x3_0/z" "d0" 2157
+cap "d0" "or2v0x3_0/vdd" 456
+cap "or2v0x3_0/vdd" "or2v0x3_0/vdd" 752
+cap "or2v0x3_1/a" "or2v0x3_1/a_48_39#" 110
+cap "or2v0x3_1/a" "or2v0x3_1/zn" 896
+cap "m1_78_34#" "or2v0x3_0/vdd" 133
+cap "or2v0x3_1/a" "or2v0x3_0/vdd" 1638
+cap "or2v0x3_0/a" "or2v0x3_0/vdd" 423
+cap "or2v0x3_1/a" "or2v0x3_1/a_31_39#" 110
+cap "or2v0x3_1/a" "or2v0x3_1/z" 2876
+cap "or2v0x3_1/vdd" "or2v0x3_2/a" 1714
+cap "or2v0x3_2/z" "or2v0x3_2/a" 2876
+cap "or2v0x3_2/zn" "or2v0x3_2/a" 896
+cap "or2v0x3_2/a_48_39#" "or2v0x3_2/a" 110
+cap "or2v0x3_2/a_31_39#" "or2v0x3_2/a" 110
+merge "or2v0x3_4/b" "or2v0x3_3/z" -4240 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
+merge "or2v0x3_3/z" "m1_62_n38#"
+merge "or2v0x3_8/b" "or2v0x3_7/z" -8439 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
+merge "or2v0x3_7/z" "m1_78_n129#"
+merge "or2v0x3_7/a" "or2v0x3_6/z" -9142 0 0 0 0 0 0 0 0 0 0 0 0 -23 -28 0 0 0 0
+merge "or2v0x3_6/z" "m1_6_n123#"
+merge "or2v0x3_2/vdd" "or2v0x3_1/vdd" -6016 0 0 0 0 0 0 0 0 0 0 0 0 -64 -88 0 0 0 -160
+merge "or2v0x3_1/vdd" "or2v0x3_0/vdd"
+merge "or2v0x3_0/vdd" "or2v0x3_8/vdd"
+merge "or2v0x3_8/vdd" "or2v0x3_5/vdd"
+merge "or2v0x3_5/vdd" "or2v0x3_7/vdd"
+merge "or2v0x3_7/vdd" "or2v0x3_4/vdd"
+merge "or2v0x3_4/vdd" "or2v0x3_6/vdd"
+merge "or2v0x3_6/vdd" "or2v0x3_3/vdd"
+merge "or2v0x3_3/vdd" "vdd"
+merge "vdd" "m1_70_68#"
+merge "m1_70_68#" "m1_141_68#"
+merge "or2v0x3_5/vss" "or2v0x3_2/vss" -198105 0 0 0 0 0 0 0 0 0 0 0 0 -2311 -1237 0 0 0 0
+merge "or2v0x3_2/vss" "or2v0x3_4/vss"
+merge "or2v0x3_4/vss" "or2v0x3_1/vss"
+merge "or2v0x3_1/vss" "or2v0x3_3/vss"
+merge "or2v0x3_3/vss" "or2v0x3_0/vss"
+merge "or2v0x3_0/vss" "or2v0x3_8/vss"
+merge "or2v0x3_8/vss" "or2v0x3_7/vss"
+merge "or2v0x3_7/vss" "or2v0x3_6/vss"
+merge "or2v0x3_6/vss" "gnd"
+merge "gnd" "m1_68_n156#"
+merge "or2v0x3_5/b" "or2v0x3_2/b" -26595 0 0 0 0 0 0 0 0 0 0 0 0 -39 -44 -625 -336 0 0
+merge "or2v0x3_2/b" "or2v0x3_8/a"
+merge "or2v0x3_8/a" "d6"
+merge "or2v0x3_2/z" "b0" -5464 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "or2v0x3_3/a" "or2v0x3_6/b" -3352 0 0 0 0 0 0 0 0 0 0 0 0 -29 -32 0 0 0 0
+merge "or2v0x3_6/b" "d5"
+merge "or2v0x3_0/b" "or2v0x3_3/b" -6767 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 -129 -89 0 0
+merge "or2v0x3_3/b" "d2"
+merge "or2v0x3_1/b" "or2v0x3_7/b" -9826 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 -172 -90 0 0
+merge "or2v0x3_7/b" "d4"
+merge "or2v0x3_5/a" "or2v0x3_4/z" -3233 0 0 0 0 0 0 0 0 0 0 0 0 -23 -28 0 0 0 0
+merge "or2v0x3_4/z" "m1_134_n42#"
+merge "or2v0x3_2/a" "or2v0x3_1/z" -11612 0 0 0 0 0 0 0 0 0 0 0 0 -27 -30 -25 -17 0 0
+merge "or2v0x3_1/z" "m1_78_34#"
+merge "or2v0x3_0/a" "d0" -1987 0 0 0 0 0 0 0 0 0 0 0 0 -7 -12 0 0 0 0
+merge "or2v0x3_5/z" "b1" -1208 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
+merge "or2v0x3_4/a" "d1" -4020 0 0 0 0 0 0 0 0 0 0 0 0 -10 -14 0 0 0 0
+merge "or2v0x3_1/a" "or2v0x3_0/z" -11441 0 0 0 0 0 0 0 0 0 0 0 0 -27 -30 -134 -69 0 0
+merge "or2v0x3_0/z" "m1_6_34#"
+merge "or2v0x3_6/a" "d3" -1835 0 0 0 0 0 0 0 0 0 0 0 0 -7 -12 0 0 0 0
+merge "or2v0x3_8/z" "b2" -4286 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
