@@ -1,0 +1,2868 @@
+* SPICE3 file created from dip2.ext - technology: scmos
+
+M1000 vdd subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/o2 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=41554p pd=15194u as=102p ps=50u
+M1001 subcomp_0/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/mux_0/a2 vdd subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1002 subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1003 subcomp_0/mux_0/mxn2v0x1_2/a_38_50# subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1004 vdd subcomp_0/mux_0/b2 subcomp_0/mux_0/mxn2v0x1_2/a_38_50# subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1005 subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/s vdd subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1006 gnd subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/o2 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=9u l=2u
++  ad=29383p pd=10024u as=57p ps=32u
+M1007 subcomp_0/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/mux_0/a2 gnd subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1008 subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1009 subcomp_0/mux_0/mxn2v0x1_2/a_38_12# subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1010 gnd subcomp_0/mux_0/b2 subcomp_0/mux_0/mxn2v0x1_2/a_38_12# subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1011 subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/s gnd subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1012 vdd subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/o1 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1013 subcomp_0/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/mux_0/a1 vdd subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1014 subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1015 subcomp_0/mux_0/mxn2v0x1_1/a_38_50# subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1016 vdd subcomp_0/mux_0/b1 subcomp_0/mux_0/mxn2v0x1_1/a_38_50# subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1017 subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/s vdd subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1018 gnd subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/o1 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1019 subcomp_0/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/mux_0/a1 gnd subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1020 subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1021 subcomp_0/mux_0/mxn2v0x1_1/a_38_12# subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1022 gnd subcomp_0/mux_0/b1 subcomp_0/mux_0/mxn2v0x1_1/a_38_12# subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1023 subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/s gnd subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1024 vdd subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/o0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1025 subcomp_0/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/mux_0/a0 vdd subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1026 subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1027 subcomp_0/mux_0/mxn2v0x1_0/a_38_50# subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1028 vdd subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/a_38_50# subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1029 subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/s vdd subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1030 gnd subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/o0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1031 subcomp_0/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/mux_0/a0 gnd subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1032 subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1033 subcomp_0/mux_0/mxn2v0x1_0/a_38_12# subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1034 gnd subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/a_38_12# subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1035 subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/s gnd subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1036 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/a2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1037 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/totdiff3_0/mux_0/a2 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1038 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1039 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1040 vdd subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1041 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_0/mux_0/s vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1042 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/a2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1043 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/totdiff3_0/mux_0/a2 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1044 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1045 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1046 gnd subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1047 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_0/mux_0/s gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1048 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/a1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1049 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/totdiff3_0/mux_0/a1 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1050 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1051 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1052 vdd subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1053 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/s vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1054 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/a1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1055 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/totdiff3_0/mux_0/a1 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1056 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1057 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1058 gnd subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1059 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/s gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1060 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1061 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/totdiff3_0/mux_0/a0 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1062 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1063 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1064 vdd subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1065 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/s vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1066 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1067 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/totdiff3_0/mux_0/a0 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1068 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1069 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1070 gnd subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1071 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/s gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1072 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1073 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1074 vdd subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1075 gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1076 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1077 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1078 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=398p ps=164u
+M1079 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1080 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b2 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=0p ps=0u
+M1081 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1082 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/in_2c vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1083 vdd subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1084 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1085 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1086 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1087 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# gnd nfet w=13u l=2u
++  ad=264p pd=98u as=0p ps=0u
+M1088 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1089 gnd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1090 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/in_2c gnd gnd nfet w=10u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1091 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn gnd nfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1092 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/mux_0/b2 gnd nfet w=20u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1093 gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1094 subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1095 vdd subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/mux_0/s vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1096 subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1097 subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1098 subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1099 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1100 gnd subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/mux_0/s gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1101 subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1102 gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1103 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1104 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1105 vdd decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1106 gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1107 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1108 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1109 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1110 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/in_c vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1111 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1112 gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1113 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# subcomp_0/totdiff3_0/diff2_2/in_c gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1114 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1115 vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b vdd pfet w=12u l=2u
++  ad=0p pd=0u as=72p ps=38u
+M1116 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/in_a vdd vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1117 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1118 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1119 vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai vdd pfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1120 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn decoder_1/b2 vdd vdd pfet w=12u l=2u
++  ad=72p pd=38u as=0p ps=0u
+M1121 gnd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b gnd nfet w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1122 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/in_a gnd gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1123 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1124 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn gnd nfet w=6u l=2u
++  ad=57p pd=32u as=0p ps=0u
+M1125 gnd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai gnd nfet w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1126 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn decoder_1/b2 gnd gnd nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1127 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/mux_0/a2 vdd vdd pfet w=24u l=2u
++  ad=168p pd=64u as=0p ps=0u
+M1128 vdd subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1129 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/mux_0/a2 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1130 gnd subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1131 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1132 subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1133 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a2 vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1134 subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1135 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/in_c vdd vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1136 vdd subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1137 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz vdd vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1138 vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1139 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1140 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1141 vdd subcomp_0/totdiff3_0/diff2_2/in_a subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1142 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn decoder_1/b2 vdd vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1143 vdd decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1144 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1145 subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# gnd nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1146 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1147 gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1148 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd gnd nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1149 subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1150 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/mux_0/a2 gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1151 gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1152 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/in_c gnd gnd nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1153 gnd subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1154 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1155 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# gnd nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1156 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1157 gnd subcomp_0/totdiff3_0/diff2_2/in_a subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1158 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn decoder_1/b2 gnd gnd nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1159 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/in_2c vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1160 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1161 vdd subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1162 gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/in_2c gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1163 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1164 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1165 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=398p ps=164u
+M1166 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1167 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b1 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=0p ps=0u
+M1168 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1169 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/in_2c vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1170 vdd subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1171 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1172 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1173 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1174 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# gnd nfet w=13u l=2u
++  ad=264p pd=98u as=0p ps=0u
+M1175 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1176 gnd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1177 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/in_2c gnd gnd nfet w=10u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1178 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn gnd nfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1179 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/mux_0/b1 gnd nfet w=20u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1180 gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1181 subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1182 vdd subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/in_c vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1183 subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1184 subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1185 subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1186 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1187 gnd subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/in_c gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1188 subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1189 gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1190 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1191 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1192 vdd decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1193 gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1194 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1195 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1196 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1197 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/in_c vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1198 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1199 gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1200 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# subcomp_0/totdiff3_0/diff2_1/in_c gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1201 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1202 vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b vdd pfet w=12u l=2u
++  ad=0p pd=0u as=72p ps=38u
+M1203 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/in_a vdd vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1204 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1205 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1206 vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai vdd pfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1207 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn decoder_1/b1 vdd vdd pfet w=12u l=2u
++  ad=72p pd=38u as=0p ps=0u
+M1208 gnd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd nfet w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1209 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/in_a gnd gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1210 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1211 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn gnd nfet w=6u l=2u
++  ad=57p pd=32u as=0p ps=0u
+M1212 gnd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai gnd nfet w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1213 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn decoder_1/b1 gnd gnd nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1214 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/mux_0/a1 vdd vdd pfet w=24u l=2u
++  ad=168p pd=64u as=0p ps=0u
+M1215 vdd subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1216 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/mux_0/a1 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1217 gnd subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1218 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a1 vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1219 subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1220 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a1 vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1221 subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1222 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/in_c vdd vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1223 vdd subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1224 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz vdd vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1225 vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1226 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1227 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1228 vdd subcomp_0/totdiff3_0/diff2_1/in_a subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1229 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn decoder_1/b1 vdd vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1230 vdd decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1231 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1232 subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# gnd nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1233 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a1 gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1234 gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1235 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd gnd nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1236 subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1237 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/mux_0/a1 gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1238 gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1239 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/in_c gnd gnd nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1240 gnd subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1241 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1242 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# gnd nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1243 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1244 gnd subcomp_0/totdiff3_0/diff2_1/in_a subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1245 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn decoder_1/b1 gnd gnd nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1246 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_1/in_2c vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1247 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1248 vdd vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1249 gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_1/in_2c gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1250 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1251 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1252 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=398p ps=164u
+M1253 subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1254 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b0 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=0p ps=0u
+M1255 subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1256 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1257 vdd vdd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1258 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1259 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1260 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1261 subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# gnd nfet w=13u l=2u
++  ad=264p pd=98u as=0p ps=0u
+M1262 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1263 gnd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1264 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd gnd gnd nfet w=10u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1265 subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn gnd nfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1266 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an vdd subcomp_0/totdiff3_0/mux_0/b0 gnd nfet w=20u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1267 gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1268 subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1269 vdd subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/in_c vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1270 subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1271 subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1272 subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1273 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1274 gnd subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/in_c gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1275 subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1276 gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1277 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1278 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1279 vdd decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1280 gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1281 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1282 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1283 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1284 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn gnd vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1285 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1286 gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1287 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# gnd gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1288 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1289 vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b vdd pfet w=12u l=2u
++  ad=0p pd=0u as=72p ps=38u
+M1290 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/in_a vdd vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1291 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1292 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1293 vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai vdd pfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1294 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn decoder_1/b0 vdd vdd pfet w=12u l=2u
++  ad=72p pd=38u as=0p ps=0u
+M1295 gnd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b gnd nfet w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1296 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/in_a gnd gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1297 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1298 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn gnd nfet w=6u l=2u
++  ad=57p pd=32u as=0p ps=0u
+M1299 gnd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai gnd nfet w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1300 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn decoder_1/b0 gnd gnd nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1301 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/mux_0/a0 vdd vdd pfet w=24u l=2u
++  ad=168p pd=64u as=0p ps=0u
+M1302 vdd subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1303 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/mux_0/a0 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1304 gnd subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1305 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1306 subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1307 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a0 vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1308 subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1309 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd vdd vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1310 vdd gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1311 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz vdd vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1312 vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1313 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1314 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1315 vdd subcomp_0/totdiff3_0/diff2_0/in_a subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1316 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn decoder_1/b0 vdd vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1317 vdd decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1318 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1319 subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# gnd nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1320 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1321 gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1322 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz gnd gnd nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1323 subcomp_0/totdiff3_0/mux_0/a0 gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1324 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd subcomp_0/totdiff3_0/mux_0/a0 gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1325 gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1326 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd gnd gnd nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1327 gnd gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1328 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1329 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# gnd nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1330 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz gnd nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1331 gnd subcomp_0/totdiff3_0/diff2_0/in_a subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1332 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn decoder_1/b0 gnd gnd nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1333 subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/z vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=14u l=2u
++  ad=392p pd=120u as=0p ps=0u
+M1334 vdd subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1335 subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/c vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1336 vdd subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1337 subcomp_0/comp_0/nd3v0x2_0/a_14_12# subcomp_0/comp_0/nd3v0x2_0/a gnd gnd nfet w=14u l=2u
++  ad=70p pd=38u as=0p ps=0u
+M1338 subcomp_0/comp_0/nd3v0x2_0/a_21_12# subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/a_14_12# gnd nfet w=14u l=2u
++  ad=70p pd=38u as=0p ps=0u
+M1339 subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/nd3v0x2_0/a_21_12# gnd nfet w=14u l=2u
++  ad=112p pd=44u as=0p ps=0u
+M1340 subcomp_0/comp_0/nd3v0x2_0/a_38_12# subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/nd3v0x2_0/z gnd nfet w=14u l=2u
++  ad=70p pd=38u as=0p ps=0u
+M1341 subcomp_0/comp_0/nd3v0x2_0/a_45_12# subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/a_38_12# gnd nfet w=14u l=2u
++  ad=70p pd=38u as=0p ps=0u
+M1342 gnd subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/nd3v0x2_0/a_45_12# gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1343 vdd subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/nr2v0x2_1/a subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1344 subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/an3v0x2_1/a vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=17u l=2u
++  ad=233p pd=98u as=0p ps=0u
+M1345 vdd subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1346 subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/mux_0/a2 vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1347 gnd subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/nr2v0x2_1/a gnd nfet w=14u l=2u
++  ad=0p pd=0u as=82p ps=42u
+M1348 subcomp_0/comp_0/an3v0x2_1/a_24_8# subcomp_0/comp_0/an3v0x2_1/a gnd gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1349 subcomp_0/comp_0/an3v0x2_1/a_31_8# subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_1/a_24_8# gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1350 subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/mux_0/a2 subcomp_0/comp_0/an3v0x2_1/a_31_8# gnd nfet w=17u l=2u
++  ad=97p pd=48u as=0p ps=0u
+M1351 subcomp_0/comp_0/nr3v0x2_0/a_13_39# subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=135p pd=64u as=377p ps=138u
+M1352 subcomp_0/comp_0/nr3v0x2_0/a_20_39# subcomp_0/comp_0/an3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_13_39# subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1353 vdd subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/comp_0/nr3v0x2_0/a_20_39# subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1354 subcomp_0/comp_0/nr3v0x2_0/a_37_39# subcomp_0/comp_0/nr3v0x2_0/a vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1355 subcomp_0/comp_0/nr3v0x2_0/a_44_39# subcomp_0/comp_0/an3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_37_39# subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1356 subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/a_44_39# subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1357 subcomp_0/comp_0/nr3v0x2_0/a_61_39# subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1358 subcomp_0/comp_0/nr3v0x2_0/a_68_39# subcomp_0/comp_0/an3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_61_39# subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1359 vdd subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/comp_0/nr3v0x2_0/a_68_39# subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1360 gnd subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/z gnd nfet w=15u l=2u
++  ad=0p pd=0u as=207p ps=90u
+M1361 subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/an3v0x2_0/z gnd gnd nfet w=15u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1362 gnd subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/comp_0/nr3v0x2_0/z gnd nfet w=15u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1363 vdd subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1364 subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/mux_0/a0 vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=17u l=2u
++  ad=233p pd=98u as=0p ps=0u
+M1365 vdd subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1366 subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/mux_0/a2 vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1367 gnd subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/an3v0x2_2/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=82p ps=42u
+M1368 subcomp_0/comp_0/an3v0x2_2/a_24_8# subcomp_0/mux_0/a0 gnd gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1369 subcomp_0/comp_0/an3v0x2_2/a_31_8# subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_2/a_24_8# gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1370 subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/mux_0/a2 subcomp_0/comp_0/an3v0x2_2/a_31_8# gnd nfet w=17u l=2u
++  ad=97p pd=48u as=0p ps=0u
+M1371 subcomp_0/comp_0/nr2v0x2_1/a_11_39# subcomp_0/comp_0/nr2v0x2_1/a vdd vdd pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1372 subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/an3v0x2_3/z subcomp_0/comp_0/nr2v0x2_1/a_11_39# vdd pfet w=27u l=2u
++  ad=216p pd=70u as=0p ps=0u
+M1373 subcomp_0/comp_0/nr2v0x2_1/a_28_39# subcomp_0/comp_0/an3v0x2_3/z subcomp_0/comp_0/nd3v0x2_0/c vdd pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1374 vdd subcomp_0/comp_0/nr2v0x2_1/a subcomp_0/comp_0/nr2v0x2_1/a_28_39# vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1375 subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/nr2v0x2_1/a gnd gnd nfet w=15u l=2u
++  ad=120p pd=46u as=0p ps=0u
+M1376 gnd subcomp_0/comp_0/an3v0x2_3/z subcomp_0/comp_0/nd3v0x2_0/c gnd nfet w=15u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1377 vdd subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/comp_0/an3v0x2_3/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1378 subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/comp_0/an2v0x2_0/b vdd vdd pfet w=17u l=2u
++  ad=233p pd=98u as=0p ps=0u
+M1379 vdd subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_3/zn vdd pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1380 subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/mux_0/a0 vdd vdd pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1381 gnd subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/comp_0/an3v0x2_3/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=82p ps=42u
+M1382 subcomp_0/comp_0/an3v0x2_3/a_24_8# subcomp_0/comp_0/an2v0x2_0/b gnd gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1383 subcomp_0/comp_0/an3v0x2_3/a_31_8# subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_3/a_24_8# gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1384 subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/mux_0/a0 subcomp_0/comp_0/an3v0x2_3/a_31_8# gnd nfet w=17u l=2u
++  ad=97p pd=48u as=0p ps=0u
+M1385 vdd subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an3v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1386 subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an3v0x2_1/a vdd vdd pfet w=17u l=2u
++  ad=233p pd=98u as=0p ps=0u
+M1387 vdd subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_0/zn vdd pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1388 subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an2v0x2_0/b vdd vdd pfet w=17u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1389 gnd subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an3v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=82p ps=42u
+M1390 subcomp_0/comp_0/an3v0x2_0/a_24_8# subcomp_0/comp_0/an3v0x2_1/a gnd gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1391 subcomp_0/comp_0/an3v0x2_0/a_31_8# subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_0/a_24_8# gnd nfet w=17u l=2u
++  ad=85p pd=44u as=0p ps=0u
+M1392 subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an3v0x2_0/a_31_8# gnd nfet w=17u l=2u
++  ad=97p pd=48u as=0p ps=0u
+M1393 vdd subcomp_0/comp_0/an2v0x2_0/zn subcomp_0/comp_0/nr3v0x2_0/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1394 subcomp_0/comp_0/an2v0x2_0/zn subcomp_0/mux_0/a2 vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1395 vdd subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1396 gnd subcomp_0/comp_0/an2v0x2_0/zn subcomp_0/comp_0/nr3v0x2_0/a gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1397 subcomp_0/comp_0/an2v0x2_0/a_24_13# subcomp_0/mux_0/a2 gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1398 subcomp_0/comp_0/an2v0x2_0/zn subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1399 subcomp_0/comp_0/nr2v0x2_0/a_11_39# subcomp_0/comp_0/an2v0x2_3/z vdd vdd pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1400 subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/an2v0x2_1/z subcomp_0/comp_0/nr2v0x2_0/a_11_39# vdd pfet w=27u l=2u
++  ad=216p pd=70u as=0p ps=0u
+M1401 subcomp_0/comp_0/nr2v0x2_0/a_28_39# subcomp_0/comp_0/an2v0x2_1/z subcomp_0/comp_0/nd3v0x2_0/a vdd pfet w=27u l=2u
++  ad=135p pd=64u as=0p ps=0u
+M1402 vdd subcomp_0/comp_0/an2v0x2_3/z subcomp_0/comp_0/nr2v0x2_0/a_28_39# vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1403 subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/an2v0x2_3/z gnd gnd nfet w=15u l=2u
++  ad=120p pd=46u as=0p ps=0u
+M1404 gnd subcomp_0/comp_0/an2v0x2_1/z subcomp_0/comp_0/nd3v0x2_0/a gnd nfet w=15u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1405 vdd subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/comp_0/an2v0x2_3/b vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1406 subcomp_0/comp_0/or3v0x2_1/a_24_38# subcomp_0/comp_0/an3v0x2_2/b vdd vdd pfet w=22u l=2u
++  ad=110p pd=54u as=0p ps=0u
+M1407 subcomp_0/comp_0/or3v0x2_1/a_31_38# subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_1/a_24_38# vdd pfet w=22u l=2u
++  ad=110p pd=54u as=0p ps=0u
+M1408 subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_1/a_31_38# vdd pfet w=22u l=2u
++  ad=167p pd=60u as=0p ps=0u
+M1409 subcomp_0/comp_0/or3v0x2_1/a_48_38# subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_1/zn vdd pfet w=19u l=2u
++  ad=95p pd=48u as=0p ps=0u
+M1410 subcomp_0/comp_0/or3v0x2_1/a_55_38# subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_1/a_48_38# vdd pfet w=19u l=2u
++  ad=95p pd=48u as=0p ps=0u
+M1411 vdd subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/or3v0x2_1/a_55_38# vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1412 gnd subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/comp_0/an2v0x2_3/b gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1413 subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/comp_0/an3v0x2_2/b gnd gnd nfet w=8u l=2u
++  ad=116p pd=62u as=0p ps=0u
+M1414 gnd subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_1/zn gnd nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1415 subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/mux_0/a0 gnd gnd nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1416 vdd subcomp_0/comp_0/an2v0x2_1/zn subcomp_0/comp_0/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1417 subcomp_0/comp_0/an2v0x2_1/zn subcomp_0/comp_0/an2v0x2_4/z vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1418 vdd subcomp_0/comp_0/an2v0x2_1/b subcomp_0/comp_0/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1419 gnd subcomp_0/comp_0/an2v0x2_1/zn subcomp_0/comp_0/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1420 subcomp_0/comp_0/an2v0x2_1/a_24_13# subcomp_0/comp_0/an2v0x2_4/z gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1421 subcomp_0/comp_0/an2v0x2_1/zn subcomp_0/comp_0/an2v0x2_1/b subcomp_0/comp_0/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1422 vdd subcomp_0/comp_0/an2v0x2_4/zn subcomp_0/comp_0/an2v0x2_4/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1423 subcomp_0/comp_0/an2v0x2_4/zn subcomp_0/comp_0/an2v0x2_0/b vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1424 vdd subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an2v0x2_4/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1425 gnd subcomp_0/comp_0/an2v0x2_4/zn subcomp_0/comp_0/an2v0x2_4/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1426 subcomp_0/comp_0/an2v0x2_4/a_24_13# subcomp_0/comp_0/an2v0x2_0/b gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1427 subcomp_0/comp_0/an2v0x2_4/zn subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an2v0x2_4/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1428 subcomp_0/comp_0/an3v0x2_2/b subcomp_0/mux_0/b1 vdd vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1429 vdd subcomp_0/mux_0/b1 subcomp_0/comp_0/an3v0x2_2/b vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1430 subcomp_0/comp_0/an3v0x2_2/b subcomp_0/mux_0/b1 gnd gnd nfet w=17u l=2u
++  ad=118p pd=50u as=0p ps=0u
+M1431 gnd subcomp_0/mux_0/b1 subcomp_0/comp_0/an3v0x2_2/b gnd nfet w=11u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1432 vdd subcomp_0/comp_0/an2v0x2_3/zn subcomp_0/comp_0/an2v0x2_3/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1433 subcomp_0/comp_0/an2v0x2_3/zn subcomp_0/comp_0/an2v0x2_2/z vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1434 vdd subcomp_0/comp_0/an2v0x2_3/b subcomp_0/comp_0/an2v0x2_3/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1435 gnd subcomp_0/comp_0/an2v0x2_3/zn subcomp_0/comp_0/an2v0x2_3/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1436 subcomp_0/comp_0/an2v0x2_3/a_24_13# subcomp_0/comp_0/an2v0x2_2/z gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1437 subcomp_0/comp_0/an2v0x2_3/zn subcomp_0/comp_0/an2v0x2_3/b subcomp_0/comp_0/an2v0x2_3/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1438 vdd subcomp_0/comp_0/an2v0x2_2/zn subcomp_0/comp_0/an2v0x2_2/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1439 subcomp_0/comp_0/an2v0x2_2/zn subcomp_0/mux_0/a2 vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1440 vdd subcomp_0/mux_0/a1 subcomp_0/comp_0/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1441 gnd subcomp_0/comp_0/an2v0x2_2/zn subcomp_0/comp_0/an2v0x2_2/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1442 subcomp_0/comp_0/an2v0x2_2/a_24_13# subcomp_0/mux_0/a2 gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1443 subcomp_0/comp_0/an2v0x2_2/zn subcomp_0/mux_0/a1 subcomp_0/comp_0/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1444 vdd subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/an2v0x2_1/b vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1445 subcomp_0/comp_0/or3v0x2_0/a_24_38# subcomp_0/mux_0/a1 vdd vdd pfet w=22u l=2u
++  ad=110p pd=54u as=0p ps=0u
+M1446 subcomp_0/comp_0/or3v0x2_0/a_31_38# subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/a_24_38# vdd pfet w=22u l=2u
++  ad=110p pd=54u as=0p ps=0u
+M1447 subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_0/a_31_38# vdd pfet w=22u l=2u
++  ad=167p pd=60u as=0p ps=0u
+M1448 subcomp_0/comp_0/or3v0x2_0/a_48_38# subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_0/zn vdd pfet w=19u l=2u
++  ad=95p pd=48u as=0p ps=0u
+M1449 subcomp_0/comp_0/or3v0x2_0/a_55_38# subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/a_48_38# vdd pfet w=19u l=2u
++  ad=95p pd=48u as=0p ps=0u
+M1450 vdd subcomp_0/mux_0/a1 subcomp_0/comp_0/or3v0x2_0/a_55_38# vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1451 gnd subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/an2v0x2_1/b gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1452 subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/mux_0/a1 gnd gnd nfet w=8u l=2u
++  ad=116p pd=62u as=0p ps=0u
+M1453 gnd subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/zn gnd nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1454 subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/an3v0x2_1/a gnd gnd nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1455 subcomp_0/comp_0/an3v0x2_1/a subcomp_0/mux_0/b0 vdd vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1456 vdd subcomp_0/mux_0/b0 subcomp_0/comp_0/an3v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1457 subcomp_0/comp_0/an3v0x2_1/a subcomp_0/mux_0/b0 gnd gnd nfet w=17u l=2u
++  ad=118p pd=50u as=0p ps=0u
+M1458 gnd subcomp_0/mux_0/b0 subcomp_0/comp_0/an3v0x2_1/a gnd nfet w=11u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1459 subcomp_0/comp_0/an2v0x2_0/b subcomp_0/mux_0/b2 vdd vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1460 vdd subcomp_0/mux_0/b2 subcomp_0/comp_0/an2v0x2_0/b vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1461 subcomp_0/comp_0/an2v0x2_0/b subcomp_0/mux_0/b2 gnd gnd nfet w=17u l=2u
++  ad=118p pd=50u as=0p ps=0u
+M1462 gnd subcomp_0/mux_0/b2 subcomp_0/comp_0/an2v0x2_0/b gnd nfet w=11u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1463 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1464 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/totdiff3_1/mux_0/a2 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1465 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1466 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1467 vdd subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1468 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/s vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1469 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1470 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/totdiff3_1/mux_0/a2 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1471 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1472 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_12# subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1473 gnd subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1474 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/s gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1475 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1476 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/totdiff3_1/mux_0/a1 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1477 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1478 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1479 vdd subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1480 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/s vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1481 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1482 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/totdiff3_1/mux_0/a1 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1483 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1484 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_12# subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1485 gnd subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1486 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/s gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1487 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1488 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/totdiff3_1/mux_0/a0 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1489 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1490 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1491 vdd subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1492 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/s vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1493 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1494 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/totdiff3_1/mux_0/a0 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1495 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1496 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_12# subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1497 gnd subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1498 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/s gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1499 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1500 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1501 vdd subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1502 gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1503 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a_24_13# subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1504 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1505 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b2 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=398p ps=164u
+M1506 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1507 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b2 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=0p ps=0u
+M1508 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1509 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/in_2c vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1510 vdd subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1511 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1512 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1513 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1514 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_13_13# gnd nfet w=13u l=2u
++  ad=264p pd=98u as=0p ps=0u
+M1515 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_30_13# subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b2 gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1516 gnd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_30_13# gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1517 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/in_2c gnd gnd nfet w=10u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1518 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn gnd nfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1519 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/mux_0/b2 gnd nfet w=20u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1520 gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1521 subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1522 vdd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/mux_0/s vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1523 subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_31_39# subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1524 subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1525 subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_48_39# subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1526 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1527 gnd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/mux_0/s gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1528 subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1529 gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1530 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1531 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1532 vdd subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1533 gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1534 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a_24_13# subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1535 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1536 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1537 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_2/in_c vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1538 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1539 gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1540 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/a_24_13# subcomp_0/totdiff3_1/diff2_2/in_c gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1541 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1542 vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b vdd pfet w=12u l=2u
++  ad=0p pd=0u as=72p ps=38u
+M1543 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an decoder_0/b2 vdd vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1544 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1545 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1546 vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai vdd pfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1547 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_2/in_b vdd vdd pfet w=12u l=2u
++  ad=72p pd=38u as=0p ps=0u
+M1548 gnd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b gnd nfet w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1549 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an decoder_0/b2 gnd gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1550 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1551 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn gnd nfet w=6u l=2u
++  ad=57p pd=32u as=0p ps=0u
+M1552 gnd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai gnd nfet w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1553 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_2/in_b gnd gnd nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1554 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/mux_0/a2 vdd vdd pfet w=24u l=2u
++  ad=168p pd=64u as=0p ps=0u
+M1555 vdd subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1556 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/mux_0/a2 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1557 gnd subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1558 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a2 vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1559 subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1560 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a2 vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1561 subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1562 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/in_c vdd vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1563 vdd subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1564 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz vdd vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1565 vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1566 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1567 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1568 vdd decoder_0/b2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1569 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/in_b vdd vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1570 vdd subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1571 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn gnd gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1572 subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_11_12# gnd nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1573 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_28_12# subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a2 gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1574 gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_28_12# gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1575 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz gnd gnd nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1576 subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1577 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/mux_0/a2 gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1578 gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1579 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/in_c gnd gnd nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1580 gnd subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1581 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1582 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_115_7# gnd nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1583 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz gnd nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1584 gnd decoder_0/b2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1585 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/in_b gnd gnd nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1586 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/in_2c vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1587 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1588 vdd subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1589 gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/in_2c gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1590 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a_24_13# subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1591 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1592 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=398p ps=164u
+M1593 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1594 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b1 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=0p ps=0u
+M1595 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1596 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/in_2c vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1597 vdd subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1598 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1599 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1600 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1601 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_13_13# gnd nfet w=13u l=2u
++  ad=264p pd=98u as=0p ps=0u
+M1602 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_30_13# subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1603 gnd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_30_13# gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1604 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/in_2c gnd gnd nfet w=10u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1605 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn gnd nfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1606 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/mux_0/b1 gnd nfet w=20u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1607 gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1608 subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1609 vdd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/in_c vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1610 subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_31_39# subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1611 subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1612 subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_48_39# subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1613 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1614 gnd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/in_c gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1615 subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1616 gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1617 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1618 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1619 vdd subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1620 gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1621 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a_24_13# subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1622 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1623 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1624 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_1/in_c vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1625 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1626 gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1627 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/a_24_13# subcomp_0/totdiff3_1/diff2_1/in_c gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1628 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1629 vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b vdd pfet w=12u l=2u
++  ad=0p pd=0u as=72p ps=38u
+M1630 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an decoder_0/b1 vdd vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1631 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1632 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1633 vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai vdd pfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1634 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_1/in_b vdd vdd pfet w=12u l=2u
++  ad=72p pd=38u as=0p ps=0u
+M1635 gnd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b gnd nfet w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1636 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an decoder_0/b1 gnd gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1637 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1638 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn gnd nfet w=6u l=2u
++  ad=57p pd=32u as=0p ps=0u
+M1639 gnd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai gnd nfet w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1640 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_1/in_b gnd gnd nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1641 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/mux_0/a1 vdd vdd pfet w=24u l=2u
++  ad=168p pd=64u as=0p ps=0u
+M1642 vdd subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1643 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/mux_0/a1 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1644 gnd subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1645 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1646 subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1647 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a1 vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1648 subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1649 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/in_c vdd vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1650 vdd subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1651 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz vdd vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1652 vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1653 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1654 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1655 vdd decoder_0/b1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1656 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/in_b vdd vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1657 vdd subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1658 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn gnd gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1659 subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_11_12# gnd nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1660 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_28_12# subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1661 gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_28_12# gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1662 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz gnd gnd nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1663 subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1664 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/mux_0/a1 gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1665 gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1666 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/in_c gnd gnd nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1667 gnd subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1668 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1669 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_115_7# gnd nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1670 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz gnd nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1671 gnd decoder_0/b1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1672 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/in_b gnd gnd nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1673 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_1/in_2c vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1674 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1675 vdd vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1676 gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_1/in_2c gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1677 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a_24_13# subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1678 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1679 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=398p ps=164u
+M1680 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1681 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b0 vdd pfet w=20u l=2u
++  ad=320p pd=112u as=0p ps=0u
+M1682 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1683 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn vdd vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1684 vdd vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1685 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1686 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1687 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1688 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_13_13# gnd nfet w=13u l=2u
++  ad=264p pd=98u as=0p ps=0u
+M1689 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_30_13# subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1690 gnd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_30_13# gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1691 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn vdd gnd gnd nfet w=10u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1692 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn gnd nfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1693 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an vdd subcomp_0/totdiff3_1/mux_0/b0 gnd nfet w=20u l=2u
++  ad=130p pd=56u as=0p ps=0u
+M1694 gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1695 subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1696 vdd subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/in_c vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1697 subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_31_39# subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1698 subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1699 subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_48_39# subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1700 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1701 gnd subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/in_c gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1702 subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1703 gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1704 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1705 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1706 vdd subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1707 gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1708 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a_24_13# subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1709 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1710 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z vdd pfet w=28u l=2u
++  ad=0p pd=0u as=166p ps=70u
+M1711 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn gnd vdd vdd pfet w=19u l=2u
++  ad=152p pd=54u as=0p ps=0u
+M1712 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn vdd pfet w=19u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1713 gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z gnd nfet w=14u l=2u
++  ad=0p pd=0u as=98p ps=42u
+M1714 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/a_24_13# gnd gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1715 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/a_24_13# gnd nfet w=13u l=2u
++  ad=77p pd=40u as=0p ps=0u
+M1716 vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b vdd pfet w=12u l=2u
++  ad=0p pd=0u as=72p ps=38u
+M1717 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an vdd vdd vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1718 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1719 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn vdd pfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1720 vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai vdd pfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1721 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_0/in_b vdd vdd pfet w=12u l=2u
++  ad=72p pd=38u as=0p ps=0u
+M1722 gnd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b gnd nfet w=6u l=2u
++  ad=0p pd=0u as=42p ps=26u
+M1723 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an vdd gnd gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1724 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an gnd nfet w=6u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1725 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn gnd nfet w=6u l=2u
++  ad=57p pd=32u as=0p ps=0u
+M1726 gnd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai gnd nfet w=6u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1727 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_0/in_b gnd gnd nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1728 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/mux_0/a0 vdd vdd pfet w=24u l=2u
++  ad=168p pd=64u as=0p ps=0u
+M1729 vdd subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1730 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/mux_0/a0 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1731 gnd subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1732 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 vdd pfet w=27u l=2u
++  ad=424p pd=138u as=530p ps=208u
+M1733 subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1734 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a0 vdd pfet w=27u l=2u
++  ad=440p pd=142u as=0p ps=0u
+M1735 subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn vdd pfet w=27u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1736 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd vdd vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1737 vdd gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn vdd pfet w=26u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1738 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz vdd vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1739 vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1740 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn vdd pfet w=28u l=2u
++  ad=224p pd=72u as=272p ps=122u
+M1741 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz vdd pfet w=28u l=2u
++  ad=224p pd=72u as=0p ps=0u
+M1742 vdd vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a vdd pfet w=28u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1743 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/in_b vdd vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1744 vdd subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn vdd pfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1745 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1746 subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_11_12# gnd nfet w=12u l=2u
++  ad=208p pd=84u as=0p ps=0u
+M1747 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_28_12# subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 gnd nfet w=12u l=2u
++  ad=60p pd=34u as=0p ps=0u
+M1748 gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_28_12# gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1749 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz gnd gnd nfet w=14u l=2u
++  ad=224p pd=88u as=0p ps=0u
+M1750 subcomp_0/totdiff3_1/mux_0/a0 gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1751 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn gnd subcomp_0/totdiff3_1/mux_0/a0 gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1752 gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn gnd nfet w=14u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1753 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd gnd gnd nfet w=12u l=2u
++  ad=96p pd=40u as=0p ps=0u
+M1754 gnd gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd nfet w=12u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1755 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd gnd nfet w=13u l=2u
++  ad=65p pd=36u as=0p ps=0u
+M1756 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_115_7# gnd nfet w=13u l=2u
++  ad=104p pd=42u as=0p ps=0u
+M1757 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz gnd nfet w=13u l=2u
++  ad=114p pd=52u as=0p ps=0u
+M1758 gnd vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd nfet w=13u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1759 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/in_b gnd gnd nfet w=11u l=2u
++  ad=67p pd=36u as=0p ps=0u
+M1760 vdd 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/o2 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1761 3_bitmux_1/mxn2v0x1_2/a_21_50# decoder_0/b2 vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1762 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_2/a_21_50# 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1763 3_bitmux_1/mxn2v0x1_2/a_38_50# 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1764 vdd decoder_1/b2 3_bitmux_1/mxn2v0x1_2/a_38_50# 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1765 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/s vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1766 gnd 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/o2 3_bitmux_1/mxn2v0x1_2/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1767 3_bitmux_1/mxn2v0x1_2/a_21_12# decoder_0/b2 gnd 3_bitmux_1/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1768 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_2/a_21_12# 3_bitmux_1/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1769 3_bitmux_1/mxn2v0x1_2/a_38_12# 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1770 gnd decoder_1/b2 3_bitmux_1/mxn2v0x1_2/a_38_12# 3_bitmux_1/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1771 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/s gnd 3_bitmux_1/mxn2v0x1_2/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1772 vdd 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/o1 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1773 3_bitmux_1/mxn2v0x1_1/a_21_50# decoder_0/b1 vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1774 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_1/a_21_50# 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1775 3_bitmux_1/mxn2v0x1_1/a_38_50# 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1776 vdd decoder_1/b1 3_bitmux_1/mxn2v0x1_1/a_38_50# 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1777 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/s vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1778 gnd 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/o1 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1779 3_bitmux_1/mxn2v0x1_1/a_21_12# decoder_0/b1 gnd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1780 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_1/a_21_12# 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1781 3_bitmux_1/mxn2v0x1_1/a_38_12# 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1782 gnd decoder_1/b1 3_bitmux_1/mxn2v0x1_1/a_38_12# 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1783 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/s gnd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1784 vdd 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1785 3_bitmux_1/mxn2v0x1_0/a_21_50# vdd vdd 3_bitmux_1/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1786 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_0/a_21_50# 3_bitmux_1/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1787 3_bitmux_1/mxn2v0x1_0/a_38_50# 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1788 vdd decoder_1/b0 3_bitmux_1/mxn2v0x1_0/a_38_50# 3_bitmux_1/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1789 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/s vdd 3_bitmux_1/mxn2v0x1_0/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1790 gnd 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1791 3_bitmux_1/mxn2v0x1_0/a_21_12# vdd gnd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1792 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/a_21_12# 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1793 3_bitmux_1/mxn2v0x1_0/a_38_12# 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1794 gnd decoder_1/b0 3_bitmux_1/mxn2v0x1_0/a_38_12# 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1795 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/s gnd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1796 decoder_1/b2 decoder_1/or2v0x3_8/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1797 vdd decoder_1/or2v0x3_8/zn decoder_1/b2 vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1798 decoder_1/or2v0x3_8/a_31_39# decoder_1/d6 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1799 decoder_1/or2v0x3_8/zn decoder_1/or2v0x3_7/z decoder_1/or2v0x3_8/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1800 decoder_1/or2v0x3_8/a_48_39# decoder_1/or2v0x3_7/z decoder_1/or2v0x3_8/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1801 vdd decoder_1/d6 decoder_1/or2v0x3_8/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1802 gnd decoder_1/or2v0x3_8/zn decoder_1/b2 gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1803 decoder_1/or2v0x3_8/zn decoder_1/d6 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1804 gnd decoder_1/or2v0x3_7/z decoder_1/or2v0x3_8/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1805 decoder_1/or2v0x3_7/z decoder_1/or2v0x3_7/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1806 vdd decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_7/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1807 decoder_1/or2v0x3_7/a_31_39# decoder_1/or2v0x3_6/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1808 decoder_1/or2v0x3_7/zn decoder_1/d4 decoder_1/or2v0x3_7/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1809 decoder_1/or2v0x3_7/a_48_39# decoder_1/d4 decoder_1/or2v0x3_7/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1810 vdd decoder_1/or2v0x3_6/z decoder_1/or2v0x3_7/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1811 gnd decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_7/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1812 decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_6/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1813 gnd decoder_1/d4 decoder_1/or2v0x3_7/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1814 decoder_1/or2v0x3_6/z decoder_1/or2v0x3_6/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1815 vdd decoder_1/or2v0x3_6/zn decoder_1/or2v0x3_6/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1816 decoder_1/or2v0x3_6/a_31_39# decoder_1/d3 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1817 decoder_1/or2v0x3_6/zn decoder_1/d5 decoder_1/or2v0x3_6/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1818 decoder_1/or2v0x3_6/a_48_39# decoder_1/d5 decoder_1/or2v0x3_6/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1819 vdd decoder_1/d3 decoder_1/or2v0x3_6/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1820 gnd decoder_1/or2v0x3_6/zn decoder_1/or2v0x3_6/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1821 decoder_1/or2v0x3_6/zn decoder_1/d3 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1822 gnd decoder_1/d5 decoder_1/or2v0x3_6/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1823 decoder_1/b1 decoder_1/or2v0x3_5/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1824 vdd decoder_1/or2v0x3_5/zn decoder_1/b1 vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1825 decoder_1/or2v0x3_5/a_31_39# decoder_1/or2v0x3_4/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1826 decoder_1/or2v0x3_5/zn decoder_1/d6 decoder_1/or2v0x3_5/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1827 decoder_1/or2v0x3_5/a_48_39# decoder_1/d6 decoder_1/or2v0x3_5/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1828 vdd decoder_1/or2v0x3_4/z decoder_1/or2v0x3_5/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1829 gnd decoder_1/or2v0x3_5/zn decoder_1/b1 gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1830 decoder_1/or2v0x3_5/zn decoder_1/or2v0x3_4/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1831 gnd decoder_1/d6 decoder_1/or2v0x3_5/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1832 decoder_1/or2v0x3_4/z decoder_1/or2v0x3_4/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1833 vdd decoder_1/or2v0x3_4/zn decoder_1/or2v0x3_4/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1834 decoder_1/or2v0x3_4/a_31_39# decoder_1/d1 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1835 decoder_1/or2v0x3_4/zn decoder_1/or2v0x3_3/z decoder_1/or2v0x3_4/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1836 decoder_1/or2v0x3_4/a_48_39# decoder_1/or2v0x3_3/z decoder_1/or2v0x3_4/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1837 vdd decoder_1/d1 decoder_1/or2v0x3_4/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1838 gnd decoder_1/or2v0x3_4/zn decoder_1/or2v0x3_4/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1839 decoder_1/or2v0x3_4/zn decoder_1/d1 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1840 gnd decoder_1/or2v0x3_3/z decoder_1/or2v0x3_4/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1841 decoder_1/or2v0x3_3/z decoder_1/or2v0x3_3/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1842 vdd decoder_1/or2v0x3_3/zn decoder_1/or2v0x3_3/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1843 decoder_1/or2v0x3_3/a_31_39# decoder_1/d5 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1844 decoder_1/or2v0x3_3/zn decoder_1/d2 decoder_1/or2v0x3_3/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1845 decoder_1/or2v0x3_3/a_48_39# decoder_1/d2 decoder_1/or2v0x3_3/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1846 vdd decoder_1/d5 decoder_1/or2v0x3_3/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1847 gnd decoder_1/or2v0x3_3/zn decoder_1/or2v0x3_3/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1848 decoder_1/or2v0x3_3/zn decoder_1/d5 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1849 gnd decoder_1/d2 decoder_1/or2v0x3_3/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1850 decoder_1/b0 decoder_1/or2v0x3_2/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1851 vdd decoder_1/or2v0x3_2/zn decoder_1/b0 vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1852 decoder_1/or2v0x3_2/a_31_39# decoder_1/or2v0x3_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1853 decoder_1/or2v0x3_2/zn decoder_1/d6 decoder_1/or2v0x3_2/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1854 decoder_1/or2v0x3_2/a_48_39# decoder_1/d6 decoder_1/or2v0x3_2/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1855 vdd decoder_1/or2v0x3_1/z decoder_1/or2v0x3_2/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1856 gnd decoder_1/or2v0x3_2/zn decoder_1/b0 gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1857 decoder_1/or2v0x3_2/zn decoder_1/or2v0x3_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1858 gnd decoder_1/d6 decoder_1/or2v0x3_2/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1859 decoder_1/or2v0x3_1/z decoder_1/or2v0x3_1/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1860 vdd decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1861 decoder_1/or2v0x3_1/a_31_39# decoder_1/or2v0x3_0/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1862 decoder_1/or2v0x3_1/zn decoder_1/d4 decoder_1/or2v0x3_1/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1863 decoder_1/or2v0x3_1/a_48_39# decoder_1/d4 decoder_1/or2v0x3_1/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1864 vdd decoder_1/or2v0x3_0/z decoder_1/or2v0x3_1/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1865 gnd decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1866 decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_0/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1867 gnd decoder_1/d4 decoder_1/or2v0x3_1/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1868 decoder_1/or2v0x3_0/z decoder_1/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1869 vdd decoder_1/or2v0x3_0/zn decoder_1/or2v0x3_0/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1870 decoder_1/or2v0x3_0/a_31_39# decoder_1/d0 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1871 decoder_1/or2v0x3_0/zn decoder_1/d2 decoder_1/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1872 decoder_1/or2v0x3_0/a_48_39# decoder_1/d2 decoder_1/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1873 vdd decoder_1/d0 decoder_1/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1874 gnd decoder_1/or2v0x3_0/zn decoder_1/or2v0x3_0/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1875 decoder_1/or2v0x3_0/zn decoder_1/d0 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1876 gnd decoder_1/d2 decoder_1/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1877 vdd 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/o2 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1878 3_bitmux_0/mxn2v0x1_2/a_21_50# decoder_0/b2 vdd 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1879 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_2/a_21_50# 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1880 3_bitmux_0/mxn2v0x1_2/a_38_50# 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1881 vdd decoder_1/b2 3_bitmux_0/mxn2v0x1_2/a_38_50# 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1882 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/s vdd 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1883 gnd 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/o2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1884 3_bitmux_0/mxn2v0x1_2/a_21_12# decoder_0/b2 gnd 3_bitmux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1885 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/a_21_12# 3_bitmux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1886 3_bitmux_0/mxn2v0x1_2/a_38_12# 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1887 gnd decoder_1/b2 3_bitmux_0/mxn2v0x1_2/a_38_12# 3_bitmux_0/mxn2v0x1_2/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1888 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/s gnd 3_bitmux_0/mxn2v0x1_2/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1889 vdd 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/o1 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1890 3_bitmux_0/mxn2v0x1_1/a_21_50# decoder_0/b1 vdd 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1891 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_1/a_21_50# 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1892 3_bitmux_0/mxn2v0x1_1/a_38_50# 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1893 vdd decoder_1/b1 3_bitmux_0/mxn2v0x1_1/a_38_50# 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1894 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/s vdd 3_bitmux_0/mxn2v0x1_1/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1895 gnd 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/o1 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1896 3_bitmux_0/mxn2v0x1_1/a_21_12# decoder_0/b1 gnd 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1897 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_1/a_21_12# 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1898 3_bitmux_0/mxn2v0x1_1/a_38_12# 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1899 gnd decoder_1/b1 3_bitmux_0/mxn2v0x1_1/a_38_12# 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1900 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/s gnd 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1901 vdd 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/o0 3_bitmux_0/mxn2v0x1_0/w_n4_32# pfet w=18u l=2u
++  ad=0p pd=0u as=102p ps=50u
+M1902 3_bitmux_0/mxn2v0x1_0/a_21_50# vdd vdd 3_bitmux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1903 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_0/a_21_50# 3_bitmux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=128p pd=48u as=0p ps=0u
+M1904 3_bitmux_0/mxn2v0x1_0/a_38_50# 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1905 vdd decoder_1/b0 3_bitmux_0/mxn2v0x1_0/a_38_50# 3_bitmux_0/mxn2v0x1_0/w_n4_32# pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1906 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/s vdd 3_bitmux_0/mxn2v0x1_0/w_n4_32# pfet w=8u l=2u
++  ad=52p pd=30u as=0p ps=0u
+M1907 gnd 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/o0 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=9u l=2u
++  ad=0p pd=0u as=57p ps=32u
+M1908 3_bitmux_0/mxn2v0x1_0/a_21_12# vdd gnd 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1909 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/mxn2v0x1_0/a_21_12# 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=64p pd=32u as=0p ps=0u
+M1910 3_bitmux_0/mxn2v0x1_0/a_38_12# 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=40p pd=26u as=0p ps=0u
+M1911 gnd decoder_1/b0 3_bitmux_0/mxn2v0x1_0/a_38_12# 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1912 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/s gnd 3_bitmux_0/mxn2v0x1_0/w_n4_n4# nfet w=6u l=2u
++  ad=42p pd=26u as=0p ps=0u
+M1913 decoder_0/b2 decoder_0/or2v0x3_8/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1914 vdd decoder_0/or2v0x3_8/zn decoder_0/b2 vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1915 decoder_0/or2v0x3_8/a_31_39# decoder_0/d6 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1916 decoder_0/or2v0x3_8/zn decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1917 decoder_0/or2v0x3_8/a_48_39# decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1918 vdd decoder_0/d6 decoder_0/or2v0x3_8/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1919 gnd decoder_0/or2v0x3_8/zn decoder_0/b2 gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1920 decoder_0/or2v0x3_8/zn decoder_0/d6 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1921 gnd decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1922 decoder_0/or2v0x3_7/z decoder_0/or2v0x3_7/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1923 vdd decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1924 decoder_0/or2v0x3_7/a_31_39# decoder_0/or2v0x3_6/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1925 decoder_0/or2v0x3_7/zn decoder_0/d4 decoder_0/or2v0x3_7/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1926 decoder_0/or2v0x3_7/a_48_39# decoder_0/d4 decoder_0/or2v0x3_7/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1927 vdd decoder_0/or2v0x3_6/z decoder_0/or2v0x3_7/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1928 gnd decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1929 decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_6/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1930 gnd decoder_0/d4 decoder_0/or2v0x3_7/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1931 decoder_0/or2v0x3_6/z decoder_0/or2v0x3_6/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1932 vdd decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1933 decoder_0/or2v0x3_6/a_31_39# decoder_0/d3 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1934 decoder_0/or2v0x3_6/zn decoder_0/d5 decoder_0/or2v0x3_6/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1935 decoder_0/or2v0x3_6/a_48_39# decoder_0/d5 decoder_0/or2v0x3_6/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1936 vdd decoder_0/d3 decoder_0/or2v0x3_6/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1937 gnd decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1938 decoder_0/or2v0x3_6/zn decoder_0/d3 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1939 gnd decoder_0/d5 decoder_0/or2v0x3_6/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1940 decoder_0/b1 decoder_0/or2v0x3_5/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1941 vdd decoder_0/or2v0x3_5/zn decoder_0/b1 vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1942 decoder_0/or2v0x3_5/a_31_39# decoder_0/or2v0x3_4/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1943 decoder_0/or2v0x3_5/zn decoder_0/d6 decoder_0/or2v0x3_5/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1944 decoder_0/or2v0x3_5/a_48_39# decoder_0/d6 decoder_0/or2v0x3_5/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1945 vdd decoder_0/or2v0x3_4/z decoder_0/or2v0x3_5/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1946 gnd decoder_0/or2v0x3_5/zn decoder_0/b1 gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1947 decoder_0/or2v0x3_5/zn decoder_0/or2v0x3_4/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1948 gnd decoder_0/d6 decoder_0/or2v0x3_5/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1949 decoder_0/or2v0x3_4/z decoder_0/or2v0x3_4/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1950 vdd decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1951 decoder_0/or2v0x3_4/a_31_39# decoder_0/d1 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1952 decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1953 decoder_0/or2v0x3_4/a_48_39# decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1954 vdd decoder_0/d1 decoder_0/or2v0x3_4/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1955 gnd decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1956 decoder_0/or2v0x3_4/zn decoder_0/d1 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1957 gnd decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1958 decoder_0/or2v0x3_3/z decoder_0/or2v0x3_3/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1959 vdd decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1960 decoder_0/or2v0x3_3/a_31_39# decoder_0/d5 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1961 decoder_0/or2v0x3_3/zn decoder_0/d2 decoder_0/or2v0x3_3/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1962 decoder_0/or2v0x3_3/a_48_39# decoder_0/d2 decoder_0/or2v0x3_3/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1963 vdd decoder_0/d5 decoder_0/or2v0x3_3/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1964 gnd decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1965 decoder_0/or2v0x3_3/zn decoder_0/d5 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1966 gnd decoder_0/d2 decoder_0/or2v0x3_3/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1967 vdd decoder_0/or2v0x3_2/zn vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1968 vdd decoder_0/or2v0x3_2/zn vdd vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1969 decoder_0/or2v0x3_2/a_31_39# decoder_0/or2v0x3_1/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1970 decoder_0/or2v0x3_2/zn decoder_0/d6 decoder_0/or2v0x3_2/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1971 decoder_0/or2v0x3_2/a_48_39# decoder_0/d6 decoder_0/or2v0x3_2/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1972 vdd decoder_0/or2v0x3_1/z decoder_0/or2v0x3_2/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1973 gnd decoder_0/or2v0x3_2/zn vdd gnd nfet w=20u l=2u
++  ad=0p pd=0u as=3258p ps=1698u
+M1974 decoder_0/or2v0x3_2/zn decoder_0/or2v0x3_1/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1975 gnd decoder_0/d6 decoder_0/or2v0x3_2/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1976 decoder_0/or2v0x3_1/z decoder_0/or2v0x3_1/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1977 vdd decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1978 decoder_0/or2v0x3_1/a_31_39# decoder_0/or2v0x3_0/z vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1979 decoder_0/or2v0x3_1/zn decoder_0/d4 decoder_0/or2v0x3_1/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1980 decoder_0/or2v0x3_1/a_48_39# decoder_0/d4 decoder_0/or2v0x3_1/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1981 vdd decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1982 gnd decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1983 decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_0/z gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1984 gnd decoder_0/d4 decoder_0/or2v0x3_1/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1985 decoder_0/or2v0x3_0/z decoder_0/or2v0x3_0/zn vdd vdd pfet w=20u l=2u
++  ad=160p pd=56u as=0p ps=0u
+M1986 vdd decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z vdd pfet w=20u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1987 decoder_0/or2v0x3_0/a_31_39# decoder_0/d0 vdd vdd pfet w=20u l=2u
++  ad=100p pd=50u as=0p ps=0u
+M1988 decoder_0/or2v0x3_0/zn decoder_0/d2 decoder_0/or2v0x3_0/a_31_39# vdd pfet w=20u l=2u
++  ad=148p pd=56u as=0p ps=0u
+M1989 decoder_0/or2v0x3_0/a_48_39# decoder_0/d2 decoder_0/or2v0x3_0/zn vdd pfet w=16u l=2u
++  ad=80p pd=42u as=0p ps=0u
+M1990 vdd decoder_0/d0 decoder_0/or2v0x3_0/a_48_39# vdd pfet w=16u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1991 gnd decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z gnd nfet w=20u l=2u
++  ad=0p pd=0u as=126p ps=54u
+M1992 decoder_0/or2v0x3_0/zn decoder_0/d0 gnd gnd nfet w=10u l=2u
++  ad=80p pd=36u as=0p ps=0u
+M1993 gnd decoder_0/d2 decoder_0/or2v0x3_0/zn gnd nfet w=10u l=2u
++  ad=0p pd=0u as=0p ps=0u
+C0 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/in_b 4.3fF
+C1 decoder_1/or2v0x3_0/z decoder_1/or2v0x3_0/zn 2.3fF
+C2 3_bitmux_1/mxn2v0x1_2/sn decoder_1/b2 2.5fF
+C3 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn gnd 6.7fF
+C4 vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn 14.4fF
+C5 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/mxn2v0x1_0/zn 8.9fF
+C6 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2.3fF
+C7 subcomp_0/totdiff3_0/mux_0/b1 gnd 17.2fF
+C8 subcomp_0/totdiff3_0/mux_0/b1 vdd 13.1fF
+C9 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/zn 9.3fF
+C10 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/b1 10.2fF
+C11 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.9fF
+C12 subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn gnd 9.0fF
+C13 subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn vdd 12.7fF
+C14 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn gnd 9.1fF
+C15 vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 17.4fF
+C16 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/a0 4.3fF
+C17 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn vdd 14.4fF
+C18 gnd decoder_0/d2 23.3fF
+C19 vdd decoder_0/d2 16.1fF
+C20 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn gnd 7.5fF
+C21 vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 18.9fF
+C22 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn gnd 13.9fF
+C23 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# 8.7fF
+C24 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 9.3fF
+C25 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/s 18.7fF
+C26 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd 17.9fF
+C27 decoder_0/or2v0x3_0/z gnd 10.3fF
+C28 vdd decoder_0/or2v0x3_0/z 19.2fF
+C29 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 2.3fF
+C30 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd 10.2fF
+C31 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# gnd 76.2fF
+C32 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/in_a 2.2fF
+C33 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/s 36.4fF
+C34 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# vdd 59.4fF
+C35 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 9.2fF
+C36 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn gnd 8.9fF
+C37 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn 8.8fF
+C38 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 9.3fF
+C39 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/mux_0/a0 8.7fF
+C40 decoder_1/or2v0x3_4/z gnd 9.2fF
+C41 vdd decoder_1/or2v0x3_4/z 18.3fF
+C42 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_1/b1 6.6fF
+C43 decoder_1/b0 3_bitmux_0/mxn2v0x1_0/zn 2.7fF
+C44 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn vdd 8.8fF
+C45 decoder_0/or2v0x3_2/zn gnd 9.0fF
+C46 vdd decoder_0/or2v0x3_2/zn 14.8fF
+C47 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn gnd 10.8fF
+C48 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/o0 4.3fF
+C49 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/b0 8.7fF
+C50 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/a2 11.6fF
+C51 decoder_1/d4 gnd 76.3fF
+C52 vdd decoder_1/d4 15.8fF
+C53 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd 20.0fF
+C54 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a 13.1fF
+C55 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn 9.3fF
+C56 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 8.9fF
+C57 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3.3fF
+C58 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2.4fF
+C59 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/o1 5.0fF
+C60 decoder_1/b1 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 10.2fF
+C61 subcomp_0/comp_0/an2v0x2_3/b vdd 13.7fF
+C62 subcomp_0/comp_0/an2v0x2_3/b gnd 15.0fF
+C63 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 6.6fF
+C64 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/mxn2v0x1_0/sn 9.3fF
+C65 decoder_1/b2 3_bitmux_0/mxn2v0x1_2/zn 2.7fF
+C66 decoder_1/or2v0x3_2/zn gnd 9.0fF
+C67 vdd decoder_1/or2v0x3_2/zn 12.7fF
+C68 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn gnd 8.9fF
+C69 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn 8.8fF
+C70 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn vdd 31.6fF
+C71 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd 18.8fF
+C72 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/b1 10.2fF
+C73 vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz 15.8fF
+C74 vdd subcomp_0/comp_0/or3v0x2_0/zn 9.0fF
+C75 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 2.7fF
+C76 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz gnd 24.9fF
+C77 subcomp_0/comp_0/or3v0x2_0/zn gnd 10.9fF
+C78 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn gnd 11.2fF
+C79 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn vdd 17.7fF
+C80 decoder_1/or2v0x3_0/z decoder_1/d0 3.9fF
+C81 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an gnd 5.5fF
+C82 vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an 9.9fF
+C83 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z gnd 12.8fF
+C84 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z vdd 24.6fF
+C85 vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 15.4fF
+C86 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn gnd 9.1fF
+C87 3_bitmux_1/mxn2v0x1_0/w_n4_n4# decoder_1/b1 11.4fF
+C88 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 2.4fF
+C89 decoder_0/d1 decoder_0/or2v0x3_3/zn 3.7fF
+C90 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3.3fF
+C91 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn gnd 6.7fF
+C92 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn vdd 14.4fF
+C93 decoder_0/or2v0x3_8/zn gnd 9.0fF
+C94 vdd decoder_0/or2v0x3_8/zn 12.7fF
+C95 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd 21.6fF
+C96 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an vdd 27.4fF
+C97 vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 18.9fF
+C98 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn gnd 11.9fF
+C99 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an gnd 6.8fF
+C100 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an vdd 9.9fF
+C101 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn gnd 8.9fF
+C102 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn vdd 8.8fF
+C103 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/a1 4.8fF
+C104 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/a2 11.6fF
+C105 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_0/zn 8.9fF
+C106 subcomp_0/totdiff3_1/diff2_1/in_b gnd 60.5fF
+C107 vdd subcomp_0/totdiff3_1/diff2_1/in_b 50.3fF
+C108 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn vdd 15.4fF
+C109 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn gnd 9.1fF
+C110 decoder_0/d6 decoder_0/or2v0x3_3/zn 2.2fF
+C111 vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 31.6fF
+C112 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd 19.1fF
+C113 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z gnd 2.5fF
+C114 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z vdd 2.4fF
+C115 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/a0 5.1fF
+C116 subcomp_0/mux_0/a0 subcomp_0/comp_0/an2v0x2_1/b 2.2fF
+C117 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 2.7fF
+C118 subcomp_0/comp_0/an2v0x2_2/z vdd 9.4fF
+C119 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd 12.8fF
+C120 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z vdd 24.6fF
+C121 decoder_0/d4 gnd 68.9fF
+C122 vdd decoder_0/d4 15.8fF
+C123 subcomp_0/comp_0/an2v0x2_2/z gnd 11.1fF
+C124 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd 10.2fF
+C125 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd 17.9fF
+C126 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# gnd 25.5fF
+C127 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b2 11.6fF
+C128 decoder_0/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 5.7fF
+C129 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/s 18.7fF
+C130 vdd 3_bitmux_0/o0 3.6fF
+C131 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2.7fF
+C132 decoder_1/d6 gnd 48.5fF
+C133 vdd decoder_1/d6 35.0fF
+C134 subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 4.1fF
+C135 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z gnd 2.5fF
+C136 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z vdd 2.4fF
+C137 subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 9.3fF
+C138 vdd decoder_0/or2v0x3_1/z 24.1fF
+C139 subcomp_0/mux_0/b1 gnd 12.7fF
+C140 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/o0 5.0fF
+C141 subcomp_0/mux_0/b1 vdd 14.0fF
+C142 decoder_0/or2v0x3_1/z gnd 10.3fF
+C143 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn gnd 8.9fF
+C144 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn 8.8fF
+C145 subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/mux_0/a0 4.6fF
+C146 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/in_c 3.1fF
+C147 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_1/mux_0/a2 4.8fF
+C148 subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/mux_0/b0 2.3fF
+C149 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/o0 2.3fF
+C150 vdd 3_bitmux_1/mxn2v0x1_0/w_n4_32# 32.2fF
+C151 decoder_1/or2v0x3_6/zn gnd 9.0fF
+C152 vdd decoder_1/or2v0x3_6/zn 12.7fF
+C153 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z gnd 10.2fF
+C154 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z 17.9fF
+C155 3_bitmux_0/o1 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 2.3fF
+C156 subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn gnd 9.0fF
+C157 vdd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn 12.7fF
+C158 subcomp_0/comp_0/an3v0x2_2/b vdd 39.7fF
+C159 subcomp_0/comp_0/an3v0x2_2/b gnd 23.0fF
+C160 subcomp_0/totdiff3_0/mux_0/s gnd 8.3fF
+C161 subcomp_0/totdiff3_0/mux_0/s vdd 7.9fF
+C162 decoder_1/or2v0x3_1/z gnd 10.3fF
+C163 vdd decoder_1/or2v0x3_1/z 19.4fF
+C164 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 9.3fF
+C165 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/s 15.2fF
+C166 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 2.4fF
+C167 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 9.3fF
+C168 subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn gnd 9.0fF
+C169 vdd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn 12.7fF
+C170 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_2/sn 9.3fF
+C171 subcomp_0/mux_0/b2 gnd 11.2fF
+C172 subcomp_0/totdiff3_0/mux_0/a2 gnd 14.9fF
+C173 subcomp_0/totdiff3_0/mux_0/a2 vdd 36.7fF
+C174 vdd subcomp_0/mux_0/b2 11.8fF
+C175 decoder_1/or2v0x3_0/z decoder_1/d2 2.2fF
+C176 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/a1 39.4fF
+C177 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/a0 11.6fF
+C178 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz vdd 15.8fF
+C179 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd 24.9fF
+C180 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_1/sn 9.3fF
+C181 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd 25.9fF
+C182 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd 61.1fF
+C183 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/a2 4.8fF
+C184 subcomp_0/totdiff3_1/mux_0/s gnd 8.3fF
+C185 vdd subcomp_0/totdiff3_1/mux_0/s 7.9fF
+C186 decoder_0/or2v0x3_7/zn gnd 9.0fF
+C187 vdd decoder_0/or2v0x3_7/zn 12.7fF
+C188 decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_0/z 2.0fF
+C189 decoder_1/or2v0x3_6/z decoder_1/or2v0x3_7/zn 2.0fF
+C190 subcomp_0/totdiff3_0/mux_0/b2 gnd 11.9fF
+C191 subcomp_0/totdiff3_0/mux_0/b2 vdd 3.1fF
+C192 subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an2v0x2_0/b 2.5fF
+C193 subcomp_0/comp_0/nr3v0x2_0/a gnd 19.9fF
+C194 subcomp_0/comp_0/nr3v0x2_0/a vdd 4.0fF
+C195 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# gnd 78.2fF
+C196 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/mxn2v0x1_0/sn 9.3fF
+C197 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 59.4fF
+C198 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/b2 8.7fF
+C199 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/a1 13.4fF
+C200 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/a2 4.8fF
+C201 decoder_0/or2v0x3_6/z gnd 9.2fF
+C202 vdd decoder_0/or2v0x3_6/z 20.6fF
+C203 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_0/mux_0/b0 6.6fF
+C204 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/mxn2v0x1_1/sn 9.2fF
+C205 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a decoder_1/b2 2.0fF
+C206 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/a0 4.8fF
+C207 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn gnd 11.9fF
+C208 vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 4.4fF
+C209 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/b0 5.2fF
+C210 decoder_0/or2v0x3_0/z decoder_0/or2v0x3_0/zn 2.3fF
+C211 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b gnd 7.3fF
+C212 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b 21.7fF
+C213 decoder_0/d6 decoder_0/or2v0x3_4/zn 2.1fF
+C214 subcomp_0/totdiff3_1/diff2_2/in_2c gnd 17.8fF
+C215 subcomp_0/totdiff3_1/diff2_2/in_2c vdd 33.2fF
+C216 subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 9.2fF
+C217 subcomp_0/comp_0/nd3v0x2_0/z gnd 5.3fF
+C218 subcomp_0/comp_0/nd3v0x2_0/z vdd 6.1fF
+C219 subcomp_0/totdiff3_0/diff2_2/in_c gnd 35.0fF
+C220 subcomp_0/totdiff3_0/diff2_2/in_c vdd 40.7fF
+C221 decoder_1/d6 decoder_1/or2v0x3_4/zn 2.1fF
+C222 vdd 3_bitmux_0/mxn2v0x1_0/zn 2.3fF
+C223 decoder_0/b2 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 4.8fF
+C224 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn gnd 7.5fF
+C225 vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn 14.4fF
+C226 decoder_0/b2 decoder_0/b1 2.3fF
+C227 decoder_1/d3 gnd 7.6fF
+C228 vdd decoder_1/d3 28.2fF
+C229 decoder_0/or2v0x3_3/zn gnd 9.0fF
+C230 vdd decoder_0/or2v0x3_3/zn 12.7fF
+C231 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/o0 4.3fF
+C232 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_1/sn 9.2fF
+C233 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn gnd 8.9fF
+C234 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn 8.8fF
+C235 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/in_c 3.1fF
+C236 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/b1 6.6fF
+C237 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/b0 8.7fF
+C238 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z gnd 10.2fF
+C239 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z 17.9fF
+C240 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o0 2.3fF
+C241 subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 3.1fF
+C242 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/mxn2v0x1_1/zn 9.3fF
+C243 subcomp_0/totdiff3_0/diff2_1/in_2c gnd 17.5fF
+C244 subcomp_0/totdiff3_0/diff2_1/in_2c vdd 34.0fF
+C245 decoder_1/or2v0x3_3/zn gnd 9.0fF
+C246 vdd decoder_1/or2v0x3_3/zn 12.7fF
+C247 3_bitmux_1/o2 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 2.3fF
+C248 decoder_0/or2v0x3_5/zn gnd 9.0fF
+C249 vdd decoder_0/or2v0x3_5/zn 12.7fF
+C250 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/s 30.3fF
+C251 subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/mux_0/a2 2.5fF
+C252 subcomp_0/comp_0/an2v0x2_3/z vdd 9.1fF
+C253 subcomp_0/comp_0/an3v0x2_2/w_n4_32# vdd 88.5fF
+C254 decoder_0/b2 gnd 30.9fF
+C255 vdd decoder_0/b2 34.8fF
+C256 subcomp_0/comp_0/an2v0x2_3/z gnd 20.8fF
+C257 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/a1 13.4fF
+C258 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/zn 9.3fF
+C259 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an gnd 5.5fF
+C260 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an vdd 9.9fF
+C261 subcomp_0/totdiff3_1/diff2_0/in_b gnd 60.8fF
+C262 vdd subcomp_0/totdiff3_1/diff2_0/in_b 50.8fF
+C263 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# 8.7fF
+C264 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 2.3fF
+C265 vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 31.6fF
+C266 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn gnd 18.8fF
+C267 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 20.0fF
+C268 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd 12.4fF
+C269 subcomp_0/totdiff3_0/diff2_0/in_a gnd 28.0fF
+C270 subcomp_0/totdiff3_0/diff2_0/in_a vdd 24.6fF
+C271 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b gnd 5.9fF
+C272 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b 20.5fF
+C273 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/sn 9.3fF
+C274 decoder_0/or2v0x3_0/z decoder_0/d0 3.9fF
+C275 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z gnd 12.8fF
+C276 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z 24.6fF
+C277 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/in_c 3.1fF
+C278 subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3.9fF
+C279 subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_0/zn 4.1fF
+C280 subcomp_0/mux_0/o2 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 6.3fF
+C281 decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_0/z 2.0fF
+C282 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b gnd 7.3fF
+C283 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b vdd 20.5fF
+C284 subcomp_0/comp_0/an3v0x2_3/z gnd 10.6fF
+C285 subcomp_0/comp_0/an3v0x2_3/z vdd 15.4fF
+C286 vdd decoder_0/or2v0x3_7/z 11.4fF
+C287 decoder_0/or2v0x3_7/z gnd 15.6fF
+C288 decoder_0/d5 gnd 20.2fF
+C289 vdd decoder_0/d5 21.8fF
+C290 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3fF
+C291 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/mxn2v0x1_0/zn 9.3fF
+C292 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/b2 2.3fF
+C293 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 8.9fF
+C294 subcomp_0/mux_0/a0 vdd 43.3fF
+C295 subcomp_0/mux_0/a0 gnd 62.5fF
+C296 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 9.3fF
+C297 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_1/b2 6.6fF
+C298 decoder_0/or2v0x3_4/zn gnd 9.0fF
+C299 vdd decoder_0/or2v0x3_4/zn 12.7fF
+C300 subcomp_0/totdiff3_1/mux_0/a0 gnd 14.9fF
+C301 subcomp_0/totdiff3_1/mux_0/a0 vdd 35.4fF
+C302 decoder_1/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.7fF
+C303 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_1/mux_0/s 15.2fF
+C304 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 3.3fF
+C305 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/mux_0/a2 12.2fF
+C306 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# vdd 20.7fF
+C307 subcomp_0/comp_0/an2v0x2_1/b gnd 5.9fF
+C308 vdd subcomp_0/comp_0/an2v0x2_1/b 14.2fF
+C309 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz vdd 15.8fF
+C310 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz gnd 25.5fF
+C311 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/s 36.4fF
+C312 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/zn 8.9fF
+C313 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 3_bitmux_0/s 15.2fF
+C314 decoder_1/d5 gnd 20.2fF
+C315 vdd decoder_1/d5 21.8fF
+C316 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/in_a 2.2fF
+C317 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd 25.9fF
+C318 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd 59.6fF
+C319 decoder_0/or2v0x3_4/z gnd 9.2fF
+C320 vdd decoder_0/or2v0x3_4/z 18.3fF
+C321 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn 8.9fF
+C322 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn gnd 6.7fF
+C323 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn vdd 14.4fF
+C324 vdd subcomp_0/totdiff3_1/diff2_2/in_b 50.3fF
+C325 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_0/z 9.5fF
+C326 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/a1 2.3fF
+C327 subcomp_0/totdiff3_1/diff2_2/in_b gnd 60.5fF
+C328 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_0/b2 11.6fF
+C329 subcomp_0/mux_0/b0 gnd 9.4fF
+C330 vdd subcomp_0/mux_0/b0 13.2fF
+C331 subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn gnd 11.9fF
+C332 vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn 4.4fF
+C333 subcomp_0/comp_0/an3v0x2_0/zn gnd 8.8fF
+C334 subcomp_0/comp_0/an3v0x2_0/zn vdd 10.7fF
+C335 3_bitmux_1/mxn2v0x1_1/sn decoder_1/b1 2.5fF
+C336 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/a1 4.8fF
+C337 subcomp_0/mux_0/a0 subcomp_0/comp_0/an2v0x2_0/b 4.9fF
+C338 subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# 21.8fF
+C339 subcomp_0/totdiff3_1/diff2_1/in_2c gnd 17.5fF
+C340 vdd subcomp_0/totdiff3_1/diff2_1/in_2c 34.8fF
+C341 decoder_0/d1 decoder_0/or2v0x3_3/z 2.2fF
+C342 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4fF
+C343 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 8.9fF
+C344 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_2/in_b 2.0fF
+C345 decoder_1/b0 gnd 62.9fF
+C346 decoder_1/b0 vdd 57.1fF
+C347 decoder_1/or2v0x3_1/z decoder_1/or2v0x3_1/zn 2.3fF
+C348 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd 20.0fF
+C349 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 12.4fF
+C350 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z gnd 10.2fF
+C351 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z vdd 17.9fF
+C352 subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/an3v0x2_2/b 5.2fF
+C353 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn gnd 8.9fF
+C354 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn vdd 8.8fF
+C355 decoder_0/or2v0x3_0/z decoder_0/d2 2.2fF
+C356 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 4.5fF
+C357 subcomp_0/mux_0/s vdd 4.5fF
+C358 subcomp_0/mux_0/s gnd 4.9fF
+C359 subcomp_0/mux_0/o2 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 2.3fF
+C360 3_bitmux_1/o2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.3fF
+C361 decoder_0/b1 decoder_0/d6 2.7fF
+C362 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an gnd 6.8fF
+C363 vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an 9.9fF
+C364 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn gnd 8.9fF
+C365 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn 8.8fF
+C366 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 6.6fF
+C367 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# vdd 21.4fF
+C368 decoder_1/d6 decoder_1/b1 2.7fF
+C369 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 9.3fF
+C370 decoder_0/or2v0x3_1/z decoder_0/or2v0x3_1/zn 2.3fF
+C371 subcomp_0/comp_0/nr2v0x2_1/a vdd 7.1fF
+C372 subcomp_0/comp_0/nr2v0x2_1/a gnd 22.9fF
+C373 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o2 6.3fF
+C374 3_bitmux_0/mxn2v0x1_1/w_n4_32# vdd 59.4fF
+C375 3_bitmux_0/o2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 2.3fF
+C376 subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2.7fF
+C377 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/a0 4.8fF
+C378 3_bitmux_0/mxn2v0x1_2/w_n4_n4# gnd 24.8fF
+C379 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn gnd 11.2fF
+C380 vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 18.7fF
+C381 subcomp_0/totdiff3_0/mux_0/b0 gnd 10.9fF
+C382 subcomp_0/totdiff3_0/mux_0/b0 vdd 28.1fF
+C383 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 4.5fF
+C384 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2.3fF
+C385 decoder_0/d1 gnd 7.6fF
+C386 vdd decoder_0/d1 17.9fF
+C387 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/o0 5.2fF
+C388 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2.7fF
+C389 subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 4.6fF
+C390 decoder_1/b0 3_bitmux_1/mxn2v0x1_0/sn 2.5fF
+C391 subcomp_0/totdiff3_1/diff2_2/in_c gnd 35.0fF
+C392 vdd subcomp_0/totdiff3_1/diff2_2/in_c 40.7fF
+C393 3_bitmux_1/mxn2v0x1_2/zn decoder_1/b2 2.7fF
+C394 vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 15.4fF
+C395 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn gnd 9.1fF
+C396 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# gnd 80.2fF
+C397 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_32# 9.3fF
+C398 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 9.3fF
+C399 subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# 21.1fF
+C400 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn decoder_1/b0 4.3fF
+C401 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an vdd 9.9fF
+C402 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# vdd 59.4fF
+C403 decoder_0/d6 gnd 48.5fF
+C404 vdd decoder_0/d6 36.3fF
+C405 3_bitmux_1/mxn2v0x1_2/w_n4_n4# decoder_1/b2 9.4fF
+C406 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an gnd 5.5fF
+C407 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/mxn2v0x1_0/sn 9.2fF
+C408 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 9.2fF
+C409 subcomp_0/comp_0/an2v0x2_1/z gnd 8.7fF
+C410 subcomp_0/comp_0/an2v0x2_1/z vdd 22.0fF
+C411 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn vdd 15.4fF
+C412 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn gnd 9.1fF
+C413 decoder_1/d1 decoder_1/or2v0x3_3/zn 3.7fF
+C414 vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 18.9fF
+C415 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn gnd 11.9fF
+C416 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn gnd 8.9fF
+C417 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn vdd 8.8fF
+C418 decoder_0/d3 gnd 7.6fF
+C419 vdd decoder_0/d3 28.2fF
+C420 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 9.2fF
+C421 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn vdd 18.9fF
+C422 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd 11.9fF
+C423 subcomp_0/comp_0/an2v0x2_2/zn gnd 8.9fF
+C424 vdd subcomp_0/comp_0/an2v0x2_2/zn 8.8fF
+C425 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 8.9fF
+C426 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/o0 5.2fF
+C427 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nd3v0x2_0/c 5.7fF
+C428 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/o1 5.0fF
+C429 decoder_1/or2v0x3_1/z decoder_1/or2v0x3_0/z 4.6fF
+C430 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/o1 2.3fF
+C431 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/zn 8.9fF
+C432 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 4.5fF
+C433 subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn gnd 9.0fF
+C434 vdd subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn 12.7fF
+C435 subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/nr3v0x2_0/a 2.1fF
+C436 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn gnd 15.0fF
+C437 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn vdd 4.4fF
+C438 subcomp_0/comp_0/an3v0x2_3/zn vdd 10.7fF
+C439 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 9.3fF
+C440 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a gnd 25.9fF
+C441 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a 61.1fF
+C442 subcomp_0/comp_0/an3v0x2_3/zn gnd 8.8fF
+C443 decoder_1/b2 gnd 62.8fF
+C444 vdd decoder_1/b2 58.4fF
+C445 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an gnd 21.6fF
+C446 vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 27.4fF
+C447 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_1/a 8.3fF
+C448 subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 4.6fF
+C449 3_bitmux_0/s gnd 4.9fF
+C450 vdd 3_bitmux_0/s 5.6fF
+C451 subcomp_0/comp_0/an2v0x2_1/zn gnd 8.9fF
+C452 subcomp_0/comp_0/an2v0x2_1/zn vdd 8.8fF
+C453 decoder_1/b0 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 8.7fF
+C454 decoder_0/or2v0x3_1/z decoder_0/or2v0x3_0/z 4.6fF
+C455 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn gnd 11.2fF
+C456 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn vdd 17.7fF
+C457 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/b1 2.3fF
+C458 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/b1 6.6fF
+C459 decoder_1/or2v0x3_7/z gnd 15.6fF
+C460 vdd decoder_1/or2v0x3_7/z 11.4fF
+C461 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/s 15.2fF
+C462 3_bitmux_1/mxn2v0x1_1/zn decoder_1/b1 2.7fF
+C463 subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/a2 4.5fF
+C464 subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn gnd 9.0fF
+C465 subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn vdd 12.7fF
+C466 decoder_0/or2v0x3_2/zn decoder_0/or2v0x3_1/z 2.0fF
+C467 decoder_0/or2v0x3_3/z gnd 12.6fF
+C468 vdd decoder_0/or2v0x3_3/z 12.1fF
+C469 subcomp_0/comp_0/an2v0x2_4/zn gnd 8.9fF
+C470 subcomp_0/comp_0/an2v0x2_4/zn vdd 8.8fF
+C471 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn 9.3fF
+C472 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz vdd 15.8fF
+C473 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd 24.9fF
+C474 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/a2 11.6fF
+C475 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/a2 6.3fF
+C476 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/o1 2.3fF
+C477 3_bitmux_1/mxn2v0x1_2/w_n4_n4# gnd 26.0fF
+C478 subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 4.6fF
+C479 decoder_0/b1 gnd 29.5fF
+C480 vdd decoder_0/b1 37.7fF
+C481 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/sn 9.3fF
+C482 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/mxn2v0x1_0/zn 9.3fF
+C483 3_bitmux_1/mxn2v0x1_0/w_n4_n4# decoder_1/b0 9.4fF
+C484 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 9.2fF
+C485 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/a0 11.6fF
+C486 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 4.5fF
+C487 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/b1 10.2fF
+C488 subcomp_0/totdiff3_0/diff2_1/in_a gnd 27.8fF
+C489 subcomp_0/totdiff3_0/diff2_1/in_a vdd 24.6fF
+C490 vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 31.6fF
+C491 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn gnd 18.8fF
+C492 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd 21.6fF
+C493 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an vdd 25.5fF
+C494 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 9.2fF
+C495 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 8.9fF
+C496 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn decoder_0/b2 2.2fF
+C497 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/b2 6.6fF
+C498 3_bitmux_1/s gnd 4.9fF
+C499 vdd 3_bitmux_1/s 5.6fF
+C500 decoder_0/b2 decoder_1/b1 36.0fF
+C501 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn decoder_0/b1 2.2fF
+C502 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_2/zn 5.8fF
+C503 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/s 30.3fF
+C504 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# 9.2fF
+C505 subcomp_0/comp_0/an3v0x2_1/a subcomp_0/mux_0/a0 6.8fF
+C506 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/b0 2.7fF
+C507 subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/mux_0/a0 2.3fF
+C508 decoder_0/or2v0x3_6/zn gnd 9.0fF
+C509 vdd decoder_0/or2v0x3_6/zn 12.7fF
+C510 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 9.2fF
+C511 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a gnd 25.9fF
+C512 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a 59.6fF
+C513 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_1/zn 5.8fF
+C514 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn gnd 11.2fF
+C515 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd 18.7fF
+C516 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/b0 6.6fF
+C517 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a decoder_1/b0 2.0fF
+C518 vdd gnd 122.9fF
+C519 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 2.7fF
+C520 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_0/mux_0/a0 11.6fF
+C521 decoder_1/or2v0x3_2/zn decoder_1/or2v0x3_1/z 2.0fF
+C522 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# gnd 25.5fF
+C523 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_1/b2 6.6fF
+C524 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/mxn2v0x1_2/zn 9.3fF
+C525 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 12.4fF
+C526 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd 20.0fF
+C527 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd 12.4fF
+C528 subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 4.1fF
+C529 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd 20.0fF
+C530 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn gnd 8.9fF
+C531 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn 8.8fF
+C532 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/s 18.7fF
+C533 decoder_1/or2v0x3_0/zn gnd 9.0fF
+C534 vdd decoder_1/or2v0x3_0/zn 12.7fF
+C535 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z gnd 12.8fF
+C536 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z 24.6fF
+C537 subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an3v0x2_1/a 2.5fF
+C538 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn gnd 11.2fF
+C539 vdd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 17.7fF
+C540 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nd3v0x2_0/a 6.2fF
+C541 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/a1 4.8fF
+C542 subcomp_0/totdiff3_1/diff2_1/in_c gnd 34.1fF
+C543 vdd subcomp_0/totdiff3_1/diff2_1/in_c 39.6fF
+C544 subcomp_0/comp_0/an2v0x2_0/b gnd 32.8fF
+C545 subcomp_0/comp_0/an2v0x2_0/b vdd 49.9fF
+C546 subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 4.1fF
+C547 subcomp_0/totdiff3_1/mux_0/b1 gnd 17.2fF
+C548 vdd subcomp_0/totdiff3_1/mux_0/b1 13.1fF
+C549 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn gnd 8.9fF
+C550 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn vdd 10.3fF
+C551 subcomp_0/mux_0/o0 subcomp_0/mux_0/a0 2.3fF
+C552 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/a1 5.0fF
+C553 subcomp_0/comp_0/nr2v0x2_1/a subcomp_0/comp_0/nd3v0x2_0/c 3.8fF
+C554 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_2/zn 9.3fF
+C555 subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 4.1fF
+C556 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/s 30.3fF
+C557 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3.3fF
+C558 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/a1 13.4fF
+C559 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4fF
+C560 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/in_b 2.6fF
+C561 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn vdd 18.9fF
+C562 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd 13.9fF
+C563 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn gnd 8.9fF
+C564 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn vdd 8.8fF
+C565 decoder_1/or2v0x3_3/z gnd 12.6fF
+C566 vdd decoder_1/or2v0x3_3/z 12.1fF
+C567 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/b2 8.7fF
+C568 subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 4.6fF
+C569 vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz 15.8fF
+C570 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz gnd 24.9fF
+C571 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn vdd 31.6fF
+C572 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd 18.8fF
+C573 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn gnd 8.9fF
+C574 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn vdd 8.8fF
+C575 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/in_b 4.3fF
+C576 subcomp_0/totdiff3_1/mux_0/a1 gnd 15.3fF
+C577 vdd subcomp_0/totdiff3_1/mux_0/a1 38.7fF
+C578 subcomp_0/mux_0/a2 gnd 35.4fF
+C579 vdd subcomp_0/mux_0/a2 27.5fF
+C580 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn vdd 4.4fF
+C581 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/s 36.4fF
+C582 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn gnd 11.9fF
+C583 decoder_0/b1 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 4.8fF
+C584 vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 16.3fF
+C585 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz gnd 25.5fF
+C586 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an gnd 21.6fF
+C587 vdd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 25.5fF
+C588 subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/mux_0/a1 3.6fF
+C589 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd 5.9fF
+C590 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b vdd 20.5fF
+C591 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/a2 2.3fF
+C592 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn gnd 6.7fF
+C593 vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn 14.4fF
+C594 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# 6.6fF
+C595 subcomp_0/comp_0/an3v0x2_0/z gnd 36.9fF
+C596 subcomp_0/comp_0/an3v0x2_0/z vdd 2.3fF
+C597 3_bitmux_1/mxn2v0x1_1/w_n4_32# vdd 59.4fF
+C598 decoder_1/or2v0x3_4/zn gnd 9.0fF
+C599 vdd decoder_1/or2v0x3_4/zn 12.7fF
+C600 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/mxn2v0x1_1/zn 8.9fF
+C601 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 2.7fF
+C602 subcomp_0/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 5.0fF
+C603 subcomp_0/comp_0/nr3v0x2_0/z vdd 8.7fF
+C604 subcomp_0/comp_0/nr3v0x2_0/z gnd 21.2fF
+C605 subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/a2 4.5fF
+C606 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an gnd 21.6fF
+C607 vdd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 25.5fF
+C608 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/mxn2v0x1_2/zn 8.9fF
+C609 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_0/in_a 2.2fF
+C610 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z gnd 12.8fF
+C611 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z 24.6fF
+C612 3_bitmux_1/mxn2v0x1_0/w_n4_n4# decoder_0/b1 4.8fF
+C613 subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_0/in_b 2.0fF
+C614 subcomp_0/comp_0/an2v0x2_4/z gnd 9.8fF
+C615 subcomp_0/comp_0/an2v0x2_4/z vdd 10.7fF
+C616 decoder_1/b0 3_bitmux_0/mxn2v0x1_0/w_n4_32# 6.6fF
+C617 decoder_1/b0 3_bitmux_1/mxn2v0x1_0/zn 2.7fF
+C618 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd 21.6fF
+C619 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an vdd 25.5fF
+C620 decoder_1/d0 gnd 7.6fF
+C621 vdd decoder_1/d0 14.1fF
+C622 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/a1 39.4fF
+C623 vdd 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 4.8fF
+C624 3_bitmux_0/mxn2v0x1_0/w_n4_n4# gnd 76.8fF
+C625 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/s 30.3fF
+C626 decoder_1/or2v0x3_8/zn gnd 9.0fF
+C627 vdd decoder_1/or2v0x3_8/zn 12.7fF
+C628 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 3.9fF
+C629 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd 10.2fF
+C630 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd 17.9fF
+C631 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn gnd 8.9fF
+C632 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn 10.3fF
+C633 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 8.9fF
+C634 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 9.3fF
+C635 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_1/b1 6.6fF
+C636 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/s 30.3fF
+C637 subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 4.6fF
+C638 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 3.3fF
+C639 subcomp_0/comp_0/or3v0x2_1/zn vdd 9.0fF
+C640 subcomp_0/comp_0/or3v0x2_1/zn gnd 10.9fF
+C641 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/mxn2v0x1_1/sn 9.3fF
+C642 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 2.3fF
+C643 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn decoder_1/b2 2.6fF
+C644 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/a0 4.8fF
+C645 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/b2 6.3fF
+C646 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn gnd 11.2fF
+C647 vdd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 17.7fF
+C648 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/o0 2.3fF
+C649 3_bitmux_1/mxn2v0x1_0/w_n4_n4# vdd 4.8fF
+C650 3_bitmux_1/mxn2v0x1_0/w_n4_n4# gnd 76.0fF
+C651 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# gnd 26.1fF
+C652 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/s 36.4fF
+C653 subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/b2 2.7fF
+C654 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 4.5fF
+C655 decoder_0/or2v0x3_6/z decoder_0/or2v0x3_7/zn 2.0fF
+C656 decoder_1/d6 decoder_1/or2v0x3_3/zn 2.2fF
+C657 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a gnd 25.9fF
+C658 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a 59.6fF
+C659 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn decoder_1/b1 2.6fF
+C660 subcomp_0/mux_0/a1 gnd 33.3fF
+C661 vdd subcomp_0/mux_0/a1 52.8fF
+C662 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 3.9fF
+C663 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z vdd 24.6fF
+C664 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z gnd 12.8fF
+C665 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/b0 2.3fF
+C666 subcomp_0/comp_0/an3v0x2_2/z vdd 3.3fF
+C667 subcomp_0/comp_0/an3v0x2_2/z gnd 10.7fF
+C668 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 2.4fF
+C669 subcomp_0/comp_0/an2v0x2_0/zn gnd 8.9fF
+C670 subcomp_0/comp_0/an2v0x2_0/zn vdd 8.8fF
+C671 subcomp_0/totdiff3_0/mux_0/a1 gnd 15.3fF
+C672 subcomp_0/totdiff3_0/mux_0/a1 vdd 38.7fF
+C673 gnd decoder_0/or2v0x3_0/zn 9.0fF
+C674 vdd decoder_0/or2v0x3_0/zn 12.7fF
+C675 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn decoder_1/b1 4.3fF
+C676 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn gnd 8.9fF
+C677 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn vdd 8.8fF
+C678 decoder_1/d1 gnd 7.6fF
+C679 vdd decoder_1/d1 17.9fF
+C680 subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 2.7fF
+C681 subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/zn 3.3fF
+C682 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 20.0fF
+C683 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd 12.4fF
+C684 subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn gnd 9.0fF
+C685 subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn vdd 12.7fF
+C686 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# gnd 2.6fF
+C687 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_2/b 21.4fF
+C688 subcomp_0/comp_0/nd3v0x2_0/c gnd 18.9fF
+C689 subcomp_0/comp_0/nd3v0x2_0/c vdd 5.0fF
+C690 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/b0 18.4fF
+C691 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn gnd 8.9fF
+C692 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn vdd 8.8fF
+C693 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2.3fF
+C694 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# vdd 22.4fF
+C695 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/s 36.4fF
+C696 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/mux_0/mxn2v0x1_0/sn 9.3fF
+C697 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_0/sn 9.2fF
+C698 decoder_1/d2 gnd 23.3fF
+C699 vdd decoder_1/d2 16.1fF
+C700 subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn gnd 15.0fF
+C701 vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn 4.7fF
+C702 subcomp_0/totdiff3_1/mux_0/b2 gnd 11.9fF
+C703 subcomp_0/totdiff3_1/mux_0/b2 vdd 3.1fF
+C704 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 9.2fF
+C705 vdd decoder_1/or2v0x3_1/zn 12.7fF
+C706 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn vdd 15.4fF
+C707 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn gnd 9.1fF
+C708 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/b1 6.6fF
+C709 decoder_1/or2v0x3_1/zn gnd 9.0fF
+C710 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o1 5.0fF
+C711 decoder_1/b0 decoder_1/or2v0x3_2/zn 2.2fF
+C712 subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 4.1fF
+C713 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/in_b 2.6fF
+C714 subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 4.3fF
+C715 decoder_1/or2v0x3_6/z gnd 9.2fF
+C716 vdd decoder_1/or2v0x3_6/z 20.6fF
+C717 subcomp_0/comp_0/an3v0x2_1/a gnd 57.3fF
+C718 subcomp_0/comp_0/an3v0x2_1/a vdd 72.4fF
+C719 subcomp_0/totdiff3_0/diff2_1/in_c gnd 34.1fF
+C720 subcomp_0/totdiff3_0/diff2_1/in_c vdd 39.6fF
+C721 subcomp_0/totdiff3_0/mux_0/a0 gnd 14.9fF
+C722 subcomp_0/totdiff3_0/mux_0/a0 vdd 35.4fF
+C723 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 3.3fF
+C724 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/s 18.7fF
+C725 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/sn 9.2fF
+C726 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 2.4fF
+C727 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn 9.2fF
+C728 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/in_b 4.3fF
+C729 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nr3v0x2_0/a 15.0fF
+C730 subcomp_0/mux_0/a0 subcomp_0/mux_0/b1 3.3fF
+C731 subcomp_0/mux_0/a2 subcomp_0/mux_0/a1 10.0fF
+C732 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn vdd 31.6fF
+C733 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd 19.1fF
+C734 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn decoder_1/b2 4.3fF
+C735 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 2.7fF
+C736 subcomp_0/totdiff3_1/mux_0/b0 gnd 10.9fF
+C737 subcomp_0/totdiff3_1/mux_0/b0 vdd 30.6fF
+C738 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn gnd 11.9fF
+C739 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn vdd 4.4fF
+C740 subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 4.1fF
+C741 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 8.9fF
+C742 decoder_1/d1 decoder_1/or2v0x3_3/z 2.2fF
+C743 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn decoder_1/b0 2.6fF
+C744 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_1/in_b 2.0fF
+C745 subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/an2v0x2_0/b 2.5fF
+C746 subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nd3v0x2_0/z 5.2fF
+C747 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd 25.9fF
+C748 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd 59.6fF
+C749 subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/b0 2.7fF
+C750 gnd decoder_0/d0 7.6fF
+C751 vdd decoder_0/d0 14.1fF
+C752 subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an gnd 5.5fF
+C753 vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an 9.9fF
+C754 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 9.3fF
+C755 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn gnd 8.9fF
+C756 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 8.8fF
+C757 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_0/mux_0/s 18.7fF
+C758 subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/o0 4.3fF
+C759 decoder_0/or2v0x3_1/zn gnd 9.0fF
+C760 vdd decoder_0/or2v0x3_1/zn 12.7fF
+C761 subcomp_0/comp_0/an2v0x2_3/zn gnd 8.9fF
+C762 subcomp_0/comp_0/an2v0x2_3/zn vdd 8.8fF
+C763 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn 11.0fF
+C764 subcomp_0/comp_0/an3v0x2_2/zn gnd 8.8fF
+C765 subcomp_0/comp_0/an3v0x2_2/zn vdd 4.9fF
+C766 vdd decoder_1/b1 56.1fF
+C767 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn gnd 10.8fF
+C768 decoder_1/b1 gnd 69.5fF
+C769 subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/b1 18.4fF
+C770 decoder_1/or2v0x3_5/zn gnd 9.0fF
+C771 vdd decoder_1/or2v0x3_5/zn 12.7fF
+C772 subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 4.6fF
+C773 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/s 15.2fF
+C774 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 2.4fF
+C775 decoder_1/b0 3_bitmux_1/mxn2v0x1_0/w_n4_32# 6.6fF
+C776 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b gnd 5.9fF
+C777 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b 20.5fF
+C778 subcomp_0/comp_0/an3v0x2_1/zn gnd 8.8fF
+C779 subcomp_0/comp_0/an3v0x2_1/zn vdd 4.9fF
+C780 subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3.9fF
+C781 vdd 3_bitmux_0/mxn2v0x1_0/w_n4_32# 32.8fF
+C782 vdd 3_bitmux_1/mxn2v0x1_0/zn 2.3fF
+C783 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/a0 2.3fF
+C784 decoder_1/or2v0x3_7/zn gnd 9.0fF
+C785 vdd decoder_1/or2v0x3_7/zn 12.7fF
+C786 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a decoder_1/b1 2.0fF
+C787 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 4.5fF
+C788 vdd decoder_1/or2v0x3_0/z 19.2fF
+C789 subcomp_0/totdiff3_0/diff2_2/in_a gnd 27.8fF
+C790 subcomp_0/totdiff3_0/diff2_2/in_a vdd 24.6fF
+C791 decoder_1/or2v0x3_0/z gnd 10.3fF
+C792 decoder_1/b0 decoder_1/or2v0x3_1/z 4.7fF
+C793 subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 3.9fF
+C794 subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3.9fF
+C795 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/in_b 2.6fF
+C796 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn vdd 18.9fF
+C797 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn gnd 11.9fF
+C798 subcomp_0/totdiff3_1/mux_0/a2 gnd 14.9fF
+C799 vdd subcomp_0/totdiff3_1/mux_0/a2 36.7fF
+C800 subcomp_0/totdiff3_0/diff2_2/in_2c gnd 17.8fF
+C801 subcomp_0/totdiff3_0/diff2_2/in_2c vdd 33.2fF
+C802 vdd 3_bitmux_1/o0 3.6fF
+C803 subcomp_0/comp_0/nd3v0x2_0/a gnd 21.1fF
+C804 subcomp_0/comp_0/nd3v0x2_0/a vdd 9.6fF
+C805 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b vdd 20.5fF
+C806 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b gnd 5.9fF
+C807 gnd gnd! 991.2fF
+C808 decoder_0/d2 gnd! 12.8fF
+C809 decoder_0/d0 gnd! 5.5fF
+C810 decoder_0/d4 gnd! 25.8fF
+C811 decoder_0/d5 gnd! 18.7fF
+C812 decoder_0/d1 gnd! 15.2fF
+C813 decoder_0/d6 gnd! 2.8fF
+C814 decoder_0/d3 gnd! 17.6fF
+C815 3_bitmux_0/s gnd! 9.4fF
+C816 3_bitmux_0/o1 gnd! 2.4fF
+C817 decoder_1/b1 gnd! 16.7fF
+C818 decoder_1/b2 gnd! 75.9fF
+C819 decoder_1/d2 gnd! 12.8fF
+C820 decoder_1/d0 gnd! 5.5fF
+C821 decoder_1/d4 gnd! 25.8fF
+C822 decoder_1/d5 gnd! 18.7fF
+C823 decoder_1/d1 gnd! 15.2fF
+C824 decoder_1/d6 gnd! 2.8fF
+C825 decoder_1/d3 gnd! 17.6fF
+C826 3_bitmux_1/s gnd! 9.4fF
+C827 3_bitmux_1/o1 gnd! 2.4fF
+C828 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b gnd! 2.9fF
+C829 subcomp_0/totdiff3_1/diff2_1/in_c gnd! 37.1fF
+C830 subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z gnd! 5.0fF
+C831 decoder_0/b1 gnd! 96.7fF
+C832 subcomp_0/totdiff3_1/mux_0/a1 gnd! 28.9fF
+C833 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b gnd! 2.9fF
+C834 subcomp_0/totdiff3_1/diff2_2/in_c gnd! 36.8fF
+C835 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z gnd! 5.0fF
+C836 subcomp_0/totdiff3_1/diff2_1/in_2c gnd! 29.6fF
+C837 decoder_0/b2 gnd! 94.8fF
+C838 subcomp_0/totdiff3_1/mux_0/a2 gnd! 38.7fF
+C839 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b gnd! 2.9fF
+C840 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z gnd! 5.0fF
+C841 subcomp_0/totdiff3_1/diff2_2/in_2c gnd! 34.8fF
+C842 subcomp_0/totdiff3_1/mux_0/b0 gnd! 47.5fF
+C843 subcomp_0/totdiff3_1/mux_0/s gnd! 16.3fF
+C844 subcomp_0/totdiff3_1/mux_0/a0 gnd! 99.1fF
+C845 subcomp_0/totdiff3_1/mux_0/b1 gnd! 87.1fF
+C846 subcomp_0/totdiff3_1/mux_0/b2 gnd! 24.6fF
+C847 subcomp_0/mux_0/b2 gnd! 43.5fF
+C848 subcomp_0/mux_0/b0 gnd! 53.7fF
+C849 subcomp_0/mux_0/a1 gnd! 43.3fF
+C850 subcomp_0/mux_0/a2 gnd! 71.0fF
+C851 vdd gnd! 1333.4fF
+C852 subcomp_0/mux_0/b1 gnd! 32.9fF
+C853 subcomp_0/mux_0/a0 gnd! 75.4fF
+C854 subcomp_0/comp_0/nr3v0x2_0/a gnd! 8.6fF
+C855 decoder_1/b0 gnd! 16.9fF
+C856 subcomp_0/totdiff3_0/diff2_0/in_a gnd! 4.4fF
+C857 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b gnd! 2.9fF
+C858 subcomp_0/totdiff3_0/diff2_1/in_c gnd! 37.1fF
+C859 subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z gnd! 5.0fF
+C860 subcomp_0/totdiff3_0/diff2_1/in_a gnd! 4.4fF
+C861 subcomp_0/totdiff3_0/mux_0/a1 gnd! 28.9fF
+C862 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd! 2.9fF
+C863 subcomp_0/totdiff3_0/diff2_2/in_c gnd! 36.8fF
+C864 subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z gnd! 5.0fF
+C865 subcomp_0/totdiff3_0/diff2_1/in_2c gnd! 29.6fF
+C866 subcomp_0/totdiff3_0/diff2_2/in_a gnd! 4.4fF
+C867 subcomp_0/totdiff3_0/mux_0/a2 gnd! 38.7fF
+C868 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b gnd! 2.9fF
+C869 subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd! 5.0fF
+C870 subcomp_0/totdiff3_0/diff2_2/in_2c gnd! 34.8fF
+C871 subcomp_0/totdiff3_0/mux_0/b0 gnd! 47.5fF
+C872 subcomp_0/totdiff3_0/mux_0/s gnd! 16.3fF
+C873 subcomp_0/totdiff3_0/mux_0/a0 gnd! 99.1fF
+C874 subcomp_0/totdiff3_0/mux_0/b1 gnd! 87.1fF
+C875 subcomp_0/totdiff3_0/mux_0/b2 gnd! 24.6fF
+C876 subcomp_0/mux_0/s gnd! 9.4fF
+C877 subcomp_0/mux_0/o1 gnd! 2.4fF

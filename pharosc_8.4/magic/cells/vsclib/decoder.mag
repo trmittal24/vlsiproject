@@ -154,39 +154,39 @@ rect 78 -129 82 -125
 rect 53 -135 57 -131
 rect 126 -137 130 -133
 rect 197 -134 201 -130
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_0
+use or2v0x3  or2v0x3_0
 timestamp 1521380365
 transform 1 0 4 0 1 4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_1
+use or2v0x3  or2v0x3_1
 timestamp 1521380365
 transform 1 0 76 0 1 4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_2
+use or2v0x3  or2v0x3_2
 timestamp 1521380365
 transform 1 0 148 0 1 4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_3
+use  or2v0x3  or2v0x3_3
 timestamp 1521380365
 transform -1 0 68 0 -1 -4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_4
+use  or2v0x3  or2v0x3_4
 timestamp 1521380365
 transform -1 0 140 0 -1 -4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_5
+use  or2v0x3  or2v0x3_5
 timestamp 1521380365
 transform -1 0 212 0 -1 -4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_6
+use  or2v0x3  or2v0x3_6
 timestamp 1521380365
 transform 1 0 4 0 1 -156
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_7
+use  or2v0x3  or2v0x3_7
 timestamp 1521380365
 transform 1 0 76 0 1 -156
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/or2v0x3  or2v0x3_8
+use  or2v0x3  or2v0x3_8
 timestamp 1521380365
 transform 1 0 148 0 1 -156
 box -4 -4 68 76

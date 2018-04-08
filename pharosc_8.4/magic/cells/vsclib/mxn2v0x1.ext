@@ -1,5 +1,5 @@
-timestamp 1523181350
-version 7.5
+timestamp 1523182792
+version 8.0
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -30,39 +30,39 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "w_n4_n4#" 0 0 -4 -4 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n4_32#" 4100 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3168 232
-cap "z" "vdd" 1222
-cap "sn" "s" 840
-cap "z" "w_n4_n4#" 2256
-cap "z" "w_n4_32#" 3854
-cap "vdd" "a1" 240
-cap "vdd" "a_21_50#" 470
-cap "w_n4_n4#" "a1" 7473
-cap "a_21_50#" "zn" 987
-cap "w_n4_32#" "a1" 6645
-cap "vss" "s" 1620
-cap "vss" "sn" 60
-cap "vdd" "s" 616
-cap "vdd" "sn" 1368
-cap "w_n4_n4#" "s" 15158
-cap "w_n4_n4#" "sn" 9214
-cap "w_n4_32#" "s" 16739
-cap "w_n4_32#" "sn" 9264
-cap "a0" "s" 360
-cap "zn" "a_21_12#" 1363
-cap "vdd" "a_38_50#" 470
-cap "vss" "w_n4_n4#" 24722
-cap "vss" "zn" 60
-cap "vss" "a0" 60
-cap "vdd" "zn" 1838
-cap "w_n4_n4#" "zn" 8919
-cap "vdd" "w_n4_32#" 20116
-cap "vdd" "a0" 240
-cap "w_n4_32#" "zn" 9329
-cap "w_n4_n4#" "a0" 4808
 cap "a0" "zn" 480
+cap "s" "w_n4_n4#" 15158
+cap "a1" "vdd" 240
+cap "vdd" "a_38_50#" 470
+cap "w_n4_32#" "s" 16739
+cap "sn" "vdd" 1368
+cap "vss" "a0" 60
+cap "w_n4_n4#" "z" 2256
+cap "w_n4_n4#" "zn" 8919
+cap "vss" "s" 1620
+cap "w_n4_32#" "z" 3854
+cap "w_n4_32#" "zn" 9329
+cap "vss" "w_n4_n4#" 24722
 cap "a1" "s" 240
-cap "a0" "w_n4_32#" 9454
-cap "sn" "a1" 240
+cap "vdd" "a_21_50#" 470
+cap "vss" "zn" 60
+cap "sn" "s" 840
+cap "a1" "w_n4_n4#" 7473
+cap "a0" "vdd" 240
+cap "w_n4_32#" "a1" 6645
+cap "sn" "w_n4_n4#" 9214
+cap "s" "vdd" 616
+cap "w_n4_32#" "sn" 9264
+cap "a_21_12#" "zn" 1363
+cap "w_n4_32#" "vdd" 20116
+cap "vss" "sn" 60
+cap "vdd" "z" 1222
+cap "zn" "vdd" 1838
+cap "a0" "s" 360
+cap "a1" "sn" 240
+cap "zn" "a_21_50#" 987
+cap "a0" "w_n4_n4#" 4808
+cap "w_n4_32#" "a0" 9454
 device mosfet nfet 53 14 54 15 2 6 "w_n4_n4#" "s" 4 0 "vss" 6 0 "sn" 6 0
 device mosfet nfet 43 12 44 13 2 8 "w_n4_n4#" "a1" 4 0 "a_38_12#" 8 0 "vss" 8 0
 device mosfet nfet 36 12 37 13 2 8 "w_n4_n4#" "s" 4 0 "zn" 8 0 "a_38_12#" 8 0
