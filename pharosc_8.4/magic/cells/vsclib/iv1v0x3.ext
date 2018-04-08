@@ -1,5 +1,5 @@
-timestamp 1179385827
-version 7.5
+timestamp 1523170410
+version 8.0
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -12,11 +12,11 @@ node "a" 1305 0 10 11 p 0 0 0 0 280 252 0 0 0 0 0 0 102 52 0 0 0 0
 equiv "a" "a"
 node "vss" 429 0 -4 -4 pw 178 78 156 64 0 0 0 0 0 0 0 0 404 136 0 0 0 0
 node "vdd" 3240 0 -4 32 nw 36 24 320 112 0 0 0 0 0 0 0 0 468 148 0 0 1760 168
+cap "vdd" "z" 4747
+cap "a" "vss" 7648
+cap "vdd" "a" 13445
 cap "z" "a" 261
-cap "z" "vdd" 4747
-cap "a" "vdd" 13445
-cap "vss" "z" 4512
-cap "vss" "a" 7648
+cap "z" "vss" 4512
 device mosfet nfet 20 16 21 17 2 10 "vss" "a" 4 0 "z" 10 0 "vss" 10 0
 device mosfet nfet 10 16 11 17 2 10 "vss" "a" 4 0 "vss" 10 0 "z" 10 0
 device mosfet pfet 20 41 21 42 2 16 "vdd" "a" 4 0 "z" 16 0 "vdd" 16 0
