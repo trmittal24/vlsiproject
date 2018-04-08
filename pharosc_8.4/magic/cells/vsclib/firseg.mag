@@ -129,11 +129,11 @@ rect 279 47 284 52
 rect 313 48 319 54
 rect 343 41 348 46
 rect 665 6 671 12
-use ./decoder  decoder_0
+use decoder  decoder_0
 timestamp 1523164968
 transform 1 0 58 0 1 160
 box -58 -160 229 80
-use ./comp  comp_0
+use comp  comp_0
 timestamp 1523164968
 transform 1 0 323 0 1 160
 box -22 -240 296 83

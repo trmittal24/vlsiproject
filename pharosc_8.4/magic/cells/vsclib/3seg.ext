@@ -1,0 +1,63 @@
+timestamp 1523182099
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use firseg firseg_0 1 0 0 0 1 80
+use 2seg 2seg_0 1 0 2 0 1 -363
+node "m1_140_n452#" 1 12508 140 -452 v 0 0 0 0 0 0 0 0 0 0 0 0 140 102 376 206 0 0
+node "m1_n19_n534#" 3 136933 -19 -534 m1 0 0 0 0 0 0 0 0 0 0 0 0 2869 730 423 196 0 0
+node "a_672_n102#" 551 32530 672 -102 p 0 0 0 0 100 100 0 0 0 0 0 0 233 160 583 394 0 0
+node "a_412_n102#" 568 77611 412 -102 p 0 0 0 0 102 102 0 0 0 0 0 0 1101 744 803 540 0 0
+node "a_152_n101#" 573 123623 152 -101 p 0 0 0 0 102 102 0 0 0 0 0 0 1949 1304 1102 716 0 0
+cap "a_412_n102#" "a_152_n101#" 405
+cap "a_672_n102#" "a_412_n102#" 405
+cap "a_672_n102#" "a_152_n101#" 405
+cap "2seg_0/1counter_0/tf_2/dfnt1v0x2_0/vdd" "2seg_0/1counter_0/tf_2/dfnt1v0x2_0/vdd" 752
+cap "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" "m1_n19_n534#" 470
+cap "2seg_0/totdiff3_0/m2_507_n598#" "m1_n19_n534#" 135
+cap "a_152_n101#" "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" 480
+cap "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" "2seg_0/totdiff3_0/diff2_0/m1_6_36#" -114
+cap "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" "a_152_n101#" 1248
+cap "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" -752
+cap "a_152_n101#" "2seg_0/totdiff3_0/diff2_0/m1_6_36#" 114
+cap "2seg_0/totdiff3_0/diff2_0/or2v0x3_0/vss" "2seg_0/totdiff3_0/diff2_0/or2v0x3_0/vss" 376
+cap "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/vdd" "a_412_n102#" 480
+cap "2seg_0/totdiff3_0/diff2_1/m1_6_36#" "a_412_n102#" 114
+cap "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/vdd" "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/vdd" -752
+cap "2seg_0/totdiff3_0/diff2_1/m1_6_36#" "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/vdd" -114
+cap "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/vdd" "a_412_n102#" 1287
+cap "2seg_0/totdiff3_0/m1_724_n394#" "a_412_n102#" 120
+cap "a_672_n102#" "2seg_0/totdiff3_0/m1_724_n394#" 120
+cap "a_672_n102#" "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/vdd" 1287
+cap "a_672_n102#" "2seg_0/totdiff3_0/diff2_2/m1_6_36#" 114
+cap "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/vdd" "2seg_0/totdiff3_0/diff2_2/m1_6_36#" -114
+cap "a_672_n102#" "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/vdd" 480
+cap "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/vdd" "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/vdd" -752
+cap "2seg_0/totdiff3_0/m2_507_n598#" "a_152_n101#" 114
+cap "2seg_0/totdiff3_0/m2_507_n598#" "a_412_n102#" 38
+cap "2seg_0/totdiff3_0/m1_724_n394#" "a_412_n102#" 60
+cap "2seg_0/totdiff3_0/m1_752_n387#" "a_412_n102#" 180
+cap "2seg_0/totdiff3_0/m2_507_n598#" "a_672_n102#" 114
+cap "2seg_0/totdiff3_0/m1_724_n394#" "a_672_n102#" 60
+cap "2seg_0/totdiff3_0/m1_752_n387#" "a_672_n102#" 180
+cap "m1_n19_n534#" "firseg_0/decoder_0/or2v0x3_0/vdd" 1880
+cap "firseg_0/decoder_0/or2v0x3_0/vdd" "m1_n19_n534#" 1880
+cap "m1_n19_n534#" "firseg_0/decoder_0/or2v0x3_0/vdd" 9400
+cap "firseg_0/decoder_0/or2v0x3_1/vdd" "m1_n19_n534#" 8742
+merge "firseg_0/3_bitmux_0/o1" "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/b" -6092 0 0 0 0 -31 -34 0 0 0 0 0 0 -12 -14 0 0 0 0
+merge "2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/b" "a_412_n102#"
+merge "firseg_0/3_bitmux_0/o0" "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/b" -7316 0 0 0 0 -32 -34 0 0 0 0 0 0 -30 -26 -8 -12 0 0
+merge "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/b" "a_152_n101#"
+merge "firseg_0/3_bitmux_0/o2" "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/b" -5870 0 0 0 0 -31 -34 0 0 0 0 0 0 0 0 -9 -12 0 0
+merge "2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/b" "a_672_n102#"
+merge "firseg_0/decoder_0/or2v0x3_2/vdd" "firseg_0/decoder_0/or2v0x3_0/vdd" -108899 0 0 0 0 0 0 0 0 0 0 0 0 -2035 -825 0 -6 0 0
+merge "firseg_0/decoder_0/or2v0x3_0/vdd" "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd"
+merge "2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/vdd" "2seg_0/1counter_0/tf_2/dfnt1v0x2_0/vdd"
+merge "2seg_0/1counter_0/tf_2/dfnt1v0x2_0/vdd" "2seg_0/1counter_0/an2v0x3_2/vdd"
+merge "2seg_0/1counter_0/an2v0x3_2/vdd" "m1_n19_n534#"
+merge "firseg_0/decoder_0/or2v0x3_2/vss" "2seg_0/totdiff3_0/diff2_0/or2v0x3_0/vss" -6654 0 0 0 0 0 0 0 0 0 0 0 0 -60 -62 0 0 0 0
+merge "2seg_0/totdiff3_0/diff2_0/or2v0x3_0/vss" "2seg_0/1counter_0/m1_n522_149#"
+merge "2seg_0/1counter_0/m1_n522_149#" "2seg_0/1counter_0/tf_2/dfnt1v0x2_0/vss"
+merge "2seg_0/1counter_0/tf_2/dfnt1v0x2_0/vss" "m1_140_n452#"
