@@ -1,4 +1,764 @@
 | units: 100 tech: scmos format: MIT
+p subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/o2 vdd 2 18 1451 -171
+p subcomp_0/mux_0/a2 vdd subcomp_0/mux_0/mxn2v0x1_2/a_21_50# 2 16 1461 -169
+p subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/mux_0/mxn2v0x1_2/zn 2 16 1468 -169
+p subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_2/a_38_50# 2 16 1478 -169
+p subcomp_0/mux_0/b2 subcomp_0/mux_0/mxn2v0x1_2/a_38_50# vdd 2 16 1485 -169
+p subcomp_0/mux_0/s vdd subcomp_0/mux_0/mxn2v0x1_2/sn 2 8 1495 -181
+n subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/o2 gnd 2 9 1451 -207
+n subcomp_0/mux_0/a2 gnd subcomp_0/mux_0/mxn2v0x1_2/a_21_12# 2 8 1461 -207
+n subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/mux_0/mxn2v0x1_2/zn 2 8 1468 -207
+n subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_2/a_38_12# 2 8 1478 -207
+n subcomp_0/mux_0/b2 subcomp_0/mux_0/mxn2v0x1_2/a_38_12# gnd 2 8 1485 -207
+n subcomp_0/mux_0/s gnd subcomp_0/mux_0/mxn2v0x1_2/sn 2 6 1495 -205
+p subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/o1 vdd 2 18 1496 -116
+p subcomp_0/mux_0/a1 vdd subcomp_0/mux_0/mxn2v0x1_1/a_21_50# 2 16 1486 -118
+p subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/mux_0/mxn2v0x1_1/zn 2 16 1479 -118
+p subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/mxn2v0x1_1/a_38_50# 2 16 1469 -118
+p subcomp_0/mux_0/b1 subcomp_0/mux_0/mxn2v0x1_1/a_38_50# vdd 2 16 1462 -118
+p subcomp_0/mux_0/s vdd subcomp_0/mux_0/mxn2v0x1_1/sn 2 8 1452 -106
+n subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/o1 gnd 2 9 1496 -80
+n subcomp_0/mux_0/a1 gnd subcomp_0/mux_0/mxn2v0x1_1/a_21_12# 2 8 1486 -80
+n subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/mux_0/mxn2v0x1_1/zn 2 8 1479 -80
+n subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/mxn2v0x1_1/a_38_12# 2 8 1469 -80
+n subcomp_0/mux_0/b1 subcomp_0/mux_0/mxn2v0x1_1/a_38_12# gnd 2 8 1462 -80
+n subcomp_0/mux_0/s gnd subcomp_0/mux_0/mxn2v0x1_1/sn 2 6 1452 -82
+p subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/o0 vdd 2 18 1451 -11
+p subcomp_0/mux_0/a0 vdd subcomp_0/mux_0/mxn2v0x1_0/a_21_50# 2 16 1461 -9
+p subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/mux_0/mxn2v0x1_0/zn 2 16 1468 -9
+p subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/a_38_50# 2 16 1478 -9
+p subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/a_38_50# vdd 2 16 1485 -9
+p subcomp_0/mux_0/s vdd subcomp_0/mux_0/mxn2v0x1_0/sn 2 8 1495 -21
+n subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/o0 gnd 2 9 1451 -47
+n subcomp_0/mux_0/a0 gnd subcomp_0/mux_0/mxn2v0x1_0/a_21_12# 2 8 1461 -47
+n subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/mux_0/mxn2v0x1_0/zn 2 8 1468 -47
+n subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/a_38_12# 2 8 1478 -47
+n subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/a_38_12# gnd 2 8 1485 -47
+n subcomp_0/mux_0/s gnd subcomp_0/mux_0/mxn2v0x1_0/sn 2 6 1495 -45
+p subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/a2 vdd 2 18 1278 -186
+p subcomp_0/totdiff3_0/mux_0/a2 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# 2 16 1288 -184
+p subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 2 16 1295 -184
+p subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# 2 16 1305 -184
+p subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# vdd 2 16 1312 -184
+p subcomp_0/totdiff3_0/mux_0/s vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 2 8 1322 -196
+n subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/a2 gnd 2 9 1278 -222
+n subcomp_0/totdiff3_0/mux_0/a2 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# 2 8 1288 -222
+n subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 2 8 1295 -222
+n subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# 2 8 1305 -222
+n subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# gnd 2 8 1312 -222
+n subcomp_0/totdiff3_0/mux_0/s gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 2 6 1322 -220
+p subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/a1 vdd 2 18 1323 -131
+p subcomp_0/totdiff3_0/mux_0/a1 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# 2 16 1313 -133
+p subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 2 16 1306 -133
+p subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# 2 16 1296 -133
+p subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# vdd 2 16 1289 -133
+p subcomp_0/totdiff3_0/mux_0/s vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 2 8 1279 -121
+n subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/a1 gnd 2 9 1323 -95
+n subcomp_0/totdiff3_0/mux_0/a1 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# 2 8 1313 -95
+n subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 2 8 1306 -95
+n subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# 2 8 1296 -95
+n subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# gnd 2 8 1289 -95
+n subcomp_0/totdiff3_0/mux_0/s gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 2 6 1279 -97
+p subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/a0 vdd 2 18 1278 -26
+p subcomp_0/totdiff3_0/mux_0/a0 vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# 2 16 1288 -24
+p subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 2 16 1295 -24
+p subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# 2 16 1305 -24
+p subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# vdd 2 16 1312 -24
+p subcomp_0/totdiff3_0/mux_0/s vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 2 8 1322 -36
+n subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/a0 gnd 2 9 1278 -62
+n subcomp_0/totdiff3_0/mux_0/a0 gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# 2 8 1288 -62
+n subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 2 8 1295 -62
+n subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# 2 8 1305 -62
+n subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# gnd 2 8 1312 -62
+n subcomp_0/totdiff3_0/mux_0/s gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 2 6 1322 -60
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z vdd 2 28 1094 -196
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn 2 19 1104 -187
+p subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn vdd 2 19 1114 -187
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z gnd 2 14 1094 -222
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# 2 13 1107 -221
+n subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn 2 13 1114 -221
+p subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2 20 982 -196
+p subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b2 2 20 992 -196
+p subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2 20 1002 -196
+p subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 2 20 1012 -196
+p subcomp_0/totdiff3_0/diff2_2/in_2c vdd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2 20 1036 -188
+p subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn vdd 2 20 1046 -188
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2 20 1056 -188
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an vdd 2 20 1066 -188
+n subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# 2 13 984 -221
+n subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_0/mux_0/b2 2 13 991 -221
+n subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# 2 13 1001 -221
+n subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# gnd 2 13 1008 -221
+n subcomp_0/totdiff3_0/diff2_2/in_2c gnd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2 10 1028 -218
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 2 20 1038 -228
+n subcomp_0/totdiff3_0/diff2_2/in_2c subcomp_0/totdiff3_0/mux_0/b2 subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2 20 1048 -228
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd 2 10 1058 -218
+p subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn vdd subcomp_0/totdiff3_0/mux_0/s 2 20 1203 -122
+p subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/mux_0/s vdd 2 20 1193 -122
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# 2 20 1183 -122
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn 2 20 1176 -122
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# 2 16 1166 -122
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# vdd 2 16 1159 -122
+n subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_0/mux_0/s gnd 2 20 1203 -89
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn 2 10 1184 -94
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn gnd 2 10 1174 -94
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd 2 28 1131 -121
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn 2 19 1121 -130
+p decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn vdd 2 19 1111 -130
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd 2 14 1131 -95
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# 2 13 1118 -96
+n decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn 2 13 1111 -96
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z vdd 2 28 1083 -121
+p subcomp_0/totdiff3_0/diff2_2/in_c vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn 2 19 1073 -130
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn vdd 2 19 1063 -130
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd 2 14 1083 -95
+n subcomp_0/totdiff3_0/diff2_2/in_c gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# 2 13 1070 -96
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn 2 13 1063 -96
+p subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b vdd 2 12 1035 -121
+p subcomp_0/totdiff3_0/diff2_2/in_a vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 2 12 1023 -121
+p subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 2 12 1013 -121
+p decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai 2 12 1003 -121
+p subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai vdd 2 12 993 -121
+p decoder_1/b2 vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 2 12 983 -130
+n subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b gnd 2 6 1035 -102
+n subcomp_0/totdiff3_0/diff2_2/in_a gnd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 2 6 1025 -102
+n decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 2 6 1015 -102
+n subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai 2 6 1005 -102
+n subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai gnd 2 6 994 -103
+n decoder_1/b2 gnd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 2 6 983 -96
+p subcomp_0/totdiff3_0/mux_0/a2 vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a 2 24 1159 -33
+p subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd 2 16 1169 -33
+n subcomp_0/totdiff3_0/mux_0/a2 gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a 2 10 1159 -58
+n subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd 2 10 1169 -58
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2 27 982 -36
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a2 2 27 992 -36
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 27 1002 -36
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 2 27 1012 -36
+p subcomp_0/totdiff3_0/diff2_2/in_c vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2 26 1035 -34
+p subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn vdd 2 26 1045 -34
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 28 1055 -36
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn vdd 2 28 1065 -36
+p subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2 28 1085 -36
+p subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a 2 28 1095 -36
+p subcomp_0/totdiff3_0/diff2_2/in_a subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd 2 28 1105 -36
+p decoder_1/b2 vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 2 14 1116 -32
+p decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn vdd 2 14 1126 -36
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# 2 12 982 -62
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_0/mux_0/a2 2 12 989 -62
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# 2 12 999 -62
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# gnd 2 12 1006 -62
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 14 1018 -62
+n subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 2 14 1028 -62
+n subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/mux_0/a2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 14 1038 -62
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn gnd 2 14 1048 -62
+n subcomp_0/totdiff3_0/diff2_2/in_c gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2 12 1058 -66
+n subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd 2 12 1068 -66
+n subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# 2 13 1086 -67
+n subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2 13 1093 -67
+n decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a 2 13 1103 -67
+n subcomp_0/totdiff3_0/diff2_2/in_a subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 2 13 1113 -62
+n decoder_1/b2 gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 2 11 1126 -59
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/in_2c vdd 2 28 834 -196
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn 2 19 844 -187
+p subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn vdd 2 19 854 -187
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_2/in_2c gnd 2 14 834 -222
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# 2 13 847 -221
+n subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn 2 13 854 -221
+p subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2 20 722 -196
+p subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b1 2 20 732 -196
+p subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2 20 742 -196
+p subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 2 20 752 -196
+p subcomp_0/totdiff3_0/diff2_1/in_2c vdd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2 20 776 -188
+p subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn vdd 2 20 786 -188
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2 20 796 -188
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an vdd 2 20 806 -188
+n subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# 2 13 724 -221
+n subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_0/mux_0/b1 2 13 731 -221
+n subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# 2 13 741 -221
+n subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# gnd 2 13 748 -221
+n subcomp_0/totdiff3_0/diff2_1/in_2c gnd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2 10 768 -218
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 2 20 778 -228
+n subcomp_0/totdiff3_0/diff2_1/in_2c subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2 20 788 -228
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd 2 10 798 -218
+p subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn vdd subcomp_0/totdiff3_0/diff2_2/in_c 2 20 943 -122
+p subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/in_c vdd 2 20 933 -122
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# 2 20 923 -122
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn 2 20 916 -122
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# 2 16 906 -122
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# vdd 2 16 899 -122
+n subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_2/in_c gnd 2 20 943 -89
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn 2 10 924 -94
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn gnd 2 10 914 -94
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd 2 28 871 -121
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn 2 19 861 -130
+p decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn vdd 2 19 851 -130
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd 2 14 871 -95
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# 2 13 858 -96
+n decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn 2 13 851 -96
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z vdd 2 28 823 -121
+p subcomp_0/totdiff3_0/diff2_1/in_c vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn 2 19 813 -130
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn vdd 2 19 803 -130
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z gnd 2 14 823 -95
+n subcomp_0/totdiff3_0/diff2_1/in_c gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# 2 13 810 -96
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn 2 13 803 -96
+p subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b vdd 2 12 775 -121
+p subcomp_0/totdiff3_0/diff2_1/in_a vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 2 12 763 -121
+p subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 2 12 753 -121
+p decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai 2 12 743 -121
+p subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai vdd 2 12 733 -121
+p decoder_1/b1 vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 2 12 723 -130
+n subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd 2 6 775 -102
+n subcomp_0/totdiff3_0/diff2_1/in_a gnd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 2 6 765 -102
+n decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 2 6 755 -102
+n subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai 2 6 745 -102
+n subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai gnd 2 6 734 -103
+n decoder_1/b1 gnd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 2 6 723 -96
+p subcomp_0/totdiff3_0/mux_0/a1 vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a 2 24 899 -33
+p subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd 2 16 909 -33
+n subcomp_0/totdiff3_0/mux_0/a1 gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a 2 10 899 -58
+n subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd 2 10 909 -58
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2 27 722 -36
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a1 2 27 732 -36
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 27 742 -36
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a1 2 27 752 -36
+p subcomp_0/totdiff3_0/diff2_1/in_c vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2 26 775 -34
+p subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn vdd 2 26 785 -34
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 28 795 -36
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn vdd 2 28 805 -36
+p subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 2 28 825 -36
+p subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a 2 28 835 -36
+p subcomp_0/totdiff3_0/diff2_1/in_a subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd 2 28 845 -36
+p decoder_1/b1 vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2 14 856 -32
+p decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn vdd 2 14 866 -36
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# 2 12 722 -62
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_0/mux_0/a1 2 12 729 -62
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# 2 12 739 -62
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# gnd 2 12 746 -62
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 14 758 -62
+n subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a1 2 14 768 -62
+n subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 14 778 -62
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd 2 14 788 -62
+n subcomp_0/totdiff3_0/diff2_1/in_c gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2 12 798 -66
+n subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd 2 12 808 -66
+n subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# 2 13 826 -67
+n subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 2 13 833 -67
+n decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a 2 13 843 -67
+n subcomp_0/totdiff3_0/diff2_1/in_a subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd 2 13 853 -62
+n decoder_1/b1 gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2 11 866 -59
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_1/in_2c vdd 2 28 574 -196
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn 2 19 584 -187
+p vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn vdd 2 19 594 -187
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_0/diff2_1/in_2c gnd 2 14 574 -222
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# 2 13 587 -221
+n vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn 2 13 594 -221
+p subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2 20 462 -196
+p subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b0 2 20 472 -196
+p subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2 20 482 -196
+p subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 2 20 492 -196
+p vdd vdd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2 20 516 -188
+p vdd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd 2 20 526 -188
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2 20 536 -188
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an vdd 2 20 546 -188
+n subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# 2 13 464 -221
+n subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_0/mux_0/b0 2 13 471 -221
+n subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# 2 13 481 -221
+n subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# gnd 2 13 488 -221
+n vdd gnd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2 10 508 -218
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 2 20 518 -228
+n vdd subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2 20 528 -228
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd 2 10 538 -218
+p subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn vdd subcomp_0/totdiff3_0/diff2_1/in_c 2 20 683 -122
+p subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/in_c vdd 2 20 673 -122
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# 2 20 663 -122
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn 2 20 656 -122
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# 2 16 646 -122
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# vdd 2 16 639 -122
+n subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_0/diff2_1/in_c gnd 2 20 683 -89
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn 2 10 664 -94
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn gnd 2 10 654 -94
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd 2 28 611 -121
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn 2 19 601 -130
+p decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn vdd 2 19 591 -130
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd 2 14 611 -95
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# 2 13 598 -96
+n decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn 2 13 591 -96
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z vdd 2 28 563 -121
+p gnd vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn 2 19 553 -130
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn vdd 2 19 543 -130
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z gnd 2 14 563 -95
+n gnd gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# 2 13 550 -96
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn 2 13 543 -96
+p subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b vdd 2 12 515 -121
+p subcomp_0/totdiff3_0/diff2_0/in_a vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 2 12 503 -121
+p subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 2 12 493 -121
+p decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai 2 12 483 -121
+p subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai vdd 2 12 473 -121
+p decoder_1/b0 vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 2 12 463 -130
+n subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b gnd 2 6 515 -102
+n subcomp_0/totdiff3_0/diff2_0/in_a gnd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 2 6 505 -102
+n decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 2 6 495 -102
+n subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai 2 6 485 -102
+n subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai gnd 2 6 474 -103
+n decoder_1/b0 gnd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 2 6 463 -96
+p subcomp_0/totdiff3_0/mux_0/a0 vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a 2 24 639 -33
+p subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd 2 16 649 -33
+n subcomp_0/totdiff3_0/mux_0/a0 gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a 2 10 639 -58
+n subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd 2 10 649 -58
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2 27 462 -36
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a0 2 27 472 -36
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 27 482 -36
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 2 27 492 -36
+p gnd vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2 26 515 -34
+p gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn vdd 2 26 525 -34
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 28 535 -36
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn vdd 2 28 545 -36
+p subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2 28 565 -36
+p subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a 2 28 575 -36
+p subcomp_0/totdiff3_0/diff2_0/in_a subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd 2 28 585 -36
+p decoder_1/b0 vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 2 14 596 -32
+p decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn vdd 2 14 606 -36
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# 2 12 462 -62
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_0/mux_0/a0 2 12 469 -62
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# 2 12 479 -62
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# gnd 2 12 486 -62
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 14 498 -62
+n gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 2 14 508 -62
+n gnd subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 14 518 -62
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd 2 14 528 -62
+n gnd gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2 12 538 -66
+n gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd 2 12 548 -66
+n subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# 2 13 566 -67
+n subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2 13 573 -67
+n decoder_1/b0 subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a 2 13 583 -67
+n subcomp_0/totdiff3_0/diff2_0/in_a subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 2 13 593 -62
+n decoder_1/b0 gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 2 11 606 -59
+p subcomp_0/comp_0/nr3v0x2_0/z vdd subcomp_0/comp_0/nd3v0x2_0/z 2 14 1689 63
+p subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/z vdd 2 14 1679 63
+p subcomp_0/comp_0/nd3v0x2_0/c vdd subcomp_0/comp_0/nd3v0x2_0/z 2 28 1663 77
+p subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/nd3v0x2_0/z vdd 2 28 1651 77
+n subcomp_0/comp_0/nd3v0x2_0/a gnd subcomp_0/comp_0/nd3v0x2_0/a_14_12# 2 14 1688 103
+n subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/a_14_12# subcomp_0/comp_0/nd3v0x2_0/a_21_12# 2 14 1681 103
+n subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/nd3v0x2_0/a_21_12# subcomp_0/comp_0/nd3v0x2_0/z 2 14 1674 103
+n subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/a_38_12# 2 14 1664 103
+n subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nd3v0x2_0/a_38_12# subcomp_0/comp_0/nd3v0x2_0/a_45_12# 2 14 1657 103
+n subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/nd3v0x2_0/a_45_12# gnd 2 14 1650 103
+p subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/nr2v0x2_1/a vdd 2 28 1619 77
+p subcomp_0/comp_0/an3v0x2_1/a vdd subcomp_0/comp_0/an3v0x2_1/zn 2 17 1609 69
+p subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_1/zn vdd 2 17 1599 69
+p subcomp_0/mux_0/a2 vdd subcomp_0/comp_0/an3v0x2_1/zn 2 17 1587 69
+n subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/nr2v0x2_1/a gnd 2 14 1619 104
+n subcomp_0/comp_0/an3v0x2_1/a gnd subcomp_0/comp_0/an3v0x2_1/a_24_8# 2 17 1606 107
+n subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_1/a_24_8# subcomp_0/comp_0/an3v0x2_1/a_31_8# 2 17 1599 107
+n subcomp_0/mux_0/a2 subcomp_0/comp_0/an3v0x2_1/a_31_8# subcomp_0/comp_0/an3v0x2_1/zn 2 17 1592 107
+p subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_13_39# 2 27 1553 76
+p subcomp_0/comp_0/an3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_13_39# subcomp_0/comp_0/nr3v0x2_0/a_20_39# 2 27 1546 76
+p subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/comp_0/nr3v0x2_0/a_20_39# vdd 2 27 1539 76
+p subcomp_0/comp_0/nr3v0x2_0/a vdd subcomp_0/comp_0/nr3v0x2_0/a_37_39# 2 27 1529 76
+p subcomp_0/comp_0/an3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_37_39# subcomp_0/comp_0/nr3v0x2_0/a_44_39# 2 27 1522 76
+p subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/a_44_39# subcomp_0/comp_0/nr3v0x2_0/z 2 27 1515 76
+p subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_61_39# 2 27 1505 76
+p subcomp_0/comp_0/an3v0x2_0/z subcomp_0/comp_0/nr3v0x2_0/a_61_39# subcomp_0/comp_0/nr3v0x2_0/a_68_39# 2 27 1498 76
+p subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/comp_0/nr3v0x2_0/a_68_39# vdd 2 27 1491 76
+n subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/nr3v0x2_0/z gnd 2 15 1555 109
+n subcomp_0/comp_0/an3v0x2_0/z gnd subcomp_0/comp_0/nr3v0x2_0/z 2 15 1545 109
+n subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/comp_0/nr3v0x2_0/z gnd 2 15 1535 109
+p subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/an3v0x2_2/z vdd 2 28 1459 77
+p subcomp_0/mux_0/a0 vdd subcomp_0/comp_0/an3v0x2_2/zn 2 17 1449 69
+p subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_2/zn vdd 2 17 1439 69
+p subcomp_0/mux_0/a2 vdd subcomp_0/comp_0/an3v0x2_2/zn 2 17 1427 69
+n subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/an3v0x2_2/z gnd 2 14 1459 104
+n subcomp_0/mux_0/a0 gnd subcomp_0/comp_0/an3v0x2_2/a_24_8# 2 17 1446 107
+n subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an3v0x2_2/a_24_8# subcomp_0/comp_0/an3v0x2_2/a_31_8# 2 17 1439 107
+n subcomp_0/mux_0/a2 subcomp_0/comp_0/an3v0x2_2/a_31_8# subcomp_0/comp_0/an3v0x2_2/zn 2 17 1432 107
+p subcomp_0/comp_0/nr2v0x2_1/a vdd subcomp_0/comp_0/nr2v0x2_1/a_11_39# 2 27 1598 163
+p subcomp_0/comp_0/an3v0x2_3/z subcomp_0/comp_0/nr2v0x2_1/a_11_39# subcomp_0/comp_0/nd3v0x2_0/c 2 27 1605 163
+p subcomp_0/comp_0/an3v0x2_3/z subcomp_0/comp_0/nd3v0x2_0/c subcomp_0/comp_0/nr2v0x2_1/a_28_39# 2 27 1615 163
+p subcomp_0/comp_0/nr2v0x2_1/a subcomp_0/comp_0/nr2v0x2_1/a_28_39# vdd 2 27 1622 163
+n subcomp_0/comp_0/nr2v0x2_1/a gnd subcomp_0/comp_0/nd3v0x2_0/c 2 15 1600 130
+n subcomp_0/comp_0/an3v0x2_3/z subcomp_0/comp_0/nd3v0x2_0/c gnd 2 15 1610 130
+p subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/comp_0/an3v0x2_3/z vdd 2 28 1534 162
+p subcomp_0/comp_0/an2v0x2_0/b vdd subcomp_0/comp_0/an3v0x2_3/zn 2 17 1544 170
+p subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_3/zn vdd 2 17 1554 170
+p subcomp_0/mux_0/a0 vdd subcomp_0/comp_0/an3v0x2_3/zn 2 17 1566 170
+n subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/comp_0/an3v0x2_3/z gnd 2 14 1534 135
+n subcomp_0/comp_0/an2v0x2_0/b gnd subcomp_0/comp_0/an3v0x2_3/a_24_8# 2 17 1547 132
+n subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_3/a_24_8# subcomp_0/comp_0/an3v0x2_3/a_31_8# 2 17 1554 132
+n subcomp_0/mux_0/a0 subcomp_0/comp_0/an3v0x2_3/a_31_8# subcomp_0/comp_0/an3v0x2_3/zn 2 17 1561 132
+p subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an3v0x2_0/z vdd 2 28 1470 162
+p subcomp_0/comp_0/an3v0x2_1/a vdd subcomp_0/comp_0/an3v0x2_0/zn 2 17 1480 170
+p subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_0/zn vdd 2 17 1490 170
+p subcomp_0/comp_0/an2v0x2_0/b vdd subcomp_0/comp_0/an3v0x2_0/zn 2 17 1502 170
+n subcomp_0/comp_0/an3v0x2_0/zn subcomp_0/comp_0/an3v0x2_0/z gnd 2 14 1470 135
+n subcomp_0/comp_0/an3v0x2_1/a gnd subcomp_0/comp_0/an3v0x2_0/a_24_8# 2 17 1483 132
+n subcomp_0/mux_0/a1 subcomp_0/comp_0/an3v0x2_0/a_24_8# subcomp_0/comp_0/an3v0x2_0/a_31_8# 2 17 1490 132
+n subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an3v0x2_0/a_31_8# subcomp_0/comp_0/an3v0x2_0/zn 2 17 1497 132
+p subcomp_0/comp_0/an2v0x2_0/zn subcomp_0/comp_0/nr3v0x2_0/a vdd 2 28 1422 162
+p subcomp_0/mux_0/a2 vdd subcomp_0/comp_0/an2v0x2_0/zn 2 19 1432 171
+p subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an2v0x2_0/zn vdd 2 19 1442 171
+n subcomp_0/comp_0/an2v0x2_0/zn subcomp_0/comp_0/nr3v0x2_0/a gnd 2 14 1422 136
+n subcomp_0/mux_0/a2 gnd subcomp_0/comp_0/an2v0x2_0/a_24_13# 2 13 1435 137
+n subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an2v0x2_0/a_24_13# subcomp_0/comp_0/an2v0x2_0/zn 2 13 1442 137
+p subcomp_0/comp_0/an2v0x2_3/z vdd subcomp_0/comp_0/nr2v0x2_0/a_11_39# 2 27 1667 236
+p subcomp_0/comp_0/an2v0x2_1/z subcomp_0/comp_0/nr2v0x2_0/a_11_39# subcomp_0/comp_0/nd3v0x2_0/a 2 27 1660 236
+p subcomp_0/comp_0/an2v0x2_1/z subcomp_0/comp_0/nd3v0x2_0/a subcomp_0/comp_0/nr2v0x2_0/a_28_39# 2 27 1650 236
+p subcomp_0/comp_0/an2v0x2_3/z subcomp_0/comp_0/nr2v0x2_0/a_28_39# vdd 2 27 1643 236
+n subcomp_0/comp_0/an2v0x2_3/z gnd subcomp_0/comp_0/nd3v0x2_0/a 2 15 1665 269
+n subcomp_0/comp_0/an2v0x2_1/z subcomp_0/comp_0/nd3v0x2_0/a gnd 2 15 1655 269
+p subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/comp_0/an2v0x2_3/b vdd 2 28 1611 237
+p subcomp_0/comp_0/an3v0x2_2/b vdd subcomp_0/comp_0/or3v0x2_1/a_24_38# 2 22 1598 237
+p subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_1/a_24_38# subcomp_0/comp_0/or3v0x2_1/a_31_38# 2 22 1591 237
+p subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_1/a_31_38# subcomp_0/comp_0/or3v0x2_1/zn 2 22 1584 237
+p subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/comp_0/or3v0x2_1/a_48_38# 2 19 1574 237
+p subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_1/a_48_38# subcomp_0/comp_0/or3v0x2_1/a_55_38# 2 19 1567 237
+p subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/or3v0x2_1/a_55_38# vdd 2 19 1560 237
+n subcomp_0/comp_0/or3v0x2_1/zn subcomp_0/comp_0/an2v0x2_3/b gnd 2 14 1611 263
+n subcomp_0/comp_0/an3v0x2_2/b gnd subcomp_0/comp_0/or3v0x2_1/zn 2 8 1600 265
+n subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_1/zn gnd 2 8 1590 265
+n subcomp_0/mux_0/a0 gnd subcomp_0/comp_0/or3v0x2_1/zn 2 8 1576 265
+p subcomp_0/comp_0/an2v0x2_1/zn subcomp_0/comp_0/an2v0x2_1/z vdd 2 28 1531 237
+p subcomp_0/comp_0/an2v0x2_4/z vdd subcomp_0/comp_0/an2v0x2_1/zn 2 19 1521 228
+p subcomp_0/comp_0/an2v0x2_1/b subcomp_0/comp_0/an2v0x2_1/zn vdd 2 19 1511 228
+n subcomp_0/comp_0/an2v0x2_1/zn subcomp_0/comp_0/an2v0x2_1/z gnd 2 14 1531 263
+n subcomp_0/comp_0/an2v0x2_4/z gnd subcomp_0/comp_0/an2v0x2_1/a_24_13# 2 13 1518 262
+n subcomp_0/comp_0/an2v0x2_1/b subcomp_0/comp_0/an2v0x2_1/a_24_13# subcomp_0/comp_0/an2v0x2_1/zn 2 13 1511 262
+p subcomp_0/comp_0/an2v0x2_4/zn subcomp_0/comp_0/an2v0x2_4/z vdd 2 28 1483 237
+p subcomp_0/comp_0/an2v0x2_0/b vdd subcomp_0/comp_0/an2v0x2_4/zn 2 19 1473 228
+p subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an2v0x2_4/zn vdd 2 19 1463 228
+n subcomp_0/comp_0/an2v0x2_4/zn subcomp_0/comp_0/an2v0x2_4/z gnd 2 14 1483 263
+n subcomp_0/comp_0/an2v0x2_0/b gnd subcomp_0/comp_0/an2v0x2_4/a_24_13# 2 13 1470 262
+n subcomp_0/comp_0/an3v0x2_2/b subcomp_0/comp_0/an2v0x2_4/a_24_13# subcomp_0/comp_0/an2v0x2_4/zn 2 13 1463 262
+p subcomp_0/mux_0/b1 vdd subcomp_0/comp_0/an3v0x2_2/b 2 28 1435 237
+p subcomp_0/mux_0/b1 subcomp_0/comp_0/an3v0x2_2/b vdd 2 28 1425 237
+n subcomp_0/mux_0/b1 gnd subcomp_0/comp_0/an3v0x2_2/b 2 17 1435 266
+n subcomp_0/mux_0/b1 subcomp_0/comp_0/an3v0x2_2/b gnd 2 11 1425 260
+p subcomp_0/comp_0/an2v0x2_3/zn subcomp_0/comp_0/an2v0x2_3/z vdd 2 28 1630 322
+p subcomp_0/comp_0/an2v0x2_2/z vdd subcomp_0/comp_0/an2v0x2_3/zn 2 19 1640 331
+p subcomp_0/comp_0/an2v0x2_3/b subcomp_0/comp_0/an2v0x2_3/zn vdd 2 19 1650 331
+n subcomp_0/comp_0/an2v0x2_3/zn subcomp_0/comp_0/an2v0x2_3/z gnd 2 14 1630 296
+n subcomp_0/comp_0/an2v0x2_2/z gnd subcomp_0/comp_0/an2v0x2_3/a_24_13# 2 13 1643 297
+n subcomp_0/comp_0/an2v0x2_3/b subcomp_0/comp_0/an2v0x2_3/a_24_13# subcomp_0/comp_0/an2v0x2_3/zn 2 13 1650 297
+p subcomp_0/comp_0/an2v0x2_2/zn subcomp_0/comp_0/an2v0x2_2/z vdd 2 28 1582 322
+p subcomp_0/mux_0/a2 vdd subcomp_0/comp_0/an2v0x2_2/zn 2 19 1592 331
+p subcomp_0/mux_0/a1 subcomp_0/comp_0/an2v0x2_2/zn vdd 2 19 1602 331
+n subcomp_0/comp_0/an2v0x2_2/zn subcomp_0/comp_0/an2v0x2_2/z gnd 2 14 1582 296
+n subcomp_0/mux_0/a2 gnd subcomp_0/comp_0/an2v0x2_2/a_24_13# 2 13 1595 297
+n subcomp_0/mux_0/a1 subcomp_0/comp_0/an2v0x2_2/a_24_13# subcomp_0/comp_0/an2v0x2_2/zn 2 13 1602 297
+p subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/an2v0x2_1/b vdd 2 28 1502 322
+p subcomp_0/mux_0/a1 vdd subcomp_0/comp_0/or3v0x2_0/a_24_38# 2 22 1515 322
+p subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/a_24_38# subcomp_0/comp_0/or3v0x2_0/a_31_38# 2 22 1522 322
+p subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_0/a_31_38# subcomp_0/comp_0/or3v0x2_0/zn 2 22 1529 322
+p subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/or3v0x2_0/a_48_38# 2 19 1539 322
+p subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/a_48_38# subcomp_0/comp_0/or3v0x2_0/a_55_38# 2 19 1546 322
+p subcomp_0/mux_0/a1 subcomp_0/comp_0/or3v0x2_0/a_55_38# vdd 2 19 1553 322
+n subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/comp_0/an2v0x2_1/b gnd 2 14 1502 296
+n subcomp_0/mux_0/a1 gnd subcomp_0/comp_0/or3v0x2_0/zn 2 8 1513 294
+n subcomp_0/mux_0/a0 subcomp_0/comp_0/or3v0x2_0/zn gnd 2 8 1523 294
+n subcomp_0/comp_0/an3v0x2_1/a gnd subcomp_0/comp_0/or3v0x2_0/zn 2 8 1537 294
+p subcomp_0/mux_0/b0 vdd subcomp_0/comp_0/an3v0x2_1/a 2 28 1462 322
+p subcomp_0/mux_0/b0 subcomp_0/comp_0/an3v0x2_1/a vdd 2 28 1472 322
+n subcomp_0/mux_0/b0 gnd subcomp_0/comp_0/an3v0x2_1/a 2 17 1462 293
+n subcomp_0/mux_0/b0 subcomp_0/comp_0/an3v0x2_1/a gnd 2 11 1472 299
+p subcomp_0/mux_0/b2 vdd subcomp_0/comp_0/an2v0x2_0/b 2 28 1422 322
+p subcomp_0/mux_0/b2 subcomp_0/comp_0/an2v0x2_0/b vdd 2 28 1432 322
+n subcomp_0/mux_0/b2 gnd subcomp_0/comp_0/an2v0x2_0/b 2 17 1422 293
+n subcomp_0/mux_0/b2 subcomp_0/comp_0/an2v0x2_0/b gnd 2 11 1432 299
+p subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/b2 vdd 2 18 1278 131
+p subcomp_0/totdiff3_1/mux_0/a2 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_50# 2 16 1288 133
+p subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 2 16 1295 133
+p subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_50# 2 16 1305 133
+p subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_50# vdd 2 16 1312 133
+p subcomp_0/totdiff3_1/mux_0/s vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn 2 8 1322 121
+n subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/b2 gnd 2 9 1278 95
+n subcomp_0/totdiff3_1/mux_0/a2 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_12# 2 8 1288 95
+n subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 2 8 1295 95
+n subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_12# 2 8 1305 95
+n subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_12# gnd 2 8 1312 95
+n subcomp_0/totdiff3_1/mux_0/s gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn 2 6 1322 97
+p subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/b1 vdd 2 18 1323 186
+p subcomp_0/totdiff3_1/mux_0/a1 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_50# 2 16 1313 184
+p subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn 2 16 1306 184
+p subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_50# 2 16 1296 184
+p subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_50# vdd 2 16 1289 184
+p subcomp_0/totdiff3_1/mux_0/s vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn 2 8 1279 196
+n subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/b1 gnd 2 9 1323 222
+n subcomp_0/totdiff3_1/mux_0/a1 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_12# 2 8 1313 222
+n subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn 2 8 1306 222
+n subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_12# 2 8 1296 222
+n subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_12# gnd 2 8 1289 222
+n subcomp_0/totdiff3_1/mux_0/s gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn 2 6 1279 220
+p subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/b0 vdd 2 18 1278 291
+p subcomp_0/totdiff3_1/mux_0/a0 vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_50# 2 16 1288 293
+p subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_50# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 2 16 1295 293
+p subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_50# 2 16 1305 293
+p subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_50# vdd 2 16 1312 293
+p subcomp_0/totdiff3_1/mux_0/s vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 2 8 1322 281
+n subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/b0 gnd 2 9 1278 255
+n subcomp_0/totdiff3_1/mux_0/a0 gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_12# 2 8 1288 255
+n subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_12# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 2 8 1295 255
+n subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_12# 2 8 1305 255
+n subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_12# gnd 2 8 1312 255
+n subcomp_0/totdiff3_1/mux_0/s gnd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 2 6 1322 257
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z vdd 2 28 1094 121
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn 2 19 1104 130
+p subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn vdd 2 19 1114 130
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z gnd 2 14 1094 95
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a_24_13# 2 13 1107 96
+n subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a_24_13# subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn 2 13 1114 96
+p subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 2 20 982 121
+p subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b2 2 20 992 121
+p subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 2 20 1002 121
+p subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b2 2 20 1012 121
+p subcomp_0/totdiff3_1/diff2_2/in_2c vdd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 2 20 1036 129
+p subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn vdd 2 20 1046 129
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a vdd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 2 20 1056 129
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an vdd 2 20 1066 129
+n subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an gnd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_13_13# 2 13 984 96
+n subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_1/mux_0/b2 2 13 991 96
+n subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_30_13# 2 13 1001 96
+n subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_30_13# gnd 2 13 1008 96
+n subcomp_0/totdiff3_1/diff2_2/in_2c gnd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 2 10 1028 99
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b2 2 20 1038 89
+n subcomp_0/totdiff3_1/diff2_2/in_2c subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 2 20 1048 89
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an gnd 2 10 1058 99
+p subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn vdd subcomp_0/totdiff3_1/mux_0/s 2 20 1203 195
+p subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/mux_0/s vdd 2 20 1193 195
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z vdd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_31_39# 2 20 1183 195
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_31_39# subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn 2 20 1176 195
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_48_39# 2 16 1166 195
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_48_39# vdd 2 16 1159 195
+n subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn subcomp_0/totdiff3_1/mux_0/s gnd 2 20 1203 228
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z gnd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn 2 10 1184 223
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn gnd 2 10 1174 223
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z vdd 2 28 1131 196
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn 2 19 1121 187
+p subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn vdd 2 19 1111 187
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z gnd 2 14 1131 222
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a_24_13# 2 13 1118 221
+n subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a_24_13# subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn 2 13 1111 221
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z vdd 2 28 1083 196
+p subcomp_0/totdiff3_1/diff2_2/in_c vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 2 19 1073 187
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn vdd 2 19 1063 187
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z gnd 2 14 1083 222
+n subcomp_0/totdiff3_1/diff2_2/in_c gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/a_24_13# 2 13 1070 221
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/a_24_13# subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 2 13 1063 221
+p subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b vdd 2 12 1035 196
+p decoder_0/b2 vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an 2 12 1023 196
+p subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn 2 12 1013 196
+p subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai 2 12 1003 196
+p subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai vdd 2 12 993 196
+p subcomp_0/totdiff3_1/diff2_2/in_b vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn 2 12 983 187
+n subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b gnd 2 6 1035 215
+n decoder_0/b2 gnd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an 2 6 1025 215
+n subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn 2 6 1015 215
+n subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai 2 6 1005 215
+n subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai gnd 2 6 994 214
+n subcomp_0/totdiff3_1/diff2_2/in_b gnd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn 2 6 983 221
+p subcomp_0/totdiff3_1/mux_0/a2 vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a 2 24 1159 284
+p subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a vdd 2 16 1169 284
+n subcomp_0/totdiff3_1/mux_0/a2 gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a 2 10 1159 259
+n subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a gnd 2 10 1169 259
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 2 27 982 281
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a2 2 27 992 281
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 2 27 1002 281
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a2 2 27 1012 281
+p subcomp_0/totdiff3_1/diff2_2/in_c vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 2 26 1035 283
+p subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn vdd 2 26 1045 283
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 2 28 1055 281
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn vdd 2 28 1065 281
+p subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz 2 28 1085 281
+p subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 2 28 1095 281
+p decoder_0/b2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a vdd 2 28 1105 281
+p subcomp_0/totdiff3_1/diff2_2/in_b vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 2 14 1116 285
+p subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn vdd 2 14 1126 281
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_11_12# 2 12 982 255
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_1/mux_0/a2 2 12 989 255
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_28_12# 2 12 999 255
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_28_12# gnd 2 12 1006 255
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 2 14 1018 255
+n subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a2 2 14 1028 255
+n subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 2 14 1038 255
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn gnd 2 14 1048 255
+n subcomp_0/totdiff3_1/diff2_2/in_c gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 2 12 1058 251
+n subcomp_0/totdiff3_1/diff2_2/in_c subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn gnd 2 12 1068 251
+n subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_115_7# 2 13 1086 250
+n subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz 2 13 1093 250
+n subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 2 13 1103 250
+n decoder_0/b2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a gnd 2 13 1113 255
+n subcomp_0/totdiff3_1/diff2_2/in_b gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 2 11 1126 258
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/in_2c vdd 2 28 834 121
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn 2 19 844 130
+p subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn vdd 2 19 854 130
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_2/in_2c gnd 2 14 834 95
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a_24_13# 2 13 847 96
+n subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a_24_13# subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn 2 13 854 96
+p subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 2 20 722 121
+p subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b1 2 20 732 121
+p subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 2 20 742 121
+p subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 2 20 752 121
+p subcomp_0/totdiff3_1/diff2_1/in_2c vdd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 2 20 776 129
+p subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn vdd 2 20 786 129
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a vdd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 2 20 796 129
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an vdd 2 20 806 129
+n subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an gnd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_13_13# 2 13 724 96
+n subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_1/mux_0/b1 2 13 731 96
+n subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_30_13# 2 13 741 96
+n subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_30_13# gnd 2 13 748 96
+n subcomp_0/totdiff3_1/diff2_1/in_2c gnd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 2 10 768 99
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 2 20 778 89
+n subcomp_0/totdiff3_1/diff2_1/in_2c subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 2 20 788 89
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an gnd 2 10 798 99
+p subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn vdd subcomp_0/totdiff3_1/diff2_2/in_c 2 20 943 195
+p subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/in_c vdd 2 20 933 195
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z vdd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_31_39# 2 20 923 195
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_31_39# subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn 2 20 916 195
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_48_39# 2 16 906 195
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_48_39# vdd 2 16 899 195
+n subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_2/in_c gnd 2 20 943 228
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z gnd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn 2 10 924 223
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn gnd 2 10 914 223
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z vdd 2 28 871 196
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn 2 19 861 187
+p subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn vdd 2 19 851 187
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z gnd 2 14 871 222
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a_24_13# 2 13 858 221
+n subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a_24_13# subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn 2 13 851 221
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z vdd 2 28 823 196
+p subcomp_0/totdiff3_1/diff2_1/in_c vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn 2 19 813 187
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn vdd 2 19 803 187
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z gnd 2 14 823 222
+n subcomp_0/totdiff3_1/diff2_1/in_c gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/a_24_13# 2 13 810 221
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/a_24_13# subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn 2 13 803 221
+p subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b vdd 2 12 775 196
+p decoder_0/b1 vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an 2 12 763 196
+p subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 2 12 753 196
+p subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai 2 12 743 196
+p subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai vdd 2 12 733 196
+p subcomp_0/totdiff3_1/diff2_1/in_b vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn 2 12 723 187
+n subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b gnd 2 6 775 215
+n decoder_0/b1 gnd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an 2 6 765 215
+n subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 2 6 755 215
+n subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai 2 6 745 215
+n subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai gnd 2 6 734 214
+n subcomp_0/totdiff3_1/diff2_1/in_b gnd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn 2 6 723 221
+p subcomp_0/totdiff3_1/mux_0/a1 vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a 2 24 899 284
+p subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a vdd 2 16 909 284
+n subcomp_0/totdiff3_1/mux_0/a1 gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a 2 10 899 259
+n subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a gnd 2 10 909 259
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 2 27 722 281
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a1 2 27 732 281
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 2 27 742 281
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 2 27 752 281
+p subcomp_0/totdiff3_1/diff2_1/in_c vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 2 26 775 283
+p subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn vdd 2 26 785 283
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 2 28 795 281
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn vdd 2 28 805 281
+p subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz 2 28 825 281
+p subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 2 28 835 281
+p decoder_0/b1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a vdd 2 28 845 281
+p subcomp_0/totdiff3_1/diff2_1/in_b vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 2 14 856 285
+p subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn vdd 2 14 866 281
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_11_12# 2 12 722 255
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_1/mux_0/a1 2 12 729 255
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_28_12# 2 12 739 255
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_28_12# gnd 2 12 746 255
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 2 14 758 255
+n subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 2 14 768 255
+n subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 2 14 778 255
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn gnd 2 14 788 255
+n subcomp_0/totdiff3_1/diff2_1/in_c gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 2 12 798 251
+n subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn gnd 2 12 808 251
+n subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_115_7# 2 13 826 250
+n subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz 2 13 833 250
+n subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 2 13 843 250
+n decoder_0/b1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a gnd 2 13 853 255
+n subcomp_0/totdiff3_1/diff2_1/in_b gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 2 11 866 258
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_1/in_2c vdd 2 28 574 121
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn 2 19 584 130
+p vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn vdd 2 19 594 130
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn subcomp_0/totdiff3_1/diff2_1/in_2c gnd 2 14 574 95
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a_24_13# 2 13 587 96
+n vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a_24_13# subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn 2 13 594 96
+p subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 2 20 462 121
+p subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b0 2 20 472 121
+p subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 2 20 482 121
+p subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 2 20 492 121
+p vdd vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 2 20 516 129
+p vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn vdd 2 20 526 129
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 2 20 536 129
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an vdd 2 20 546 129
+n subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an gnd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_13_13# 2 13 464 96
+n subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_13_13# subcomp_0/totdiff3_1/mux_0/b0 2 13 471 96
+n subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_30_13# 2 13 481 96
+n subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_30_13# gnd 2 13 488 96
+n vdd gnd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 2 10 508 99
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 2 20 518 89
+n vdd subcomp_0/totdiff3_1/mux_0/b0 subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 2 20 528 89
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an gnd 2 10 538 99
+p subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn vdd subcomp_0/totdiff3_1/diff2_1/in_c 2 20 683 195
+p subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/in_c vdd 2 20 673 195
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z vdd subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_31_39# 2 20 663 195
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_31_39# subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn 2 20 656 195
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_48_39# 2 16 646 195
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_48_39# vdd 2 16 639 195
+n subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn subcomp_0/totdiff3_1/diff2_1/in_c gnd 2 20 683 228
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z gnd subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn 2 10 664 223
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn gnd 2 10 654 223
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z vdd 2 28 611 196
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn 2 19 601 187
+p subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn vdd 2 19 591 187
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z gnd 2 14 611 222
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a_24_13# 2 13 598 221
+n subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a_24_13# subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn 2 13 591 221
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z vdd 2 28 563 196
+p gnd vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn 2 19 553 187
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn vdd 2 19 543 187
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z gnd 2 14 563 222
+n gnd gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/a_24_13# 2 13 550 221
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/a_24_13# subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn 2 13 543 221
+p subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b vdd 2 12 515 196
+p vdd vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an 2 12 503 196
+p subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn 2 12 493 196
+p subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai 2 12 483 196
+p subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai vdd 2 12 473 196
+p subcomp_0/totdiff3_1/diff2_0/in_b vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn 2 12 463 187
+n subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b gnd 2 6 515 215
+n vdd gnd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an 2 6 505 215
+n subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn 2 6 495 215
+n subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai 2 6 485 215
+n subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai gnd 2 6 474 214
+n subcomp_0/totdiff3_1/diff2_0/in_b gnd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn 2 6 463 221
+p subcomp_0/totdiff3_1/mux_0/a0 vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a 2 24 639 284
+p subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a vdd 2 16 649 284
+n subcomp_0/totdiff3_1/mux_0/a0 gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a 2 10 639 259
+n subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a gnd 2 10 649 259
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 2 27 462 281
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a0 2 27 472 281
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 2 27 482 281
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 2 27 492 281
+p gnd vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 2 26 515 283
+p gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn vdd 2 26 525 283
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 2 28 535 281
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn vdd 2 28 545 281
+p subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 2 28 565 281
+p subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a 2 28 575 281
+p vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a vdd 2 28 585 281
+p subcomp_0/totdiff3_1/diff2_0/in_b vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 2 14 596 285
+p subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn vdd 2 14 606 281
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_11_12# 2 12 462 255
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_11_12# subcomp_0/totdiff3_1/mux_0/a0 2 12 469 255
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_28_12# 2 12 479 255
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_28_12# gnd 2 12 486 255
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 2 14 498 255
+n gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 2 14 508 255
+n gnd subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 2 14 518 255
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn gnd 2 14 528 255
+n gnd gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 2 12 538 251
+n gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn gnd 2 12 548 251
+n subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_115_7# 2 13 566 250
+n subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_115_7# subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 2 13 573 250
+n subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a 2 13 583 250
+n vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd 2 13 593 255
+n subcomp_0/totdiff3_1/diff2_0/in_b gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 2 11 606 258
 p 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/o2 vdd 2 18 360 -225
 p decoder_0/b2 vdd 3_bitmux_1/mxn2v0x1_2/a_21_50# 2 16 370 -223
 p 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_2/a_21_50# 3_bitmux_1/mxn2v0x1_2/zn 2 16 377 -223
@@ -233,219 +993,815 @@ p decoder_0/d0 decoder_0/or2v0x3_0/a_48_39# vdd 2 16 115 203
 n decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z gnd 2 20 71 170
 n decoder_0/d0 gnd decoder_0/or2v0x3_0/zn 2 10 90 175
 n decoder_0/d2 decoder_0/or2v0x3_0/zn gnd 2 10 100 175
-C decoder_0/d0 vdd 14.1
-C gnd decoder_0/or2v0x3_1/z 10.3
-C decoder_1/b2 vdd 8.1
-C decoder_0/or2v0x3_3/zn gnd 9.0
-C gnd decoder_1/d6 48.5
-C decoder_0/or2v0x3_1/z decoder_0/or2v0x3_2/zn 2.0
-C 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/s 18.7
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b2 11.6
-C decoder_1/d4 gnd 76.3
-C decoder_1/b2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.6
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o1 5.0
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o1 2.3
-C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/w_n4_32# 9.3
-C vdd decoder_1/or2v0x3_7/z 11.4
-C gnd decoder_0/or2v0x3_2/zn 9.0
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/sn 9.3
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_1/sn 9.2
-C decoder_0/d6 decoder_0/b1 2.7
-C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/s 18.7
-C decoder_1/d3 vdd 28.2
-C decoder_0/or2v0x3_6/z vdd 20.6
-C gnd 3_bitmux_1/s 4.9
-C decoder_1/or2v0x3_4/zn vdd 12.7
-C 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
-C 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 2.3
-C decoder_0/b2 vdd 9.8
-C decoder_1/or2v0x3_2/zn vdd 12.7
-C decoder_0/or2v0x3_3/z vdd 12.1
-C vdd decoder_1/d0 14.1
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o2 6.3
-C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 3_bitmux_0/s 15.2
-C decoder_0/b2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 11.6
-C decoder_0/b2 decoder_1/b1 36.0
-C gnd decoder_0/d0 7.6
-C decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z 2.3
-C 3_bitmux_1/mxn2v0x1_0/zn decoder_1/b0 2.7
-C decoder_0/d6 vdd 36.3
-C decoder_1/or2v0x3_3/z decoder_1/d1 2.2
-C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_0/zn 2.3
-C decoder_1/b2 3_bitmux_0/mxn2v0x1_2/zn 2.7
-C gnd decoder_1/or2v0x3_7/z 15.6
-C decoder_1/or2v0x3_0/z decoder_1/d0 3.9
-C decoder_0/or2v0x3_8/zn vdd 12.7
-C decoder_1/or2v0x3_4/zn decoder_1/d6 2.1
-C gnd decoder_1/d3 7.6
-C decoder_0/or2v0x3_4/zn vdd 12.7
-C decoder_0/or2v0x3_6/z gnd 9.2
-C 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
-C gnd decoder_1/or2v0x3_4/zn 9.0
-C decoder_0/d1 vdd 17.9
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_1/b0 8.7
-C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/o0 5.2
-C 3_bitmux_0/mxn2v0x1_0/w_n4_32# vdd 32.2
-C decoder_1/or2v0x3_2/zn gnd 9.0
-C decoder_0/or2v0x3_3/z gnd 12.6
-C gnd decoder_1/d0 7.6
-C 3_bitmux_1/o1 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 2.3
-C decoder_0/d6 decoder_0/or2v0x3_3/zn 2.2
-C decoder_0/d6 gnd 48.5
-C vdd decoder_1/or2v0x3_6/z 20.6
-C 3_bitmux_1/o2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.3
-C decoder_1/b0 vdd 6.7
-C 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 8.9
-C decoder_1/or2v0x3_5/zn vdd 12.7
-C decoder_0/or2v0x3_8/zn gnd 9.0
+C subcomp_0/comp_0/an2v0x2_2/zn gnd 8.9
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z 17.9
 C decoder_0/or2v0x3_4/zn gnd 9.0
-C vdd decoder_1/or2v0x3_0/zn 12.7
-C decoder_0/or2v0x3_3/zn decoder_0/d1 3.7
-C decoder_1/or2v0x3_3/z vdd 12.1
-C decoder_0/d4 vdd 15.8
-C decoder_0/d1 gnd 7.6
-C decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_6/z 2.0
+C 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/w_n4_32# 9.3
+C decoder_1/b1 decoder_1/d6 2.7
+C vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 14.4
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_1/zn 9.3
+C vdd subcomp_0/comp_0/nd3v0x2_0/z 6.1
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn 8.8
+C subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# 18.7
+C subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 2.6
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn gnd 8.9
+C gnd subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 25.5
+C subcomp_0/mux_0/b2 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 6.6
+C decoder_1/or2v0x3_0/zn gnd 9.0
+C gnd subcomp_0/comp_0/an2v0x2_3/b 15.0
+C vdd subcomp_0/comp_0/an3v0x2_2/zn 4.9
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b 20.5
+C subcomp_0/mux_0/o0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 5.0
+C vdd decoder_1/d0 14.1
+C vdd decoder_0/or2v0x3_0/zn 12.7
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a gnd 20.0
+C subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/an2v0x2_0/b 2.5
+C vdd subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 22.4
+C 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C vdd 3_bitmux_0/o0 3.6
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z 24.6
+C vdd subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn 12.7
+C vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 31.6
 C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# decoder_0/b1 4.8
-C decoder_0/or2v0x3_7/zn vdd 12.7
-C decoder_1/b0 3_bitmux_1/mxn2v0x1_0/w_n4_32# 6.6
-C vdd decoder_1/d5 21.8
-C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/mxn2v0x1_0/sn 9.3
-C decoder_1/or2v0x3_0/z decoder_1/or2v0x3_0/zn 2.3
-C gnd decoder_1/or2v0x3_6/z 9.2
-C gnd decoder_1/b0 2.1
-C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/mxn2v0x1_0/zn 9.3
-C 3_bitmux_1/mxn2v0x1_2/zn decoder_1/b2 2.7
-C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_1/zn 8.9
-C vdd decoder_1/or2v0x3_1/z 19.4
-C decoder_0/or2v0x3_0/z vdd 19.2
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/sn 9.2
-C decoder_0/or2v0x3_0/z decoder_0/d2 2.2
-C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# vdd 4.8
-C decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_0/z 2.0
-C decoder_1/or2v0x3_5/zn gnd 9.0
-C decoder_0/or2v0x3_6/zn vdd 12.7
-C gnd 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 25.5
-C gnd decoder_1/or2v0x3_0/zn 9.0
-C decoder_1/d1 decoder_1/or2v0x3_3/zn 3.7
-C decoder_1/or2v0x3_3/z gnd 12.6
-C 3_bitmux_0/mxn2v0x1_0/zn decoder_1/b0 2.7
-C 3_bitmux_1/o0 vdd 3.6
-C decoder_0/d4 gnd 68.9
-C 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.9
-C decoder_1/b1 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 10.2
-C decoder_1/or2v0x3_0/z decoder_1/or2v0x3_1/z 4.6
-C decoder_0/or2v0x3_7/zn gnd 9.0
-C decoder_1/or2v0x3_1/zn vdd 12.7
-C gnd decoder_1/d5 20.2
-C decoder_0/or2v0x3_0/zn vdd 12.7
-C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/z 4.6
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/s 36.4
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/s 30.3
-C decoder_0/d5 vdd 21.8
-C decoder_0/or2v0x3_7/z vdd 11.4
-C 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_32# 5.2
-C decoder_1/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.7
-C gnd decoder_1/or2v0x3_1/z 10.3
-C decoder_0/d6 decoder_0/or2v0x3_4/zn 2.1
-C decoder_0/or2v0x3_0/z gnd 10.3
-C decoder_0/d1 decoder_0/or2v0x3_3/z 2.2
-C 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 9.2
-C decoder_1/or2v0x3_0/z decoder_1/or2v0x3_1/zn 2.0
-C gnd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 76.0
-C decoder_0/or2v0x3_6/zn gnd 9.0
-C decoder_1/d2 vdd 16.1
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# gnd 25.5
-C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/s 30.3
-C vdd 3_bitmux_0/s 5.6
-C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 9.2
-C decoder_1/or2v0x3_2/zn decoder_1/b0 2.2
-C decoder_1/or2v0x3_3/zn vdd 12.7
-C decoder_1/d1 vdd 17.9
-C 3_bitmux_1/o1 3_bitmux_1/mxn2v0x1_1/w_n4_32# 5.0
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_0/b1 4.8
-C gnd decoder_1/or2v0x3_1/zn 9.0
-C decoder_1/or2v0x3_8/zn vdd 12.7
-C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/o0 4.3
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/s 15.2
-C decoder_0/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 4.8
-C decoder_1/or2v0x3_0/z decoder_1/d2 2.2
-C 3_bitmux_1/mxn2v0x1_0/zn vdd 2.3
-C decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_6/z 2.0
-C decoder_0/or2v0x3_0/z decoder_0/d0 3.9
-C decoder_0/or2v0x3_0/zn gnd 9.0
-C decoder_0/d5 gnd 20.2
-C gnd decoder_0/or2v0x3_7/z 15.6
-C decoder_0/or2v0x3_4/z vdd 18.3
-C vdd decoder_0/b1 11.4
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o0 2.3
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# decoder_1/b2 8.7
-C gnd decoder_1/d2 23.3
-C 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 9.2
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# vdd 4.8
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# vdd 59.4
-C decoder_0/or2v0x3_5/zn vdd 12.7
-C 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4
-C 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_32# 9.3
-C 3_bitmux_0/o2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 2.3
-C gnd 3_bitmux_0/s 4.9
-C decoder_1/d6 decoder_1/or2v0x3_3/zn 2.2
-C 3_bitmux_0/mxn2v0x1_0/w_n4_32# decoder_1/b0 6.6
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_1/b1 6.6
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_1/b1 10.2
-C gnd decoder_1/or2v0x3_3/zn 9.0
-C gnd decoder_1/d1 7.6
-C decoder_1/or2v0x3_2/zn decoder_1/or2v0x3_1/z 2.0
-C decoder_1/or2v0x3_8/zn gnd 9.0
-C 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
-C vdd decoder_1/or2v0x3_6/zn 12.7
-C decoder_1/or2v0x3_4/z vdd 18.3
-C 3_bitmux_0/o0 vdd 3.6
-C decoder_0/d2 vdd 16.1
-C 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# decoder_0/b2 4.8
-C decoder_0/or2v0x3_1/zn vdd 12.7
-C vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# 59.4
-C decoder_1/b1 vdd 5.8
-C vdd decoder_0/d3 28.2
-C gnd decoder_0/or2v0x3_4/z 9.2
-C decoder_1/b1 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.6
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# gnd 76.0
-C decoder_0/or2v0x3_5/zn gnd 9.0
-C decoder_1/or2v0x3_0/z vdd 19.2
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/sn 9.2
-C vdd decoder_1/or2v0x3_7/zn 12.7
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/zn 9.3
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/a2 2.3
+C subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn gnd 11.2
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn gnd 8.9
+C vdd decoder_1/or2v0x3_7/z 11.4
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a 2.3
+C vdd subcomp_0/comp_0/an3v0x2_2/z 3.3
+C gnd subcomp_0/totdiff3_0/mux_0/s 8.3
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn gnd 8.9
+C gnd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 9.1
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn gnd 8.9
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/b2 2.7
+C vdd subcomp_0/mux_0/a1 52.8
+C decoder_0/d0 decoder_0/or2v0x3_0/z 3.9
 C vdd 3_bitmux_1/mxn2v0x1_0/w_n4_32# 32.2
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/zn 8.9
-C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/zn 8.9
-C decoder_0/or2v0x3_1/z vdd 24.1
-C decoder_0/or2v0x3_3/zn vdd 12.7
-C gnd decoder_1/or2v0x3_6/zn 9.0
-C decoder_1/d6 vdd 35.0
-C decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z 2.3
-C decoder_1/or2v0x3_4/z gnd 9.2
-C decoder_1/d4 vdd 15.8
-C gnd vdd 2.2
-C 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/o0 4.3
-C decoder_0/d2 gnd 23.3
-C decoder_1/b0 decoder_1/or2v0x3_1/z 4.7
-C decoder_0/or2v0x3_1/zn gnd 9.0
-C decoder_1/d6 decoder_1/b1 2.7
-C vdd decoder_0/or2v0x3_2/zn 14.8
-C decoder_1/b0 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 8.7
-C gnd decoder_1/b1 9.0
-C gnd decoder_0/d3 7.6
-C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/o2 2.3
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_1/b2 6.6
-C vdd 3_bitmux_1/s 5.6
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/sn 9.3
-C 3_bitmux_0/mxn2v0x1_0/zn vdd 2.3
-C decoder_1/or2v0x3_0/z gnd 10.3
-C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/s 36.4
+C decoder_0/b2 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 4.8
+C vdd decoder_0/d6 36.3
+C vdd subcomp_0/totdiff3_1/diff2_1/in_2c 34.8
+C subcomp_0/comp_0/an2v0x2_3/z gnd 20.8
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd 18.8
+C decoder_0/b2 3_bitmux_0/mxn2v0x1_1/w_n4_32# 11.6
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a 61.1
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/o1 2.3
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2.4
+C subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3.9
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd 24.9
+C vdd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn 12.7
+C subcomp_0/comp_0/an2v0x2_3/zn gnd 8.9
+C gnd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 11.9
+C vdd decoder_0/or2v0x3_3/zn 12.7
+C vdd decoder_1/d2 16.1
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z gnd 10.2
+C vdd subcomp_0/totdiff3_0/mux_0/b1 13.1
+C gnd 3_bitmux_0/s 4.9
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a 12.4
+C 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_0/w_n4_32# 18.7
+C subcomp_0/totdiff3_0/diff2_2/in_a subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn 2.2
+C vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 15.4
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# gnd 26.1
+C vdd subcomp_0/comp_0/an2v0x2_1/b 14.2
+C subcomp_0/comp_0/an2v0x2_1/z gnd 8.7
+C gnd subcomp_0/comp_0/an2v0x2_0/b 32.8
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd 19.1
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_2/sn 9.3
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/s 15.2
+C vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an 9.9
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b 20.5
+C gnd decoder_0/or2v0x3_1/z 10.3
+C gnd subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 80.2
+C subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 9.3
+C subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 36.4
+C decoder_1/d0 decoder_1/or2v0x3_0/z 3.9
+C gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z 10.2
+C vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn 14.4
+C vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz 15.8
+C subcomp_0/comp_0/nr2v0x2_1/a gnd 22.9
+C decoder_1/or2v0x3_1/zn gnd 9.0
+C subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a 2.0
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn 9.2
 C gnd decoder_1/or2v0x3_7/zn 9.0
-C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/zn 9.3
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a 59.6
+C vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz 15.8
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/a2 11.6
+C decoder_0/b1 decoder_0/d6 2.7
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/s 30.3
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a 59.6
+C decoder_1/or2v0x3_2/zn decoder_1/b0 2.2
+C vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 15.8
+C gnd subcomp_0/totdiff3_0/diff2_1/in_2c 17.5
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C decoder_1/or2v0x3_6/z decoder_1/or2v0x3_7/zn 2.0
+C 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_1/w_n4_32# 9.3
+C gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 20.0
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/b1 10.2
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a 61.1
+C subcomp_0/comp_0/an3v0x2_1/a gnd 57.3
+C vdd decoder_1/d4 15.8
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn decoder_1/b0 2.6
+C vdd subcomp_0/comp_0/an3v0x2_1/zn 4.9
+C vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 31.6
+C subcomp_0/mux_0/b2 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 8.7
+C subcomp_0/mux_0/mxn2v0x1_1/zn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C decoder_1/d2 decoder_1/or2v0x3_0/z 2.2
+C subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn gnd 11.2
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 9.3
+C gnd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 18.8
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a decoder_1/b0 2.0
+C subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3.3
+C subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 6.6
+C subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn gnd 11.9
+C vdd decoder_0/d5 21.8
+C subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 30.3
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C subcomp_0/comp_0/an2v0x2_4/zn gnd 8.9
+C decoder_1/or2v0x3_1/z decoder_1/b0 4.7
+C decoder_1/b1 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.6
+C subcomp_0/totdiff3_0/diff2_1/in_c subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 3.1
+C subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 6.6
+C subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/an3v0x2_0/zn 2.5
+C subcomp_0/totdiff3_1/mux_0/a0 subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 4.1
+C decoder_1/or2v0x3_8/zn gnd 9.0
+C subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd 21.6
+C vdd 3_bitmux_0/mxn2v0x1_1/w_n4_32# 59.4
+C vdd subcomp_0/totdiff3_1/mux_0/b1 13.1
+C subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/an3v0x2_2/w_n4_32# 8.3
+C gnd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 11.2
+C gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b 5.9
+C gnd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a 25.9
+C subcomp_0/mux_0/a0 subcomp_0/comp_0/an2v0x2_0/b 4.9
+C subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# 4.8
+C vdd subcomp_0/comp_0/an2v0x2_1/zn 8.8
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 4.5
+C subcomp_0/mux_0/a0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn gnd 13.9
+C subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 4.1
+C subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/a2 4.5
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/zn 9.3
+C vdd decoder_1/b0 57.1
+C decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a 2.0
+C gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a 25.9
+C vdd subcomp_0/mux_0/a2 27.5
+C decoder_1/or2v0x3_6/z gnd 9.2
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z 17.9
+C vdd subcomp_0/totdiff3_0/mux_0/b0 28.1
+C vdd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 27.4
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a2 4.1
+C subcomp_0/totdiff3_0/diff2_2/in_2c gnd 17.8
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 9.3
+C vdd subcomp_0/totdiff3_0/diff2_0/in_a 24.6
+C vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 31.6
+C vdd subcomp_0/totdiff3_0/diff2_1/in_a 24.6
+C vdd decoder_0/d1 17.9
+C subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/b0 18.4
+C subcomp_0/comp_0/an2v0x2_0/b subcomp_0/comp_0/an3v0x2_2/b 2.5
+C decoder_0/d3 gnd 7.6
+C vdd subcomp_0/totdiff3_1/diff2_1/in_c 39.6
+C decoder_0/b2 vdd 34.8
+C subcomp_0/comp_0/an3v0x2_1/a subcomp_0/mux_0/a0 6.8
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# gnd 76.8
+C subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn gnd 11.2
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z 24.6
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z gnd 12.8
+C vdd subcomp_0/comp_0/an2v0x2_2/z 9.4
+C decoder_1/b2 gnd 62.8
+C decoder_1/or2v0x3_2/zn decoder_1/or2v0x3_1/z 2.0
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/b2 2.3
+C decoder_0/b1 3_bitmux_0/mxn2v0x1_1/w_n4_32# 13.4
+C gnd subcomp_0/comp_0/an3v0x2_0/zn 8.8
+C subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/mux_0/b1 39.4
+C decoder_0/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 5.7
 C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_1/zn 8.9
+C subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b1 3.9
+C subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an gnd 6.8
+C subcomp_0/mux_0/a1 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 13.4
+C subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/mux_0/s 15.2
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b 21.7
+C subcomp_0/comp_0/an3v0x2_3/zn subcomp_0/mux_0/a1 3.6
+C subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 11.6
+C vdd decoder_1/or2v0x3_2/zn 12.7
+C vdd subcomp_0/totdiff3_1/diff2_1/in_b 50.3
+C subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 4.6
+C vdd 3_bitmux_1/s 5.6
+C subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/an3v0x2_2/b 5.2
+C decoder_0/d4 gnd 68.9
+C subcomp_0/comp_0/an3v0x2_1/a subcomp_0/comp_0/or3v0x2_0/zn 4.1
+C decoder_0/b2 decoder_0/b1 2.3
+C vdd subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn 12.7
+C gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 25.5
+C decoder_0/d1 decoder_0/or2v0x3_3/z 2.2
+C subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 4.3
+C subcomp_0/totdiff3_1/diff2_0/in_b gnd 60.8
+C vdd decoder_0/or2v0x3_1/zn 12.7
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/o2 2.3
+C vdd subcomp_0/totdiff3_1/diff2_2/in_c 40.7
+C subcomp_0/comp_0/an3v0x2_2/zn subcomp_0/comp_0/nr3v0x2_0/a 2.1
+C vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 15.4
+C subcomp_0/mux_0/a0 gnd 62.5
+C subcomp_0/mux_0/o0 subcomp_0/mux_0/mxn2v0x1_0/sn 4.3
+C vdd subcomp_0/comp_0/an3v0x2_0/z 2.3
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd 13.9
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2.4
+C subcomp_0/totdiff3_1/mux_0/a2 gnd 14.9
+C vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 4.4
+C vdd decoder_1/or2v0x3_6/zn 12.7
+C subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 4.3
+C vdd subcomp_0/totdiff3_0/mux_0/a0 35.4
+C gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 8.9
+C vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 20.7
+C subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 9.2
+C subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b1 2.7
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a 12.4
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd 10.2
+C subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/b2 2.7
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_2/zn 9.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/a0 4.8
+C decoder_1/b1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2.6
+C gnd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn 9.0
+C gnd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 78.2
+C vdd decoder_1/or2v0x3_1/z 19.4
+C subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.7
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn 8.8
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn gnd 8.9
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn 8.8
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/b0 8.7
+C subcomp_0/mux_0/a0 subcomp_0/comp_0/an3v0x2_0/zn 4.6
+C gnd subcomp_0/comp_0/an3v0x2_2/b 23.0
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn 10.3
+C subcomp_0/comp_0/or3v0x2_0/zn gnd 10.9
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/mux_0/a0 8.7
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2.4
+C subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b1 3.9
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b 20.5
+C vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 59.4
+C subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/s 30.3
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd 11.9
+C gnd subcomp_0/totdiff3_0/mux_0/a2 14.9
+C subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 2.4
+C gnd subcomp_0/mux_0/b2 11.2
+C subcomp_0/totdiff3_1/mux_0/b1 subcomp_0/totdiff3_1/mux_0/a1 39.4
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/a1 5.0
+C vdd subcomp_0/totdiff3_1/mux_0/a0 35.4
+C gnd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an 6.8
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/b2 8.7
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_2/b 21.4
+C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 3_bitmux_0/mxn2v0x1_2/zn 8.9
+C vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 9.9
+C vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 18.9
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/b1 6.6
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z 24.6
+C vdd subcomp_0/totdiff3_1/mux_0/b0 30.6
+C vdd decoder_1/d5 21.8
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z gnd 2.5
+C decoder_0/or2v0x3_4/zn decoder_0/d6 2.1
+C vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 17.4
+C subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an gnd 5.5
+C subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/mxn2v0x1_1/zn 8.9
+C subcomp_0/mux_0/a2 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 11.6
+C decoder_1/or2v0x3_1/z decoder_1/or2v0x3_0/z 4.6
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn gnd 8.9
+C vdd decoder_0/b1 37.7
+C vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 14.4
+C vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 4.4
+C subcomp_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C vdd decoder_1/or2v0x3_3/z 12.1
+C vdd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 25.5
+C vdd decoder_0/or2v0x3_3/z 12.1
+C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/z 4.6
+C decoder_1/b2 3_bitmux_1/mxn2v0x1_2/sn 2.5
+C vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn 4.7
+C subcomp_0/mux_0/b0 gnd 9.4
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd 5.9
+C vdd decoder_0/d0 14.1
+C vdd decoder_1/d6 35.0
+C vdd decoder_0/or2v0x3_4/z 18.3
+C vdd decoder_1/or2v0x3_0/z 19.2
+C vdd decoder_1/or2v0x3_4/z 18.3
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn gnd 9.1
+C vdd subcomp_0/totdiff3_0/diff2_2/in_a 24.6
+C vdd subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn 12.7
+C subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# 30.3
+C gnd decoder_0/or2v0x3_5/zn 9.0
+C subcomp_0/comp_0/or3v0x2_0/zn subcomp_0/mux_0/a0 3.3
+C gnd subcomp_0/comp_0/nr3v0x2_0/z 21.2
+C vdd decoder_0/or2v0x3_7/z 11.4
+C gnd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 11.9
+C vdd subcomp_0/comp_0/nd3v0x2_0/c 5.0
+C decoder_0/or2v0x3_8/zn gnd 9.0
+C gnd subcomp_0/mux_0/s 4.9
+C vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 18.9
+C gnd subcomp_0/comp_0/nd3v0x2_0/a 21.1
+C subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b1 2.7
+C decoder_1/b1 gnd 69.5
+C decoder_1/b1 3_bitmux_1/mxn2v0x1_1/sn 2.5
+C subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn gnd 6.7
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/a1 4.8
+C decoder_0/or2v0x3_6/zn gnd 9.0
+C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/o0 4.3
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn decoder_1/b2 2.6
+C gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z 12.8
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o1 2.3
+C vdd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 17.7
+C decoder_0/b2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 11.6
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z 17.9
+C vdd subcomp_0/totdiff3_1/diff2_2/in_b 50.3
+C subcomp_0/totdiff3_1/diff2_1/in_b subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 2.0
+C subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 36.4
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/mux_0/b1 2.3
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nr3v0x2_0/z 21.8
+C subcomp_0/comp_0/nr3v0x2_0/a subcomp_0/mux_0/a2 2.5
+C vdd subcomp_0/totdiff3_0/diff2_2/in_c 40.7
+C vdd subcomp_0/totdiff3_1/mux_0/s 7.9
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd 24.9
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn gnd 8.9
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/o0 2.3
+C subcomp_0/mux_0/a1 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C decoder_1/b1 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 10.2
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a 2.3
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 9.2
+C decoder_0/d2 gnd 23.3
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn 11.0
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nd3v0x2_0/a 6.2
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z gnd 12.8
+C vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an 9.9
+C gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn 10.8
+C vdd subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 25.5
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/a2 6.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_1/mux_0/a1 13.4
+C vdd subcomp_0/totdiff3_0/mux_0/a1 38.7
+C 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_1/w_n4_32# 9.3
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_1/sn 9.2
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# gnd 76.0
+C vdd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 25.5
+C gnd decoder_0/or2v0x3_0/z 10.3
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/s 36.4
+C vdd subcomp_0/totdiff3_1/mux_0/a1 38.7
+C subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn gnd 7.5
+C subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn gnd 9.0
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn 10.3
+C vdd decoder_0/or2v0x3_6/z 20.6
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/b1 5.0
+C 3_bitmux_0/mxn2v0x1_0/zn decoder_1/b0 2.7
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn 8.8
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd 10.2
+C subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn gnd 6.7
+C vdd subcomp_0/mux_0/b1 14.0
+C subcomp_0/comp_0/nd3v0x2_0/z gnd 5.3
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn 8.8
+C subcomp_0/totdiff3_0/diff2_2/in_c subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 3.1
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn gnd 8.9
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_0/zn 8.9
+C subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 6.6
+C decoder_1/b1 3_bitmux_1/mxn2v0x1_1/zn 2.7
+C vdd subcomp_0/totdiff3_0/mux_0/b2 3.1
+C vdd subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 59.4
+C subcomp_0/mux_0/mxn2v0x1_1/sn subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C subcomp_0/mux_0/a2 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 4.8
+C vdd decoder_1/or2v0x3_3/zn 12.7
+C vdd decoder_1/d3 28.2
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn 8.8
+C vdd subcomp_0/totdiff3_1/mux_0/b2 3.1
+C vdd subcomp_0/comp_0/an3v0x2_3/zn 10.7
+C vdd subcomp_0/comp_0/an2v0x2_4/z 10.7
+C subcomp_0/comp_0/an3v0x2_2/zn gnd 8.8
+C gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b 7.3
+C subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a1 4.6
+C vdd decoder_1/or2v0x3_4/zn 12.7
+C decoder_1/d0 gnd 7.6
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 12.4
+C decoder_0/or2v0x3_0/zn gnd 9.0
+C vdd subcomp_0/comp_0/or3v0x2_1/zn 9.0
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn subcomp_0/totdiff3_0/diff2_1/in_a 2.2
+C gnd subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 2.6
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/s 15.2
+C 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_32# 5.2
+C vdd subcomp_0/comp_0/an2v0x2_0/zn 8.8
+C subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn gnd 9.0
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z gnd 12.8
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd 18.8
+C subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn subcomp_0/totdiff3_1/diff2_2/in_c 3.1
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a 2.3
+C 3_bitmux_0/o0 3_bitmux_0/mxn2v0x1_0/w_n4_32# 5.2
+C vdd decoder_0/or2v0x3_2/zn 14.8
+C gnd decoder_1/or2v0x3_7/z 15.6
+C vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 15.4
+C subcomp_0/comp_0/nd3v0x2_0/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# 5.2
+C subcomp_0/comp_0/an3v0x2_2/z gnd 10.7
+C gnd subcomp_0/mux_0/a1 33.3
+C gnd subcomp_0/totdiff3_1/diff2_1/in_2c 17.5
+C vdd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 17.7
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_2/zn 5.8
+C subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 2.7
+C gnd decoder_0/d6 48.5
+C vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# 59.4
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd 25.9
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_1/zn 8.9
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/s 36.4
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn decoder_1/b1 4.3
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o0 2.3
+C gnd subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn 9.0
+C subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 3.9
+C decoder_0/or2v0x3_3/zn gnd 9.0
+C decoder_1/d2 gnd 23.3
+C vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 27.4
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 2.3
+C vdd subcomp_0/totdiff3_0/diff2_1/in_c 39.6
+C subcomp_0/totdiff3_0/mux_0/b1 gnd 17.2
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 20.0
+C 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/mxn2v0x1_0/zn 9.3
+C decoder_1/or2v0x3_3/zn decoder_1/d6 2.2
+C subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn gnd 9.1
+C subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# 5.2
+C subcomp_0/comp_0/an2v0x2_1/b gnd 5.9
+C vdd subcomp_0/comp_0/nr3v0x2_0/a 4.0
+C vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn 4.4
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a 12.4
+C vdd decoder_1/or2v0x3_5/zn 12.7
+C subcomp_0/comp_0/an3v0x2_2/z subcomp_0/comp_0/an3v0x2_2/w_n4_32# 21.1
+C subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 3.3
+C vdd subcomp_0/totdiff3_1/diff2_2/in_2c 33.2
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 9.3
+C decoder_1/b2 3_bitmux_1/mxn2v0x1_2/zn 2.7
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 8.9
+C decoder_1/or2v0x3_4/zn decoder_1/d6 2.1
+C subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an gnd 5.5
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b gnd 5.9
+C subcomp_0/totdiff3_1/diff2_1/in_c subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 3.1
+C gnd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn 7.5
+C subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz gnd 24.9
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C vdd decoder_1/d1 17.9
+C subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz gnd 24.9
+C vdd subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 59.4
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4
+C subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/mux_0/b0 3.9
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a gnd 25.9
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a gnd 25.9
+C vdd decoder_0/or2v0x3_7/zn 12.7
+C gnd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 25.5
+C decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a 2.0
+C subcomp_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 4.3
+C subcomp_0/mux_0/a0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 11.6
+C vdd subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn 14.4
+C subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 3.3
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a gnd 25.9
+C vdd subcomp_0/comp_0/an3v0x2_3/z 15.4
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z 2.4
+C vdd 3_bitmux_0/mxn2v0x1_0/zn 2.3
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C vdd subcomp_0/comp_0/an2v0x2_2/zn 8.8
+C vdd decoder_0/or2v0x3_4/zn 12.7
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/o1 5.0
+C decoder_1/d4 gnd 76.3
+C subcomp_0/comp_0/an3v0x2_1/zn gnd 8.8
+C subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 4.5
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn 8.8
+C subcomp_0/totdiff3_0/mux_0/s subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 18.7
+C gnd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 19.1
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 9.3
+C vdd decoder_1/or2v0x3_0/zn 12.7
+C vdd subcomp_0/comp_0/an2v0x2_3/b 13.7
+C gnd decoder_0/d5 20.2
+C subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b0 2.7
+C subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3.3
+C subcomp_0/mux_0/a1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 9.3
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/o2 6.3
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a 13.1
+C subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 2.6
+C decoder_1/d1 decoder_1/or2v0x3_3/z 2.2
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# gnd 26.0
+C subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 4.5
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# gnd 25.5
+C subcomp_0/comp_0/an2v0x2_1/b subcomp_0/mux_0/a0 2.2
+C subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 4.5
+C subcomp_0/totdiff3_1/mux_0/b1 gnd 17.2
+C vdd subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 17.7
+C subcomp_0/comp_0/an2v0x2_1/zn gnd 8.9
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn 8.8
+C subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 4.3
+C 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/mxn2v0x1_0/w_n4_32# 9.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn subcomp_0/totdiff3_1/mux_0/b0 2.7
+C decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z 2.3
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/zn 9.3
+C subcomp_0/totdiff3_0/mux_0/b1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 10.2
+C subcomp_0/mux_0/b1 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 6.6
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn subcomp_0/totdiff3_0/mux_0/a0 4.1
+C vdd subcomp_0/totdiff3_0/mux_0/s 7.9
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn 8.8
+C subcomp_0/comp_0/an3v0x2_1/zn subcomp_0/comp_0/an3v0x2_2/w_n4_32# 5.8
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn 8.8
+C gnd decoder_1/b0 62.9
+C vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 15.4
+C decoder_1/b0 3_bitmux_0/mxn2v0x1_0/w_n4_32# 6.6
+C gnd subcomp_0/mux_0/a2 35.4
+C subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd 10.2
+C subcomp_0/totdiff3_0/mux_0/b0 gnd 10.9
+C vdd subcomp_0/comp_0/an2v0x2_3/z 9.1
+C subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd 21.6
+C vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 31.6
+C decoder_1/b2 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 9.4
+C vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 15.8
+C subcomp_0/totdiff3_0/diff2_0/in_a gnd 28.0
+C decoder_1/b2 3_bitmux_0/mxn2v0x1_1/w_n4_32# 6.6
+C gnd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 18.8
+C vdd subcomp_0/comp_0/an2v0x2_3/zn 8.8
+C gnd decoder_0/d1 7.6
+C vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 4.4
+C subcomp_0/totdiff3_0/diff2_1/in_a gnd 27.8
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/sn 9.2
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z 17.9
+C 3_bitmux_1/mxn2v0x1_0/zn decoder_1/b0 2.7
+C subcomp_0/totdiff3_1/diff2_1/in_c gnd 34.1
+C decoder_0/b2 gnd 30.9
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn 9.2
+C vdd 3_bitmux_0/s 5.6
+C decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z 2.3
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_1/b0 8.7
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd 12.8
+C subcomp_0/comp_0/an2v0x2_2/z gnd 11.1
+C vdd subcomp_0/comp_0/an2v0x2_1/z 22.0
+C decoder_1/b1 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 11.4
+C subcomp_0/mux_0/o0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C vdd subcomp_0/comp_0/an2v0x2_0/b 49.9
+C decoder_1/or2v0x3_0/zn decoder_1/or2v0x3_0/z 2.3
+C vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 31.6
+C vdd decoder_0/or2v0x3_1/z 24.1
+C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 3_bitmux_0/s 15.2
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/mux_0/a2 12.2
+C subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 6.6
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z 17.9
+C gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b 7.3
+C decoder_0/b1 subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn 2.2
+C vdd decoder_1/or2v0x3_1/zn 12.7
+C vdd subcomp_0/comp_0/nr2v0x2_1/a 7.1
+C subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 2.7
+C vdd decoder_1/or2v0x3_7/zn 12.7
+C decoder_1/or2v0x3_2/zn gnd 9.0
+C subcomp_0/totdiff3_1/diff2_1/in_b gnd 60.5
+C vdd subcomp_0/totdiff3_0/diff2_1/in_2c 34.0
+C subcomp_0/mux_0/o1 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 5.0
+C gnd 3_bitmux_1/s 4.9
+C subcomp_0/mux_0/s subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 18.7
+C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 9.2
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 12.4
+C decoder_0/d2 decoder_0/or2v0x3_0/z 2.2
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 13.4
+C vdd subcomp_0/comp_0/an3v0x2_1/a 72.4
+C subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn gnd 9.0
+C gnd decoder_0/or2v0x3_1/zn 9.0
+C subcomp_0/totdiff3_1/diff2_2/in_c gnd 35.0
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# gnd 76.2
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn gnd 9.1
+C gnd subcomp_0/comp_0/an3v0x2_0/z 36.9
+C decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_6/z 2.0
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn decoder_1/b0 4.3
+C gnd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 15.0
+C subcomp_0/totdiff3_0/mux_0/a0 gnd 14.9
+C gnd decoder_1/or2v0x3_6/zn 9.0
+C subcomp_0/mux_0/o2 subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 6.3
+C vdd subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 18.7
+C vdd subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 31.6
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 20.0
+C vdd subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 18.9
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 4.5
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/b2 6.6
+C decoder_1/d1 decoder_1/or2v0x3_3/zn 3.7
+C vdd subcomp_0/comp_0/an2v0x2_4/zn 8.8
+C subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 2.7
+C decoder_1/or2v0x3_1/z gnd 10.3
+C vdd 3_bitmux_1/o0 3.6
+C subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 4.1
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn gnd 8.9
+C subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.7
+C subcomp_0/mux_0/mxn2v0x1_0/zn subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_0/mux_0/a2 4.8
+C vdd decoder_1/or2v0x3_8/zn 12.7
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn gnd 8.9
+C vdd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 25.5
+C vdd subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 17.7
+C vdd subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a 59.6
+C subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b 20.5
+C decoder_0/b2 subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 2.2
+C gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn 8.9
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b gnd 5.9
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/an3v0x2_0/z 9.5
+C decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z 2.3
+C decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_0/z 2.0
+C subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn vdd 18.9
+C subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 4.5
+C vdd gnd 122.9
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a 59.6
+C vdd 3_bitmux_0/mxn2v0x1_0/w_n4_32# 32.8
+C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/w_n4_32# 9.3
+C vdd decoder_1/or2v0x3_6/z 20.6
+C subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3.3
+C subcomp_0/comp_0/nr2v0x2_1/a subcomp_0/comp_0/nd3v0x2_0/c 3.8
+C vdd subcomp_0/totdiff3_0/diff2_2/in_2c 33.2
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/sn 9.2
+C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# gnd 24.8
+C subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_1/mux_0/a0 4.6
+C subcomp_0/totdiff3_1/mux_0/a0 gnd 14.9
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C vdd decoder_0/d3 28.2
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 8.9
+C vdd 3_bitmux_1/mxn2v0x1_0/zn 2.3
+C subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# 15.2
+C vdd 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C vdd subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 18.7
+C subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an gnd 5.5
+C subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn gnd 11.9
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z 24.6
+C vdd decoder_1/b2 58.4
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z gnd 12.8
+C gnd subcomp_0/totdiff3_1/mux_0/b0 10.9
+C vdd subcomp_0/comp_0/an3v0x2_0/zn 10.7
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o2 6.3
+C decoder_1/d5 gnd 20.2
+C vdd subcomp_0/comp_0/an3v0x2_2/w_n4_32# 88.5
+C subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn gnd 9.1
+C vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 9.9
+C subcomp_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/a0 2.3
+C subcomp_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 5.1
+C subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a0 4.6
+C decoder_1/b2 3_bitmux_0/mxn2v0x1_2/zn 2.7
+C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# decoder_1/b2 8.7
+C gnd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 6.7
+C decoder_0/b1 gnd 29.5
+C subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn gnd 11.9
+C subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 2.0
+C decoder_1/or2v0x3_3/z gnd 12.6
+C subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an gnd 21.6
+C gnd decoder_0/or2v0x3_3/z 12.6
+C subcomp_0/totdiff3_0/mux_0/a0 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C vdd decoder_0/d4 15.8
+C subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn gnd 15.0
+C subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn subcomp_0/totdiff3_1/mux_0/b0 2.7
+C decoder_0/d0 gnd 7.6
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o1 5.0
+C decoder_1/d6 gnd 48.5
+C gnd decoder_0/or2v0x3_4/z 9.2
+C decoder_1/or2v0x3_0/z gnd 10.3
+C decoder_1/or2v0x3_4/z gnd 9.2
+C subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn gnd 9.0
+C subcomp_0/totdiff3_0/diff2_2/in_a gnd 27.8
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 9.3
+C subcomp_0/mux_0/o0 subcomp_0/mux_0/a0 2.3
+C vdd subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 16.3
+C subcomp_0/mux_0/b1 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 10.2
+C subcomp_0/totdiff3_1/diff2_0/in_b vdd 50.8
+C subcomp_0/totdiff3_1/mux_0/b2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# 8.7
+C decoder_0/or2v0x3_7/z gnd 15.6
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_0/b1 4.8
+C vdd subcomp_0/mux_0/a0 43.3
+C decoder_1/b1 3_bitmux_0/mxn2v0x1_1/w_n4_32# 6.6
+C subcomp_0/totdiff3_1/diff2_2/in_b subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 4.3
+C subcomp_0/totdiff3_1/mux_0/a2 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 11.6
+C gnd subcomp_0/comp_0/nd3v0x2_0/c 18.9
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C vdd subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 18.9
+C vdd subcomp_0/totdiff3_1/mux_0/a2 36.7
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 8.8
+C subcomp_0/mux_0/o2 subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 2.3
+C gnd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 11.9
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 9.3
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z 17.9
+C vdd subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn 12.7
+C decoder_0/or2v0x3_3/zn decoder_0/d6 2.2
+C vdd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn 8.8
+C subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn gnd 11.2
+C subcomp_0/mux_0/mxn2v0x1_2/sn subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 9.2
+C gnd subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z 10.2
+C subcomp_0/totdiff3_1/diff2_2/in_b gnd 60.5
+C decoder_0/or2v0x3_2/zn decoder_0/or2v0x3_1/z 2.0
+C subcomp_0/totdiff3_1/mux_0/a1 subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 4.1
+C vdd subcomp_0/comp_0/an3v0x2_2/b 39.7
+C subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 2.4
+C subcomp_0/totdiff3_0/diff2_2/in_c gnd 35.0
+C subcomp_0/totdiff3_1/diff2_0/in_b subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 2.6
+C decoder_0/b2 decoder_1/b1 36.0
+C subcomp_0/totdiff3_1/mux_0/s gnd 8.3
+C vdd subcomp_0/comp_0/or3v0x2_0/zn 9.0
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nd3v0x2_0/c 5.7
+C decoder_1/b2 subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 4.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/mux_0/b2 6.3
+C vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 18.9
+C 3_bitmux_1/mxn2v0x1_0/sn decoder_1/b0 2.5
+C vdd subcomp_0/totdiff3_0/mux_0/a2 36.7
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn gnd 10.8
+C vdd subcomp_0/mux_0/b2 11.8
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# subcomp_0/totdiff3_0/mux_0/s 36.4
+C subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an gnd 5.5
+C subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an gnd 21.6
+C subcomp_0/mux_0/o1 subcomp_0/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C subcomp_0/totdiff3_0/mux_0/a1 gnd 15.3
+C subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd 21.6
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# decoder_1/b0 9.4
+C gnd subcomp_0/totdiff3_1/mux_0/a1 15.3
+C subcomp_0/totdiff3_0/diff2_0/in_a subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn 2.2
+C vdd subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an 9.9
+C gnd subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn 8.9
+C subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an subcomp_0/totdiff3_0/mux_0/b2 3.9
+C gnd decoder_0/or2v0x3_6/z 9.2
+C subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn subcomp_0/totdiff3_0/mux_0/b2 2.7
+C subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz 2.4
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn gnd 8.9
+C gnd subcomp_0/mux_0/b1 12.7
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn gnd 8.9
+C vdd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z 2.4
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 8.9
+C vdd subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 9.9
+C gnd subcomp_0/totdiff3_0/mux_0/b2 11.9
+C decoder_1/or2v0x3_3/zn gnd 9.0
+C gnd decoder_1/d3 7.6
+C vdd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn 8.8
+C subcomp_0/totdiff3_1/mux_0/b2 gnd 11.9
+C gnd subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn 8.9
+C vdd subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# 21.4
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn 8.9
+C subcomp_0/comp_0/an3v0x2_3/zn gnd 8.8
+C subcomp_0/comp_0/an2v0x2_4/z gnd 9.8
+C 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/o0 4.3
+C decoder_1/or2v0x3_4/zn gnd 9.0
+C gnd subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 20.0
+C gnd subcomp_0/comp_0/or3v0x2_1/zn 10.9
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b 20.5
+C vdd subcomp_0/mux_0/b0 13.2
+C subcomp_0/comp_0/an2v0x2_0/zn gnd 8.9
+C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 3_bitmux_0/o2 2.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/a0 11.6
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/zn 8.9
+C vdd subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 15.4
+C decoder_0/or2v0x3_2/zn gnd 9.0
+C vdd decoder_0/or2v0x3_5/zn 12.7
+C subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn gnd 9.1
+C vdd subcomp_0/comp_0/nr3v0x2_0/z 8.7
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/s 30.3
+C subcomp_0/totdiff3_1/mux_0/s subcomp_0/totdiff3_1/mux_0/a2 4.5
+C subcomp_0/mux_0/b0 subcomp_0/totdiff3_1/mux_0/a0 2.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# subcomp_0/totdiff3_1/mux_0/b0 6.6
+C vdd subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 4.4
+C vdd decoder_0/or2v0x3_8/zn 12.7
+C vdd subcomp_0/mux_0/s 4.5
+C subcomp_0/mux_0/a1 subcomp_0/mux_0/a2 10.0
+C 3_bitmux_1/mxn2v0x1_0/w_n4_32# decoder_1/b0 6.6
+C gnd subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 11.2
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/mxn2v0x1_1/sn 9.3
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 9.3
+C vdd subcomp_0/comp_0/nd3v0x2_0/a 9.6
+C subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn subcomp_0/totdiff3_0/mux_0/a2 4.6
+C vdd subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn 14.4
+C vdd decoder_1/b1 56.1
+C decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_0/z 2.0
+C vdd decoder_0/or2v0x3_6/zn 12.7
+C subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an gnd 21.6
+C subcomp_0/totdiff3_0/diff2_1/in_c gnd 34.1
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z 24.6
+C subcomp_0/totdiff3_0/mux_0/b0 subcomp_0/totdiff3_0/mux_0/b1 18.4
+C subcomp_0/comp_0/nr3v0x2_0/a gnd 19.9
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 2.3
+C subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn gnd 11.9
+C gnd subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a 20.0
+C subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C decoder_1/or2v0x3_5/zn gnd 9.0
+C subcomp_0/mux_0/a0 subcomp_0/mux_0/b1 3.3
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_1/b2 6.6
+C subcomp_0/totdiff3_1/diff2_2/in_2c gnd 17.8
+C vdd subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 15.8
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn 8.8
+C decoder_0/or2v0x3_3/zn decoder_0/d1 3.7
+C vdd decoder_0/d2 16.1
+C subcomp_0/mux_0/b0 subcomp_0/mux_0/mxn2v0x1_0/zn 2.7
+C decoder_1/d1 gnd 7.6
+C subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 3.3
+C vdd subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z 24.6
+C subcomp_0/mux_0/mxn2v0x1_2/zn subcomp_0/mux_0/mxn2v0x1_2/w_n4_n4# 8.9
+C vdd subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn 8.8
+C gnd decoder_0/or2v0x3_7/zn 9.0
+C subcomp_0/totdiff3_0/mux_0/a1 subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 4.6
+C subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn gnd 6.7
+C vdd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 4.8
+C vdd decoder_0/or2v0x3_0/z 19.2
+C 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/s 18.7
+C subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 9.3
+C subcomp_0/mux_0/mxn2v0x1_0/sn subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 9.3
+C vdd subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 14.4
+C subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn vdd 12.7
+C subcomp_0/comp_0/an3v0x2_2/w_n4_32# subcomp_0/comp_0/nr3v0x2_0/a 15.0
+C subcomp_0/comp_0/an3v0x2_3/z gnd 10.6
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z gnd 2.5
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 2.3
+C gnd GND 991.2
+R gnd 45761
 R decoder_0/or2v0x3_0/a_48_39# 191
 R decoder_0/or2v0x3_0/a_31_39# 238
 C decoder_0/d2 GND 12.7
@@ -497,11 +1853,7 @@ R 3_bitmux_0/mxn2v0x1_0/a_38_12# 43
 R 3_bitmux_0/mxn2v0x1_0/a_21_12# 43
 R 3_bitmux_0/mxn2v0x1_0/a_38_50# 191
 R 3_bitmux_0/mxn2v0x1_0/a_21_50# 191
-C vdd GND 531.0
-R vdd 183969
 R 3_bitmux_0/o0 285
-C decoder_1/b0 GND 14.5
-R decoder_1/b0 1689
 R 3_bitmux_0/mxn2v0x1_0/sn 743
 C 3_bitmux_0/s GND 18.7
 R 3_bitmux_0/s 5297
@@ -509,28 +1861,22 @@ R 3_bitmux_0/mxn2v0x1_0/zn 856
 R 3_bitmux_0/mxn2v0x1_0/w_n4_32# 4100
 R 3_bitmux_0/mxn2v0x1_1/a_38_12# 43
 R 3_bitmux_0/mxn2v0x1_1/a_21_12# 43
-C gnd GND 74.5
-R gnd 11091
 R 3_bitmux_0/mxn2v0x1_1/a_38_50# 191
 R 3_bitmux_0/mxn2v0x1_1/a_21_50# 191
 C 3_bitmux_0/o1 GND 2.3
 R 3_bitmux_0/o1 284
-C decoder_1/b1 GND 12.8
-R decoder_1/b1 1689
+C decoder_1/b1 GND 15.9
+R decoder_1/b1 6163
 R 3_bitmux_0/mxn2v0x1_1/sn 743
-C decoder_0/b1 GND 60.3
-R decoder_0/b1 3572
 R 3_bitmux_0/mxn2v0x1_1/zn 856
 R 3_bitmux_0/mxn2v0x1_2/a_38_12# 43
 R 3_bitmux_0/mxn2v0x1_2/a_21_12# 43
 R 3_bitmux_0/mxn2v0x1_2/a_38_50# 191
 R 3_bitmux_0/mxn2v0x1_2/a_21_50# 191
 R 3_bitmux_0/o2 285
-C decoder_1/b2 GND 30.0
-R decoder_1/b2 1691
+C decoder_1/b2 GND 75.1
+R decoder_1/b2 6168
 R 3_bitmux_0/mxn2v0x1_2/sn 743
-C decoder_0/b2 GND 50.9
-R decoder_0/b2 3001
 R 3_bitmux_0/mxn2v0x1_2/zn 856
 R 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3063
 R decoder_1/or2v0x3_0/a_48_39# 191
@@ -606,3 +1952,393 @@ R 3_bitmux_1/o2 285
 R 3_bitmux_1/mxn2v0x1_2/sn 743
 R 3_bitmux_1/mxn2v0x1_2/zn 856
 R 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3063
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_115_7# 69
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_28_12# 64
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/a_11_12# 64
+R subcomp_0/totdiff3_1/diff2_0/in_b 4427
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/bn 1548
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/iz 2485
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/cn 2938
+R subcomp_0/totdiff3_1/diff2_0/xor3v1x2_0/zn 2183
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a 2352
+R subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/ai 143
+R subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/an 562
+R subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/bn 779
+R subcomp_0/totdiff3_1/diff2_0/xnr2v8x05_0/zn 574
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/a_24_13# 69
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b GND 2.9
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/b 887
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/zn 927
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a_24_13# 69
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/a 1822
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/zn 927
+R subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_48_39# 191
+R subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/a_31_39# 238
+C subcomp_0/totdiff3_1/diff2_1/in_c GND 37.1
+R subcomp_0/totdiff3_1/diff2_1/in_c 3075
+C subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z GND 5.0
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_0/z 1225
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_1/z 1416
+R subcomp_0/totdiff3_1/diff2_0/or2v0x3_0/zn 1208
+R subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_30_13# 69
+R subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/a_13_13# 69
+R subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/an 2529
+R subcomp_0/totdiff3_1/diff2_0/xor2v2x2_0/bn 1969
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/a_24_13# 69
+R subcomp_0/totdiff3_1/diff2_0/an2v0x2_2/zn 927
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_115_7# 69
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_28_12# 64
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/a_11_12# 64
+R subcomp_0/totdiff3_1/diff2_1/in_b 4427
+C decoder_0/b1 GND 92.2
+R decoder_0/b1 4974
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/bn 1548
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/iz 2485
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/cn 2938
+R subcomp_0/totdiff3_1/diff2_1/xor3v1x2_0/zn 2183
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a 2352
+C subcomp_0/totdiff3_1/mux_0/a1 GND 28.9
+R subcomp_0/totdiff3_1/mux_0/a1 4259
+R subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/ai 143
+R subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/an 562
+R subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/bn 779
+R subcomp_0/totdiff3_1/diff2_1/xnr2v8x05_0/zn 574
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/a_24_13# 69
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b GND 2.9
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/b 887
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/zn 927
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a_24_13# 69
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/a 1822
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/zn 927
+R subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_48_39# 191
+R subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/a_31_39# 238
+C subcomp_0/totdiff3_1/diff2_2/in_c GND 36.8
+R subcomp_0/totdiff3_1/diff2_2/in_c 3075
+C subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z GND 5.0
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_0/z 1225
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_1/z 1416
+R subcomp_0/totdiff3_1/diff2_1/or2v0x3_0/zn 1208
+R subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_30_13# 69
+R subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/a_13_13# 69
+R subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/an 2529
+R subcomp_0/totdiff3_1/diff2_1/xor2v2x2_0/bn 1969
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/a_24_13# 69
+C subcomp_0/totdiff3_1/diff2_1/in_2c GND 29.6
+R subcomp_0/totdiff3_1/diff2_1/in_2c 2774
+R subcomp_0/totdiff3_1/diff2_1/an2v0x2_2/zn 927
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_115_7# 69
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_28_12# 64
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/a_11_12# 64
+R subcomp_0/totdiff3_1/diff2_2/in_b 4427
+C decoder_0/b2 GND 90.4
+R decoder_0/b2 4931
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/bn 1548
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/iz 2485
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/cn 2938
+R subcomp_0/totdiff3_1/diff2_2/xor3v1x2_0/zn 2183
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a 2352
+C subcomp_0/totdiff3_1/mux_0/a2 GND 38.7
+R subcomp_0/totdiff3_1/mux_0/a2 3973
+R subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/ai 143
+R subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/an 562
+R subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/bn 779
+R subcomp_0/totdiff3_1/diff2_2/xnr2v8x05_0/zn 574
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/a_24_13# 69
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b GND 2.9
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/b 887
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/zn 927
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a_24_13# 69
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/a 1822
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/zn 927
+R subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_48_39# 191
+R subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/a_31_39# 238
+C subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z GND 5.0
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_0/z 1225
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_1/z 1416
+R subcomp_0/totdiff3_1/diff2_2/or2v0x3_0/zn 1208
+R subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_30_13# 69
+R subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/a_13_13# 69
+R subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/an 2529
+R subcomp_0/totdiff3_1/diff2_2/xor2v2x2_0/bn 1969
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/a_24_13# 69
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/z 363
+C subcomp_0/totdiff3_1/diff2_2/in_2c GND 34.8
+R subcomp_0/totdiff3_1/diff2_2/in_2c 2775
+R subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/zn 927
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_12# 43
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_12# 43
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_38_50# 191
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/a_21_50# 191
+C subcomp_0/totdiff3_1/mux_0/b0 GND 47.5
+R subcomp_0/totdiff3_1/mux_0/b0 1776
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/sn 743
+C subcomp_0/totdiff3_1/mux_0/s GND 25.7
+R subcomp_0/totdiff3_1/mux_0/s 5541
+C subcomp_0/totdiff3_1/mux_0/a0 GND 99.1
+R subcomp_0/totdiff3_1/mux_0/a0 3948
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/zn 856
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_0/w_n4_32# 4100
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_12# 43
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_12# 43
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_38_50# 191
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/a_21_50# 191
+C subcomp_0/totdiff3_1/mux_0/b1 GND 87.1
+R subcomp_0/totdiff3_1/mux_0/b1 1779
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/sn 743
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/zn 856
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_12# 43
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_12# 43
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_38_50# 191
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/a_21_50# 191
+C subcomp_0/totdiff3_1/mux_0/b2 GND 24.6
+R subcomp_0/totdiff3_1/mux_0/b2 1770
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/sn 743
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_2/zn 856
+R subcomp_0/totdiff3_1/mux_0/mxn2v0x1_1/w_n4_32# 3063
+C subcomp_0/mux_0/b2 GND 43.5
+R subcomp_0/mux_0/b2 3234
+C subcomp_0/mux_0/b0 GND 53.6
+R subcomp_0/mux_0/b0 2354
+R subcomp_0/comp_0/or3v0x2_0/a_55_38# 226
+R subcomp_0/comp_0/or3v0x2_0/a_48_38# 226
+R subcomp_0/comp_0/or3v0x2_0/a_31_38# 262
+R subcomp_0/comp_0/or3v0x2_0/a_24_38# 262
+R subcomp_0/comp_0/an2v0x2_1/b 1060
+R subcomp_0/comp_0/or3v0x2_0/zn 1056
+R subcomp_0/comp_0/an2v0x2_2/a_24_13# 69
+C subcomp_0/mux_0/a1 GND 43.1
+R subcomp_0/mux_0/a1 5419
+C subcomp_0/mux_0/a2 GND 70.9
+R subcomp_0/mux_0/a2 5058
+R subcomp_0/comp_0/an2v0x2_2/zn 927
+R subcomp_0/comp_0/an2v0x2_3/a_24_13# 69
+C vdd GND 1329.0
+R vdd 870307
+R subcomp_0/comp_0/an2v0x2_2/z 1061
+R subcomp_0/comp_0/an2v0x2_3/zn 927
+C subcomp_0/mux_0/b1 GND 32.7
+R subcomp_0/mux_0/b1 2898
+R subcomp_0/comp_0/an2v0x2_4/a_24_13# 69
+R subcomp_0/comp_0/an2v0x2_0/b 3357
+R subcomp_0/comp_0/an2v0x2_4/zn 927
+R subcomp_0/comp_0/an2v0x2_1/a_24_13# 69
+R subcomp_0/comp_0/an2v0x2_4/z 1060
+R subcomp_0/comp_0/an2v0x2_1/zn 927
+R subcomp_0/comp_0/or3v0x2_1/a_55_38# 226
+R subcomp_0/comp_0/or3v0x2_1/a_48_38# 226
+R subcomp_0/comp_0/or3v0x2_1/a_31_38# 262
+R subcomp_0/comp_0/or3v0x2_1/a_24_38# 262
+C subcomp_0/mux_0/a0 GND 75.4
+R subcomp_0/mux_0/a0 5906
+R subcomp_0/comp_0/an3v0x2_2/b 3655
+R subcomp_0/comp_0/an2v0x2_3/b 1061
+R subcomp_0/comp_0/an3v0x2_1/a 4300
+R subcomp_0/comp_0/or3v0x2_1/zn 1056
+R subcomp_0/comp_0/nr2v0x2_0/a_28_39# 322
+R subcomp_0/comp_0/nd3v0x2_0/a 1305
+R subcomp_0/comp_0/nr2v0x2_0/a_11_39# 322
+R subcomp_0/comp_0/an2v0x2_1/z 1562
+R subcomp_0/comp_0/an2v0x2_3/z 1737
+R subcomp_0/comp_0/an2v0x2_0/a_24_13# 69
+C subcomp_0/comp_0/nr3v0x2_0/a GND 8.6
+R subcomp_0/comp_0/nr3v0x2_0/a 2180
+R subcomp_0/comp_0/an2v0x2_0/zn 927
+R subcomp_0/comp_0/an3v0x2_0/a_31_8# 91
+R subcomp_0/comp_0/an3v0x2_0/a_24_8# 91
+R subcomp_0/comp_0/an3v0x2_0/zn 1307
+R subcomp_0/comp_0/an3v0x2_3/a_31_8# 91
+R subcomp_0/comp_0/an3v0x2_3/a_24_8# 91
+R subcomp_0/comp_0/an3v0x2_3/zn 1307
+R subcomp_0/comp_0/nr2v0x2_1/a_28_39# 322
+R subcomp_0/comp_0/nd3v0x2_0/c 1283
+R subcomp_0/comp_0/nr2v0x2_1/a_11_39# 322
+R subcomp_0/comp_0/an3v0x2_3/z 1589
+R subcomp_0/comp_0/an3v0x2_2/a_31_8# 91
+R subcomp_0/comp_0/an3v0x2_2/a_24_8# 91
+R subcomp_0/comp_0/an3v0x2_2/zn 1307
+R subcomp_0/comp_0/nr3v0x2_0/a_68_39# 322
+R subcomp_0/comp_0/nr3v0x2_0/a_61_39# 322
+R subcomp_0/comp_0/nr3v0x2_0/a_44_39# 322
+R subcomp_0/comp_0/nr3v0x2_0/a_37_39# 322
+R subcomp_0/comp_0/nr3v0x2_0/a_20_39# 322
+R subcomp_0/comp_0/nr3v0x2_0/a_13_39# 322
+R subcomp_0/comp_0/an3v0x2_0/z 2479
+R subcomp_0/comp_0/an3v0x2_2/z 2131
+R subcomp_0/comp_0/an3v0x2_1/a_31_8# 91
+R subcomp_0/comp_0/an3v0x2_1/a_24_8# 91
+R subcomp_0/comp_0/nr2v0x2_1/a 1765
+R subcomp_0/comp_0/an3v0x2_1/zn 1307
+R subcomp_0/comp_0/nd3v0x2_0/a_45_12# 75
+R subcomp_0/comp_0/nd3v0x2_0/a_38_12# 75
+R subcomp_0/comp_0/nd3v0x2_0/a_21_12# 75
+R subcomp_0/comp_0/nd3v0x2_0/a_14_12# 75
+R subcomp_0/comp_0/nd3v0x2_0/z 467
+R subcomp_0/comp_0/nr3v0x2_0/z 2531
+R subcomp_0/comp_0/an3v0x2_2/w_n4_32# 16857
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# 69
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# 64
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# 64
+C decoder_1/b0 GND 16.1
+R decoder_1/b0 6163
+R subcomp_0/totdiff3_0/diff2_0/in_a 1353
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 1548
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2485
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2938
+R subcomp_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2183
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a 2352
+R subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai 143
+R subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 562
+R subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 779
+R subcomp_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 574
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# 69
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b GND 2.9
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/b 887
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/zn 927
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# 69
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/a 1822
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/zn 927
+R subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# 191
+R subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# 238
+C subcomp_0/totdiff3_0/diff2_1/in_c GND 37.1
+R subcomp_0/totdiff3_0/diff2_1/in_c 3075
+C subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z GND 5.0
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_0/z 1225
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_1/z 1416
+R subcomp_0/totdiff3_0/diff2_0/or2v0x3_0/zn 1208
+R subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# 69
+R subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# 69
+R subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2529
+R subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 1969
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# 69
+R subcomp_0/totdiff3_0/diff2_0/an2v0x2_2/zn 927
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# 69
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# 64
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# 64
+R subcomp_0/totdiff3_0/diff2_1/in_a 1353
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 1548
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 2485
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2938
+R subcomp_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2183
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a 2352
+C subcomp_0/totdiff3_0/mux_0/a1 GND 28.9
+R subcomp_0/totdiff3_0/mux_0/a1 4259
+R subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai 143
+R subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 562
+R subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 779
+R subcomp_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 574
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# 69
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b GND 2.9
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/b 887
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/zn 927
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# 69
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/a 1822
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/zn 927
+R subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# 191
+R subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# 238
+C subcomp_0/totdiff3_0/diff2_2/in_c GND 36.8
+R subcomp_0/totdiff3_0/diff2_2/in_c 3075
+C subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z GND 5.0
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_0/z 1225
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_1/z 1416
+R subcomp_0/totdiff3_0/diff2_1/or2v0x3_0/zn 1208
+R subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# 69
+R subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# 69
+R subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2529
+R subcomp_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 1969
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# 69
+C subcomp_0/totdiff3_0/diff2_1/in_2c GND 29.6
+R subcomp_0/totdiff3_0/diff2_1/in_2c 2774
+R subcomp_0/totdiff3_0/diff2_1/an2v0x2_2/zn 927
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# 69
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# 64
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# 64
+R subcomp_0/totdiff3_0/diff2_2/in_a 1353
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 1548
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2485
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2938
+R subcomp_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2183
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a 2352
+C subcomp_0/totdiff3_0/mux_0/a2 GND 38.7
+R subcomp_0/totdiff3_0/mux_0/a2 3973
+R subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai 143
+R subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 562
+R subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 779
+R subcomp_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 574
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# 69
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b GND 2.9
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/b 887
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/zn 927
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# 69
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/a 1822
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/zn 927
+R subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# 191
+R subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# 238
+C subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z GND 5.0
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_0/z 1225
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_1/z 1416
+R subcomp_0/totdiff3_0/diff2_2/or2v0x3_0/zn 1208
+R subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# 69
+R subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# 69
+R subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2529
+R subcomp_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 1969
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# 69
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/z 363
+C subcomp_0/totdiff3_0/diff2_2/in_2c GND 34.8
+R subcomp_0/totdiff3_0/diff2_2/in_2c 2775
+R subcomp_0/totdiff3_0/diff2_2/an2v0x2_2/zn 927
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# 43
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# 43
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# 191
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# 191
+C subcomp_0/totdiff3_0/mux_0/b0 GND 47.5
+R subcomp_0/totdiff3_0/mux_0/b0 1776
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 743
+C subcomp_0/totdiff3_0/mux_0/s GND 25.7
+R subcomp_0/totdiff3_0/mux_0/s 5541
+C subcomp_0/totdiff3_0/mux_0/a0 GND 99.1
+R subcomp_0/totdiff3_0/mux_0/a0 3948
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 856
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 4100
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# 43
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# 43
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# 191
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# 191
+C subcomp_0/totdiff3_0/mux_0/b1 GND 87.1
+R subcomp_0/totdiff3_0/mux_0/b1 1779
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 743
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 856
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# 43
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# 43
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# 191
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# 191
+C subcomp_0/totdiff3_0/mux_0/b2 GND 24.6
+R subcomp_0/totdiff3_0/mux_0/b2 1770
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 743
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 856
+R subcomp_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3063
+R subcomp_0/mux_0/mxn2v0x1_0/a_38_12# 43
+R subcomp_0/mux_0/mxn2v0x1_0/a_21_12# 43
+R subcomp_0/mux_0/mxn2v0x1_0/a_38_50# 191
+R subcomp_0/mux_0/mxn2v0x1_0/a_21_50# 191
+R subcomp_0/mux_0/o0 285
+R subcomp_0/mux_0/mxn2v0x1_0/sn 743
+C subcomp_0/mux_0/s GND 18.7
+R subcomp_0/mux_0/s 5297
+R subcomp_0/mux_0/mxn2v0x1_0/zn 856
+R subcomp_0/mux_0/mxn2v0x1_0/w_n4_32# 4100
+R subcomp_0/mux_0/mxn2v0x1_1/a_38_12# 43
+R subcomp_0/mux_0/mxn2v0x1_1/a_21_12# 43
+R subcomp_0/mux_0/mxn2v0x1_1/a_38_50# 191
+R subcomp_0/mux_0/mxn2v0x1_1/a_21_50# 191
+C subcomp_0/mux_0/o1 GND 2.3
+R subcomp_0/mux_0/o1 284
+R subcomp_0/mux_0/mxn2v0x1_1/sn 743
+R subcomp_0/mux_0/mxn2v0x1_1/zn 856
+R subcomp_0/mux_0/mxn2v0x1_2/a_38_12# 43
+R subcomp_0/mux_0/mxn2v0x1_2/a_21_12# 43
+R subcomp_0/mux_0/mxn2v0x1_2/a_38_50# 191
+R subcomp_0/mux_0/mxn2v0x1_2/a_21_50# 191
+R subcomp_0/mux_0/o2 285
+R subcomp_0/mux_0/mxn2v0x1_2/sn 743
+R subcomp_0/mux_0/mxn2v0x1_2/zn 856
+R subcomp_0/mux_0/mxn2v0x1_1/w_n4_32# 3063

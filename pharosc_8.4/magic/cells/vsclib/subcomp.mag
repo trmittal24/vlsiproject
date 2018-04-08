@@ -1,8 +1,6 @@
 magic
 tech scmos
-timestamp 1523178222
-<< error_s >>
-rect 1886 -182 1887 -181
+timestamp 1523178891
 << polysilicon >>
 rect 1939 313 1941 324
 rect 1868 246 1901 248
@@ -60,7 +58,7 @@ rect 1980 -112 1988 -111
 rect 1824 -128 1836 -125
 rect 1833 -235 1836 -128
 rect 1866 -181 1887 -177
-rect 1871 -182 1884 -181
+rect 1871 -182 1887 -181
 rect 1883 -235 1887 -185
 rect 1825 -239 1887 -235
 << metal2 >>
@@ -81,9 +79,8 @@ rect 1872 -73 1885 -72
 rect 1863 -76 1891 -73
 rect 1856 -87 1891 -83
 rect 1885 -92 1891 -91
-rect 1885 -93 1892 -92
-rect 1846 -94 1892 -93
-rect 1846 -96 1895 -94
+rect 1885 -93 1895 -92
+rect 1846 -96 1895 -93
 rect 1871 -97 1884 -96
 rect 1827 -161 1847 -157
 rect 1843 -177 1847 -161
@@ -109,19 +106,19 @@ rect 1863 39 1867 43
 rect 1823 -161 1827 -157
 rect 1862 -181 1866 -177
 use totdiff3  totdiff3_1
-timestamp 1523176862
+timestamp 1523178891
 transform 1 0 415 0 1 672
 box 507 -672 1412 -374
 use comp  comp_0
-timestamp 1523176862
+timestamp 1523178891
 transform 1 0 1886 0 1 240
 box -22 -240 296 83
 use totdiff3  totdiff3_0
-timestamp 1523176862
+timestamp 1523178891
 transform 1 0 415 0 1 355
 box 507 -672 1412 -374
 use mux  mux_0
-timestamp 1523176862
+timestamp 1523178891
 transform 1 0 1915 0 1 -103
 box -29 -160 85 80
 << end >>
