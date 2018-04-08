@@ -1,4 +1,4 @@
-timestamp 1523172170
+timestamp 1523181350
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -8,82 +8,147 @@ use decoder decoder_0 1 0 58 0 1 160
 use 3_bitmux 3_bitmux_0 1 0 347 0 1 159
 use decoder decoder_1 1 0 58 0 1 -117
 use 3_bitmux 3_bitmux_1 1 0 347 0 1 -117
-node "m2_282_n239#" 2 24092 282 -239 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1316 666 0 0
+use subcomp subcomp_0 1 0 -477 0 1 40
+node "m2_364_n147#" 1 7543 364 -147 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 397 206 0 0
+node "m2_398_n91#" 0 3173 398 -91 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 167 100 0 0
+node "m2_282_n239#" 2 23712 282 -239 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1316 666 0 0
 node "m2_282_n157#" 3 13490 282 -157 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1526 778 0 0
 node "m2_284_n82#" 2 24282 284 -82 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1310 670 0 0
 node "m1_272_n273#" 1 16685 272 -273 m1 0 0 0 0 0 0 0 0 0 0 0 0 355 152 0 0 0 0
 node "gnd" 1 39762 -35 -274 m1 0 0 0 0 0 0 0 0 0 0 0 0 846 206 0 0 0 0
+node "m1_439_n251#" 10 145904 439 -251 v 0 0 0 0 0 0 0 0 0 0 0 0 2996 1506 300 174 0 0
+node "m1_416_n273#" 1 15931 416 -273 m1 0 0 0 0 0 0 0 0 0 0 0 0 286 120 181 100 0 0
+node "m1_1294_n162#" 1 3963 1294 -162 v 0 0 0 0 0 0 0 0 0 0 0 0 16 16 185 122 0 0
 node "m1_329_n49#" 2 26508 329 -49 m1 0 0 0 0 0 0 0 0 0 0 0 0 564 290 0 0 0 0
 node "m1_220_n118#" 1 10488 220 -118 v 0 0 0 0 0 0 0 0 0 0 0 0 57 52 468 268 0 0
 node "m1_285_38#" 3 74119 285 38 m1 0 0 0 0 0 0 0 0 0 0 0 0 1577 676 0 0 0 0
 node "m1_317_88#" 0 1316 317 88 m1 0 0 0 0 0 0 0 0 0 0 0 0 28 22 0 0 0 0
-node "m1_279_80#" 4 65816 279 80 m1 0 0 0 0 0 0 0 0 0 0 0 0 1368 700 128 72 0 0
+node "m1_279_80#" 10 130675 279 80 m1 0 0 0 0 0 0 0 0 0 0 0 0 1458 736 3409 1636 0 0
+node "m1_527_67#" 4 104548 527 67 v 0 0 0 0 0 0 0 0 0 0 0 0 1272 436 2436 1008 0 0
 node "m1_379_n272#" 2 9145 379 -272 v 0 0 0 0 0 0 0 0 0 0 0 0 64 64 387 248 0 0
+node "m1_416_156#" 0 1551 416 156 m1 0 0 0 0 0 0 0 0 0 0 0 0 33 26 0 0 0 0
 node "m1_286_195#" 1 8272 286 195 m1 0 0 0 0 0 0 0 0 0 0 0 0 176 96 0 0 0 0
+node "m1_416_228#" 0 8742 416 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 186 74 0 0 0 0
 node "m1_349_n47#" 2 11596 349 -47 v 0 0 0 0 0 0 0 0 0 0 0 0 64 64 516 274 0 0
 node "m1_270_228#" 1 18330 270 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 390 166 0 0 0 0
 node "m1_65_n47#" 1 11376 65 -47 v 0 0 0 0 0 0 0 0 0 0 0 0 124 88 416 206 0 0
 node "vdd" 1 33840 -34 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 720 196 0 0 0 0
-cap "m1_285_38#" "m2_284_n82#" 720
-cap "m1_279_80#" "m1_285_38#" 720
-cap "m1_279_80#" "m2_282_n239#" 720
-cap "m2_282_n239#" "m1_329_n49#" 720
+node "a_370_n34#" 569 75047 370 -34 pc 0 0 0 0 102 102 0 0 0 0 0 0 225 158 2874 1888 0 0
 cap "m1_285_38#" "m2_282_n239#" 720
-cap "m1_279_80#" "m2_282_n157#" 720
-cap "m1_279_80#" "m2_284_n82#" 720
+cap "m1_416_n273#" "m1_439_n251#" 720
+cap "m1_527_67#" "m1_416_228#" 1350
+cap "m2_282_n157#" "m1_279_80#" 720
+cap "m1_329_n49#" "m2_282_n239#" 720
+cap "m1_285_38#" "m1_279_80#" 720
 cap "m1_285_38#" "m2_282_n157#" 36000
+cap "a_370_n34#" "m1_279_80#" 1540
+cap "m2_284_n82#" "m1_279_80#" 720
+cap "m2_282_n239#" "m1_279_80#" 1620
+cap "m1_527_67#" "m1_270_228#" 900
+cap "m1_329_n49#" "m1_279_80#" 900
+cap "m1_285_38#" "m2_284_n82#" 720
 cap "decoder_1/gnd" "decoder_1/or2v0x3_6/vss" 47
-cap "decoder_1/d4" "decoder_1/gnd" 7425
+cap "decoder_1/gnd" "decoder_1/d4" 7425
+cap "3_bitmux_1/vdd" "m1_349_n47#" 1800
 cap "decoder_1/or2v0x3_8/vss" "decoder_1/or2v0x3_8/vss" 470
-cap "m1_349_n47#" "3_bitmux_1/vdd" 1800
+cap "subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/vss" "3_bitmux_1/mxn2v0x1_2/vss" 304
+cap "3_bitmux_1/mxn2v0x1_2/vss" "3_bitmux_1/mxn2v0x1_2/w_n4_n4#" 564
+cap "3_bitmux_1/mxn2v0x1_2/sn" "3_bitmux_1/mxn2v0x1_2/a1" 720
+cap "3_bitmux_1/mxn2v0x1_2/w_n4_n4#" "3_bitmux_1/mxn2v0x1_2/a1" 684
+cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_622_n613#" 540
+cap "subcomp_0/totdiff3_0/m1_749_n514#" "m1_439_n251#" 540
+cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_884_n612#" 540
+cap "subcomp_0/totdiff3_0/m1_622_n613#" "m1_439_n251#" 540
+cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_1009_n514#" 540
+cap "subcomp_0/totdiff3_0/m1_749_n514#" "m1_439_n251#" 540
+cap "subcomp_0/totdiff3_0/m1_1009_n514#" "m1_439_n251#" 540
+cap "subcomp_0/totdiff3_0/m1_884_n612#" "m1_439_n251#" 540
 cap "decoder_1/b1" "3_bitmux_1/s" 180
-cap "decoder_0/b1" "3_bitmux_0/a0" 240
+cap "3_bitmux_1/mxn2v0x1_0/w_n4_n4#" "3_bitmux_1/mxn2v0x1_1/a1" 1254
+cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/mxn2v0x1_1/sn" 1580
+cap "3_bitmux_1/mxn2v0x1_0/w_n4_n4#" "3_bitmux_1/mxn2v0x1_0/a1" 684
+cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/o1" 720
+cap "3_bitmux_1/mxn2v0x1_1/s" "3_bitmux_1/mxn2v0x1_1/a1" 38
+cap "3_bitmux_1/mxn2v0x1_1/zn" "3_bitmux_1/mxn2v0x1_1/a1" 2686
+cap "3_bitmux_1/mxn2v0x1_0/sn" "3_bitmux_1/mxn2v0x1_0/a1" 720
+cap "a_370_n34#" "3_bitmux_0/mxn2v0x1_2/vss" 420
+cap "3_bitmux_0/mxn2v0x1_2/w_n4_n4#" "3_bitmux_0/mxn2v0x1_2/vss" -658
+cap "subcomp_0/totdiff3_0/diff2_0/m1_n4_n91#" "m1_279_80#" 675
+cap "3_bitmux_0/mxn2v0x1_2/w_n4_n4#" "a_370_n34#" 858
+cap "subcomp_0/totdiff3_0/mux_0/vdd" "m1_1294_n162#" 1665
 cap "m1_349_n47#" "3_bitmux_0/vdd" 1800
+cap "3_bitmux_0/a0" "decoder_0/b1" 240
+cap "3_bitmux_0/a0" "decoder_0/b2" 240
 cap "3_bitmux_0/a0" "m2_282_n239#" 720
-cap "decoder_0/b2" "3_bitmux_0/a0" 240
-cap "decoder_0/gnd" "m1_220_n118#" 1620
-cap "m1_349_n47#" "decoder_0/or2v0x3_2/vdd" 1440
+cap "a_370_n34#" "subcomp_0/m1_922_n45#" 405
+cap "m1_527_67#" "subcomp_0/m1_922_n45#" 675
+cap "subcomp_0/totdiff3_1/m1_622_n613#" "m1_527_67#" 810
+cap "m1_279_80#" "subcomp_0/totdiff3_1/m1_884_n612#" 675
+cap "subcomp_0/totdiff3_1/m1_1195_n636#" "a_370_n34#" 405
+cap "subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/vss" "a_370_n34#" 945
+cap "m1_220_n118#" "decoder_0/gnd" 1620
+cap "3_bitmux_0/gnd" "3_bitmux_0/mxn2v0x1_0/w_n4_n4#" 846
+cap "decoder_0/or2v0x3_2/vdd" "m1_349_n47#" 1440
 cap "decoder_0/or2v0x3_2/vdd" "decoder_0/or2v0x3_2/vdd" 470
-merge "3_bitmux_0/b2" "3_bitmux_1/b2" -16910 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -978 -557 0 0
+cap "3_bitmux_0/mxn2v0x1_0/w_n4_32#" "3_bitmux_0/mxn2v0x1_0/vdd" 564
+merge "subcomp_0/totdiff3_0/mux_0/vdd" "m1_1294_n162#" -3963 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 -41 -32 0 0
+merge "3_bitmux_0/b1" "subcomp_0/totdiff3_0/diff2_1/in_b" -11552 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -868 -478 0 0
+merge "subcomp_0/totdiff3_0/diff2_1/in_b" "3_bitmux_1/mxn2v0x1_1/a1"
+merge "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/b1"
+merge "3_bitmux_1/b1" "m2_364_n147#"
+merge "m2_364_n147#" "decoder_1/b1"
+merge "decoder_1/b1" "m2_282_n157#"
+merge "3_bitmux_0/b2" "3_bitmux_1/b2" -16530 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -978 -557 0 0
 merge "3_bitmux_1/b2" "decoder_1/b2"
 merge "decoder_1/b2" "m2_282_n239#"
-merge "3_bitmux_0/vdd" "3_bitmux_0/a0" -3102 0 0 0 0 0 0 0 0 0 0 0 0 -52 -50 0 0 0 0
+merge "3_bitmux_0/vdd" "subcomp_0/totdiff3_1/diff2_0/in_a" -4280 0 0 0 0 0 0 0 0 0 0 0 0 -52 -50 -112 -66 0 0
+merge "subcomp_0/totdiff3_1/diff2_0/in_a" "3_bitmux_0/a0"
 merge "3_bitmux_0/a0" "3_bitmux_1/a0"
 merge "3_bitmux_1/a0" "m1_329_n49#"
 merge "m1_329_n49#" "m1_317_88#"
 merge "m1_317_88#" "decoder_0/b0"
-merge "decoder_0/b0" "m1_286_195#"
+merge "decoder_0/b0" "m1_527_67#"
+merge "m1_527_67#" "m1_286_195#"
 merge "m1_286_195#" "decoder_0/or2v0x3_2/vdd"
 merge "decoder_0/or2v0x3_2/vdd" "m1_270_228#"
-merge "3_bitmux_0/gnd" "3_bitmux_0/mxn2v0x1_2/vss" -9145 0 0 0 0 0 0 0 0 0 0 0 0 -64 -64 0 0 0 0
-merge "3_bitmux_0/mxn2v0x1_2/vss" "3_bitmux_1/gnd"
-merge "3_bitmux_1/gnd" "decoder_1/or2v0x3_8/vss"
-merge "decoder_1/or2v0x3_8/vss" "m1_272_n273#"
-merge "m1_272_n273#" "3_bitmux_1/mxn2v0x1_2/vss"
-merge "3_bitmux_1/mxn2v0x1_2/vss" "m1_379_n272#"
+merge "subcomp_0/totdiff3_1/diff2_1/in_a" "3_bitmux_0/a1" -71498 0 0 0 0 0 0 0 0 0 0 0 0 -910 -470 -1602 -743 0 0
+merge "3_bitmux_0/a1" "decoder_0/b1"
+merge "decoder_0/b1" "3_bitmux_1/a1"
+merge "3_bitmux_1/a1" "m1_279_80#"
+merge "3_bitmux_0/gnd" "m1_416_156#" -12346 0 0 0 0 0 0 0 0 0 0 0 0 -92 -114 0 0 0 0
+merge "m1_416_156#" "3_bitmux_0/mxn2v0x1_2/vss"
+merge "3_bitmux_0/mxn2v0x1_2/vss" "3_bitmux_1/mxn2v0x1_0/vss"
+merge "3_bitmux_1/mxn2v0x1_0/vss" "subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/vss"
+merge "subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/vss" "3_bitmux_1/mxn2v0x1_2/vss"
+merge "3_bitmux_1/mxn2v0x1_2/vss" "m1_416_n273#"
+merge "m1_416_n273#" "m1_379_n272#"
 merge "decoder_0/or2v0x3_8/vss" "decoder_1/gnd" -10488 0 0 0 0 0 0 0 0 0 0 0 0 -57 -52 -36 -24 0 0
 merge "decoder_1/gnd" "gnd"
 merge "gnd" "decoder_1/or2v0x3_7/vss"
 merge "decoder_1/or2v0x3_7/vss" "m1_220_n118#"
-merge "3_bitmux_0/b1" "3_bitmux_1/b1" -7068 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -836 -442 0 0
-merge "3_bitmux_1/b1" "decoder_1/b1"
-merge "decoder_1/b1" "m2_282_n157#"
+merge "subcomp_0/totdiff3_1/diff2_0/m1_n4_n91#" "3_bitmux_0/mxn2v0x1_0/vdd" -5202 0 0 0 0 0 0 0 0 0 0 0 0 -34 -46 0 0 0 0
+merge "3_bitmux_0/mxn2v0x1_0/vdd" "3_bitmux_0/mxn2v0x1_1/vdd"
+merge "3_bitmux_0/mxn2v0x1_1/vdd" "3_bitmux_1/vdd"
+merge "3_bitmux_1/vdd" "3_bitmux_1/mxn2v0x1_1/vdd"
+merge "3_bitmux_1/mxn2v0x1_1/vdd" "m1_349_n47#"
+merge "m1_349_n47#" "m1_416_228#"
+merge "subcomp_0/totdiff3_0/diff2_0/in_b" "3_bitmux_1/mxn2v0x1_0/a1" -1596 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 -24 0 0
+merge "3_bitmux_1/mxn2v0x1_0/a1" "m2_398_n91#"
 merge "3_bitmux_0/b0" "3_bitmux_1/b0" -16074 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -858 -456 0 0
 merge "3_bitmux_1/b0" "decoder_1/b0"
 merge "decoder_1/b0" "m2_284_n82#"
-merge "3_bitmux_0/a1" "decoder_0/b1" -38540 0 0 0 0 0 0 0 0 0 0 0 0 -820 -434 -8 -8 0 0
-merge "decoder_0/b1" "3_bitmux_1/a1"
-merge "3_bitmux_1/a1" "m1_279_80#"
 merge "decoder_0/or2v0x3_0/vdd" "decoder_0/or2v0x3_3/vdd" -11376 0 0 0 0 0 0 0 0 0 0 0 0 -124 -93 -168 -95 0 0
 merge "decoder_0/or2v0x3_3/vdd" "decoder_1/or2v0x3_0/vdd"
 merge "decoder_1/or2v0x3_0/vdd" "decoder_1/or2v0x3_4/vdd"
 merge "decoder_1/or2v0x3_4/vdd" "decoder_1/or2v0x3_3/vdd"
 merge "decoder_1/or2v0x3_3/vdd" "m1_65_n47#"
-merge "3_bitmux_0/mxn2v0x1_0/vdd" "3_bitmux_0/mxn2v0x1_1/vdd" -10836 0 0 0 0 0 0 0 0 0 0 0 0 -64 -64 -72 -41 0 0
-merge "3_bitmux_0/mxn2v0x1_1/vdd" "3_bitmux_1/vdd"
-merge "3_bitmux_1/vdd" "3_bitmux_1/mxn2v0x1_1/vdd"
-merge "3_bitmux_1/mxn2v0x1_1/vdd" "m1_349_n47#"
 merge "3_bitmux_0/a2" "decoder_0/b2" -48504 0 0 0 0 0 0 0 0 0 0 0 0 -1032 -440 0 0 0 0
 merge "decoder_0/b2" "3_bitmux_1/a2"
 merge "3_bitmux_1/a2" "m1_285_38#"
 merge "decoder_0/vdd" "vdd" -752 0 0 0 0 0 0 0 0 0 0 0 0 -16 -20 0 0 0 0
+merge "3_bitmux_1/gnd" "decoder_1/or2v0x3_8/vss" -705 0 0 0 0 0 0 0 0 0 0 0 0 -5 -22 0 0 0 0
+merge "decoder_1/or2v0x3_8/vss" "m1_272_n273#"
+merge "subcomp_0/totdiff3_0/diff2_2/in_b" "3_bitmux_1/mxn2v0x1_2/a1" -100813 0 0 0 0 0 0 0 0 0 0 0 0 -2092 -1050 -83 -66 0 0
+merge "3_bitmux_1/mxn2v0x1_2/a1" "m1_439_n251#"
+merge "subcomp_0/totdiff3_1/diff2_2/in_a" "3_bitmux_0/mxn2v0x1_2/a0" -35595 0 0 0 0 -6 -10 0 0 0 0 0 0 -120 -87 -1519 -1021 0 0
+merge "3_bitmux_0/mxn2v0x1_2/a0" "a_370_n34#"
