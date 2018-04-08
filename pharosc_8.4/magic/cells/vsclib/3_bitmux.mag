@@ -66,15 +66,15 @@ rect 62 -99 66 -95
 rect 6 -121 10 -117
 rect 78 -121 82 -117
 rect 52 -134 56 -130
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1  mxn2v0x1_0
+use mxn2v0x1  mxn2v0x1_0
 timestamp 1521735939
 transform 1 0 4 0 1 4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1  mxn2v0x1_1
+use mxn2v0x1  mxn2v0x1_1
 timestamp 1521735939
 transform -1 0 68 0 -1 -4
 box -4 -4 68 76
-use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1  mxn2v0x1_2
+use mxn2v0x1  mxn2v0x1_2
 timestamp 1521735939
 transform 1 0 4 0 1 -156
 box -4 -4 68 76
