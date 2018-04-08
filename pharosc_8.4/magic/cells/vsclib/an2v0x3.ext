@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
-timestamp 1523087564
-=======
-timestamp 1179384977
->>>>>>> Stashed changes
+timestamp 1523179251
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -22,36 +18,20 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "vss" 96 0 -4 -4 pw 334 74 36 24 0 0 0 0 0 0 0 0 540 156 0 0 0 0
 node "vdd" 4459 0 -4 32 nw 36 24 440 164 0 0 0 0 0 0 0 0 660 208 0 0 2816 216
-cap "vss" "z" 1598
-<<<<<<< Updated upstream
+cap "vdd" "z" 4747
 cap "zn" "z" 141
-cap "b" "vdd" 6533
-cap "b" "a" 300
-cap "b" "vss" 5472
-cap "b" "zn" 987
-cap "a" "vdd" 5284
 cap "zn" "vdd" 13317
-cap "z" "vdd" 4747
-cap "a_30_9#" "a" 376
-cap "vss" "a" 6288
-cap "a_30_9#" "zn" 940
-cap "zn" "a" 940
+cap "z" "vss" 1598
 cap "zn" "vss" 9540
-=======
-cap "b" "vdd" 6533
-cap "b" "a" 300
-cap "vdd" "a" 5284
-cap "zn" "b" 987
-cap "a_30_9#" "a" 376
-cap "vss" "b" 5472
-cap "zn" "vdd" 13317
+cap "a" "vdd" 5284
 cap "zn" "a" 940
-cap "vss" "a" 6288
+cap "a" "vss" 6288
+cap "b" "vdd" 6533
+cap "zn" "b" 987
 cap "zn" "a_30_9#" 940
-cap "vss" "zn" 9540
-cap "z" "vdd" 4747
-cap "zn" "z" 141
->>>>>>> Stashed changes
+cap "b" "vss" 5472
+cap "b" "a" 300
+cap "a" "a_30_9#" 376
 device mosfet nfet 35 9 36 10 2 17 "vss" "b" 4 0 "a_30_9#" 17 0 "zn" 17 0
 device mosfet nfet 28 9 29 10 2 17 "vss" "a" 4 0 "vss" 17 0 "a_30_9#" 17 0
 device mosfet nfet 9 6 10 7 2 20 "vss" "zn" 4 0 "z" 20 0 "vss" 20 0
