@@ -1,0 +1,608 @@
+| units: 100 tech: scmos format: MIT
+p 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/o2 vdd 2 18 360 -225
+p decoder_0/b2 vdd 3_bitmux_1/mxn2v0x1_2/a_21_50# 2 16 370 -223
+p 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_2/a_21_50# 3_bitmux_1/mxn2v0x1_2/zn 2 16 377 -223
+p 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_2/a_38_50# 2 16 387 -223
+p decoder_1/b2 3_bitmux_1/mxn2v0x1_2/a_38_50# vdd 2 16 394 -223
+p 3_bitmux_1/s vdd 3_bitmux_1/mxn2v0x1_2/sn 2 8 404 -235
+n 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/o2 gnd 2 9 360 -261
+n decoder_0/b2 gnd 3_bitmux_1/mxn2v0x1_2/a_21_12# 2 8 370 -261
+n 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_2/a_21_12# 3_bitmux_1/mxn2v0x1_2/zn 2 8 377 -261
+n 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_2/a_38_12# 2 8 387 -261
+n decoder_1/b2 3_bitmux_1/mxn2v0x1_2/a_38_12# gnd 2 8 394 -261
+n 3_bitmux_1/s gnd 3_bitmux_1/mxn2v0x1_2/sn 2 6 404 -259
+p 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/o1 vdd 2 18 405 -170
+p decoder_0/b1 vdd 3_bitmux_1/mxn2v0x1_1/a_21_50# 2 16 395 -172
+p 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_1/a_21_50# 3_bitmux_1/mxn2v0x1_1/zn 2 16 388 -172
+p 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/a_38_50# 2 16 378 -172
+p decoder_1/b1 3_bitmux_1/mxn2v0x1_1/a_38_50# vdd 2 16 371 -172
+p 3_bitmux_1/s vdd 3_bitmux_1/mxn2v0x1_1/sn 2 8 361 -160
+n 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/o1 gnd 2 9 405 -134
+n decoder_0/b1 gnd 3_bitmux_1/mxn2v0x1_1/a_21_12# 2 8 395 -134
+n 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_1/a_21_12# 3_bitmux_1/mxn2v0x1_1/zn 2 8 388 -134
+n 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/a_38_12# 2 8 378 -134
+n decoder_1/b1 3_bitmux_1/mxn2v0x1_1/a_38_12# gnd 2 8 371 -134
+n 3_bitmux_1/s gnd 3_bitmux_1/mxn2v0x1_1/sn 2 6 361 -136
+p 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/o0 vdd 2 18 360 -65
+p vdd vdd 3_bitmux_1/mxn2v0x1_0/a_21_50# 2 16 370 -63
+p 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_0/a_21_50# 3_bitmux_1/mxn2v0x1_0/zn 2 16 377 -63
+p 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/a_38_50# 2 16 387 -63
+p decoder_1/b0 3_bitmux_1/mxn2v0x1_0/a_38_50# vdd 2 16 394 -63
+p 3_bitmux_1/s vdd 3_bitmux_1/mxn2v0x1_0/sn 2 8 404 -75
+n 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/o0 gnd 2 9 360 -101
+n vdd gnd 3_bitmux_1/mxn2v0x1_0/a_21_12# 2 8 370 -101
+n 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/a_21_12# 3_bitmux_1/mxn2v0x1_0/zn 2 8 377 -101
+n 3_bitmux_1/s 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/a_38_12# 2 8 387 -101
+n decoder_1/b0 3_bitmux_1/mxn2v0x1_0/a_38_12# gnd 2 8 394 -101
+n 3_bitmux_1/s gnd 3_bitmux_1/mxn2v0x1_0/sn 2 6 404 -99
+p decoder_1/or2v0x3_8/zn vdd decoder_1/b2 2 20 215 -234
+p decoder_1/or2v0x3_8/zn decoder_1/b2 vdd 2 20 225 -234
+p decoder_1/d6 vdd decoder_1/or2v0x3_8/a_31_39# 2 20 235 -234
+p decoder_1/or2v0x3_7/z decoder_1/or2v0x3_8/a_31_39# decoder_1/or2v0x3_8/zn 2 20 242 -234
+p decoder_1/or2v0x3_7/z decoder_1/or2v0x3_8/zn decoder_1/or2v0x3_8/a_48_39# 2 16 252 -234
+p decoder_1/d6 decoder_1/or2v0x3_8/a_48_39# vdd 2 16 259 -234
+n decoder_1/or2v0x3_8/zn decoder_1/b2 gnd 2 20 215 -267
+n decoder_1/d6 gnd decoder_1/or2v0x3_8/zn 2 10 234 -262
+n decoder_1/or2v0x3_7/z decoder_1/or2v0x3_8/zn gnd 2 10 244 -262
+p decoder_1/or2v0x3_7/zn vdd decoder_1/or2v0x3_7/z 2 20 143 -234
+p decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_7/z vdd 2 20 153 -234
+p decoder_1/or2v0x3_6/z vdd decoder_1/or2v0x3_7/a_31_39# 2 20 163 -234
+p decoder_1/d4 decoder_1/or2v0x3_7/a_31_39# decoder_1/or2v0x3_7/zn 2 20 170 -234
+p decoder_1/d4 decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_7/a_48_39# 2 16 180 -234
+p decoder_1/or2v0x3_6/z decoder_1/or2v0x3_7/a_48_39# vdd 2 16 187 -234
+n decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_7/z gnd 2 20 143 -267
+n decoder_1/or2v0x3_6/z gnd decoder_1/or2v0x3_7/zn 2 10 162 -262
+n decoder_1/d4 decoder_1/or2v0x3_7/zn gnd 2 10 172 -262
+p decoder_1/or2v0x3_6/zn vdd decoder_1/or2v0x3_6/z 2 20 71 -234
+p decoder_1/or2v0x3_6/zn decoder_1/or2v0x3_6/z vdd 2 20 81 -234
+p decoder_1/d3 vdd decoder_1/or2v0x3_6/a_31_39# 2 20 91 -234
+p decoder_1/d5 decoder_1/or2v0x3_6/a_31_39# decoder_1/or2v0x3_6/zn 2 20 98 -234
+p decoder_1/d5 decoder_1/or2v0x3_6/zn decoder_1/or2v0x3_6/a_48_39# 2 16 108 -234
+p decoder_1/d3 decoder_1/or2v0x3_6/a_48_39# vdd 2 16 115 -234
+n decoder_1/or2v0x3_6/zn decoder_1/or2v0x3_6/z gnd 2 20 71 -267
+n decoder_1/d3 gnd decoder_1/or2v0x3_6/zn 2 10 90 -262
+n decoder_1/d5 decoder_1/or2v0x3_6/zn gnd 2 10 100 -262
+p decoder_1/or2v0x3_5/zn vdd decoder_1/b1 2 20 260 -161
+p decoder_1/or2v0x3_5/zn decoder_1/b1 vdd 2 20 250 -161
+p decoder_1/or2v0x3_4/z vdd decoder_1/or2v0x3_5/a_31_39# 2 20 240 -161
+p decoder_1/d6 decoder_1/or2v0x3_5/a_31_39# decoder_1/or2v0x3_5/zn 2 20 233 -161
+p decoder_1/d6 decoder_1/or2v0x3_5/zn decoder_1/or2v0x3_5/a_48_39# 2 16 223 -161
+p decoder_1/or2v0x3_4/z decoder_1/or2v0x3_5/a_48_39# vdd 2 16 216 -161
+n decoder_1/or2v0x3_5/zn decoder_1/b1 gnd 2 20 260 -128
+n decoder_1/or2v0x3_4/z gnd decoder_1/or2v0x3_5/zn 2 10 241 -133
+n decoder_1/d6 decoder_1/or2v0x3_5/zn gnd 2 10 231 -133
+p decoder_1/or2v0x3_4/zn vdd decoder_1/or2v0x3_4/z 2 20 188 -161
+p decoder_1/or2v0x3_4/zn decoder_1/or2v0x3_4/z vdd 2 20 178 -161
+p decoder_1/d1 vdd decoder_1/or2v0x3_4/a_31_39# 2 20 168 -161
+p decoder_1/or2v0x3_3/z decoder_1/or2v0x3_4/a_31_39# decoder_1/or2v0x3_4/zn 2 20 161 -161
+p decoder_1/or2v0x3_3/z decoder_1/or2v0x3_4/zn decoder_1/or2v0x3_4/a_48_39# 2 16 151 -161
+p decoder_1/d1 decoder_1/or2v0x3_4/a_48_39# vdd 2 16 144 -161
+n decoder_1/or2v0x3_4/zn decoder_1/or2v0x3_4/z gnd 2 20 188 -128
+n decoder_1/d1 gnd decoder_1/or2v0x3_4/zn 2 10 169 -133
+n decoder_1/or2v0x3_3/z decoder_1/or2v0x3_4/zn gnd 2 10 159 -133
+p decoder_1/or2v0x3_3/zn vdd decoder_1/or2v0x3_3/z 2 20 116 -161
+p decoder_1/or2v0x3_3/zn decoder_1/or2v0x3_3/z vdd 2 20 106 -161
+p decoder_1/d5 vdd decoder_1/or2v0x3_3/a_31_39# 2 20 96 -161
+p decoder_1/d2 decoder_1/or2v0x3_3/a_31_39# decoder_1/or2v0x3_3/zn 2 20 89 -161
+p decoder_1/d2 decoder_1/or2v0x3_3/zn decoder_1/or2v0x3_3/a_48_39# 2 16 79 -161
+p decoder_1/d5 decoder_1/or2v0x3_3/a_48_39# vdd 2 16 72 -161
+n decoder_1/or2v0x3_3/zn decoder_1/or2v0x3_3/z gnd 2 20 116 -128
+n decoder_1/d5 gnd decoder_1/or2v0x3_3/zn 2 10 97 -133
+n decoder_1/d2 decoder_1/or2v0x3_3/zn gnd 2 10 87 -133
+p decoder_1/or2v0x3_2/zn vdd decoder_1/b0 2 20 215 -74
+p decoder_1/or2v0x3_2/zn decoder_1/b0 vdd 2 20 225 -74
+p decoder_1/or2v0x3_1/z vdd decoder_1/or2v0x3_2/a_31_39# 2 20 235 -74
+p decoder_1/d6 decoder_1/or2v0x3_2/a_31_39# decoder_1/or2v0x3_2/zn 2 20 242 -74
+p decoder_1/d6 decoder_1/or2v0x3_2/zn decoder_1/or2v0x3_2/a_48_39# 2 16 252 -74
+p decoder_1/or2v0x3_1/z decoder_1/or2v0x3_2/a_48_39# vdd 2 16 259 -74
+n decoder_1/or2v0x3_2/zn decoder_1/b0 gnd 2 20 215 -107
+n decoder_1/or2v0x3_1/z gnd decoder_1/or2v0x3_2/zn 2 10 234 -102
+n decoder_1/d6 decoder_1/or2v0x3_2/zn gnd 2 10 244 -102
+p decoder_1/or2v0x3_1/zn vdd decoder_1/or2v0x3_1/z 2 20 143 -74
+p decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z vdd 2 20 153 -74
+p decoder_1/or2v0x3_0/z vdd decoder_1/or2v0x3_1/a_31_39# 2 20 163 -74
+p decoder_1/d4 decoder_1/or2v0x3_1/a_31_39# decoder_1/or2v0x3_1/zn 2 20 170 -74
+p decoder_1/d4 decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/a_48_39# 2 16 180 -74
+p decoder_1/or2v0x3_0/z decoder_1/or2v0x3_1/a_48_39# vdd 2 16 187 -74
+n decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z gnd 2 20 143 -107
+n decoder_1/or2v0x3_0/z gnd decoder_1/or2v0x3_1/zn 2 10 162 -102
+n decoder_1/d4 decoder_1/or2v0x3_1/zn gnd 2 10 172 -102
+p decoder_1/or2v0x3_0/zn vdd decoder_1/or2v0x3_0/z 2 20 71 -74
+p decoder_1/or2v0x3_0/zn decoder_1/or2v0x3_0/z vdd 2 20 81 -74
+p decoder_1/d0 vdd decoder_1/or2v0x3_0/a_31_39# 2 20 91 -74
+p decoder_1/d2 decoder_1/or2v0x3_0/a_31_39# decoder_1/or2v0x3_0/zn 2 20 98 -74
+p decoder_1/d2 decoder_1/or2v0x3_0/zn decoder_1/or2v0x3_0/a_48_39# 2 16 108 -74
+p decoder_1/d0 decoder_1/or2v0x3_0/a_48_39# vdd 2 16 115 -74
+n decoder_1/or2v0x3_0/zn decoder_1/or2v0x3_0/z gnd 2 20 71 -107
+n decoder_1/d0 gnd decoder_1/or2v0x3_0/zn 2 10 90 -102
+n decoder_1/d2 decoder_1/or2v0x3_0/zn gnd 2 10 100 -102
+p 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/o2 vdd 2 18 360 51
+p decoder_0/b2 vdd 3_bitmux_0/mxn2v0x1_2/a_21_50# 2 16 370 53
+p 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_2/a_21_50# 3_bitmux_0/mxn2v0x1_2/zn 2 16 377 53
+p 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/a_38_50# 2 16 387 53
+p decoder_1/b2 3_bitmux_0/mxn2v0x1_2/a_38_50# vdd 2 16 394 53
+p 3_bitmux_0/s vdd 3_bitmux_0/mxn2v0x1_2/sn 2 8 404 41
+n 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/o2 gnd 2 9 360 15
+n decoder_0/b2 gnd 3_bitmux_0/mxn2v0x1_2/a_21_12# 2 8 370 15
+n 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/a_21_12# 3_bitmux_0/mxn2v0x1_2/zn 2 8 377 15
+n 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/a_38_12# 2 8 387 15
+n decoder_1/b2 3_bitmux_0/mxn2v0x1_2/a_38_12# gnd 2 8 394 15
+n 3_bitmux_0/s gnd 3_bitmux_0/mxn2v0x1_2/sn 2 6 404 17
+p 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/o1 vdd 2 18 405 106
+p decoder_0/b1 vdd 3_bitmux_0/mxn2v0x1_1/a_21_50# 2 16 395 104
+p 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_1/a_21_50# 3_bitmux_0/mxn2v0x1_1/zn 2 16 388 104
+p 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/mxn2v0x1_1/a_38_50# 2 16 378 104
+p decoder_1/b1 3_bitmux_0/mxn2v0x1_1/a_38_50# vdd 2 16 371 104
+p 3_bitmux_0/s vdd 3_bitmux_0/mxn2v0x1_1/sn 2 8 361 116
+n 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/o1 gnd 2 9 405 142
+n decoder_0/b1 gnd 3_bitmux_0/mxn2v0x1_1/a_21_12# 2 8 395 142
+n 3_bitmux_0/mxn2v0x1_1/sn 3_bitmux_0/mxn2v0x1_1/a_21_12# 3_bitmux_0/mxn2v0x1_1/zn 2 8 388 142
+n 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_1/zn 3_bitmux_0/mxn2v0x1_1/a_38_12# 2 8 378 142
+n decoder_1/b1 3_bitmux_0/mxn2v0x1_1/a_38_12# gnd 2 8 371 142
+n 3_bitmux_0/s gnd 3_bitmux_0/mxn2v0x1_1/sn 2 6 361 140
+p 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/o0 vdd 2 18 360 211
+p vdd vdd 3_bitmux_0/mxn2v0x1_0/a_21_50# 2 16 370 213
+p 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_0/a_21_50# 3_bitmux_0/mxn2v0x1_0/zn 2 16 377 213
+p 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/a_38_50# 2 16 387 213
+p decoder_1/b0 3_bitmux_0/mxn2v0x1_0/a_38_50# vdd 2 16 394 213
+p 3_bitmux_0/s vdd 3_bitmux_0/mxn2v0x1_0/sn 2 8 404 201
+n 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/o0 gnd 2 9 360 175
+n vdd gnd 3_bitmux_0/mxn2v0x1_0/a_21_12# 2 8 370 175
+n 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/mxn2v0x1_0/a_21_12# 3_bitmux_0/mxn2v0x1_0/zn 2 8 377 175
+n 3_bitmux_0/s 3_bitmux_0/mxn2v0x1_0/zn 3_bitmux_0/mxn2v0x1_0/a_38_12# 2 8 387 175
+n decoder_1/b0 3_bitmux_0/mxn2v0x1_0/a_38_12# gnd 2 8 394 175
+n 3_bitmux_0/s gnd 3_bitmux_0/mxn2v0x1_0/sn 2 6 404 177
+p decoder_0/or2v0x3_8/zn vdd decoder_0/b2 2 20 215 43
+p decoder_0/or2v0x3_8/zn decoder_0/b2 vdd 2 20 225 43
+p decoder_0/d6 vdd decoder_0/or2v0x3_8/a_31_39# 2 20 235 43
+p decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/a_31_39# decoder_0/or2v0x3_8/zn 2 20 242 43
+p decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/zn decoder_0/or2v0x3_8/a_48_39# 2 16 252 43
+p decoder_0/d6 decoder_0/or2v0x3_8/a_48_39# vdd 2 16 259 43
+n decoder_0/or2v0x3_8/zn decoder_0/b2 gnd 2 20 215 10
+n decoder_0/d6 gnd decoder_0/or2v0x3_8/zn 2 10 234 15
+n decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/zn gnd 2 10 244 15
+p decoder_0/or2v0x3_7/zn vdd decoder_0/or2v0x3_7/z 2 20 143 43
+p decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/z vdd 2 20 153 43
+p decoder_0/or2v0x3_6/z vdd decoder_0/or2v0x3_7/a_31_39# 2 20 163 43
+p decoder_0/d4 decoder_0/or2v0x3_7/a_31_39# decoder_0/or2v0x3_7/zn 2 20 170 43
+p decoder_0/d4 decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/a_48_39# 2 16 180 43
+p decoder_0/or2v0x3_6/z decoder_0/or2v0x3_7/a_48_39# vdd 2 16 187 43
+n decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/z gnd 2 20 143 10
+n decoder_0/or2v0x3_6/z gnd decoder_0/or2v0x3_7/zn 2 10 162 15
+n decoder_0/d4 decoder_0/or2v0x3_7/zn gnd 2 10 172 15
+p decoder_0/or2v0x3_6/zn vdd decoder_0/or2v0x3_6/z 2 20 71 43
+p decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/z vdd 2 20 81 43
+p decoder_0/d3 vdd decoder_0/or2v0x3_6/a_31_39# 2 20 91 43
+p decoder_0/d5 decoder_0/or2v0x3_6/a_31_39# decoder_0/or2v0x3_6/zn 2 20 98 43
+p decoder_0/d5 decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/a_48_39# 2 16 108 43
+p decoder_0/d3 decoder_0/or2v0x3_6/a_48_39# vdd 2 16 115 43
+n decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/z gnd 2 20 71 10
+n decoder_0/d3 gnd decoder_0/or2v0x3_6/zn 2 10 90 15
+n decoder_0/d5 decoder_0/or2v0x3_6/zn gnd 2 10 100 15
+p decoder_0/or2v0x3_5/zn vdd decoder_0/b1 2 20 260 116
+p decoder_0/or2v0x3_5/zn decoder_0/b1 vdd 2 20 250 116
+p decoder_0/or2v0x3_4/z vdd decoder_0/or2v0x3_5/a_31_39# 2 20 240 116
+p decoder_0/d6 decoder_0/or2v0x3_5/a_31_39# decoder_0/or2v0x3_5/zn 2 20 233 116
+p decoder_0/d6 decoder_0/or2v0x3_5/zn decoder_0/or2v0x3_5/a_48_39# 2 16 223 116
+p decoder_0/or2v0x3_4/z decoder_0/or2v0x3_5/a_48_39# vdd 2 16 216 116
+n decoder_0/or2v0x3_5/zn decoder_0/b1 gnd 2 20 260 149
+n decoder_0/or2v0x3_4/z gnd decoder_0/or2v0x3_5/zn 2 10 241 144
+n decoder_0/d6 decoder_0/or2v0x3_5/zn gnd 2 10 231 144
+p decoder_0/or2v0x3_4/zn vdd decoder_0/or2v0x3_4/z 2 20 188 116
+p decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/z vdd 2 20 178 116
+p decoder_0/d1 vdd decoder_0/or2v0x3_4/a_31_39# 2 20 168 116
+p decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/a_31_39# decoder_0/or2v0x3_4/zn 2 20 161 116
+p decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/a_48_39# 2 16 151 116
+p decoder_0/d1 decoder_0/or2v0x3_4/a_48_39# vdd 2 16 144 116
+n decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/z gnd 2 20 188 149
+n decoder_0/d1 gnd decoder_0/or2v0x3_4/zn 2 10 169 144
+n decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/zn gnd 2 10 159 144
+p decoder_0/or2v0x3_3/zn vdd decoder_0/or2v0x3_3/z 2 20 116 116
+p decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/z vdd 2 20 106 116
+p decoder_0/d5 vdd decoder_0/or2v0x3_3/a_31_39# 2 20 96 116
+p decoder_0/d2 decoder_0/or2v0x3_3/a_31_39# decoder_0/or2v0x3_3/zn 2 20 89 116
+p decoder_0/d2 decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/a_48_39# 2 16 79 116
+p decoder_0/d5 decoder_0/or2v0x3_3/a_48_39# vdd 2 16 72 116
+n decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/z gnd 2 20 116 149
+n decoder_0/d5 gnd decoder_0/or2v0x3_3/zn 2 10 97 144
+n decoder_0/d2 decoder_0/or2v0x3_3/zn gnd 2 10 87 144
+p decoder_0/or2v0x3_2/zn vdd vdd 2 20 215 203
+p decoder_0/or2v0x3_2/zn vdd vdd 2 20 225 203
+p decoder_0/or2v0x3_1/z vdd decoder_0/or2v0x3_2/a_31_39# 2 20 235 203
+p decoder_0/d6 decoder_0/or2v0x3_2/a_31_39# decoder_0/or2v0x3_2/zn 2 20 242 203
+p decoder_0/d6 decoder_0/or2v0x3_2/zn decoder_0/or2v0x3_2/a_48_39# 2 16 252 203
+p decoder_0/or2v0x3_1/z decoder_0/or2v0x3_2/a_48_39# vdd 2 16 259 203
+n decoder_0/or2v0x3_2/zn vdd gnd 2 20 215 170
+n decoder_0/or2v0x3_1/z gnd decoder_0/or2v0x3_2/zn 2 10 234 175
+n decoder_0/d6 decoder_0/or2v0x3_2/zn gnd 2 10 244 175
+p decoder_0/or2v0x3_1/zn vdd decoder_0/or2v0x3_1/z 2 20 143 203
+p decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z vdd 2 20 153 203
+p decoder_0/or2v0x3_0/z vdd decoder_0/or2v0x3_1/a_31_39# 2 20 163 203
+p decoder_0/d4 decoder_0/or2v0x3_1/a_31_39# decoder_0/or2v0x3_1/zn 2 20 170 203
+p decoder_0/d4 decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/a_48_39# 2 16 180 203
+p decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/a_48_39# vdd 2 16 187 203
+n decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z gnd 2 20 143 170
+n decoder_0/or2v0x3_0/z gnd decoder_0/or2v0x3_1/zn 2 10 162 175
+n decoder_0/d4 decoder_0/or2v0x3_1/zn gnd 2 10 172 175
+p decoder_0/or2v0x3_0/zn vdd decoder_0/or2v0x3_0/z 2 20 71 203
+p decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z vdd 2 20 81 203
+p decoder_0/d0 vdd decoder_0/or2v0x3_0/a_31_39# 2 20 91 203
+p decoder_0/d2 decoder_0/or2v0x3_0/a_31_39# decoder_0/or2v0x3_0/zn 2 20 98 203
+p decoder_0/d2 decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/a_48_39# 2 16 108 203
+p decoder_0/d0 decoder_0/or2v0x3_0/a_48_39# vdd 2 16 115 203
+n decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z gnd 2 20 71 170
+n decoder_0/d0 gnd decoder_0/or2v0x3_0/zn 2 10 90 175
+n decoder_0/d2 decoder_0/or2v0x3_0/zn gnd 2 10 100 175
+C decoder_0/d0 vdd 14.1
+C gnd decoder_0/or2v0x3_1/z 10.3
+C decoder_1/b2 vdd 8.1
+C decoder_0/or2v0x3_3/zn gnd 9.0
+C gnd decoder_1/d6 48.5
+C decoder_0/or2v0x3_1/z decoder_0/or2v0x3_2/zn 2.0
+C 3_bitmux_1/mxn2v0x1_0/w_n4_32# 3_bitmux_1/s 18.7
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b2 11.6
+C decoder_1/d4 gnd 76.3
+C decoder_1/b2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.6
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o1 5.0
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o1 2.3
+C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/w_n4_32# 9.3
+C vdd decoder_1/or2v0x3_7/z 11.4
+C gnd decoder_0/or2v0x3_2/zn 9.0
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/sn 9.3
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_1/sn 9.2
+C decoder_0/d6 decoder_0/b1 2.7
+C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/s 18.7
+C decoder_1/d3 vdd 28.2
+C decoder_0/or2v0x3_6/z vdd 20.6
+C gnd 3_bitmux_1/s 4.9
+C decoder_1/or2v0x3_4/zn vdd 12.7
+C 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
+C 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 2.3
+C decoder_0/b2 vdd 9.8
+C decoder_1/or2v0x3_2/zn vdd 12.7
+C decoder_0/or2v0x3_3/z vdd 12.1
+C vdd decoder_1/d0 14.1
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/o2 6.3
+C 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 3_bitmux_0/s 15.2
+C decoder_0/b2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 11.6
+C decoder_0/b2 decoder_1/b1 36.0
+C gnd decoder_0/d0 7.6
+C decoder_1/or2v0x3_1/zn decoder_1/or2v0x3_1/z 2.3
+C 3_bitmux_1/mxn2v0x1_0/zn decoder_1/b0 2.7
+C decoder_0/d6 vdd 36.3
+C decoder_1/or2v0x3_3/z decoder_1/d1 2.2
+C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_0/zn 2.3
+C decoder_1/b2 3_bitmux_0/mxn2v0x1_2/zn 2.7
+C gnd decoder_1/or2v0x3_7/z 15.6
+C decoder_1/or2v0x3_0/z decoder_1/d0 3.9
+C decoder_0/or2v0x3_8/zn vdd 12.7
+C decoder_1/or2v0x3_4/zn decoder_1/d6 2.1
+C gnd decoder_1/d3 7.6
+C decoder_0/or2v0x3_4/zn vdd 12.7
+C decoder_0/or2v0x3_6/z gnd 9.2
+C 3_bitmux_1/mxn2v0x1_2/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
+C gnd decoder_1/or2v0x3_4/zn 9.0
+C decoder_0/d1 vdd 17.9
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_1/b0 8.7
+C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/o0 5.2
+C 3_bitmux_0/mxn2v0x1_0/w_n4_32# vdd 32.2
+C decoder_1/or2v0x3_2/zn gnd 9.0
+C decoder_0/or2v0x3_3/z gnd 12.6
+C gnd decoder_1/d0 7.6
+C 3_bitmux_1/o1 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 2.3
+C decoder_0/d6 decoder_0/or2v0x3_3/zn 2.2
+C decoder_0/d6 gnd 48.5
+C vdd decoder_1/or2v0x3_6/z 20.6
+C 3_bitmux_1/o2 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.3
+C decoder_1/b0 vdd 6.7
+C 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 8.9
+C decoder_1/or2v0x3_5/zn vdd 12.7
+C decoder_0/or2v0x3_8/zn gnd 9.0
+C decoder_0/or2v0x3_4/zn gnd 9.0
+C vdd decoder_1/or2v0x3_0/zn 12.7
+C decoder_0/or2v0x3_3/zn decoder_0/d1 3.7
+C decoder_1/or2v0x3_3/z vdd 12.1
+C decoder_0/d4 vdd 15.8
+C decoder_0/d1 gnd 7.6
+C decoder_1/or2v0x3_7/zn decoder_1/or2v0x3_6/z 2.0
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# decoder_0/b1 4.8
+C decoder_0/or2v0x3_7/zn vdd 12.7
+C decoder_1/b0 3_bitmux_1/mxn2v0x1_0/w_n4_32# 6.6
+C vdd decoder_1/d5 21.8
+C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/mxn2v0x1_0/sn 9.3
+C decoder_1/or2v0x3_0/z decoder_1/or2v0x3_0/zn 2.3
+C gnd decoder_1/or2v0x3_6/z 9.2
+C gnd decoder_1/b0 2.1
+C 3_bitmux_0/mxn2v0x1_0/w_n4_32# 3_bitmux_0/mxn2v0x1_0/zn 9.3
+C 3_bitmux_1/mxn2v0x1_2/zn decoder_1/b2 2.7
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/mxn2v0x1_1/zn 8.9
+C vdd decoder_1/or2v0x3_1/z 19.4
+C decoder_0/or2v0x3_0/z vdd 19.2
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/sn 9.2
+C decoder_0/or2v0x3_0/z decoder_0/d2 2.2
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# vdd 4.8
+C decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_0/z 2.0
+C decoder_1/or2v0x3_5/zn gnd 9.0
+C decoder_0/or2v0x3_6/zn vdd 12.7
+C gnd 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 25.5
+C gnd decoder_1/or2v0x3_0/zn 9.0
+C decoder_1/d1 decoder_1/or2v0x3_3/zn 3.7
+C decoder_1/or2v0x3_3/z gnd 12.6
+C 3_bitmux_0/mxn2v0x1_0/zn decoder_1/b0 2.7
+C 3_bitmux_1/o0 vdd 3.6
+C decoder_0/d4 gnd 68.9
+C 3_bitmux_0/mxn2v0x1_2/zn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.9
+C decoder_1/b1 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 10.2
+C decoder_1/or2v0x3_0/z decoder_1/or2v0x3_1/z 4.6
+C decoder_0/or2v0x3_7/zn gnd 9.0
+C decoder_1/or2v0x3_1/zn vdd 12.7
+C gnd decoder_1/d5 20.2
+C decoder_0/or2v0x3_0/zn vdd 12.7
+C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/z 4.6
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/s 36.4
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/s 30.3
+C decoder_0/d5 vdd 21.8
+C decoder_0/or2v0x3_7/z vdd 11.4
+C 3_bitmux_1/o0 3_bitmux_1/mxn2v0x1_0/w_n4_32# 5.2
+C decoder_1/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.7
+C gnd decoder_1/or2v0x3_1/z 10.3
+C decoder_0/d6 decoder_0/or2v0x3_4/zn 2.1
+C decoder_0/or2v0x3_0/z gnd 10.3
+C decoder_0/d1 decoder_0/or2v0x3_3/z 2.2
+C 3_bitmux_0/mxn2v0x1_2/sn 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 9.2
+C decoder_1/or2v0x3_0/z decoder_1/or2v0x3_1/zn 2.0
+C gnd 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 76.0
+C decoder_0/or2v0x3_6/zn gnd 9.0
+C decoder_1/d2 vdd 16.1
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# gnd 25.5
+C 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 3_bitmux_1/s 30.3
+C vdd 3_bitmux_0/s 5.6
+C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 9.2
+C decoder_1/or2v0x3_2/zn decoder_1/b0 2.2
+C decoder_1/or2v0x3_3/zn vdd 12.7
+C decoder_1/d1 vdd 17.9
+C 3_bitmux_1/o1 3_bitmux_1/mxn2v0x1_1/w_n4_32# 5.0
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_0/b1 4.8
+C gnd decoder_1/or2v0x3_1/zn 9.0
+C decoder_1/or2v0x3_8/zn vdd 12.7
+C 3_bitmux_1/mxn2v0x1_0/sn 3_bitmux_1/o0 4.3
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/s 15.2
+C decoder_0/b2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 4.8
+C decoder_1/or2v0x3_0/z decoder_1/d2 2.2
+C 3_bitmux_1/mxn2v0x1_0/zn vdd 2.3
+C decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_6/z 2.0
+C decoder_0/or2v0x3_0/z decoder_0/d0 3.9
+C decoder_0/or2v0x3_0/zn gnd 9.0
+C decoder_0/d5 gnd 20.2
+C gnd decoder_0/or2v0x3_7/z 15.6
+C decoder_0/or2v0x3_4/z vdd 18.3
+C vdd decoder_0/b1 11.4
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/o0 2.3
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# decoder_1/b2 8.7
+C gnd decoder_1/d2 23.3
+C 3_bitmux_1/mxn2v0x1_1/sn 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 9.2
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# vdd 4.8
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# vdd 59.4
+C decoder_0/or2v0x3_5/zn vdd 12.7
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# decoder_0/b1 13.4
+C 3_bitmux_1/mxn2v0x1_0/zn 3_bitmux_1/mxn2v0x1_0/w_n4_32# 9.3
+C 3_bitmux_0/o2 3_bitmux_0/mxn2v0x1_2/w_n4_n4# 2.3
+C gnd 3_bitmux_0/s 4.9
+C decoder_1/d6 decoder_1/or2v0x3_3/zn 2.2
+C 3_bitmux_0/mxn2v0x1_0/w_n4_32# decoder_1/b0 6.6
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_1/b1 6.6
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# decoder_1/b1 10.2
+C gnd decoder_1/or2v0x3_3/zn 9.0
+C gnd decoder_1/d1 7.6
+C decoder_1/or2v0x3_2/zn decoder_1/or2v0x3_1/z 2.0
+C decoder_1/or2v0x3_8/zn gnd 9.0
+C 3_bitmux_1/mxn2v0x1_2/sn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
+C vdd decoder_1/or2v0x3_6/zn 12.7
+C decoder_1/or2v0x3_4/z vdd 18.3
+C 3_bitmux_0/o0 vdd 3.6
+C decoder_0/d2 vdd 16.1
+C 3_bitmux_1/mxn2v0x1_1/zn 3_bitmux_1/mxn2v0x1_1/w_n4_32# 9.3
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# decoder_0/b2 4.8
+C decoder_0/or2v0x3_1/zn vdd 12.7
+C vdd 3_bitmux_1/mxn2v0x1_1/w_n4_32# 59.4
+C decoder_1/b1 vdd 5.8
+C vdd decoder_0/d3 28.2
+C gnd decoder_0/or2v0x3_4/z 9.2
+C decoder_1/b1 3_bitmux_1/mxn2v0x1_1/w_n4_32# 6.6
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# gnd 76.0
+C decoder_0/or2v0x3_5/zn gnd 9.0
+C decoder_1/or2v0x3_0/z vdd 19.2
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/sn 9.2
+C vdd decoder_1/or2v0x3_7/zn 12.7
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/zn 9.3
+C vdd 3_bitmux_1/mxn2v0x1_0/w_n4_32# 32.2
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/mxn2v0x1_2/zn 8.9
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_0/zn 8.9
+C decoder_0/or2v0x3_1/z vdd 24.1
+C decoder_0/or2v0x3_3/zn vdd 12.7
+C gnd decoder_1/or2v0x3_6/zn 9.0
+C decoder_1/d6 vdd 35.0
+C decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z 2.3
+C decoder_1/or2v0x3_4/z gnd 9.2
+C decoder_1/d4 vdd 15.8
+C gnd vdd 2.2
+C 3_bitmux_0/mxn2v0x1_0/sn 3_bitmux_0/o0 4.3
+C decoder_0/d2 gnd 23.3
+C decoder_1/b0 decoder_1/or2v0x3_1/z 4.7
+C decoder_0/or2v0x3_1/zn gnd 9.0
+C decoder_1/d6 decoder_1/b1 2.7
+C vdd decoder_0/or2v0x3_2/zn 14.8
+C decoder_1/b0 3_bitmux_1/mxn2v0x1_0/w_n4_n4# 8.7
+C gnd decoder_1/b1 9.0
+C gnd decoder_0/d3 7.6
+C 3_bitmux_1/mxn2v0x1_2/w_n4_n4# 3_bitmux_1/o2 2.3
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_1/b2 6.6
+C vdd 3_bitmux_1/s 5.6
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_2/sn 9.3
+C 3_bitmux_0/mxn2v0x1_0/zn vdd 2.3
+C decoder_1/or2v0x3_0/z gnd 10.3
+C 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3_bitmux_1/s 36.4
+C gnd decoder_1/or2v0x3_7/zn 9.0
+C 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3_bitmux_0/mxn2v0x1_1/zn 9.3
+C 3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3_bitmux_0/mxn2v0x1_1/zn 8.9
+R decoder_0/or2v0x3_0/a_48_39# 191
+R decoder_0/or2v0x3_0/a_31_39# 238
+C decoder_0/d2 GND 12.7
+R decoder_0/d2 1772
+C decoder_0/d0 GND 5.5
+R decoder_0/d0 1054
+R decoder_0/or2v0x3_0/zn 1208
+R decoder_0/or2v0x3_1/a_48_39# 191
+R decoder_0/or2v0x3_1/a_31_39# 238
+C decoder_0/d4 GND 25.7
+R decoder_0/d4 1774
+R decoder_0/or2v0x3_0/z 1297
+R decoder_0/or2v0x3_1/zn 1208
+R decoder_0/or2v0x3_2/a_48_39# 191
+R decoder_0/or2v0x3_2/a_31_39# 238
+R decoder_0/or2v0x3_1/z 1297
+R decoder_0/or2v0x3_2/zn 1208
+R decoder_0/or2v0x3_3/a_48_39# 191
+R decoder_0/or2v0x3_3/a_31_39# 238
+C decoder_0/d5 GND 18.7
+R decoder_0/d5 1960
+R decoder_0/or2v0x3_3/zn 1208
+R decoder_0/or2v0x3_4/a_48_39# 191
+R decoder_0/or2v0x3_4/a_31_39# 238
+R decoder_0/or2v0x3_3/z 1104
+C decoder_0/d1 GND 15.2
+R decoder_0/d1 1055
+R decoder_0/or2v0x3_4/zn 1208
+R decoder_0/or2v0x3_5/a_48_39# 191
+R decoder_0/or2v0x3_5/a_31_39# 238
+C decoder_0/d6 GND 2.7
+R decoder_0/d6 2866
+R decoder_0/or2v0x3_4/z 1296
+R decoder_0/or2v0x3_5/zn 1208
+R decoder_0/or2v0x3_6/a_48_39# 191
+R decoder_0/or2v0x3_6/a_31_39# 238
+C decoder_0/d3 GND 17.6
+R decoder_0/d3 1055
+R decoder_0/or2v0x3_6/zn 1208
+R decoder_0/or2v0x3_7/a_48_39# 191
+R decoder_0/or2v0x3_7/a_31_39# 238
+R decoder_0/or2v0x3_6/z 1297
+R decoder_0/or2v0x3_7/zn 1208
+R decoder_0/or2v0x3_8/a_48_39# 191
+R decoder_0/or2v0x3_8/a_31_39# 238
+R decoder_0/or2v0x3_7/z 1105
+R decoder_0/or2v0x3_8/zn 1208
+R 3_bitmux_0/mxn2v0x1_0/a_38_12# 43
+R 3_bitmux_0/mxn2v0x1_0/a_21_12# 43
+R 3_bitmux_0/mxn2v0x1_0/a_38_50# 191
+R 3_bitmux_0/mxn2v0x1_0/a_21_50# 191
+C vdd GND 531.0
+R vdd 183969
+R 3_bitmux_0/o0 285
+C decoder_1/b0 GND 14.5
+R decoder_1/b0 1689
+R 3_bitmux_0/mxn2v0x1_0/sn 743
+C 3_bitmux_0/s GND 18.7
+R 3_bitmux_0/s 5297
+R 3_bitmux_0/mxn2v0x1_0/zn 856
+R 3_bitmux_0/mxn2v0x1_0/w_n4_32# 4100
+R 3_bitmux_0/mxn2v0x1_1/a_38_12# 43
+R 3_bitmux_0/mxn2v0x1_1/a_21_12# 43
+C gnd GND 74.5
+R gnd 11091
+R 3_bitmux_0/mxn2v0x1_1/a_38_50# 191
+R 3_bitmux_0/mxn2v0x1_1/a_21_50# 191
+C 3_bitmux_0/o1 GND 2.3
+R 3_bitmux_0/o1 284
+C decoder_1/b1 GND 12.8
+R decoder_1/b1 1689
+R 3_bitmux_0/mxn2v0x1_1/sn 743
+C decoder_0/b1 GND 60.3
+R decoder_0/b1 3572
+R 3_bitmux_0/mxn2v0x1_1/zn 856
+R 3_bitmux_0/mxn2v0x1_2/a_38_12# 43
+R 3_bitmux_0/mxn2v0x1_2/a_21_12# 43
+R 3_bitmux_0/mxn2v0x1_2/a_38_50# 191
+R 3_bitmux_0/mxn2v0x1_2/a_21_50# 191
+R 3_bitmux_0/o2 285
+C decoder_1/b2 GND 30.0
+R decoder_1/b2 1691
+R 3_bitmux_0/mxn2v0x1_2/sn 743
+C decoder_0/b2 GND 50.9
+R decoder_0/b2 3001
+R 3_bitmux_0/mxn2v0x1_2/zn 856
+R 3_bitmux_0/mxn2v0x1_1/w_n4_32# 3063
+R decoder_1/or2v0x3_0/a_48_39# 191
+R decoder_1/or2v0x3_0/a_31_39# 238
+C decoder_1/d2 GND 12.7
+R decoder_1/d2 1772
+C decoder_1/d0 GND 5.5
+R decoder_1/d0 1054
+R decoder_1/or2v0x3_0/zn 1208
+R decoder_1/or2v0x3_1/a_48_39# 191
+R decoder_1/or2v0x3_1/a_31_39# 238
+C decoder_1/d4 GND 25.7
+R decoder_1/d4 1774
+R decoder_1/or2v0x3_0/z 1297
+R decoder_1/or2v0x3_1/zn 1208
+R decoder_1/or2v0x3_2/a_48_39# 191
+R decoder_1/or2v0x3_2/a_31_39# 238
+R decoder_1/or2v0x3_1/z 1297
+R decoder_1/or2v0x3_2/zn 1208
+R decoder_1/or2v0x3_3/a_48_39# 191
+R decoder_1/or2v0x3_3/a_31_39# 238
+C decoder_1/d5 GND 18.7
+R decoder_1/d5 1960
+R decoder_1/or2v0x3_3/zn 1208
+R decoder_1/or2v0x3_4/a_48_39# 191
+R decoder_1/or2v0x3_4/a_31_39# 238
+R decoder_1/or2v0x3_3/z 1104
+C decoder_1/d1 GND 15.2
+R decoder_1/d1 1055
+R decoder_1/or2v0x3_4/zn 1208
+R decoder_1/or2v0x3_5/a_48_39# 191
+R decoder_1/or2v0x3_5/a_31_39# 238
+C decoder_1/d6 GND 2.7
+R decoder_1/d6 2866
+R decoder_1/or2v0x3_4/z 1296
+R decoder_1/or2v0x3_5/zn 1208
+R decoder_1/or2v0x3_6/a_48_39# 191
+R decoder_1/or2v0x3_6/a_31_39# 238
+C decoder_1/d3 GND 17.6
+R decoder_1/d3 1055
+R decoder_1/or2v0x3_6/zn 1208
+R decoder_1/or2v0x3_7/a_48_39# 191
+R decoder_1/or2v0x3_7/a_31_39# 238
+R decoder_1/or2v0x3_6/z 1297
+R decoder_1/or2v0x3_7/zn 1208
+R decoder_1/or2v0x3_8/a_48_39# 191
+R decoder_1/or2v0x3_8/a_31_39# 238
+R decoder_1/or2v0x3_7/z 1105
+R decoder_1/or2v0x3_8/zn 1208
+R 3_bitmux_1/mxn2v0x1_0/a_38_12# 43
+R 3_bitmux_1/mxn2v0x1_0/a_21_12# 43
+R 3_bitmux_1/mxn2v0x1_0/a_38_50# 191
+R 3_bitmux_1/mxn2v0x1_0/a_21_50# 191
+R 3_bitmux_1/o0 285
+R 3_bitmux_1/mxn2v0x1_0/sn 743
+C 3_bitmux_1/s GND 18.7
+R 3_bitmux_1/s 5297
+R 3_bitmux_1/mxn2v0x1_0/zn 856
+R 3_bitmux_1/mxn2v0x1_0/w_n4_32# 4100
+R 3_bitmux_1/mxn2v0x1_1/a_38_12# 43
+R 3_bitmux_1/mxn2v0x1_1/a_21_12# 43
+R 3_bitmux_1/mxn2v0x1_1/a_38_50# 191
+R 3_bitmux_1/mxn2v0x1_1/a_21_50# 191
+C 3_bitmux_1/o1 GND 2.3
+R 3_bitmux_1/o1 284
+R 3_bitmux_1/mxn2v0x1_1/sn 743
+R 3_bitmux_1/mxn2v0x1_1/zn 856
+R 3_bitmux_1/mxn2v0x1_2/a_38_12# 43
+R 3_bitmux_1/mxn2v0x1_2/a_21_12# 43
+R 3_bitmux_1/mxn2v0x1_2/a_38_50# 191
+R 3_bitmux_1/mxn2v0x1_2/a_21_50# 191
+R 3_bitmux_1/o2 285
+R 3_bitmux_1/mxn2v0x1_2/sn 743
+R 3_bitmux_1/mxn2v0x1_2/zn 856
+R 3_bitmux_1/mxn2v0x1_1/w_n4_32# 3063

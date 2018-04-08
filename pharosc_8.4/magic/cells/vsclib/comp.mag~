@@ -342,75 +342,75 @@ rect 106 -105 112 -99
 rect 1 -208 7 -202
 rect 164 -192 170 -186
 rect 163 -221 169 -215
-use  iv1v0x4  iv1v0x4_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_0
 timestamp 1521745303
 transform 1 0 4 0 1 4
 box -4 -4 36 76
-use  iv1v0x4  iv1v0x4_1
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_1
 timestamp 1521745303
 transform 1 0 44 0 1 4
 box -4 -4 36 76
-use  or3v0x2  or3v0x2_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_0
 timestamp 1521745303
 transform 1 0 84 0 1 4
 box -4 -4 76 76
-use  an2v0x2  an2v0x2_2
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_2
 timestamp 1521745303
 transform 1 0 164 0 1 4
 box -4 -4 44 76
-use  an2v0x2  an2v0x2_3
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_3
 timestamp 1521745303
 transform 1 0 212 0 1 4
 box -4 -4 44 76
-use  iv1v0x4  iv1v0x4_2
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/iv1v0x4  iv1v0x4_2
 timestamp 1521745303
 transform -1 0 36 0 -1 -4
 box -4 -4 36 76
-use  an2v0x2  an2v0x2_4
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_4
 timestamp 1521745303
 transform -1 0 84 0 -1 -4
 box -4 -4 44 76
-use  an2v0x2  an2v0x2_1
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_1
 timestamp 1521745303
 transform -1 0 132 0 -1 -4
 box -4 -4 44 76
-use  or3v0x2  or3v0x2_1
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/or3v0x2  or3v0x2_1
 timestamp 1521745303
 transform -1 0 212 0 -1 -4
 box -4 -4 76 76
-use  nr2v0x2  nr2v0x2_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_0
 timestamp 1521745303
 transform -1 0 268 0 -1 -4
 box -4 -4 52 76
-use  an2v0x2  an2v0x2_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an2v0x2  an2v0x2_0
 timestamp 1521745303
 transform 1 0 4 0 1 -156
 box -4 -4 44 76
-use  an3v0x2  an3v0x2_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_0
 timestamp 1521745303
 transform 1 0 52 0 1 -156
 box -4 -4 60 76
-use  an3v0x2  an3v0x2_3
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_3
 timestamp 1521745303
 transform 1 0 116 0 1 -156
 box -4 -4 60 76
-use  nr2v0x2  nr2v0x2_1
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/nr2v0x2  nr2v0x2_1
 timestamp 1521745303
 transform 1 0 180 0 1 -156
 box -4 -4 52 76
-use  an3v0x2  an3v0x2_2
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_2
 timestamp 1521745303
 transform -1 0 60 0 -1 -164
 box -4 -4 60 76
-use  nr3v0x2  nr3v0x2_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/nr3v0x2  nr3v0x2_0
 timestamp 1521745303
 transform -1 0 156 0 -1 -164
 box -4 -4 92 76
-use  an3v0x2  an3v0x2_1
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/an3v0x2  an3v0x2_1
 timestamp 1521745303
 transform -1 0 220 0 -1 -164
 box -4 -4 60 76
-use  nd3v0x2  nd3v0x2_0
+use /home/barun/Desktop/github/vlsiproject/pharosc_8.4/magic/cells/vsclib/nd3v0x2  nd3v0x2_0
 timestamp 1521745303
 transform -1 0 292 0 -1 -164
 box -4 -4 68 76

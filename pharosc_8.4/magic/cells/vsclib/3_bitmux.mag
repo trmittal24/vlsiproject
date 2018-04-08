@@ -1,0 +1,96 @@
+magic
+tech scmos
+timestamp 1521737470
+<< polysilicon >>
+rect -17 76 25 78
+rect -17 72 -15 76
+rect 23 69 25 76
+rect 47 -76 49 -73
+rect -23 -78 49 -76
+rect -23 -84 25 -82
+rect 23 -87 25 -84
+<< metal1 >>
+rect -5 73 2 76
+rect -5 68 5 73
+rect -29 61 -27 65
+rect -29 26 -27 30
+rect -29 17 -27 21
+rect -29 8 -27 12
+rect -18 -67 -14 68
+rect 81 42 85 46
+rect -11 13 -7 34
+rect -4 -5 70 5
+rect 66 -43 85 -39
+rect -29 -71 -14 -67
+rect -29 -79 -27 -75
+rect -29 -86 -27 -82
+rect -6 -84 70 -75
+rect -6 -85 23 -84
+rect 39 -85 70 -84
+rect 82 -121 85 -117
+rect -5 -156 4 -148
+<< metal2 >>
+rect -23 61 61 65
+rect -11 38 -7 61
+rect 10 42 77 46
+rect -23 26 51 30
+rect -23 17 5 21
+rect -23 8 -19 12
+rect -22 -130 -19 8
+rect -11 -61 -7 9
+rect 1 -26 5 17
+rect 1 -30 17 -26
+rect -11 -65 7 -61
+rect -11 -95 -7 -65
+rect -11 -99 62 -95
+rect 10 -121 78 -117
+rect -22 -134 52 -130
+<< polycontact >>
+rect -18 68 -14 72
+rect -27 -79 -23 -75
+rect -27 -86 -23 -82
+<< m2contact >>
+rect -27 61 -23 65
+rect -27 26 -23 30
+rect -27 17 -23 21
+rect -27 8 -23 12
+rect 61 61 65 65
+rect 6 42 10 46
+rect 77 42 81 46
+rect -11 34 -7 38
+rect 51 26 55 30
+rect -11 9 -7 13
+rect 17 -30 21 -26
+rect 7 -65 11 -61
+rect 62 -99 66 -95
+rect 6 -121 10 -117
+rect 78 -121 82 -117
+rect 52 -134 56 -130
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1  mxn2v0x1_0
+timestamp 1521735939
+transform 1 0 4 0 1 4
+box -4 -4 68 76
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1  mxn2v0x1_1
+timestamp 1521735939
+transform -1 0 68 0 -1 -4
+box -4 -4 68 76
+use /home/dipanshu/Desktop/vlsiproject/pharosc_8.4/magic/cells/vsclib/mxn2v0x1  mxn2v0x1_2
+timestamp 1521735939
+transform 1 0 4 0 1 -156
+box -4 -4 68 76
+<< labels >>
+rlabel metal1 83 43 83 43 7 o0
+rlabel metal1 -2 72 -2 72 1 vdd
+rlabel metal1 -3 0 -3 0 1 gnd
+rlabel metal1 -3 -80 -3 -80 1 vdd
+rlabel metal1 -28 -77 -28 -77 3 a1
+rlabel metal1 -28 -84 -28 -84 3 a2
+rlabel metal1 -28 -70 -28 -70 3 a0
+rlabel metal1 -28 63 -28 63 3 s
+rlabel metal1 -28 28 -28 28 3 b0
+rlabel metal1 -28 19 -28 19 3 b1
+rlabel metal1 -28 10 -28 10 3 b2
+rlabel metal1 80 -41 80 -41 7 o1
+rlabel metal1 83 -119 83 -119 7 o2
+rlabel metal1 -3 -153 -3 -153 1 gnd
+<< end >>
