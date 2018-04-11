@@ -1,4 +1,4 @@
-timestamp 1523182099
+timestamp 1523195521
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -25,61 +25,61 @@ node "a_950_n152#" 225 73449 950 -152 pc 0 0 0 0 55 50 0 0 0 0 0 0 1457 736 0 0 
 node "a_933_n152#" 236 54887 933 -152 pc 0 0 0 0 57 52 0 0 0 0 0 0 1057 536 0 0 0 0
 node "a_960_n167#" 360 70662 960 -167 p 0 0 0 0 77 72 0 0 0 0 0 0 1342 898 0 0 0 0
 node "ud" 185 69012 873 33 pc 0 0 0 0 60 48 0 0 0 0 0 0 551 362 2144 1140 0 0
-cap "m1_829_n199#" "m1_781_n204#" 180
-cap "m1_70_n118#" "m1_293_n115#" 540
-cap "m1_70_n118#" "m1_185_97#" 540
-cap "m1_818_n235#" "ud" 1080
-cap "m1_293_n115#" "m1_185_97#" 720
 cap "ud" "m1_819_n171#" 1080
-cap "1counter_0/iv1v0x3_0/a" "1counter_0/iv1v0x3_0/a" 152
+cap "m1_293_n115#" "m1_70_n118#" 540
+cap "ud" "m1_818_n235#" 1080
+cap "m1_781_n204#" "m1_829_n199#" 180
+cap "m1_185_97#" "m1_70_n118#" 540
+cap "m1_185_97#" "m1_293_n115#" 720
 cap "1counter_0/iv1v0x3_0/a" "1counter_0/iv1v0x3_0/z" 540
+cap "1counter_0/iv1v0x3_0/a" "1counter_0/iv1v0x3_0/a" 152
 cap "1counter_0/iv1v0x3_0/a" "1counter_0/iv1v0x3_0/vdd" 1890
 cap "ud" "1counter_0/tf_0/xor2v0x05_0/vss" 1308
 cap "iv1v0x3_0/z" "iv1v0x3_0/vdd" 1128
-cap "iv1v0x3_0/vdd" "1counter_0/tf_0/dfnt1v0x2_0/cp" 2808
-cap "1counter_0/tf_0/dfnt1v0x2_0/cn" "1counter_0/tf_0/dfnt1v0x2_0/cp" 578
-cap "1counter_0/tf_0/xor2v0x05_0/an" "1counter_0/tf_0/dfnt1v0x2_0/cp" 898
-cap "iv1v0x3_0/vdd" "1counter_0/tf_0/xor2v0x05_0/a" 564
 cap "iv1v0x3_0/a" "iv1v0x3_0/a" 76
-cap "iv1v0x3_0/a" "iv1v0x3_0/vdd" 1844
-cap "1counter_0/tf_0/dfnt1v0x2_0/cp" "1counter_0/tf_0/xor2v0x05_0/a" 38
+cap "iv1v0x3_0/z" "iv1v0x3_0/a" 650
 cap "1counter_0/tf_0/xor2v0x05_0/bn" "1counter_0/tf_0/dfnt1v0x2_0/cp" 1206
-cap "iv1v0x3_0/a" "iv1v0x3_0/z" 650
+cap "1counter_0/tf_0/xor2v0x05_0/a" "iv1v0x3_0/vdd" 564
+cap "1counter_0/tf_0/xor2v0x05_0/a" "1counter_0/tf_0/dfnt1v0x2_0/cp" 38
 cap "1counter_0/tf_0/xor2v0x05_0/b" "1counter_0/tf_0/dfnt1v0x2_0/cp" 38
-cap "ud" "an2v0x3_0/vss" 534
+cap "1counter_0/tf_0/dfnt1v0x2_0/cn" "1counter_0/tf_0/dfnt1v0x2_0/cp" 578
+cap "iv1v0x3_0/vdd" "1counter_0/tf_0/dfnt1v0x2_0/cp" 2808
+cap "iv1v0x3_0/a" "iv1v0x3_0/vdd" 1844
+cap "1counter_0/tf_0/xor2v0x05_0/an" "1counter_0/tf_0/dfnt1v0x2_0/cp" 898
+cap "an2v0x3_0/zn" "ud" 2700
 cap "1counter_0/tf_0/xor2v0x05_0/vdd" "an2v0x3_0/z" 893
-cap "ud" "1counter_0/tf_0/xor2v0x05_0/vdd" 399
-cap "ud" "an2v0x3_0/zn" 2700
-cap "1counter_0/tf_0/xor2v0x05_0/z" "an2v0x3_0/z" 1618
 cap "1counter_0/tf_0/xor2v0x05_0/an" "an2v0x3_0/z" 38
-cap "or3v0x3_0/vss" "an2v0x3_0/a" 3572
 cap "ud" "an2v0x3_0/z" 1553
-cap "or3v0x3_0/vdd" "a_960_n167#" 120
-cap "or3v0x3_0/vdd" "a_933_n152#" 120
-cap "or3v0x3_0/vdd" "a_950_n152#" 468
-cap "a_960_n167#" "or3v0x3_0/vdd" 468
-cap "a_933_n152#" "or3v0x3_0/vdd" 468
-cap "or3v0x3_0/vdd" "or3v0x3_0/vdd" -564
+cap "ud" "1counter_0/tf_0/xor2v0x05_0/vdd" 399
+cap "an2v0x3_0/a" "or3v0x3_0/vss" 3572
+cap "1counter_0/tf_0/xor2v0x05_0/z" "an2v0x3_0/z" 1618
+cap "ud" "an2v0x3_0/vss" 534
 cap "or3v0x3_0/vdd" "a_950_n152#" 120
-cap "1counter_0/bf1v0x4_2/w_n4_32#" "1counter_0/bf1v0x4_2/z" 342
+cap "a_960_n167#" "or3v0x3_0/vdd" 120
+cap "a_933_n152#" "or3v0x3_0/vdd" 120
+cap "or3v0x3_0/vdd" "a_950_n152#" 468
+cap "a_933_n152#" "or3v0x3_0/vdd" 468
+cap "a_960_n167#" "or3v0x3_0/vdd" 468
+cap "or3v0x3_0/vdd" "or3v0x3_0/vdd" -564
+cap "1counter_0/bf1v0x4_2/z" "1counter_0/bf1v0x4_2/w_n4_32#" 342
 cap "1counter_0/m1_n522_149#" "m1_70_n118#" 1080
-cap "1counter_0/m1_n325_149#" "1counter_0/m1_n330_125#" 1800
-cap "1counter_0/an2v0x3_0/a" "1counter_0/an2v0x3_0/zn" 1620
-cap "1counter_0/an2v0x3_0/vss" "1counter_0/an2v0x3_0/a" 803
+cap "1counter_0/m1_n330_125#" "1counter_0/m1_n325_149#" 1800
+cap "1counter_0/an2v0x3_0/z" "m1_185_97#" 540
 cap "1counter_0/an2v0x3_0/z" "1counter_0/an2v0x3_0/a" 807
-cap "1counter_0/an2v0x3_0/a" "1counter_0/an2v0x3_0/a_30_9#" 198
 cap "m1_185_97#" "1counter_0/an2v0x3_0/vss" 945
-cap "m1_185_97#" "1counter_0/an2v0x3_0/z" 540
+cap "1counter_0/an2v0x3_0/a" "1counter_0/an2v0x3_0/zn" 1620
+cap "1counter_0/an2v0x3_0/a" "1counter_0/an2v0x3_0/a_30_9#" 198
+cap "1counter_0/an2v0x3_0/a" "1counter_0/an2v0x3_0/vss" 803
 cap "ud" "iv1v0x3_0/z" 3060
-cap "ud" "iv1v0x3_0/vss" 1554
+cap "iv1v0x3_0/vss" "ud" 1554
 cap "ud" "1counter_0/an2v0x3_0/vss" 285
 cap "m1_185_97#" "totdiff3_0/m1_622_n613#" 540
 cap "m1_293_n115#" "totdiff3_0/m1_884_n612#" 675
 cap "totdiff3_0/m1_1195_n636#" "m1_70_n118#" 405
 cap "totdiff3_0/m1_1195_n628#" "m1_70_n118#" 945
-cap "totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4#" "ud" 468
-cap "totdiff3_0/mux_0/mxn2v0x1_2/vss" "ud" 120
-cap "totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4#" "totdiff3_0/mux_0/mxn2v0x1_2/vss" -188
+cap "ud" "totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4#" 468
+cap "ud" "totdiff3_0/mux_0/mxn2v0x1_2/vss" 120
+cap "totdiff3_0/mux_0/mxn2v0x1_2/vss" "totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4#" -188
 merge "or3v0x3_0/z" "an2v0x3_0/a" -5076 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
 merge "an2v0x3_0/a" "m1_871_n213#"
 merge "iv1v0x3_0/z" "m1_760_n133#" -8836 0 0 0 0 0 0 0 0 0 0 0 0 -164 -94 0 0 0 0

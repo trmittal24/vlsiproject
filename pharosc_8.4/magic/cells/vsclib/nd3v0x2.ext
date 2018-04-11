@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-timestamp 1523182099
-=======
-timestamp 1523181350
->>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+timestamp 1523195521
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -32,59 +28,31 @@ node "b" 1697 0 11 47 p 0 0 0 0 316 304 0 0 0 0 0 0 104 52 0 0 0 0
 equiv "b" "b"
 node "w_n4_n4#" 0 0 -4 -4 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n4_32#" 4100 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3168 232
-<<<<<<< HEAD
 cap "a" "w_n4_32#" 6203
-cap "vdd" "w_n4_32#" 19552
-cap "w_n4_32#" "c" 4682
-cap "b" "a" 300
-cap "z" "vss" 2397
-cap "vdd" "b" 1608
-cap "b" "w_n4_n4#" 13414
-cap "a" "vss" 684
-cap "w_n4_n4#" "vss" 23688
-cap "b" "w_n4_32#" 12686
-cap "z" "a" 1504
-cap "z" "vdd" 6110
-cap "z" "c" 1504
-cap "a" "a_38_12#" 940
-cap "a" "a_45_12#" 940
-cap "z" "a_14_12#" 1269
-cap "z" "w_n4_n4#" 2914
-cap "z" "a_21_12#" 940
-cap "vdd" "a" 240
-cap "b" "vss" 2040
-cap "w_n4_n4#" "a" 11673
-cap "vdd" "c" 240
-cap "a_21_12#" "a" 752
-cap "z" "w_n4_32#" 5170
-cap "w_n4_n4#" "c" 7582
-=======
-cap "b" "a" 300
+cap "a_21_12#" "z" 940
+cap "vss" "w_n4_n4#" 23688
 cap "vdd" "z" 6110
-cap "b" "vss" 2040
-cap "vdd" "w_n4_32#" 19552
-cap "a" "a_21_12#" 752
-cap "a_45_12#" "a" 940
-cap "z" "a" 1504
-cap "z" "vss" 2397
-cap "w_n4_n4#" "a" 11673
-cap "w_n4_n4#" "vss" 23688
-cap "w_n4_32#" "a" 6203
-cap "a_38_12#" "a" 940
-cap "z" "c" 1504
-cap "w_n4_n4#" "c" 7582
-cap "w_n4_32#" "c" 4682
-cap "z" "a_14_12#" 1269
-cap "vdd" "a" 240
-cap "w_n4_n4#" "b" 13414
+cap "vss" "b" 2040
+cap "a_21_12#" "a" 752
+cap "a" "vdd" 240
 cap "b" "w_n4_32#" 12686
-cap "vss" "a" 684
-cap "z" "a_21_12#" 940
+cap "a" "z" 1504
 cap "w_n4_n4#" "z" 2914
-cap "vdd" "c" 240
-cap "z" "w_n4_32#" 5170
-cap "vdd" "b" 1608
->>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+cap "b" "vdd" 1608
+cap "c" "w_n4_32#" 4682
+cap "a" "a_45_12#" 940
+cap "a" "w_n4_n4#" 11673
+cap "a" "a_38_12#" 940
+cap "c" "vdd" 240
+cap "a" "b" 300
+cap "c" "z" 1504
+cap "w_n4_n4#" "b" 13414
+cap "w_n4_32#" "vdd" 19552
+cap "vss" "z" 2397
+cap "w_n4_32#" "z" 5170
+cap "c" "w_n4_n4#" 7582
+cap "a_14_12#" "z" 1269
+cap "vss" "a" 684
 device mosfet nfet 50 12 51 13 2 14 "w_n4_n4#" "a" 4 0 "a_45_12#" 14 0 "vss" 14 0
 device mosfet nfet 43 12 44 13 2 14 "w_n4_n4#" "b" 4 0 "a_38_12#" 14 0 "a_45_12#" 14 0
 device mosfet nfet 36 12 37 13 2 14 "w_n4_n4#" "c" 4 0 "z" 14 0 "a_38_12#" 14 0

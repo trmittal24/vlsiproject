@@ -1,0 +1,1897 @@
+| units: 100 tech: scmos format: MIT
+p 3seg_0/2seg_0/or3v0x3_0/zn vdd 3seg_0/2seg_0/an2v0x3_0/a 2 19 922 122
+p 3seg_0/2seg_0/or3v0x3_0/zn 3seg_0/2seg_0/an2v0x3_0/a vdd 2 21 932 122
+p 3seg_0/2seg_0/or3v0x3_0/a vdd 3seg_0/2seg_0/or3v0x3_0/a_33_38# 2 28 944 122
+p 3seg_0/2seg_0/or3v0x3_0/b 3seg_0/2seg_0/or3v0x3_0/a_33_38# 3seg_0/2seg_0/or3v0x3_0/a_40_38# 2 28 951 122
+p 3seg_0/2seg_0/or3v0x3_0/c 3seg_0/2seg_0/or3v0x3_0/a_40_38# 3seg_0/2seg_0/or3v0x3_0/zn 2 28 958 122
+p 3seg_0/2seg_0/or3v0x3_0/c 3seg_0/2seg_0/or3v0x3_0/zn 3seg_0/2seg_0/or3v0x3_0/a_57_38# 2 28 968 122
+p 3seg_0/2seg_0/or3v0x3_0/b 3seg_0/2seg_0/or3v0x3_0/a_57_38# 3seg_0/2seg_0/or3v0x3_0/a_64_38# 2 28 975 122
+p 3seg_0/2seg_0/or3v0x3_0/a 3seg_0/2seg_0/or3v0x3_0/a_64_38# vdd 2 28 982 122
+n 3seg_0/2seg_0/or3v0x3_0/zn 3seg_0/2seg_0/an2v0x3_0/a gnd 2 20 922 90
+n 3seg_0/2seg_0/or3v0x3_0/a gnd 3seg_0/2seg_0/or3v0x3_0/zn 2 10 942 92
+n 3seg_0/2seg_0/or3v0x3_0/b 3seg_0/2seg_0/or3v0x3_0/zn gnd 2 10 952 92
+n 3seg_0/2seg_0/or3v0x3_0/c gnd 3seg_0/2seg_0/or3v0x3_0/zn 2 10 965 92
+p 3seg_0/2seg_0/an2v0x3_0/zn vdd 3seg_0/2seg_0/an2v0x3_0/z 2 20 858 125
+p 3seg_0/2seg_0/an2v0x3_0/zn 3seg_0/2seg_0/an2v0x3_0/z vdd 2 20 868 125
+p 3seg_0/2seg_0/an2v0x3_0/a vdd 3seg_0/2seg_0/an2v0x3_0/zn 2 20 878 125
+p 3seg_0/2seg_0/an2v0x3_0/b 3seg_0/2seg_0/an2v0x3_0/zn vdd 2 20 888 122
+n 3seg_0/2seg_0/an2v0x3_0/zn 3seg_0/2seg_0/an2v0x3_0/z gnd 2 20 858 90
+n 3seg_0/2seg_0/an2v0x3_0/a gnd 3seg_0/2seg_0/an2v0x3_0/a_30_9# 2 17 877 93
+n 3seg_0/2seg_0/an2v0x3_0/b 3seg_0/2seg_0/an2v0x3_0/a_30_9# 3seg_0/2seg_0/an2v0x3_0/zn 2 17 884 93
+p 3seg_0/2seg_0/ud vdd 3seg_0/2seg_0/1counter_0/an2v0x3_1/b 2 24 755 34
+p 3seg_0/2seg_0/ud 3seg_0/2seg_0/1counter_0/an2v0x3_1/b vdd 2 16 745 34
+n 3seg_0/2seg_0/ud gnd 3seg_0/2seg_0/1counter_0/an2v0x3_1/b 2 10 755 59
+n 3seg_0/2seg_0/ud 3seg_0/2seg_0/1counter_0/an2v0x3_1/b gnd 2 10 745 59
+p 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 2 20 716 34
+p 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 3seg_0/2seg_0/1counter_0/an2v0x3_2/b vdd 2 20 706 34
+p 3seg_0/2seg_0/1counter_0/an2v0x3_1/a vdd 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 2 20 696 34
+p 3seg_0/2seg_0/1counter_0/an2v0x3_1/b 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn vdd 2 20 686 37
+n 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 3seg_0/2seg_0/1counter_0/an2v0x3_2/b gnd 2 20 716 69
+n 3seg_0/2seg_0/1counter_0/an2v0x3_1/a gnd 3seg_0/2seg_0/1counter_0/an2v0x3_1/a_30_9# 2 17 697 66
+n 3seg_0/2seg_0/1counter_0/an2v0x3_1/b 3seg_0/2seg_0/1counter_0/an2v0x3_1/a_30_9# 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 2 17 690 66
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/z 2 20 395 34
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn 3seg_0/2seg_0/1counter_0/an2v0x3_2/z vdd 2 20 385 34
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/a vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn 2 20 375 34
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn vdd 2 20 365 37
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn 3seg_0/2seg_0/1counter_0/an2v0x3_2/z gnd 2 20 395 69
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/a gnd 3seg_0/2seg_0/1counter_0/an2v0x3_2/a_30_9# 2 17 376 66
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 3seg_0/2seg_0/1counter_0/an2v0x3_2/a_30_9# 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn 2 17 369 66
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn vdd 2 21 796 122
+p 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a vdd 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 2 13 810 122
+p 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 2 13 820 122
+p 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn 2 21 830 122
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn gnd 2 7 790 103
+n 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a gnd 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 2 7 803 97
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 2 7 813 97
+n 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a_48_11# 2 9 823 95
+n 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a_48_11# gnd 2 9 830 95
+p 3seg_0/2seg_0/1counter_0/an2v0x3_1/a 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a vdd 2 28 634 122
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 vdd 3seg_0/2seg_0/1counter_0/an2v0x3_1/a 2 14 644 122
+p 3seg_0/2seg_0/1counter_0/an2v0x3_1/a vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_40_48# 2 6 663 132
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_40_48# 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 2 6 670 132
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 2 12 680 132
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 vdd 2 12 690 132
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_77_54# 2 6 700 138
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_77_54# 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 2 6 707 138
+n 3seg_0/2seg_0/1counter_0/an2v0x3_1/a 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a gnd 2 14 634 94
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/an2v0x3_1/a gnd 2 7 652 103
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_94_47# 2 13 717 131
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_94_47# vdd 2 13 724 131
+p 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 2 11 734 131
+p 3seg_0/2seg_0/an2v0x3_0/z vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 2 10 754 133
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci gnd 2 6 744 104
+n 3seg_0/2seg_0/1counter_0/an2v0x3_1/a gnd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_40_13# 2 6 663 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_40_13# 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 2 6 670 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 2 6 680 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 gnd 2 6 690 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 gnd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_77_13# 2 6 700 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_77_13# 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 2 6 707 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_94_13# 2 6 717 97
+n 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_94_13# gnd 2 6 724 97
+n 3seg_0/2seg_0/an2v0x3_0/z gnd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 2 7 754 103
+p 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn vdd 3seg_0/2seg_0/1counter_0/or2v0x3_0/z 2 20 562 123
+p 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn 3seg_0/2seg_0/1counter_0/or2v0x3_0/z vdd 2 20 572 123
+p 3seg_0/2seg_0/1counter_0/an2v0x3_3/b vdd 3seg_0/2seg_0/1counter_0/or2v0x3_0/a_31_39# 2 20 582 123
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 3seg_0/2seg_0/1counter_0/or2v0x3_0/a_31_39# 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn 2 20 589 123
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn 3seg_0/2seg_0/1counter_0/or2v0x3_0/a_48_39# 2 16 599 123
+p 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 3seg_0/2seg_0/1counter_0/or2v0x3_0/a_48_39# vdd 2 16 606 123
+n 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn 3seg_0/2seg_0/1counter_0/or2v0x3_0/z gnd 2 20 562 90
+n 3seg_0/2seg_0/1counter_0/an2v0x3_3/b gnd 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn 2 10 581 95
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn gnd 2 10 591 95
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn vdd 2 21 500 122
+p 3seg_0/2seg_0/1counter_0/or2v0x3_0/z vdd 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 2 13 514 122
+p 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 2 13 524 122
+p 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn 2 21 534 122
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn gnd 2 7 494 103
+n 3seg_0/2seg_0/1counter_0/or2v0x3_0/z gnd 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 2 7 507 97
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 2 7 517 97
+n 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/a_48_11# 2 9 527 95
+n 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/a_48_11# gnd 2 9 534 95
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/a 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a vdd 2 28 338 122
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/a 2 14 348 122
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/a vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_40_48# 2 6 367 132
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_40_48# 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 2 6 374 132
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 2 12 384 132
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 vdd 2 12 394 132
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_77_54# 2 6 404 138
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_77_54# 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 2 6 411 138
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/a 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a gnd 2 14 338 94
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/an2v0x3_2/a gnd 2 7 356 103
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_94_47# 2 13 421 131
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_94_47# vdd 2 13 428 131
+p 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 2 11 438 131
+p 3seg_0/2seg_0/an2v0x3_0/z vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 2 10 458 133
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci gnd 2 6 448 104
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/a gnd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_40_13# 2 6 367 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_40_13# 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 2 6 374 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 2 6 384 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 gnd 2 6 394 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 gnd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_77_13# 2 6 404 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_77_13# 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 2 6 411 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_94_13# 2 6 421 97
+n 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_94_13# gnd 2 6 428 97
+n 3seg_0/2seg_0/an2v0x3_0/z gnd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 2 7 458 103
+p 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn vdd 3seg_0/2seg_0/1counter_0/or2v0x3_1/z 2 20 266 123
+p 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn 3seg_0/2seg_0/1counter_0/or2v0x3_1/z vdd 2 20 276 123
+p 3seg_0/2seg_0/1counter_0/or2v0x3_1/a vdd 3seg_0/2seg_0/1counter_0/or2v0x3_1/a_31_39# 2 20 286 123
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/z 3seg_0/2seg_0/1counter_0/or2v0x3_1/a_31_39# 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn 2 20 293 123
+p 3seg_0/2seg_0/1counter_0/an2v0x3_2/z 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn 3seg_0/2seg_0/1counter_0/or2v0x3_1/a_48_39# 2 16 303 123
+p 3seg_0/2seg_0/1counter_0/or2v0x3_1/a 3seg_0/2seg_0/1counter_0/or2v0x3_1/a_48_39# vdd 2 16 310 123
+n 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn 3seg_0/2seg_0/1counter_0/or2v0x3_1/z gnd 2 20 266 90
+n 3seg_0/2seg_0/1counter_0/or2v0x3_1/a gnd 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn 2 10 285 95
+n 3seg_0/2seg_0/1counter_0/an2v0x3_2/z 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn gnd 2 10 295 95
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn vdd 2 21 204 122
+p 3seg_0/2seg_0/1counter_0/or2v0x3_1/z vdd 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 2 13 218 122
+p 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 2 13 228 122
+p 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 2 21 238 122
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn gnd 2 7 198 103
+n 3seg_0/2seg_0/1counter_0/or2v0x3_1/z gnd 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 2 7 211 97
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 2 7 221 97
+n 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/a_48_11# 2 9 231 95
+n 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/a_48_11# gnd 2 9 238 95
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a vdd 2 28 42 122
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn 2 14 52 122
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_40_48# 2 6 71 132
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_40_48# 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 2 6 78 132
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 2 12 88 132
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 vdd 2 12 98 132
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_77_54# 2 6 108 138
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_77_54# 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 2 6 115 138
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a gnd 2 14 42 94
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn gnd 2 7 60 103
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_94_47# 2 13 125 131
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_94_47# vdd 2 13 132 131
+p 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 2 11 142 131
+p 3seg_0/2seg_0/an2v0x3_0/z vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 2 10 162 133
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci gnd 2 6 152 104
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn gnd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_40_13# 2 6 71 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_40_13# 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 2 6 78 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 2 6 88 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 gnd 2 6 98 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 gnd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_77_13# 2 6 108 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_77_13# 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 2 6 115 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_94_13# 2 6 125 97
+n 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_94_13# gnd 2 6 132 97
+n 3seg_0/2seg_0/an2v0x3_0/z gnd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 2 7 162 103
+p 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn vdd 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 2 20 713 194
+p 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn 3seg_0/2seg_0/1counter_0/an2v0x3_3/b vdd 2 20 703 194
+p 3seg_0/2seg_0/ud vdd 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn 2 20 693 194
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn vdd 2 20 683 197
+n 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn 3seg_0/2seg_0/1counter_0/an2v0x3_3/b gnd 2 20 713 229
+n 3seg_0/2seg_0/ud gnd 3seg_0/2seg_0/1counter_0/an2v0x3_0/a_30_9# 2 17 694 226
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 3seg_0/2seg_0/1counter_0/an2v0x3_0/a_30_9# 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn 2 17 687 226
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 2 28 622 197
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z vdd 2 28 612 197
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an 2 27 602 197
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 2 14 622 223
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z gnd 2 14 612 223
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an 2 15 602 224
+p 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn vdd 3seg_0/2seg_0/1counter_0/or2v0x3_1/a 2 20 391 194
+p 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn 3seg_0/2seg_0/1counter_0/or2v0x3_1/a vdd 2 20 381 194
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z vdd 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn 2 20 371 194
+p 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn vdd 2 20 361 197
+n 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn 3seg_0/2seg_0/1counter_0/or2v0x3_1/a gnd 2 20 391 229
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z gnd 3seg_0/2seg_0/1counter_0/an2v0x3_3/a_30_9# 2 17 372 226
+n 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 3seg_0/2seg_0/1counter_0/an2v0x3_3/a_30_9# 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn 2 17 365 226
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 2 28 283 197
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z vdd 2 28 273 197
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 2 27 263 197
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 2 14 283 223
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z gnd 2 14 273 223
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 2 15 263 224
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 2 28 88 197
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z vdd 2 28 78 197
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an 2 27 68 197
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 2 14 88 223
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z gnd 2 14 78 223
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an 2 15 68 224
+p 3seg_0/2seg_0/iv1v0x3_0/a vdd 3seg_0/2seg_0/iv1v0x3_0/z 2 24 775 194
+p 3seg_0/2seg_0/iv1v0x3_0/a 3seg_0/2seg_0/iv1v0x3_0/z vdd 2 16 765 194
+n 3seg_0/2seg_0/iv1v0x3_0/a gnd 3seg_0/2seg_0/iv1v0x3_0/z 2 10 775 219
+n 3seg_0/2seg_0/iv1v0x3_0/a 3seg_0/2seg_0/iv1v0x3_0/z gnd 2 10 765 219
+p 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 3seg_0/2seg_0/or3v0x3_0/c vdd 2 18 855 410
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a2 vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# 2 16 865 412
+p 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 2 16 872 412
+p 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# 2 16 882 412
+p 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# vdd 2 16 889 412
+p 3seg_0/2seg_0/ud vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 2 8 899 400
+n 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 3seg_0/2seg_0/or3v0x3_0/c gnd 2 9 855 374
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a2 gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# 2 8 865 374
+n 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 2 8 872 374
+n 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# 2 8 882 374
+n 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# gnd 2 8 889 374
+n 3seg_0/2seg_0/ud gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 2 6 899 376
+p 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 3seg_0/2seg_0/or3v0x3_0/b vdd 2 18 900 465
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a1 vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# 2 16 890 463
+p 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 2 16 883 463
+p 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# 2 16 873 463
+p 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# vdd 2 16 866 463
+p 3seg_0/2seg_0/ud vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 2 8 856 475
+n 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 3seg_0/2seg_0/or3v0x3_0/b gnd 2 9 900 501
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a1 gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# 2 8 890 501
+n 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 2 8 883 501
+n 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# 2 8 873 501
+n 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# gnd 2 8 866 501
+n 3seg_0/2seg_0/ud gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 2 6 856 499
+p 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 3seg_0/2seg_0/or3v0x3_0/a vdd 2 18 855 570
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a0 vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# 2 16 865 572
+p 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 2 16 872 572
+p 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# 2 16 882 572
+p 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# vdd 2 16 889 572
+p 3seg_0/2seg_0/ud vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 2 8 899 560
+n 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 3seg_0/2seg_0/or3v0x3_0/a gnd 2 9 855 534
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a0 gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# 2 8 865 534
+n 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 2 8 872 534
+n 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# 2 8 882 534
+n 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# gnd 2 8 889 534
+n 3seg_0/2seg_0/ud gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 2 6 899 536
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/z vdd 2 28 671 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn 2 19 681 409
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn vdd 2 19 691 409
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/z gnd 2 14 671 374
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# 2 13 684 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn 2 13 691 375
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2 20 559 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b2 2 20 569 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2 20 579 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b2 2 20 589 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2 20 613 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn vdd 2 20 623 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2 20 633 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an vdd 2 20 643 408
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# 2 13 561 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# 3seg_0/2seg_0/totdiff3_0/mux_0/b2 2 13 568 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# 2 13 578 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# gnd 2 13 585 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2 10 605 378
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b2 2 20 615 368
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2 20 625 368
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an gnd 2 10 635 378
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn vdd 3seg_0/2seg_0/ud 2 20 780 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 3seg_0/2seg_0/ud vdd 2 20 770 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# 2 20 760 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 2 20 753 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# 2 16 743 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# vdd 2 16 736 474
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 3seg_0/2seg_0/ud gnd 2 20 780 507
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 2 10 761 502
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn gnd 2 10 751 502
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z vdd 2 28 708 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn 2 19 698 466
+p 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn vdd 2 19 688 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd 2 14 708 501
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# 2 13 695 500
+n 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn 2 13 688 500
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z vdd 2 28 660 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn 2 19 650 466
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn vdd 2 19 640 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd 2 14 660 501
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# 2 13 647 500
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn 2 13 640 500
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b vdd 2 12 612 475
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 2 12 600 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 2 12 590 475
+p 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai 2 12 580 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai vdd 2 12 570 475
+p 3seg_0/firseg_0/3_bitmux_0/o2 vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 2 12 560 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b gnd 2 6 612 494
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 2 6 602 494
+n 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 2 6 592 494
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai 2 6 582 494
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai gnd 2 6 571 493
+n 3seg_0/firseg_0/3_bitmux_0/o2 gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 2 6 560 500
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a2 vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 2 24 736 563
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd 2 16 746 563
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a2 gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 2 10 736 538
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd 2 10 746 538
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2 27 559 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a2 2 27 569 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 27 579 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a2 2 27 589 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2 26 612 562
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn vdd 2 26 622 562
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 28 632 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn vdd 2 28 642 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2 28 662 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a 2 28 672 560
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd 2 28 682 560
+p 3seg_0/firseg_0/3_bitmux_0/o2 vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 2 14 693 564
+p 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn vdd 2 14 703 560
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# 2 12 559 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# 3seg_0/2seg_0/totdiff3_0/mux_0/a2 2 12 566 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# 2 12 576 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# gnd 2 12 583 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 14 595 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a2 2 14 605 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2 14 615 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn gnd 2 14 625 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2 12 635 530
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd 2 12 645 530
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# 2 13 663 529
+n 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2 13 670 529
+n 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a 2 13 680 529
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 2 13 690 534
+n 3seg_0/firseg_0/3_bitmux_0/o2 gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 2 11 703 537
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c vdd 2 28 411 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn 2 19 421 409
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn vdd 2 19 431 409
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c gnd 2 14 411 374
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# 2 13 424 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn 2 13 431 375
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2 20 299 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b1 2 20 309 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2 20 319 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b1 2 20 329 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2 20 353 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn vdd 2 20 363 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2 20 373 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an vdd 2 20 383 408
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# 2 13 301 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# 3seg_0/2seg_0/totdiff3_0/mux_0/b1 2 13 308 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# 2 13 318 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# gnd 2 13 325 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 2 10 345 378
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b1 2 20 355 368
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2 20 365 368
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd 2 10 375 378
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 2 20 520 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c vdd 2 20 510 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# 2 20 500 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 2 20 493 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# 2 16 483 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# vdd 2 16 476 474
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c gnd 2 20 520 507
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 2 10 501 502
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn gnd 2 10 491 502
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd 2 28 448 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn 2 19 438 466
+p 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn vdd 2 19 428 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd 2 14 448 501
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# 2 13 435 500
+n 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn 2 13 428 500
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z vdd 2 28 400 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 2 19 390 466
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn vdd 2 19 380 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z gnd 2 14 400 501
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# 2 13 387 500
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 2 13 380 500
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b vdd 2 12 352 475
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 2 12 340 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 2 12 330 475
+p 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai 2 12 320 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai vdd 2 12 310 475
+p 3seg_0/firseg_0/3_bitmux_0/o1 vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 2 12 300 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd 2 6 352 494
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 2 6 342 494
+n 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 2 6 332 494
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai 2 6 322 494
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai gnd 2 6 311 493
+n 3seg_0/firseg_0/3_bitmux_0/o1 gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 2 6 300 500
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a1 vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 2 24 476 563
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a vdd 2 16 486 563
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a1 gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 2 10 476 538
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd 2 10 486 538
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2 27 299 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a1 2 27 309 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 27 319 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a1 2 27 329 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2 26 352 562
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn vdd 2 26 362 562
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 28 372 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn vdd 2 28 382 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 2 28 402 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a 2 28 412 560
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd 2 28 422 560
+p 3seg_0/firseg_0/3_bitmux_0/o1 vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2 14 433 564
+p 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn vdd 2 14 443 560
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# 2 12 299 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# 3seg_0/2seg_0/totdiff3_0/mux_0/a1 2 12 306 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# 2 12 316 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# gnd 2 12 323 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 14 335 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a1 2 14 345 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2 14 355 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd 2 14 365 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2 12 375 530
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn gnd 2 12 385 530
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# 2 13 403 529
+n 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 2 13 410 529
+n 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a 2 13 420 529
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd 2 13 430 534
+n 3seg_0/firseg_0/3_bitmux_0/o1 gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2 11 443 537
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c vdd 2 28 151 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn 2 19 161 409
+p vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn vdd 2 19 171 409
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c gnd 2 14 151 374
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# 2 13 164 375
+n vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn 2 13 171 375
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2 20 39 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b0 2 20 49 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2 20 59 400
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b0 2 20 69 400
+p vdd vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2 20 93 408
+p vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn vdd 2 20 103 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2 20 113 408
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an vdd 2 20 123 408
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# 2 13 41 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# 3seg_0/2seg_0/totdiff3_0/mux_0/b0 2 13 48 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# 2 13 58 375
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# gnd 2 13 65 375
+n vdd gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2 10 85 378
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b0 2 20 95 368
+n vdd 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2 20 105 368
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd 2 10 115 378
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 2 20 260 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c vdd 2 20 250 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# 2 20 240 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 2 20 233 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# 2 16 223 474
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# vdd 2 16 216 474
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c gnd 2 20 260 507
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 2 10 241 502
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn gnd 2 10 231 502
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z vdd 2 28 188 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 2 19 178 466
+p 3seg_0/firseg_0/3_bitmux_0/o0 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn vdd 2 19 168 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd 2 14 188 501
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# 2 13 175 500
+n 3seg_0/firseg_0/3_bitmux_0/o0 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 2 13 168 500
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z vdd 2 28 140 475
+p gnd vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn 2 19 130 466
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn vdd 2 19 120 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z gnd 2 14 140 501
+n gnd gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# 2 13 127 500
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn 2 13 120 500
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b vdd 2 12 92 475
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 2 12 80 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 2 12 70 475
+p 3seg_0/firseg_0/3_bitmux_0/o0 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai 2 12 60 475
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai vdd 2 12 50 475
+p 3seg_0/firseg_0/3_bitmux_0/o0 vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 2 12 40 466
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b gnd 2 6 92 494
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 2 6 82 494
+n 3seg_0/firseg_0/3_bitmux_0/o0 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 2 6 72 494
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai 2 6 62 494
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai gnd 2 6 51 493
+n 3seg_0/firseg_0/3_bitmux_0/o0 gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 2 6 40 500
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a0 vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 2 24 216 563
+p 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd 2 16 226 563
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a0 gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 2 10 216 538
+n 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd 2 10 226 538
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2 27 39 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 2 27 49 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 27 59 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 2 27 69 560
+p gnd vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2 26 92 562
+p gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn vdd 2 26 102 562
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 28 112 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn vdd 2 28 122 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2 28 142 560
+p 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a 2 28 152 560
+p 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd 2 28 162 560
+p 3seg_0/firseg_0/3_bitmux_0/o0 vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 2 14 173 564
+p 3seg_0/firseg_0/3_bitmux_0/o0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn vdd 2 14 183 560
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# 2 12 39 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# 3seg_0/2seg_0/totdiff3_0/mux_0/a0 2 12 46 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# 2 12 56 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# gnd 2 12 63 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 14 75 534
+n gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 2 14 85 534
+n gnd 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2 14 95 534
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd 2 14 105 534
+n gnd gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2 12 115 530
+n gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd 2 12 125 530
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# 2 13 143 529
+n 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2 13 150 529
+n 3seg_0/firseg_0/3_bitmux_0/o0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a 2 13 160 529
+n 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 2 13 170 534
+n 3seg_0/firseg_0/3_bitmux_0/o0 gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 2 11 183 537
+p 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 3seg_0/firseg_0/3_bitmux_0/o2 vdd 2 18 687 814
+p 3seg_0/firseg_0/decoder_0/b2 vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_21_50# 2 16 697 816
+p s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_21_50# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 2 16 704 816
+p 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_38_50# 2 16 714 816
+p decoder_0/b2 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_38_50# vdd 2 16 721 816
+p s vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 2 8 731 804
+n 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 3seg_0/firseg_0/3_bitmux_0/o2 gnd 2 9 687 778
+n 3seg_0/firseg_0/decoder_0/b2 gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_21_12# 2 8 697 778
+n 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_21_12# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 2 8 704 778
+n s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_38_12# 2 8 714 778
+n decoder_0/b2 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_38_12# gnd 2 8 721 778
+n s gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 2 6 731 780
+p 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 3seg_0/firseg_0/3_bitmux_0/o1 vdd 2 18 732 869
+p 3seg_0/firseg_0/decoder_0/b1 vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_21_50# 2 16 722 867
+p s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_21_50# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 2 16 715 867
+p 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_38_50# 2 16 705 867
+p decoder_0/b1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_38_50# vdd 2 16 698 867
+p s vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 2 8 688 879
+n 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 3seg_0/firseg_0/3_bitmux_0/o1 gnd 2 9 732 905
+n 3seg_0/firseg_0/decoder_0/b1 gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_21_12# 2 8 722 905
+n 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_21_12# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 2 8 715 905
+n s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_38_12# 2 8 705 905
+n decoder_0/b1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_38_12# gnd 2 8 698 905
+n s gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 2 6 688 903
+p 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 3seg_0/firseg_0/3_bitmux_0/o0 vdd 2 18 687 974
+p 3seg_0/firseg_0/decoder_0/b0 vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_21_50# 2 16 697 976
+p s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_21_50# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 2 16 704 976
+p 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_38_50# 2 16 714 976
+p decoder_0/b0 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_38_50# vdd 2 16 721 976
+p s vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 2 8 731 964
+n 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 3seg_0/firseg_0/3_bitmux_0/o0 gnd 2 9 687 938
+n 3seg_0/firseg_0/decoder_0/b0 gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_21_12# 2 8 697 938
+n 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_21_12# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 2 8 704 938
+n s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_38_12# 2 8 714 938
+n decoder_0/b0 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_38_12# gnd 2 8 721 938
+n s gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 2 6 731 940
+p 3seg_0/firseg_0/comp_0/nr3v0x2_0/z vdd s 2 14 623 705
+p 3seg_0/firseg_0/comp_0/nr3v0x2_0/z s vdd 2 14 613 705
+p 3seg_0/firseg_0/comp_0/nd3v0x2_0/c vdd s 2 28 597 719
+p 3seg_0/firseg_0/comp_0/nd3v0x2_0/a s vdd 2 28 585 719
+n 3seg_0/firseg_0/comp_0/nd3v0x2_0/a gnd 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_14_12# 2 14 622 745
+n 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_14_12# 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_21_12# 2 14 615 745
+n 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_21_12# s 2 14 608 745
+n 3seg_0/firseg_0/comp_0/nd3v0x2_0/c s 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_38_12# 2 14 598 745
+n 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_38_12# 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_45_12# 2 14 591 745
+n 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_45_12# gnd 2 14 584 745
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 3seg_0/firseg_0/comp_0/nr2v0x2_1/a vdd 2 28 553 719
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/a vdd 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 2 17 543 711
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an3v0x2_1/zn vdd 2 17 533 711
+p 3seg_0/firseg_0/decoder_0/b2 vdd 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 2 17 521 711
+n 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 3seg_0/firseg_0/comp_0/nr2v0x2_1/a gnd 2 14 553 746
+n 3seg_0/firseg_0/comp_0/an3v0x2_1/a gnd 3seg_0/firseg_0/comp_0/an3v0x2_1/a_24_8# 2 17 540 749
+n 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an3v0x2_1/a_24_8# 3seg_0/firseg_0/comp_0/an3v0x2_1/a_31_8# 2 17 533 749
+n 3seg_0/firseg_0/decoder_0/b2 3seg_0/firseg_0/comp_0/an3v0x2_1/a_31_8# 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 2 17 526 749
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_13_39# 2 27 487 718
+p 3seg_0/firseg_0/comp_0/an3v0x2_0/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_13_39# 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_20_39# 2 27 480 718
+p 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_20_39# vdd 2 27 473 718
+p 3seg_0/firseg_0/comp_0/nr3v0x2_0/a vdd 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_37_39# 2 27 463 718
+p 3seg_0/firseg_0/comp_0/an3v0x2_0/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_37_39# 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_44_39# 2 27 456 718
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_44_39# 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 2 27 449 718
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_61_39# 2 27 439 718
+p 3seg_0/firseg_0/comp_0/an3v0x2_0/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_61_39# 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_68_39# 2 27 432 718
+p 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_68_39# vdd 2 27 425 718
+n 3seg_0/firseg_0/comp_0/an3v0x2_2/z 3seg_0/firseg_0/comp_0/nr3v0x2_0/z gnd 2 15 489 751
+n 3seg_0/firseg_0/comp_0/an3v0x2_0/z gnd 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 2 15 479 751
+n 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 3seg_0/firseg_0/comp_0/nr3v0x2_0/z gnd 2 15 469 751
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 3seg_0/firseg_0/comp_0/an3v0x2_2/z vdd 2 28 393 719
+p 3seg_0/firseg_0/decoder_0/b0 vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 2 17 383 711
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an3v0x2_2/zn vdd 2 17 373 711
+p 3seg_0/firseg_0/decoder_0/b2 vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 2 17 361 711
+n 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 3seg_0/firseg_0/comp_0/an3v0x2_2/z gnd 2 14 393 746
+n 3seg_0/firseg_0/decoder_0/b0 gnd 3seg_0/firseg_0/comp_0/an3v0x2_2/a_24_8# 2 17 380 749
+n 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an3v0x2_2/a_24_8# 3seg_0/firseg_0/comp_0/an3v0x2_2/a_31_8# 2 17 373 749
+n 3seg_0/firseg_0/decoder_0/b2 3seg_0/firseg_0/comp_0/an3v0x2_2/a_31_8# 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 2 17 366 749
+p 3seg_0/firseg_0/comp_0/nr2v0x2_1/a vdd 3seg_0/firseg_0/comp_0/nr2v0x2_1/a_11_39# 2 27 532 805
+p 3seg_0/firseg_0/comp_0/an3v0x2_3/z 3seg_0/firseg_0/comp_0/nr2v0x2_1/a_11_39# 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 2 27 539 805
+p 3seg_0/firseg_0/comp_0/an3v0x2_3/z 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 3seg_0/firseg_0/comp_0/nr2v0x2_1/a_28_39# 2 27 549 805
+p 3seg_0/firseg_0/comp_0/nr2v0x2_1/a 3seg_0/firseg_0/comp_0/nr2v0x2_1/a_28_39# vdd 2 27 556 805
+n 3seg_0/firseg_0/comp_0/nr2v0x2_1/a gnd 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 2 15 534 772
+n 3seg_0/firseg_0/comp_0/an3v0x2_3/z 3seg_0/firseg_0/comp_0/nd3v0x2_0/c gnd 2 15 544 772
+p 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 3seg_0/firseg_0/comp_0/an3v0x2_3/z vdd 2 28 468 804
+p 3seg_0/firseg_0/comp_0/an2v0x2_0/b vdd 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 2 17 478 812
+p 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/an3v0x2_3/zn vdd 2 17 488 812
+p 3seg_0/firseg_0/decoder_0/b0 vdd 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 2 17 500 812
+n 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 3seg_0/firseg_0/comp_0/an3v0x2_3/z gnd 2 14 468 777
+n 3seg_0/firseg_0/comp_0/an2v0x2_0/b gnd 3seg_0/firseg_0/comp_0/an3v0x2_3/a_24_8# 2 17 481 774
+n 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/an3v0x2_3/a_24_8# 3seg_0/firseg_0/comp_0/an3v0x2_3/a_31_8# 2 17 488 774
+n 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/an3v0x2_3/a_31_8# 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 2 17 495 774
+p 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 3seg_0/firseg_0/comp_0/an3v0x2_0/z vdd 2 28 404 804
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/a vdd 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 2 17 414 812
+p 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/an3v0x2_0/zn vdd 2 17 424 812
+p 3seg_0/firseg_0/comp_0/an2v0x2_0/b vdd 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 2 17 436 812
+n 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 3seg_0/firseg_0/comp_0/an3v0x2_0/z gnd 2 14 404 777
+n 3seg_0/firseg_0/comp_0/an3v0x2_1/a gnd 3seg_0/firseg_0/comp_0/an3v0x2_0/a_24_8# 2 17 417 774
+n 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/an3v0x2_0/a_24_8# 3seg_0/firseg_0/comp_0/an3v0x2_0/a_31_8# 2 17 424 774
+n 3seg_0/firseg_0/comp_0/an2v0x2_0/b 3seg_0/firseg_0/comp_0/an3v0x2_0/a_31_8# 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 2 17 431 774
+p 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 3seg_0/firseg_0/comp_0/nr3v0x2_0/a vdd 2 28 356 804
+p 3seg_0/firseg_0/decoder_0/b2 vdd 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 2 19 366 813
+p 3seg_0/firseg_0/comp_0/an2v0x2_0/b 3seg_0/firseg_0/comp_0/an2v0x2_0/zn vdd 2 19 376 813
+n 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 3seg_0/firseg_0/comp_0/nr3v0x2_0/a gnd 2 14 356 778
+n 3seg_0/firseg_0/decoder_0/b2 gnd 3seg_0/firseg_0/comp_0/an2v0x2_0/a_24_13# 2 13 369 779
+n 3seg_0/firseg_0/comp_0/an2v0x2_0/b 3seg_0/firseg_0/comp_0/an2v0x2_0/a_24_13# 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 2 13 376 779
+p 3seg_0/firseg_0/comp_0/an2v0x2_3/z vdd 3seg_0/firseg_0/comp_0/nr2v0x2_0/a_11_39# 2 27 601 878
+p 3seg_0/firseg_0/comp_0/an2v0x2_1/z 3seg_0/firseg_0/comp_0/nr2v0x2_0/a_11_39# 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 2 27 594 878
+p 3seg_0/firseg_0/comp_0/an2v0x2_1/z 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 3seg_0/firseg_0/comp_0/nr2v0x2_0/a_28_39# 2 27 584 878
+p 3seg_0/firseg_0/comp_0/an2v0x2_3/z 3seg_0/firseg_0/comp_0/nr2v0x2_0/a_28_39# vdd 2 27 577 878
+n 3seg_0/firseg_0/comp_0/an2v0x2_3/z gnd 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 2 15 599 911
+n 3seg_0/firseg_0/comp_0/an2v0x2_1/z 3seg_0/firseg_0/comp_0/nd3v0x2_0/a gnd 2 15 589 911
+p 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 3seg_0/firseg_0/comp_0/an2v0x2_3/b vdd 2 28 545 879
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/b vdd 3seg_0/firseg_0/comp_0/or3v0x2_1/a_24_38# 2 22 532 879
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/or3v0x2_1/a_24_38# 3seg_0/firseg_0/comp_0/or3v0x2_1/a_31_38# 2 22 525 879
+p 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/or3v0x2_1/a_31_38# 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 2 22 518 879
+p 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 3seg_0/firseg_0/comp_0/or3v0x2_1/a_48_38# 2 19 508 879
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/or3v0x2_1/a_48_38# 3seg_0/firseg_0/comp_0/or3v0x2_1/a_55_38# 2 19 501 879
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/or3v0x2_1/a_55_38# vdd 2 19 494 879
+n 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 3seg_0/firseg_0/comp_0/an2v0x2_3/b gnd 2 14 545 905
+n 3seg_0/firseg_0/comp_0/an3v0x2_2/b gnd 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 2 8 534 907
+n 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/or3v0x2_1/zn gnd 2 8 524 907
+n 3seg_0/firseg_0/decoder_0/b0 gnd 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 2 8 510 907
+p 3seg_0/firseg_0/comp_0/an2v0x2_1/zn 3seg_0/firseg_0/comp_0/an2v0x2_1/z vdd 2 28 465 879
+p 3seg_0/firseg_0/comp_0/an2v0x2_4/z vdd 3seg_0/firseg_0/comp_0/an2v0x2_1/zn 2 19 455 870
+p 3seg_0/firseg_0/comp_0/an2v0x2_1/b 3seg_0/firseg_0/comp_0/an2v0x2_1/zn vdd 2 19 445 870
+n 3seg_0/firseg_0/comp_0/an2v0x2_1/zn 3seg_0/firseg_0/comp_0/an2v0x2_1/z gnd 2 14 465 905
+n 3seg_0/firseg_0/comp_0/an2v0x2_4/z gnd 3seg_0/firseg_0/comp_0/an2v0x2_1/a_24_13# 2 13 452 904
+n 3seg_0/firseg_0/comp_0/an2v0x2_1/b 3seg_0/firseg_0/comp_0/an2v0x2_1/a_24_13# 3seg_0/firseg_0/comp_0/an2v0x2_1/zn 2 13 445 904
+p 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 3seg_0/firseg_0/comp_0/an2v0x2_4/z vdd 2 28 417 879
+p 3seg_0/firseg_0/comp_0/an2v0x2_0/b vdd 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 2 19 407 870
+p 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an2v0x2_4/zn vdd 2 19 397 870
+n 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 3seg_0/firseg_0/comp_0/an2v0x2_4/z gnd 2 14 417 905
+n 3seg_0/firseg_0/comp_0/an2v0x2_0/b gnd 3seg_0/firseg_0/comp_0/an2v0x2_4/a_24_13# 2 13 404 904
+n 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an2v0x2_4/a_24_13# 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 2 13 397 904
+p decoder_0/b1 vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/b 2 28 369 879
+p decoder_0/b1 3seg_0/firseg_0/comp_0/an3v0x2_2/b vdd 2 28 359 879
+n decoder_0/b1 gnd 3seg_0/firseg_0/comp_0/an3v0x2_2/b 2 17 369 908
+n decoder_0/b1 3seg_0/firseg_0/comp_0/an3v0x2_2/b gnd 2 11 359 902
+p 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 3seg_0/firseg_0/comp_0/an2v0x2_3/z vdd 2 28 564 964
+p 3seg_0/firseg_0/comp_0/an2v0x2_2/z vdd 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 2 19 574 973
+p 3seg_0/firseg_0/comp_0/an2v0x2_3/b 3seg_0/firseg_0/comp_0/an2v0x2_3/zn vdd 2 19 584 973
+n 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 3seg_0/firseg_0/comp_0/an2v0x2_3/z gnd 2 14 564 938
+n 3seg_0/firseg_0/comp_0/an2v0x2_2/z gnd 3seg_0/firseg_0/comp_0/an2v0x2_3/a_24_13# 2 13 577 939
+n 3seg_0/firseg_0/comp_0/an2v0x2_3/b 3seg_0/firseg_0/comp_0/an2v0x2_3/a_24_13# 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 2 13 584 939
+p 3seg_0/firseg_0/comp_0/an2v0x2_2/zn 3seg_0/firseg_0/comp_0/an2v0x2_2/z vdd 2 28 516 964
+p 3seg_0/firseg_0/decoder_0/b2 vdd 3seg_0/firseg_0/comp_0/an2v0x2_2/zn 2 19 526 973
+p 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/an2v0x2_2/zn vdd 2 19 536 973
+n 3seg_0/firseg_0/comp_0/an2v0x2_2/zn 3seg_0/firseg_0/comp_0/an2v0x2_2/z gnd 2 14 516 938
+n 3seg_0/firseg_0/decoder_0/b2 gnd 3seg_0/firseg_0/comp_0/an2v0x2_2/a_24_13# 2 13 529 939
+n 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/an2v0x2_2/a_24_13# 3seg_0/firseg_0/comp_0/an2v0x2_2/zn 2 13 536 939
+p 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 3seg_0/firseg_0/comp_0/an2v0x2_1/b vdd 2 28 436 964
+p 3seg_0/firseg_0/decoder_0/b1 vdd 3seg_0/firseg_0/comp_0/or3v0x2_0/a_24_38# 2 22 449 964
+p 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/or3v0x2_0/a_24_38# 3seg_0/firseg_0/comp_0/or3v0x2_0/a_31_38# 2 22 456 964
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/or3v0x2_0/a_31_38# 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 2 22 463 964
+p 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 3seg_0/firseg_0/comp_0/or3v0x2_0/a_48_38# 2 19 473 964
+p 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/or3v0x2_0/a_48_38# 3seg_0/firseg_0/comp_0/or3v0x2_0/a_55_38# 2 19 480 964
+p 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/comp_0/or3v0x2_0/a_55_38# vdd 2 19 487 964
+n 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 3seg_0/firseg_0/comp_0/an2v0x2_1/b gnd 2 14 436 938
+n 3seg_0/firseg_0/decoder_0/b1 gnd 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 2 8 447 936
+n 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/or3v0x2_0/zn gnd 2 8 457 936
+n 3seg_0/firseg_0/comp_0/an3v0x2_1/a gnd 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 2 8 471 936
+p decoder_0/b0 vdd 3seg_0/firseg_0/comp_0/an3v0x2_1/a 2 28 396 964
+p decoder_0/b0 3seg_0/firseg_0/comp_0/an3v0x2_1/a vdd 2 28 406 964
+n decoder_0/b0 gnd 3seg_0/firseg_0/comp_0/an3v0x2_1/a 2 17 396 935
+n decoder_0/b0 3seg_0/firseg_0/comp_0/an3v0x2_1/a gnd 2 11 406 941
+p decoder_0/b2 vdd 3seg_0/firseg_0/comp_0/an2v0x2_0/b 2 28 356 964
+p decoder_0/b2 3seg_0/firseg_0/comp_0/an2v0x2_0/b vdd 2 28 366 964
+n decoder_0/b2 gnd 3seg_0/firseg_0/comp_0/an2v0x2_0/b 2 17 356 935
+n decoder_0/b2 3seg_0/firseg_0/comp_0/an2v0x2_0/b gnd 2 11 366 941
+p 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn vdd 3seg_0/firseg_0/decoder_0/b2 2 20 235 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 3seg_0/firseg_0/decoder_0/b2 vdd 2 20 245 805
+p 3seg_0/firseg_0/decoder_0/d6 vdd 3seg_0/firseg_0/decoder_0/or2v0x3_8/a_31_39# 2 20 255 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_7/z 3seg_0/firseg_0/decoder_0/or2v0x3_8/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 2 20 262 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_7/z 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 3seg_0/firseg_0/decoder_0/or2v0x3_8/a_48_39# 2 16 272 805
+p 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_8/a_48_39# vdd 2 16 279 805
+n 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 3seg_0/firseg_0/decoder_0/b2 gnd 2 20 235 772
+n 3seg_0/firseg_0/decoder_0/d6 gnd 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 2 10 254 777
+n 3seg_0/firseg_0/decoder_0/or2v0x3_7/z 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn gnd 2 10 264 777
+p 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn vdd 3seg_0/firseg_0/decoder_0/or2v0x3_7/z 2 20 163 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 3seg_0/firseg_0/decoder_0/or2v0x3_7/z vdd 2 20 173 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_6/z vdd 3seg_0/firseg_0/decoder_0/or2v0x3_7/a_31_39# 2 20 183 805
+p 3seg_0/firseg_0/decoder_0/d4 3seg_0/firseg_0/decoder_0/or2v0x3_7/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 2 20 190 805
+p 3seg_0/firseg_0/decoder_0/d4 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 3seg_0/firseg_0/decoder_0/or2v0x3_7/a_48_39# 2 16 200 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_6/z 3seg_0/firseg_0/decoder_0/or2v0x3_7/a_48_39# vdd 2 16 207 805
+n 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 3seg_0/firseg_0/decoder_0/or2v0x3_7/z gnd 2 20 163 772
+n 3seg_0/firseg_0/decoder_0/or2v0x3_6/z gnd 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 2 10 182 777
+n 3seg_0/firseg_0/decoder_0/d4 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn gnd 2 10 192 777
+p 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn vdd 3seg_0/firseg_0/decoder_0/or2v0x3_6/z 2 20 91 805
+p 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 3seg_0/firseg_0/decoder_0/or2v0x3_6/z vdd 2 20 101 805
+p 3seg_0/firseg_0/decoder_0/d3 vdd 3seg_0/firseg_0/decoder_0/or2v0x3_6/a_31_39# 2 20 111 805
+p 3seg_0/firseg_0/decoder_0/d5 3seg_0/firseg_0/decoder_0/or2v0x3_6/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 2 20 118 805
+p 3seg_0/firseg_0/decoder_0/d5 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 3seg_0/firseg_0/decoder_0/or2v0x3_6/a_48_39# 2 16 128 805
+p 3seg_0/firseg_0/decoder_0/d3 3seg_0/firseg_0/decoder_0/or2v0x3_6/a_48_39# vdd 2 16 135 805
+n 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 3seg_0/firseg_0/decoder_0/or2v0x3_6/z gnd 2 20 91 772
+n 3seg_0/firseg_0/decoder_0/d3 gnd 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 2 10 110 777
+n 3seg_0/firseg_0/decoder_0/d5 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn gnd 2 10 120 777
+p 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn vdd 3seg_0/firseg_0/decoder_0/b1 2 20 280 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn 3seg_0/firseg_0/decoder_0/b1 vdd 2 20 270 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_4/z vdd 3seg_0/firseg_0/decoder_0/or2v0x3_5/a_31_39# 2 20 260 878
+p 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_5/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn 2 20 253 878
+p 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn 3seg_0/firseg_0/decoder_0/or2v0x3_5/a_48_39# 2 16 243 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_4/z 3seg_0/firseg_0/decoder_0/or2v0x3_5/a_48_39# vdd 2 16 236 878
+n 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn 3seg_0/firseg_0/decoder_0/b1 gnd 2 20 280 911
+n 3seg_0/firseg_0/decoder_0/or2v0x3_4/z gnd 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn 2 10 261 906
+n 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn gnd 2 10 251 906
+p 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn vdd 3seg_0/firseg_0/decoder_0/or2v0x3_4/z 2 20 208 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 3seg_0/firseg_0/decoder_0/or2v0x3_4/z vdd 2 20 198 878
+p 3seg_0/firseg_0/decoder_0/d1 vdd 3seg_0/firseg_0/decoder_0/or2v0x3_4/a_31_39# 2 20 188 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 3seg_0/firseg_0/decoder_0/or2v0x3_4/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 2 20 181 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 3seg_0/firseg_0/decoder_0/or2v0x3_4/a_48_39# 2 16 171 878
+p 3seg_0/firseg_0/decoder_0/d1 3seg_0/firseg_0/decoder_0/or2v0x3_4/a_48_39# vdd 2 16 164 878
+n 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 3seg_0/firseg_0/decoder_0/or2v0x3_4/z gnd 2 20 208 911
+n 3seg_0/firseg_0/decoder_0/d1 gnd 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 2 10 189 906
+n 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn gnd 2 10 179 906
+p 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn vdd 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 2 20 136 878
+p 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 3seg_0/firseg_0/decoder_0/or2v0x3_3/z vdd 2 20 126 878
+p 3seg_0/firseg_0/decoder_0/d5 vdd 3seg_0/firseg_0/decoder_0/or2v0x3_3/a_31_39# 2 20 116 878
+p 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_3/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 2 20 109 878
+p 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 3seg_0/firseg_0/decoder_0/or2v0x3_3/a_48_39# 2 16 99 878
+p 3seg_0/firseg_0/decoder_0/d5 3seg_0/firseg_0/decoder_0/or2v0x3_3/a_48_39# vdd 2 16 92 878
+n 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 3seg_0/firseg_0/decoder_0/or2v0x3_3/z gnd 2 20 136 911
+n 3seg_0/firseg_0/decoder_0/d5 gnd 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 2 10 117 906
+n 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn gnd 2 10 107 906
+p 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn vdd 3seg_0/firseg_0/decoder_0/b0 2 20 235 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 3seg_0/firseg_0/decoder_0/b0 vdd 2 20 245 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_1/z vdd 3seg_0/firseg_0/decoder_0/or2v0x3_2/a_31_39# 2 20 255 965
+p 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_2/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 2 20 262 965
+p 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 3seg_0/firseg_0/decoder_0/or2v0x3_2/a_48_39# 2 16 272 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 3seg_0/firseg_0/decoder_0/or2v0x3_2/a_48_39# vdd 2 16 279 965
+n 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 3seg_0/firseg_0/decoder_0/b0 gnd 2 20 235 932
+n 3seg_0/firseg_0/decoder_0/or2v0x3_1/z gnd 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 2 10 254 937
+n 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn gnd 2 10 264 937
+p 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn vdd 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 2 20 163 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 3seg_0/firseg_0/decoder_0/or2v0x3_1/z vdd 2 20 173 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_0/z vdd 3seg_0/firseg_0/decoder_0/or2v0x3_1/a_31_39# 2 20 183 965
+p 3seg_0/firseg_0/decoder_0/d4 3seg_0/firseg_0/decoder_0/or2v0x3_1/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 2 20 190 965
+p 3seg_0/firseg_0/decoder_0/d4 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 3seg_0/firseg_0/decoder_0/or2v0x3_1/a_48_39# 2 16 200 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 3seg_0/firseg_0/decoder_0/or2v0x3_1/a_48_39# vdd 2 16 207 965
+n 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 3seg_0/firseg_0/decoder_0/or2v0x3_1/z gnd 2 20 163 932
+n 3seg_0/firseg_0/decoder_0/or2v0x3_0/z gnd 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 2 10 182 937
+n 3seg_0/firseg_0/decoder_0/d4 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn gnd 2 10 192 937
+p 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn vdd 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 2 20 91 965
+p 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 3seg_0/firseg_0/decoder_0/or2v0x3_0/z vdd 2 20 101 965
+p 3seg_0/firseg_0/decoder_0/d0 vdd 3seg_0/firseg_0/decoder_0/or2v0x3_0/a_31_39# 2 20 111 965
+p 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_0/a_31_39# 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 2 20 118 965
+p 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 3seg_0/firseg_0/decoder_0/or2v0x3_0/a_48_39# 2 16 128 965
+p 3seg_0/firseg_0/decoder_0/d0 3seg_0/firseg_0/decoder_0/or2v0x3_0/a_48_39# vdd 2 16 135 965
+n 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 3seg_0/firseg_0/decoder_0/or2v0x3_0/z gnd 2 20 91 932
+n 3seg_0/firseg_0/decoder_0/d0 gnd 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 2 10 110 937
+n 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn gnd 2 10 120 937
+p decoder_0/or2v0x3_8/zn vdd decoder_0/b2 2 20 247 1065
+p decoder_0/or2v0x3_8/zn decoder_0/b2 vdd 2 20 257 1065
+p decoder_0/d6 vdd decoder_0/or2v0x3_8/a_31_39# 2 20 267 1065
+p decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/a_31_39# decoder_0/or2v0x3_8/zn 2 20 274 1065
+p decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/zn decoder_0/or2v0x3_8/a_48_39# 2 16 284 1065
+p decoder_0/d6 decoder_0/or2v0x3_8/a_48_39# vdd 2 16 291 1065
+n decoder_0/or2v0x3_8/zn decoder_0/b2 gnd 2 20 247 1032
+n decoder_0/d6 gnd decoder_0/or2v0x3_8/zn 2 10 266 1037
+n decoder_0/or2v0x3_7/z decoder_0/or2v0x3_8/zn gnd 2 10 276 1037
+p decoder_0/or2v0x3_7/zn vdd decoder_0/or2v0x3_7/z 2 20 175 1065
+p decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/z vdd 2 20 185 1065
+p decoder_0/or2v0x3_6/z vdd decoder_0/or2v0x3_7/a_31_39# 2 20 195 1065
+p decoder_0/d4 decoder_0/or2v0x3_7/a_31_39# decoder_0/or2v0x3_7/zn 2 20 202 1065
+p decoder_0/d4 decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/a_48_39# 2 16 212 1065
+p decoder_0/or2v0x3_6/z decoder_0/or2v0x3_7/a_48_39# vdd 2 16 219 1065
+n decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_7/z gnd 2 20 175 1032
+n decoder_0/or2v0x3_6/z gnd decoder_0/or2v0x3_7/zn 2 10 194 1037
+n decoder_0/d4 decoder_0/or2v0x3_7/zn gnd 2 10 204 1037
+p decoder_0/or2v0x3_6/zn vdd decoder_0/or2v0x3_6/z 2 20 103 1065
+p decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/z vdd 2 20 113 1065
+p decoder_0/d3 vdd decoder_0/or2v0x3_6/a_31_39# 2 20 123 1065
+p decoder_0/d5 decoder_0/or2v0x3_6/a_31_39# decoder_0/or2v0x3_6/zn 2 20 130 1065
+p decoder_0/d5 decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/a_48_39# 2 16 140 1065
+p decoder_0/d3 decoder_0/or2v0x3_6/a_48_39# vdd 2 16 147 1065
+n decoder_0/or2v0x3_6/zn decoder_0/or2v0x3_6/z gnd 2 20 103 1032
+n decoder_0/d3 gnd decoder_0/or2v0x3_6/zn 2 10 122 1037
+n decoder_0/d5 decoder_0/or2v0x3_6/zn gnd 2 10 132 1037
+p decoder_0/or2v0x3_5/zn vdd decoder_0/b1 2 20 292 1138
+p decoder_0/or2v0x3_5/zn decoder_0/b1 vdd 2 20 282 1138
+p decoder_0/or2v0x3_4/z vdd decoder_0/or2v0x3_5/a_31_39# 2 20 272 1138
+p decoder_0/d6 decoder_0/or2v0x3_5/a_31_39# decoder_0/or2v0x3_5/zn 2 20 265 1138
+p decoder_0/d6 decoder_0/or2v0x3_5/zn decoder_0/or2v0x3_5/a_48_39# 2 16 255 1138
+p decoder_0/or2v0x3_4/z decoder_0/or2v0x3_5/a_48_39# vdd 2 16 248 1138
+n decoder_0/or2v0x3_5/zn decoder_0/b1 gnd 2 20 292 1171
+n decoder_0/or2v0x3_4/z gnd decoder_0/or2v0x3_5/zn 2 10 273 1166
+n decoder_0/d6 decoder_0/or2v0x3_5/zn gnd 2 10 263 1166
+p decoder_0/or2v0x3_4/zn vdd decoder_0/or2v0x3_4/z 2 20 220 1138
+p decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/z vdd 2 20 210 1138
+p decoder_0/d1 vdd decoder_0/or2v0x3_4/a_31_39# 2 20 200 1138
+p decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/a_31_39# decoder_0/or2v0x3_4/zn 2 20 193 1138
+p decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/a_48_39# 2 16 183 1138
+p decoder_0/d1 decoder_0/or2v0x3_4/a_48_39# vdd 2 16 176 1138
+n decoder_0/or2v0x3_4/zn decoder_0/or2v0x3_4/z gnd 2 20 220 1171
+n decoder_0/d1 gnd decoder_0/or2v0x3_4/zn 2 10 201 1166
+n decoder_0/or2v0x3_3/z decoder_0/or2v0x3_4/zn gnd 2 10 191 1166
+p decoder_0/or2v0x3_3/zn vdd decoder_0/or2v0x3_3/z 2 20 148 1138
+p decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/z vdd 2 20 138 1138
+p decoder_0/d5 vdd decoder_0/or2v0x3_3/a_31_39# 2 20 128 1138
+p decoder_0/d2 decoder_0/or2v0x3_3/a_31_39# decoder_0/or2v0x3_3/zn 2 20 121 1138
+p decoder_0/d2 decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/a_48_39# 2 16 111 1138
+p decoder_0/d5 decoder_0/or2v0x3_3/a_48_39# vdd 2 16 104 1138
+n decoder_0/or2v0x3_3/zn decoder_0/or2v0x3_3/z gnd 2 20 148 1171
+n decoder_0/d5 gnd decoder_0/or2v0x3_3/zn 2 10 129 1166
+n decoder_0/d2 decoder_0/or2v0x3_3/zn gnd 2 10 119 1166
+p decoder_0/or2v0x3_2/zn vdd decoder_0/b0 2 20 247 1225
+p decoder_0/or2v0x3_2/zn decoder_0/b0 vdd 2 20 257 1225
+p decoder_0/or2v0x3_1/z vdd decoder_0/or2v0x3_2/a_31_39# 2 20 267 1225
+p decoder_0/d6 decoder_0/or2v0x3_2/a_31_39# decoder_0/or2v0x3_2/zn 2 20 274 1225
+p decoder_0/d6 decoder_0/or2v0x3_2/zn decoder_0/or2v0x3_2/a_48_39# 2 16 284 1225
+p decoder_0/or2v0x3_1/z decoder_0/or2v0x3_2/a_48_39# vdd 2 16 291 1225
+n decoder_0/or2v0x3_2/zn decoder_0/b0 gnd 2 20 247 1192
+n decoder_0/or2v0x3_1/z gnd decoder_0/or2v0x3_2/zn 2 10 266 1197
+n decoder_0/d6 decoder_0/or2v0x3_2/zn gnd 2 10 276 1197
+p decoder_0/or2v0x3_1/zn vdd decoder_0/or2v0x3_1/z 2 20 175 1225
+p decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z vdd 2 20 185 1225
+p decoder_0/or2v0x3_0/z vdd decoder_0/or2v0x3_1/a_31_39# 2 20 195 1225
+p decoder_0/d4 decoder_0/or2v0x3_1/a_31_39# decoder_0/or2v0x3_1/zn 2 20 202 1225
+p decoder_0/d4 decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/a_48_39# 2 16 212 1225
+p decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/a_48_39# vdd 2 16 219 1225
+n decoder_0/or2v0x3_1/zn decoder_0/or2v0x3_1/z gnd 2 20 175 1192
+n decoder_0/or2v0x3_0/z gnd decoder_0/or2v0x3_1/zn 2 10 194 1197
+n decoder_0/d4 decoder_0/or2v0x3_1/zn gnd 2 10 204 1197
+p decoder_0/or2v0x3_0/zn vdd decoder_0/or2v0x3_0/z 2 20 103 1225
+p decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z vdd 2 20 113 1225
+p decoder_0/d0 vdd decoder_0/or2v0x3_0/a_31_39# 2 20 123 1225
+p decoder_0/d2 decoder_0/or2v0x3_0/a_31_39# decoder_0/or2v0x3_0/zn 2 20 130 1225
+p decoder_0/d2 decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/a_48_39# 2 16 140 1225
+p decoder_0/d0 decoder_0/or2v0x3_0/a_48_39# vdd 2 16 147 1225
+n decoder_0/or2v0x3_0/zn decoder_0/or2v0x3_0/z gnd 2 20 103 1192
+n decoder_0/d0 gnd decoder_0/or2v0x3_0/zn 2 10 122 1197
+n decoder_0/d2 decoder_0/or2v0x3_0/zn gnd 2 10 132 1197
+C gnd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 76.0
+C decoder_0/or2v0x3_0/z decoder_0/d0 3.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 25.5
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/w_n4_n4# 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 9.7
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# 8.9
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 12.7
+C 3seg_0/2seg_0/or3v0x3_0/a 3seg_0/2seg_0/totdiff3_0/mux_0/a0 2.3
+C 3seg_0/2seg_0/1counter_0/or2v0x3_0/z 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 3.1
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 12.7
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 21.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz gnd 25.5
+C decoder_0/or2v0x3_2/zn decoder_0/b0 2.2
+C vdd 3seg_0/2seg_0/totdiff3_0/mux_0/b1 13.1
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 3seg_0/2seg_0/1counter_0/bf1v0x4_1/w_n4_n4# 3.3
+C 3seg_0/firseg_0/decoder_0/d3 gnd 7.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3.3
+C 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn vdd 13.3
+C 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an vdd 6.0
+C 3seg_0/firseg_0/comp_0/an2v0x2_1/z vdd 22.0
+C vdd 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 4.0
+C 3seg_0/firseg_0/comp_0/an3v0x2_1/zn gnd 8.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C decoder_0/or2v0x3_7/zn decoder_0/or2v0x3_6/z 2.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/or3v0x3_0/b 5.0
+C 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 6.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/mux_0/b1 2.7
+C 3seg_0/2seg_0/1counter_0/or2v0x3_1/a vdd 23.6
+C vdd 3seg_0/firseg_0/decoder_0/d2 16.1
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn gnd 8.9
+C 3seg_0/2seg_0/iv1v0x3_0/a gnd 7.6
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_1/a 72.4
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 14.4
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 4.1
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 2.0
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/an3v0x2_2/z 21.1
+C gnd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 7.2
+C decoder_0/or2v0x3_5/zn vdd 12.7
+C vdd decoder_0/or2v0x3_1/z 19.4
+C vdd 3seg_0/2seg_0/or3v0x3_0/b 8.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 2.7
+C vdd 3seg_0/firseg_0/3_bitmux_0/o0 53.4
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn gnd 17.1
+C 3seg_0/2seg_0/or3v0x3_0/c gnd 6.7
+C gnd 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 18.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn gnd 8.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C 3seg_0/firseg_0/3_bitmux_0/o1 gnd 60.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/firseg_0/3_bitmux_0/o0 4.3
+C decoder_0/or2v0x3_7/z gnd 15.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b gnd 5.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z 24.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 9.3
+C 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an gnd 9.2
+C 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 4.1
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d vdd 9.8
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# gnd 25.5
+C decoder_0/or2v0x3_0/z decoder_0/d2 2.2
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 3seg_0/firseg_0/3_bitmux_0/o0 4.3
+C gnd s 14.6
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an2v0x2_0/b 2.5
+C 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 2.5
+C 3seg_0/firseg_0/decoder_0/d2 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 2.2
+C 3seg_0/2seg_0/1counter_0/or2v0x3_0/z gnd 9.7
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 gnd 7.3
+C s 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 30.3
+C 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 2.8
+C vdd decoder_0/or2v0x3_1/zn 12.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 3seg_0/firseg_0/3_bitmux_0/o0 2.6
+C decoder_0/or2v0x3_3/zn gnd 9.0
+C 3seg_0/firseg_0/comp_0/an2v0x2_3/z gnd 20.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn gnd 9.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn vdd 8.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn vdd 8.8
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 4.4
+C vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 9.8
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/b gnd 23.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 11.6
+C decoder_0/or2v0x3_0/z vdd 19.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 2.2
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z 17.9
+C 3seg_0/firseg_0/decoder_0/d4 gnd 78.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 12.7
+C vdd decoder_0/b2 16.7
+C vdd 3seg_0/2seg_0/iv1v0x3_0/z 5.9
+C gnd 3seg_0/2seg_0/1counter_0/an2v0x3_2/a 34.4
+C vdd 3seg_0/firseg_0/decoder_0/d6 35.0
+C vdd decoder_0/d3 30.9
+C vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn 10.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2.3
+C 3seg_0/firseg_0/comp_0/an2v0x2_2/zn gnd 8.9
+C vdd decoder_0/b0 16.6
+C decoder_0/or2v0x3_6/zn gnd 9.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z gnd 12.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a0 gnd 14.9
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_0/w_n4_n4# 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 2.0
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 2.1
+C gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_2/w_n4_n4# 18.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a 3seg_0/firseg_0/3_bitmux_0/o2 2.0
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 9.3
+C 3seg_0/2seg_0/an2v0x3_0/a gnd 11.5
+C decoder_0/d5 gnd 20.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn gnd 11.9
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn gnd 17.1
+C gnd 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 8.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a vdd 12.4
+C 3seg_0/2seg_0/1counter_0/or2v0x3_1/a 3seg_0/2seg_0/an2v0x3_0/z 2.1
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 12.1
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# 3seg_0/firseg_0/3_bitmux_0/o0 5.2
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 9.3
+C 3seg_0/firseg_0/decoder_0/d1 gnd 7.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn gnd 15.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a vdd 12.4
+C vdd decoder_0/or2v0x3_4/zn 12.7
+C 3seg_0/firseg_0/comp_0/an2v0x2_0/b 3seg_0/firseg_0/decoder_0/b0 4.9
+C vdd decoder_0/or2v0x3_6/z 20.6
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# s 15.2
+C 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn gnd 6.5
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z gnd 29.8
+C 3seg_0/firseg_0/decoder_0/d0 gnd 7.6
+C gnd 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 8.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 9.3
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 21.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 3seg_0/firseg_0/3_bitmux_0/o2 2.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 31.6
+C gnd 3seg_0/firseg_0/decoder_0/b0 64.1
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 gnd 7.3
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_1/b 20.2
+C decoder_0/or2v0x3_8/zn vdd 12.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn vdd 15.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 4.5
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 2.1
+C 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_0/z 2.3
+C decoder_0/d1 gnd 7.6
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 17.5
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_3/z 15.4
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 3seg_0/2seg_0/an2v0x3_0/z 2.4
+C vdd 3seg_0/firseg_0/decoder_0/d5 21.8
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 87.6
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# decoder_0/b2 6.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 9.3
+C gnd 3seg_0/firseg_0/comp_0/an2v0x2_2/z 11.1
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# decoder_0/b0 6.6
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 12.7
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an 3seg_0/2seg_0/1counter_0/bf1v0x4_2/w_n4_n4# 9.7
+C vdd 3seg_0/2seg_0/an2v0x3_0/zn 13.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn gnd 9.0
+C gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 18.1
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 vdd 8.4
+C 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 2.8
+C decoder_0/d6 vdd 35.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 3.1
+C vdd 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 13.7
+C 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn gnd 9.0
+C 3seg_0/2seg_0/or3v0x3_0/zn gnd 12.2
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 vdd 26.2
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci vdd 16.6
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 12.7
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 gnd 15.3
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 10.2
+C gnd 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 9.5
+C decoder_0/b1 vdd 14.6
+C vdd 3seg_0/firseg_0/decoder_0/b2 31.1
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn gnd 11.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn gnd 18.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 2.7
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_4/z 10.7
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 15.8
+C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_0/zn 2.3
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn 8.8
+C 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn 3seg_0/2seg_0/ud 2.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 59.6
+C vdd 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 9.0
+C 3seg_0/2seg_0/or3v0x3_0/b 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a gnd 8.1
+C 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 2.3
+C 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn gnd 9.0
+C vdd 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 8.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an gnd 21.6
+C decoder_0/d4 vdd 17.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 8.8
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn gnd 9.0
+C 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn gnd 9.0
+C decoder_0/or2v0x3_3/zn decoder_0/d1 3.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2.4
+C gnd 3seg_0/2seg_0/totdiff3_0/mux_0/b1 17.2
+C vdd 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 9.6
+C 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an gnd 9.2
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 3seg_0/2seg_0/1counter_0/bf1v0x4_2/w_n4_n4# 2.0
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_0/w_n4_n4# 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 3.9
+C 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn gnd 9.5
+C 3seg_0/firseg_0/comp_0/an2v0x2_1/z gnd 8.7
+C 3seg_0/firseg_0/comp_0/nr3v0x2_0/a gnd 19.9
+C 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/an2v0x2_0/b 2.5
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_1/a 15.5
+C 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/b1 2.7
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 15.8
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/z 3.3
+C 3seg_0/2seg_0/1counter_0/or2v0x3_1/a gnd 9.3
+C 3seg_0/firseg_0/decoder_0/d2 gnd 23.3
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn decoder_0/b2 2.7
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 2.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn gnd 6.7
+C vdd decoder_0/or2v0x3_3/z 12.1
+C 3seg_0/firseg_0/comp_0/an3v0x2_1/a gnd 57.3
+C 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 3seg_0/2seg_0/an2v0x3_0/z 4.7
+C decoder_0/or2v0x3_1/z gnd 10.3
+C decoder_0/or2v0x3_5/zn gnd 9.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 9.2
+C 3seg_0/2seg_0/or3v0x3_0/b gnd 16.8
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 2.2
+C gnd 3seg_0/firseg_0/3_bitmux_0/o0 60.8
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/w_n4_n4# gnd 19.0
+C decoder_0/b1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 6.6
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C 3seg_0/firseg_0/decoder_0/b2 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 11.6
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 3seg_0/firseg_0/3_bitmux_0/o0 2.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z gnd 12.8
+C decoder_0/or2v0x3_7/zn vdd 12.7
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 vdd 8.4
+C 3seg_0/2seg_0/ud 3seg_0/2seg_0/iv1v0x3_0/z 3.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c 33.2
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d gnd 13.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z vdd 17.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2.3
+C vdd 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 6.0
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b 20.5
+C 3seg_0/2seg_0/an2v0x3_0/b vdd 6.5
+C 3seg_0/2seg_0/1counter_0/an2v0x3_2/b vdd 23.4
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 5.8
+C gnd decoder_0/or2v0x3_1/zn 9.0
+C vdd decoder_0/or2v0x3_2/zn 12.7
+C decoder_0/d0 vdd 14.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 8.8
+C vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 34.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn gnd 10.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn gnd 11.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn gnd 8.9
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d gnd 13.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 18.9
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_7/z 11.4
+C decoder_0/or2v0x3_0/z gnd 10.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z gnd 10.2
+C 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 3seg_0/firseg_0/decoder_0/d1 3.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn gnd 9.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a vdd 59.6
+C gnd decoder_0/b2 11.2
+C 3seg_0/2seg_0/iv1v0x3_0/z gnd 4.5
+C 3seg_0/firseg_0/decoder_0/d6 gnd 48.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 4.5
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_0/w_n4_n4# gnd 18.8
+C decoder_0/d3 gnd 7.6
+C gnd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn 20.1
+C decoder_0/b0 gnd 10.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C decoder_0/b0 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 8.7
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 vdd 12.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn vdd 10.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a vdd 12.4
+C vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 8.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a vdd 61.1
+C vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 9.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a gnd 20.0
+C 3seg_0/firseg_0/decoder_0/or2v0x3_3/z gnd 12.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 9.3
+C vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 16.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 39.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3.3
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3seg_0/firseg_0/comp_0/an3v0x2_1/a 5.2
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 vdd 12.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a gnd 20.0
+C vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 35.1
+C decoder_0/or2v0x3_4/zn gnd 9.0
+C decoder_0/or2v0x3_6/z gnd 9.2
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 10.7
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.7
+C vdd decoder_0/d2 16.1
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 19.4
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 12.7
+C 3seg_0/2seg_0/ud 3seg_0/2seg_0/an2v0x3_0/zn 2.7
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# vdd 59.4
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 15.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn gnd 19.1
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 8.8
+C 3seg_0/2seg_0/1counter_0/an2v0x3_1/b gnd 10.0
+C decoder_0/or2v0x3_8/zn gnd 9.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn gnd 9.1
+C 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 3seg_0/2seg_0/an2v0x3_0/z 2.6
+C vdd decoder_0/or2v0x3_4/z 18.3
+C 3seg_0/firseg_0/3_bitmux_0/o2 vdd 53.4
+C 3seg_0/firseg_0/comp_0/an3v0x2_0/z gnd 36.9
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# decoder_0/b2 8.7
+C 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn vdd 12.7
+C 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 3seg_0/firseg_0/decoder_0/b0 2.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 4.5
+C 3seg_0/firseg_0/comp_0/an3v0x2_3/z gnd 10.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 18.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 6.6
+C vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 39.1
+C 3seg_0/firseg_0/decoder_0/d5 gnd 20.2
+C decoder_0/b0 s 3.2
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 4.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 17.7
+C 3seg_0/2seg_0/an2v0x3_0/zn gnd 9.5
+C gnd 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 9.0
+C 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn vdd 13.3
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 18.7
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 9.9
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 gnd 9.9
+C decoder_0/d6 gnd 48.5
+C gnd 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 6.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a 3seg_0/firseg_0/3_bitmux_0/o1 2.0
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 10.7
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 15.4
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 gnd 10.9
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci gnd 27.5
+C 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn gnd 9.0
+C 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/decoder_0/b0 6.8
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 19.2
+C vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 46.5
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_1/b 14.2
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 3seg_0/2seg_0/an2v0x3_0/z 2.3
+C vdd 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 9.0
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_0/w_n4_n4# 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an 9.7
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_4/z 18.3
+C 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/3_bitmux_0/o0 2.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn vdd 8.8
+C decoder_0/b1 gnd 15.9
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 5.8
+C 3seg_0/firseg_0/decoder_0/b2 gnd 37.2
+C vdd 3seg_0/firseg_0/comp_0/nr2v0x2_1/a 7.1
+C 3seg_0/2seg_0/or3v0x3_0/a 3seg_0/2seg_0/or3v0x3_0/a_57_38# 2.6
+C decoder_0/b1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 10.2
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 2.7
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn 13.3
+C 3seg_0/firseg_0/comp_0/an2v0x2_4/z gnd 9.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz gnd 24.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 6.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/mux_0/b1 39.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn gnd 8.9
+C 3seg_0/firseg_0/comp_0/or3v0x2_0/zn gnd 10.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a gnd 25.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z 17.9
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn 2.2
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 9.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 8.9
+C 3seg_0/firseg_0/decoder_0/or2v0x3_6/z 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 2.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 11.6
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 5.7
+C 3seg_0/firseg_0/comp_0/nr3v0x2_0/z gnd 21.2
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 vdd 3.1
+C decoder_0/d4 gnd 68.9
+C vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# 20.7
+C 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 6.3
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 8.9
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/w_n4_n4# 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 3.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 31.6
+C vdd 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 59.4
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# s 5.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 vdd 36.6
+C 3seg_0/firseg_0/decoder_0/or2v0x3_6/z vdd 20.6
+C vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 8.4
+C vdd 3seg_0/2seg_0/an2v0x3_0/z 59.1
+C 3seg_0/firseg_0/comp_0/nd3v0x2_0/a gnd 21.8
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 9.3
+C 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn vdd 12.7
+C 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 3seg_0/firseg_0/decoder_0/d1 2.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 3seg_0/2seg_0/totdiff3_0/mux_0/b1 3.9
+C 3seg_0/2seg_0/1counter_0/an2v0x3_1/a gnd 31.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 4.1
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/an3v0x2_2/b 21.4
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/z gnd 10.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz gnd 24.9
+C 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn vdd 13.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c vdd 40.7
+C decoder_0/or2v0x3_3/zn decoder_0/d6 2.2
+C decoder_0/or2v0x3_3/z gnd 12.6
+C 3seg_0/firseg_0/decoder_0/b2 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# 4.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 3.1
+C 3seg_0/firseg_0/comp_0/an2v0x2_3/b vdd 13.7
+C decoder_0/or2v0x3_7/zn gnd 9.0
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 9.3
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 gnd 9.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c gnd 17.8
+C vdd decoder_0/or2v0x3_0/zn 12.7
+C 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 2.2
+C 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 3seg_0/firseg_0/decoder_0/b1 3.6
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 4.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b 20.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z gnd 10.2
+C 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an gnd 9.2
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b 5.9
+C 3seg_0/2seg_0/or3v0x3_0/a vdd 15.7
+C 3seg_0/2seg_0/1counter_0/an2v0x3_2/b gnd 21.8
+C 3seg_0/2seg_0/an2v0x3_0/b gnd 5.5
+C decoder_0/or2v0x3_2/zn gnd 9.0
+C decoder_0/d0 gnd 7.6
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 8.9
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a gnd 18.1
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_1/zn 8.8
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 4.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn gnd 11.9
+C vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 40.8
+C 3seg_0/firseg_0/decoder_0/or2v0x3_7/z gnd 15.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 8.7
+C vdd 3seg_0/firseg_0/decoder_0/b1 55.2
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 27.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a gnd 25.9
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 12.7
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/decoder_0/b0 8.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 14.4
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 14.4
+C vdd 3seg_0/2seg_0/1counter_0/or2v0x3_1/z 11.7
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 4.8
+C 3seg_0/firseg_0/decoder_0/d6 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 2.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/z 2.4
+C vdd 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 9.8
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci vdd 16.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 3.3
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/ud 36.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn gnd 8.9
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 gnd 7.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a gnd 20.0
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 gnd 7.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a gnd 25.9
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci gnd 27.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c gnd 34.1
+C decoder_0/b1 3seg_0/firseg_0/decoder_0/b0 2.9
+C vdd 3seg_0/2seg_0/ud 30.0
+C decoder_0/or2v0x3_1/z decoder_0/or2v0x3_1/zn 2.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an vdd 9.9
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 gnd 7.2
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z gnd 39.5
+C 3seg_0/firseg_0/comp_0/an3v0x2_3/zn gnd 8.8
+C decoder_0/d2 gnd 23.3
+C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/z 4.6
+C 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 3seg_0/firseg_0/decoder_0/b0 3.3
+C 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn gnd 9.0
+C vdd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 20.7
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/z gnd 10.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 3seg_0/firseg_0/3_bitmux_0/o1 4.3
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 9.1
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/z 12.7
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_0/b 49.9
+C decoder_0/b0 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 2.7
+C gnd 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 8.9
+C 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn vdd 12.7
+C decoder_0/or2v0x3_1/z decoder_0/b0 4.7
+C decoder_0/or2v0x3_4/z gnd 9.2
+C 3seg_0/firseg_0/3_bitmux_0/o2 gnd 60.5
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 34.2
+C 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn gnd 9.0
+C vdd gnd 48.3
+C decoder_0/or2v0x3_0/z decoder_0/or2v0x3_1/zn 2.0
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z 24.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn gnd 13.9
+C 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 2.9
+C 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 13.4
+C gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 34.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn gnd 11.2
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 15.8
+C 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 2.4
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn gnd 11.2
+C 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn gnd 9.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an gnd 6.8
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 9.2
+C vdd 3seg_0/firseg_0/decoder_0/d3 28.2
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 9.3
+C 3seg_0/firseg_0/comp_0/an3v0x2_0/zn gnd 8.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 8.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn gnd 9.1
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 4.9
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 3seg_0/2seg_0/an2v0x3_0/z 2.2
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn gnd 17.1
+C gnd 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 10.3
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 3seg_0/2seg_0/1counter_0/bf1v0x4_2/w_n4_n4# 3.9
+C gnd 3seg_0/firseg_0/comp_0/an2v0x2_1/b 5.9
+C 3seg_0/2seg_0/or3v0x3_0/c 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 6.3
+C 3seg_0/firseg_0/decoder_0/or2v0x3_4/z gnd 9.2
+C 3seg_0/firseg_0/comp_0/or3v0x2_1/zn gnd 10.9
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 15.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn gnd 8.9
+C 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 2.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 2.4
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn 8.8
+C 3seg_0/2seg_0/iv1v0x3_0/a vdd 15.3
+C 3seg_0/firseg_0/comp_0/nr2v0x2_1/a gnd 22.9
+C 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn gnd 9.5
+C decoder_0/d1 decoder_0/or2v0x3_3/z 2.2
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/ud 4.5
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 3seg_0/2seg_0/totdiff3_0/mux_0/b1 18.4
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 3seg_0/2seg_0/ud 15.6
+C vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 12.4
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn vdd 46.5
+C 3seg_0/2seg_0/or3v0x3_0/c vdd 10.0
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/an3v0x2_1/a 8.3
+C vdd 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 5.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn vdd 8.8
+C vdd 3seg_0/firseg_0/3_bitmux_0/o1 53.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z gnd 10.2
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 9.3
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an gnd 5.5
+C 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# 2.3
+C decoder_0/or2v0x3_7/z vdd 11.4
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b 20.5
+C vdd 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 6.0
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an vdd 9.5
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 gnd 11.9
+C vdd s 10.6
+C 3seg_0/firseg_0/decoder_0/b2 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 2.5
+C 3seg_0/2seg_0/1counter_0/or2v0x3_0/z vdd 11.4
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 vdd 8.9
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 18.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 gnd 14.9
+C decoder_0/or2v0x3_3/zn vdd 12.7
+C 3seg_0/2seg_0/or3v0x3_0/a 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 2.3
+C 3seg_0/firseg_0/decoder_0/or2v0x3_6/z gnd 9.2
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_3/z 9.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 12.7
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 gnd 9.9
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# gnd 25.3
+C gnd 3seg_0/2seg_0/an2v0x3_0/z 19.2
+C vdd 3seg_0/firseg_0/comp_0/an3v0x2_2/b 39.7
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 9.3
+C 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 2.8
+C 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn gnd 9.0
+C vdd 3seg_0/firseg_0/decoder_0/d4 15.8
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 2.1
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an vdd 9.5
+C 3seg_0/firseg_0/comp_0/an3v0x2_1/a 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 4.1
+C 3seg_0/firseg_0/comp_0/nr2v0x2_1/a 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 3.8
+C 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn gnd 6.5
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_2/a 15.5
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c gnd 35.0
+C vdd decoder_0/or2v0x3_6/zn 12.7
+C 3seg_0/firseg_0/comp_0/an2v0x2_2/zn vdd 8.8
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z 24.6
+C vdd 3seg_0/2seg_0/totdiff3_0/mux_0/a0 35.2
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4# 9.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 3seg_0/2seg_0/totdiff3_0/mux_0/a0 4.6
+C 3seg_0/2seg_0/or3v0x3_0/a 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 5.2
+C 3seg_0/firseg_0/3_bitmux_0/o2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 4.3
+C 3seg_0/firseg_0/comp_0/an2v0x2_3/b gnd 15.0
+C vdd decoder_0/d5 23.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 4.6
+C vdd 3seg_0/2seg_0/an2v0x3_0/a 8.1
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 18.9
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 8.8
+C vdd 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 46.5
+C decoder_0/or2v0x3_0/zn gnd 9.0
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/zn gnd 8.8
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b gnd 7.3
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 3seg_0/firseg_0/decoder_0/b0 4.7
+C vdd 3seg_0/firseg_0/decoder_0/d1 17.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 4.4
+C 3seg_0/2seg_0/or3v0x3_0/a gnd 8.1
+C 3seg_0/firseg_0/3_bitmux_0/o1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 5.0
+C 3seg_0/2seg_0/or3v0x3_0/c 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/w_n4_n4# 2.3
+C 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn vdd 13.7
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z vdd 30.2
+C vdd 3seg_0/firseg_0/decoder_0/d0 14.1
+C 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 30.3
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 8.8
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# s 18.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2.3
+C 3seg_0/firseg_0/comp_0/an2v0x2_1/zn gnd 8.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 25.5
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 2.1
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# s 36.4
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 11.9
+C gnd 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 18.1
+C vdd 3seg_0/firseg_0/decoder_0/b0 47.8
+C vdd 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 8.9
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 2.1
+C 3seg_0/firseg_0/decoder_0/b1 gnd 21.2
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an gnd 21.6
+C decoder_0/d6 decoder_0/or2v0x3_4/zn 2.1
+C 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn gnd 9.0
+C 3seg_0/2seg_0/1counter_0/or2v0x3_0/z 3seg_0/2seg_0/an2v0x3_0/z 2.7
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 6.7
+C 3seg_0/firseg_0/decoder_0/b1 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_n4# 4.8
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 7.5
+C gnd 3seg_0/2seg_0/1counter_0/or2v0x3_1/z 10.5
+C vdd decoder_0/d1 17.9
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 34.0
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/z gnd 2.5
+C 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d gnd 13.6
+C 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 3seg_0/firseg_0/comp_0/an3v0x2_0/z 9.5
+C 3seg_0/2seg_0/ud 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 18.7
+C 3seg_0/firseg_0/decoder_0/d0 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 3.9
+C 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci gnd 27.5
+C gnd 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_n4# 76.0
+C 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 3seg_0/firseg_0/decoder_0/b0 4.6
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 13.4
+C vdd 3seg_0/firseg_0/comp_0/an2v0x2_2/z 9.4
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 9.3
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 12.7
+C 3seg_0/firseg_0/decoder_0/b0 3seg_0/firseg_0/comp_0/an2v0x2_1/b 2.2
+C vdd 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 37.1
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 12.7
+C 3seg_0/2seg_0/ud 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 2.4
+C vdd 3seg_0/2seg_0/or3v0x3_0/zn 13.4
+C 3seg_0/2seg_0/ud gnd 27.9
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an gnd 5.5
+C decoder_0/or2v0x3_2/zn decoder_0/or2v0x3_1/z 2.0
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 vdd 38.6
+C vdd 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 13.3
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 4.6
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2.4
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 31.6
+C vdd 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 17.7
+C 3seg_0/2seg_0/1counter_0/an2v0x3_2/z gnd 16.1
+C gnd 3seg_0/firseg_0/comp_0/an2v0x2_0/b 32.8
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 3.9
+C 3seg_0/firseg_0/decoder_0/b2 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 11.6
+C 3seg_0/2seg_0/or3v0x3_0/a 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 4.3
+C 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn gnd 9.0
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 2.3
+C 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 2.0
+C 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# 3seg_0/firseg_0/decoder_0/b0 11.6
+C 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 3seg_0/2seg_0/1counter_0/or2v0x3_1/z 3.7
+C gnd 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 15.2
+C vdd 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a 6.0
+C decoder_0/b1 decoder_0/d6 2.7
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a 3seg_0/firseg_0/3_bitmux_0/o0 2.0
+C vdd 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 12.7
+C 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3seg_0/2seg_0/totdiff3_0/mux_0/b1 6.6
+C gnd 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z 12.8
+R decoder_0/or2v0x3_0/a_48_39# 191
+R decoder_0/or2v0x3_0/a_31_39# 238
+C decoder_0/d2 GND 12.7
+R decoder_0/d2 1772
+C decoder_0/d0 GND 5.5
+R decoder_0/d0 1054
+R decoder_0/or2v0x3_0/zn 1208
+R decoder_0/or2v0x3_1/a_48_39# 191
+R decoder_0/or2v0x3_1/a_31_39# 238
+C decoder_0/d4 GND 25.7
+R decoder_0/d4 1774
+R decoder_0/or2v0x3_0/z 1297
+R decoder_0/or2v0x3_1/zn 1208
+R decoder_0/or2v0x3_2/a_48_39# 191
+R decoder_0/or2v0x3_2/a_31_39# 238
+C decoder_0/b0 GND 75.5
+R decoder_0/b0 2250
+R decoder_0/or2v0x3_1/z 1297
+R decoder_0/or2v0x3_2/zn 1208
+C vdd GND 936.7
+R vdd 618667
+R decoder_0/or2v0x3_3/a_48_39# 191
+R decoder_0/or2v0x3_3/a_31_39# 238
+C decoder_0/d5 GND 18.7
+R decoder_0/d5 1960
+R decoder_0/or2v0x3_3/zn 1208
+R decoder_0/or2v0x3_4/a_48_39# 191
+R decoder_0/or2v0x3_4/a_31_39# 238
+R decoder_0/or2v0x3_3/z 1104
+C decoder_0/d1 GND 15.2
+R decoder_0/d1 1055
+R decoder_0/or2v0x3_4/zn 1208
+R decoder_0/or2v0x3_5/a_48_39# 191
+R decoder_0/or2v0x3_5/a_31_39# 238
+C decoder_0/b1 GND 43.0
+R decoder_0/b1 2323
+C decoder_0/d6 GND 2.7
+R decoder_0/d6 2866
+R decoder_0/or2v0x3_4/z 1296
+R decoder_0/or2v0x3_5/zn 1208
+C gnd GND 715.1
+R gnd 39319
+R decoder_0/or2v0x3_6/a_48_39# 191
+R decoder_0/or2v0x3_6/a_31_39# 238
+C decoder_0/d3 GND 17.6
+R decoder_0/d3 1055
+R decoder_0/or2v0x3_6/zn 1208
+R decoder_0/or2v0x3_7/a_48_39# 191
+R decoder_0/or2v0x3_7/a_31_39# 238
+R decoder_0/or2v0x3_6/z 1297
+R decoder_0/or2v0x3_7/zn 1208
+R decoder_0/or2v0x3_8/a_48_39# 191
+R decoder_0/or2v0x3_8/a_31_39# 238
+R decoder_0/or2v0x3_7/z 1105
+R decoder_0/or2v0x3_8/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_0/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_0/a_31_39# 238
+C 3seg_0/firseg_0/decoder_0/d2 GND 12.7
+R 3seg_0/firseg_0/decoder_0/d2 1772
+C 3seg_0/firseg_0/decoder_0/d0 GND 5.5
+R 3seg_0/firseg_0/decoder_0/d0 1054
+R 3seg_0/firseg_0/decoder_0/or2v0x3_0/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_1/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_1/a_31_39# 238
+C 3seg_0/firseg_0/decoder_0/d4 GND 25.7
+R 3seg_0/firseg_0/decoder_0/d4 1774
+R 3seg_0/firseg_0/decoder_0/or2v0x3_0/z 1297
+R 3seg_0/firseg_0/decoder_0/or2v0x3_1/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_2/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_2/a_31_39# 238
+R 3seg_0/firseg_0/decoder_0/or2v0x3_1/z 1297
+R 3seg_0/firseg_0/decoder_0/or2v0x3_2/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_3/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_3/a_31_39# 238
+C 3seg_0/firseg_0/decoder_0/d5 GND 18.7
+R 3seg_0/firseg_0/decoder_0/d5 1960
+R 3seg_0/firseg_0/decoder_0/or2v0x3_3/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_4/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_4/a_31_39# 238
+R 3seg_0/firseg_0/decoder_0/or2v0x3_3/z 1104
+C 3seg_0/firseg_0/decoder_0/d1 GND 15.2
+R 3seg_0/firseg_0/decoder_0/d1 1055
+R 3seg_0/firseg_0/decoder_0/or2v0x3_4/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_5/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_5/a_31_39# 238
+C 3seg_0/firseg_0/decoder_0/d6 GND 2.7
+R 3seg_0/firseg_0/decoder_0/d6 2866
+R 3seg_0/firseg_0/decoder_0/or2v0x3_4/z 1296
+R 3seg_0/firseg_0/decoder_0/or2v0x3_5/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_6/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_6/a_31_39# 238
+C 3seg_0/firseg_0/decoder_0/d3 GND 17.6
+R 3seg_0/firseg_0/decoder_0/d3 1055
+R 3seg_0/firseg_0/decoder_0/or2v0x3_6/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_7/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_7/a_31_39# 238
+R 3seg_0/firseg_0/decoder_0/or2v0x3_6/z 1297
+R 3seg_0/firseg_0/decoder_0/or2v0x3_7/zn 1208
+R 3seg_0/firseg_0/decoder_0/or2v0x3_8/a_48_39# 191
+R 3seg_0/firseg_0/decoder_0/or2v0x3_8/a_31_39# 238
+R 3seg_0/firseg_0/decoder_0/or2v0x3_7/z 1105
+R 3seg_0/firseg_0/decoder_0/or2v0x3_8/zn 1208
+C decoder_0/b2 GND 45.2
+R decoder_0/b2 2324
+R 3seg_0/firseg_0/comp_0/or3v0x2_0/a_55_38# 226
+R 3seg_0/firseg_0/comp_0/or3v0x2_0/a_48_38# 226
+R 3seg_0/firseg_0/comp_0/or3v0x2_0/a_31_38# 262
+R 3seg_0/firseg_0/comp_0/or3v0x2_0/a_24_38# 262
+R 3seg_0/firseg_0/comp_0/an2v0x2_1/b 1060
+R 3seg_0/firseg_0/comp_0/or3v0x2_0/zn 1056
+R 3seg_0/firseg_0/comp_0/an2v0x2_2/a_24_13# 69
+R 3seg_0/firseg_0/comp_0/an2v0x2_2/zn 927
+R 3seg_0/firseg_0/comp_0/an2v0x2_3/a_24_13# 69
+R 3seg_0/firseg_0/comp_0/an2v0x2_2/z 1061
+R 3seg_0/firseg_0/comp_0/an2v0x2_3/zn 927
+R 3seg_0/firseg_0/comp_0/an2v0x2_4/a_24_13# 69
+R 3seg_0/firseg_0/comp_0/an2v0x2_0/b 3357
+R 3seg_0/firseg_0/comp_0/an2v0x2_4/zn 927
+R 3seg_0/firseg_0/comp_0/an2v0x2_1/a_24_13# 69
+R 3seg_0/firseg_0/comp_0/an2v0x2_4/z 1060
+R 3seg_0/firseg_0/comp_0/an2v0x2_1/zn 927
+R 3seg_0/firseg_0/comp_0/or3v0x2_1/a_55_38# 226
+R 3seg_0/firseg_0/comp_0/or3v0x2_1/a_48_38# 226
+R 3seg_0/firseg_0/comp_0/or3v0x2_1/a_31_38# 262
+R 3seg_0/firseg_0/comp_0/or3v0x2_1/a_24_38# 262
+C 3seg_0/firseg_0/decoder_0/b0 GND 45.1
+R 3seg_0/firseg_0/decoder_0/b0 5692
+R 3seg_0/firseg_0/comp_0/an3v0x2_2/b 3655
+R 3seg_0/firseg_0/comp_0/an2v0x2_3/b 1061
+R 3seg_0/firseg_0/comp_0/an3v0x2_1/a 4300
+R 3seg_0/firseg_0/comp_0/or3v0x2_1/zn 1056
+R 3seg_0/firseg_0/comp_0/nr2v0x2_0/a_28_39# 322
+R 3seg_0/firseg_0/comp_0/nd3v0x2_0/a 1305
+R 3seg_0/firseg_0/comp_0/nr2v0x2_0/a_11_39# 322
+R 3seg_0/firseg_0/comp_0/an2v0x2_1/z 1562
+R 3seg_0/firseg_0/comp_0/an2v0x2_3/z 1737
+R 3seg_0/firseg_0/comp_0/an2v0x2_0/a_24_13# 69
+C 3seg_0/firseg_0/comp_0/nr3v0x2_0/a GND 8.6
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a 2180
+R 3seg_0/firseg_0/comp_0/an2v0x2_0/zn 927
+R 3seg_0/firseg_0/comp_0/an3v0x2_0/a_31_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_0/a_24_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_0/zn 1307
+R 3seg_0/firseg_0/comp_0/an3v0x2_3/a_31_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_3/a_24_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_3/zn 1307
+R 3seg_0/firseg_0/comp_0/nr2v0x2_1/a_28_39# 322
+R 3seg_0/firseg_0/comp_0/nd3v0x2_0/c 1283
+R 3seg_0/firseg_0/comp_0/nr2v0x2_1/a_11_39# 322
+R 3seg_0/firseg_0/comp_0/an3v0x2_3/z 1589
+R 3seg_0/firseg_0/comp_0/an3v0x2_2/a_31_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_2/a_24_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_2/zn 1307
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_68_39# 322
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_61_39# 322
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_44_39# 322
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_37_39# 322
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_20_39# 322
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/a_13_39# 322
+R 3seg_0/firseg_0/comp_0/an3v0x2_0/z 2479
+R 3seg_0/firseg_0/comp_0/an3v0x2_2/z 2131
+R 3seg_0/firseg_0/comp_0/an3v0x2_1/a_31_8# 91
+R 3seg_0/firseg_0/comp_0/an3v0x2_1/a_24_8# 91
+R 3seg_0/firseg_0/comp_0/nr2v0x2_1/a 1765
+R 3seg_0/firseg_0/comp_0/an3v0x2_1/zn 1307
+R 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_45_12# 75
+R 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_38_12# 75
+R 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_21_12# 75
+R 3seg_0/firseg_0/comp_0/nd3v0x2_0/a_14_12# 75
+R 3seg_0/firseg_0/comp_0/nr3v0x2_0/z 2531
+R 3seg_0/firseg_0/comp_0/an3v0x2_2/w_n4_32# 16857
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_38_12# 43
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_21_12# 43
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_38_50# 191
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/a_21_50# 191
+C 3seg_0/firseg_0/3_bitmux_0/o0 GND 118.1
+R 3seg_0/firseg_0/3_bitmux_0/o0 5119
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/sn 743
+C s GND 45.7
+R s 5767
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/zn 856
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_0/w_n4_32# 4100
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_38_12# 43
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_21_12# 43
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_38_50# 191
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/a_21_50# 191
+C 3seg_0/firseg_0/3_bitmux_0/o1 GND 73.8
+R 3seg_0/firseg_0/3_bitmux_0/o1 5108
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/sn 743
+C 3seg_0/firseg_0/decoder_0/b1 GND 20.6
+R 3seg_0/firseg_0/decoder_0/b1 5296
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/zn 856
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_38_12# 43
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_21_12# 43
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_38_50# 191
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/a_21_50# 191
+C 3seg_0/firseg_0/3_bitmux_0/o2 GND 28.4
+R 3seg_0/firseg_0/3_bitmux_0/o2 5091
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/sn 743
+C 3seg_0/firseg_0/decoder_0/b2 GND 36.6
+R 3seg_0/firseg_0/decoder_0/b2 4774
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/zn 856
+R 3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_1/w_n4_32# 3063
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_115_7# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_28_12# 64
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/a_11_12# 64
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z GND 58.3
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_0/z 2344
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/bn 1548
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/iz 2485
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/cn 2938
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor3v1x2_0/zn 2183
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a 2352
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/ai 143
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/an 562
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/bn 779
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xnr2v8x05_0/zn 574
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/a_24_13# 69
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b GND 2.9
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/b 887
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a_24_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/a 1822
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/a_48_39# 191
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/a_31_39# 238
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c GND 37.1
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/in_c 3075
+C 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z GND 5.0
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_0/z 1225
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_1/z 1416
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/or2v0x3_0/zn 1208
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/a_30_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/a_13_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/an 2529
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/xor2v2x2_0/bn 1969
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/a_24_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_0/an2v0x2_2/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_115_7# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_28_12# 64
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/a_11_12# 64
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z GND 39.5
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_1/z 2356
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/bn 1548
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/iz 2485
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/cn 2938
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor3v1x2_0/zn 2183
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a 2352
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a1 GND 28.9
+R 3seg_0/2seg_0/totdiff3_0/mux_0/a1 4259
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/ai 143
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/an 562
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/bn 779
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xnr2v8x05_0/zn 574
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/a_24_13# 69
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b GND 2.9
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/b 887
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a_24_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/a 1822
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/a_48_39# 191
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/a_31_39# 238
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c GND 36.8
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/in_c 3075
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z GND 5.0
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_0/z 1225
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_1/z 1416
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/or2v0x3_0/zn 1208
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/a_30_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/a_13_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/an 2529
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/xor2v2x2_0/bn 1969
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/a_24_13# 69
+C 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c GND 29.6
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/in_2c 2774
+R 3seg_0/2seg_0/totdiff3_0/diff2_1/an2v0x2_2/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_115_7# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_28_12# 64
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/a_11_12# 64
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z GND 36.9
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_2/z 1615
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/bn 1548
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/iz 2485
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/cn 2938
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor3v1x2_0/zn 2183
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a 2352
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a2 GND 38.7
+R 3seg_0/2seg_0/totdiff3_0/mux_0/a2 3973
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/ai 143
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/an 562
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/bn 779
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xnr2v8x05_0/zn 574
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/a_24_13# 69
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b GND 2.9
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/b 887
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a_24_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/a 1822
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/zn 927
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/a_48_39# 191
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/a_31_39# 238
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z GND 5.0
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_0/z 1225
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_1/z 1416
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/or2v0x3_0/zn 1208
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/a_30_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/a_13_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/an 2529
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/xor2v2x2_0/bn 1969
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/a_24_13# 69
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/z 363
+C 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c GND 34.8
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/in_2c 2775
+R 3seg_0/2seg_0/totdiff3_0/diff2_2/an2v0x2_2/zn 927
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_12# 43
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_12# 43
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_38_50# 191
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/a_21_50# 191
+C 3seg_0/2seg_0/or3v0x3_0/a GND 68.8
+R 3seg_0/2seg_0/or3v0x3_0/a 1743
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b0 GND 47.5
+R 3seg_0/2seg_0/totdiff3_0/mux_0/b0 1776
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/sn 743
+C 3seg_0/2seg_0/ud GND 52.0
+R 3seg_0/2seg_0/ud 7450
+C 3seg_0/2seg_0/totdiff3_0/mux_0/a0 GND 99.1
+R 3seg_0/2seg_0/totdiff3_0/mux_0/a0 3948
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/zn 856
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32# 4100
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_12# 43
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_12# 43
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_38_50# 191
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/a_21_50# 191
+C 3seg_0/2seg_0/or3v0x3_0/b GND 71.7
+R 3seg_0/2seg_0/or3v0x3_0/b 1651
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b1 GND 87.1
+R 3seg_0/2seg_0/totdiff3_0/mux_0/b1 1779
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/sn 743
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/zn 856
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_12# 43
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_12# 43
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_38_50# 191
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/a_21_50# 191
+C 3seg_0/2seg_0/or3v0x3_0/c GND 52.7
+R 3seg_0/2seg_0/or3v0x3_0/c 1560
+C 3seg_0/2seg_0/totdiff3_0/mux_0/b2 GND 24.6
+R 3seg_0/2seg_0/totdiff3_0/mux_0/b2 1770
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/sn 743
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_2/zn 856
+R 3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_1/w_n4_32# 3063
+C 3seg_0/2seg_0/iv1v0x3_0/z GND 6.0
+R 3seg_0/2seg_0/iv1v0x3_0/z 263
+R 3seg_0/2seg_0/iv1v0x3_0/a 1306
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_2/an 1692
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_1/an 1692
+R 3seg_0/2seg_0/1counter_0/an2v0x3_3/a_30_9# 91
+C 3seg_0/2seg_0/1counter_0/or2v0x3_1/a GND 2.9
+R 3seg_0/2seg_0/1counter_0/or2v0x3_1/a 1297
+R 3seg_0/2seg_0/1counter_0/an2v0x3_3/zn 1317
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_0/an 1692
+R 3seg_0/2seg_0/1counter_0/an2v0x3_0/a_30_9# 91
+C 3seg_0/2seg_0/1counter_0/an2v0x3_3/b GND 17.2
+R 3seg_0/2seg_0/1counter_0/an2v0x3_3/b 2031
+R 3seg_0/2seg_0/1counter_0/an2v0x3_0/zn 1317
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_94_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_77_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_40_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_94_47# 155
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_77_54# 71
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/a_40_48# 71
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n4 761
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/ci 1607
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n2 751
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/n1 840
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/cn 3155
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/zn 1919
+R 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/a_48_11# 48
+R 3seg_0/2seg_0/1counter_0/tf_2/dfnt1v0x2_0/d 889
+R 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/an 777
+R 3seg_0/2seg_0/1counter_0/tf_2/xor2v0x05_0/bn 1294
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a GND 2.3
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_2/a 2627
+R 3seg_0/2seg_0/1counter_0/or2v0x3_1/a_48_39# 191
+R 3seg_0/2seg_0/1counter_0/or2v0x3_1/a_31_39# 238
+R 3seg_0/2seg_0/1counter_0/or2v0x3_1/z 810
+C 3seg_0/2seg_0/1counter_0/an2v0x3_2/z GND 4.6
+R 3seg_0/2seg_0/1counter_0/an2v0x3_2/z 1105
+R 3seg_0/2seg_0/1counter_0/or2v0x3_1/zn 1208
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_94_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_77_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_40_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_94_47# 155
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_77_54# 71
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/a_40_48# 71
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n4 761
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/ci 1607
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n2 751
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/n1 840
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/cn 3155
+R 3seg_0/2seg_0/1counter_0/an2v0x3_2/a 2664
+R 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/a_48_11# 48
+R 3seg_0/2seg_0/1counter_0/tf_1/dfnt1v0x2_0/d 889
+R 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/an 777
+R 3seg_0/2seg_0/1counter_0/tf_1/xor2v0x05_0/bn 1294
+C 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a GND 6.2
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_1/a 2627
+R 3seg_0/2seg_0/1counter_0/or2v0x3_0/a_48_39# 191
+R 3seg_0/2seg_0/1counter_0/or2v0x3_0/a_31_39# 238
+R 3seg_0/2seg_0/1counter_0/or2v0x3_0/z 810
+C 3seg_0/2seg_0/1counter_0/an2v0x3_2/b GND 21.1
+R 3seg_0/2seg_0/1counter_0/an2v0x3_2/b 1837
+R 3seg_0/2seg_0/1counter_0/or2v0x3_0/zn 1208
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_94_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_77_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_40_13# 32
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_94_47# 155
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_77_54# 71
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/a_40_48# 71
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n4 761
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/ci 1607
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n2 751
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/n1 840
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/cn 3155
+C 3seg_0/2seg_0/1counter_0/an2v0x3_1/a GND 5.9
+R 3seg_0/2seg_0/1counter_0/an2v0x3_1/a 2665
+R 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a_48_11# 48
+R 3seg_0/2seg_0/1counter_0/tf_0/dfnt1v0x2_0/d 889
+R 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/a 567
+R 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/an 777
+R 3seg_0/2seg_0/1counter_0/tf_0/xor2v0x05_0/bn 1294
+R 3seg_0/2seg_0/1counter_0/bf1v0x4_0/a 2626
+R 3seg_0/2seg_0/1counter_0/an2v0x3_2/a_30_9# 91
+R 3seg_0/2seg_0/1counter_0/an2v0x3_2/zn 1317
+R 3seg_0/2seg_0/1counter_0/an2v0x3_1/a_30_9# 91
+R 3seg_0/2seg_0/1counter_0/an2v0x3_1/zn 1317
+R 3seg_0/2seg_0/1counter_0/an2v0x3_1/b 946
+R 3seg_0/2seg_0/an2v0x3_0/a_30_9# 91
+R 3seg_0/2seg_0/an2v0x3_0/b 682
+R 3seg_0/2seg_0/an2v0x3_0/z 1954
+R 3seg_0/2seg_0/an2v0x3_0/zn 1317
+R 3seg_0/2seg_0/or3v0x3_0/a_64_38# 333
+R 3seg_0/2seg_0/or3v0x3_0/a_57_38# 333
+R 3seg_0/2seg_0/or3v0x3_0/a_40_38# 333
+R 3seg_0/2seg_0/or3v0x3_0/a_33_38# 333
+R 3seg_0/2seg_0/an2v0x3_0/a 961
+R 3seg_0/2seg_0/or3v0x3_0/zn 1345

@@ -1,0 +1,92 @@
+timestamp 1523195521
+version 7.5
+tech scmos
+style lambda=1.0(scna20_orb)
+scale 1000 1 100
+resistclasses 26670 59550 23860 19690 27260 2000000 49 26 2505830
+use decoder decoder_0 1 0 90 0 1 1182
+use 3seg 3seg_0 1 0 20 0 1 682
+use dip2 dip2_1 1 0 1062 0 1 959
+use dip2 dip2_0 1 0 1052 0 1 285
+node "m2_312_1060#" 3 35093 312 1060 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1891 952 0 0
+node "m2_296_894#" 4 41876 296 894 v2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2248 1146 0 0
+node "m1_989_16#" 1 27918 989 16 m1 0 0 0 0 0 0 0 0 0 0 0 0 594 210 0 0 0 0
+node "m1_905_586#" 2 37412 905 586 m1 0 0 0 0 0 0 0 0 0 0 0 0 796 406 0 0 0 0
+node "m1_740_766#" 3 129156 740 766 m1 0 0 0 0 0 0 0 0 0 0 0 0 2748 766 0 0 0 0
+node "gnd" 0 32148 1 766 m1 0 0 0 0 0 0 0 0 0 0 0 0 684 170 0 0 0 0
+node "s" 4 50273 629 784 v 0 0 0 0 0 0 0 0 0 0 0 0 876 446 495 286 0 0
+node "m1_651_1000#" 9 81075 651 1000 m1 0 0 0 0 0 0 0 0 0 0 0 0 1725 1156 0 0 0 0
+node "vdd" 2 70688 -21 993 m1 0 0 0 0 0 0 0 0 0 0 0 0 1504 470 0 0 0 0
+node "gnd" 4 43004 301 1027 v 0 0 0 0 0 0 0 0 0 0 0 0 784 400 397 270 0 0
+node "m1_113_1254#" 1 3706 113 1254 v 0 0 0 0 0 0 0 0 0 0 0 0 36 34 142 90 0 0
+node "vdd" 1 20210 11 1250 m1 0 0 0 0 0 0 0 0 0 0 0 0 430 182 0 0 0 0
+node "a_406_994#" 219 79939 406 994 p 0 0 0 0 44 44 0 0 0 0 0 0 653 438 2424 1220 0 0
+cap "a_406_994#" "m2_296_894#" 540
+cap "gnd" "m2_312_1060#" 720
+cap "a_406_994#" "s" 2205
+cap "m2_312_1060#" "a_406_994#" 540
+cap "m2_296_894#" "s" 720
+cap "gnd" "m2_296_894#" 720
+cap "m2_312_1060#" "s" 720
+cap "3seg_0/2seg_0/or3v0x3_0/vss" "dip2_0/gnd" 1128
+cap "3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/vdd" "3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/w_n4_32#" 376
+cap "3seg_0/firseg_0/decoder_0/d4" "3seg_0/firseg_0/decoder_0/gnd" 9990
+cap "3seg_0/firseg_0/3_bitmux_0/gnd" "3seg_0/firseg_0/out" 900
+cap "3seg_0/firseg_0/comp_0/nd3v0x2_0/vss" "3seg_0/firseg_0/out" 3186
+cap "3seg_0/firseg_0/comp_0/nd3v0x2_0/w_n4_n4#" "3seg_0/firseg_0/out" 380
+cap "3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/w_n4_n4#" "3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/vss" 658
+cap "3seg_0/a_672_n102#" "3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/vss" 945
+cap "3seg_0/a_412_n102#" "3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/vss" 945
+cap "3seg_0/a_152_n101#" "m1_740_766#" 945
+cap "3seg_0/firseg_0/comp_0/iv1v0x4_2/vss" "3seg_0/firseg_0/e" 95
+cap "3seg_0/firseg_0/e" "3seg_0/firseg_0/comp_0/iv1v0x4_2/vss" 666
+cap "3seg_0/firseg_0/m1_620_72#" "s" 720
+cap "s" "3seg_0/firseg_0/m1_620_81#" 720
+cap "3seg_0/firseg_0/decoder_0/vdd" "3seg_0/firseg_0/decoder_0/or2v0x3_0/vdd" 282
+cap "3seg_0/firseg_0/decoder_0/or2v0x3_0/vdd" "vdd" 282
+cap "3seg_0/firseg_0/comp_0/iv1v0x4_0/vdd" "3seg_0/firseg_0/m1_262_156#" 675
+cap "a_406_994#" "3seg_0/firseg_0/comp_0/iv1v0x4_1/vdd" 120
+cap "3seg_0/firseg_0/comp_0/iv1v0x4_1/w_n4_32#" "3seg_0/firseg_0/comp_0/iv1v0x4_1/vdd" -188
+cap "a_406_994#" "3seg_0/firseg_0/comp_0/iv1v0x4_1/w_n4_32#" 312
+cap "3seg_0/firseg_0/m1_573_235#" "3seg_0/firseg_0/3_bitmux_0/b1" 540
+cap "3seg_0/firseg_0/m1_573_235#" "3seg_0/firseg_0/3_bitmux_0/b2" 540
+cap "3seg_0/firseg_0/3_bitmux_0/b0" "3seg_0/firseg_0/m1_573_235#" 540
+cap "vdd" "decoder_0/d3" 450
+cap "vdd" "decoder_0/d4" 1260
+cap "3seg_0/firseg_0/decoder_0/or2v0x3_0/vdd" "vdd" 47
+cap "vdd" "decoder_0/d5" 1260
+cap "3seg_0/firseg_0/decoder_0/or2v0x3_0/vdd" "3seg_0/m1_n19_n534#" 47
+cap "3seg_0/firseg_0/comp_0/m1_n6_n11#" "a_406_994#" 114
+cap "3seg_0/firseg_0/comp_0/m1_n6_n11#" "3seg_0/firseg_0/comp_0/iv1v0x4_1/w_n4_32#" -38
+cap "a_406_994#" "3seg_0/firseg_0/comp_0/iv1v0x4_1/w_n4_32#" 156
+cap "vdd" "decoder_0/d3" 2250
+cap "decoder_0/gnd" "decoder_0/or2v0x3_5/vss" 376
+cap "decoder_0/or2v0x3_0/vdd" "decoder_0/vdd" 470
+merge "decoder_0/b0" "3seg_0/firseg_0/3_bitmux_0/b0" -8445 0 0 0 0 -50 -54 0 0 0 0 0 0 -24 -20 -77 -58 0 0
+merge "3seg_0/firseg_0/3_bitmux_0/b0" "3seg_0/firseg_0/comp_0/iv1v0x4_1/a"
+merge "3seg_0/firseg_0/comp_0/iv1v0x4_1/a" "a_406_994#"
+merge "decoder_0/gnd" "decoder_0/or2v0x3_8/vss" -5646 0 0 0 0 0 0 0 0 0 0 0 0 -100 -78 -15 -16 0 0
+merge "decoder_0/or2v0x3_8/vss" "3seg_0/firseg_0/m1_262_156#"
+merge "3seg_0/firseg_0/m1_262_156#" "3seg_0/firseg_0/decoder_0/gnd"
+merge "3seg_0/firseg_0/decoder_0/gnd" "gnd"
+merge "3seg_0/firseg_0/d" "decoder_0/b2" -2223 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -83 -62 0 0
+merge "decoder_0/b2" "3seg_0/firseg_0/3_bitmux_0/b2"
+merge "3seg_0/firseg_0/3_bitmux_0/b2" "m2_312_1060#"
+merge "decoder_0/b1" "3seg_0/firseg_0/3_bitmux_0/b1" -3078 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -99 -78 0 0
+merge "3seg_0/firseg_0/3_bitmux_0/b1" "3seg_0/firseg_0/e"
+merge "3seg_0/firseg_0/e" "m2_296_894#"
+merge "dip2_0/vdd" "3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/vdd" -3196 0 0 0 0 0 0 0 0 0 0 0 0 -60 -46 0 0 0 0
+merge "3seg_0/2seg_0/totdiff3_0/mux_0/mxn2v0x1_0/vdd" "m1_905_586#"
+merge "decoder_0/or2v0x3_0/vdd" "decoder_0/vdd" -6197 0 0 0 0 0 0 0 0 0 0 0 0 -79 -72 0 0 0 0
+merge "decoder_0/vdd" "3seg_0/m1_n19_n534#"
+merge "3seg_0/m1_n19_n534#" "3seg_0/firseg_0/decoder_0/or2v0x3_0/vdd"
+merge "3seg_0/firseg_0/decoder_0/or2v0x3_0/vdd" "vdd"
+merge "vdd" "m1_113_1254#"
+merge "dip2_0/gnd" "3seg_0/2seg_0/or3v0x3_0/vss" -2820 0 0 0 0 0 0 0 0 0 0 0 0 -36 -38 0 0 0 0
+merge "3seg_0/2seg_0/or3v0x3_0/vss" "m1_989_16#"
+merge "3seg_0/firseg_0/sel" "3seg_0/firseg_0/out" -25490 0 0 0 0 0 0 0 0 0 0 0 0 -415 -216 -103 -77 0 0
+merge "3seg_0/firseg_0/out" "s"
+merge "dip2_1/vdd" "3seg_0/firseg_0/m1_573_235#" -987 0 0 0 0 0 0 0 0 0 0 0 0 -21 -40 0 0 0 0
+merge "3seg_0/firseg_0/m1_573_235#" "m1_651_1000#"
+merge "3seg_0/firseg_0/3_bitmux_0/mxn2v0x1_2/vss" "dip2_1/gnd" -37835 0 0 0 0 0 0 0 0 0 0 0 0 -791 -254 0 0 0 0
+merge "dip2_1/gnd" "m1_740_766#"

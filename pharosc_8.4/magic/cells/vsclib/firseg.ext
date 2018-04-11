@@ -1,4 +1,4 @@
-timestamp 1523182099
+timestamp 1523195521
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -25,25 +25,25 @@ node "m1_688_232#" 1 5532 688 232 v 0 0 0 0 0 0 0 0 0 0 0 0 32 32 244 134 0 0
 node "m1_573_235#" 1 11139 573 235 m1 0 0 0 0 0 0 0 0 0 0 0 0 237 164 0 0 0 0
 node "m1_271_231#" 0 9400 271 231 m1 0 0 0 0 0 0 0 0 0 0 0 0 200 90 0 0 0 0
 cap "decoder_0/or2v0x3_8/vss" "decoder_0/or2v0x3_8/vss" 752
-cap "comp_0/nr2v0x2_1/vss" "comp_0/nr2v0x2_1/vss" 470
 cap "comp_0/m1_235_n189#" "comp_0/nr2v0x2_1/vss" 675
-cap "comp_0/nd3v0x2_0/w_n4_32#" "comp_0/nd3v0x2_0/z" 456
+cap "comp_0/nr2v0x2_1/vss" "comp_0/nr2v0x2_1/vss" 470
+cap "comp_0/nd3v0x2_0/z" "comp_0/nd3v0x2_0/w_n4_32#" 456
 cap "decoder_0/or2v0x3_5/vdd" "decoder_0/vdd" 564
-cap "comp_0/m1_n6_n11#" "comp_0/an2v0x2_0/a" 95
-cap "comp_0/m1_1_n172#" "comp_0/iv1v0x4_2/vdd" 810
+cap "comp_0/an2v0x2_0/a" "comp_0/m1_n6_n11#" 95
 cap "comp_0/iv1v0x4_2/w_n4_32#" "comp_0/m1_n6_n11#" 19
-cap "comp_0/m1_n6_n11#" "comp_0/an2v0x2_0/zn" 180
-cap "comp_0/iv1v0x4_0/w_n4_32#" "comp_0/m1_34_n207#" 380
-cap "comp_0/iv1v0x4_0/w_n4_32#" "comp_0/iv1v0x4_1/a" 285
-cap "comp_0/iv1v0x4_1/vdd" "comp_0/iv1v0x4_1/a" 198
-cap "comp_0/iv1v0x4_0/a" "comp_0/iv1v0x4_0/vdd" 264
+cap "comp_0/an2v0x2_0/zn" "comp_0/m1_n6_n11#" 180
+cap "comp_0/iv1v0x4_2/vdd" "comp_0/m1_1_n172#" 810
+cap "comp_0/iv1v0x4_0/a" "comp_0/iv1v0x4_0/w_n4_32#" 597
+cap "comp_0/iv1v0x4_1/a" "comp_0/iv1v0x4_1/vdd" 198
 cap "comp_0/iv1v0x4_0/vss" "comp_0/iv1v0x4_2/a" 316
-cap "comp_0/iv1v0x4_0/w_n4_32#" "comp_0/iv1v0x4_0/a" 597
-cap "comp_0/iv1v0x4_0/vss" "comp_0/iv1v0x4_0/a" 47
+cap "comp_0/iv1v0x4_1/a" "comp_0/iv1v0x4_0/w_n4_32#" 285
+cap "comp_0/iv1v0x4_0/a" "comp_0/iv1v0x4_0/vdd" 264
+cap "comp_0/iv1v0x4_0/a" "comp_0/iv1v0x4_0/vss" 47
+cap "comp_0/m1_34_n207#" "comp_0/iv1v0x4_0/w_n4_32#" 380
 cap "decoder_0/or2v0x3_2/vdd" "decoder_0/or2v0x3_2/vdd" 470
-cap "comp_0/an2v0x2_2/w_n4_32#" "comp_0/an2v0x2_2/vdd" 658
-cap "3_bitmux_0/a0" "3_bitmux_0/vdd" 960
-cap "m1_688_232#" "3_bitmux_0/mxn2v0x1_0/vdd" 4500
+cap "comp_0/an2v0x2_2/vdd" "comp_0/an2v0x2_2/w_n4_32#" 658
+cap "3_bitmux_0/vdd" "3_bitmux_0/a0" 960
+cap "3_bitmux_0/mxn2v0x1_0/vdd" "m1_688_232#" 4500
 merge "comp_0/iv1v0x4_1/a" "f" -1208 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
 merge "comp_0/iv1v0x4_0/vdd" "decoder_0/or2v0x3_2/vdd" -1410 0 0 0 0 0 0 0 0 0 0 0 0 -20 -28 0 0 0 0
 merge "decoder_0/or2v0x3_2/vdd" "m1_271_231#"

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-timestamp 1523182099
-=======
-timestamp 1523181350
->>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+timestamp 1523195521
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -22,41 +18,22 @@ equiv "a" "a"
 equiv "a" "a"
 node "vss" 327 0 -4 -4 pw 240 92 90 42 0 0 0 0 0 0 0 0 494 146 0 0 0 0
 node "w_n4_32#" 3189 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2464 200
-<<<<<<< HEAD
-cap "z" "a" 60
 cap "vdd" "w_n4_32#" 15040
-cap "w_n4_32#" "b" 9428
-cap "a" "vdd" 480
-cap "a" "b" 630
-cap "a" "vss" 15662
-cap "vdd" "a_28_39#" 470
-cap "a" "w_n4_32#" 6196
-cap "z" "vdd" 1739
-cap "z" "a_11_39#" 705
-cap "z" "b" 60
-cap "z" "vss" 5452
-cap "a_11_39#" "vdd" 470
-cap "vdd" "b" 1232
-cap "z" "w_n4_32#" 2538
-cap "vss" "b" 6121
-=======
-cap "a" "vdd" 480
+cap "b" "a" 630
 cap "a_11_39#" "z" 705
-cap "z" "vdd" 1739
-cap "w_n4_32#" "vdd" 15040
-cap "a" "b" 630
-cap "z" "b" 60
-cap "vss" "b" 6121
-cap "w_n4_32#" "b" 9428
-cap "a_11_39#" "vdd" 470
-cap "z" "a" 60
-cap "vss" "a" 15662
+cap "vdd" "a_11_39#" 470
 cap "a" "w_n4_32#" 6196
-cap "a_28_39#" "vdd" 470
+cap "vdd" "z" 1739
 cap "vss" "z" 5452
-cap "z" "w_n4_32#" 2538
+cap "b" "w_n4_32#" 9428
+cap "a" "z" 60
+cap "vdd" "a" 480
+cap "b" "z" 60
+cap "vss" "a" 15662
 cap "b" "vdd" 1232
->>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+cap "w_n4_32#" "z" 2538
+cap "b" "vss" 6121
+cap "a_28_39#" "vdd" 470
 device mosfet nfet 21 6 22 7 2 15 "vss" "b" 4 0 "z" 15 0 "vss" 15 0
 device mosfet nfet 11 6 12 7 2 15 "vss" "a" 4 0 "vss" 15 0 "z" 15 0
 device mosfet pfet 33 39 34 40 2 27 "w_n4_32#" "a" 4 0 "a_28_39#" 27 0 "vdd" 27 0

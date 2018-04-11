@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-timestamp 1523182099
-=======
-timestamp 1523181350
->>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+timestamp 1523195521
 version 7.5
 tech scmos
 style lambda=1.0(scna20_orb)
@@ -16,25 +12,14 @@ node "a" 1331 0 9 4 p 0 0 0 0 306 266 0 0 0 0 0 0 120 52 0 0 0 0
 equiv "a" "a"
 node "vss" 241 0 -4 -4 pw 207 86 36 24 0 0 0 0 0 0 0 0 372 130 0 0 0 0
 node "w_n4_32#" 2756 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1760 168
-<<<<<<< HEAD
 cap "z" "w_n4_32#" 1880
-cap "w_n4_32#" "vdd" 10622
-cap "a" "z" 376
-cap "a" "vdd" 856
-cap "a" "vss" 8857
+cap "vdd" "a" 856
 cap "a" "w_n4_32#" 9081
-cap "z" "vdd" 3948
-cap "vss" "z" 3008
-=======
-cap "a" "z" 376
-cap "vss" "z" 3008
-cap "w_n4_32#" "z" 1880
-cap "a" "vdd" 856
-cap "w_n4_32#" "vdd" 10622
+cap "vdd" "w_n4_32#" 10622
+cap "z" "vss" 3008
+cap "z" "a" 376
 cap "vss" "a" 8857
-cap "a" "w_n4_32#" 9081
 cap "vdd" "z" 3948
->>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
 device mosfet nfet 19 15 20 16 2 11 "vss" "a" 4 0 "z" 11 0 "vss" 11 0
 device mosfet nfet 9 9 10 10 2 17 "vss" "a" 4 0 "vss" 17 0 "z" 17 0
 device mosfet pfet 19 38 20 39 2 28 "w_n4_32#" "a" 4 0 "z" 28 0 "vdd" 28 0
