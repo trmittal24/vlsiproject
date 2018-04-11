@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 timestamp 1523195521
 version 7.5
+=======
+timestamp 1523182792
+version 8.0
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -34,6 +39,7 @@ node "m1_270_228#" 1 18330 270 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 390 166 0 0 0 0
 node "m1_65_n47#" 1 11376 65 -47 v 0 0 0 0 0 0 0 0 0 0 0 0 124 88 416 206 0 0
 node "vdd" 1 33840 -34 228 m1 0 0 0 0 0 0 0 0 0 0 0 0 720 196 0 0 0 0
 node "a_370_n34#" 569 75047 370 -34 pc 0 0 0 0 102 102 0 0 0 0 0 0 225 158 2874 1888 0 0
+<<<<<<< HEAD
 cap "m1_285_38#" "m2_282_n157#" 36000
 cap "m1_416_n273#" "m1_439_n251#" 720
 cap "m1_279_80#" "m2_282_n239#" 1620
@@ -56,11 +62,36 @@ cap "3_bitmux_1/mxn2v0x1_2/vss" "subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/vss" 30
 cap "3_bitmux_1/mxn2v0x1_2/a1" "3_bitmux_1/mxn2v0x1_2/w_n4_n4#" 684
 cap "3_bitmux_1/mxn2v0x1_2/a1" "3_bitmux_1/mxn2v0x1_2/sn" 720
 cap "subcomp_0/totdiff3_0/m1_622_n613#" "m1_439_n251#" 540
+=======
+cap "m1_285_38#" "m2_284_n82#" 720
+cap "m1_270_228#" "m1_527_67#" 900
+cap "m2_282_n239#" "m1_329_n49#" 720
+cap "m2_282_n239#" "m1_279_80#" 1620
+cap "m1_416_n273#" "m1_439_n251#" 720
+cap "m1_279_80#" "m2_282_n157#" 720
+cap "m1_279_80#" "m1_329_n49#" 900
+cap "m1_416_228#" "m1_527_67#" 1350
+cap "m2_282_n239#" "m1_285_38#" 720
+cap "m1_279_80#" "m2_284_n82#" 720
+cap "m1_285_38#" "m2_282_n157#" 36000
+cap "m1_285_38#" "m1_279_80#" 720
+cap "a_370_n34#" "m1_279_80#" 1540
+cap "gnd" "decoder_1/or2v0x3_6/vss" 47
+cap "gnd" "decoder_1/d4" 7425
+cap "decoder_1/or2v0x3_8/vss" "decoder_1/or2v0x3_8/vss" 470
+cap "m1_349_n47#" "3_bitmux_1/vdd" 1800
+cap "3_bitmux_1/mxn2v0x1_2/w_n4_n4#" "3_bitmux_1/mxn2v0x1_2/a1" 684
+cap "3_bitmux_1/mxn2v0x1_2/a1" "3_bitmux_1/mxn2v0x1_2/sn" 720
+cap "3_bitmux_1/mxn2v0x1_2/w_n4_n4#" "3_bitmux_1/mxn2v0x1_2/vss" 564
+cap "3_bitmux_1/mxn2v0x1_2/vss" "subcomp_0/totdiff3_0/diff2_0/xor2v2x2_0/vss" 304
+cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_622_n613#" 540
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 cap "subcomp_0/totdiff3_0/m1_749_n514#" "m1_439_n251#" 540
 cap "subcomp_0/totdiff3_0/m1_884_n612#" "m1_439_n251#" 540
 cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_1009_n514#" 540
 cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_622_n613#" 540
 cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_749_n514#" 540
+<<<<<<< HEAD
 cap "subcomp_0/totdiff3_0/m1_1009_n514#" "m1_439_n251#" 540
 cap "subcomp_0/totdiff3_0/m1_884_n612#" "m1_439_n251#" 540
 cap "3_bitmux_1/s" "decoder_1/b1" 180
@@ -72,9 +103,23 @@ cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/o1" 720
 cap "3_bitmux_1/mxn2v0x1_1/s" "3_bitmux_1/mxn2v0x1_1/a1" 38
 cap "3_bitmux_1/mxn2v0x1_0/a1" "3_bitmux_1/mxn2v0x1_0/w_n4_n4#" 684
 cap "3_bitmux_0/mxn2v0x1_2/vss" "3_bitmux_0/mxn2v0x1_2/w_n4_n4#" -658
+=======
+cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_884_n612#" 540
+cap "m1_439_n251#" "subcomp_0/totdiff3_0/m1_1009_n514#" 540
+cap "3_bitmux_1/s" "decoder_1/b1" 180
+cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/mxn2v0x1_1/zn" 2686
+cap "3_bitmux_1/mxn2v0x1_0/a1" "3_bitmux_1/mxn2v0x1_0/w_n4_n4#" 684
+cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/mxn2v0x1_0/w_n4_n4#" 1254
+cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/mxn2v0x1_1/s" 38
+cap "3_bitmux_1/o1" "3_bitmux_1/mxn2v0x1_1/a1" 720
+cap "3_bitmux_1/mxn2v0x1_1/a1" "3_bitmux_1/mxn2v0x1_1/sn" 1580
+cap "3_bitmux_1/mxn2v0x1_0/a1" "3_bitmux_1/mxn2v0x1_0/sn" 720
+cap "3_bitmux_0/mxn2v0x1_2/w_n4_n4#" "3_bitmux_0/mxn2v0x1_2/vss" -658
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 cap "subcomp_0/totdiff3_0/diff2_0/m1_n4_n91#" "m1_279_80#" 675
 cap "3_bitmux_0/mxn2v0x1_2/vss" "a_370_n34#" 420
 cap "3_bitmux_0/mxn2v0x1_2/w_n4_n4#" "a_370_n34#" 858
+<<<<<<< HEAD
 cap "m1_1294_n162#" "subcomp_0/totdiff3_0/mux_0/vdd" 1665
 cap "3_bitmux_0/a0" "decoder_0/b1" 240
 cap "3_bitmux_0/vdd" "m1_349_n47#" 1800
@@ -87,6 +132,21 @@ cap "m1_279_80#" "subcomp_0/totdiff3_1/m1_884_n612#" 675
 cap "subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/vss" "a_370_n34#" 945
 cap "a_370_n34#" "subcomp_0/totdiff3_1/m1_1195_n636#" 405
 cap "m1_220_n118#" "decoder_0/gnd" 1620
+=======
+cap "a_370_n34#" "3_bitmux_0/mxn2v0x1_2/vss" 420
+cap "m1_1294_n162#" "subcomp_0/totdiff3_0/mux_0/vdd" 1665
+cap "decoder_0/b2" "3_bitmux_0/a0" 240
+cap "decoder_0/b1" "3_bitmux_0/a0" 240
+cap "3_bitmux_0/a0" "m2_282_n239#" 720
+cap "3_bitmux_0/vdd" "m1_349_n47#" 1800
+cap "m1_527_67#" "subcomp_0/m1_922_n45#" 675
+cap "subcomp_0/m1_922_n45#" "a_370_n34#" 405
+cap "m1_527_67#" "subcomp_0/totdiff3_1/m1_622_n613#" 810
+cap "subcomp_0/totdiff3_1/m1_884_n612#" "m1_279_80#" 675
+cap "a_370_n34#" "subcomp_0/totdiff3_1/m1_1195_n636#" 405
+cap "a_370_n34#" "subcomp_0/totdiff3_1/diff2_2/an2v0x2_2/vss" 945
+cap "decoder_0/gnd" "m1_220_n118#" 1620
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 cap "3_bitmux_0/gnd" "3_bitmux_0/mxn2v0x1_0/w_n4_n4#" 846
 cap "m1_349_n47#" "decoder_0/or2v0x3_2/vdd" 1440
 cap "decoder_0/or2v0x3_2/vdd" "decoder_0/or2v0x3_2/vdd" 470

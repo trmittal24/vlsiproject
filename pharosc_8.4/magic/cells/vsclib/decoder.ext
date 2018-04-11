@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 timestamp 1523195521
+=======
+<<<<<<< HEAD
+timestamp 1523182792
+version 8.0
+=======
+<<<<<<< HEAD
+timestamp 1523182099
+=======
+timestamp 1523181350
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 version 7.5
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -168,12 +181,163 @@ cap "or2v0x3_1/zn" "or2v0x3_1/a" 896
 cap "or2v0x3_0/vdd" "m1_78_34#" 133
 cap "or2v0x3_1/a" "or2v0x3_1/z" 2876
 cap "or2v0x3_1/a_48_39#" "or2v0x3_1/a" 110
+<<<<<<< HEAD
 cap "or2v0x3_0/vdd" "or2v0x3_0/a" 423
 cap "or2v0x3_2/a" "or2v0x3_1/vdd" 1714
 cap "or2v0x3_2/a_31_39#" "or2v0x3_2/a" 110
 cap "or2v0x3_2/a" "or2v0x3_2/z" 2876
 cap "or2v0x3_2/zn" "or2v0x3_2/a" 896
 cap "or2v0x3_2/a" "or2v0x3_2/a_48_39#" 110
+=======
+cap "or2v0x3_2/a" "or2v0x3_2/a_48_39#" 110
+cap "or2v0x3_2/a" "or2v0x3_2/z" 2876
+cap "or2v0x3_2/a" "or2v0x3_1/vdd" 1714
+cap "or2v0x3_2/a" "or2v0x3_2/a_31_39#" 110
+cap "or2v0x3_2/a" "or2v0x3_2/zn" 896
+=======
+node "vdd" 0 3008 -4 68 m1 0 0 0 0 0 0 0 0 0 0 0 0 64 32 0 0 0 0
+cap "gnd" "d4" 18000
+cap "d3" "d6" 720
+cap "d3" "d5" 540
+cap "d1" "d3" 720
+cap "d1" "d5" 720
+cap "d3" "d2" 720
+cap "d5" "d2" 540
+cap "d4" "gnd" 1080
+cap "d3" "d4" 720
+cap "d1" "d4" 720
+cap "d2" "d4" 720
+cap "gnd" "d6" 3060
+cap "vdd" "d6" 3060
+cap "vdd" "d3" 12420
+cap "d4" "m1_68_n156#" 8370
+cap "or2v0x3_6/zn" "d5" 720
+cap "or2v0x3_6/b" "or2v0x3_6/z" 114
+cap "d3" "vdd" 152
+cap "gnd" "or2v0x3_6/vss" 752
+cap "or2v0x3_6/z" "d5" 1076
+cap "d4" "gnd" 5509
+cap "or2v0x3_6/vss" "d5" 1292
+cap "or2v0x3_6/a" "or2v0x3_6/z" 540
+cap "or2v0x3_6/z" "d4" 110
+cap "or2v0x3_6/a" "d5" 332
+cap "d4" "or2v0x3_6/vss" 380
+cap "or2v0x3_6/a" "d4" 38
+cap "gnd" "d5" 968
+cap "or2v0x3_6/zn" "or2v0x3_6/z" 920
+cap "or2v0x3_6/z" "vdd" 874
+cap "or2v0x3_4/vdd" "or2v0x3_7/a" 3310
+cap "or2v0x3_7/a" "or2v0x3_7/zn" 882
+cap "or2v0x3_6/a" "or2v0x3_4/vdd" 2712
+cap "or2v0x3_7/b" "or2v0x3_6/b" 38
+cap "or2v0x3_7/z" "or2v0x3_7/b" 1110
+cap "or2v0x3_6/a" "or2v0x3_7/a" 962
+cap "or2v0x3_7/a" "or2v0x3_7/a_48_39#" 132
+cap "or2v0x3_6/b" "or2v0x3_7/a" 418
+cap "or2v0x3_7/z" "or2v0x3_7/zn" 844
+cap "or2v0x3_6/b" "or2v0x3_6/vss" 76
+cap "or2v0x3_7/z" "or2v0x3_7/a" 1374
+cap "or2v0x3_7/b" "or2v0x3_7/a" 570
+cap "or2v0x3_7/z" "or2v0x3_6/vss" 1938
+cap "or2v0x3_7/b" "or2v0x3_6/vss" 6564
+cap "or2v0x3_8/b" "or2v0x3_8/a" 654
+cap "or2v0x3_8/a" "or2v0x3_5/vdd" 2923
+cap "or2v0x3_8/a" "or2v0x3_5/z" 264
+cap "or2v0x3_8/b" "b2" 1072
+cap "or2v0x3_8/zn" "b2" 920
+cap "or2v0x3_5/vdd" "b2" 1672
+cap "or2v0x3_8/a" "or2v0x3_8/a_48_39#" 1144
+cap "or2v0x3_8/a" "b2" 1502
+cap "or2v0x3_8/b" "or2v0x3_7/vss" 1843
+cap "or2v0x3_8/b" "or2v0x3_8/zn" 844
+cap "gnd" "or2v0x3_0/z" 456
+cap "or2v0x3_3/a_31_39#" "d1" 110
+cap "d4" "gnd" 3752
+cap "or2v0x3_0/a" "d2" 76
+cap "or2v0x3_3/zn" "d6" 1453
+cap "or2v0x3_3/a" "or2v0x3_3/vdd" 342
+cap "or2v0x3_0/z" "d2" 807
+cap "gnd" "d2" 1644
+cap "or2v0x3_0/vdd" "or2v0x3_0/z" 456
+cap "or2v0x3_3/a" "or2v0x3_3/b" 938
+cap "gnd" "or2v0x3_3/b" 836
+cap "or2v0x3_3/vdd" "d1" 66
+cap "or2v0x3_3/vss" "d6" 44
+cap "or2v0x3_3/vdd" "or2v0x3_3/a" 564
+cap "or2v0x3_3/a" "d6" 76
+cap "or2v0x3_3/b" "or2v0x3_3/vdd" 266
+cap "gnd" "d6" 3237
+cap "or2v0x3_3/zn" "d1" 2807
+cap "d1" "or2v0x3_3/vdd" 931
+cap "or2v0x3_3/a_48_39#" "d1" 770
+cap "or2v0x3_0/zn" "or2v0x3_0/z" 2256
+cap "or2v0x3_3/b" "d6" 360
+cap "or2v0x3_0/a" "or2v0x3_0/z" 720
+cap "or2v0x3_0/zn" "d2" 716
+cap "or2v0x3_3/vdd" "d1" 984
+cap "or2v0x3_3/z" "or2v0x3_0/vss" 760
+cap "d6" "or2v0x3_4/a" 76
+cap "or2v0x3_3/zn" "d6" 765
+cap "or2v0x3_1/b" "or2v0x3_0/vss" 4768
+cap "or2v0x3_4/zn" "d6" 2083
+cap "or2v0x3_1/b" "or2v0x3_1/z" 1384
+cap "or2v0x3_0/vss" "or2v0x3_1/z" 912
+cap "or2v0x3_4/vdd" "or2v0x3_4/a" 1216
+cap "or2v0x3_0/b" "or2v0x3_0/vss" 309
+cap "or2v0x3_1/a" "or2v0x3_1/z" 720
+cap "m1_6_34#" "or2v0x3_0/vss" 608
+cap "or2v0x3_3/z" "or2v0x3_4/a" 2100
+cap "or2v0x3_0/a" "m1_6_34#" 1028
+cap "or2v0x3_0/b" "m1_6_34#" 1384
+cap "or2v0x3_1/a" "or2v0x3_1/z" 1028
+cap "or2v0x3_1/zn" "or2v0x3_1/z" 2256
+cap "or2v0x3_3/vdd" "or2v0x3_4/a" 892
+cap "or2v0x3_4/z" "d6" 1076
+cap "or2v0x3_3/zn" "or2v0x3_4/a" 855
+cap "or2v0x3_1/vdd" "or2v0x3_1/z" 950
+cap "or2v0x3_3/z" "d6" 1076
+cap "m1_6_34#" "or2v0x3_1/vdd" 722
+cap "or2v0x3_4/a" "or2v0x3_3/vdd" 22
+cap "or2v0x3_4/vdd" "or2v0x3_4/a" 898
+cap "d6" "or2v0x3_0/vss" 6337
+cap "or2v0x3_4/z" "or2v0x3_4/vdd" 304
+cap "or2v0x3_3/z" "or2v0x3_4/vdd" 760
+cap "b1" "or2v0x3_5/vdd" 456
+cap "or2v0x3_5/a" "or2v0x3_5/vdd" 1159
+cap "m1_78_34#" "or2v0x3_2/vdd" 228
+cap "b0" "or2v0x3_2/vdd" 1387
+cap "b1" "or2v0x3_2/b" 2458
+cap "or2v0x3_5/a" "or2v0x3_2/b" 76
+cap "b0" "or2v0x3_2/b" 1266
+cap "or2v0x3_1/vss" "or2v0x3_2/b" 7696
+cap "or2v0x3_5/vdd" "or2v0x3_5/a" 467
+cap "b0" "or2v0x3_2/zn" 2100
+cap "or2v0x3_2/b" "or2v0x3_5/vdd" 228
+cap "or2v0x3_5/zn" "or2v0x3_2/b" 1914
+cap "or2v0x3_2/a" "b0" 720
+cap "m1_78_34#" "or2v0x3_1/vss" 114
+cap "b0" "or2v0x3_2/a" 1137
+cap "b0" "or2v0x3_1/vss" 494
+cap "d0" "or2v0x3_0/a" 1215
+cap "or2v0x3_0/vdd" "vdd" 752
+cap "or2v0x3_0/vdd" "d0" 456
+cap "or2v0x3_0/zn" "d0" 540
+cap "d0" "or2v0x3_0/z" 2157
+cap "d0" "vdd" 264
+cap "or2v0x3_0/vdd" "or2v0x3_0/a" 423
+cap "or2v0x3_1/a" "or2v0x3_1/a_48_39#" 110
+cap "or2v0x3_1/a" "or2v0x3_0/vdd" 1638
+cap "or2v0x3_1/a" "or2v0x3_1/z" 2876
+cap "or2v0x3_1/a" "or2v0x3_1/a_31_39#" 110
+cap "or2v0x3_1/a" "or2v0x3_1/zn" 896
+cap "or2v0x3_0/vdd" "m1_78_34#" 133
+cap "or2v0x3_2/a_31_39#" "or2v0x3_2/a" 110
+cap "or2v0x3_2/a" "or2v0x3_2/a_48_39#" 110
+cap "or2v0x3_2/a" "or2v0x3_2/z" 2876
+cap "or2v0x3_2/a" "or2v0x3_2/zn" 896
+cap "or2v0x3_2/a" "or2v0x3_1/vdd" 1714
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 merge "or2v0x3_4/b" "or2v0x3_3/z" -4240 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
 merge "or2v0x3_3/z" "m1_62_n38#"
 merge "or2v0x3_8/b" "or2v0x3_7/z" -8439 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
@@ -196,19 +360,23 @@ merge "or2v0x3_8/vss" "or2v0x3_7/vss"
 merge "or2v0x3_7/vss" "or2v0x3_6/vss"
 merge "or2v0x3_6/vss" "gnd"
 merge "gnd" "m1_68_n156#"
-merge "or2v0x3_5/b" "or2v0x3_2/b" -26595 0 0 0 0 0 0 0 0 0 0 0 0 -39 -44 -625 -336 0 0
+merge "or2v0x3_5/b" "or2v0x3_2/b" -26519 0 0 0 0 0 0 0 0 0 0 0 0 -39 -44 -418 -226 0 0
 merge "or2v0x3_2/b" "or2v0x3_8/a"
 merge "or2v0x3_8/a" "d6"
 merge "or2v0x3_2/z" "b0" -5464 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0
 merge "or2v0x3_3/a" "or2v0x3_6/b" -3352 0 0 0 0 0 0 0 0 0 0 0 0 -29 -32 0 0 0 0
 merge "or2v0x3_6/b" "d5"
-merge "or2v0x3_0/b" "or2v0x3_3/b" -6767 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 -129 -89 0 0
+merge "or2v0x3_0/b" "or2v0x3_3/b" -6710 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0
 merge "or2v0x3_3/b" "d2"
+<<<<<<< HEAD
+merge "or2v0x3_1/b" "or2v0x3_7/b" -9750 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0
+=======
 merge "or2v0x3_2/vdd" "or2v0x3_1/vdd" -6016 0 0 0 0 0 0 0 0 0 0 0 0 -64 -88 0 0 0 -160
 merge "or2v0x3_1/vdd" "or2v0x3_0/vdd"
 merge "or2v0x3_0/vdd" "m1_70_68#"
 merge "m1_70_68#" "m1_141_68#"
 merge "or2v0x3_1/b" "or2v0x3_7/b" -9826 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 -172 -90 0 0
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 merge "or2v0x3_7/b" "d4"
 merge "or2v0x3_5/a" "or2v0x3_4/z" -3233 0 0 0 0 0 0 0 0 0 0 0 0 -23 -28 0 0 0 0
 merge "or2v0x3_4/z" "m1_134_n42#"

@@ -66,6 +66,17 @@ rect 62 -99 66 -95
 rect 6 -121 10 -117
 rect 78 -121 82 -117
 rect 52 -134 56 -130
+<<<<<<< HEAD
+use   mxn2v0x1  mxn2v0x1_0
+timestamp 1521735939
+transform 1 0 4 0 1 4
+box -4 -4 68 76
+use   mxn2v0x1  mxn2v0x1_1
+timestamp 1521735939
+transform -1 0 68 0 -1 -4
+box -4 -4 68 76
+use   mxn2v0x1  mxn2v0x1_2
+=======
 use mxn2v0x1  mxn2v0x1_0
 timestamp 1521735939
 transform 1 0 4 0 1 4
@@ -75,6 +86,7 @@ timestamp 1521735939
 transform -1 0 68 0 -1 -4
 box -4 -4 68 76
 use mxn2v0x1  mxn2v0x1_2
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 timestamp 1521735939
 transform 1 0 4 0 1 -156
 box -4 -4 68 76

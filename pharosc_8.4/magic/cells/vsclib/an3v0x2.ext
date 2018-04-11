@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 timestamp 1523195521
+=======
+<<<<<<< HEAD
+timestamp 1523182792
+version 8.0
+=======
+<<<<<<< HEAD
+timestamp 1523182099
+=======
+timestamp 1523181350
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 version 7.5
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -24,6 +37,43 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "w_n4_n4#" 0 0 -4 -4 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n4_32#" 3645 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2816 216
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+cap "c" "vss" 300
+cap "a" "zn" 60
+cap "vss" "zn" 1671
+cap "a" "vss" 300
+cap "a_24_8#" "zn" 1692
+cap "c" "a_31_8#" 423
+cap "a_31_8#" "zn" 940
+cap "b" "w_n4_32#" 9069
+cap "vdd" "w_n4_32#" 18612
+cap "b" "w_n4_n4#" 3336
+cap "z" "w_n4_32#" 1128
+cap "c" "w_n4_32#" 5790
+cap "vdd" "b" 240
+cap "w_n4_32#" "zn" 5810
+cap "z" "w_n4_n4#" 2350
+cap "a" "w_n4_32#" 7059
+cap "c" "w_n4_n4#" 7570
+cap "b" "c" 360
+cap "w_n4_n4#" "zn" 7179
+cap "a" "w_n4_n4#" 4594
+cap "vss" "w_n4_n4#" 19317
+cap "b" "zn" 705
+cap "vdd" "z" 470
+cap "a" "b" 240
+cap "vdd" "c" 240
+cap "b" "vss" 300
+cap "vdd" "zn" 4893
+cap "vdd" "a" 240
+cap "c" "zn" 705
+cap "z" "vss" 940
+=======
+<<<<<<< HEAD
+cap "b" "zn" 705
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 cap "z" "w_n4_32#" 1128
 cap "vdd" "zn" 4893
 cap "vss" "z" 940
@@ -50,10 +100,17 @@ cap "w_n4_n4#" "zn" 7179
 cap "zn" "a_31_8#" 940
 cap "w_n4_32#" "a" 7059
 cap "vdd" "z" 470
+<<<<<<< HEAD
 cap "vss" "a" 300
 cap "c" "b" 360
 cap "w_n4_32#" "b" 9069
 cap "vss" "b" 300
+=======
+cap "c" "vdd" 240
+cap "a" "zn" 60
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 device mosfet nfet 36 8 37 9 2 17 "w_n4_n4#" "c" 4 0 "a_31_8#" 17 0 "zn" 17 0
 device mosfet nfet 29 8 30 9 2 17 "w_n4_n4#" "b" 4 0 "a_24_8#" 17 0 "a_31_8#" 17 0
 device mosfet nfet 22 8 23 9 2 17 "w_n4_n4#" "a" 4 0 "vss" 17 0 "a_24_8#" 17 0

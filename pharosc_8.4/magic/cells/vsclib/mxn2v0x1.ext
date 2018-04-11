@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 timestamp 1523195521
+=======
+<<<<<<< HEAD
+timestamp 1523182792
+version 8.0
+=======
+<<<<<<< HEAD
+timestamp 1523182099
+=======
+timestamp 1523181350
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 version 7.5
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -30,6 +43,15 @@ equiv "zn" "zn"
 equiv "zn" "zn"
 node "w_n4_n4#" 0 0 -4 -4 pw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "w_n4_32#" 4100 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3168 232
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+cap "a0" "zn" 480
+cap "s" "w_n4_n4#" 15158
+cap "a1" "vdd" 240
+=======
+<<<<<<< HEAD
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 cap "s" "w_n4_32#" 16739
 cap "a0" "zn" 480
 cap "z" "w_n4_n4#" 2256
@@ -58,11 +80,52 @@ cap "vdd" "a_21_50#" 470
 cap "zn" "a_21_12#" 1363
 cap "w_n4_32#" "sn" 9264
 cap "a0" "s" 360
+<<<<<<< HEAD
 cap "vdd" "sn" 1368
 cap "w_n4_32#" "a1" 6645
 cap "a0" "vss" 60
 cap "a0" "w_n4_n4#" 4808
 cap "vdd" "a1" 240
+=======
+cap "zn" "a_21_12#" 1363
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
+cap "vdd" "a_38_50#" 470
+cap "w_n4_32#" "s" 16739
+cap "sn" "vdd" 1368
+cap "vss" "a0" 60
+cap "w_n4_n4#" "z" 2256
+cap "w_n4_n4#" "zn" 8919
+cap "vss" "s" 1620
+cap "w_n4_32#" "z" 3854
+cap "w_n4_32#" "zn" 9329
+cap "vss" "w_n4_n4#" 24722
+cap "a1" "s" 240
+<<<<<<< HEAD
+cap "vdd" "a_21_50#" 470
+cap "vss" "zn" 60
+cap "sn" "s" 840
+cap "a1" "w_n4_n4#" 7473
+cap "a0" "vdd" 240
+cap "w_n4_32#" "a1" 6645
+cap "sn" "w_n4_n4#" 9214
+cap "s" "vdd" 616
+cap "w_n4_32#" "sn" 9264
+cap "a_21_12#" "zn" 1363
+cap "w_n4_32#" "vdd" 20116
+cap "vss" "sn" 60
+cap "vdd" "z" 1222
+cap "zn" "vdd" 1838
+cap "a0" "s" 360
+cap "a1" "sn" 240
+cap "zn" "a_21_50#" 987
+cap "a0" "w_n4_n4#" 4808
+cap "w_n4_32#" "a0" 9454
+=======
+cap "a0" "w_n4_32#" 9454
+cap "sn" "a1" 240
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 device mosfet nfet 53 14 54 15 2 6 "w_n4_n4#" "s" 4 0 "vss" 6 0 "sn" 6 0
 device mosfet nfet 43 12 44 13 2 8 "w_n4_n4#" "a1" 4 0 "a_38_12#" 8 0 "vss" 8 0
 device mosfet nfet 36 12 37 13 2 8 "w_n4_n4#" "s" 4 0 "zn" 8 0 "a_38_12#" 8 0

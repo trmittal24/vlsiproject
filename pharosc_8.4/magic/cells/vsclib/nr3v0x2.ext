@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 timestamp 1523195521
+=======
+<<<<<<< HEAD
+timestamp 1523182792
+version 8.0
+=======
+<<<<<<< HEAD
+timestamp 1523182099
+=======
+timestamp 1523181350
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 version 7.5
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 tech scmos
 style lambda=1.0(scna20_orb)
 scale 1000 1 100
@@ -40,9 +53,17 @@ equiv "c" "c"
 equiv "c" "c"
 node "vss" 242 0 -4 -4 pw 240 92 210 58 0 0 0 0 0 0 0 0 814 226 0 0 0 0
 node "w_n4_32#" 5467 0 -4 32 nw 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4224 280
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+cap "a_13_39#" "c" 705
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 cap "a" "w_n4_32#" 12058
 cap "b" "c" 120
 cap "vdd" "a" 720
+<<<<<<< HEAD
 cap "z" "a_13_39#" 940
 cap "vdd" "a_61_39#" 470
 cap "a_20_39#" "c" 705
@@ -73,6 +94,47 @@ cap "vdd" "z" 2726
 cap "b" "vss" 24132
 cap "a_37_39#" "z" 940
 cap "vdd" "a_13_39#" 470
+=======
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
+cap "a_20_39#" "vdd" 470
+cap "z" "c" 1269
+cap "vdd" "c" 1848
+cap "z" "vdd" 2726
+cap "vdd" "a_68_39#" 470
+cap "a_37_39#" "c" 705
+cap "z" "a_37_39#" 940
+cap "vdd" "a_37_39#" 470
+cap "a_44_39#" "c" 705
+cap "z" "a_44_39#" 940
+cap "vdd" "a_44_39#" 470
+cap "a_61_39#" "c" 282
+cap "z" "a_61_39#" 376
+cap "vdd" "a_61_39#" 470
+cap "b" "w_n4_32#" 9532
+cap "b" "vss" 24132
+cap "a" "w_n4_32#" 12058
+cap "w_n4_32#" "c" 15727
+cap "z" "w_n4_32#" 5640
+cap "a" "vss" 14414
+cap "vdd" "w_n4_32#" 25756
+cap "vss" "c" 7416
+cap "z" "vss" 5734
+cap "a_13_39#" "c" 705
+cap "b" "a" 1620
+<<<<<<< HEAD
+cap "z" "a_13_39#" 940
+cap "a_13_39#" "vdd" 470
+cap "b" "c" 120
+cap "b" "vdd" 720
+cap "a" "c" 120
+cap "a_20_39#" "c" 705
+cap "z" "a_20_39#" 940
+cap "a" "vdd" 720
+=======
+cap "z" "c" 1269
+>>>>>>> 4bb61a4fc053bb152ea2b2de7f467b33f155054d
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
+>>>>>>> 998480c9552c2e29a0074f115d06ad913d225c88
 device mosfet nfet 29 6 30 7 2 15 "vss" "a" 4 0 "z" 15 0 "vss" 15 0
 device mosfet nfet 19 6 20 7 2 15 "vss" "b" 4 0 "vss" 15 0 "z" 15 0
 device mosfet nfet 9 6 10 7 2 15 "vss" "c" 4 0 "z" 15 0 "vss" 15 0

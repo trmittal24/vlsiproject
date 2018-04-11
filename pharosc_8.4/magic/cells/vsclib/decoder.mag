@@ -165,6 +165,29 @@ use or2v0x3  or2v0x3_2
 timestamp 1521380365
 transform 1 0 148 0 1 4
 box -4 -4 68 76
+<<<<<<< HEAD
+use  or2v0x3  or2v0x3_3
+timestamp 1521380365
+transform -1 0 68 0 -1 -4
+box -4 -4 68 76
+use  or2v0x3  or2v0x3_4
+timestamp 1521380365
+transform -1 0 140 0 -1 -4
+box -4 -4 68 76
+use  or2v0x3  or2v0x3_5
+timestamp 1521380365
+transform -1 0 212 0 -1 -4
+box -4 -4 68 76
+use  or2v0x3  or2v0x3_6
+timestamp 1521380365
+transform 1 0 4 0 1 -156
+box -4 -4 68 76
+use  or2v0x3  or2v0x3_7
+timestamp 1521380365
+transform 1 0 76 0 1 -156
+box -4 -4 68 76
+use  or2v0x3  or2v0x3_8
+=======
 use or2v0x3  or2v0x3_3
 timestamp 1521380365
 transform -1 0 68 0 -1 -4
@@ -186,6 +209,7 @@ timestamp 1521380365
 transform 1 0 76 0 1 -156
 box -4 -4 68 76
 use or2v0x3  or2v0x3_8
+>>>>>>> 686b8c316a1cb0a5aedb2e80fc0402879db13148
 timestamp 1521380365
 transform 1 0 148 0 1 -156
 box -4 -4 68 76
